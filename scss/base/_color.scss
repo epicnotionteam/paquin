@@ -1,0 +1,20 @@
+// ====================================================================================================
+// Base / Color
+// Update default color values via $colorDefaults
+// $colorDefaults map stored in 'variables/color'
+// ====================================================================================================
+
+// Loop through $colorDefaults, generating utility classes
+// Example output: 'bg-color__primary--base', 'text-color__primary--base' etc
+// --------------------------------------------------
+
+@each $key, $value in $colorDefaults {
+  	@each $color, $variant in $value {
+    	.bg-color__#{$key}--#{$color} {
+      		background-color: #{$variant};
+    	}
+    	.text-color__#{$key}--#{$color} {
+      		color: #{$variant};
+    	}
+  	}
+}

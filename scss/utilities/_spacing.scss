@@ -1,0 +1,26 @@
+// ====================================================================================================
+// Utilities / Spacing
+// ====================================================================================================
+
+// Update component spacing values via $spacingDefaults
+// $spacingDefaults map stored in 'variables/spacing'
+
+// Generate component spacing utility classes
+// Loop through $spacingDefaults, generating utility classes
+// Example output: '.mb--1', '.pb--1' etc
+// --------------------------------------------------
+
+@each $key, $value in $spacingDefaults {
+  	@each $direction in $directionDefaults {
+    	// Strip units from map values
+    	$spaceValue: strip-unit($value);
+    	.m#{str-slice($direction, 0, 1)}--#{$key} {
+      		margin-#{$direction}: #{$spaceValue*1px};
+      		margin-#{$direction}: #{$spaceValue/10*1rem};
+    	}
+    	.p#{str-slice($direction, 0, 1)}--#{$key} {
+      		padding-#{$direction}: #{$spaceValue*1px};
+      		padding-#{$direction}: #{$spaceValue/10*1rem};
+    	}
+  	}
+}

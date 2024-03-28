@@ -1,0 +1,58 @@
+// ====================================================================================================
+// Variables / Color
+// ====================================================================================================
+
+// Define default color values
+// Values can be accessed via 'color('key', 'value')'
+// Example usage: 'background: color('primary', '5');'
+// --------------------------------------------------
+
+$colorDefaults: ( 
+	// Primary
+	primary: (
+		'black': #000000,
+		'white': #FFFFFF,
+	),
+	// Typography
+	type: (
+		'heading': #010F12,
+		'body': #122529,
+		'white': #FFFFFF,
+	),
+	// Backgrounds
+	background: (
+		'base': #FFFFFF,
+		'alt' : #ECEBEA,
+		'dark': #212224,
+	),
+	// States
+	state: (
+		'error':    #000000,
+		'disabled': #000000,
+		'success':  #000000,
+	),
+	// Action
+	action: (
+		'1': #0F7F92,
+		'2': #35ADC2,
+	),
+	// Rust
+	rust: (
+		'1': #412729,
+		'2': #7D4448,
+	),
+	// Steel
+	steel: (
+		'1': #212224,
+		'2': #272A2D,
+		'3': #30373A,
+		'4': #66787F,
+		'5': #D6DBDD,
+		'6': #ECEEF0,
+	),
+	// Titanium
+	titanium: (
+		'1': #AEACA8,
+		'2': #ECEBEA,
+	)
+) !default;

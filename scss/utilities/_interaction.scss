@@ -1,0 +1,78 @@
+// ====================================================================================================
+// Utilities / Interaction
+// ====================================================================================================
+
+// Define animation defaults
+// --------------------------------------------------
+
+// Animation speed
+$animation__speed--slow: 0.8s;
+$animation__speed--base: 0.24s;
+$animation__speed--fast: 0.16s;
+
+// Animation method
+$animation__method--base: ease-in-out;
+
+// Trransition utilities
+$transition--slow: all $animation__speed--slow $animation__method--base;
+$transition--base: all $animation__speed--base $animation__method--base;
+$transition--fast: all $animation__speed--fast $animation__method--base;
+
+
+// Set global animation on common elements
+// --------------------------------------------------
+
+a,
+a img,
+a svg,
+a svg path,
+button,
+input,
+select,
+textarea,
+%animation--global {
+	transition: $transition--base;
+}
+
+%animation--reveal {
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+
+// Block animation defaults
+// Pair with an animation style
+// Example usage: '<div class="animated animation__fade-in">Content</div>'
+// --------------------------------------------------
+
+.animated {
+	animation-duration: $animation__speed--slow;
+  	animation-fill-mode: both;
+}
+
+
+// Animation instances
+// ----------------------------------------------------------------------------------------------------
+
+// Animation [Fade in]
+// --------------------------------------------------
+
+// Target element for viewport observer
+.animation--viewport-fade,
+.animation--entry-base {
+  	opacity: 0;
+}
+
+// 'Fade in' utility class
+.animation--fade-in { 
+	animation-name: animation--fade-in; 
+}
+
+// Configure 'Fade in' animation
+@keyframes animation--fade-in {
+  	from { 
+		  opacity: 0; 
+	}
+  	to { 
+		opacity: 1; 
+	}
+}

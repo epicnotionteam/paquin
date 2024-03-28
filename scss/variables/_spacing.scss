@@ -1,0 +1,38 @@
+// ====================================================================================================
+// Variables / Spacing
+// ====================================================================================================
+
+// Define component spacing defaults (px)
+// Values can be accessed via 'spacing($key)'
+// Example usage: 'padding: spacing(1);'
+// --------------------------------------------------
+
+$spacingDefaults: (
+  0:  0px,
+  1:  4px,
+  2:  8px,
+  3:  16px,
+  4:  24px,
+  5:  32px,
+  6:  40px,
+  7:  48px,
+  8:  56px,
+  9:  64px,
+  10: 72px,
+  11: 80px,
+  12: 88px,
+  13: 96px,
+  14: 104px,
+  15: 112px,
+  16: 120px,
+
+) !default;
+
+// Define spacing directions
+// Passed to function to create utility classes
+$directionDefaults: (
+  top,
+  right,
+  bottom,
+  left
+);

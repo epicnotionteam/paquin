@@ -1,0 +1,29 @@
+// ====================================================================================================
+// Templates / Collection
+// ====================================================================================================
+
+// Template Structure
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Page Header]
+// Contains collection title description
+// --------------------------------------------------
+
+// Section container
+.template--collection .section--page-header {
+
+    // Title
+    .collection__title {}
+
+    // Description
+    .collection__description {}
+
+}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+
+    .template--collection .section--page-header {}
+
+}

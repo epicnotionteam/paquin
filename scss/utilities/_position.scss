@@ -1,0 +1,20 @@
+// ====================================================================================================
+// Utilities / Position
+// ====================================================================================================
+
+// Update available z-index values via $z-indexDefaults
+// $z-indexDefaults map stored in 'variables/position'
+// Values can be accessed via 'z-index($key)'
+// Example usage: 'z-index(1);'
+
+
+// Generic position classes
+// --------------------------------------------------
+
+.relative { 
+    position: relative; 
+}
+
+.fixed { 
+    position: fixed; 
+}

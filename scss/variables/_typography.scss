@@ -1,0 +1,120 @@
+// ====================================================================================================
+// Variables / Typography
+// ====================================================================================================
+
+// Load custom fonts
+// --------------------------------------------------
+
+// Paquin Sans
+// Utilized as base typeface
+@font-face {
+	font-family: 'Paquin Sans';
+	src: url('assets/fonts/paquin-sans/PaquinSans-Regular.woff2') format('woff2'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Regular.woff') format('woff'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Regular.ttf') format('truetype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Regular.otf') format('opentype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Regular.eot');
+  	font-display: swap;
+  	font-style: normal;
+  	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Paquin Sans';
+	src: url('assets/fonts/paquin-sans/PaquinSans-Semibold.woff2') format('woff2'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.woff') format('woff'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.ttf') format('truetype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.otf') format('opentype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.eot');
+  	font-display: swap;
+  	font-style: normal;
+  	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Paquin Sans';
+	src: url('assets/fonts/paquin-sans/PaquinSans-Bold.woff2') format('woff2'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Bold.woff') format('woff'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Bold.ttf') format('truetype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Bold.otf') format('opentype'),
+		 url('assets/fonts/paquin-sans/PaquinSans-Bold.eot');
+  	font-display: swap;
+  	font-style: normal;
+  	font-weight: 700;
+}
+
+
+// Define font-family defaults
+// Values can be accessed via 'font-family($key)'
+// Example usage: 'font-family: font-family(base);'
+// --------------------------------------------------
+
+$font-familyDefaults: (
+	'base': ( 'Paquin Sans', sans-serif ),
+	'icon': ( 'Material Symbols Outlined' )
+) !default;
+
+
+// Define font-weight defaults
+// Values can be accessed via 'font-weight($key)'
+// Example usage: 'font-weight: font-weight(bold);'
+// --------------------------------------------------
+
+$font-weightDefaults: (
+  	'base':     400,
+  	'semibold': 600,
+	'bold':     700,
+) !default;
+
+
+// Define responsive font-size defaults (px)
+// Also accepts breakpoint-based line-height values
+// Example usage: '@include font-size(h1);'
+// --------------------------------------------------
+
+$font-sizeDefaults: (
+	'xsmall': (
+		'base':   (font-size: 13px, line-height: 1.55),
+		'large':  (font-size: 13px, line-height: 1.55)
+	),
+	'small': (
+		'base':   (font-size: 15px, line-height: 1.55),
+		'large':  (font-size: 15px, line-height: 1.55)
+	),
+	'base': (
+		'base':   (font-size: 17px, line-height: 1.55),
+		'large':  (font-size: 18px, line-height: 1.55)
+	),
+	'large': (
+		'base':   (font-size: 19px, line-height: 1.4),
+		'large':  (font-size: 21px, line-height: 1.4)
+	),
+	'xlarge': (
+		'base':   (font-size: 19px, line-height: 1.45),
+		'large':  (font-size: 23px, line-height: 1.4)
+	),
+	'xxlarge': (
+		'base':   (font-size: 24px, line-height: 1.45),
+		'large':  (font-size: 32px, line-height: 1.4)
+	),
+	'h1': (
+		'base'  : (font-size: 38px, line-height: 1.2 ),
+		'large' : (font-size: 56px, line-height: 1.2 )
+	),
+	'h2': (
+		'base':   (font-size: 32px, line-height: 1.25 ),
+		'large':  (font-size: 44px, line-height: 1.25 )
+	),
+	'h3': (
+		'base':   (font-size: 26px, line-height: 1.3 ),
+		'large':  (font-size: 32px, line-height: 1.3 )
+	),
+	'h4': (
+		'base':   (font-size: 21px, line-height: 1.35 ),
+		'large':  (font-size: 24px, line-height: 1.35)
+	),
+	'h5': (
+		'base':   (font-size: 14px, line-height: 1.4 ),
+		'large':  (font-size: 14px, line-height: 1.4)
+	)
+) !default;

@@ -1,0 +1,100 @@
+// ====================================================================================================
+// Layout / Header
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Header [Base]
+// --------------------------------------------------
+
+.header--base {}
+
+
+// Header [Clear]
+// --------------------------------------------------
+
+.header--clear {}
+
+
+// Header [Logo]
+// --------------------------------------------------
+
+.site-header-logo {
+    margin: 0 spacing(6) 0 0;
+
+    .site-logo {
+        max-width:130px;
+        height:auto;
+    }
+}
+
+
+// Header [Search Bar]
+// --------------------------------------------------
+
+.live-search-form {
+    border-radius:0px;
+    border:0px;
+    box-shadow:unset;
+
+    .live-search-form-field {
+        @include font-size(small);
+        padding: spacing(3);
+    }
+
+    .live-search-filter-wrapper {
+    
+        .live-search-filter-label {
+            @include font-size(small);
+            background:color('steel', '3');
+            color:color('type', 'white');
+            padding: spacing(3);
+        }
+    }
+    
+    .live-search-button {
+        background:color('background', 'base');
+        border:0px;
+
+        :not(.disabled):hover {
+            background:color('background', 'base');
+            border:0px;
+        }
+    }
+}
+
+
+// Header [Icons]
+// --------------------------------------------------
+
+.site-header-right {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height:54px;
+    align-items:center;
+
+    .site-header-account, .site-header-cart {
+
+        &--button {
+            display:block;
+            position:relative;
+            right:unset;
+            text-align:center;
+            padding:10px;
+        }
+
+        .site-header-account-icon, .site-header-cart-icon {
+
+            &--svg {
+                fill: color('type', 'white');
+            }
+        }
+    }
+
+    .site-header-cart {
+        position: unset;
+        width: unset;
+        margin-top: unset;
+    }
+}

@@ -1,0 +1,234 @@
+// ====================================================================================================
+// Utilities / Mixin
+// ====================================================================================================
+
+// REM/PX fallback
+// ----------------------------------------------------------------------------------------------------
+
+// Adapted from https://github.com/pierreburel/sass-rem
+// Example usage: '@include rem( padding, spacing(1) );'
+// --------------------------------------------------
+
+// Set default options
+$rem-baseline: 10px !default;
+$rem-fallback: true !default;
+$rem-px-only: false !default;
+
+@function rem-separator( $list, $separator: false ) {
+  	@if $separator == "comma" or $separator == "space" {
+    	@return append( $list, null, $separator );
+  	}
+  	@if function-exists( "list-separator" ) == true {
+    	@return list-separator( $list );
+  	}
+  	$test-list: ();
+  	@each $item in $list {
+    	$test-list: append( $test-list, $item, space );
+  	}
+  	@return if( $test-list == $list, space, comma );
+}
+
+// Baseline 1rem to 10px
+@mixin rem-baseline( $zoom: 100% ) {
+  	font-size: $zoom / 16px * $rem-baseline;
+}
+
+@function rem-convert( $to, $values... ) {
+  	$result: ();
+  	$separator: rem-separator( $values );
+	@each $value in $values {
+		@if type-of( $value ) == "number" and unit( $value ) == "rem" and $to == "px" {
+			$result: append( $result, $value / 1rem * $rem-baseline + 0px, $separator );
+		} @else if type-of( $value ) == "number" and unit( $value ) == "px" and $to == "rem" {
+			$result: append( $result, $value / $rem-baseline + 0rem, $separator );
+		} @else if type-of( $value ) == "list" {
+			$value-separator: rem-separator( $value );
+			$value: rem-convert( $to, $value... );
+			$value: rem-separator( $value, $value-separator );
+			$result: append( $result, $value, $separator );
+		} @else {
+			$result: append( $result, $value, $separator );
+		}
+	}
+	@return if( length( $result ) == 1, nth( $result, 1 ), $result );
+}
+
+// Handles multiple arguments
+// Outputs each $key/$value pair as property/value in rem, with px fallback
+@mixin rem( $properties, $values... ) {
+  	@if type-of( $properties ) == "map" {
+    	@each $property in map-keys( $properties ) {
+      		@include rem( $property, map-get( $properties, $property ) );
+    	}
+  	} @else {
+    	@each $property in $properties {
+      		@if $rem-fallback or $rem-px-only {
+        		#{$property}: rem-convert( px, $values... );
+      		}
+      		@if not $rem-px-only {
+        		#{$property}: rem-convert( rem, $values... );
+      		}
+    	}
+  	}
+}
+
+
+// Typography
+// ----------------------------------------------------------------------------------------------------
+
+// Responsive font-sizing
+// Map stored in 'variables/typography'
+// Example usage: '@include font-size( h1 );'
+// --------------------------------------------------
+
+// Build responsive font-sizing media queries
+@mixin respond-above( $breakpoint-name ) {
+  	$breakpoint-value: breakpoint( $breakpoint-name );
+  	@if $breakpoint-value {
+    	@media screen and ( min-width: $breakpoint-value ) {
+      		@content;
+    	}
+  	}
+}
+
+// Fetch properties set in '$font-sizeDefaults'
+@mixin text-size( $text-size, $breakpoint-name: base ) {
+  	$text-size-properties: text-properties-for( $text-size, $breakpoint-name );
+  	@if $text-size-properties {
+    	// Fetch properties, stripping units
+    	$font-size: map-get( $text-size-properties, 'font-size' );
+    	$font-size: strip-unit( $font-size );
+    	$line-height: map-get( $text-size-properties, 'line-height' );
+    	// Build styles with px fallback
+    	font-size: $font-size * 1px;
+    	font-size: $font-size / 10 * 1rem;
+    	line-height: map-get( $text-size-properties, 'line-height' );
+  	}
+}
+
+// Output properties to each breakpoint set in '$font-sizeDefaults'
+@mixin font-size( $text-size, $default-breakpoint: base ) {
+  	@include text-size( $text-size, $default-breakpoint );
+  	$text-breakpoints-map: text-breakpoints-for( $text-size );
+  	$text-breakpoints-keys: map-keys( $text-breakpoints-map );
+  	@each $breakpoint-name in $text-breakpoints-keys {
+    	@if $breakpoint-name != $default-breakpoint {
+      		@include respond-above( $breakpoint-name ) {
+        		@include text-size( $text-size, $breakpoint-name );
+      		}
+    	}
+  	}
+}
+
+
+// Text selection styling properties
+// Example usage: '@include text-selection { background: color( primary, 5 ); }'
+// --------------------------------------------------
+
+@mixin text-selection {
+  	::-moz-selection { @content; }
+  	::selection { @content; }
+}
+
+
+// Icon
+// ----------------------------------------------------------------------------------------------------
+
+// Use icons as pseudo elements
+// $iconDefaults map stored in 'variables/icons'
+// Example usage: '@include icon( before, 'check' );'
+// --------------------------------------------------
+
+@mixin icon( $position: after, $icon: false, $styles: true ) {
+	&:#{$position} {
+    	@if $icon {
+      		content: "#{map-get( $iconDefaults, $icon )}";
+    	}
+    	@if $styles {
+			font-family: font-family(icon);
+			font-style: normal;
+			font-weight: normal;
+			speak: none;
+			vertical-align: middle;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+    	@content;
+  	}
+}
+
+
+// Input
+// ----------------------------------------------------------------------------------------------------
+
+// Input placeholders
+// Example usage: '@include input-placeholder { color: color( type, 3 );'
+// --------------------------------------------------
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+
+// Utilities
+// ----------------------------------------------------------------------------------------------------
+
+// Maintain aspect ratio
+// Example usage: '@include aspect-ratio( 4, 3 );'
+// --------------------------------------------------
+
+@mixin aspect-ratio( $ratio-or-width, $height: null ) {
+	$padding: if( $height, percentage( $height/$ratio-or-width ), percentage(1/$ratio-or-width ) );
+	&:before {
+		content:'';
+		float: left;
+		padding-bottom: $padding;
+	}
+	&:after  {
+		content:'';
+		display: table;
+		clear: both;
+	}
+}
+
+// Transition
+// Example usage: '@include transition( all, 0.2s, ease-in-out );'
+// --------------------------------------------------
+
+@mixin transition( $transition-property, $transition-time, $method ) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+
+// Transform
+// Example usage: '@include transform( translateY( -5px ) );'
+// --------------------------------------------------
+
+@mixin transform( $transforms ) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+
+// Absolute positioning
+// Example usage: '@include position( absolute, $top: 0, $left: 0 );'
+// --------------------------------------------------
+
+@mixin position( $position, $top: null, $right: null, $bottom: null, $left: null ) {
+	bottom: $bottom;
+	left: $left;
+	top: $top;
+	position: $position;
+	right: $right;
+}

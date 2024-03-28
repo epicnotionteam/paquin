@@ -1,0 +1,53 @@
+// ====================================================================================================
+// Utilities / Visibility
+// ====================================================================================================
+
+// Generic visibility classes
+// --------------------------------------------------
+
+.hide { 
+  display: none; 
+}
+
+.invisible { 
+  opacity: 0; 
+}
+
+.visible { 
+  opacity: 1; 
+}
+
+// Display for Administrators
+// For developer-use only
+.visible--admin {
+    display: none;
+}
+
+.admin-bar .visible--admin {
+ 	display: block;
+}
+
+
+// Device-based visibility classes
+// --------------------------------------------------
+
+// Hide for @small
+.hide--small {
+  	@include mq($until: medium) {
+    	display: none !important;
+ 	}
+}
+
+// Hide for @medium
+.hide--medium {
+  	@include mq($from: medium, $until: large) {
+    	display: none !important;
+  	}
+}
+
+// Hide from @large
+.hide--large {
+  	@include mq($from: large) {
+    	display: none !important;
+  	}
+}

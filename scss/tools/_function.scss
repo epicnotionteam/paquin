@@ -1,0 +1,145 @@
+// ====================================================================================================
+// Utilities / Function
+// ====================================================================================================
+
+// Strip Units
+// --------------------------------------------------
+
+// Remove the unit from a value (px,rem etc)
+// Example usage: 'strip-unit( $variable );'
+@function strip-unit( $number ) {
+	@if type-of( $number ) == 'number' and not unitless( $number ) {
+    	@return $number / ( $number * 0 + 1 );
+  	}
+  	@return $number;
+}
+
+
+// Type Checking
+// --------------------------------------------------
+
+// Check if $variable content is a number
+// Example usage: '@if is-number( $value ) {}'
+@function is-number( $value ) {
+	@return type-of( $value ) == 'number';
+}
+
+// Check if $variable is set in px/rem
+// Example usage: '@if is-px-rem( $value ) {}'
+@function is-px-rem( $value ) {
+  	@return is-number( $value ) and index( 'px' 'rem', unit( $value ) ) != null;
+}
+
+
+// Layered Positioning
+// --------------------------------------------------
+
+// Insert value from `$z-indexDefaults` map via associated $key
+// Example usage: 'z-index: z-index( 1 );'
+@function z-index( $key ) {
+  	@if not map-has-key( $z-indexDefaults, $key ) {
+   		@warn "No key found for `#{$key}` in $z-indexDefaults map. Property omitted.";
+ 	}
+  	@return map-get( $z-indexDefaults, $key );
+}
+
+
+// Spacing
+// --------------------------------------------------
+
+// Insert value from `$spacingDefaults` map via associated $key
+// Example usage: 'padding: spacing( 1 );'
+@function spacing( $key ) {
+  	@if not map-has-key( $spacingDefaults, $key ) {
+    	@warn "No key found for `#{$key}` in $spacingDefaults map. Property omitted.";
+  	}
+  	@return map-get( $spacingDefaults, $key );
+}
+
+
+// Color
+// --------------------------------------------------
+
+// Insert value from `$colorDefaults` map via associated $color & $variant
+// Example usage: 'background: color( primary, base );'
+@function color( $parentKey, $childKey ) {
+  	@if not map-has-key( $colorDefaults, $parentKey ) {
+    	@warn "No key found for '#{$parentKey}--#{$childKey}' in $colorDefaults map. Property omitted.";
+  	}
+  	@return map-get( map-get( $colorDefaults, $parentKey ), $childKey );
+}
+
+
+// Typography
+// --------------------------------------------------
+
+// Insert value from `$font-familyDefaults` map via associated $key
+// Example usage: 'font-family: font-family( sans );'
+@function font-family( $key ) {
+  	@if not map-has-key( $font-familyDefaults, $key ) {
+    	@warn "No key found for `#{$key}` in $font-familyDefaults map. Property omitted.";
+  	}
+  	@return map-get( $font-familyDefaults, $key );
+}
+
+// Insert value from `$font-weightDefaults` map via associated $key
+// Example usage: 'font-weight: font-weight( bold );'
+@function font-weight( $key ) {
+  	@if not map-has-key( $font-weightDefaults, $key ) {
+    	@warn "No key found for `#{$key}` in $font-weightDefaults map. Property omitted.";
+  	}
+  	@return map-get( $font-weightDefaults, $key );
+}
+
+// Insert value from `$line-heightDefaults` map via associated $key
+// Example usage: 'line-height: line-height( xs );'
+@function line-height( $key ) {
+  	@if not map-has-key( $line-heightDefaults, $key ) {
+    	@warn "No key found for `#{$key}` in $line-heightDefaults map. Property omitted.";
+  	}
+  	@return map-get( $line-heightDefaults, $key );
+}
+
+// Fetch breakpoints from '$breakpoints' map
+// For use in responsive font-sizing mixin
+@function breakpoint( $breakpoint-name ) {
+  	$breakpoint-value: map-get( $breakpoints, $breakpoint-name );
+  	@if $breakpoint-value {
+ 		@return $breakpoint-value;
+  	}
+  	@warn "Breakpoint '#{$breakpoint-name}' not found in $breakpoints";
+}
+
+// Fetch properties set at each breakpoint in '$font-sizeDefaults' map
+// For use in responsive font-sizing mixin
+@function text-breakpoints-for( $text-size ) {
+  	$text-breakpoints: map-get( $font-sizeDefaults, $text-size );
+  	@if $text-breakpoints {
+    	@return $text-breakpoints;
+  	}
+  	@warn "Text size '#{$text-size}' not found in $font-sizeDefaults";
+}
+
+// Output text properties to each breakpoint set in '$font-sizeDefaults'
+// For use in responsive font-sizing mixin
+@function text-properties-for( $text-size, $breakpoint-name ) {
+  	$text-breakpoints: text-breakpoints-for( $text-size );
+  	$text-properties: map-get( $text-breakpoints, $breakpoint-name );
+  	@if $text-properties {
+    	@return $text-properties;
+  	}
+  	@warn "Breakpoint '#{$breakpoint-name}' for text size '#{$text-size}' was not found";
+}
+
+
+// Wraps
+// --------------------------------------------------
+
+// Insert value from `$wrapDefaults` map via associated $key
+// Example usage: 'max-width: wrap( small );'
+@function wrap( $key ) {
+  	@if not map-has-key( $wrapDefaults, $key ) {
+    	@warn "No key found for `#{$key}` in $wrapDefaults map. Property omitted.";
+  	}
+  	@return map-get( $wrapDefaults, $key );
+}

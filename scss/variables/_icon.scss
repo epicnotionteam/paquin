@@ -1,0 +1,24 @@
+// ====================================================================================================
+// Variables / Icon
+// ====================================================================================================
+
+// Define icons for use as psuedo elements
+// Utilising 'https://github.com/google/material-design-icons/'
+// Codepoints available at 'https://github.com/google/material-design-icons/blob/master/font/MaterialIcons-Regular.codepoints'
+// Example usage: '@include icon(after, 'chevron-right');'
+// --------------------------------------------------
+
+$iconDefaults: (
+  'arrow_back':    '\e5c4',
+  'arrow_down':    '\e5db',
+  'arrow_forward': '\e5c8',
+  'bullet':        '\e57b',
+  'check':         '\e5ca',
+  'chevron_down':  '\e5cf',
+  'chevron_left':  '\e5cb',
+  'chevron_right': '\e409',
+  'close':         '\e5cd',
+  'error':         '\e000',
+  'menu':          '\e5d2',
+  'new':           '\e65f',
+);

@@ -1,0 +1,44 @@
+// ====================================================================================================
+// Templates / Product
+// ====================================================================================================
+
+// Template Structure
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Core]
+// Contains product title, price, description etc
+// --------------------------------------------------
+
+// Section container
+.template--product .section--core {
+
+    // Title
+    .product__title {}
+
+    // Price
+    .product__price {}
+
+}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+
+    .template--product .section--core {}
+
+}
+
+
+// Section [Gallery]
+// --------------------------------------------------
+
+ // Section container
+.template--product .section--gallery {}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+
+    .template--product .section--gallery {}
+
+}

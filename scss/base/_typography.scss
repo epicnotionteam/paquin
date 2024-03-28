@@ -1,0 +1,159 @@
+// ====================================================================================================
+// Base / Typography
+// Update default font-size & line-height values via $font-sizeDefaults
+// $font-sizeDefaults map stored in 'variables/typography'
+// ====================================================================================================
+
+// Global typography defaults
+// --------------------------------------------------
+
+body {
+	@include font-size( 'base' );
+	color: color( 'type', '2' );
+	font-family: font-family( 'base' );
+	font-weight: font-weight( 'base' );
+	line-height: 1.55;
+	// Rendering [Base]
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	// Rendering [Windows]
+	font-feature-settings: normal;
+	font-kerning: auto;
+	font-language-override: normal;
+	font-optical-sizing: auto;
+	font-size-adjust: none;
+	font-stretch: 100%;
+}
+
+// Text selection
+@include text-selection { 
+	background: black;
+	color: white;
+}
+
+
+// Paragraph styles
+// --------------------------------------------------
+
+p,  
+%p {
+  	font-weight: font-weight( 'base' );
+}
+
+.text--xsmall,
+.text--xsmall p {
+  @include font-size( 'xsmall' );
+}
+
+small,
+.text--small,
+.text--small p {
+  @include font-size( 'small' );
+}
+
+.text--large,
+.text--large p {
+  @include font-size( 'large' );
+}
+
+.text--xlarge,
+.text--xlarge p {
+  @include font-size( 'xlarge' );
+}
+
+.text--xxlarge,
+.text--xxlarge p {
+  @include font-size( 'xxlarge' );
+}
+
+em,
+.text--italic {
+  font-style: italic;
+}
+
+
+b,
+strong,
+.text--strong {
+  font-weight: font-weight( 'bold' );
+}
+
+sup {
+  font-size: 72%;
+  vertical-align: top;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.font-weight--base {
+  font-weight: font-weight( 'base' );
+}
+
+
+// Heading styles
+// --------------------------------------------------
+
+h1, 
+.h1, 
+%h1 {
+	@include font-size( 'h1' );
+	@include rem((
+		letter-spacing: 0.4px,
+		margin: 0 0 spacing(5)
+	));
+	color: color( 'type', '1' );
+	font-weight: font-weight( 'semibold' );
+}
+
+h2, 
+.h2, 
+%h2 {
+	@include font-size( 'h2' );
+	@include rem((
+		letter-spacing: 0.24px,
+		margin: 0 0 spacing(4)
+	));
+	color: color( 'type', '1' );
+	font-weight: font-weight( 'semibold' );
+}
+
+h3, 
+.h3, 
+%h3 {
+	@include font-size( 'h3' );
+	@include rem((
+		letter-spacing: 0.16px,
+		margin: 0 0 spacing(3)
+	));
+	color: color( 'type', '1' );
+	font-weight: font-weight( 'semibold' );
+}
+
+h4,
+.h4,
+%h4 {
+	@include font-size( 'h4' );
+	@include rem(( 
+		letter-spacing: 0.16px,
+		margin: 0 0 spacing(3) 
+	));
+	color: color( 'type', '1' );
+	font-weight: font-weight( 'semibold' );
+}
+
+h5,
+.h5,
+%h5 {
+  	@include font-size( 'h5' );
+  	@include rem((
+		letter-spacing: 0.4px,
+		margin: 0 0 spacing(3)
+	));
+	color: color( 'type', '1' );
+	font-weight: font-weight( 'bold' );
+  	text-transform: uppercase;
+}

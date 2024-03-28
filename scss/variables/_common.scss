@@ -1,0 +1,34 @@
+// ====================================================================================================
+// Variables / Common
+// ====================================================================================================
+
+// Import map-get function for $colorDefaults
+@import '../tools/function';
+
+
+// Define border defaults
+// --------------------------------------------------
+
+// Border
+$border--base: 1px solid rgba( 0, 0, 0, 0.16 ) !default;
+$border--dark: 1px solid rgba( 255, 255, 255, 0.16 ) !default;
+
+// Border-radius
+$border-radius--base: 6px !default;
+
+
+// Define box-shadow defaults
+// --------------------------------------------------
+
+// Input
+$border__input: 0 0 0 1px color('type', '1') inset !default;
+$border__input--error: 0 0 0 1px color('state', 'error') inset !default;
+$border__input--disabled: 0 0 0 1px color('state', 'disabled') inset !default;
+
+
+// Define highlight defaults
+// Applied as a 'border-bottom' value
+// --------------------------------------------------
+
+$highlight--hidden: 1.5px solid transparent;
+$highlight--active: 1.5px solid color( 'primary', '4' );

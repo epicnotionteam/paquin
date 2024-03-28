@@ -1,0 +1,20 @@
+// ====================================================================================================
+// Base / Page
+// ====================================================================================================
+
+html {
+	// Baseline 1rem to 10px
+	@include rem-baseline;
+	// Set box model on root element
+	box-sizing: border-box;
+	// Smooth-scroll anchor links
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: white !important;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+}

@@ -1,0 +1,43 @@
+// ====================================================================================================
+// Layout / Container
+// ====================================================================================================
+
+// Wraps
+// ----------------------------------------------------------------------------------------------------
+
+// Wrap [Container]
+// Applied to parent section
+.wrap--container {
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+}
+
+// Wrap [XSmall]
+.wrap--xsmall {
+    @include rem( max-width, wrap( 'xsmall' ) );
+    width: 100%;
+}
+
+// Wrap [Small]
+.wrap--small {
+    @include rem( max-width, wrap( 'small' ) );
+    width: 100%;
+}
+
+// Wrap [Base]
+.wrap--base {
+    @include rem( max-width, wrap( 'base' ) );
+    width: 100%;
+}
+
+// Wrap [Large]
+.wrap--large {
+    @include rem( max-width, wrap( 'large' ) );
+    width: 100%;
+}
+
+// Wrap [Max]
+.wrap--max {
+    @include rem( max-width, wrap( 'max' ) );
+    width: 100%;
+}

@@ -5,6 +5,7 @@
 
 {% if product.metafields.custom.related_products %}
 	<div id="product__related-products">
+		<h2>Related Products</h2>
 	  	{% for item in product.metafields.custom.related_products %}
 			{% assign related_product = all_products[item] %}
 			<div class="related-product-card">

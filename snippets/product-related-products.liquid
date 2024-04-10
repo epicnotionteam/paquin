@@ -3,7 +3,11 @@
 {% endcomment %}
 
 
-<pre>{{ product.metafields.custom.related_products | json }}</pre>
+<!-- Debug output for metafield value -->
+Namespace: {{ product.metafields.custom.related_products.namespace }}
+Key: {{ product.metafields.custom.related_products.key }}
+Value: {{ product.metafields.custom.related_products.value }}
+Type: {{ product.metafields.custom.related_products.type }}
 
 <h2>Related Products</h2>
 <div class="related-products-container">

@@ -1,28 +1,30 @@
 {% comment %}
-  Output related product feed for the current product
+// Output related product feed for the current product
 {% endcomment %}
 
-{% if product.metafields.custom.related_products %}
+
+{% if product.metafields.custom.related_products %} 
+	{% assign data_source = product.metafields.custom.related_products.value %}
 	<div id="product__related-products">
-	  <h2>Related Products</h2>
-	  {% for item in product.metafields.custom.related_products %}
-		{% assign related_product = all_products[item] %}
-		{% if related_product.available %}
-		  <div class="related-product-card">
-			<a href="{{ related_product.url }}" class="related-product__link" aria-label="{{ related_product.title | escape }}" title="{{ related_product.title | escape }}">
-			  <img class="related-product__image" src="{{ related_product.featured_media | img_url: '500x500' }}" alt="{{ related_product.title | escape }}">
-			</a>
-			<div class="related-product__info">
-			  <a href="{{ related_product.url }}" class="related-product__title">{{ related_product.title }}</a>
-			  <span class="related-product__price">{{ related_product.price | money }}</span>
-			  <form action="/cart/add" method="post" enctype="multipart/form-data">
-				<input type="hidden" name="id" value="{{ related_product.variants.first.id }}">
-				<input type="number" name="quantity" value="1" min="1" class="related-product__quantity-input" hidden>
-				<button type="submit" class="related-product__add-to-cart-btn">Add to Cart</button>
-			  </form>
-			</div>
-		  </div>
-		{% endif %}
-	  {% endfor %}
+		<h2>Related Products</h2>
+		{% for item in data_source %}
+			{% if item.available == true %}
+				<div class="col--media">
+					<a href="{{ item.url }}" aria-label="{{ item.title }}" title="{{ item.title }}">
+						<img class="related-product__image" src="{{ item.images[0] | img_url: '500x' }}" alt="{{ item.title }}">
+					</a>
+				</div>
+				<div class="col--content">
+					<a href="{{ item.url }}" aria-label="{{ item.title }}" title="{{ item.title }}">
+						<h4 class="item__title">{{ item.title }}</h4>
+					</a>
+					<p class="item__price">[PRICE]</p>
+				</div>
+				<div class="col--cta">
+					[ADD TO CART]
+				</div>
+				
+			{% endif %}
+		{% endfor %}
 	</div>
-  {% endif %}
+{% endif %}

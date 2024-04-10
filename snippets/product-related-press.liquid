@@ -3,15 +3,16 @@
 {% endcomment %}
 
 
-{%- if product.metafields.custom.related_press -%}
+{% if product.metafields.related_press %}
+	{% assign data_source = product.metafields.custom.related_press.value %}
 	<div id="product__related-press">
-    	<h2>Related Press</h2>
-    	<ul class="list--link-arrow">
-      		{%- for item in product.metafields.custom.related_press -%}
-        		<li>
-          			<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-        		</li>
-      		{%- endfor -%}
-    	</ul>
-  	</div>
-{%- endif -%}
+		<h2>Related Press</h2>
+		<ul class="list--link-arrow">
+			{% for item in data_source %}
+		  		<li>
+					<a href="{{ item.url.value }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
+				</li>
+			{% endfor %}
+	  	</ul>
+	</div>
+{% endif %}

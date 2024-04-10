@@ -3,19 +3,16 @@
 {% endcomment %}
 
 
-{% assign instructions_references = product.metafields.custom.instructions | parse_json %}
-<div id="product__instructions">
-  <h2>Product Instructions</h2>
-  {% if instructions_references.size > 0 %}
-    <ul class="list--link-arrow">
-      {% for ref in instructions_references %}
-        {% assign instruction = ref | metafield %}
-        <li>
-          <a href="{{ instruction.url }}" title="{{ instruction.title | escape }}">{{ instruction.title | escape }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No instructions available.</p>
-  {% endif %}
-</div>
+{% if product.metafields.custom.instructions %}
+	{% assign data_source = product.metafields.custom.instructions.value %}
+	<div id="product__instructions">
+		<h2>Product Instructions</h2>
+		<ul class="list--link-arrow">
+			{% for item in data_source %}
+		  		<li>
+					<a href="{{ item.url.value }}" title="{{ item.title | escape }}">{{ item.title | escape }}</a>
+				</li>
+			{% endfor %}
+	  	</ul>
+	</div>
+{% endif %}

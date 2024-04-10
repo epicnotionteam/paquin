@@ -9,27 +9,20 @@ Key: {{ product.metafields.custom.related_products.key }}
 Value: {{ product.metafields.custom.related_products.value }}
 Type: {{ product.metafields.custom.related_products.type }}
 
+
+{% if product.metafields.custom.related_products %} 
+{% assign relatedproduct = product.metafields.custom.related_products.value %}
+
 <h2>Related Products</h2>
-<div class="related-products-container">
-	<!-- The loop starts here -->
-	{% for related_product in product.metafields.custom.related_products %}
-	  <div class="related-product-card">
-		<img src="{{ related_product.images.edges[0].node.originalSrc }}"
-			 alt="{{ related_product.images.edges[0].node.altText | escape }}"
-			 class="related-product-image">
-		
-		<h3 class="related-product-title">{{ related_product.title }}</h3>
-		
-		<p class="related-product-price">
-		  {{ related_product.priceRange.minVariantPrice.amount | money_with_currency: related_product.priceRange.minVariantPrice.currencyCode }}
-		</p>
-		
-		<!-- You will need to replace 'variant-id' with the actual variant id -->
-		<form action="/cart/add" method="post" enctype="multipart/form-data">
-		  <input type="hidden" name="id" value="variant-id">
-		  <button type="submit">Add to Cart</button>
-		</form>
-	  </div>
+<div class="related-products" id="related-products-{{ block.id }}">
+	{% for prod in relatedproduct %}
+	  {% if prod.available == true %}
+		<a href="{{ prod.url }}" class="related-product" aria-label="{{prod.title}}" title="{{ prod.title }}">
+		  <img class="related-product__image" src="{{ prod.images[0] | img_url: '500x' }}" alt="{{ prod.title }}">
+		</a>
+	  {% endif %}
 	{% endfor %}
-	<!-- The loop ends here -->
   </div>
+
+
+{% endif %}

@@ -3,6 +3,8 @@
 {% endcomment %}
 
 
+<pre>{{ product.metafields.custom.related_products | json }}</pre>
+
 <h2>Related Products</h2>
 <div class="related-products-container">
 	<!-- The loop starts here -->
@@ -27,4 +29,3 @@
 	{% endfor %}
 	<!-- The loop ends here -->
   </div>
-  

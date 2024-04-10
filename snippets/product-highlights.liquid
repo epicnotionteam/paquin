@@ -1,0 +1,17 @@
+{% comment %}
+// Output highlight feed for the current product
+{% endcomment %}
+
+
+{%- if product.metafields.custom.highlights -%}
+	<div id="product__highlights">
+    	<h2>Product Highlights</h2>
+    	<ul class="list--check">
+      		{%- for item in product.metafields.custom.highlights -%}
+        		<li>
+          			{{ item.value }}
+        		</li>
+      		{%- endfor -%}
+    	</ul>
+  	</div>
+{%- endif -%}

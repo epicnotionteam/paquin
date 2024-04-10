@@ -1,0 +1,27 @@
+{% comment %}
+// Output title for the current product
+{% endcomment %}
+
+
+{%- assign product_title = product.title | escape -%}
+
+{%- if is_product_modal or is_featured_product -%}
+  	<h2 class="product-title">
+    	<a href="{{ product.url | within: collection }}">
+      		{{- product_title -}}
+    	</a>
+  	</h2>
+{%- else -%}
+  	{%- case template -%}
+    	{%- when 'product' -%}
+			<div id="product__title">
+      			<h1>
+        			{{- product_title -}}
+      			</h1>
+			</div>
+    	{%- else -%}
+      		<h2 class="product-title">
+        		{{- product_title -}}
+      		</h2>
+  	{%- endcase -%}
+{%- endif -%}

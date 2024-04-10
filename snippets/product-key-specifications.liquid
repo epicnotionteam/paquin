@@ -1,0 +1,28 @@
+{% comment %}
+// Output key specifications for the current product
+{% endcomment %}
+
+
+{% assign specs = product.metafields.custom.key_specifications %}
+{% assign display_weight = specs.weight != blank or product.weight != blank %}
+{% assign display_dimensions = specs.dimensions != blank %}
+
+{% if display_weight or display_dimensions %}
+	<div id="product__key-specifications">
+		<h2>Key Product Specifications</h2>
+		<ul class="feed--key-specification">
+			{% if display_weight %}
+				<li>
+					<div class="col--key">Weight:</div>
+					<div class="col--value">{{ specs.weight | default: product.weight | weight_with_unit }}</div>
+				</li>
+			{% endif %}
+			{% if display_dimensions %}
+				<li>
+					<div class="col--key">Dimensions:</div>
+					<div class="col--value">{{ specs.dimensions }}</div>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}

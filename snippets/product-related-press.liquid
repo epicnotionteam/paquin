@@ -1,0 +1,17 @@
+{% comment %}
+// Output related press feed for the current product
+{% endcomment %}
+
+
+{%- if product.metafields.custom.related_press -%}
+	<div id="product__related-press">
+    	<h2>Related Press</h2>
+    	<ul class="list--link-arrow">
+      		{%- for item in product.metafields.custom.related_press -%}
+        		<li>
+          			<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+        		</li>
+      		{%- endfor -%}
+    	</ul>
+  	</div>
+{%- endif -%}

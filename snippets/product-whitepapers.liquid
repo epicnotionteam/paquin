@@ -1,0 +1,17 @@
+{% comment %}
+// Output whitepaper feed for the current product
+{% endcomment %}
+
+
+{%- if product.metafields.custom.whitepapers -%}
+	<div id="product__whitepapers">
+    	<h2>Whitepapers</h2>
+    	<ul class="list--link-arrow">
+      		{%- for item in product.metafields.custom.whitepapers -%}
+        		<li>
+          			<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+        		</li>
+      		{%- endfor -%}
+    	</ul>
+  	</div>
+{%- endif -%}

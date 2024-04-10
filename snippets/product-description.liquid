@@ -1,0 +1,11 @@
+{% comment %}
+// Output description for the current product
+{% endcomment %}
+
+
+{% if product.description != blank %}
+	<div id="product__description">
+		<h2>Product Description</h2>
+      	{{ product.description }}
+	</div>
+{% endif %}

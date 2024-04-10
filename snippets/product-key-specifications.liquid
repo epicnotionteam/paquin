@@ -3,26 +3,23 @@
 {% endcomment %}
 
 
-{% assign specs = product.metafields.custom.key_specifications %}
-{% assign display_weight = specs.weight != blank or product.weight != blank %}
-{% assign display_dimensions = specs.dimensions != blank %}
-
-{% if display_weight or display_dimensions %}
-	<div id="product__key-specifications">
-		<h2>Key Product Specifications</h2>
-		<ul class="feed--key-specification">
-			{% if display_weight %}
-				<li>
-					<div class="col--key">Weight:</div>
-					<div class="col--value">{{ specs.weight | default: product.weight | weight_with_unit }}</div>
-				</li>
+{% if product.metafields.custom.key_specifications %}
+	{% assign data_source = product.metafields.custom.key_specifications.value %}
+	<h2>Key Product Specifications</h2>
+	<div class="feed--key-specification">
+		{% for item in data_source %}
+			{% if item.weight %}
+				<div class="item">
+					<p class="item__title">Weight</p>
+					<p class="item__value">{{ item.weight | default: product.weight | weight_with_unit }}</p>
+				</div>
 			{% endif %}
-			{% if display_dimensions %}
-				<li>
-					<div class="col--key">Dimensions:</div>
-					<div class="col--value">{{ specs.dimensions }}</div>
-				</li>
+			{% if item.dimensions %}
+				<div class="item">
+					<p class="item__title">Dimensions</p>
+					<p class="item__value">{{ item.dimensions }}</p>
+				</div>
 			{% endif %}
-		</ul>
+	 	{% endfor %}
 	</div>
 {% endif %}

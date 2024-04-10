@@ -7,11 +7,9 @@
 	<div id="product__highlights">
     	<h2>Product Highlights</h2>
     	<ul class="list--check">
-      		{%- for item in product.metafields.custom.highlights -%}
-        		<li>
-          			{{ item }}
-        		</li>
-      		{%- endfor -%}
+			{% for highlight in product.metafields.custom.highlights %}
+				<li>{{ highlight }}</li>
+			{% endfor %}
     	</ul>
   	</div>
 {%- endif -%}

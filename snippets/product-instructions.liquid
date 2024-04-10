@@ -3,15 +3,16 @@
 {% endcomment %}
 
 
-{%- if product.metafields.custom.instructions -%}
+{%- if product.metafields.custom.instructions %}
 	<div id="product__instructions">
-    	<h2>Instructions</h2>
+    	<h2>Product Instructions</h2>
     	<ul class="list--link-arrow">
-      		{%- for item in product.metafields.custom.instructions -%}
-        		<li>
-          			<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-        		</li>
-      		{%- endfor -%}
+			{% assign instructions = product.metafields.custom.instructions | remove: '["' | remove: '"]' | split: '","' %}
+			{% for item in instructions %}
+				<li>
+					<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
     	</ul>
   	</div>
 {%- endif -%}

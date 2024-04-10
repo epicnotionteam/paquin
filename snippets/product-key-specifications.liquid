@@ -4,9 +4,14 @@
 
 
 {% if product.metafields.custom.key_specifications %}
+	<pre>Weight: {{ product.metafields.custom.key_specifications.weight }}</pre>
+	<pre>Dimensions: {{ product.metafields.custom.key_specifications.dimensions }}</pre>
+{% endif %}
+
+
+{% if product.metafields.custom.key_specifications %}
 	{% assign data_source = product.metafields.custom.key_specifications.value %}
 	<h2>Key Product Specifications</h2>
-	{{ product.metafields.custom.key_specifications | json }}
 	<div class="feed--key-specification">
 		{% for item in data_source %}
 			{% if item.weight %}

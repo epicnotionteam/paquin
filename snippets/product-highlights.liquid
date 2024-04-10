@@ -3,14 +3,14 @@
 {% endcomment %}
 
 
-{%- if product.metafields.custom.highlights -%}
-	<div id="product__highlights">
-    	<h2>Product Highlights</h2>
-    	<ul class="list--check">
-			{% assign highlights = product.metafields.custom.highlights | parse_json %}
+{% if product.metafields.custom.highlights %}
+	<div class="product-highlights">
+	  	<h2>Product Highlights</h2>
+	  	<ul>
+			{% assign highlights = product.metafields.custom.highlights | remove: '["' | remove: '"]' | split: '","' %}
 			{% for item in highlights %}
-				<li>{{ item }}</li>
+		  		<li>{{ item | strip }}</li>
 			{% endfor %}
-    	</ul>
-  	</div>
-{%- endif -%}
+	  	</ul>
+	</div>
+{% endif %}

@@ -6,9 +6,9 @@
 {% if product.metafields.custom.key_specifications %}
 	{% assign data_source = product.metafields.custom.key_specifications.value %}
 	<h2>Key Product Specifications</h2>
+	{{ product.metafields.custom.key_specifications | json }}
 	<div class="feed--key-specification">
 		{% for item in data_source %}
-			{{ item }}
 			{% if item.weight %}
 				<div class="item">
 					<p class="item__title">Weight</p>

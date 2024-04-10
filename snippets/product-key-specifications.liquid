@@ -5,26 +5,21 @@
 
 {% if product.metafields.custom.key_specifications %}
 	<div class="key-specifications">
-	  <h2>Key Product Specifications</h2>
-	  <div class="feed--key-specification">
-		{% assign key_specs = product.metafields.custom.key_specifications %}
-		
-		{% if key_specs.weight %}
-		  <div class="item">
-			<p class="item__title">Weight</p>
-			<p class="item__value">{{ key_specs.weight }}</p>
-		  </div>
-		{% endif %}
-		
-		{% if key_specs.dimensions %}
-		  <div class="item">
-			<p class="item__title">Dimensions</p>
-			<p class="item__value">{{ key_specs.dimensions }}</p>
-		  </div>
-		{% endif %}
-		
-		{#- Add additional fields here as necessary -#}
-		
-	  </div>
+		<h2>Key Product Specifications</h2>
+		<div class="feed--key-specification">
+			{% assign key_specs = product.metafields.custom.key_specifications %}
+			{% if key_specs.specifications.weight %}
+				<div class="item">
+					<p class="item__title">Weight</p>
+					<p class="item__value">{{ key_specs.specifications.weight }}</p>
+				</div>
+			{% endif %}
+			{% if key_specs.specifications.dimensions %}
+				<div class="item">
+					<p class="item__title">Dimensions</p>
+					<p class="item__value">{{ key_specs.specifications.dimensions }}</p>
+				</div>
+			{% endif %}
+		</div>
 	</div>
-  {% endif %}
+{% endif %}

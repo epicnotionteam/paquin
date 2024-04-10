@@ -1931,6 +1931,14 @@
       "oAP" : "\/snippets\/product-related-press.liquid",
       "oF" : 0
     },
+    "\/snippets\/product-related-products.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-related-products.liquid",
+      "oF" : 0
+    },
     "\/snippets\/product-request-form.liquid" : {
       "cB" : 0,
       "ft" : 8192,

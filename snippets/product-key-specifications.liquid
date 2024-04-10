@@ -5,16 +5,9 @@
 
 {% if product.metafields.custom.key_specifications %}
 	<!-- Assign component data to vars -->
-	{% assign data_source_1 = product.metafields.custom.key_specifications %}
-	{% assign data_source_2 = product.metafields.custom.key_specifications.value %}
-	{% if data_source_1 %}
-		Data Source 1
-	{% endif %}
-	{% if data_source_2 %}
-		Data Source 2
-	{% endif %}
+	{% assign data_source = product.metafields.custom.key_specifications %}
 	<!-- Output component -->
-	<h2>Key Product Specifications</h2>
+	<h2 class="h5">Key Product Specifications</h2>
 	{{ data_source }}
 	<div class="feed--table-simple">
 	  	{% for item in data_source %}

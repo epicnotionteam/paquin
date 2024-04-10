@@ -1,0 +1,21 @@
+{% comment %}
+// Output related product feed for the current product
+{% endcomment %}
+
+
+{% if product.metafields.custom.related_products %}
+	<div id="product__related-products">
+	  	{% for item in product.metafields.custom.related_products %}
+			{% assign related_product = all_products[item] %}
+			<div class="related-product-card">
+		  		<img src="{{ related_product.featured_image | img_url: '300x300' }}" alt="{{ related_product.title | escape }}">
+		  		<h3>{{ related_product.title }}</h3>
+		  		<p>{{ related_product.price | money }}</p>
+		  		<form action="/cart/add" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="id" value="{{ related_product.variants.first.id }}">
+					<input type="submit" value="Add to Cart">
+		  		</form>
+			</div>
+	  	{% endfor %}
+	</div>
+{% endif %}

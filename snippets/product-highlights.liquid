@@ -7,8 +7,9 @@
 	<div id="product__highlights">
     	<h2>Product Highlights</h2>
     	<ul class="list--check">
-			{% for highlight in product.metafields.custom.highlights %}
-				<li>{{ highlight }}</li>
+			{% assign highlights = product.metafields.custom.highlights | parse_json %}
+			{% for item in highlights %}
+				<li>{{ item }}</li>
 			{% endfor %}
     	</ul>
   	</div>

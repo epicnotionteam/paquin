@@ -3,12 +3,13 @@
 {% endcomment %}
 
 
-{% if product.metafields.custom.key_specifications %}
+{% if product.metafields.custom.specifications %}
+	Found data
 	<!-- Assign component data to vars -->
-	{% assign data_source = product.metafields.custom.key_specifications.value %}
+	{% assign data_source = product.metafields.custom.specifications.value %}
 	<!-- Output component -->
 	<div class="feed--table-simple">
-		Found data
+		
 	  	{% for item in data_source %}
 			Found items
 

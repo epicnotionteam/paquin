@@ -2355,6 +2355,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/product-new.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/product-new-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/product-new.liquid" : {
       "cB" : 0,
       "ft" : 8192,

@@ -8,6 +8,7 @@
 	<h2>Key Product Specifications</h2>
 	<div class="feed--key-specification">
 		{% for item in data_source %}
+			{{ item }}
 			{% if item.weight %}
 				<div class="item">
 					<p class="item__title">Weight</p>

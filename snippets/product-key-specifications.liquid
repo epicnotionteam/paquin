@@ -2,25 +2,22 @@
 // Output key specifications for the current product
 {% endcomment %}
 
-
+<pre>Found snippet</pre>
 {% if product.metafields.custom.specifications %}
 	Found data
 	<!-- Assign component data to vars -->
 	{% assign data_source = product.metafields.custom.specifications.value %}
 	<!-- Output component -->
 	<div class="feed--table-simple">
-		
 	  	{% for item in data_source %}
-			Found items
-
+			<pre>Found items</pre>
 			{% if item.weight %}
 			<div class="item">
-				Found item [Weight]
+				<pre>Found item [Weight]</pre>
 				<p class="item__heading">Weight</p>
 				<div class="item__content">{{ item.weight }}</div>
 			</div>
 			{% endif %}
-		
-	  {% endfor %}
+	  	{% endfor %}
 	</div>
-  {% endif %}
+{% endif %}

@@ -1,37 +1,41 @@
-<div id="col--product-header">
-    <!-- Title -->
-    {% render 'product-title' %}
-    <!-- Price -->
-    {% render 'product-price-new' %}
-    <!-- Data Sheet -->
-    {% render 'product-data-sheet' %}
-</div>
+<div class="grid--product">
 
-<div id="col--product-media">
-     <!-- Gallery -->
-     {% render 'product-gallery' %}
-</div>
+    <div id="product__header">
+        <!-- Title -->
+        {% render 'product-title' %}
+        <!-- Price -->
+        {% render 'product-price-new' %}
+        <!-- Data Sheet -->
+        {% render 'product-data-sheet' %}
+    </div>
 
-<div id="col--product-core">
-    <!-- Variant Selection, Quantity & Add To Cart -->
-    {% render 'product-form', product: product %}
-    <!-- Highlights -->
-    {% render 'product-highlights' %}
-    <!-- Related Products -->
-    {% render 'product-related-products' %}
-    <!-- Inquiry Form -->
-    {% render 'product-inquiry-form' %}
-</div>
+    <div id="product__media">
+        <!-- Gallery -->
+        {% render 'product-gallery' %}
+    </div>
 
-<div id="col--product-data">
-    <!-- Description -->
-    {% render 'product-description' %}
-    <!-- Key Specifications -->
-    {% render 'product-key-specifications' %}
-    <!-- Related Press -->
-    {% render 'product-related-press' %}
-    <!-- Whitepapers -->
-    {% render 'product-whitepapers' %}
-    <!-- Instructions -->
-    {% render 'product-instructions' %}
+    <div id="product__core">
+        <!-- Variant Selection, Quantity & Add To Cart -->
+        {% render 'product-form', product: product %}
+        <!-- Highlights -->
+        {% render 'product-highlights' %}
+        <!-- Related Products -->
+        {% render 'product-related-products' %}
+        <!-- Inquiry Form -->
+        {% render 'product-inquiry-form' %}
+    </div>
+
+    <div id="product__data">
+        <!-- Description -->
+        {% render 'product-description' %}
+        <!-- Key Specifications -->
+        {% render 'product-key-specifications' %}
+        <!-- Related Press -->
+        {% render 'product-related-press' %}
+        <!-- Whitepapers -->
+        {% render 'product-whitepapers' %}
+        <!-- Instructions -->
+        {% render 'product-instructions' %}
+    </div>
+
 </div>

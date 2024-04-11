@@ -5,6 +5,25 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
+// Template Grid Structure
+// --------------------------------------------------
+
+.grid--product {}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    
+    .grid--product {
+        grid-template: repeat( 2, 1fr );
+        grid-template-areas: 
+            'media header'
+            'data core';
+    }
+
+}
+
+
 // Section [Core]
 // Contains product title, price, description etc
 // --------------------------------------------------

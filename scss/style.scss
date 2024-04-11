@@ -5,45 +5,45 @@ Author URL: https://epicnotion.com
 */
 
 // Variables
- @import "variables/breakpoint";
- @import "variables/color";
- @import "variables/common";
- @import "variables/container";
- @import "variables/icon";
- @import "variables/position";
- @import "variables/spacing";
- @import "variables/typography";
+@import "variables/breakpoint";
+@import "variables/color";
+@import "variables/common";
+@import "variables/container";
+@import "variables/icon";
+@import "variables/position";
+@import "variables/spacing";
+@import "variables/typography";
 
 // Tools
- @import 'tools/mixin';
- @import 'tools/function';
+@import 'tools/mixin';
+@import 'tools/function';
 
 // Utilities
- @import "utilities/reset";
- @import "utilities/mq";
- @import "utilities/alignment";
- @import "utilities/interaction";
- @import "utilities/position";
- @import "utilities/spacing";
- @import "utilities/visibility";
+@import "utilities/reset";
+@import "utilities/mq";
+@import "utilities/alignment";
+@import "utilities/interaction";
+@import "utilities/position";
+@import "utilities/spacing";
+@import "utilities/visibility";
 
 // Base
- @import "base/color";
- @import "base/common";
- @import "base/page";
- @import "base/typography";
+@import "base/color";
+@import "base/common";
+@import "base/page";
+@import "base/typography";
 
 // Layout
- @import "layout/container";
- @import "layout/footer";
- @import "layout/header";
+@import "layout/container";
+@import "layout/footer";
+@import "layout/header";
 
 // Templates
- @import "templates/collection";
- @import "templates/product";
+@import "templates/collection";
+@import "templates/product";
 
 // Components
- @import "components/component";
+@import "components/component";
 
 // Vendor
- @import "vendor/vendor";
+@import "vendor/vendor";

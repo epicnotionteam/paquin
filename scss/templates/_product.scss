@@ -20,7 +20,13 @@
         grid-template-columns: repeat( 2, 1fr );
         grid-template-areas: 
             'media header'
-            'data core';
+            'data core'
+        ;
+
+        & > * {
+            @include rem( max-width, 512px );
+        }
+        
     }
 
     #product__header {
@@ -37,10 +43,6 @@
     
     #product__data {
         grid-area: data;
-    }
-
-    & > * {
-        @include rem( max-width, 512px );
     }
 
 }

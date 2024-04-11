@@ -22,4 +22,20 @@
             'data core';
     }
 
+    #product__header {
+        grid-area: 'header';
+    }
+
+    #product__media {
+        grid-area: 'media';
+    }
+    
+    #product__core {
+        grid-area: 'core';
+    }
+    
+    #product__data {
+        grid-area: 'data';
+    }
+
 }

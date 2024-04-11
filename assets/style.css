@@ -1419,9 +1419,12 @@ h5,
   .grid--product {
     gap: 40px;
     gap: 4rem;
+    max-width: 1064px;
+    max-width: 106.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "media header" "data core";
+    margin: 0 auto;
   }
   .grid--product > * {
     max-width: 512px;

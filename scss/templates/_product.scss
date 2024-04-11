@@ -15,18 +15,22 @@
 @include mq( $from: medium ) {
     
     .grid--product {
-        @include rem( gap, spacing(6) );
+        @include rem(( 
+            gap: spacing(6),
+            max-width: 1064px
+        ));
         display: grid;
         grid-template-columns: repeat( 2, 1fr );
         grid-template-areas: 
             'media header'
             'data core'
         ;
+        margin: 0 auto;
 
         & > * {
             @include rem( max-width, 512px );
         }
-        
+
     }
 
     #product__header {

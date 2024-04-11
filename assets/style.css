@@ -1417,7 +1417,8 @@ h5,
 
 @media (min-width: 64em) {
   .grid--product {
-    grid-template: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "media header" "data core";
   }
 }

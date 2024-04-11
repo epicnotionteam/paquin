@@ -6,7 +6,7 @@
 {% if product.metafields.related_press %}
 	{% assign data_source = product.metafields.custom.related_press.value %}
 	<div id="product__related-press">
-		<h2>Related Press</h2>
+		<h2 class="h5">Related Press</h2>
 		<ul class="list--link-arrow">
 			{% for item in data_source %}
 		  		<li>

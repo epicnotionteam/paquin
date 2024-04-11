@@ -14,15 +14,7 @@
 
 <div id="col--product-core">
     <!-- Variant Selection, Quantity & Add To Cart -->
-    {%
-        render 'product-form',
-        product: product,
-        enable_local_pickup: enable_local_pickup,
-        show_recipient_form: show_recipient_form,
-        show_dynamic_checkout_button: show_dynamic_checkout_button,
-        selected_variant: selected_variant,
-        is_product_modal: is_product_modal,
-    %}
+    {% render 'product-form', product: product %}
     <!-- Highlights -->
     {% render 'product-highlights' %}
     <!-- Related Products -->

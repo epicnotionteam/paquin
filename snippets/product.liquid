@@ -69,7 +69,7 @@
 {% endif %}
 
 
-<article class="product__container">
+<article class="product--outer">
 
 	{% comment %} Product Header {% endcomment %}
 	<div id="product__header">
@@ -115,7 +115,7 @@
 		<!-- SKU -->
 		<div class="product-sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</div>
 		<!-- Data Sheet -->
-		Data sheet: {% render 'product-data-sheet' %}
+		{% render 'product-data-sheet' %}
 	</div>
 
 
@@ -196,67 +196,68 @@
 		<!-- Instructions -->
 		{% render 'product-instructions' %}
 	</div>
-  
-
-  	<div class="product-main">
-    	<div class="product-details" data-product-details>
-      		{% for block in section.blocks %}
-        <div
-          class="
-            product-block
-            product-block--{{ block.type }}
-            {% if forloop.first == true -%}
-              product-block--first
-            {% endif %}
-          "
-          {{ block.shopify_attributes }}
-        >
-          {% case block.type %}
-            {% when 'complementary_products' %}
-              {%
-                render 'complementary-products',
-                product: product,
-                block: block,
-              %}
-
-
-            {% comment %} {% when 'vendor' %}
-              {% if product.vendor != blank or onboarding %}
-                <div class="product-vendor">
-                  {% unless onboarding %}
-                    {%- capture vendor_link -%}
-                      {{ product.vendor | link_to_vendor }}
-                    {%- endcapture -%}
-                    {{ 'product.general.by_vendor_html' | t: vendor_link: vendor_link }}
-                  {% else %}
-                    {{ 'onboarding.product.by_vendor' | t }}
-                  {% endunless %}
-                </div>
-              {% endif %} {% endcomment %}
-
-            {% comment %} {% when 'inventory_status' %}
-              {% for variant in product.variants %}
-                {% capture stock_attributes %}
-                  data-stock-level
-                  data-stock-variant-id="{{ variant.id }}"
-                  data-stock-variant-selected="{% if variant == selected_variant %}true{% else %}false{% endif %}"
-                {% endcapture %}
-
-                {%
-                  render 'product-stock-level',
-                  attr: stock_attributes,
-                  inventory_display: block.settings.inventory_display,
-                  inventory_transfer: block.settings.inventory_transfer_notice,
-                  variant: variant,
-                  verbose: true,
-                %}
-              {% endfor %} {% endcomment %}
-
-              
-          {% endcase %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
 
 </article>
+
+
+
+<div class="product-main">
+	<div class="product-details" data-product-details>
+		  {% for block in section.blocks %}
+	<div
+	  class="
+		product-block
+		product-block--{{ block.type }}
+		{% if forloop.first == true -%}
+		  product-block--first
+		{% endif %}
+	  "
+	  {{ block.shopify_attributes }}
+	>
+	  {% case block.type %}
+		{% when 'complementary_products' %}
+		  {%
+			render 'complementary-products',
+			product: product,
+			block: block,
+		  %}
+
+
+		{% comment %} {% when 'vendor' %}
+		  {% if product.vendor != blank or onboarding %}
+			<div class="product-vendor">
+			  {% unless onboarding %}
+				{%- capture vendor_link -%}
+				  {{ product.vendor | link_to_vendor }}
+				{%- endcapture -%}
+				{{ 'product.general.by_vendor_html' | t: vendor_link: vendor_link }}
+			  {% else %}
+				{{ 'onboarding.product.by_vendor' | t }}
+			  {% endunless %}
+			</div>
+		  {% endif %} {% endcomment %}
+
+		{% comment %} {% when 'inventory_status' %}
+		  {% for variant in product.variants %}
+			{% capture stock_attributes %}
+			  data-stock-level
+			  data-stock-variant-id="{{ variant.id }}"
+			  data-stock-variant-selected="{% if variant == selected_variant %}true{% else %}false{% endif %}"
+			{% endcapture %}
+
+			{%
+			  render 'product-stock-level',
+			  attr: stock_attributes,
+			  inventory_display: block.settings.inventory_display,
+			  inventory_transfer: block.settings.inventory_transfer_notice,
+			  variant: variant,
+			  verbose: true,
+			%}
+		  {% endfor %} {% endcomment %}
+
+		  
+	  {% endcase %}
+	</div>
+  {% endfor %}
+</div>
+</div>

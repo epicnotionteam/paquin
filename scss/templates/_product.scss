@@ -12,41 +12,45 @@
 
 
 // Adjust @medium breakpoint
-@include mq( $from: medium ) {
+@include mq($from: medium) {
     
     .product--outer {
-        @include rem(( 
+        @include rem((
             gap: spacing(6),
             max-width: 1064px
         ));
         display: grid;
-        grid-template-columns: repeat( 2, 1fr );
-        grid-template-areas: 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas:
             'media header'
-            'data core'
-        ;
+            'data core';
         margin: 0 auto;
-
+  
         & > * {
-            @include rem( max-width, 512px );
+            @include rem(max-width, 512px);
         }
 
     }
-
+  
     #product__header {
         grid-area: header;
+        align-self: start;
     }
-
+  
     #product__media {
         grid-area: media;
+        align-self: start;
     }
-    
+  
     #product__core {
         grid-area: core;
+        align-self: start;
     }
-    
+  
     #product__data {
         grid-area: data;
+        align-self: start;
     }
 
-}
+  }

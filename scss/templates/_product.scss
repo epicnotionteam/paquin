@@ -8,43 +8,34 @@
 // Template Grid Structure
 // --------------------------------------------------
 
-.grid--product {}
-
-
-// Adjust @medium breakpoint
-@include mq($from: medium) {
+// Base styles
+.grid--product {
+    margin: 0 auto;
+    padding: spacing(3); // Adjust the spacing according to your theme
+    column-gap: spacing(6);
+    row-gap: spacing(6);
+  }
+  
+  // Adjust @medium breakpoint
+  @include mq($from: medium) {
     .grid--product {
-      @include rem((
-        gap: spacing(6),
-        max-width: 1064px
-      ));
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: min-content;
-      margin: 0 auto;
+      column-count: 2;
+      max-width: rem( max-width, 1064px );
   
       & > * {
-        @include rem(max-width, 512px);
+        margin-bottom: spacing(6);
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
     }
   
-    #product__media {
-      grid-column: 1;
-      grid-row: 1;
-    }
-  
-    #product__header {
-      grid-column: 2;
-      grid-row: 1;
-    }
-  
+    #product__media,
     #product__data {
-      grid-column: 2;
-      grid-row: 2;
+      order: 1;
     }
   
+    #product__header,
     #product__core {
-      grid-column: 1;
-      grid-row: 2;
+      order: 2;
     }
   }

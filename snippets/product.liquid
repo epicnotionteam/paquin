@@ -36,6 +36,33 @@
     This is the click to zoom setting, which is either 'disabled', 'mobile', 'desktop', or 'always'
 {% endcomment %}
 
+
+<script>
+	// Function to adjust the layout
+	function updateLayout() {
+	  // Calculate the total height of the first column (media + data)
+	  var mediaHeight = document.getElementById('product__media').offsetHeight;
+	  var dataHeight = document.getElementById('product__data').offsetHeight;
+	  var firstColumnHeight = mediaHeight + dataHeight;
+  
+	  // Get the height of the header element
+	  var headerHeight = document.getElementById('product__header').offsetHeight;
+  
+	  // Calculate the required offset for the core element
+	  var offsetForCore = firstColumnHeight > headerHeight ? firstColumnHeight - headerHeight : 0;
+  
+	  // Set the top margin of the core element to the offset value
+	  var coreElement = document.getElementById('product__core');
+	  coreElement.style.marginTop = offsetForCore + 'px';
+	}
+  
+	// Run the function on document load and window resize
+	document.addEventListener("DOMContentLoaded", updateLayout);
+	window.addEventListener('resize', updateLayout);
+  </script>
+  
+
+
 {% liquid
   	assign onboarding = onboarding | default: false
   	assign layout = layout | default: nil

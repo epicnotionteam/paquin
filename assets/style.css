@@ -1421,33 +1421,29 @@ h5,
     gap: 4rem;
     max-width: 1064px;
     max-width: 106.4rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
     margin: 0 auto;
   }
   .grid--product > * {
     max-width: 512px;
     max-width: 51.2rem;
-    flex-basis: calc(50% - 16px);
-  }
-  #product__media,
-  #product__data {
-    display: flex;
-    flex-direction: column;
   }
   #product__media {
-    order: 1;
+    grid-column: 1;
+    grid-row: 1;
   }
   #product__header {
-    order: 2;
-    margin-bottom: auto;
+    grid-column: 2;
+    grid-row: 1;
   }
   #product__data {
-    order: 3;
-    margin-top: auto;
+    grid-column: 2;
+    grid-row: 2;
   }
   #product__core {
-    order: 4;
-    margin-top: auto;
+    grid-column: 1;
+    grid-row: 2;
   }
 }

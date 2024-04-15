@@ -1,0 +1,8 @@
+{% comment %}
+// Output SKU for the current product
+{% endcomment %}
+
+
+{% if product.general.sku_html %}
+	<p class="product__sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</p>
+{%  endif %}

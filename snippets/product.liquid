@@ -70,133 +70,135 @@
 
 
 <article class="product--outer">
+	<div class="grid--product">
 
-	{% comment %} Product Header {% endcomment %}
-	<div id="product__header">
-		<!-- Title -->
-		<h2 class="product__title">{{  product.title }}</h2>
-		<!-- Price -->
-		<div
-			class="product-pricing"
-			aria-live="polite"
-			data-product-pricing
-		>
-			{%
-				render 'product-badge',
-				product: product,
-				class_root: 'product',
-				product_available: product_available,
-				price: price,
-				price_varies: false,
-				compare_at_price: compare_at_price,
-				compare_at_price_varies: false,
-				on_sale: on_sale,
-				show_saved: true,
-				include_range: false,
-				selected_variant: selected_variant,
-			%}
-			{%
-				render 'product-price',
-				product: product,
-				class_root: 'product',
-				price: price,
-				price_varies: false,
-				compare_at_price: compare_at_price,
-				compare_at_price_varies: false,
-				on_sale: on_sale,
-				emphasize_price: false,
-				show_original: true,
-				show_range: false,
-				include_unit_price: true,
-				include_tax_line: true,
-				include_hidden_price: true
-			%}
-		</div>
-		<!-- SKU -->
-		<div class="product-sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</div>
-		<!-- Data Sheet -->
-		{% render 'product-data-sheet' %}
-	</div>
-
-
-	{% comment %} Product Media {% endcomment %}
-	<div id="product__media">
-		{%
-			render 'product-gallery',
-			product: product,
-			select_first_available_variant: select_first_available_variant,
-			aspect_ratio: gallery_aspect_ratio,
-			thumbnail_position: gallery_thumbnail_position,
-			image_crop: gallery_image_crop,
-			gallery_click_to_zoom: gallery_click_to_zoom,
-			gallery_hover_zoom: gallery_hover_zoom
-		%}
-	</div>
-
-
-	{% comment %} Product Core {% endcomment %}
-	<div id="product__core">
-		<!-- Form -->
-		<div
-			class="product-form--regular"
-			data-product-form-regular
-		>
-			<div data-product-form-area>
-			  	{% if is_product_modal %}
-					<div data-product-quickshop-message class="product-message--container"></div>
-			  	{% endif %}
-			  	{% liquid
-					if product.template_suffix contains 'pre-order'
-				  		assign show_dynamic_checkout_button = false
-					endif
-					if product.template_suffix contains 'pre-order' and is_product_modal
-				  		assign enable_local_pickup = false
-					else
-				  		assign enable_local_pickup = block.settings.enable_local_pickup
-					endif
-			  	%}
+		{% comment %} Product Header {% endcomment %}
+		<div id="product__header">
+			<!-- Title -->
+			<h2 class="product__title">{{  product.title }}</h2>
+			<!-- Price -->
+			<div
+				class="product-pricing"
+				aria-live="polite"
+				data-product-pricing
+			>
 				{%
-					render 'product-form',
+					render 'product-badge',
 					product: product,
-					enable_local_pickup: enable_local_pickup,
-					show_recipient_form: show_recipient_form,
-					show_dynamic_checkout_button: show_dynamic_checkout_button,
+					class_root: 'product',
+					product_available: product_available,
+					price: price,
+					price_varies: false,
+					compare_at_price: compare_at_price,
+					compare_at_price_varies: false,
+					on_sale: on_sale,
+					show_saved: true,
+					include_range: false,
 					selected_variant: selected_variant,
-					is_product_modal: is_product_modal,
+				%}
+				{%
+					render 'product-price',
+					product: product,
+					class_root: 'product',
+					price: price,
+					price_varies: false,
+					compare_at_price: compare_at_price,
+					compare_at_price_varies: false,
+					on_sale: on_sale,
+					emphasize_price: false,
+					show_original: true,
+					show_range: false,
+					include_unit_price: true,
+					include_tax_line: true,
+					include_hidden_price: true
 				%}
 			</div>
+			<!-- SKU -->
+			<div class="product-sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</div>
+			<!-- Data Sheet -->
+			{% render 'product-data-sheet' %}
 		</div>
-		<!-- Highlights -->
-		{% render 'product-highlights' %}
-		<!-- Related Products -->
-		{% render 'product-related-products' %}
-		<!-- Inquiry Form -->
-		{%
-			render 'product-request-form',
-			product: product,
-			heading: block.settings.title,
-			show_quantity: block.settings.show_quantity,
-			show_message: block.settings.show_message,
-			selected_variant: selected_variant,
-			sku: sku,
-		%}
+
+
+		{% comment %} Product Media {% endcomment %}
+		<div id="product__media">
+			{%
+				render 'product-gallery',
+				product: product,
+				select_first_available_variant: select_first_available_variant,
+				aspect_ratio: gallery_aspect_ratio,
+				thumbnail_position: gallery_thumbnail_position,
+				image_crop: gallery_image_crop,
+				gallery_click_to_zoom: gallery_click_to_zoom,
+				gallery_hover_zoom: gallery_hover_zoom
+			%}
+		</div>
+
+
+		{% comment %} Product Core {% endcomment %}
+		<div id="product__core">
+			<!-- Form -->
+			<div
+				class="product-form--regular"
+				data-product-form-regular
+			>
+				<div data-product-form-area>
+					{% if is_product_modal %}
+						<div data-product-quickshop-message class="product-message--container"></div>
+					{% endif %}
+					{% liquid
+						if product.template_suffix contains 'pre-order'
+							assign show_dynamic_checkout_button = false
+						endif
+						if product.template_suffix contains 'pre-order' and is_product_modal
+							assign enable_local_pickup = false
+						else
+							assign enable_local_pickup = block.settings.enable_local_pickup
+						endif
+					%}
+					{%
+						render 'product-form',
+						product: product,
+						enable_local_pickup: enable_local_pickup,
+						show_recipient_form: show_recipient_form,
+						show_dynamic_checkout_button: show_dynamic_checkout_button,
+						selected_variant: selected_variant,
+						is_product_modal: is_product_modal,
+					%}
+				</div>
+			</div>
+			<!-- Highlights -->
+			{% render 'product-highlights' %}
+			<!-- Related Products -->
+			{% render 'product-related-products' %}
+			<!-- Inquiry Form -->
+			{%
+				render 'product-request-form',
+				product: product,
+				heading: block.settings.title,
+				show_quantity: block.settings.show_quantity,
+				show_message: block.settings.show_message,
+				selected_variant: selected_variant,
+				sku: sku,
+			%}
+		</div>
+
+
+		{% comment %} Product Data {% endcomment %}
+		<div id="product__data">
+			<!-- Description -->
+			{% render 'product-description' %}
+			<!-- Key Specifications -->
+			{% render 'product-key-specifications' %}
+			<!-- Related Press -->
+			{% render 'product-related-press' %}
+			<!-- Whitepapers -->
+			{% render 'product-whitepapers' %}
+			<!-- Instructions -->
+			{% render 'product-instructions' %}
+		</div>
+
 	</div>
-
-
-	{% comment %} Product Data {% endcomment %}
-	<div id="product__data">
-		<!-- Description -->
-		{% render 'product-description' %}
-		<!-- Key Specifications -->
-		{% render 'product-key-specifications' %}
-		<!-- Related Press -->
-		{% render 'product-related-press' %}
-		<!-- Whitepapers -->
-		{% render 'product-whitepapers' %}
-		<!-- Instructions -->
-		{% render 'product-instructions' %}
-	</div>
-
 </article>
 
 

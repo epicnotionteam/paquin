@@ -68,20 +68,6 @@
 	{% assign consistent_saved = true %}
 {% endif %}
 
-{%- capture share_buttons -%}
-	{% assign social_image = false %}
-  	{% if product.featured_image %}
-    	{% assign social_image = product.featured_image | img_url: '1024x' %}
-  	{% endif %}
-  	{% assign social_url = shop.url | append: product.url %}
-  	{%-
-    	render 'share-buttons',
-    	snippet_title: 'general.share_buttons.title',
-    	social_image: social_image,
-    	social_title: product.title,
-    	social_url: social_url
-  	-%}
-{%- endcapture  -%}
 
 <article class="product--outer">
 
@@ -125,19 +111,11 @@
 				include_tax_line: true,
 				include_hidden_price: true
 			%}
-			<form data-payment-terms-target style="display: none;"></form>
 		</div>
 		<!-- SKU -->
-		<div
-			class="
-			  product-sku
-			  {% if sku == empty %}product-sku--empty{% endif %}
-			"
-		  >
-			{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}
-		  </div>
+		<div class="product-sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</div>
 		<!-- Data Sheet -->
-		{% render 'product-data-sheet' %}
+		Data sheet: {% render 'product-data-sheet' %}
 	</div>
 
 

@@ -1440,11 +1440,14 @@ h5,
   }
   #product__header {
     order: 2;
+    margin-bottom: auto;
   }
   #product__data {
     order: 3;
+    margin-top: auto;
   }
   #product__core {
     order: 4;
+    margin-top: auto;
   }
 }

@@ -40,13 +40,16 @@
   
     #product__header {
       order: 2;
+      margin-bottom: auto; // Add this line
     }
   
     #product__data {
       order: 3;
+      margin-top: auto; // Add this line
     }
   
     #product__core {
       order: 4;
+      margin-top: auto; // Add this line
     }
   }

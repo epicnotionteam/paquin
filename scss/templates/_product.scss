@@ -25,26 +25,28 @@
         margin: 0 auto;
   
         & > * {
-            @include rem( max-width, 512px );
+            @include rem(( 
+                flex-basis: calc( 50% - #{spacing(3)} ),
+                max-width: 512px 
+            ));
         }
 
     }
-  
-    #product__header,
-    #product__media,
-    #product__core,
-    #product__data {
-        flex-basis: calc( 50% - #{spacing(3)} );
+
+    #product__media {
+        order: 0;
     }
-  
-    #product__media,
-    #product__data {
+
+    #product__header {
         order: 1;
     }
-  
-    #product__header,
-    #product__core {
+
+    #product__data {
         order: 2;
+    }
+
+    #product__core {
+        order: 3;
     }
 
 }

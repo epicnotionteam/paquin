@@ -3,7 +3,6 @@
 {% endcomment %}
 
 
-SKU:
-{% if product.general.sku_html %}
+{% if sku != blank %}
 	<p class="product__sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</p>
-{%  endif %}
+  {% endif %}

@@ -1421,26 +1421,30 @@ h5,
     gap: 4rem;
     max-width: 1064px;
     max-width: 106.4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: min-content;
-    grid-template-areas: "media header" "media core" "data core";
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
   }
   .grid--product > * {
     max-width: 512px;
     max-width: 51.2rem;
+    flex-basis: calc(50% - 16px);
+  }
+  #product__media,
+  #product__data {
+    display: flex;
+    flex-direction: column;
   }
   #product__media {
-    grid-area: media;
+    order: 1;
   }
   #product__header {
-    grid-area: header;
+    order: 2;
   }
   #product__data {
-    grid-area: data;
+    order: 3;
   }
   #product__core {
-    grid-area: core;
+    order: 4;
   }
 }

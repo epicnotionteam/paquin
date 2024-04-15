@@ -1,5 +1,40 @@
+<script
+    type="application/json"
+    data-section-type="static-product"
+    data-section-id="{{ section.id }}"
+    data-section-data
+  >
+    {
+      "settings": {
+        "cart_redirection": {{ settings.enable_cart_redirection | json }},
+        "gallery_thumbnail_position": {{ section.settings.gallery_thumbnail_position | json }},
+        "gallery_video_autoplay": {{ section.settings.gallery_video_autoplay | json }},
+        "gallery_video_looping": {{ section.settings.gallery_video_looping | json }},
+        "gallery_hover_zoom": {{ section.settings.gallery_hover_zoom | json }},
+        "gallery_click_to_zoom": {{ section.settings.gallery_click_to_zoom | json }},
+        "money_format": {{ shop.money_format | strip_html | json }},
+        "swatches_enable": {{ settings.swatches_enable | json }},
+        "sold_out_options": {{ settings.sold_out_options | json }},
+        "select_first_available_variant": {{ settings.select_first_available_variant | json }}
+      },
+      "context": {
+        "select_variant": {{ 'product.general.select_variant' | t | json }},
+        "product_available": {{ 'product.buttons.add_to_cart' | t | json }},
+        "product_sold_out": {{ 'product.buttons.sold_out' | t | json }},
+        "product_unavailable": {{ 'product.buttons.unavailable' | t | json }},
+        "product_preorder": {{ 'product.buttons.pre_order' | t | json }},
+        "request_message_empty": {{ 'product.blocks.request_quote.request_message_empty' | t | json }}
+      },
+      "product": {{ product | json }},
+      "product_recommendation_limit": {{ product_recommendation_limit | json }}
+    }
+  </script>
+
 <div class="wrap--container">
-    <div class="grid--product">
+
+    {% render 'breadcrumbs' %}
+
+    <div class="grid--product" data-product-wrapper>
 
         <div id="product__header">
             <!-- Title -->
@@ -12,7 +47,16 @@
 
         <div id="product__media">
             <!-- Gallery -->
-            {% render 'product-gallery' %}
+            {%
+                render 'product-gallery',
+                product: product,
+                select_first_available_variant: select_first_available_variant,
+                aspect_ratio: gallery_aspect_ratio,
+                thumbnail_position: gallery_thumbnail_position,
+                image_crop: gallery_image_crop,
+                gallery_click_to_zoom: gallery_click_to_zoom,
+                gallery_hover_zoom: gallery_hover_zoom
+              %}
         </div>
 
         <div id="product__core">

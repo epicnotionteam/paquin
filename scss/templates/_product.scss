@@ -8,12 +8,13 @@
 // Template Grid Structure
 // --------------------------------------------------
 
-.product--outer {}
+.grid--product {}
+
 
 // Adjust @medium breakpoint
 @include mq($from: medium) {
     
-    .product--outer {
+    .grid--product {
         @include rem((
             gap: spacing(6),
             max-width: 1064px

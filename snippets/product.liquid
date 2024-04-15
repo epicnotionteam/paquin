@@ -127,12 +127,21 @@
 			%}
 			<form data-payment-terms-target style="display: none;"></form>
 		</div>
+		<!-- SKU -->
+		<div
+			class="
+			  product-sku
+			  {% if sku == empty %}product-sku--empty{% endif %}
+			"
+		  >
+			{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}
+		  </div>
 		<!-- Data Sheet -->
 		{% render 'product-data-sheet' %}
 	</div>
 
 
-	{% comment %} ProductMedia {% endcomment %}
+	{% comment %} Product Media {% endcomment %}
 	<div id="product__media">
 		{%
 			render 'product-gallery',
@@ -146,6 +155,69 @@
 		%}
 	</div>
 
+
+	{% comment %} Product Core {% endcomment %}
+	<div id="product__core">
+		<!-- Form -->
+		<div
+			class="product-form--regular"
+			data-product-form-regular
+		>
+			<div data-product-form-area>
+			  	{% if is_product_modal %}
+					<div data-product-quickshop-message class="product-message--container"></div>
+			  	{% endif %}
+			  	{% liquid
+					if product.template_suffix contains 'pre-order'
+				  		assign show_dynamic_checkout_button = false
+					endif
+					if product.template_suffix contains 'pre-order' and is_product_modal
+				  		assign enable_local_pickup = false
+					else
+				  		assign enable_local_pickup = block.settings.enable_local_pickup
+					endif
+			  	%}
+				{%
+					render 'product-form',
+					product: product,
+					enable_local_pickup: enable_local_pickup,
+					show_recipient_form: show_recipient_form,
+					show_dynamic_checkout_button: show_dynamic_checkout_button,
+					selected_variant: selected_variant,
+					is_product_modal: is_product_modal,
+				%}
+			</div>
+		</div>
+		<!-- Highlights -->
+		{% render 'product-highlights' %}
+		<!-- Related Products -->
+		{% render 'product-related-products' %}
+		<!-- Inquiry Form -->
+		{%
+			render 'product-request-form',
+			product: product,
+			heading: block.settings.title,
+			show_quantity: block.settings.show_quantity,
+			show_message: block.settings.show_message,
+			selected_variant: selected_variant,
+			sku: sku,
+		%}
+	</div>
+
+
+	{% comment %} Product Data {% endcomment %}
+	<div id="product__data">
+		<!-- Description -->
+		{% render 'product-description' %}
+		<!-- Key Specifications -->
+		{% render 'product-key-specifications' %}
+		<!-- Related Press -->
+		{% render 'product-related-press' %}
+		<!-- Whitepapers -->
+		{% render 'product-whitepapers' %}
+		<!-- Instructions -->
+		{% render 'product-instructions' %}
+	</div>
   
 
   	<div class="product-main">
@@ -202,254 +274,11 @@
                 %}
               {% endfor %} {% endcomment %}
 
-            
-
-            
-
-            
               
-
-            {% when 'sku' %}
-              {% unless onboarding %}
-                <div
-                  class="
-                    product-sku
-                    {% if sku == empty %}product-sku--empty{% endif %}
-                  "
-                >
-                  {{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}
-                </div>
-              {% endunless %}
-
-            {% when 'description' %}
-              {% if readmore_split[0] != blank %}
-                <div class="product-description rte" data-product-description>
-                  {{ readmore_split[0] }}
-                </div>
-              {% endif %}
-
-            {% when 'form' %}
-              <div
-                class="product-form--regular"
-                data-product-form-regular
-              >
-                <div data-product-form-area>
-                  {% if is_product_modal %}
-                    <div data-product-quickshop-message class="product-message--container"></div>
-                  {% endif %}
-
-                  {% liquid
-                    if product.template_suffix contains 'pre-order'
-                      assign show_dynamic_checkout_button = false
-                    endif
-
-                    if product.template_suffix contains 'pre-order' and is_product_modal
-                      assign enable_local_pickup = false
-                    else
-                      assign enable_local_pickup = block.settings.enable_local_pickup
-                    endif
-                  %}
-
-                  {% unless onboarding %}
-                    {%
-                      render 'product-form',
-                      product: product,
-                      enable_local_pickup: enable_local_pickup,
-                      show_recipient_form: show_recipient_form,
-                      show_dynamic_checkout_button: show_dynamic_checkout_button,
-                      selected_variant: selected_variant,
-                      is_product_modal: is_product_modal,
-                    %}
-                  {% endunless %}
-                </div>
-              </div>
-
-            {% when 'text' %}
-              <div class="product-text">
-                {{ block.settings.text }}
-              </div>
-
-            {% when 'share' %}
-              <div class="product-share">
-                {{ share_buttons | strip_newlines }}
-              </div>
-
-            {% when 'custom-liquid' %}
-              {% if block.settings.custom_liquid != blank %}
-                <div class="custom-liquid">
-                  {{ block.settings.custom_liquid }}
-                </div>
-              {% endif %}
-
-            {% when 'tabs' %}
-              {% if block.settings.show_tabs_below_product_gallery %}
-                {% assign tabs_below_product_gallery = true %}
-              {% else %}
-                {% assign tabs_below_product_gallery = false %}
-              {% endif %}
-
-              {% capture product_tabs %}
-                {% assign tab_counter = 1 %}
-
-                <div class="pxu-tabs pxu-tabs--bottom-{{ tabs_below_product_gallery }}">
-                  {% if block.settings.show_product_description %}
-                    <input
-                      class="tab-radio"
-                      id="description-tab-{{ section.id }}"
-                      name="{{ section.id }}"
-                      tabindex="0"
-                      type="radio"
-                      checked="checked"
-                    >
-
-                    <label class="tab-label" for="description-tab-{{ section.id }}">
-                      {{ 'product.onboarding.tab_title'| t }}
-                    </label>
-
-                    <div class="tab-panel" tabindex="0">
-                      {% if onboarding %}
-                        {{ 'product.onboarding.tab_content'| t }}
-                      {% else %}
-                        {% if product.description != blank %}
-                          {{ product.description }}
-                        {% else %}
-                          {{ 'product.onboarding.tab_content'| t }}
-                        {% endif %}
-                      {% endif %}
-                    </div>
-                  {% endif %}
-
-                  {% for i in (1..3) %}
-                    {% assign tab_text_key = 'tab_text_' | append: i %}
-                    {% assign tab_heading_key = 'tab_heading_' | append: i %}
-                    {% assign tab_heading_value = block.settings[tab_heading_key] %}
-                    {% assign tab_text_value = block.settings[tab_text_key] %}
-
-                    {% if tab_heading_value != blank %}
-                      <input
-                        class="tab-radio"
-                        id="tab-{{ i }}-{{ section.id }}"
-                        name="{{ section.id }}"
-                        tabindex="0"
-                        type="radio"
-                        {% if tab_counter == 1 and block.settings.show_product_description == false %}
-                          checked
-                        {% endif %}
-                      >
-
-                      <label class="tab-label" for="tab-{{ i }}-{{ section.id }}">
-                        {{ tab_heading_value | escape }}
-                      </label>
-
-                      <div class="tab-panel" tabindex="0">
-                        {{ tab_text_value }}
-                      </div>
-
-                      {% assign tab_counter = tab_counter | plus: 1 %}
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              {% endcapture %}
-
-              {% if block.settings.show_tabs_below_product_gallery != true %}
-                {{ product_tabs }}
-              {% endif %}
-
-            {% when 'collapsible-tab' %}
-              {% if block.settings.collapsible_tab_heading != blank %}
-                <details class="collapsible-tab">
-                  <summary class="collapsible-tab__heading">
-                    <span>{{ block.settings.collapsible_tab_heading | escape }}</span>
-                    {% render 'icon-chevron-down-small' %}
-                  </summary>
-
-                  {% if block.settings.collapsible_tab_text != blank %}
-                    <div class="collapsible-tab__text">
-                      {{ block.settings.collapsible_tab_text }}
-                    </div>
-                  {% endif %}
-                </details>
-              {% endif %}
-
-            {% when '@app' %}
-              <div class="product-app">
-                {% render block %}
-              </div>
-
-            {% when 'view-product-link' %}
-              <a
-                class="product-link"
-                href="{{ product.url | within: collection }}"
-                data-product-details-link
-              >
-                {{ block.settings.text | escape }}
-              </a>
-
-            {% when 'request_quote' %}
-              {%
-                render 'product-request-form',
-                product: product,
-                heading: block.settings.title,
-                show_quantity: block.settings.show_quantity,
-                show_message: block.settings.show_message,
-                selected_variant: selected_variant,
-                sku: sku,
-              %}
           {% endcase %}
         </div>
       {% endfor %}
-
-      {% if layout == 'layout--three-col' %}
-        <div class="product-form--regular" data-product-form-regular>
-          <div data-product-form-area>
-            {% if is_product_modal %}
-              <div data-product-quickshop-message class="product-message--container"></div>
-            {% endif %}
-
-            {% liquid
-              if product.template_suffix contains 'pre-order'
-                assign show_dynamic_checkout_button = false
-              endif
-
-              if product.template_suffix contains 'pre-order' and is_product_modal
-                assign enable_local_pickup = false
-              else
-                assign enable_local_pickup = section.settings.enable_local_pickup
-              endif
-            %}
-
-            {% unless onboarding %}
-              {%
-                render 'product-form',
-                product: product,
-                enable_local_pickup: enable_local_pickup,
-                show_recipient_form: show_recipient_form,
-                show_dynamic_checkout_button: show_dynamic_checkout_button,
-                selected_variant: selected_variant,
-                is_product_modal: is_product_modal,
-              %}
-            {% endunless %}
-
-            {% if section.settings.social_share and is_product_modal == false %}
-              {{ share_buttons | strip_newlines }}
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
     </div>
   </div>
 
-  {% if layout == 'layout--three-col' %}
-    <div class="product-form--alt" data-product-form-alt></div>
-  {% endif %}
 </article>
-
-{% if tabs_below_product_gallery == true %}
-  {{ product_tabs }}
-{% endif %}
-
-{% if readmore_split[1] != blank and is_featured_product != true and is_product_modal != true %}
-  <div class="product-readmore rte" data-product-readmore>
-    {{ readmore_split[1] }}
-  </div>
-{% endif %}

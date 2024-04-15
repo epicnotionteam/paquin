@@ -1423,6 +1423,7 @@ h5,
     max-width: 106.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     grid-template-areas: "media header" "data core";
     margin: 0 auto;
   }
@@ -1432,14 +1433,18 @@ h5,
   }
   #product__header {
     grid-area: header;
+    align-self: start;
   }
   #product__media {
     grid-area: media;
+    align-self: start;
   }
   #product__core {
     grid-area: core;
+    align-self: start;
   }
   #product__data {
     grid-area: data;
+    align-self: start;
   }
 }

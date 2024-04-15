@@ -1899,14 +1899,6 @@
       "oAP" : "\/snippets\/product-key-specifications.liquid",
       "oF" : 0
     },
-    "\/snippets\/product-price-new.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/product-price-new.liquid",
-      "oF" : 0
-    },
     "\/snippets\/product-price.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1945,6 +1937,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/product-request-form.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-sku.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-sku.liquid",
       "oF" : 0
     },
     "\/snippets\/product-stock-level.liquid" : {

@@ -1421,6 +1421,9 @@ h5,
 .grid--product #product__media .product-gallery {
   width: 100%;
 }
+.grid--product #product__media .product-gallery .product-gallery--viewer {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
 .grid--product #product__data > * {
   padding: 40px 0;
   padding: 4rem 0;

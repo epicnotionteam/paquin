@@ -28,6 +28,10 @@
     #product__media {
         .product-gallery {
             width: 100%;
+            // Viewer
+            .product-gallery--viewer {
+                border: $border--base;
+            }
         }
     }
 

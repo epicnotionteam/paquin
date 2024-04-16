@@ -8,35 +8,49 @@
 // Template Grid Structure
 // --------------------------------------------------
 
-// Base styles
-.grid--product {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    gap: spacing(6); // Adjust the spacing according to your theme
-  }
+.product--outer {}
+
+
+// Adjust @medium breakpoint
+@include mq($from: medium) {
+    
+    .product--outer {
+        @include rem((
+            gap: spacing(6),
+            max-width: 1064px
+        ));
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            'media header'
+            'data core';
+        margin: 0 auto;
   
-  // Adjust for medium breakpoint
-  @include mq($from: medium) {
-    .grid--product {
-      max-width: rem(1064px);
-  
-      & > div {
-        flex: 0 0 calc(50% - #{spacing(3)}); // each child takes up 50% of the container width
-      }
-    }
-  
-    #product__media,
-    #product__data {
-      order: 1;
+        & > * {
+            @include rem(max-width, 512px);
+        }
+
     }
   
     #product__header {
-      order: 2;
+        grid-area: header;
+        align-self: start;
     }
-    
-    #product__core {
-      order: 3;
-    }
-  }
   
+    #product__media {
+        grid-area: media;
+        align-self: start;
+    }
+  
+    #product__core {
+        grid-area: core;
+        align-self: start;
+    }
+  
+    #product__data {
+        grid-area: data;
+        align-self: start;
+    }
+
+  }

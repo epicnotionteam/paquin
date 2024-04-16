@@ -6,21 +6,16 @@
 {% if product.metafields.custom.key_specifications %}
 	<div id="product__key-specifications">
 		<!-- Assign component data to vars -->
-		{% assign data_source = product.metafields.custom.key_specifications %}
-		<!-- Output component -->
+		{% assign data_weight = product.metafields.custom.key_specifications.specifications.weight %}
+		{% assign data_weight = product.metafields.custom.key_specifications.specifications.dimensions %}
 		<h2 class="h5">Key Product Specifications</h2>
-		{{ data_source }}
-		<div class="feed--table-simple">
-			{% for item in data_source %}
-				<pre>Found items</pre>
-				{% if item.weight %}
-				<div class="item">
-					<pre>Found item [Weight]</pre>
-					<p class="item__heading">Weight</p>
-					<div class="item__content">{{ item.weight }}</div>
-				</div>
-				{% endif %}
-			{% endfor %}
-		</div>
+		{% comment %} Weight {% endcomment %}
+		{% if data_weight %}
+			<p><strong>Weight:</strong> {{ data_weight }}</p>
+		{% endif %}
+		{% comment %} Dimensions {% endcomment %}
+		{% if data_dimensions %}
+			<p><strong>Dimensions:</strong> {{ data_dimensions }}</p>
+		{% endif %}
 	</div>
 {% endif %}

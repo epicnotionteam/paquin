@@ -1416,7 +1416,7 @@ h5,
 }
 
 @media (min-width: 64em) {
-  .product--outer {
+  .grid--product {
     gap: 40px;
     gap: 4rem;
     max-width: 1064px;
@@ -1426,7 +1426,7 @@ h5,
     grid-template-areas: "media header" "data core";
     margin: 0 auto;
   }
-  .product--outer > * {
+  .grid--product > * {
     width: 512px;
     width: 51.2rem;
     margin: 0;

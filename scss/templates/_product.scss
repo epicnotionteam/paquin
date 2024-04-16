@@ -10,7 +10,8 @@
 
 // Adjust for medium breakpoint
 @include mq($from: medium) {
-    .product--outer {
+    
+    .grid--product {
         @include rem((
             gap: spacing(6),
             max-width: 1064px
@@ -46,4 +47,5 @@
         // If there is still unwanted space, we may need to align the item to the end of the area
         align-self: end;
     }
+    
 }

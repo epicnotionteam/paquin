@@ -8,6 +8,17 @@
 // Template Grid Structure
 // --------------------------------------------------
 
+.grid--product {
+
+    // Section [Media]
+    #product__media {
+        .product-gallery {
+            width: 100%;
+        }
+    }
+
+}
+
 // Adjust for medium breakpoint
 @include mq($from: medium) {
     
@@ -24,28 +35,28 @@
         margin: 0 auto;
 
         & > * {
-            @include rem(width, 512px);
-            // Ensure there are no margins that could disrupt the grid layout
-            margin: 0;
+            @include rem( width, 512px );
         }
     }
 
+    // Section [Media]
     #product__media {
         grid-area: media;
     }
 
+    // Section [Header]
     #product__header {
         grid-area: header;
     }
 
+    // Section [Data]
     #product__data {
         grid-area: data;
     }
 
+    // Section [Core]
     #product__core {
         grid-area: core;
-        // If there is still unwanted space, we may need to align the item to the end of the area
-        align-self: end;
     }
-    
+
 }

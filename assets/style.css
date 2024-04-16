@@ -1415,6 +1415,10 @@ h5,
   margin-top: unset;
 }
 
+.grid--product #product__media .product-gallery {
+  width: 100%;
+}
+
 @media (min-width: 64em) {
   .grid--product {
     gap: 40px;
@@ -1429,7 +1433,6 @@ h5,
   .grid--product > * {
     width: 512px;
     width: 51.2rem;
-    margin: 0;
   }
   #product__media {
     grid-area: media;
@@ -1442,6 +1445,5 @@ h5,
   }
   #product__core {
     grid-area: core;
-    align-self: end;
   }
 }

@@ -10,6 +10,20 @@
 
 .grid--product {
 
+    // Section [Header]
+    #product__header {
+        // Title
+        #product__title {
+            margin: 0;
+        }
+        // Price
+        #product__price {}
+        // SKU
+        #product__sku {}
+        // Data Sheet
+        #product__data-sheet {}
+    }
+
     // Section [Media]
     #product__media {
         .product-gallery {

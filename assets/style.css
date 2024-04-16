@@ -1415,6 +1415,9 @@ h5,
   margin-top: unset;
 }
 
+.grid--product #product__header #product__title {
+  margin: 0;
+}
 .grid--product #product__media .product-gallery {
   width: 100%;
 }

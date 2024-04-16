@@ -38,28 +38,29 @@
 
 
 <script>
-	// Function to adjust the layout
-	function updateLayout() {
-	  // Calculate the total height of the first column (media + data)
-	  var mediaHeight = document.getElementById('product__media').offsetHeight;
-	  var dataHeight = document.getElementById('product__data').offsetHeight;
-	  var firstColumnHeight = mediaHeight + dataHeight;
+	// Function to adjust the layout for the core element
+	function updateCoreLayout() {
+	  // Make sure we're on desktop view
+	  if (window.innerWidth >= 768) { // Adjust 768 to your actual breakpoint
+		// Calculate the height difference between media and header
+		const mediaHeight = document.getElementById('product__media').offsetHeight;
+		const headerHeight = document.getElementById('product__header').offsetHeight;
+		const heightDiff = mediaHeight - headerHeight;
   
-	  // Get the height of the header element
-	  var headerHeight = document.getElementById('product__header').offsetHeight;
-  
-	  // Calculate the required offset for the core element
-	  var offsetForCore = firstColumnHeight > headerHeight ? firstColumnHeight - headerHeight : 0;
-  
-	  // Set the top margin of the core element to the offset value
-	  var coreElement = document.getElementById('product__core');
-	  coreElement.style.marginTop = offsetForCore + 'px';
+		// Apply the height difference as top margin to the core section if media is taller than header
+		const coreElement = document.getElementById('product__core');
+		coreElement.style.marginTop = heightDiff > 0 ? `${heightDiff}px` : "0";
+	  } else {
+		// Reset the margin for mobile view
+		document.getElementById('product__core').style.marginTop = "0";
+	  }
 	}
   
 	// Run the function on document load and window resize
-	document.addEventListener("DOMContentLoaded", updateLayout);
-	window.addEventListener('resize', updateLayout);
-  </script>
+	document.addEventListener("DOMContentLoaded", updateCoreLayout);
+	window.addEventListener('resize', updateCoreLayout);
+</script>
+  
   
 
 

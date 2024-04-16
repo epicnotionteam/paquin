@@ -5,9 +5,9 @@
 
 {% if product.metafields.custom.key_specifications %}
 	<div id="product__key-specifications">
-		<!-- Assign component data to vars -->
+		{% comment %} Assign component data to vars {% endcomment %}
 		{% assign data_weight = product.metafields.custom.key_specifications.specifications.weight %}
-		{% assign data_weight = product.metafields.custom.key_specifications.specifications.dimensions %}
+		{% assign data_dimensions = product.metafields.custom.key_specifications.specifications.dimensions %}
 		<h2 class="h5">Key Product Specifications</h2>
 		{% comment %} Weight {% endcomment %}
 		{% if data_weight %}

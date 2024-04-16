@@ -1424,7 +1424,16 @@ h5,
   border-top: 1px solid rgba(0, 0, 0, 0.16);
 }
 .grid--product #product__data > * p {
-  font-size: "small";
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.55;
+}
+@media screen and (min-width: 1240px) {
+  .grid--product #product__data > * p {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.55;
+  }
 }
 .grid--product #product__data > * p:last-child {
   margin: 0;

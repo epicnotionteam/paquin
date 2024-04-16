@@ -25,7 +25,7 @@
             border-top: $border--base;
             // Content
             p {
-                font-size: ( 'small' );
+                @include font-size( 'small' );
                 // Strip margin from final <p> tag
                 &:last-child {
                     margin: 0;

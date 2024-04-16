@@ -9,12 +9,12 @@
   <div id="product__key-specifications">
     <h2 class="h5">Key Product Specifications</h2>
     {% comment %} Check and output weight {% endcomment %}
-    {% if key_specs.weight %}
-      <p><strong>Weight:</strong> {{ key_specs.weight }}</p>
+    {% if key_specs.weight.value %}
+      <p><strong>Weight:</strong> {{ key_specs.weight.value }}</p>
     {% endif %}
     {% comment %} Check and output dimensions {% endcomment %}
-    {% if key_specs.dimensions %}
-      <p><strong>Dimensions:</strong> {{ key_specs.dimensions }}</p>
+    {% if key_specs.dimensions.value %}
+      <p><strong>Dimensions:</strong> {{ key_specs.dimensions.value }}</p>
     {% endif %}
   </div>
 {% endif %}

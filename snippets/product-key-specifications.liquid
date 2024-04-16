@@ -10,7 +10,9 @@
     <h2 class="h5">Key Product Specifications</h2>
     {% comment %} Check and output weight {% endcomment %}
     {% if key_specs.weight.value %}
-      <p><strong>Weight:</strong> {{ key_specs.weight.value }}</p>
+      <p><strong>Weight1:</strong> {{ key_specs.weight.value }}</p>
+	  <p><strong>Weight2:</strong> {{ key_specs.specifications.weight.value }}</p>
+	  <p><strong>Weight3:</strong> {{ key_specs.specifications.value.weight.value }}</p>
     {% endif %}
     {% comment %} Check and output dimensions {% endcomment %}
     {% if key_specs.dimensions.value %}

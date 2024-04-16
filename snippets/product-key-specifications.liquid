@@ -3,19 +3,18 @@
 {% endcomment %}
 
 
-{% if product.metafields.custom.key_specifications %}
-	<div id="product__key-specifications">
-		{% comment %} Assign component data to vars {% endcomment %}
-		{% assign data_weight = product.metafields.custom.key_specifications.specifications.weight %}
-		{% assign data_dimensions = product.metafields.custom.key_specifications.specifications.dimensions %}
-		<h2 class="h5">Key Product Specifications</h2>
-		{% comment %} Weight {% endcomment %}
-		{% if data_weight %}
-			<p><strong>Weight:</strong> {{ data_weight }}</p>
-		{% endif %}
-		{% comment %} Dimensions {% endcomment %}
-		{% if data_dimensions %}
-			<p><strong>Dimensions:</strong> {{ data_dimensions }}</p>
-		{% endif %}
-	</div>
+{% assign key_specs = product.metafields.custom.key_specifications %}
+
+{% if key_specs %}
+  <div id="product__key-specifications">
+    <h2 class="h5">Key Product Specifications</h2>
+    {% comment %} Check and output weight {% endcomment %}
+    {% if key_specs.weight %}
+      <p><strong>Weight:</strong> {{ key_specs.weight }}</p>
+    {% endif %}
+    {% comment %} Check and output dimensions {% endcomment %}
+    {% if key_specs.dimensions %}
+      <p><strong>Dimensions:</strong> {{ key_specs.dimensions }}</p>
+    {% endif %}
+  </div>
 {% endif %}

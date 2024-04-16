@@ -10,22 +10,19 @@
 
 // Base styles
 .grid--product {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-    padding: spacing(3); // Adjust the spacing according to your theme
-    column-gap: spacing(6);
-    row-gap: spacing(6);
+    gap: spacing(6); // Adjust the spacing according to your theme
   }
   
-  // Adjust @medium breakpoint
+  // Adjust for medium breakpoint
   @include mq($from: medium) {
     .grid--product {
-      column-count: 2;
-      max-width: rem( max-width, 1064px );
+      max-width: rem(1064px);
   
-      & > * {
-        margin-bottom: spacing(6);
-        break-inside: avoid;
-        page-break-inside: avoid;
+      & > div {
+        flex: 0 0 calc(50% - #{spacing(3)}); // each child takes up 50% of the container width
       }
     }
   
@@ -34,8 +31,12 @@
       order: 1;
     }
   
-    #product__header,
-    #product__core {
+    #product__header {
       order: 2;
     }
+    
+    #product__core {
+      order: 3;
+    }
   }
+  

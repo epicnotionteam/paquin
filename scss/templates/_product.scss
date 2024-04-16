@@ -24,7 +24,8 @@
             @include rem( padding, spacing(6) 0 );
             border-top: $border--base;
             // Content
-            p {
+            p, 
+            li {
                 @include font-size( 'small' );
                 // Strip margin from final <p> tag
                 &:last-child {

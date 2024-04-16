@@ -1423,19 +1423,22 @@ h5,
   padding: 4rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.16);
 }
-.grid--product #product__data > * p {
+.grid--product #product__data > * p,
+.grid--product #product__data > * li {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 1.55;
 }
 @media screen and (min-width: 1240px) {
-  .grid--product #product__data > * p {
+  .grid--product #product__data > * p,
+  .grid--product #product__data > * li {
     font-size: 15px;
     font-size: 1.5rem;
     line-height: 1.55;
   }
 }
-.grid--product #product__data > * p:last-child {
+.grid--product #product__data > * p:last-child,
+.grid--product #product__data > * li:last-child {
   margin: 0;
 }
 

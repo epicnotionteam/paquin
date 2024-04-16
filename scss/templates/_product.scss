@@ -17,6 +17,15 @@
         }
     }
 
+    // Section [Data]
+    #product__data {
+
+        & > * {
+            @include rem( padding, spacing(6) );
+            border-bottom: $border--base;
+        }
+    }
+
 }
 
 // Adjust for medium breakpoint

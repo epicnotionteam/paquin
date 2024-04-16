@@ -2,21 +2,21 @@
 // Output key specifications for the current product
 {% endcomment %}
 
-
 {% assign key_specs = product.metafields.custom.key_specifications %}
 
 {% if key_specs %}
   <div id="product__key-specifications">
     <h2 class="h5">Key Product Specifications</h2>
+    {% comment %} Access the metafield definition for 'Specifications' {% endcomment %}
+    {% assign specifications = key_specs.value %}
+
     {% comment %} Check and output weight {% endcomment %}
-    {% if key_specs.weight.value %}
-      <p><strong>Weight1:</strong> {{ key_specs.weight.value }}</p>
-	  <p><strong>Weight2:</strong> {{ key_specs.specifications.weight.value }}</p>
-	  <p><strong>Weight3:</strong> {{ key_specs.specifications.value.weight.value }}</p>
+    {% if specifications.weight %}
+      <p><strong>Weight:</strong> {{ specifications.weight }}</p>
     {% endif %}
     {% comment %} Check and output dimensions {% endcomment %}
-    {% if key_specs.dimensions.value %}
-      <p><strong>Dimensions:</strong> {{ key_specs.dimensions.value }}</p>
+    {% if specifications.dimensions %}
+      <p><strong>Dimensions:</strong> {{ specifications.dimensions }}</p>
     {% endif %}
   </div>
 {% endif %}

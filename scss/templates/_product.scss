@@ -8,49 +8,42 @@
 // Template Grid Structure
 // --------------------------------------------------
 
-.grid--product {}
-
-
-// Adjust @medium breakpoint
+// Adjust for medium breakpoint
 @include mq($from: medium) {
-    
-    .grid--product {
+    .product--outer {
         @include rem((
             gap: spacing(6),
             max-width: 1064px
         ));
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
         grid-template-areas:
             'media header'
             'data core';
         margin: 0 auto;
-  
-        & > * {
-            @include rem(max-width, 512px);
-        }
 
+        & > * {
+            @include rem(width, 512px);
+            // Ensure there are no margins that could disrupt the grid layout
+            margin: 0;
+        }
     }
-  
-    #product__header {
-        grid-area: header;
-        align-self: start;
-    }
-  
+
     #product__media {
         grid-area: media;
-        align-self: start;
-    }
-  
-    #product__core {
-        grid-area: core;
-        align-self: start;
-    }
-  
-    #product__data {
-        grid-area: data;
-        align-self: start;
     }
 
-  }
+    #product__header {
+        grid-area: header;
+    }
+
+    #product__data {
+        grid-area: data;
+    }
+
+    #product__core {
+        grid-area: core;
+        // If there is still unwanted space, we may need to align the item to the end of the area
+        align-self: end;
+    }
+}

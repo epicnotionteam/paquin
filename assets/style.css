@@ -1416,35 +1416,32 @@ h5,
 }
 
 @media (min-width: 64em) {
-  .grid--product {
+  .product--outer {
     gap: 40px;
     gap: 4rem;
     max-width: 1064px;
     max-width: 106.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
     grid-template-areas: "media header" "data core";
     margin: 0 auto;
   }
-  .grid--product > * {
-    max-width: 512px;
-    max-width: 51.2rem;
-  }
-  #product__header {
-    grid-area: header;
-    align-self: start;
+  .product--outer > * {
+    width: 512px;
+    width: 51.2rem;
+    margin: 0;
   }
   #product__media {
     grid-area: media;
-    align-self: start;
   }
-  #product__core {
-    grid-area: core;
-    align-self: start;
+  #product__header {
+    grid-area: header;
   }
   #product__data {
     grid-area: data;
-    align-self: start;
+  }
+  #product__core {
+    grid-area: core;
+    align-self: end;
   }
 }

@@ -37,37 +37,6 @@
 {% endcomment %}
 
 
-<script>
-	// Function to adjust the layout for the core element
-	function updateCoreLayout() {
-	  // Only apply adjustments on desktop view
-	  if (window.innerWidth >= 768) { // Adjust this to match your actual media query breakpoint for desktop
-		// Get the height of the header element
-		const headerHeight = document.getElementById('product__header').offsetHeight;
-  
-		// Get the core element
-		const coreElement = document.getElementById('product__core');
-  
-		// Set the top margin of the core element to align it just below the header element
-		coreElement.style.marginTop = `${headerHeight}px`;
-	  } else {
-		// Reset the margin for mobile view
-		coreElement.style.marginTop = 0;
-	  }
-	}
-  
-	// Run the function after all resources have fully loaded
-	window.onload = updateCoreLayout;
-  
-	// Add event listener for window resize
-	window.addEventListener('resize', updateCoreLayout);
-  </script>
-  
-  
-  
-  
-
-
 {% liquid
   	assign onboarding = onboarding | default: false
   	assign layout = layout | default: nil

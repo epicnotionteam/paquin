@@ -1456,23 +1456,25 @@ h5,
     max-width: 106.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "media header" "data core";
+    grid-gap: 40px;
     margin: 0 auto;
   }
-  .grid--product > * {
-    width: 512px;
-    width: 51.2rem;
+  #product__media,
+  #product__data,
+  #product__header,
+  #product__core {
+    grid-column: span 1;
   }
   #product__media {
-    grid-area: media;
+    grid-row: 1;
   }
   #product__header {
-    grid-area: header;
+    grid-row: 2;
   }
   #product__data {
-    grid-area: data;
+    grid-row: 3;
   }
   #product__core {
-    grid-area: core;
+    grid-row: 4;
   }
 }

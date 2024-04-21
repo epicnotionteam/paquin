@@ -59,40 +59,34 @@
 @include mq($from: medium) {
     
     .grid--product {
-        @include rem((
-            gap: spacing(6),
-            max-width: 1064px
-        ));
+        @include rem((gap: spacing(6), max-width: 1064px));
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            'media header'
-            'data core';
+        grid-gap: spacing(6);
         margin: 0 auto;
-
-        & > * {
-            @include rem( width, 512px );
-        }
-    }
-
-    // Section [Media]
-    #product__media {
-        grid-area: media;
-    }
-
-    // Section [Header]
-    #product__header {
-        grid-area: header;
-    }
-
-    // Section [Data]
-    #product__data {
-        grid-area: data;
-    }
-
-    // Section [Core]
-    #product__core {
-        grid-area: core;
-    }
+      }
+      
+      #product__media,
+      #product__data,
+      #product__header,
+      #product__core {
+        grid-column: span 1;
+      }
+      
+      #product__media {
+        grid-row: 1;
+      }
+      
+      #product__header {
+        grid-row: 2;
+      }
+      
+      #product__data {
+        grid-row: 3;
+      }
+      
+      #product__core {
+        grid-row: 4;
+      }
 
 }

@@ -11,7 +11,9 @@
 .grid--product {
 
     // Section [Header]
-    #product__header {
+    #product__header {\
+		@include rem( column-gap, 12px );
+		display: grid;
         // Title
         #product__title {
           	@include font-size( 'h2' );

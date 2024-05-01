@@ -18,7 +18,16 @@
             margin: 0;
         }
         // Price
-        #product__price {}
+        #product__price,
+		& > .product__price {
+			@include rem( column-gap, spacing(1) );
+			align-items: center;
+			display: grid;
+			grid-template-columns: max-content max-content;
+			> * {
+				margin: 0;
+			}
+		}
         // SKU
         #product__sku {}
         // Data Sheet

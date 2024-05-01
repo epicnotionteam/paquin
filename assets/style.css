@@ -1191,7 +1191,7 @@ em,
 b,
 strong,
 .text--strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 sup {
@@ -1207,6 +1207,11 @@ sup {
   font-weight: 400;
 }
 
+h1, h2, h2, h4 {
+  font-family: "Paquin Sans Display", sans-serif;
+  text-transform: none;
+}
+
 h1,
 .h1 {
   font-size: 38px;
@@ -1216,7 +1221,6 @@ h1,
   letter-spacing: 0.04rem;
   margin: 0 0 32px;
   margin: 0 0 3.2rem;
-  font-family: "Paquin Sans Display", sans-serif;
   font-weight: 400;
 }
 @media screen and (min-width: 1240px) {
@@ -1237,7 +1241,6 @@ h2,
   letter-spacing: 0.024rem;
   margin: 0 0 24px;
   margin: 0 0 2.4rem;
-  font-family: "Paquin Sans Display", sans-serif;
   font-weight: 400;
 }
 @media screen and (min-width: 1240px) {
@@ -1258,7 +1261,6 @@ h3,
   letter-spacing: 0.016rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
-  font-family: "Paquin Sans Display", sans-serif;
   font-weight: 400;
 }
 @media screen and (min-width: 1240px) {
@@ -1279,7 +1281,6 @@ h4,
   letter-spacing: 0.016rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
-  font-family: "Paquin Sans Display", sans-serif;
   font-weight: 400;
 }
 @media screen and (min-width: 1240px) {

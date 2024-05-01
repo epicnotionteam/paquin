@@ -97,6 +97,11 @@ sup {
 // Heading styles
 // --------------------------------------------------
 
+h1, h2, h2, h4 {
+	font-family: font-family( 'heading' );
+	text-transform: none;
+}
+
 h1, 
 .h1, 
 %h1 {
@@ -106,7 +111,6 @@ h1,
 		margin: 0 0 spacing(5)
 	));
 	color: color( 'type', '1' );
-	font-family: font-family( 'heading' );
 	font-weight: font-weight( 'base' );
 }
 
@@ -119,7 +123,6 @@ h2,
 		margin: 0 0 spacing(4)
 	));
 	color: color( 'type', '1' );
-	font-family: font-family( 'heading' );
 	font-weight: font-weight( 'base' );
 }
 
@@ -132,7 +135,6 @@ h3,
 		margin: 0 0 spacing(3)
 	));
 	color: color( 'type', '1' );
-	font-family: font-family( 'heading' );
 	font-weight: font-weight( 'base' );
 }
 
@@ -145,7 +147,6 @@ h4,
 		margin: 0 0 spacing(3) 
 	));
 	color: color( 'type', '1' );
-	font-family: font-family( 'heading' );
 	font-weight: font-weight( 'base' );
 }
 

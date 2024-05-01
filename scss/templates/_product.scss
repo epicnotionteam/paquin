@@ -8,6 +8,8 @@
 // Template Grid Structure
 // --------------------------------------------------
 
+
+
 .grid--product {
 
     // Section [Header]
@@ -36,7 +38,7 @@
 					margin: 0;
 				}
 			}
-			.price__current {
+			.price.product__price .price__current.price__current--on-sale span.money {
 				color: color( 'type', '1' ) !important;
 			}
 		}

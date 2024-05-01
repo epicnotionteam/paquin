@@ -1398,7 +1398,7 @@ h5,
   letter-spacing: -0.012rem;
   margin: 0;
 }
-.grid--product #product__header #product__price .price__current {
+.grid--product #product__header #product__price .price.product__price .price__current.price__current--on-sale span.money {
   color: !important;
 }
 .grid--product #product__media .product-gallery {

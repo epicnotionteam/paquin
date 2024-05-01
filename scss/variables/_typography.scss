@@ -65,15 +65,13 @@ $font-weightDefaults: (
 
 $font-sizeDefaults: (
 	'xsmall': (
-		'base':   (font-size: 13px, line-height: 1.55),
-		'large':  (font-size: 13px, line-height: 1.55)
+		'base':   (font-size: 13px, line-height: 21px),
 	),
 	'small': (
-		'base':   (font-size: 15px, line-height: 23px, letter-spacing: -0.14px ),
+		'base':   (font-size: 15px, line-height: 23px, letter-spacing: -0.08px)
 	),
 	'base': (
-		'base':   (font-size: 17px, line-height: 1.55),
-		'large':  (font-size: 18px, line-height: 1.55)
+		'base':   (font-size: 17px, line-height: 25px letter-spacing: -0.12px)
 	),
 	'large': (
 		'base':   (font-size: 19px, line-height: 1.4),

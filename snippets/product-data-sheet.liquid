@@ -5,7 +5,7 @@
 
 <div id="product__data-sheet">
 	{% if product.metafields.custom.data_sheet != blank %}
-  		<a class="product__data-sheet-link" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
+  		<a class="product__data-sheet-link link--icon-data-sheet" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
 	{% else %}
   		<p>No data sheet available for this product — <a href="/contact">contact us</a> to learn more.</p>
 	{% endif %}

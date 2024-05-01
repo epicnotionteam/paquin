@@ -26,3 +26,22 @@ li a {
     }
 
 }
+
+
+// Link [Icon]
+// --------------------------------------------------
+
+.link--icon {
+    @include rem( column-gap, spacing(2) );
+    display: grid;
+
+    // Icon
+    &::before {
+        color: color( 'action', '1' );
+    }
+
+}
+
+.link--icon-data-sheet {
+    @include icon( before, 'data_sheet');
+}

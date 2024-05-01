@@ -155,7 +155,7 @@ h5,
   	@include font-size( 'h5' );
   	@include rem((
 		letter-spacing: 0.4px,
-		margin: 0 0 spacing(3)
+		margin: 0 0 12px
 	));
 	color: color( 'type', '1' );
 	font-family: font-family( 'mono' );

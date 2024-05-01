@@ -1257,8 +1257,8 @@ h5,
   letter-spacing: 0.032rem;
   letter-spacing: 0.4px;
   letter-spacing: 0.04rem;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 12px;
+  margin: 0 0 1.2rem;
   font-family: antarctican-mono, ui-monospace, monospace;
   font-weight: 600;
   text-transform: uppercase;
@@ -1430,11 +1430,31 @@ li a:hover {
   text-decoration: underline;
 }
 
+.link--icon {
+  column-gap: 8px;
+  column-gap: 0.8rem;
+  display: grid;
+}
+.link--icon::before {
+  color: #0F7F92;
+}
+
+.link--icon-data-sheet:before {
+  content: "\e032";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 ul.list--link-arrow li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
-  padding-left: 32px;
-  padding-left: 3.2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
   position: relative;
 }
 ul.list--link-arrow li:before {

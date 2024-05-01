@@ -1450,6 +1450,17 @@ h5,
     grid-row: 4;
   }
 }
+.product-form--regular .product-form__action-wrapper {
+  gap: 12px;
+  gap: 1.2rem;
+  display: grid;
+}
+
+@media (min-width: 64em) {
+  .product-form--regular .product-form__action-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 p a,
 li a {
   color: #0F7F92;

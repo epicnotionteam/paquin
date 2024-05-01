@@ -34,6 +34,7 @@ li a {
 .link--icon {
     @include rem( column-gap, spacing(2) );
     display: grid;
+    grid-template-columns: max-content 1fr;
 
     // Icon
     &::before {

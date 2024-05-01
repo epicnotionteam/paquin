@@ -1450,6 +1450,15 @@ h5,
     grid-row: 4;
   }
 }
+label {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  font-weight: 600;
+}
+
 .product-form--regular .product-form__action-wrapper {
   gap: 12px;
   gap: 1.2rem;
@@ -1458,6 +1467,9 @@ h5,
 .product-form--regular .product-form__action-wrapper quantity-selector {
   max-width: none;
   width: 100%;
+}
+.product-form--regular .product-form__action-wrapper quantity-selector label {
+  display: none;
 }
 
 @media (min-width: 64em) {

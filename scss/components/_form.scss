@@ -5,38 +5,45 @@
 // Component Instances
 // ----------------------------------------------------------------------------------------------------
 
+// Form [General]
+// --------------------------------------------------
+
+// Label
+label {
+    @include font-size( 'small' );
+    font-weight: font-weight( 'bold' );
+}
+
+
 // Form [Product]
 // --------------------------------------------------
 
 // Container
 .product-form--regular {
-
     // Input container
     .product-form__action-wrapper {
         @include rem( gap, 12px );
         display: grid;
-
         // Input [Quantity]
         quantity-selector {
             max-width: none;
             width: 100%;
+            // Remove label
+            label {
+                display: none;
+            }
         }
     }
-
 }
 
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
-
     // Container
     .product-form--regular {
-
         // Input container
         .product-form__action-wrapper {
             grid-template-columns: repeat( 2, 1fr );
         }
-    
     }
-
 }

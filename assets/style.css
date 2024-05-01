@@ -1454,12 +1454,17 @@ h5,
 }
 .button--base,
 .product-form--atc-button {
+  padding: 16px 32px;
+  padding: 1.6rem 3.2rem;
   background-color: #0F7F92;
+  border: 0 none;
+  border-radius: 0;
   font-weight: 600;
 }
 
 .product-form--atc-button {
   height: auto;
+  margin: 0;
   width: 100%;
 }
 .product-form--atc-button .atc-button--text:before {

@@ -11,7 +11,10 @@
 .button--base,
 %button--base {
     @extend %h5;
+    @include rem( padding, spacing(3) spacing(5) );
     background-color: color( 'action', '1' );
+    border: 0 none;
+    border-radius: 0;
     font-weight: font-weight( 'bold' );
 }
 
@@ -32,6 +35,7 @@
 .product-form--atc-button {
     @extend %button--base;
     height: auto;
+    margin: 0;
     width: 100%;
     // Text
     .atc-button--text {

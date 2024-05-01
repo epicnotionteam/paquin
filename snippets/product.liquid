@@ -83,20 +83,6 @@
 			data-product-pricing
 		>
 			{%
-				render 'product-badge',
-				product: product,
-				class_root: 'product',
-				product_available: product_available,
-				price: price,
-				price_varies: false,
-				compare_at_price: compare_at_price,
-				compare_at_price_varies: false,
-				on_sale: on_sale,
-				show_saved: true,
-				include_range: false,
-				selected_variant: selected_variant,
-			%}
-			{%
 				render 'product-price',
 				product: product,
 				class_root: 'product',
@@ -111,6 +97,20 @@
 				include_unit_price: true,
 				include_tax_line: true,
 				include_hidden_price: true
+			%}
+			{%
+				render 'product-badge',
+				product: product,
+				class_root: 'product',
+				product_available: product_available,
+				price: price,
+				price_varies: false,
+				compare_at_price: compare_at_price,
+				compare_at_price_varies: false,
+				on_sale: on_sale,
+				show_saved: true,
+				include_range: false,
+				selected_variant: selected_variant,
 			%}
 		</div>
 		<!-- SKU -->

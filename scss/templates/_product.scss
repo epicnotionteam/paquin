@@ -36,8 +36,8 @@
 					margin: 0;
 				}
 			}
-			.product__price .price__compare-at.visible ~ .price__current {
-				color: color( 'type', '1' );
+			.price__current {
+				color: color( 'type', '1' ) !important;
 			}
 		}
         // SKU

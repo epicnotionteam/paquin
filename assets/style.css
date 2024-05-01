@@ -1418,3 +1418,13 @@ h5,
     grid-row: 4;
   }
 }
+p a,
+li a {
+  color: #0F7F92;
+  font-weight: 600;
+}
+
+p a:hover,
+li a:hover {
+  text-decoration: underline;
+}

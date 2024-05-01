@@ -1398,6 +1398,9 @@ h5,
   letter-spacing: -0.012rem;
   margin: 0;
 }
+.grid--product #product__header #product__data-sheet .product__data-sheet-link {
+  margin: 0;
+}
 .grid--product #product__media .product-gallery {
   width: 100%;
 }
@@ -1568,8 +1571,8 @@ li a:hover {
 ul.list--link-arrow li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
-  padding-left: 20px;
-  padding-left: 2rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
   position: relative;
 }
 ul.list--link-arrow li:before {

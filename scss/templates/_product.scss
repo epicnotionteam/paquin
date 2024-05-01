@@ -8,8 +8,7 @@
 // Template Grid Structure
 // --------------------------------------------------
 
-
-
+// Product data grid container
 .grid--product {
 
     // Section [Header]
@@ -45,8 +44,10 @@
 		}
         // SKU
         #product__sku {}
-        // Data Sheet
-        #product__data-sheet {}
+        // Data Sheet » Link Container
+        #product__data-sheet .product__data-sheet-link {
+			margin: 0;
+		}
     }
 
     // Section [Media]
@@ -76,6 +77,8 @@
                 }
             }
         }
+		// Block [Key Specifications]
+
     }
 
 }

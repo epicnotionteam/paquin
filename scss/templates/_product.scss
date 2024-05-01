@@ -24,11 +24,14 @@
 			display: grid;
 			grid-template-columns: max-content max-content;
 			// Price
-			.price > * {
-				@include font-size( 'base' );
-			}
-			> * {
-				margin: 0;
+			.price {
+				@include rem( column-gap, spacing(1) );
+				align-items: center;
+				display: grid;
+				& > * {
+					@include font-size( 'base' );
+					margin: 0;
+				}
 			}
 		}
         // SKU

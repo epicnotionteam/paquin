@@ -1369,14 +1369,14 @@ h5,
   letter-spacing: 0.024rem;
   margin: 0;
 }
-.grid--product #product__header #product__price, .grid--product #product__header > .product__price {
+.grid--product #product__header #product__price {
   column-gap: 4px;
   column-gap: 0.4rem;
   align-items: center;
   display: grid;
   grid-template-columns: max-content max-content;
 }
-.grid--product #product__header #product__price > *, .grid--product #product__header > .product__price > * {
+.grid--product #product__header #product__price > * {
   margin: 0;
 }
 .grid--product #product__media .product-gallery {

@@ -35,11 +35,9 @@
 					@include font-size( 'base' );
 					margin: 0;
 				}
-				// Price display
-				.price__current,
-				.price__current--on-sale {
-					color: color( 'type', '1' );
-				}
+			}
+			.product__price .price__compare-at.visible ~ .price__current {
+				color: color( 'type', '1' );
 			}
 		}
         // SKU

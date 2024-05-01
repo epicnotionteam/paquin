@@ -25,7 +25,7 @@ ul.list--link-arrow {
         position: relative;
         
         // Inject icon as pseudo element
-        @include icon( before, 'arrow-up-right');
+        @include icon( before, 'arrow_up_right');
 
         &::before {
             position: absolute;

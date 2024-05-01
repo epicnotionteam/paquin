@@ -65,13 +65,13 @@ $font-weightDefaults: (
 
 $font-sizeDefaults: (
 	'xsmall': (
-		'base':   (font-size: 13px, line-height: 21px),
+		'base': (font-size: 13px, line-height: 21px),
 	),
 	'small': (
-		'base':   (font-size: 15px, line-height: 23px, letter-spacing: -0.08px)
+		'base': (font-size: 15px, line-height: 23px, letter-spacing: -0.08px),
 	),
 	'base': (
-		'base':   (font-size: 17px, line-height: 25px letter-spacing: -0.12px)
+		'base': (font-size: 17px, line-height: 25px, letter-spacing: -0.12px),
 	),
 	'large': (
 		'base':   (font-size: 19px, line-height: 1.4),
@@ -86,23 +86,18 @@ $font-sizeDefaults: (
 		'large':  (font-size: 32px, line-height: 1.4)
 	),
 	'h1': (
-		'base'  : (font-size: 38px, line-height: 1.2 ),
-		'large' : (font-size: 56px, line-height: 1.2 )
+		'base': (font-size: 48px, line-height: 56px, letter-spacing: 0.4px),
 	),
 	'h2': (
-		'base':   (font-size: 32px, line-height: 1.25 ),
-		'large':  (font-size: 44px, line-height: 1.25 )
+		'base': (font-size: 36px, line-height: 44px, letter-spacing: 0.24px),
 	),
 	'h3': (
-		'base':   (font-size: 26px, line-height: 1.3 ),
-		'large':  (font-size: 32px, line-height: 1.3 )
+		'base': (font-size: 24px, line-height: 32px, letter-spacing: 0.16px),
 	),
 	'h4': (
-		'base':   (font-size: 21px, line-height: 1.35 ),
-		'large':  (font-size: 24px, line-height: 1.35)
+		'base': (font-size: 20px, line-height: 26px, letter-spacing: 0.16px),
 	),
 	'h5': (
-		'base':   (font-size: 14px, line-height: 1.4 ),
-		'large':  (font-size: 14px, line-height: 1.4)
+		'base': (font-size: 14px, line-height: 22px, letter-spacing: 0.32px),
 	)
 ) !default;

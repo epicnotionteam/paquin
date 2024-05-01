@@ -1460,6 +1460,12 @@ h5,
   border: 0 none;
   border-radius: 0;
   font-weight: 600;
+  line-height: 1.2;
+}
+
+.button--base:hover,
+.product-form--atc-button:hover {
+  border: 0 none;
 }
 
 .product-form--atc-button {
@@ -1476,6 +1482,8 @@ h5,
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
 label {

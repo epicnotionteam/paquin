@@ -35,6 +35,11 @@
 					@include font-size( 'base' );
 					margin: 0;
 				}
+				// Price display
+				.price__current,
+				.price__current--on-sale {
+					color: color( 'type', '1' );
+				}
 			}
 		}
         // SKU

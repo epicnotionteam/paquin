@@ -1250,8 +1250,7 @@ h4,
 
 h5,
 .h5,
-.button--base .product-form--regular .product-form__action-wrapper .product-form--atc-button,
-.product-form--regular .product-form__action-wrapper .button--base .product-form--atc-button {
+.button--base .product-form--atc-button {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 22px;
@@ -1452,9 +1451,24 @@ h5,
     grid-row: 4;
   }
 }
-.button--base .product-form--regular .product-form__action-wrapper .product-form--atc-button, .product-form--regular .product-form__action-wrapper .button--base .product-form--atc-button {
+.button--base .product-form--atc-button {
   background-color: #0F7F92;
   font-weight: 600;
+}
+
+.product-form--atc-button {
+  height: auto;
+  width: 100%;
+}
+.product-form--atc-button:before {
+  content: "\e854";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 label {
@@ -1481,6 +1495,7 @@ label {
 .product-form--regular .product-form__action-wrapper quantity-selector label {
   display: none;
 }
+
 @media (min-width: 64em) {
   .product-form--regular .product-form__action-wrapper {
     grid-template-columns: repeat(2, 1fr);

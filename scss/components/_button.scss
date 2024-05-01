@@ -24,3 +24,14 @@
     &:hover {}
 
 }
+
+
+// Button [Add to Cart]
+// --------------------------------------------------
+
+.product-form--atc-button {
+    @extend %button--base;
+    @include icon( before, 'cart_add' );
+    height: auto;
+    width: 100%;
+}

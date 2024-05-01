@@ -1,0 +1,37 @@
+// ====================================================================================================
+// Components / List
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// List [Unordered]
+// --------------------------------------------------
+
+ul {}
+
+
+// List [Link, Arrow]
+// --------------------------------------------------
+
+ul.list--link-arrow {
+
+    // List item
+    li {
+        @include rem((
+            margin-bottom: spacing(2),
+            padding-left: spacing(5)
+        ));
+        position: relative;
+        
+        // Inject icon as pseudo element
+        @include icon( before, 'arrow-up-right');
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+}

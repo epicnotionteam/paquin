@@ -1497,10 +1497,8 @@ h5,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.feed--table-specification .row .col--header p {
+.feed--table-specification .row .col--content p {
   font-weight: 600;
-}
-.feed--table-specification .row .col--content {
   text-align: right;
 }
 

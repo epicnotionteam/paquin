@@ -8,7 +8,7 @@
 // Button [Base]
 // --------------------------------------------------
 
-.button--base
+.button--base,
 %button--base {
     @extend %h5;
     background-color: color( 'action', '1' );
@@ -17,7 +17,7 @@
 
 
 // State management
-.button--base
+.button--base,
 %button--base {
 
     // Hover
@@ -31,8 +31,10 @@
 
 .product-form--atc-button {
     @extend %button--base;
-    @include icon( before, 'cart_add' );
     height: auto;
     width: 100%;
-    background-color: red !important;
+    // Text
+    .atc-button--text {
+        @include icon( before, 'cart_add' );
+    }
 }

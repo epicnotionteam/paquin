@@ -1250,7 +1250,8 @@ h4,
 
 h5,
 .h5,
-.button--base .product-form--atc-button {
+.button--base,
+.product-form--atc-button {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 22px;
@@ -1451,7 +1452,8 @@ h5,
     grid-row: 4;
   }
 }
-.button--base .product-form--atc-button {
+.button--base,
+.product-form--atc-button {
   background-color: #0F7F92;
   font-weight: 600;
 }
@@ -1459,9 +1461,8 @@ h5,
 .product-form--atc-button {
   height: auto;
   width: 100%;
-  background-color: red !important;
 }
-.product-form--atc-button:before {
+.product-form--atc-button .atc-button--text:before {
   content: "\e854";
   font-family: "Material Symbols Outlined";
   font-style: normal;

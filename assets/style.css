@@ -1361,6 +1361,11 @@ h5,
   margin-top: unset;
 }
 
+.grid--product #product__header {
+  column-gap: 12px;
+  column-gap: 1.2rem;
+  display: grid;
+}
 .grid--product #product__header #product__title {
   font-size: 36px;
   font-size: 3.6rem;

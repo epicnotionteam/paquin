@@ -1,0 +1,26 @@
+// ====================================================================================================
+// Components / Feed
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Feed [Table, Specification]
+// --------------------------------------------------
+
+.feed--table-specification {
+    // Row
+    .row {
+        @include rem( column-gap, spacing(3) );
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr );
+        // Column [Header]
+        .col--header {
+            font-weight: font-weight( 'bold' );
+        }
+        // Column [Content]
+        .col--content {
+            text-align: right;
+        }
+    }
+}

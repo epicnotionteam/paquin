@@ -86,6 +86,30 @@
       "oAP" : "\/assets\/instantPage.min.js.map",
       "oF" : 0
     },
+    "\/assets\/PAQN-Sans-004-Display-400-Trial.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PAQN-Sans-004-Display-400-Trial.ttf",
+      "oF" : 0
+    },
+    "\/assets\/PAQN-Sans-004-Text-400-Trial.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PAQN-Sans-004-Text-400-Trial.ttf",
+      "oF" : 0
+    },
+    "\/assets\/PAQN-Sans-004-Text-600-Trial.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PAQN-Sans-004-Text-600-Trial.ttf",
+      "oF" : 0
+    },
     "\/assets\/polyfills.min.js" : {
       "bF" : 0,
       "ft" : 64,

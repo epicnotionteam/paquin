@@ -4,25 +4,25 @@ Author:     Epic Notion
 Author URL: https://epicnotion.com
 */
 @font-face {
-  font-family: "Paquin Sans";
-  src: url("assets/fonts/paquin-sans/PaquinSans-Regular.woff2") format("woff2"), url("assets/fonts/paquin-sans/PaquinSans-Regular.woff") format("woff"), url("assets/fonts/paquin-sans/PaquinSans-Regular.ttf") format("truetype"), url("assets/fonts/paquin-sans/PaquinSans-Regular.otf") format("opentype"), url("assets/fonts/paquin-sans/PaquinSans-Regular.eot");
+  font-family: "Paquin Sans Display";
+  src: url("assets/fonts/paquin-sans/PAQN-Sans-004-Display-400-Trial.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
 }
 @font-face {
-  font-family: "Paquin Sans";
-  src: url("assets/fonts/paquin-sans/PaquinSans-Semibold.woff2") format("woff2"), url("assets/fonts/paquin-sans/PaquinSans-Semibold.woff") format("woff"), url("assets/fonts/paquin-sans/PaquinSans-Semibold.ttf") format("truetype"), url("assets/fonts/paquin-sans/PaquinSans-Semibold.otf") format("opentype"), url("assets/fonts/paquin-sans/PaquinSans-Semibold.eot");
+  font-family: "Paquin Sans Text";
+  src: url("assets/fonts/paquin-sans/PAQN-Sans-004-Text-400-Trial.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Paquin Sans Text";
+  src: url("assets/fonts/paquin-sans/PAQN-Sans-004-Text-600-Trial.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 600;
-}
-@font-face {
-  font-family: "Paquin Sans";
-  src: url("assets/fonts/paquin-sans/PaquinSans-Bold.woff2") format("woff2"), url("assets/fonts/paquin-sans/PaquinSans-Bold.woff") format("woff"), url("assets/fonts/paquin-sans/PaquinSans-Bold.ttf") format("truetype"), url("assets/fonts/paquin-sans/PaquinSans-Bold.otf") format("opentype"), url("assets/fonts/paquin-sans/PaquinSans-Bold.eot");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1070,7 +1070,7 @@ body {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 1.55;
-  font-family: "Paquin Sans", sans-serif;
+  font-family: "Paquin Sans Text", sans-serif;
   font-weight: 400;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;

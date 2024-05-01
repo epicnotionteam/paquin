@@ -5,42 +5,31 @@
 // Load custom fonts
 // --------------------------------------------------
 
-// Paquin Sans
-// Utilized as base typeface
+// Paquin Sans Display [400]
 @font-face {
-	font-family: 'Paquin Sans';
-	src: url('assets/fonts/paquin-sans/PaquinSans-Regular.woff2') format('woff2'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Regular.woff') format('woff'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Regular.ttf') format('truetype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Regular.otf') format('opentype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Regular.eot');
-  	font-display: swap;
-  	font-style: normal;
-  	font-weight: normal;
+	font-family: 'Paquin Sans Display';
+	src: url('assets/fonts/paquin-sans/PAQN-Sans-004-Display-400-Trial.ttf') format('truetype');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
 }
 
+// Paquin Sans Text [400]
 @font-face {
-	font-family: 'Paquin Sans';
-	src: url('assets/fonts/paquin-sans/PaquinSans-Semibold.woff2') format('woff2'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.woff') format('woff'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.ttf') format('truetype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.otf') format('opentype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Semibold.eot');
-  	font-display: swap;
-  	font-style: normal;
-  	font-weight: 600;
+	font-family: 'Paquin Sans Text';
+	src: url('assets/fonts/paquin-sans/PAQN-Sans-004-Text-400-Trial.ttf') format('truetype');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
 }
-
+  
+// Paquin Sans Text [600]
 @font-face {
-	font-family: 'Paquin Sans';
-	src: url('assets/fonts/paquin-sans/PaquinSans-Bold.woff2') format('woff2'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Bold.woff') format('woff'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Bold.ttf') format('truetype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Bold.otf') format('opentype'),
-		 url('assets/fonts/paquin-sans/PaquinSans-Bold.eot');
-  	font-display: swap;
-  	font-style: normal;
-  	font-weight: 700;
+	font-family: 'Paquin Sans Text';
+	src: url('assets/fonts/paquin-sans/PAQN-Sans-004-Text-600-Trial.ttf') format('truetype');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 600;
 }
 
 
@@ -50,8 +39,9 @@
 // --------------------------------------------------
 
 $font-familyDefaults: (
-	'base': ( 'Paquin Sans', sans-serif ),
-	'icon': ( 'Material Symbols Outlined' )
+	'base':    ( 'Paquin Sans Text', sans-serif ),
+	'heading': ( 'Paquin Sans Display', sans-serif ),
+	'icon':    ( 'Material Symbols Outlined' )
 ) !default;
 
 

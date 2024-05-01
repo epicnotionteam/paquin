@@ -1126,16 +1126,7 @@ small,
 .text--small p {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 1.55;
-}
-@media screen and (min-width: 1240px) {
-  small,
-  .text--small,
-  .text--small p {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
+  line-height: 23px;
 }
 
 .text--large,
@@ -1365,30 +1356,16 @@ h5,
 .live-search-form .live-search-form-field {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 1.55;
+  line-height: 23px;
   padding: 16px;
-}
-@media screen and (min-width: 1240px) {
-  .live-search-form .live-search-form-field {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
 }
 .live-search-form .live-search-filter-wrapper .live-search-filter-label {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 1.55;
+  line-height: 23px;
   background: #30373A;
   color: #FFFFFF;
   padding: 16px;
-}
-@media screen and (min-width: 1240px) {
-  .live-search-form .live-search-filter-wrapper .live-search-filter-label {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
 }
 .live-search-form .live-search-button {
   background: #FFFFFF;
@@ -1439,15 +1416,7 @@ h5,
 .grid--product #product__data > * li {
   font-size: 15px;
   font-size: 1.5rem;
-  line-height: 1.55;
-}
-@media screen and (min-width: 1240px) {
-  .grid--product #product__data > * p,
-  .grid--product #product__data > * li {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
+  line-height: 23px;
 }
 .grid--product #product__data > * p:last-child,
 .grid--product #product__data > * li:last-child {

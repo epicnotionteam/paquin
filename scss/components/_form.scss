@@ -37,6 +37,10 @@ label {
                 display: none;
             }
         }
+        // Input [Add to Cart]
+        .product-form--atc-button {
+            @extend %button--base;
+        }
     }
 }
 

@@ -1448,7 +1448,8 @@ ul.list--link-arrow li:before {
   -moz-osx-font-smoothing: grayscale;
 }
 ul.list--link-arrow li::before {
+  color: #0F7F92;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }

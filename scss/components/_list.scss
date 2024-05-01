@@ -28,9 +28,10 @@ ul.list--link-arrow {
         @include icon( before, 'arrow_up_right');
 
         &::before {
+            color: color( 'action', '1' );
             position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
         }
 
     }

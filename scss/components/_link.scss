@@ -32,13 +32,14 @@ li a {
 // --------------------------------------------------
 
 .link--icon {
-    @include rem( column-gap, spacing(2) );
+    @include rem( column-gap, 6px );
     display: grid;
     grid-template-columns: max-content 1fr;
 
     // Icon
     &::before {
         color: color( 'action', '1' );
+        font-size: 128%;
     }
 
 }

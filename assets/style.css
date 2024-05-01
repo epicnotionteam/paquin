@@ -1548,13 +1548,14 @@ li a:hover {
 }
 
 .link--icon {
-  column-gap: 8px;
-  column-gap: 0.8rem;
+  column-gap: 6px;
+  column-gap: 0.6rem;
   display: grid;
   grid-template-columns: max-content 1fr;
 }
 .link--icon::before {
   color: #0F7F92;
+  font-size: 128%;
 }
 
 .link--icon-data-sheet:before {

@@ -1,5 +1,5 @@
 // ====================================================================================================
-// Components / Component
+// Components / Button
 // ====================================================================================================
 
 // Component Instances
@@ -34,4 +34,5 @@
     @include icon( before, 'cart_add' );
     height: auto;
     width: 100%;
+    background-color: red !important;
 }

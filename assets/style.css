@@ -1459,6 +1459,7 @@ h5,
 .product-form--atc-button {
   height: auto;
   width: 100%;
+  background-color: red !important;
 }
 .product-form--atc-button:before {
   content: "\e854";

@@ -20,6 +20,10 @@ label {
 
 // Container
 .product-form--regular {
+    // Inner wrapper
+    .product-form--atc {
+        margin: 0
+    }
     // Input container
     .product-form__action-wrapper {
         @include rem( gap, 12px );

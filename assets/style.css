@@ -1459,6 +1459,9 @@ label {
   font-weight: 600;
 }
 
+.product-form--regular .product-form--atc {
+  margin: 0;
+}
 .product-form--regular .product-form__action-wrapper {
   gap: 12px;
   gap: 1.2rem;

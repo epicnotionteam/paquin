@@ -92,19 +92,31 @@ $rem-px-only: false !default;
 }
 
 // Fetch properties set in '$font-sizeDefaults'
-@mixin text-size( $text-size, $breakpoint-name: base ) {
-  	$text-size-properties: text-properties-for( $text-size, $breakpoint-name );
-  	@if $text-size-properties {
-    	// Fetch properties, stripping units
-    	$font-size: map-get( $text-size-properties, 'font-size' );
-    	$font-size: strip-unit( $font-size );
-    	$line-height: map-get( $text-size-properties, 'line-height' );
-    	// Build styles with px fallback
-    	font-size: $font-size * 1px;
-    	font-size: $font-size / 10 * 1rem;
-    	line-height: map-get( $text-size-properties, 'line-height' );
-  	}
-}
+@mixin text-size($text-size, $breakpoint-name: base) {
+	$text-size-properties: text-properties-for($text-size, $breakpoint-name);
+	@if $text-size-properties {
+	  // Handle font-size if available
+	  @if map-has-key($text-size-properties, 'font-size') {
+		$font-size: map-get($text-size-properties, 'font-size');
+		font-size: $font-size; // Apply original unit
+		font-size: strip-unit($font-size) / 10 * 1rem; // Convert to rem
+	  }
+  
+	  // Handle line-height if available
+	  @if map-has-key($text-size-properties, 'line-height') {
+		$line-height: map-get($text-size-properties, 'line-height');
+		line-height: $line-height;
+	  }
+  
+	  // Handle letter-spacing if available
+	  @if map-has-key($text-size-properties, 'letter-spacing') {
+		$letter-spacing: map-get($text-size-properties, 'letter-spacing');
+		letter-spacing: $letter-spacing; // Apply original unit
+		letter-spacing: strip-unit($letter-spacing) / 10 * 1rem; // Convert to rem
+	  }
+	}
+  }
+  
 
 // Output properties to each breakpoint set in '$font-sizeDefaults'
 @mixin font-size( $text-size, $default-breakpoint: base ) {

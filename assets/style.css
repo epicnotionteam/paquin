@@ -1070,6 +1070,8 @@ body {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
   font-family: "Paquin Sans Text", sans-serif;
   font-weight: 400;
   line-height: 1.55;
@@ -1112,6 +1114,8 @@ small,
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }
 
 .text--large,
@@ -1195,6 +1199,8 @@ h1,
   line-height: 56px;
   letter-spacing: 0.4px;
   letter-spacing: 0.04rem;
+  letter-spacing: 0.4px;
+  letter-spacing: 0.04rem;
   margin: 0 0 32px;
   margin: 0 0 3.2rem;
   font-weight: 400;
@@ -1205,6 +1211,8 @@ h2,
   font-size: 36px;
   font-size: 3.6rem;
   line-height: 44px;
+  letter-spacing: 0.24px;
+  letter-spacing: 0.024rem;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
   margin: 0 0 24px;
@@ -1219,6 +1227,8 @@ h3,
   line-height: 32px;
   letter-spacing: 0.16px;
   letter-spacing: 0.016rem;
+  letter-spacing: 0.16px;
+  letter-spacing: 0.016rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
   font-weight: 400;
@@ -1231,6 +1241,8 @@ h4,
   line-height: 26px;
   letter-spacing: 0.16px;
   letter-spacing: 0.016rem;
+  letter-spacing: 0.16px;
+  letter-spacing: 0.016rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
   font-weight: 400;
@@ -1241,6 +1253,8 @@ h5,
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 22px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
   letter-spacing: 0.4px;
   letter-spacing: 0.04rem;
   margin: 0 0 16px;
@@ -1302,12 +1316,16 @@ h5,
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   padding: 16px;
 }
 .live-search-form .live-search-filter-wrapper .live-search-filter-label {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   background: #30373A;
   color: #FFFFFF;
   padding: 16px;
@@ -1362,6 +1380,8 @@ h5,
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }
 .grid--product #product__data > * p:last-child,
 .grid--product #product__data > * li:last-child {

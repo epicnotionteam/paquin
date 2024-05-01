@@ -4,5 +4,5 @@
 
 
 {% if sku != blank %}
-	<p id="product__sku">{{ 'product.general.sku_html' | t: sku: sku | strip_newlines }}</p>
-  {% endif %}
+	<p id="product__sku"><strong>Part #:</strong> {{ sku }}</p>
+{% endif %}

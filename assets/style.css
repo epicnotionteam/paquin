@@ -1362,6 +1362,11 @@ h5,
 }
 
 .grid--product #product__header #product__title {
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 44px;
+  letter-spacing: 0.24px;
+  letter-spacing: 0.024rem;
   margin: 0;
 }
 .grid--product #product__media .product-gallery {

@@ -24,7 +24,7 @@
 			display: grid;
 			grid-template-columns: max-content max-content;
 			// Price
-			.price {
+			.price > * {
 				@include font-size( 'base' );
 			}
 			> * {

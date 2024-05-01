@@ -37,9 +37,10 @@
 					@include font-size( 'base' );
 					margin: 0;
 				}
-			}
-			.price.product__price .price__current.price__current--on-sale span.money {
-				color: color( 'type', '1' ) !important;
+				// Sale price display
+				.price__current.price__current--on-sale span.money {
+					color: color( 'type', '1' );
+				}
 			}
 		}
         // SKU

@@ -1376,6 +1376,13 @@ h5,
   display: grid;
   grid-template-columns: max-content max-content;
 }
+.grid--product #product__header #product__price .price {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+}
 .grid--product #product__header #product__price > * {
   margin: 0;
 }

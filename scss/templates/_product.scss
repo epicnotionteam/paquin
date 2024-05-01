@@ -17,12 +17,16 @@
           	@include font-size( 'h2' );
             margin: 0;
         }
-        // Price
+        // Price container
         #product__price {
 			@include rem( column-gap, spacing(1) );
 			align-items: center;
 			display: grid;
 			grid-template-columns: max-content max-content;
+			// Price
+			.price {
+				@include font-size( 'base' );
+			}
 			> * {
 				margin: 0;
 			}

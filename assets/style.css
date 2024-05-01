@@ -1455,6 +1455,10 @@ h5,
   gap: 1.2rem;
   display: grid;
 }
+.product-form--regular .product-form__action-wrapper quantity-selector {
+  max-width: none;
+  width: 100%;
+}
 
 @media (min-width: 64em) {
   .product-form--regular .product-form__action-wrapper {

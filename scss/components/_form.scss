@@ -15,6 +15,12 @@
     .product-form__action-wrapper {
         @include rem( gap, 12px );
         display: grid;
+
+        // Input [Quantity]
+        quantity-selector {
+            max-width: none;
+            width: 100%;
+        }
     }
 
 }

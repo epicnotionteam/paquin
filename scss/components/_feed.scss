@@ -9,13 +9,15 @@
 // --------------------------------------------------
 
 .feed--table-specification {
+    @include rem( row-gap, spacing(1) );
+    display: grid;
     // Row
     .row {
         @include rem( column-gap, spacing(3) );
         display: grid;
         grid-template-columns: repeat( 2, 1fr );
-        // Column [Header]
-        .col--header {
+        // Column [Header] » P
+        .col--header p {
             font-weight: font-weight( 'bold' );
         }
         // Column [Content]

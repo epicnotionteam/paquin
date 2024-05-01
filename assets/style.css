@@ -1486,13 +1486,18 @@ h5,
   font-size: 2rem;
 }
 
+.feed--table-specification {
+  row-gap: 4px;
+  row-gap: 0.4rem;
+  display: grid;
+}
 .feed--table-specification .row {
   column-gap: 16px;
   column-gap: 1.6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.feed--table-specification .row .col--header {
+.feed--table-specification .row .col--header p {
   font-weight: 600;
 }
 .feed--table-specification .row .col--content {

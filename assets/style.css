@@ -1549,6 +1549,11 @@ label {
   padding: 2.4rem;
 }
 
+.product-form--regular .quantity-selector__button:focus {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: none;
+}
+
 @media (min-width: 64em) {
   .product-form--regular .product-form__action-wrapper {
     grid-template-columns: repeat(2, 1fr);

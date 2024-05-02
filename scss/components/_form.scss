@@ -56,6 +56,16 @@ label {
 }
 
 
+// State management
+.product-form--regular {
+    // Increment button:focus
+    .quantity-selector__button:focus {
+        border: $border--base;
+        box-shadow: none;
+    }
+}
+
+
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Container

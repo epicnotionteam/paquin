@@ -1104,6 +1104,8 @@ body {
 }
 
 p {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
   font-weight: 400;
 }
 
@@ -1195,7 +1197,7 @@ sup {
 
 h1, h2, h2, h4 {
   font-family: "Paquin Sans Display", sans-serif;
-  text-transform: none;
+  text-transform: none !important;
 }
 
 h1,

@@ -39,6 +39,7 @@ body {
 
 p,  
 %p {
+	@include rem( margin-bottom, spacing(3) );
   	font-weight: font-weight( 'base' );
 }
 
@@ -98,7 +99,7 @@ sup {
 
 h1, h2, h2, h4 {
 	font-family: font-family( 'heading' );
-	text-transform: none;
+	text-transform: none !important;
 }
 
 h1, 

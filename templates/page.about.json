@@ -4,31 +4,35 @@
         "hero-internal"
     ],
     "sections": {
-		"hero-internal": {
-		  	"type": "hero-internal",
-		  	"settings": {
-				"heading": {
-			  		"type": "text",
-			  		"label": "Heading",
-			  		"default": "Section heading"
-				},
-				"link_url": {
-			  		"type": "url",
-			  		"label": "Link URL",
-			  		"default": ""
-				},
-				"link_text": {
-			  		"type": "text",
-			  		"label": "Link Text",
-			  		"default": "Click Here",
-			  		"info": "Leave empty if no link is required"
-				},
-				"image": {
-			  		"type": "image_picker",
-					"label": "Background Image",
-			  		"default": "Select a background image"
-				}
-		  	}
-		}
-	}
+        "hero-internal": {
+            "type": "hero-internal",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Section heading"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link URL",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text",
+                    "default": "Click Here",
+                    "info": "Leave empty if no link is required"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Background Image",
+                    "default": "Select a background image"
+                }
+            ]
+        }
+    }
 }

@@ -6,7 +6,7 @@
     {% comment %} Heading {% endcomment %}
     <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
     <div class="carousel--content-media">
-        {% for block in section.blocks %}
+        {% for block in section.blocks %}S
             <div class="carousel--content-media">
                 {% comment %} Container [Content] {% endcomment %}
                 <div class="container--content">
@@ -16,15 +16,15 @@
                     <div class="item__content">{{ block.settings.content | richtext }}</div>
                     {% comment %} CTA [Primary] {% endcomment %}
                     {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
-                        <a href="{{ block.settings.cta_primary_url }}" class="button--base item__cta--primary">{{ block.settings.cta_primary_text }}</a>
+                        <a href="{{ block.settings.cta_primary_url }}" class="item__cta--primary link--arrow-forward">{{ block.settings.cta_primary_text }}</a>
                     {% endif %}
                     {% comment %} CTA [Secondary] {% endcomment %}
-                    <div class="item__cta--secondary text--small">{{ block.settings.cta_secondary | richtext }}</div>
+                    <div class="item__cta--secondary">{{ block.settings.cta_secondary | richtext }}</div>
                 </div>
                 {% comment %} Container [Media] {% endcomment %}
                 <div class="container--media">
                     {% if block.settings.image != blank %}
-                        <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
+                        <img class="item__image" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
                     {% endif %}
                 </div>
             </div>

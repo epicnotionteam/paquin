@@ -85,33 +85,37 @@
 
 // Adjust for medium breakpoint
 @include mq($from: medium) {
+    
+    .grid--product {
+        // @include rem( ( gap: spacing(6), max-width: 1064px ) );
+        display: flex;
+        // grid-template-columns: repeat( 2, 1fr );
+        // grid-gap: spacing(6);
+        margin: 0 auto;
+		// grid-template-areas:
+		// 'media header'
+		// 'data core';
 
-	.grid--product {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 32px;
-		max-width: 1240px;
-
-		> * {
+		& > * {
 			flex-basis: calc(50% - 32px);
-  		}
-		
-	}
-  
-	#product__media {
-	  	order: 0;
-	}
-  
-	#product__data {
-	  	order 2;
-	}
-  
-	#product__header {
-	  	order: 1;
-	}
-  
-	#product__core {
-	  	order: 3;
-	}
+		}
+
+      }
+      
+      #product__media {
+        order: 0;
+      }
+      
+      #product__header {
+        order: 1;
+      }
+      
+      #product__data {
+        order: 2;
+      }
+      
+      #product__core {
+        order: 3;
+      }
 
 }

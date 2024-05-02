@@ -1428,12 +1428,22 @@ h5,
 @media (min-width: 64em) {
   .grid--product {
     display: flex;
-    justify-content: space-between;
-    margin-top: 32px;
-    max-width: 1240px;
+    margin: 0 auto;
   }
   .grid--product > * {
     flex-basis: calc(50% - 32px);
+  }
+  #product__media {
+    order: 0;
+  }
+  #product__header {
+    order: 1;
+  }
+  #product__data {
+    order: 2;
+  }
+  #product__core {
+    order: 3;
   }
 }
 .button--base,

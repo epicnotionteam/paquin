@@ -24,7 +24,7 @@
                     "id": "link_text",
                     "label": "Link Text",
                     "default": "Click Here",
-                    "info": "Leave empty if no link is required"
+                    "info": "Leave empty if no link required"
                 },
                 {
                     "type": "image_picker",

@@ -87,35 +87,30 @@
 @include mq($from: medium) {
     
     .grid--product {
-        // @include rem( ( gap: spacing(6), max-width: 1064px ) );
+        @include rem( ( gap: spacing(6), max-width: 1064px ) );
         display: flex;
-        // grid-template-columns: repeat( 2, 1fr );
-        // grid-gap: spacing(6);
+        grid-template-columns: repeat( 2, 1fr );
+        grid-gap: spacing(6);
         margin: 0 auto;
-		// grid-template-areas:
-		// 'media header'
-		// 'data core';
-
-		& > * {
-			flex-basis: calc(50% - 32px);
-		}
-
-      }
+		grid-template-areas:
+		'media header'
+		'data core';
+    }
       
-      #product__media {
-        order: 0;
-      }
+    #product__media {
+        grid-area: media;
+    }
       
-      #product__header {
-        order: 1;
-      }
+    #product__header {
+        grid-area: header;
+    }
       
-      #product__data {
-        order: 2;
-      }
+    #product__data {
+        grid-area: data;
+    }
       
-      #product__core {
-        order: 3;
-      }
+    #product__core {
+        grid-area: core;
+    }
 
 }

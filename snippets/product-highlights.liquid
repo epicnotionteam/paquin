@@ -6,10 +6,10 @@
 {% if product.metafields.custom.highlights %}
 	<div id="product__highlights">
 		<h2 class="h5">Product Highlights</h2>
-	  	<ul class="text--small">
+	  	<ul>
 			{% assign highlights = product.metafields.custom.highlights | remove: '["' | remove: '"]' | split: '","' %}
 			{% for item in highlights %}
-		  		<li>
+		  		<li class="text--small">
 					{{ item | strip }}
 				</li>
 			{% endfor %}

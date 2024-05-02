@@ -8,7 +8,7 @@
 // List [Unordered, Base]
 // --------------------------------------------------
 
-main#site-main ul :not([class]),
+main#site-main ul:not([class]),
 ul.list--base {
     // List item
     li {

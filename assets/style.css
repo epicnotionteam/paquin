@@ -1425,26 +1425,9 @@ h5,
   margin: 0;
 }
 
-.grid--produc {
+.grid--product {
   display: flex;
   flex-direction: column; /* Stack vertically on mobile */
-}
-
-/* Default mobile order */
-#product__header {
-  order: 1;
-}
-
-#product__media {
-  order: 2;
-}
-
-#product__core {
-  order: 3;
-}
-
-#product__data {
-  order: 4;
 }
 
 /* Desktop view with flex-wrap and horizontal stacking */

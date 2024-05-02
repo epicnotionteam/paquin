@@ -1,0 +1,71 @@
+{% comment %}
+// Output Hero [Inline] component
+{% endcomment %}
+
+
+<section class="section--hero-inline theme--dark" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');">
+    {% comment %} Content {% endcomment %}
+    <div class="container--content">
+        {% comment %} Heading {% endcomment %}
+        <h2 class="section__heading h1">{{ section.settings.heading }}</h2>
+        {% comment %} Content {% endcomment %}
+        <div class="section__content">{{ section.settings.content }}</div>
+        {% comment %} CTA [Primary] {% endcomment %}
+        {% if section.settings.cta_primary_text != blank and section.settings.cta_primary_url != blank %}
+            <a href="{{ section.settings.cta_primary_url }}" class="button--base">{{ section.settings.cta_primary_text }}</a>
+        {% endif %}
+        {% comment %} CTA [Secondary] {% endcomment %}
+        {% if section.settings.cta_secondary_text != blank and section.settings.cta_secondary_url != blank %}
+            <a href="{{ section.settings.cta_secondary_url }}" class="button--outline">{{ section.settings.cta_secondary_text }}</a>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Hero [Inline]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Section heading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Section content</p>"
+        },
+        {
+            "type": "text",
+            "id": "primary_cta_text",
+            "label": "Primary CTA Text",
+            "default": "CTA text",
+            "info": "Leave empty if no link is required"
+        },
+        {
+            "type": "url",
+            "id": "primary_cta_url",
+            "label": "Primary CTA URL"
+        },
+        {
+            "type": "text",
+            "id": "secondary_cta_text",
+            "label": "Secondary CTA Text",
+            "default": "CTA text",
+            "info": "Leave empty if no link is required"
+        },
+        {
+            "type": "url",
+            "id": "secondary_cta_url",
+            "label": "Secondary CTA URL"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Image"
+        }
+    ]
+}
+{% endschema %}

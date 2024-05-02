@@ -13,7 +13,11 @@
     {% comment %} Content {% endcomment %}
     <div class="section__content">{{ section.settings.content }}</div>
     {% comment %} Image {% endcomment %}
-    <div class="section__image">{{ section.settings.content }}</div>
+    <div class="section__image">
+        {% if section.settings.image != blank %}
+            <img class="item__image" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.heading_small }}">
+        {% endif %}
+    </div>
 </section>
 
 {% schema %}

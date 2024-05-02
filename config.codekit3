@@ -2548,10 +2548,10 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/templates\/template.internal-modular.json" : {
+    "\/templates\/template.internal_modular.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/templates\/template.internal-modular-min.json",
+      "oAP" : "\/templates\/template.internal_modular-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1

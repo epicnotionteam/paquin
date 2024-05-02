@@ -1542,6 +1542,7 @@ label {
   letter-spacing: -0.012rem;
   border-left: 0 none;
   border-right: 0 none;
+  font-family: "Paquin Sans Text", sans-serif;
 }
 .product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__button {
   padding: 24px;

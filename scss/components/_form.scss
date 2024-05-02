@@ -45,6 +45,7 @@ label {
                 @include font-size( 'base' );
                 border-left: 0 none;
                 border-right: 0 none;
+                font-family: font-family( 'base' );
             }
             // Increment buttons
             .quantity-selector__button {

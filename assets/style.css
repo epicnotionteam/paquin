@@ -1366,7 +1366,8 @@ h5,
 .grid--product #product__header {
   row-gap: 12px;
   row-gap: 1.2rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .grid--product #product__header #product__title {
   font-size: 36px;
@@ -1551,6 +1552,7 @@ label {
 
 .product-form--regular .quantity-selector__button:focus {
   border: 1px solid rgba(0, 0, 0, 0.16);
+  border-left: 0 none;
   box-shadow: none;
 }
 

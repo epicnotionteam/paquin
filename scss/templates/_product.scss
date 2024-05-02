@@ -14,7 +14,8 @@
     // Section [Header]
     #product__header {
 		@include rem( row-gap, 12px );
-		display: grid;
+		display: flex;
+		flex-direction: column;
         // Title
         #product__title {
           	@include font-size( 'h2' );

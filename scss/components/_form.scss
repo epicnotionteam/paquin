@@ -61,6 +61,7 @@ label {
     // Increment button:focus
     .quantity-selector__button:focus {
         border: $border--base;
+        border-left: 0 none;
         box-shadow: none;
     }
 }

@@ -41,7 +41,10 @@
         @include rem( row-gap, spacing(1) );
         display: grid;
         // Image
-        .item__image {}
+        .item__image {
+            display: block;
+            width: 100%;
+        }
          // Name
          .item__name {
             margin: 0;

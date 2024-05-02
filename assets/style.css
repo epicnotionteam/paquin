@@ -1530,6 +1530,10 @@ h5,
   row-gap: 0.4rem;
   display: grid;
 }
+.feed--team .item .item__image {
+  display: block;
+  width: 100%;
+}
 .feed--team .item .item__name {
   margin: 0;
 }

@@ -1,7 +1,8 @@
 {
   "order": [
     "hero-internal",
-    "carousel-content-media"
+    "carousel-content-media",
+    "feed-team"
   ],
   "sections": {
     "hero-internal": {
@@ -44,6 +45,12 @@
       ],
       "settings": {
         "heading": "Our Specialized Divisions"
+      }
+    },
+    "feed-team": {
+      "type": "feed-team",
+      "settings": {
+        "heading": "Section heading"
       }
     }
   }

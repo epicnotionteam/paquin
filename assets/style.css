@@ -1471,7 +1471,7 @@ h5,
   display: inline-block;
   font-weight: 600;
   line-height: 1.2;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .button--base:hover,

@@ -1,0 +1,84 @@
+{% comment %}
+// Output Feed [Team] component
+{% endcomment %}
+
+
+<section class="section--feed-team">
+    {% comment %} Heading {% endcomment %}
+    <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
+    <div class="feed--team">
+        {% for block in section.blocks %}
+            <div class="item">
+                {% comment %} Container [Image] {% endcomment %}
+                <div class="container--image">
+                    {% if block.settings.image != blank %}
+                        <img class="item__image" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.name }}">
+                    {% endif %}
+                </div>
+                {% comment %} Container [Content] {% endcomment %}
+                <div class="container--content">
+                    {% comment %} Name {% endcomment %}
+                    <h3 class="item__name">{{ block.settings.name }}</h3>
+                    {% comment %} Job Title {% endcomment %}
+                    <p class="item__job-title">{{ block.settings.job_title }}</p>
+                    {% comment %} LinkedIn {% endcomment %}
+                    {% if block.settings.linkedin_url %}
+                        <a href="{{ block.settings.linkedin_url }}" class="item__link link--arrow-outgoing">LinkedIn</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Carousel [Content Media]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Heading",
+            "default": ""
+        }
+    ],
+    "blocks": [
+        {
+            "type": "team-block",
+            "name": "Team Member",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "name",
+                    "label": "Full Name",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "id": "job_title",
+                    "label": "Job Title",
+                    "default": ""
+                },
+                {
+                    "type": "url",
+                    "id": "linkedin_url",
+                    "label": "LinkedIn URL",
+                    "info": "Leave empty if not required/unavailable"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default Team Feed",
+            "category": "Paquin"
+        }
+    ]
+}
+{% endschema %}

@@ -1606,7 +1606,7 @@ ul.list--base li {
 }
 main#site-main ul:not([class]) li:before,
 ul.list--base li:before {
-  content: "\f1e1";
+  content: "\e57b";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;

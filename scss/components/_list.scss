@@ -18,7 +18,7 @@ ul.list--base {
         ));
         position: relative;
         // Inject icon as pseudo element
-        @include icon( before, 'arrow_up_right');
+        @include icon( before, 'bullet');
         &::before {
             color: color( 'action', '1' );
             position: absolute;

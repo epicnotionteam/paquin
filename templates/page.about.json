@@ -81,9 +81,9 @@
     "content-three-column": {
       "type": "content-three-column",
       "settings": {
-        "heading_small": "Small section heading",
-        "heading_large": "Large section heading",
-        "subheading": "An insightful subheading",
+        "heading_small": "Company History",
+        "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
+        "subheading": "Our Founding",
         "content": "<p>Founded in 1949, the success of The Paquin Company is best reflected by the quality of the products that we represent and our hard earned reputation for integrity and good customer service, both of which are a testament to the quality of our team. We have maintained a leadership position by attracting, and retaining only the most talented and qualified individuals with the technical know-how, education, and personal skills necessary to support our customers.<\/p><p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems.  We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.  However, we are much more than your typical distributor. <\/p><p>Paquin associates are highly valued contributors to this process, and our organization.  Our work environment encourages creativity and communication.  Internally, we are always moving toward continuous improvement in customer service, products, and processes.  This improves Paquin’s ability to respond to our customers changing needs.<\/p><p>Paquin’s mission is to maintain and expand our reputation for integrity, innovation, quality, and superior customer service.<\/p>",
         "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }

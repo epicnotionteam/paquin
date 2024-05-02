@@ -25,10 +25,22 @@
             "cta_secondary": "<p>Require a custom part for your project?<br\/><a href=\"#\" title=\"#\">Contact our team today<\/a><\/p>",
             "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
           }
+        },
+        "carousel_block_aNeN4P": {
+          "type": "carousel-block",
+          "settings": {
+            "heading": "Elevating Industries with Our Porfolio of Advanced Sensor Technologies",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
+            "cta_primary_text": "Learn more",
+            "cta_primary_url": "#",
+            "cta_secondary": "<p>Secondary CTA<\/p>",
+            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+          }
         }
       },
       "block_order": [
-        "carousel_block_XfzB8a"
+        "carousel_block_XfzB8a",
+        "carousel_block_aNeN4P"
       ],
       "settings": {
         "heading": "Our Specialized Divisions"

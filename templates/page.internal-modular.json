@@ -6,6 +6,7 @@
     "sections": {
         "hero-internal": {
             "type": "hero-internal",
+            "optional": true,
             "settings": {
                 "heading": {
                     "type": "text",

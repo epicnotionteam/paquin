@@ -2,12 +2,12 @@
 // Output Carousel [Content Media] component
 {% endcomment %}
 
-<section id="carousel-content-media" class="section--carousel-content-media">
-    <h2>{{ section.settings.heading }}</h2>
+<section class="section--carousel-content-media">
+    <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
     {% for block in section.blocks %}
-        <div class="carousel-item">
+        <div class="carousel--content-media">
             <div class="carousel-content">
-                <h3>{{ block.settings.heading }}</h3>
+                <h3 class="item__heading h2">{{ block.settings.heading }}</h3>
                 <div class="rich-text">{{ block.settings.content | richtext }}</div>
                 {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
                     <a href="{{ block.settings.cta_primary_url }}" class="button primary">{{ block.settings.cta_primary_text }}</a>

@@ -2436,6 +2436,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/page.about.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/page.about-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/page.contact.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -2448,14 +2456,6 @@
       "ft" : 524288,
       "oA" : 1,
       "oAP" : "\/templates\/page.faq-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.internal-modular.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.internal-modular-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1

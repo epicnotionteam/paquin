@@ -84,7 +84,7 @@
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",
         "subheading": "An insightful subheading",
-        "content": "<p>Informative content about our company, mission, and vision.<\/p>",
+        "content": "<p>Informative content about our company, mission, and vision<\/p>",
         "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }
     }

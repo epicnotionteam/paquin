@@ -58,10 +58,20 @@
             "linkedin_url": "#",
             "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
           }
+        },
+        "team_block_iF8RzN": {
+          "type": "team-block",
+          "settings": {
+            "name": "Robert Williams",
+            "job_title": "Chairman & CEO",
+            "linkedin_url": "#",
+            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+          }
         }
       },
       "block_order": [
-        "team_block_6GiA4R"
+        "team_block_6GiA4R",
+        "team_block_iF8RzN"
       ],
       "settings": {
         "heading": "Our Leadership Team"

@@ -3,24 +3,33 @@
 {% endcomment %}
 
 <section class="section--carousel-content-media">
+    {% comment %} Heading {% endcomment %}
     <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
-    {% for block in section.blocks %}
-        <div class="carousel--content-media">
-            <div class="carousel-content">
-                <h3 class="item__heading h2">{{ block.settings.heading }}</h3>
-                <div class="rich-text">{{ block.settings.content | richtext }}</div>
-                {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
-                    <a href="{{ block.settings.cta_primary_url }}" class="button primary">{{ block.settings.cta_primary_text }}</a>
-                {% endif %}
-                <div class="rich-text">{{ block.settings.cta_secondary | richtext }}</div>
+    <div class="carousel--content-media">
+        {% for block in section.blocks %}
+            <div class="carousel--content-media">
+                {% comment %} Container [Content] {% endcomment %}
+                <div class="container--content">
+                    {% comment %} Heading {% endcomment %}
+                    <h3 class="item__heading h2">{{ block.settings.heading }}</h3>
+                    {% comment %} Content {% endcomment %}
+                    <div class="item__content">{{ block.settings.content | richtext }}</div>
+                    {% comment %} CTA [Primary] {% endcomment %}
+                    {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
+                        <a href="{{ block.settings.cta_primary_url }}" class="button--base item__cta--primary">{{ block.settings.cta_primary_text }}</a>
+                    {% endif %}
+                    {% comment %} CTA [Secondary] {% endcomment %}
+                    <div class="item__cta--secondary text--small">{{ block.settings.cta_secondary | richtext }}</div>
+                </div>
+                {% comment %} Container [Media] {% endcomment %}
+                <div class="container--media">
+                    {% if block.settings.image != blank %}
+                        <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
+                    {% endif %}
+                </div>
             </div>
-            <div class="carousel-media">
-                {% if block.settings.image != blank %}
-                    <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
-                {% endif %}
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </section>
 
 

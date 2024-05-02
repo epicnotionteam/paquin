@@ -1485,6 +1485,10 @@ h5,
   font-size: 2rem;
 }
 
+.product-form--atc-button:hover {
+  border: 0 none;
+}
+
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

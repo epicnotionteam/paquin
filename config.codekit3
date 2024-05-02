@@ -2555,6 +2555,14 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/templates\/template.test.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/template.test-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
     }
   },
   "hooks" : [

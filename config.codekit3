@@ -2556,10 +2556,10 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/templates\/template.test.json" : {
+    "\/templates\/test.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/templates\/template.test-min.json",
+      "oAP" : "\/templates\/test-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1

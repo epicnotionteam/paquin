@@ -34,14 +34,5 @@
         }
       ]
     }
-  },
-  "presets": [
-    {
-      "name": "Default Page",
-      "category": "Page",
-      "sections": {
-        "hero-internal": {}
-      }
-    }
-  ]
+  }
 }

@@ -14,12 +14,36 @@ ul.list--base {
     li {
         @include rem((
             margin-bottom: spacing(2),
-            padding-left: 24px
+            padding-left: 20px
         ));
         position: relative;
         &::before {
             color: color( 'action', '1' );
             content: '•';
+            font-size: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+
+// List [Check]
+// --------------------------------------------------
+
+ul.list--check {
+    // List item
+    li {
+        @include rem((
+            margin-bottom: spacing(2),
+            padding-left: 24px
+        ));
+        position: relative;
+        // Inject icon as pseudo element
+        @include icon( before, 'check_contained');
+        &::before {
+            color: color( 'action', '1' );
             position: absolute;
             top: 0;
             left: 0;

@@ -6,7 +6,7 @@
 {% if product.metafields.custom.highlights %}
 	<div id="product__highlights">
 		<h2 class="h5">Product Highlights</h2>
-	  	<ul>
+	  	<ul class="list--check">
 			{% assign highlights = product.metafields.custom.highlights | remove: '["' | remove: '"]' | split: '","' %}
 			{% for item in highlights %}
 		  		<li class="text--small">

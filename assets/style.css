@@ -1601,14 +1601,39 @@ main#site-main ul:not([class]) li,
 ul.list--base li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  padding-left: 20px;
+  padding-left: 2rem;
   position: relative;
 }
 main#site-main ul:not([class]) li::before,
 ul.list--base li::before {
   color: #0F7F92;
   content: "•";
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul.list--check li {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
+  position: relative;
+}
+ul.list--check li:before {
+  content: "\e86c";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul.list--check li::before {
+  color: #0F7F92;
   position: absolute;
   top: 0;
   left: 0;

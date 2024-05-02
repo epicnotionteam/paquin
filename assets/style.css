@@ -1438,9 +1438,6 @@ h5,
     margin: 0 auto;
     grid-template-areas: "media header" "data core";
   }
-  .grid__item {
-    overflow: hidden;
-  }
   #product__media {
     grid-area: media;
   }

@@ -107,7 +107,7 @@
     {% comment %}Inject theme-object end{% endcomment %}
 
     {% comment %} Custom Assets [Scripts] {% endcomment %}
-    {{ 'components.js' | asset_url | script_tag }}
+    {% comment %} {{ 'components.js' | asset_url | script_tag }} {% endcomment %}
     {% comment %} Custom Assets [Styles] {% endcomment %}
     <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">

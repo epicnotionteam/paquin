@@ -1435,24 +1435,19 @@ h5,
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     margin: 0 auto;
-  }
-  #product__media,
-  #product__data,
-  #product__header,
-  #product__core {
-    grid-column: span 1;
+    grid-template-areas: "media header" "data core";
   }
   #product__media {
-    grid-row: 1;
+    grid-area: media;
   }
   #product__header {
-    grid-row: 2;
+    grid-area: header;
   }
   #product__data {
-    grid-row: 3;
+    grid-area: data;
   }
   #product__core {
-    grid-row: 4;
+    grid-area: core;
   }
 }
 .button--base,
@@ -1555,6 +1550,7 @@ li a:hover {
 }
 .link--icon::before {
   color: #0F7F92;
+  line-height: 1.2;
   font-size: 128%;
 }
 

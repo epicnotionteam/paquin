@@ -88,29 +88,29 @@
     
     .grid--product {
         @include rem( ( gap: spacing(6), max-width: 1064px ) );
-        display: flex;
+        display: grid;
         grid-template-columns: repeat( 2, 1fr );
         grid-gap: spacing(6);
         margin: 0 auto;
 		grid-template-areas:
 		'media header'
 		'data core';
-    }
+      }
       
-    #product__media {
+      #product__media {
         grid-area: media;
-    }
+      }
       
-    #product__header {
+      #product__header {
         grid-area: header;
-    }
+      }
       
-    #product__data {
+      #product__data {
         grid-area: data;
-    }
+      }
       
-    #product__core {
+      #product__core {
         grid-area: core;
-    }
+      }
 
 }

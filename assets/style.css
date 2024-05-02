@@ -1431,9 +1431,8 @@ h5,
     gap: 4rem;
     max-width: 1064px;
     max-width: 106.4rem;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
     margin: 0 auto;
     grid-template-areas: "media header" "data core";
   }

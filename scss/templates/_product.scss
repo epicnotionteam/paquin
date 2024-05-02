@@ -88,9 +88,8 @@
     
     .grid--product {
         @include rem( ( gap: spacing(6), max-width: 1064px ) );
-        display: flex;
+        display: grid;
         grid-template-columns: repeat( 2, 1fr );
-        grid-gap: spacing(6);
         margin: 0 auto;
 		grid-template-areas:
 		'media header'

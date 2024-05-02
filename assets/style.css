@@ -1546,7 +1546,7 @@ h5,
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 77.5em) {
   .feed--team {
     grid-template-columns: repeat(6, 1fr);
   }

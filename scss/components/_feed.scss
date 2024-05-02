@@ -67,7 +67,7 @@
 }
 
 // Adjust @large breakpoint
-@include mq( $from: medium ) {
+@include mq( $from: large ) {
     // Component container
     .feed--team {
         grid-template-columns: repeat( 6, 1fr );

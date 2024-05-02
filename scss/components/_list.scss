@@ -5,17 +5,11 @@
 // Component Instances
 // ----------------------------------------------------------------------------------------------------
 
-// List [Unordered]
+// List [Unordered, Base]
 // --------------------------------------------------
 
-ul {}
-
-
-// List [Link, Arrow]
-// --------------------------------------------------
-
-ul.list--link-arrow {
-
+main#site-main ul :not([class]),
+ul.list--base {
     // List item
     li {
         @include rem((
@@ -23,16 +17,36 @@ ul.list--link-arrow {
             padding-left: 24px
         ));
         position: relative;
-        
         // Inject icon as pseudo element
         @include icon( before, 'arrow_up_right');
-
         &::before {
             color: color( 'action', '1' );
             position: absolute;
             top: 0;
             left: 0;
         }
+    }
+}
 
+
+// List [Link, Arrow]
+// --------------------------------------------------
+
+ul.list--link-arrow {
+    // List item
+    li {
+        @include rem((
+            margin-bottom: spacing(2),
+            padding-left: 24px
+        ));
+        position: relative;
+        // Inject icon as pseudo element
+        @include icon( before, 'arrow_up_right');
+        &::before {
+            color: color( 'action', '1' );
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }

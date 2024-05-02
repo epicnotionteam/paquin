@@ -1596,6 +1596,33 @@ li a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main#site-main ul :not([class]) li,
+ul.list--base li {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  padding-left: 24px;
+  padding-left: 2.4rem;
+  position: relative;
+}
+main#site-main ul :not([class]) li:before,
+ul.list--base li:before {
+  content: "\f1e1";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main#site-main ul :not([class]) li::before,
+ul.list--base li::before {
+  color: #0F7F92;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 ul.list--link-arrow li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;

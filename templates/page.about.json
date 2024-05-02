@@ -2,7 +2,8 @@
   "order": [
     "hero-internal",
     "carousel-content-media",
-    "feed_team_xGeiVG"
+    "feed_team_xGeiVG",
+    "content-three-column"
   ],
   "sections": {
     "hero-internal": {
@@ -19,7 +20,7 @@
         "carousel_block_XfzB8a": {
           "type": "carousel-block",
           "settings": {
-            "heading": "Elevating Industries with Our Porfolio of Advanced Sensor Technologies",
+            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
             "cta_primary_text": "Learn more",
             "cta_primary_url": "#test",
@@ -30,7 +31,7 @@
         "carousel_block_aNeN4P": {
           "type": "carousel-block",
           "settings": {
-            "heading": "Elevating Industries with Our Porfolio of Advanced Sensor Technologies",
+            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
             "cta_primary_text": "Learn more",
             "cta_primary_url": "#",
@@ -75,6 +76,16 @@
       ],
       "settings": {
         "heading": "Our Leadership Team"
+      }
+    },
+    "content-three-column": {
+      "type": "content-three-column",
+      "settings": {
+        "heading_small": "Small section heading",
+        "heading_large": "Large section heading",
+        "subheading": "An insightful subheading",
+        "content": "<p>Informative content about our company, mission, and vision.<\/p>",
+        "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }
     }
   }

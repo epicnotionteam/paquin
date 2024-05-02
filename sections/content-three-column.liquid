@@ -1,0 +1,56 @@
+{% comment %}
+// Output Content [Three-Column] component
+{% endcomment %}
+
+
+<section class="section--content-three-column">
+    {% comment %} Heading [Small] {% endcomment %}
+    <h2 class="section__heading--small h5">{{ section.settings.heading_small }}</h2>
+    {% comment %} Heading [Large] {% endcomment %}
+    <h3 class="section__heading--large h1">{{ section.settings.heading_large }}</h3>
+    {% comment %} Subheading {% endcomment %}
+    <p class="section__subheading">{{ section.settings.subheading }}</p>
+    {% comment %} Content {% endcomment %}
+    <div class="section__content">{{ section.settings.content }}</div>
+    {% comment %} Image {% endcomment %}
+    <div class="section__image">{{ section.settings.content }}</div>
+</section>
+
+{% schema %}
+{
+    "name": "Content [Three-Column]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Small section heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "text",
+            "id": "heading_large",
+            "label": "Heading [Large]",
+            "default": "Large section heading",
+            "info": "Secondary section heading (h3)"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Subheading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Section content</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

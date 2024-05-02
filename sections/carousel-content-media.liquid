@@ -10,11 +10,11 @@
             <div class="carousel-content">
                 <h3>{{ block.settings.heading }}</h3>
                 <div class="rich-text">{{ block.settings.content | richtext }}</div>
-                {% if block.settings.cta_primary %}
-                    <a href="{{ block.settings.cta_primary }}" class="button primary">Learn More</a>
+                {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
+                    <a href="{{ block.settings.cta_primary_url }}" class="button primary">{{ block.settings.cta_primary_text }}</a>
                 {% endif %}
-                {% if block.settings.cta_secondary %}
-                    <a href="{{ block.settings.cta_secondary }}" class="button secondary">Get Started</a>
+                {% if block.settings.cta_secondary_url and block.settings.cta_secondary_text %}
+                    <a href="{{ block.settings.cta_secondary_url }}" class="button secondary">{{ block.settings.cta_secondary_text }}</a>
                 {% endif %}
             </div>
             <div class="carousel-media">

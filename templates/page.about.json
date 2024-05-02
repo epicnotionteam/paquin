@@ -6,29 +6,33 @@
     "sections": {
         "hero-internal": {
             "type": "hero-internal",
-            "settings": {
-                "heading": {
+            "settings": [
+                {
                     "type": "text",
+                    "id": "heading",
                     "label": "Heading",
                     "default": "Section heading"
                 },
-                "link_url": {
+                {
                     "type": "url",
+                    "id": "link_url",
                     "label": "Link URL",
                     "default": ""
                 },
-                "link_text": {
+                {
                     "type": "text",
+                    "id": "link_text",
                     "label": "Link Text",
                     "default": "Click Here",
                     "info": "Leave empty if no link is required"
                 },
-                "image": {
+                {
                     "type": "image_picker",
+                    "id": "image",
                     "label": "Background Image",
                     "default": "Select a background image"
                 }
-            }
+            ]
         }
     }
 }

@@ -2452,18 +2452,18 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/templates\/page.json" : {
+    "\/templates\/page.internal-modular.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/templates\/page-min.json",
+      "oAP" : "\/templates\/page.internal-modular-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/templates\/page.test.json" : {
+    "\/templates\/page.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/templates\/page.test-min.json",
+      "oAP" : "\/templates\/page-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -2552,14 +2552,6 @@
       "ft" : 524288,
       "oA" : 1,
       "oAP" : "\/templates\/search-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/template.internal_modular.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/template.internal_modular-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1

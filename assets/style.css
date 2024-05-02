@@ -1618,8 +1618,8 @@ ul.list--base li::before {
 ul.list--check li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
-  padding-left: 24px;
-  padding-left: 2.4rem;
+  padding-left: 26px;
+  padding-left: 2.6rem;
   position: relative;
 }
 ul.list--check li:before {
@@ -1634,6 +1634,7 @@ ul.list--check li:before {
 }
 ul.list--check li::before {
   color: #0F7F92;
+  font-size: 120%;
   position: absolute;
   top: 0;
   left: 0;

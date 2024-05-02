@@ -1427,14 +1427,27 @@ h5,
 
 @media (min-width: 64em) {
   .grid--product {
+    gap: 40px;
+    gap: 4rem;
+    max-width: 1064px;
+    max-width: 106.4rem;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
     margin: 0 auto;
-    width: 1064px;
+    grid-template-areas: "media header" "data core";
   }
-  .grid--product .grid__sizer {
-    width: 400px;
+  #product__media {
+    grid-area: media;
   }
-  #product__media, #product__header, #product__data, #product__core {
-    width: 100%;
+  #product__header {
+    grid-area: header;
+  }
+  #product__data {
+    grid-area: data;
+  }
+  #product__core {
+    grid-area: core;
   }
 }
 .button--base,

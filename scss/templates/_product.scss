@@ -85,19 +85,32 @@
 
 // Adjust for medium breakpoint
 @include mq($from: medium) {
-
     
     .grid--product {
+        @include rem( ( gap: spacing(6), max-width: 1064px ) );
+        display: flex;
+        grid-template-columns: repeat( 2, 1fr );
+        grid-gap: spacing(6);
         margin: 0 auto;
-        width: 1064px;  // Adjust the width as needed
-
-		.grid__sizer {
-			width: 400px;
-		}
+		grid-template-areas:
+		'media header'
+		'data core';
+    }
+      
+    #product__media {
+        grid-area: media;
+    }
+      
+    #product__header {
+        grid-area: header;
+    }
+      
+    #product__data {
+        grid-area: data;
+    }
+      
+    #product__core {
+        grid-area: core;
     }
 
-    // Reset any specific positioning that might interfere with Masonry
-    #product__media, #product__header, #product__data, #product__core {
-        width: 100%;  // Ensure this if Masonry is managing widths
-    }
 }

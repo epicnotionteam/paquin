@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var elem = document.querySelector('.grid--product');
-    var msnry = new Masonry(elem, {
+document.addEventListener('DOMContentLoaded', function() {
+    var iso = new Isotope('.grid--product', {
         itemSelector: '.grid__item',
-        columnWidth: '.grid__sizer',
-        gutter: 10
+        masonry: {
+            columnWidth: 250
+        }
     });
 });

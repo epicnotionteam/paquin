@@ -94,10 +94,10 @@
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p> From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",
-        "primary_cta_text": "Contact Our Team",
+        "primary_cta_text": "Primary CTA",
         "primary_cta_url": "#",
-        "secondary_cta_text": "Shop for parts",
-        "secondary_cta_url": "#test"
+        "secondary_cta_text": "Secondary CTA",
+        "secondary_cta_url": "#"
       }
     }
   }

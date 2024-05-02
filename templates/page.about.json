@@ -4,7 +4,7 @@
     "carousel-content-media",
     "feed_team_xGeiVG",
     "content-three-column",
-    "hero-inline"
+    "hero-inline-about"
   ],
   "sections": {
     "hero-internal": {
@@ -90,7 +90,7 @@
       }
     },
     "hero-inline": {
-      "type": "hero-inline",
+      "type": "hero-inline-about",
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p> From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",

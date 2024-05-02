@@ -1427,20 +1427,11 @@ h5,
 
 @media (min-width: 64em) {
   .grid--product {
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 1064px;
   }
-  #product__media {
-    order: 0;
-  }
-  #product__header {
-    order: 1;
-  }
-  #product__data {
-    order: 2;
-  }
-  #product__core {
-    order: 3;
+  #product__media, #product__header, #product__data, #product__core {
+    width: 100%;
   }
 }
 .button--base,

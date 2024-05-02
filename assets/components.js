@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     var elem = document.querySelector('.grid--product');
     var msnry = new Masonry(elem, {
-        // options
-        itemSelector: '.grid__item',
-        columnWidth: '.grid__item',
-        gutter: 0
+        itemSelector: 'div',  // Ensure these are your grid items
+        columnWidth: elem.offsetWidth / 2 - 10,  // Adjust '- 10' based on your actual gutter size
+        gutter: 10
     });
 });

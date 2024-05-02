@@ -1430,6 +1430,9 @@ h5,
     margin: 0 auto;
     width: 1064px;
   }
+  .grid--product .grid__sizer {
+    width: 400px;
+  }
   #product__media, #product__header, #product__data, #product__core {
     width: 100%;
   }

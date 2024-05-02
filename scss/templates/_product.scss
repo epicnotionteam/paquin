@@ -85,10 +85,15 @@
 
 // Adjust for medium breakpoint
 @include mq($from: medium) {
+
     
     .grid--product {
         margin: 0 auto;
         width: 1064px;  // Adjust the width as needed
+
+		.grid__sizer {
+			width: 400px;
+		}
     }
 
     // Reset any specific positioning that might interfere with Masonry

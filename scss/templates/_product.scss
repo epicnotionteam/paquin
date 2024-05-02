@@ -87,32 +87,31 @@
 @include mq($from: medium) {
 
 	.grid--product {
-	  	@include rem((gap: spacing(6), max-width: 1064px));
-	  	display: grid;
-	  	grid-template-columns: repeat(2, 1fr);
-	  	grid-gap: spacing(6);
-	  	margin: 0 auto;
-	  	grid-auto-rows: min-content;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 32px;
+		max-width: 1240px;
+
+		> * {
+			flex-basis: calc(50% - 32px);
+  		}
+		
 	}
   
 	#product__media {
-	  	grid-column: 1;
-	  	grid-row: 1;
+	  	order: 0;
 	}
   
 	#product__data {
-	  	grid-column: 1;
-	  	grid-row: 2;
+	  	order 2;
 	}
   
 	#product__header {
-	  	grid-column: 2;
-	  	grid-row: 1;
+	  	order: 1;
 	}
   
 	#product__core {
-	  	grid-column: 2;
-	  	grid-row: 2;
+	  	order: 3;
 	}
-	
+
 }

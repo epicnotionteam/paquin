@@ -6,33 +6,12 @@
     "sections": {
         "hero-internal": {
             "type": "hero-internal",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "heading",
-                    "label": "Heading",
-                    "default": "Section heading"
-                },
-                {
-                    "type": "url",
-                    "id": "link_url",
-                    "label": "Link URL",
-                    "default": ""
-                },
-                {
-                    "type": "text",
-                    "id": "link_text",
-                    "label": "Link Text",
-                    "default": "Click Here",
-                    "info": "Leave empty if no link required"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Background Image",
-                    "default": ""
-                }
-            ]
+            "settings": {
+                "heading": "Section heading",
+                "link_url": "",
+                "link_text": "Click Here",
+                "image": ""
+            }
         }
     }
 }

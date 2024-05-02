@@ -1,15 +1,22 @@
 {
-  "order": [
-    "hero-internal"
-  ],
-  "sections": {
-    "hero-internal": {
-      "type": "hero-internal",
-      "settings": {
-        "heading": "Section heading",
-        "link_url": "#test",
-        "link_text": "Button label"
-      }
-    }
-  }
-}
+	"order": [
+	  	"hero-internal",
+	  	"carousel-content-media"
+	],
+	"sections": {
+	  	"hero-internal": {
+			"type": "hero-internal",
+			"settings": {
+		  		"heading": "Section heading",
+		  		"link_url": "#test",
+		  		"link_text": "Button label"
+			}
+	  	},
+	  	"carousel-content-media": {
+			"type": "carousel-content-media",
+			"settings": {
+		  		"heading": "Explore Our Features"
+			}
+	  	}
+	}
+}  

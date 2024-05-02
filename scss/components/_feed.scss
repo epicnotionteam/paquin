@@ -28,12 +28,14 @@
 // Feed [Team]
 // --------------------------------------------------
 
+// Component container
 .feed--team {
     @include rem(( 
         column-gap: spacing(4),
         row-gap: spacing(5) 
     ));
     display: grid;
+    grid-template-columns: repeat( 2, 1fr );
     // Item
     .item {
         @include rem( row-gap, spacing(1) );
@@ -50,5 +52,21 @@
         }
          // LinkedIn
          .item__linkedin {}
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--team {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+}
+
+// Adjust @large breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--team {
+        grid-template-columns: repeat( 6, 1fr );
     }
 }

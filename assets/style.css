@@ -1523,6 +1523,7 @@ h5,
   row-gap: 32px;
   row-gap: 3.2rem;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .feed--team .item {
   row-gap: 4px;
@@ -1535,6 +1536,16 @@ h5,
 .feed--team .item .item__job-title {
   margin-top: 4px;
   margin-top: 0.4rem;
+}
+@media (min-width: 64em) {
+  .feed--team {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .feed--team {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 label {
   font-size: 15px;

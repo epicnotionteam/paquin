@@ -17,10 +17,9 @@ ul.list--base {
             padding-left: 24px
         ));
         position: relative;
-        // Inject icon as pseudo element
-        @include icon( before, 'bullet');
         &::before {
             color: color( 'action', '1' );
+            content: '•';
             position: absolute;
             top: 0;
             left: 0;

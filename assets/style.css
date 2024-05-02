@@ -1427,26 +1427,20 @@ h5,
 
 @media (min-width: 64em) {
   .grid--product {
-    gap: 40px;
-    gap: 4rem;
-    max-width: 1064px;
-    max-width: 106.4rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    grid-template-areas: "media header" "data core";
+    display: flex;
+    flex-direction: column;
   }
   #product__media {
-    grid-area: media;
+    order: 0;
   }
   #product__header {
-    grid-area: header;
+    order: 1;
   }
   #product__data {
-    grid-area: data;
+    order: 2;
   }
   #product__core {
-    grid-area: core;
+    order: 3;
   }
 }
 .button--base,

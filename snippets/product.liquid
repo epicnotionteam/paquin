@@ -73,7 +73,7 @@
 <article class="grid--product">
 
 	{% comment %} Product Header {% endcomment %}
-	<div id="product__header">
+	<div id="product__header" class="grid__item">
 		<!-- Title -->
 		<h1 id="product__title">{{  product.title }}</h1>
 		<!-- Price -->
@@ -121,7 +121,7 @@
 
 
 	{% comment %} Product Media {% endcomment %}
-	<div id="product__media">
+	<div id="product__media" class="grid__item">
 		{%
 			render 'product-gallery',
 			product: product,
@@ -136,7 +136,7 @@
 
 
 	{% comment %} Product Core {% endcomment %}
-	<div id="product__core">
+	<div id="product__core" class="grid__item">
 		<!-- Form -->
 		<div
 			class="product-form--regular"
@@ -185,7 +185,7 @@
 
 
 	{% comment %} Product Data {% endcomment %}
-	<div id="product__data">
+	<div id="product__data" class="grid__item">
 		<!-- Description -->
 		{% render 'product-description' %}
 		<!-- Key Specifications -->

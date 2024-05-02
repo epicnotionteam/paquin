@@ -1221,8 +1221,8 @@ h2,
   line-height: 44px;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
-  letter-spacing: 0.24px;
-  letter-spacing: 0.024rem;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
   margin: 0 0 24px;
   margin: 0 0 2.4rem;
   font-weight: 400;
@@ -1235,8 +1235,8 @@ h3,
   line-height: 32px;
   letter-spacing: 0.16px;
   letter-spacing: 0.016rem;
-  letter-spacing: 0.16px;
-  letter-spacing: 0.016rem;
+  letter-spacing: 0.24px;
+  letter-spacing: 0.024rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
   font-weight: 400;
@@ -1249,8 +1249,8 @@ h4,
   line-height: 26px;
   letter-spacing: 0.16px;
   letter-spacing: 0.016rem;
-  letter-spacing: 0.16px;
-  letter-spacing: 0.016rem;
+  letter-spacing: 0.26px;
+  letter-spacing: 0.026rem;
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
   font-weight: 400;

@@ -81,6 +81,10 @@ table {
   box-sizing: border-box;
 }
 
+.rich-text {
+  margin: 0 !important;
+}
+
 .push--right {
   float: right;
 }

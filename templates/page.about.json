@@ -1,17 +1,15 @@
 {
-    "name": "About",
-    "order": [
-        "hero-internal"
-    ],
-    "sections": {
-        "hero-internal": {
-            "type": "hero-internal",
-            "settings": {
-                "heading": "Section heading",
-                "link_url": "",
-                "link_text": "Click Here",
-                "image": ""
-            }
-        }
+  "order": [
+    "hero-internal"
+  ],
+  "sections": {
+    "hero-internal": {
+      "type": "hero-internal",
+      "settings": {
+        "heading": "Section heading",
+        "link_url": "#test",
+        "link_text": "Button label"
+      }
     }
+  }
 }

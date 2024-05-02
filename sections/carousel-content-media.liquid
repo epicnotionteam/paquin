@@ -1,0 +1,86 @@
+{% comment %}
+// Output Carousel Content Media component
+{% endcomment %}
+
+
+<section id="carousel-content-media" class="section--carousel-content-media">
+    <h2>{{ section.settings.heading }}</h2>
+    {% for block in section.blocks %}
+        <div class="carousel-item">
+            <div class="carousel-content">
+                <h3>{{ block.settings.heading }}</h3>
+                <div class="rich-text">{{ block.settings.content | richtext }}</div>
+                {% if block.settings.cta_primary %}
+                    <a href="{{ block.settings.cta_primary }}" class="button primary">Learn More</a>
+                {% endif %}
+                {% if block.settings.cta_secondary %}
+                    <a href="{{ block.settings.cta_secondary }}" class="button secondary">Get Started</a>
+                {% endif %}
+            </div>
+            <div class="carousel-media">
+                {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+
+{% schema %}
+{
+    "name": "Carousel Content Media",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Main Section Heading",
+            "default": "Your Main Heading Here"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "carousel-block",
+            "name": "Carousel Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Item Heading",
+                    "default": "Item Heading Here"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content",
+                    "default": "<p>Default content here...</p>"
+                },
+                {
+                    "type": "url",
+                    "id": "cta_primary",
+                    "label": "Primary CTA Link",
+                    "default": "https://example.com"
+                },
+                {
+                    "type": "url",
+                    "id": "cta_secondary",
+                    "label": "Secondary CTA Link",
+                    "default": "https://example.com"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Carousel Image",
+                    "default": ""
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default Carousel",
+            "category": "Media"
+        }
+    ]
+}
+{% endschema %}

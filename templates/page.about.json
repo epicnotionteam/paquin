@@ -92,13 +92,12 @@
     "hero-inline": {
       "type": "hero-inline",
       "settings": {
-        "heading": "Innovative Solutions",
-        "content": "<p>Leading the way in industrial growth and innovation.</p>",
-        "cta_primary_text": "Explore More",
-        "cta_primary_url": "#discover",
-        "cta_secondary_text": "Contact Us",
-        "cta_secondary_url": "#contact",
-        "image": "shopify://shop_images/hero-background.jpg"
+        "heading": "The Right Part For Every Engineering Project",
+        "content": "<p> From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",
+        "primary_cta_text": "Contact Our Team",
+        "primary_cta_url": "#",
+        "secondary_cta_text": "Shop for parts",
+        "secondary_cta_url": "#test"
       }
     }
   }

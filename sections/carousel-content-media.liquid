@@ -2,7 +2,6 @@
 // Output Carousel [Content Media] component
 {% endcomment %}
 
-
 <section id="carousel-content-media" class="section--carousel-content-media">
     <h2>{{ section.settings.heading }}</h2>
     {% for block in section.blocks %}
@@ -13,9 +12,7 @@
                 {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
                     <a href="{{ block.settings.cta_primary_url }}" class="button primary">{{ block.settings.cta_primary_text }}</a>
                 {% endif %}
-                {% if block.settings.cta_secondary_url and block.settings.cta_secondary_text %}
-                    <a href="{{ block.settings.cta_secondary_url }}" class="button secondary">{{ block.settings.cta_secondary_text }}</a>
-                {% endif %}
+                <div class="rich-text">{{ block.settings.cta_secondary | richtext }}</div>
             </div>
             <div class="carousel-media">
                 {% if block.settings.image != blank %}

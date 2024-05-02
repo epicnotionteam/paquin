@@ -106,10 +106,12 @@
     </script>
     {% comment %}Inject theme-object end{% endcomment %}
 
-    <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    {% comment %} Custom Assets [Scripts] {% endcomment %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     {{ 'components.js' | asset_url | script_tag }}
+    {% comment %} Custom Assets [Styles] {% endcomment %}
+    <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
   </head>
 

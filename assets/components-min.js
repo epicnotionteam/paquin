@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".grid--product");new Masonry(e,{itemSelector:"div",columnWidth:e.offsetWidth/2-10,gutter:10})}));
+document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".grid--product");new Masonry(e,{itemSelector:".grid__item",columnWidth:e.offsetWidth/2-10,gutter:10})}));

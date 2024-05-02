@@ -23,3 +23,32 @@
         }
     }
 }
+
+
+// Feed [Team]
+// --------------------------------------------------
+
+.feed--team {
+    @include rem(( 
+        column-gap: spacing(4),
+        row-gap: spacing(5) 
+    ));
+    display: grid;
+    // Item
+    .item {
+        @include rem( row-gap, spacing(1) );
+        display: grid;
+        // Image
+        .item__image {}
+         // Name
+         .item__name {
+            margin: 0;
+         }
+          // Job Title
+        .item__job-title {
+            @include rem( margin-top, spacing(1) );
+        }
+         // LinkedIn
+         .item__linkedin {}
+    }
+}

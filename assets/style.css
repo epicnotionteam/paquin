@@ -1517,6 +1517,25 @@ h5,
   text-align: right;
 }
 
+.feed--team {
+  column-gap: 24px;
+  column-gap: 2.4rem;
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
+.feed--team .item {
+  row-gap: 4px;
+  row-gap: 0.4rem;
+  display: grid;
+}
+.feed--team .item .item__name {
+  margin: 0;
+}
+.feed--team .item .item__job-title {
+  margin-top: 4px;
+  margin-top: 0.4rem;
+}
 label {
   font-size: 15px;
   font-size: 1.5rem;

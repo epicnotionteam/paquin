@@ -84,34 +84,58 @@
 }
 
 // Adjust for medium breakpoint
-@include mq($from: medium) {
+// @include mq($from: medium) {
     
-    .grid--product {
-        @include rem( ( gap: spacing(6), max-width: 1064px ) );
-        display: grid;
-		grid-auto-rows: minmax(8x, auto); /* Set a minimum row height */
-        grid-template-columns: repeat( 2, 1fr );
-        grid-gap: spacing(6);
-        margin: 0 auto;
-		grid-template-areas:
-		'media header'
-		'data core';
-      }
+//     .grid--product {
+//         @include rem( ( gap: spacing(6), max-width: 1064px ) );
+//         display: grid;
+// 		grid-auto-rows: minmax(8x, auto); /* Set a minimum row height */
+//         grid-template-columns: repeat( 2, 1fr );
+//         grid-gap: spacing(6);
+//         margin: 0 auto;
+// 		grid-template-areas:
+// 		'media header'
+// 		'data core';
+//       }
       
-      #product__media {
-        grid-area: media;
-      }
+//       #product__media {
+//         grid-area: media;
+//       }
       
-      #product__header {
-        grid-area: header;
-      }
+//       #product__header {
+//         grid-area: header;
+//       }
       
-      #product__data {
-        grid-area: data;
-      }
+//       #product__data {
+//         grid-area: data;
+//       }
       
-      #product__core {
-        grid-area: core;
-      }
+//       #product__core {
+//         grid-area: core;
+//       }
 
+// }
+
+
+.grid--produc {
+    display: flex;
+    flex-direction: column;  /* Stack vertically on mobile */
+}
+
+/* Default mobile order */
+#product__header { order: 1; }
+#product__media  { order: 2; }
+#product__core   { order: 3; }
+#product__data   { order: 4; }
+
+/* Desktop view with flex-wrap and horizontal stacking */
+@media (min-width: 768px) {  /* Adjust breakpoint as needed */
+    .grid--product {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    #product__header { order: 2; width: 50%; }
+    #product__media  { order: 1; width: 50%; } 
+    #product__core   { order: 4; width: 50%; }
+    #product__data   { order: 3; width: 50%; }
 }

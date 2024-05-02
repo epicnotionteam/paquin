@@ -89,6 +89,7 @@
     .grid--product {
         @include rem( ( gap: spacing(6), max-width: 1064px ) );
         display: grid;
+		grid-auto-rows: minmax(8x, auto); /* Set a minimum row height */
         grid-template-columns: repeat( 2, 1fr );
         grid-gap: spacing(6);
         margin: 0 auto;
@@ -96,6 +97,11 @@
 		'media header'
 		'data core';
       }
+
+	  .grid__item {
+		overflow: hidden;
+	  }
+	  
       
       #product__media {
         grid-area: media;

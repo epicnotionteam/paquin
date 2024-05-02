@@ -4,7 +4,7 @@
     "carousel-content-media",
     "feed_team_xGeiVG",
     "content-three-column",
-    "hero-inline-about"
+    "hero-inline"
   ],
   "sections": {
     "hero-internal": {
@@ -90,14 +90,14 @@
       }
     },
     "hero-inline": {
-      "type": "hero-inline-about",
+      "type": "hero-inline",
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p> From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",
-        "primary_cta_text": "Primary CTA",
-        "primary_cta_url": "#",
-        "secondary_cta_text": "Secondary CTA",
-        "secondary_cta_url": "#"
+        "cta_primary_text": "CTA text",
+        "cta_primary_url": "#test",
+        "cta_secondary_text": "CTA text",
+        "cta_secondary_url": "#test"
       }
     }
   }

@@ -1408,8 +1408,8 @@ h5,
   border: 1px solid rgba(0, 0, 0, 0.16);
 }
 .grid--product #product__data > * {
-  padding: 40px 0;
-  padding: 4rem 0;
+  padding: 32px 0;
+  padding: 3.2rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.16);
 }
 .grid--product #product__data > * p,
@@ -1519,11 +1519,29 @@ label {
   display: grid;
 }
 .product-form--regular .product-form__action-wrapper quantity-selector {
+  border-radius: 0;
   max-width: none;
   width: 100%;
 }
 .product-form--regular .product-form__action-wrapper quantity-selector label {
   display: none;
+}
+.product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__wrapper {
+  height: 56px;
+  height: 5.6rem;
+}
+.product-form--regular .product-form__action-wrapper quantity-selector input {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+.product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__button {
+  padding: 24px;
+  padding: 2.4rem;
 }
 
 @media (min-width: 64em) {

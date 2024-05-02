@@ -65,7 +65,7 @@
     #product__data {
         // Individual data blocks
         & > * {
-            @include rem( padding, spacing(6) 0 );
+            @include rem( padding, spacing(5) 0 );
             border-top: $border--base;
             // Content
             p, 

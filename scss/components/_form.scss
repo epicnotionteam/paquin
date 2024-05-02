@@ -30,11 +30,25 @@ label {
         display: grid;
         // Input [Quantity]
         quantity-selector {
+            border-radius: 0;
             max-width: none;
             width: 100%;
             // Remove label
             label {
                 display: none;
+            }
+            // Wrapper
+            .quantity-selector__wrapper {
+                @include rem( height, 56px );
+            }
+            input {
+                @include font-size( 'base' );
+                border-left: 0 none;
+                border-right: 0 none;
+            }
+            // Increment buttons
+            .quantity-selector__button {
+                @include rem( padding, spacing(4) );
             }
         }
     }

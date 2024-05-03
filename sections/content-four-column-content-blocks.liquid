@@ -1,0 +1,81 @@
+{% comment %}
+// Output Content [Four-Column, Content Blocks] component
+{% endcomment %}
+
+
+<section class="section--four-columns">
+    {% comment %} Heading [Small] {% endcomment %}
+    <h2 class="section__heading--small h5">{{ section.settings.heading_small }}</h2>
+    {% comment %} Heading [Large] {% endcomment %}
+    <h3 class="section__heading--small h1">{{ section.settings.heading_large }}</h3>
+    {% comment %} Feed {% endcomment %}
+    <div class="feed--content-numbered">
+        {% for block in section.blocks %}
+            <div class="item">
+                {% if section.settings.show_numbering %}
+                    {% comment %} Number {% endcomment %}
+                    <span class="item__number">_{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+                {% endif %}
+                {% comment %} Heading {% endcomment %}
+                <h3 class="item__heading">{{ block.settings.heading }}</h3>
+                {% comment %} Content {% endcomment %}
+                <div class="item__content">{{ block.settings.content }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Content [Four-Column, Content Blocks]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Small section heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "text",
+            "id": "heading_large",
+            "label": "Heading [Large]",
+            "default": "Large section heading",
+            "info": "Secondary section heading (h3)"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_numbering",
+            "label": "Show block numbering",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content-block",
+            "name": "Content Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Block heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content",
+                    "default": "<p>Block content</p>"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default Content [Four-Column, Content Blocks]",
+            "category": "Paquin"
+        }
+    ]
+}
+{% endschema %}

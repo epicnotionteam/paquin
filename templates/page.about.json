@@ -5,7 +5,7 @@
     "feed_team_xGeiVG",
     "content-three-column",
     "hero-inline-about",
-    "content-four-column-content-blocks"
+    "four-column-content-blocks"
   ],
   "sections": {
     "hero-internal": {
@@ -102,7 +102,7 @@
       }
     },
     "content-four-column-content-blocks": {
-      "type": "content-four-column-content-blocks",
+      "type": "four-column-content-blocks",
       "settings": {
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",

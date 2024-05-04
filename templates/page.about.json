@@ -1,14 +1,14 @@
 {
   "order": [
-    "hero-internal",
-    "carousel-content-media",
-    "feed_team_xGeiVG",
-    "content-three-column",
-    "hero-inline-about",
-    "content-four-col-blocks"
+    "about-hero",
+    "about-divisions",
+    "about-team",
+    "about-history",
+    "about-hero-cta",
+    "about-process"
   ],
   "sections": {
-    "hero-internal": {
+    "about-hero": {
       "type": "hero-internal",
       "settings": {
         "heading": "Section heading",
@@ -16,7 +16,7 @@
         "link_text": "Button label"
       }
     },
-    "carousel-content-media": {
+    "about-divisions": {
       "type": "carousel-content-media",
       "blocks": {
         "carousel_block_XfzB8a": {
@@ -50,7 +50,7 @@
         "heading": "Our Specialized Divisions"
       }
     },
-    "feed_team_xGeiVG": {
+    "about-team": {
       "type": "feed-team",
       "blocks": {
         "team_block_6GiA4R": {
@@ -80,7 +80,7 @@
         "heading": "Our Leadership Team"
       }
     },
-    "content-three-column": {
+    "about-history": {
       "type": "content-three-column",
       "settings": {
         "heading_small": "Company History",
@@ -90,7 +90,7 @@
         "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }
     },
-    "hero-inline": {
+    "about-hero-cta": {
       "type": "hero-inline",
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
@@ -101,7 +101,7 @@
         "cta_secondary_url": "#test"
       }
     },
-    "content-four-col-blocks": {
+    "about-process": {
       "type": "content-four-col-blocks",
       "settings": {
         "heading_small": "Small section heading",

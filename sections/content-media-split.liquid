@@ -2,28 +2,38 @@
 // Output Content/Media Split component
 {% endcomment %}
 
+{% comment %} Assign data to vars {% endcomment %}
+{% assign section_subheading = section.settings.subheading %}
+{% assign section_heading    = section.settings.heading %}
+{% assign section_content    = section.settings.content %}
+{% assign section_link_text  = section.settings.link_text %}
+{% assign section_link_url   = section.settings.link_url %}
+{% assign section_image      = section.settings.image %}
 
 <section class="section--content-media-split">
     {% comment %} Subheading {% endcomment %}
-    {% if section.settings.subheading != blank %}
-        <p class="section__subheading">{{ section.settings.subheading }}</p>
+    {% if section_subheading != blank %}
+        <p class="section__subheading">{{ section_subheading }}</p>
     {% endif %}
     {% comment %} Heading {% endcomment %}
-    <h2 class="section__heading">{{ section.settings.heading }}</h2>
+    {% if section_heading != blank %}
+        <h2 class="section__heading">{{ section_heading }}</h2>
+    {% endif %}
     {% comment %} Content {% endcomment %}
-    <div class="section__content">{{ section.settings.content }}</div>
+    {% if section_content != blank %}
+        <div class="section__content">{{ section_content }}</div>
+    {% endif %}
     {% comment %} Link {% endcomment %}
-    {% if section.settings.link_text != blank and section.settings.link_url != blank %}
-        <a href="{{ section.settings.link_url }}" class="link--arrow-forward">{{ section.settings.link_text }}</a>
+    {% if section_link_text != blank and section_link_url != blank %}
+        <a href="{{ section_link_url }}" class="link--arrow-forward">{{ section_link_text }}</a>
     {% endif %}
     {% comment %} Image {% endcomment %}
     <div class="section__image">
-        {% if section.settings.image != blank %}
-            <img class="item__image" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.heading_small }}">
+        {% if section_image != blank %}
+            <img class="item__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section.settings.heading }}">
         {% endif %}
     </div>
 </section>
-
 
 {% schema %}
 {

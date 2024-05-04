@@ -103,40 +103,46 @@
     },
     "about-process": {
       "type": "content-blocks",
+      "blocks": {
+        "content_block_RKK6JJ": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Block heading",
+            "content": "<p>Block content<\/p>"
+          }
+        },
+        "content_block_CmpMHh": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Block heading",
+            "content": "<p>Block content<\/p>"
+          }
+        },
+        "content_block_hwEqpe": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Block heading",
+            "content": "<p>Block content<\/p>"
+          }
+        },
+        "content_block_p8FcWY": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Block heading",
+            "content": "<p>Block content<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_RKK6JJ",
+        "content_block_CmpMHh",
+        "content_block_hwEqpe",
+        "content_block_p8FcWY"
+      ],
       "settings": {
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",
         "show_numbering": true
-      },
-      "blocks": {
-        "block_1": {
-          "type": "content-block",
-          "settings": {
-            "heading": "Block heading 1",
-            "content": "<p>Block content 1</p>"
-          }
-        },
-        "block_2": {
-          "type": "content-block",
-          "settings": {
-            "heading": "Block heading 2",
-            "content": "<p>Block content 2</p>"
-          }
-        },
-        "block_3": {
-          "type": "content-block",
-          "settings": {
-            "heading": "Block heading 3",
-            "content": "<p>Block content 3</p>"
-          }
-        },
-        "block_4": {
-          "type": "content-block",
-          "settings": {
-            "heading": "Block heading 4",
-            "content": "<p>Block content 4</p>"
-          }
-        }
       }
     }
   }

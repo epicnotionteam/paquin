@@ -12,8 +12,8 @@
     "about-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Section heading",
-        "link_text": "Button label",
+        "heading": "Providing Superior Quality, Innovation and Customer Service Since 1949",
+        "link_text": "Meet The Paquin Company",
         "link_url": "#test",
         "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }

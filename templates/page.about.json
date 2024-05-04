@@ -102,7 +102,7 @@
       }
     },
     "about-process": {
-      "type": "content-four-col-blocks",
+      "type": "content-4-col-blocks",
       "settings": {
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",

@@ -980,6 +980,14 @@
       "oAP" : "\/sections\/content-offset-careers.liquid",
       "oF" : 0
     },
+    "\/sections\/content-offset-resume.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/content-offset-resume.liquid",
+      "oF" : 0
+    },
     "\/sections\/content-offset.liquid" : {
       "cB" : 0,
       "ft" : 8192,

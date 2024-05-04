@@ -3,13 +3,14 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign section_heading_small    = section.settings.heading_small %}
-{% assign section_heading_large    = section.settings.heading_large %}
-{% assign section_blocks           = section.blocks %}
-{% assign section_config_numbering = section.settings.show_numbering %}
+{% assign section_heading_small   = section.settings.heading_small %}
+{% assign section_heading_large   = section.settings.heading_large %}
+{% assign section_blocks          = section.blocks %}
+{% assign section_block_numbering = section.settings.show_numbering %}
+{% assign section_theme           = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--content-blocks">
+<section class="section--content-blocks theme--{{ section_theme }}">
     {% comment %} Heading [Small] {% endcomment %}
     {% if section_heading_small != blank %}
         <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
@@ -27,7 +28,7 @@
             {% comment %} Output item {% endcomment %}
             <div class="item">
                 {% comment %} Number {% endcomment %}
-                {% if section_config_numbering %}
+                {% if section_block_numbering %}
                     <span class="item__number">_{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
                 {% endif %}
                 {% comment %} Heading {% endcomment %}
@@ -66,6 +67,26 @@
             "id": "show_numbering",
             "label": "Show block numbering",
             "default": false
+        },
+        {
+            "type": "select",
+            "id": "theme",
+            "label": "Section Theme",
+            "options": [
+              {
+                "value": "base",
+                "label": "Base"
+              },
+              {
+                "value": "alt",
+                "label": "Alternative"
+              },
+              {
+                "value": "dark",
+                "label": "Dark"
+              }
+            ],
+            "default": "base"
         }
     ],
     "blocks": [

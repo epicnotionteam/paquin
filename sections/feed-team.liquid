@@ -6,15 +6,16 @@
 {% assign section_heading_small = section.settings.heading_small %}
 {% assign section_heading_large = section.settings.heading_large %}
 {% assign section_blocks        = section.blocks %}
+{% assign section_theme         = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--feed-team">
+<section class="section--feed-team theme--{{ section_theme }}">
     {% comment %} Heading [Small] {% endcomment %}
-    {% if section_heading_small %}
+    {% if section_heading_small != blank %}
         <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
     {% endif %}
     {% comment %} Heading [Large] {% endcomment %}
-    {% if section_heading_large %}
+    {% if section_heading_large != blank %}
         <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
     {% endif %}
     {% comment %} Feed {% endcomment %}
@@ -71,6 +72,26 @@
             "label": "Heading [Large]",
             "default": "Heading",
             "info": "Secondary section heading (h3)"
+        },
+        {
+            "type": "select",
+            "id": "theme",
+            "label": "Section Theme",
+            "options": [
+              {
+                "value": "base",
+                "label": "Base"
+              },
+              {
+                "value": "alt",
+                "label": "Alternative"
+              },
+              {
+                "value": "dark",
+                "label": "Dark"
+              }
+            ],
+            "default": "base"
         }
     ],
     "blocks": [

@@ -964,6 +964,14 @@
       "oAP" : "\/sections\/content-blocks.liquid",
       "oF" : 0
     },
+    "\/sections\/content-media-split.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/content-media-split.liquid",
+      "oF" : 0
+    },
     "\/sections\/content-offset.liquid" : {
       "cB" : 0,
       "ft" : 8192,

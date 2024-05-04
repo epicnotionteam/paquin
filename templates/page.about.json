@@ -6,7 +6,7 @@
     "about-history",
     "about-hero-cta",
     "about-process",
-    "content_media_split_9DDL7y"
+    "about-careers"
   ],
   "sections": {
     "about-hero": {
@@ -146,7 +146,7 @@
         "show_numbering": true
       }
     },
-    "content_media_split_9DDL7y": {
+    "about-careers": {
       "type": "content-media-split",
       "settings": {
         "subheading": "Subheading",

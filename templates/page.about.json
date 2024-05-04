@@ -6,7 +6,8 @@
     "about-history",
     "about-hero-cta",
     "about-process",
-    "about-careers"
+    "about-careers",
+    "content_offset_careers_Er7CNF"
   ],
   "sections": {
     "about-hero": {
@@ -150,6 +151,7 @@
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",
         "show_numbering": true,
+        "columns": "4",
         "theme": "dark"
       }
     },
@@ -164,6 +166,50 @@
         "link_url": "#test",
         "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png",
         "theme": "dark"
+      }
+    },
+    "content_offset_careers_Er7CNF": {
+      "type": "content-offset-careers",
+      "blocks": {
+        "role_block_NYPXkH": {
+          "type": "role-block",
+          "settings": {
+            "title": "Title",
+            "division": "Division",
+            "location": "Location",
+            "link": ""
+          }
+        },
+        "role_block_WDbAgj": {
+          "type": "role-block",
+          "settings": {
+            "title": "Title",
+            "division": "Division",
+            "location": "Location",
+            "link": ""
+          }
+        },
+        "role_block_PaXKnw": {
+          "type": "role-block",
+          "settings": {
+            "title": "Title",
+            "division": "Division",
+            "location": "Location",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "role_block_NYPXkH",
+        "role_block_WDbAgj",
+        "role_block_PaXKnw"
+      ],
+      "settings": {
+        "heading_small": "Heading",
+        "heading_large": "Heading",
+        "subheading": "Subheading",
+        "content": "<p>Content<\/p>",
+        "theme": "base"
       }
     }
   }

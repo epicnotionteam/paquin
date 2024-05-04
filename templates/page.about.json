@@ -81,7 +81,7 @@
       }
     },
     "about-history": {
-      "type": "content-three-column",
+      "type": "content-offset",
       "settings": {
         "heading_small": "Company History",
         "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
@@ -102,7 +102,7 @@
       }
     },
     "about-process": {
-      "type": "content-4-col-blocks",
+      "type": "content-blocks",
       "settings": {
         "heading_small": "Small section heading",
         "heading_large": "Large section heading",

@@ -956,20 +956,20 @@
       "oAP" : "\/sections\/carousel-content-media.liquid",
       "oF" : 0
     },
-    "\/sections\/content-4-col-blocks.liquid" : {
+    "\/sections\/content-blocks.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/content-4-col-blocks.liquid",
+      "oAP" : "\/sections\/content-blocks.liquid",
       "oF" : 0
     },
-    "\/sections\/content-three-column.liquid" : {
+    "\/sections\/content-offset.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/content-three-column.liquid",
+      "oAP" : "\/sections\/content-offset.liquid",
       "oF" : 0
     },
     "\/sections\/dynamic-blog-posts.liquid" : {

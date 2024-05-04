@@ -1,30 +1,70 @@
 {% comment %}
-// Output Carousel [Content Media] component
+// Output Carousel [Content/Media] component
 {% endcomment %}
 
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_heading_large = section.settings.heading_large %}
+{% assign section_blocks        = section.blocks %}
+
+{% comment %} Output section {% endcomment %}
 <section class="section--carousel-content-media">
-    {% comment %} Heading {% endcomment %}
-    <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
+    {% comment %} Heading [Small] {% endcomment %}
+    {% if section_heading_small %}
+        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+    {% endif %}
+    {% comment %} Heading [Large] {% endcomment %}
+    {% if section_heading_large %}
+        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+    {% endif %}
+    {% comment %} Carousel {% endcomment %}
     <div class="carousel--content-media">
-        {% for block in section.blocks %}
-            <div class="carousel--content-media">
+        {% for block in section_blocks %}
+            {% comment %} Assign block data to vars {% endcomment %}
+            {% assign block_logo      = block.settings.logo %}
+            {% assign block_heading   = block.settings.heading %}
+            {% assign block_content   = block.settings.content %}
+            {% assign block_link_text = block.settings.link_text %}
+            {% assign block_link_url  = block.settings.link_url %}
+            {% assign block_cta       = block.settings.cta %}
+            {% assign block_image     = block.settings.image %}
+            {% comment %} Output item {% endcomment %}
+            <div class="item">
                 {% comment %} Container [Content] {% endcomment %}
                 <div class="container--content">
-                    {% comment %} Heading {% endcomment %}
-                    <h3 class="item__heading h2">{{ block.settings.heading }}</h3>
-                    {% comment %} Content {% endcomment %}
-                    <div class="item__content">{{ block.settings.content | richtext }}</div>
-                    {% comment %} CTA [Primary] {% endcomment %}
-                    {% if block.settings.cta_primary_url and block.settings.cta_primary_text %}
-                        <a href="{{ block.settings.cta_primary_url }}" class="item__cta--primary link--arrow-forward">{{ block.settings.cta_primary_text }}</a>
-                    {% endif %}
-                    {% comment %} CTA [Secondary] {% endcomment %}
-                    <div class="item__cta--secondary">{{ block.settings.cta_secondary | richtext }}</div>
+                    {% comment %} Wrap [Content] {% endcomment %}
+                    <div class="item__wrap--content">
+                        {% comment %} Logo {% endcomment %}
+                        {% if block_logo != blank %}
+                            <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
+                        {% endif %}
+                        {% comment %} Heading {% endcomment %}
+                        {% if block_heading != blank %}
+                            <h3 class="item__heading">{{ block_heading }}</h3>
+                        {% endif %}
+                        {% comment %} Content {% endcomment %}
+                        {% if block_content != blank %}
+                            <div class="item__content">{{ block_content | richtext }}</div>
+                        {% endif %}
+                        {% comment %} Link {% endcomment %}
+                        {% if block_link_text != blank and block_link_url != blank %}
+                            <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
+                        {% endif %}
+                    </div>
+                        {% comment %} Wrap [Actions] {% endcomment %}
+                        <div class="item__wrap--actions">
+                            {% comment %} CTA {% endcomment %}
+                            {% if block_cta != blank %}
+                                <div class="item__cta">{{ block_cta | richtext }}</div>
+                            {% endif %}
+                            {% comment %} Navigation {% endcomment %}
+                            <p>Navigation arrows</p>
+                    </div>
                 </div>
                 {% comment %} Container [Media] {% endcomment %}
                 <div class="container--media">
-                    {% if block.settings.image != blank %}
-                        <img class="item__image" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading }}">
+                    {% if block_image != blank %}
+                        <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
                     {% endif %}
                 </div>
             </div>
@@ -32,16 +72,23 @@
     </div>
 </section>
 
-
 {% schema %}
 {
-    "name": "Carousel [Content Media]",
+    "name": "Carousel [Content/Media]",
     "settings": [
         {
             "type": "text",
-            "id": "heading",
-            "label": "Main Section Heading",
-            "default": "Your Main Heading Here"
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "text",
+            "id": "heading_large",
+            "label": "Heading [Large]",
+            "default": "Heading",
+            "info": "Secondary section heading (h3)"
         }
     ],
     "blocks": [
@@ -50,47 +97,52 @@
             "name": "Carousel Block",
             "settings": [
                 {
+                    "type": "image_picker",
+                    "id": "logo",
+                    "label": "Logo"
+                },
+                {
                     "type": "text",
                     "id": "heading",
                     "label": "Item Heading",
-                    "default": "Item Heading Here"
+                    "default": "Heading"
                 },
                 {
                     "type": "richtext",
                     "id": "content",
                     "label": "Content",
-                    "default": "<p>Default content here...</p>"
+                    "default": "<p>Content</p>"
                 },
                 {
                     "type": "text",
-                    "id": "cta_primary_text",
-                    "label": "Primary CTA Text",
+                    "id": "link_text",
+                    "label": "Link Text",
                     "default": "Link text",
-                    "info": "Leave empty if CTA is not required"
+                    "info": "Leave empty if no link is required"
                 },
                 {
                     "type": "url",
-                    "id": "cta_primary_url",
-                    "label": "Primary CTA URL"
+                    "id": "link_url",
+                    "label": "Link URL"
                 },
                 {
                     "type": "richtext",
-                    "id": "cta_secondary",
-                    "label": "Secondary CTA Content",
-                    "default": "<p>Secondary CTA</p>"
+                    "id": "cta",
+                    "label": "CTA Content",
+                    "default": "<p>Call-to-action</p>"
                 },
                 {
                     "type": "image_picker",
                     "id": "image",
-                    "label": "Carousel Image"
+                    "label": "Slide Image"
                 }
             ]
         }
     ],
     "presets": [
         {
-            "name": "Default Carousel",
-            "category": "Media"
+            "name": "Carousel [Content/Media]",
+            "category": "Paquin"
         }
     ]
 }

@@ -2,28 +2,51 @@
 // Output Feed [Team] component
 {% endcomment %}
 
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_heading_large = section.settings.heading_large %}
+{% assign section_blocks        = section.blocks %}
 
+{% comment %} Output section {% endcomment %}
 <section class="section--feed-team">
-    {% comment %} Heading {% endcomment %}
-    <h2 class="section__heading h5">{{ section.settings.heading }}</h2>
+    {% comment %} Heading [Small] {% endcomment %}
+    {% if section_heading_small %}
+        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+    {% endif %}
+    {% comment %} Heading [Large] {% endcomment %}
+    {% if section_heading_large %}
+        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+    {% endif %}
+    {% comment %} Feed {% endcomment %}
     <div class="feed--team">
-        {% for block in section.blocks %}
+        {% for block in section_blocks %}
+            {% comment %} Assign block data to vars {% endcomment %}
+            {% assign block_image  = block.settings.image %}
+            {% assign block_name   = block.settings.name %}
+            {% assign block_role   = block.settings.role %}
+            {% assign block_social = block.settings.role %}
+            {% comment %} Output item {% endcomment %}
             <div class="item">
-                {% comment %} Container [Image] {% endcomment %}
+                {% comment %} Container [Content] {% endcomment %}
                 <div class="container--image">
-                    {% if block.settings.image != blank %}
-                        <img class="item__image" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.name }}">
+                    {% comment %} Image {% endcomment %}
+                    {% if block_image != blank %}
+                        <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{  block_name }}">
                     {% endif %}
                 </div>
                 {% comment %} Container [Content] {% endcomment %}
                 <div class="container--content">
                     {% comment %} Name {% endcomment %}
-                    <h3 class="item__name">{{ block.settings.name }}</h3>
-                    {% comment %} Job Title {% endcomment %}
-                    <p class="item__job-title">{{ block.settings.job_title }}</p>
+                    {% if block_name != blank %}
+                        <h3 class="item__name">{{ block_name }}</h3>
+                    {% endif %}
+                    {% comment %} Role {% endcomment %}
+                    {% if block_role != blank %}
+                        <p class="item__role">{{ block_role }}</p>
+                    {% endif %}
                     {% comment %} LinkedIn {% endcomment %}
-                    {% if block.settings.linkedin_url %}
-                        <a href="{{ block.settings.linkedin_url }}" class="item__link link--arrow-outgoing">LinkedIn</a>
+                    {% if block_social != blank %}
+                        <p><a href="{{ block_social }}" class="item__link link--arrow-outgoing">LinkedIn</a></p>
                     {% endif %}
                 </div>
             </div>
@@ -31,16 +54,23 @@
     </div>
 </section>
 
-
 {% schema %}
 {
     "name": "Feed [Team]",
     "settings": [
         {
             "type": "text",
-            "id": "heading",
-            "label": "Section Heading",
-            "default": "Our Leadership Team"
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "text",
+            "id": "heading_large",
+            "label": "Heading [Large]",
+            "default": "Heading",
+            "info": "Secondary section heading (h3)"
         }
     ],
     "blocks": [
@@ -56,13 +86,13 @@
                 },
                 {
                     "type": "text",
-                    "id": "job_title",
-                    "label": "Job Title",
-                    "default": "Job Title"
+                    "id": "role",
+                    "label": "Role",
+                    "default": "Role"
                 },
                 {
                     "type": "url",
-                    "id": "linkedin_url",
+                    "id": "social",
                     "label": "LinkedIn Profile URL"
                 },
                 {
@@ -75,8 +105,8 @@
     ],
     "presets": [
         {
-            "name": "Default Team Feed",
-            "category": "Team"
+            "name": "Feed [Team]",
+            "category": "Paquin"
         }
     ]
 }

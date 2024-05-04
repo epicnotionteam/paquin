@@ -2,22 +2,33 @@
 // Output Content [Offset] component
 {% endcomment %}
 
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_heading_large = section.settings.heading_large %}
+{% assign section_subheading    = section.settings.subheading %}
 
+{% comment %} Output section {% endcomment %}
 <section class="section--content-offset">
     {% comment %} Heading [Small] {% endcomment %}
-    <h2 class="section__heading--small h5">{{ section.settings.heading_small }}</h2>
+    {% if section_heading_small != blank %}
+        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+    {% endif %}
     {% comment %} Heading [Large] {% endcomment %}
-    <h3 class="section__heading--large h1">{{ section.settings.heading_large }}</h3>
+    {% if section_heading_large != blank %}
+        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+    {% endif %}
     {% comment %} Subheading {% endcomment %}
-    <p class="section__subheading">{{ section.settings.subheading }}</p>
+    {% if section_subheading != blank %}
+        <p class="section__subheading">{{ section_subheading }}</p>
+    {% endif %}
     {% comment %} Content {% endcomment %}
-    <div class="section__content">{{ section.settings.content }}</div>
+    {% if section_content != blank %}
+        <div class="section__content">{{ section_content | richtext }}</div>
+    {% endif %}
     {% comment %} Image {% endcomment %}
-    <div class="section__image">
-        {% if section.settings.image != blank %}
-            <img class="item__image" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.heading_small }}">
-        {% endif %}
-    </div>
+    {% if section_image != blank %}
+        <img class="section__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section_heading_small }}">
+    {% endif %}
 </section>
 
 {% schema %}
@@ -28,14 +39,14 @@
             "type": "text",
             "id": "heading_small",
             "label": "Heading [Small]",
-            "default": "Small section heading",
+            "default": "Heading",
             "info": "Primary section heading (h2)"
         },
         {
             "type": "text",
             "id": "heading_large",
             "label": "Heading [Large]",
-            "default": "Large section heading",
+            "default": "Heading",
             "info": "Secondary section heading (h3)"
         },
         {
@@ -48,12 +59,18 @@
             "type": "richtext",
             "id": "content",
             "label": "Content",
-            "default": "<p>Section content</p>"
+            "default": "<p>Content</p>"
         },
         {
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Content [Offset]",
+            "category": "Paquin"
         }
     ]
 }

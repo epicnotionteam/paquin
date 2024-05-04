@@ -13,8 +13,9 @@
       "type": "hero-internal",
       "settings": {
         "heading": "Section heading",
+        "link_text": "Button label",
         "link_url": "#test",
-        "link_text": "Button label"
+        "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
       }
     },
     "about-divisions": {

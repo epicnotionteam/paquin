@@ -7,6 +7,7 @@
 {% assign section_heading_large   = section.settings.heading_large %}
 {% assign section_blocks          = section.blocks %}
 {% assign section_block_numbering = section.settings.show_numbering %}
+{% assign section_columns         = section.settings.columns %}
 {% assign section_theme           = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
@@ -20,7 +21,7 @@
         <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
     {% endif %}
     {% comment %} Feed {% endcomment %}
-    <div class="feed--block">
+    <div class="feed--block variant--col-{{ section_columns }}">
         {% for block in section_blocks %}
             {% comment %} Assign block data to vars {% endcomment %}
             {% assign block_heading = block.settings.heading %}
@@ -67,6 +68,27 @@
             "id": "show_numbering",
             "label": "Show block numbering",
             "default": false
+        },
+        {
+            "type": "select",
+            "id": "columns",
+            "label": "Columns [Desktop]",
+            "info" : "Column count managed automatically at smaller breakpoints",
+            "options": [
+              {
+                "value": "3",
+                "label": "Three"
+              },
+              {
+                "value": "4",
+                "label": "Four"
+              },
+              {
+                "value": "6",
+                "label": "Six"
+              }
+            ],
+            "default": "4"
         },
         {
             "type": "select",

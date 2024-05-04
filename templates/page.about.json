@@ -7,7 +7,8 @@
     "about-hero-cta",
     "about-process",
     "about-careers",
-    "content_offset_careers_Er7CNF"
+    "content_offset_careers_Er7CNF",
+    "content_offset_resume_gqRgQz"
   ],
   "sections": {
     "about-hero": {
@@ -204,6 +205,16 @@
         "role_block_WDbAgj",
         "role_block_PaXKnw"
       ],
+      "settings": {
+        "heading_small": "Heading",
+        "heading_large": "Heading",
+        "subheading": "Subheading",
+        "content": "<p>Content<\/p>",
+        "theme": "base"
+      }
+    },
+    "content_offset_resume_gqRgQz": {
+      "type": "content-offset-resume",
       "settings": {
         "heading_small": "Heading",
         "heading_large": "Heading",

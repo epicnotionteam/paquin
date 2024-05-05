@@ -14,7 +14,7 @@
 <section class="section--content-introduction theme--{{ section_theme }}">
     {% comment %} Heading {% endcomment %}
     {% if section_heading != blank %}
-        <h3 class="section__heading--large h2">{{ section_heading }}</h3>
+        <h2 class="section__heading h1">{{ section_heading }}</h2>
     {% endif %}
     {% comment %} Content {% endcomment %}
     {% if section_content != blank %}
@@ -22,13 +22,13 @@
     {% endif %}
      {% comment %} Link {% endcomment %}
      {% if section_link_text != blank and section_link_url != blank %}
-        <a href="{{ section_link_url }}" class="section_link {{ section_link_element }}">{{ section_link_text }}</a>
+        <a href="{{ section_link_url }}" class="section__link {{ section_link_element }}">{{ section_link_text }}</a>
     {% endif %}
 </section>
 
 {% schema %}
 {
-    "name": "Content [Offset]",
+    "name": "Content [Introduction]",
     "settings": [
         {
             "type": "text",

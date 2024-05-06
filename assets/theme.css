@@ -199,7 +199,7 @@
 
 .product-gallery--media-thumbnail, .utils-sortby-button,
 .utils-filter-button, .productgrid--search-button, .modal-close, .message-banner--close, .search-flydown__continue, .live-search-takeover-cancel, .atc-banner--close, .cart-shipping .cart-shipping-toggle, .cart-update, .flickity-prev-next-button {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   padding: 0;
@@ -320,7 +320,7 @@
 }
 
 .productgrid--no-results-title, .blog--no-results-title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -616,7 +616,7 @@
 .pxs-newsletter-text table th,
 .shoppable-image__text-box-subheading table th,
 .image-with-text__text table th {
-  font-family: "Work Sans",sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -658,7 +658,7 @@
 .form-field-select,
 .options-selection__input-select,
 .age-gate__select {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -1565,7 +1565,7 @@ html::after {
 }
 
 body {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -1985,7 +1985,7 @@ rgb(18, 18, 18)
 }
 
 .site-logo-text {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -3767,7 +3767,7 @@ rgb(18, 18, 18)
 }
 
 .product-compare__table-cell-heading {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   color: #121212;
@@ -3811,7 +3811,7 @@ rgb(18, 18, 18)
 }
 
 .product-compare__clear-all {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
@@ -4237,7 +4237,7 @@ rgb(255, 255, 255)
 }
 
 .utility-bar__menu-link {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   margin-right: 1.25rem;
@@ -5907,7 +5907,7 @@ rgb(255, 255, 255)
 }
 
 .faq__categories-view-all {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   align-self: center;
@@ -6003,7 +6003,7 @@ rgb(255, 255, 255)
 }
 
 .faq__summary {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   position: relative;
@@ -6433,7 +6433,7 @@ rgb(255, 255, 255)
 }
 
 .featured-collection__title-card-pre-heading {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -7172,7 +7172,7 @@ rgb(255, 255, 255)
 }
 
 .menulist-item__title {
-  font-family: "Work Sans",sans-serif;
+  
   
   position: relative;
   padding: 1.5rem 1.25rem;
@@ -8474,7 +8474,7 @@ rgb(255, 255, 255)
 }
 
 .hotspot__tooltip-title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -8492,7 +8492,7 @@ rgb(255, 255, 255)
 }
 
 .hotspot__tooltip-vendor {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   margin: 0.234375rem 0 0;
@@ -8549,7 +8549,7 @@ rgb(255, 255, 255)
 }
 
 .hotspot__modal-sidebar-title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   margin: 0 auto 1.171875rem;
@@ -10456,7 +10456,7 @@ rgb(255, 255, 255)
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .account-table th {
-  font-family: "Work Sans",sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -10795,7 +10795,7 @@ rgb(255, 255, 255)
 }
 .account-order .order-item--cell-label,
 .order-footer .order-item--cell-label {
-  font-family: "Work Sans",sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -10853,7 +10853,7 @@ rgb(255, 255, 255)
 }
 .account-order .order-item-title,
 .order-footer .order-item-title {
-  font-family: "Work Sans",sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -10872,7 +10872,7 @@ rgb(255, 255, 255)
 }
 .account-order .order-item-options,
 .order-footer .order-item-options {
-  font-family: "Work Sans",sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   
@@ -11674,7 +11674,7 @@ rgb(255, 255, 255)
 }
 
 .back-to-top__button-label {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
 }
@@ -11887,7 +11887,7 @@ rgb(255, 255, 255)
 }
 
 .atc--product-details--title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -12142,7 +12142,7 @@ rgb(255, 255, 255)
   display: none;
 }
 .cart-item-vendor a {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -12386,7 +12386,7 @@ rgb(255, 255, 255)
 }
 
 .disclosure__toggle {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   padding: 8px 29px 8px 10px;
@@ -14249,7 +14249,7 @@ rgb(255, 255, 255)
   cursor: pointer;
   background: none;
   color: #121212;
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -14444,7 +14444,7 @@ rgb(255, 255, 255)
 }
 
 .productitem--title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -14456,7 +14456,7 @@ rgb(255, 255, 255)
   white-space: normal;
 }
 .productitem--vendor a {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -14665,7 +14665,7 @@ rgb(255, 255, 255)
 
 .productitem--swatches-count-wrapper {
   
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   position: absolute;
@@ -15278,7 +15278,7 @@ rgb(255, 255, 255)
   }
 }
 .filter-item--grid-simple .filter-item-clear-all {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -15359,7 +15359,7 @@ rgb(255, 255, 255)
 }
 
 .collection-filters__filter-title {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -15538,7 +15538,7 @@ rgb(255, 255, 255)
   border-radius: 3px;
 }
 .active-filter-group__item-wrapper .active-filter-text {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   display: inline-block;
@@ -15614,7 +15614,7 @@ rgb(255, 255, 255)
 }
 
 .filter-item-clear-all {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -16298,7 +16298,7 @@ rgb(255, 255, 255)
 }
 
 .productgrid--sidebar-title-as-tags {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   padding-bottom: 0;
@@ -16399,7 +16399,7 @@ body:not(.user-is-tabbing) .productgrid--sidebar-button {
 }
 
 .productgrid--sidebar-title--small {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   margin: 0;
@@ -16913,7 +16913,7 @@ quantity-selector {
 }
 
 .quantity-selector__input {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -17717,7 +17717,7 @@ rgb(255, 255, 255)
 }
 
 .complementary-product__name {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -18295,7 +18295,7 @@ rgb(255, 255, 255)
   border-radius: 3px;
 }
 .shopify-payment-button .shopify-payment-button__more-options {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -18751,7 +18751,7 @@ rgb(255, 255, 255)
 }
 
 .product-gallery--viewinyourspace {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   display: flex;
@@ -19532,7 +19532,7 @@ a.pswp__share--download:hover {
 }
 
 .product-gallery--expand {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -19996,7 +19996,7 @@ rgb(255, 255, 255)
 }
 
 .product-recently-viewed__clear {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   padding: 0;
@@ -21046,7 +21046,7 @@ rgb(255, 255, 255)
 }
 
 .show-more__toggle-more {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 700;
   z-index: 1;
@@ -21264,7 +21264,7 @@ rgb(255, 255, 255)
 ;
 }
 .site-navigation .navmenu-depth-2 .navmenu-link {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   
@@ -21735,7 +21735,7 @@ rgb(255, 255, 255)
 }
 
 .site-navigation .navmenu-meganav-standard__image-link {
-  font-family: Helvetica,'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  
   font-style: normal;
   font-weight: 400;
   

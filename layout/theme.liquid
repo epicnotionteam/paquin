@@ -74,7 +74,7 @@
 
     {{ content_for_header }}
 
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'theme-min.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {% unless settings.reduce_animations %}

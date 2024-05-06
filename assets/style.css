@@ -1093,6 +1093,10 @@ body {
   font-stretch: 100%;
 }
 
+:root {
+  --font-size-body: 10px;
+}
+
 ::-moz-selection {
   background: black;
   color: white;

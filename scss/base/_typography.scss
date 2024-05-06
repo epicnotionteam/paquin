@@ -27,6 +27,10 @@ body {
 	font-stretch: 100%;
 }
 
+:root {
+	--font-size-body: 10px;
+}
+
 // Text selection
 @include text-selection { 
 	background: black;

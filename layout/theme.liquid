@@ -74,7 +74,7 @@
 
     {{ content_for_header }}
 
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'theme.css' | asset_url | stylesheet_tag }} {% endcomment %}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {% unless settings.reduce_animations %}

@@ -8,7 +8,7 @@
 {% assign section_link_text    = section.settings.link_text %}
 {% assign section_link_url     = section.settings.link_url %}
 {% assign section_theme        = section.settings.theme %}
-{% assign section_link_element = section.settings.link_type == 'link' ? 'link--arrow-forward' : 'button--base' %}
+{% assign section_link_element = {{ section.settings.link_type == 'link' ? 'link--arrow-forward' : 'button--base' }} %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-introduction theme--{{ section_theme }}">

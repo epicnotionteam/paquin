@@ -8,7 +8,8 @@
     "about-process",
     "about-careers",
     "content_offset_careers_Er7CNF",
-    "content_offset_resume_gqRgQz"
+    "content_offset_resume_gqRgQz",
+    "content_introduction_3XMmK6"
   ],
   "sections": {
     "about-hero": {
@@ -220,6 +221,18 @@
         "heading_large": "Heading",
         "subheading": "Subheading",
         "content": "<p>Content<\/p>",
+        "theme": "base"
+      }
+    },
+    "content_introduction_3XMmK6": {
+      "type": "content-introduction",
+      "settings": {
+        "heading": "Superior Quality, Innovation and Customer Service Since 1949",
+        "heading_size": "headline",
+        "content": "<p>Content<\/p>",
+        "link_text": "Link text",
+        "link_url": "#test",
+        "link_type": "button",
         "theme": "base"
       }
     }

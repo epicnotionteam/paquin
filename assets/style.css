@@ -1313,6 +1313,10 @@ h5,
   width: 100%;
 }
 
+.site-header {
+  background-color: #212224;
+}
+
 .site-header-logo {
   margin: 0 40px 0 0;
 }

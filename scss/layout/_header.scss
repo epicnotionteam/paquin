@@ -11,10 +11,15 @@
 .site-header {
     background-color: color( 'steel', '1' );
 
+    // Primary header content container
     .site-header-main {
         background-color: color( 'steel', '1' );
+        // Cart marker
+        .site-header-cart--count::after {
+            color: color( 'action', '1' );
+        }
     }
-    
+    // Navigation container
     .site-navigation {
         background-color: color( 'steel', '1' );
     }

@@ -1323,6 +1323,9 @@ h5,
 .site-header .site-header-main {
   background-color: #212224;
 }
+.site-header .site-header-main .site-header-cart--count::after {
+  color: #0F7F92;
+}
 .site-header .site-navigation {
   background-color: #212224;
 }

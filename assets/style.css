@@ -1320,6 +1320,12 @@ h5,
 .site-header {
   background-color: #212224;
 }
+.site-header .site-header-main {
+  background-color: #212224;
+}
+.site-header .site-navigation {
+  background-color: #212224;
+}
 
 .site-header-logo {
   margin: 0 40px 0 0;

@@ -1795,6 +1795,8 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 .site-navigation > .navmenu .navmenu-depth-2 > li > a {
+  padding: 0 24px;
+  padding: 0 2.4rem;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;

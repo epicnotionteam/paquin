@@ -43,6 +43,7 @@
         padding: 0;
         // Link
         & > li > a {
+            @include rem( padding, 0 spacing(4) );
             @include font-size( 'small' );
         }
     }

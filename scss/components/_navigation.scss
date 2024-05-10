@@ -60,14 +60,17 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
-        & > li > a {
-            opacity: 0.56;
+        & > li a {
+            opacity: 0.16;
         }
-        & > li:hover,
-        & > li:hover > a,
-        & > li > a:hover {
-            opacity: 1;
-        }
+        // & > li > a {
+        //     opacity: 0.56;
+        // }
+        // & > li:hover,
+        // & > li:hover > a,
+        // & > li > a:hover {
+        //     opacity: 1;
+        // }
     }
 }
 

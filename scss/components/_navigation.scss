@@ -56,7 +56,7 @@
 // Navigation [Secondary, Desktop]
 // --------------------------------------------------
 
-.site-navigation__secondary-menu {
+.site-navigation .site-navigation__secondary-menu {
     // Item
     li {
         @include font-size( 'xsmall' );

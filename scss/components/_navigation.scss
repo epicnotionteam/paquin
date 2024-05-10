@@ -60,7 +60,8 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
-        & > li a {
+        & > li > a,
+        & > li > details {
             opacity: 0.16;
         }
         // & > li > a {

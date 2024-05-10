@@ -1759,6 +1759,11 @@ ul.list--link-arrow li::before {
   left: 0;
 }
 
+.site-navigation .navmenu {
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  margin: 0;
+}
 .site-navigation .navmenu li {
   font-size: 17px;
   font-size: 1.7rem;
@@ -1772,8 +1777,10 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 .site-navigation .navmenu li summary a {
+  line-height: 2;
   padding: 0;
 }
 .site-navigation .navmenu a {
+  line-height: 2;
   padding: 0;
 }

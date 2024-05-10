@@ -9,6 +9,8 @@
 // --------------------------------------------------
 
 .site-navigation .navmenu {
+    @include rem( column-gap, spacing(3) );
+    margin: 0;
     // Item container
     li {
         @include font-size( 'base' );
@@ -19,12 +21,14 @@
             padding: 0;
             // Link
             a {
+                line-height: 2;
                 padding: 0;
             }
         }
     }
     // Link
     a {
+        line-height: 2;
         padding: 0;
     }
 }

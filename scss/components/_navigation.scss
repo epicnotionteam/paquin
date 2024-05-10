@@ -8,7 +8,7 @@
 // Navigation [Primary, Desktop]
 // --------------------------------------------------
 
-.site-navigation .navmenu {
+.site-navigation > .navmenu {
     @include rem( column-gap, spacing(4) );
     margin: 0;
     // Parent item container

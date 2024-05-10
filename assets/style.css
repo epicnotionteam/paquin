@@ -1759,12 +1759,12 @@ ul.list--link-arrow li::before {
   left: 0;
 }
 
-.site-navigation .navmenu {
+.site-navigation > .navmenu {
   column-gap: 24px;
   column-gap: 2.4rem;
   margin: 0;
 }
-.site-navigation .navmenu > li {
+.site-navigation > .navmenu > li {
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 25px;
@@ -1774,16 +1774,16 @@ ul.list--link-arrow li::before {
   padding: 0;
   transition: opacity 0.24s ease-out;
 }
-.site-navigation .navmenu > li summary {
+.site-navigation > .navmenu > li summary {
   line-height: 64px;
   line-height: 6.4rem;
   padding: 0;
 }
-.site-navigation .navmenu > li summary a {
+.site-navigation > .navmenu > li summary a {
   padding: 0;
   font-weight: 400;
 }
-.site-navigation .navmenu > li > a {
+.site-navigation > .navmenu > li > a {
   line-height: 64px;
   line-height: 6.4rem;
   font-weight: 400;

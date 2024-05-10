@@ -51,22 +51,13 @@
 
 
 // State management
-.site-navigation > .navmenu {
+.site-navigation .navmenu {
     // Navigation [:Hover]
     &:hover {
         & > li {
             opacity: 0.56;
             &:hover {
-                opacity: 1;
-            }
-        }
-    }
-    // Child dropdown container [:Hover]
-    .navmenu-depth-2:hover {
-        & > li {
-            opacity: 0.56;
-            &:hover {
-                opacity: 1;
+                opacity: 1 !important;
             }
         }
     }

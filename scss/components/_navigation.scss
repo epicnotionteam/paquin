@@ -63,8 +63,8 @@
         & > li {
             opacity: 0.56;
         }
-        & > li:hover
-        & > li:hover > a
+        & > li:hover,
+        & > li:hover > a,
         & > li > a:hover {
             opacity: 1;
         }

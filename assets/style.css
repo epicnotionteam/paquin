@@ -1837,6 +1837,6 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 
-.site-navigation .site-navigation__secondary-menu li > a:hover {
+.site-navigation .site-navigation__secondary-menu li:hover {
   opacity: 1;
 }

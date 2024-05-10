@@ -108,7 +108,7 @@
 // State management
 .site-navigation .site-navigation__secondary-menu {
     // Link [:Hover]
-    li > a:hover {
+    li:hover {
         opacity: 1;
     }
 }

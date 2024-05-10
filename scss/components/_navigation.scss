@@ -39,9 +39,9 @@
 
 // State management
 // Navigation [:Hover]
-.site-navigation .navmenu:hover {
+.site-navigation > .navmenu:hover {
     & > li {
-        opacity: 0.8;
+        opacity: 0.72;
         &:hover {
             opacity: 1;
         }

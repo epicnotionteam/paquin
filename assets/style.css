@@ -1790,10 +1790,10 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 
-.site-navigation .navmenu:hover > li {
-  opacity: 0.8;
+.site-navigation > .navmenu:hover > li {
+  opacity: 0.72;
 }
-.site-navigation .navmenu:hover > li:hover {
+.site-navigation > .navmenu:hover > li:hover {
   opacity: 1;
 }
 

@@ -1810,7 +1810,7 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
-.site-navigation .navmenu:hover > li > a, .site-navigation .navmenu:hover > li > details {
+.site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {
   opacity: 0.16;
 }
 

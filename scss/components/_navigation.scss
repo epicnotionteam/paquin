@@ -59,7 +59,7 @@
 // State management
 .site-navigation {
     // Navigation [:Hover]
-    .navmenu:hover {
+    & > .navmenu:hover {
         & > li > a,
         & > li > details {
             opacity: 0.16;

@@ -31,7 +31,7 @@
 
 // Logo container
 .site-header-logo {
-    @include rem( margin, 0 spacing(6) 0 0 );
+    // @include rem( margin, 0 spacing(6) 0 0 );
     // Image
     .site-logo {
         @include rem( max-width, 128px );

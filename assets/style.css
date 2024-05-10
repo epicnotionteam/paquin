@@ -1772,6 +1772,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.012rem;
   letter-spacing: -0.16px;
   padding: 0;
+  transition: opacity 0.24s ease-out;
 }
 .site-navigation .navmenu > li summary {
   line-height: 64px;
@@ -1787,4 +1788,11 @@ ul.list--link-arrow li::before {
   line-height: 6.4rem;
   font-weight: 400;
   padding: 0;
+}
+
+.site-navigation .navmenu:hover li {
+  opacity: 0.8;
+}
+.site-navigation .navmenu:hover li:hover {
+  opacity: 1;
 }

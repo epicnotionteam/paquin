@@ -1413,6 +1413,7 @@ h5,
 }
 .site-header .site-navigation {
   background-color: #212224;
+  padding: 0;
 }
 
 @media (min-width: 64em) {

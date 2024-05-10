@@ -1772,15 +1772,17 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.012rem;
   letter-spacing: -0.16px;
   padding: 0;
+}
+.site-navigation > .navmenu > li details {
   transition: opacity 0.24s ease-out;
 }
-.site-navigation > .navmenu > li summary {
+.site-navigation > .navmenu > li details summary {
   line-height: 64px;
   line-height: 6.4rem;
   padding: 0 12px;
   padding: 0 1.2rem;
 }
-.site-navigation > .navmenu > li summary a {
+.site-navigation > .navmenu > li details summary a {
   padding: 0;
   font-weight: 400;
   opacity: 1;
@@ -1792,6 +1794,7 @@ ul.list--link-arrow li::before {
   padding: 0 1.2rem;
   opacity: 1;
   font-weight: 400;
+  transition: opacity 0.24s ease-out;
 }
 .site-navigation > .navmenu .navmenu-depth-2 {
   margin-left: -16px;
@@ -1808,6 +1811,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   opacity: 1;
+  transition: opacity 0.24s ease-out;
 }
 
 .site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {

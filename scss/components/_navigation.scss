@@ -9,7 +9,7 @@
 // --------------------------------------------------
 
 .site-navigation > .navmenu {
-    // @include rem( column-gap, spacing(4) );
+    @include rem(  transform, translateX( -12px ) );
     margin: 0;
     // Parent item container
     & > li {

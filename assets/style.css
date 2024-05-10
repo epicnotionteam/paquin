@@ -1760,6 +1760,8 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation > .navmenu {
+  transform: translateX(-12px);
+  transform: translateX(-12px);
   margin: 0;
 }
 .site-navigation > .navmenu > li {

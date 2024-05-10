@@ -1765,3 +1765,6 @@ ul.list--link-arrow li::before {
 .site-navigation .navmenu li summary {
   padding: 0;
 }
+.site-navigation .navmenu li summary a {
+  padding: 0;
+}

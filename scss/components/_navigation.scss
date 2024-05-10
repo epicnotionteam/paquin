@@ -9,16 +9,18 @@
 // --------------------------------------------------
 
 .site-navigation .navmenu {
-
+    // Item container
     li {
         padding: 0;
-
+        // Link wrapper
         summary {
             padding: 0;
+            // Link
+            a {
+                padding: 0;
+            }
         }
-
     }
-
 }
 
 

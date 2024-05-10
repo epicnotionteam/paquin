@@ -1324,7 +1324,7 @@ h5,
   background-color: #212224;
 }
 .site-header .site-header-main .site-header-cart--count::after {
-  color: #0F7F92;
+  background-color: #0F7F92;
 }
 .site-header .site-navigation {
   background-color: #212224;
@@ -1332,64 +1332,71 @@ h5,
 
 .site-header-logo {
   margin: 0 40px 0 0;
+  margin: 0 4rem 0 0;
 }
 .site-header-logo .site-logo {
-  max-width: 130px;
+  max-width: 128px;
+  max-width: 12.8rem;
   height: auto;
+  width: 100%;
 }
 
 .live-search-form {
-  border-radius: 0px;
-  border: 0px;
-  box-shadow: unset;
+  border-radius: 0;
+  border: 0 none;
+  box-shadow: none;
 }
 .live-search-form .live-search-form-field {
+  padding: 16px;
+  padding: 1.6rem;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  padding: 16px;
 }
 .live-search-form .live-search-filter-wrapper .live-search-filter-label {
+  padding: 16px;
+  padding: 1.6rem;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   background: #30373A;
-  color: #FFFFFF;
-  padding: 16px;
+  color: white;
 }
 .live-search-form .live-search-button {
-  background: #FFFFFF;
+  background: white;
   border: 0px;
 }
 .live-search-form .live-search-button :not(.disabled):hover {
-  background: #FFFFFF;
+  background: white;
   border: 0px;
 }
 
 .site-header-right {
+  height: 56px;
+  height: 5.6rem;
+  align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 54px;
-  align-items: center;
 }
 .site-header-right .site-header-account--button, .site-header-right .site-header-cart--button {
+  padding: 12px;
+  padding: 1.2rem;
   display: block;
   position: relative;
   right: unset;
   text-align: center;
-  padding: 10px;
 }
 .site-header-right .site-header-account .site-header-account-icon--svg, .site-header-right .site-header-account .site-header-cart-icon--svg, .site-header-right .site-header-cart .site-header-account-icon--svg, .site-header-right .site-header-cart .site-header-cart-icon--svg {
   fill: #FFFFFF;
 }
 .site-header-right .site-header-cart {
+  margin-top: unset;
   position: unset;
   width: unset;
-  margin-top: unset;
 }
 
 .grid--product #product__header {

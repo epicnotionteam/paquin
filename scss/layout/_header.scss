@@ -14,6 +14,11 @@
     // Primary header content container
     .site-header-main {
         background-color: color( 'steel', '1' );
+        // Grid structure
+        .site-header-main-content {
+            display: grid;
+            grid-template-columns: max-content 1fr max-content;
+        }
         // Cart marker
         .site-header-cart--count::after {
             background-color: color( 'action', '1' );

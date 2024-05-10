@@ -1323,6 +1323,10 @@ h5,
 .site-header .site-header-main {
   background-color: #212224;
 }
+.site-header .site-header-main .site-header-main-content {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+}
 .site-header .site-header-main .site-header-cart--count::after {
   background-color: #0F7F92;
 }

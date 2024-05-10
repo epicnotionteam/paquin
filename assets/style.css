@@ -1792,6 +1792,8 @@ ul.list--link-arrow li::before {
   font-weight: 400;
 }
 .site-navigation > .navmenu .navmenu-depth-2 {
+  margin-left: -16px;
+  margin-left: -1.6rem;
   padding: 12px 0;
   padding: 1.2rem 0;
 }
@@ -1805,11 +1807,11 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
 }
 
-.site-navigation .navmenu:hover {
-  background-color: red;
-}
-.site-navigation .navmenu:hover > li:hover a {
+.site-navigation .navmenu:hover > li > a {
   opacity: 0.56 !important;
+}
+.site-navigation .navmenu:hover > li:hover > a {
+  opacity: 1 !important;
 }
 
 .site-navigation .site-navigation__secondary-menu li {

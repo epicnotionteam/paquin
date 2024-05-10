@@ -40,7 +40,10 @@
     }
     // Child dropdown container [Level 2]
     .navmenu-depth-2 {
-        @include rem( padding, 12px 0 );
+        @include rem(( 
+            margin-left: -16px,
+            padding: 12px 0 
+        ));
         // Link
         & > li > a {
             @include rem( padding, 2px spacing(4) );
@@ -54,9 +57,11 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
-        background-color: red;
-        & > li:hover a {
+        & > li > a {
             opacity: 0.56 !important;
+        }
+        & > li:hover > a {
+            opacity: 1 !important;
         }
     }
 }

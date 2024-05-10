@@ -1805,6 +1805,9 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
 }
 
+.site-navigation .navmenu:hover {
+  background-color: red;
+}
 .site-navigation .navmenu:hover > li:hover a {
   opacity: 0.56 !important;
 }

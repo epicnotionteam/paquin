@@ -54,6 +54,7 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
+        background-color: red;
         & > li:hover a {
             opacity: 0.56 !important;
         }

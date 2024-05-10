@@ -1811,7 +1811,7 @@ ul.list--link-arrow li::before {
 }
 .site-navigation .navmenu .navmenu-depth-1:hover > li:hover,
 .site-navigation .navmenu .navmenu-depth-2:hover > li:hover {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .site-navigation .site-navigation__secondary-menu li {

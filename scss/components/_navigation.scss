@@ -51,15 +51,11 @@
 
 
 // State management
-.site-navigation .navmenu {
+.site-navigation {
     // Navigation [:Hover]
-    &.navmenu-depth-1:hover,
-    &.navmenu-depth-2:hover {
-        & > li {
+    .navmenu:hover {
+        & > li:hover a {
             opacity: 0.56 !important;
-            &:hover {
-                opacity: 1 !important;
-            }
         }
     }
 }

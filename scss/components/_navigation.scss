@@ -58,7 +58,7 @@
     // Navigation [:Hover]
     .navmenu:hover {
         & > li,
-        & > li a {
+        & > li > a {
             opacity: 0.56 !important;
         }
         & > li:hover,

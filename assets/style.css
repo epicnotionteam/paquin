@@ -1811,10 +1811,10 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation .navmenu:hover > li {
-  opacity: 0.56 !important;
+  opacity: 0.56;
 }
 .site-navigation .navmenu:hover > li:hover {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .site-navigation .site-navigation__secondary-menu li {

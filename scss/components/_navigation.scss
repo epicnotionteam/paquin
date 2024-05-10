@@ -11,25 +11,24 @@
 .site-navigation .navmenu {
     @include rem( column-gap, spacing(3) );
     margin: 0;
-    // Item container
-    li {
+    // Parent item container
+    & > li {
         @include font-size( 'base' );
         letter-spacing: -0.16px;
         padding: 0;
         // Empty item wrapper
         summary {
+            @include rem( line-height, 56px );
             padding: 0;
             // Link
             a {
-                @include rem( line-height, 56px );
                 padding: 0;
             }
         }
     }
-    // Link
-    a {
+    // Parent Links
+    & > li > a {
         @include rem( line-height, 56px );
-        line-height: 2;
         padding: 0;
     }
 }

@@ -79,7 +79,7 @@
         "enable_live_search_images": true,
         "quick_links": "",
         "menu": "main-menu",
-        "secondary_menu": "",
+        "secondary_menu": "actions-header",
         "small_promo_heading": "",
         "small_promo_text": "",
         "small_promo_text_mobile": "",

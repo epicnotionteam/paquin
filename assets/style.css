@@ -1805,13 +1805,11 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
 }
 
-.site-navigation .navmenu .navmenu-depth-1:hover > li,
-.site-navigation .navmenu .navmenu-depth-2:hover > li {
-  opacity: 0.56;
+.site-navigation .navmenu.navmenu-depth-1:hover > li, .site-navigation .navmenu.navmenu-depth-2:hover > li {
+  opacity: 0.56 !important;
 }
-.site-navigation .navmenu .navmenu-depth-1:hover > li:hover,
-.site-navigation .navmenu .navmenu-depth-2:hover > li:hover {
-  opacity: 1;
+.site-navigation .navmenu.navmenu-depth-1:hover > li:hover, .site-navigation .navmenu.navmenu-depth-2:hover > li:hover {
+  opacity: 1 !important;
 }
 
 .site-navigation .site-navigation__secondary-menu li {

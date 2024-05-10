@@ -1807,10 +1807,10 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
 }
 
-.site-navigation .navmenu:hover > li > a {
+.site-navigation .navmenu:hover > li, .site-navigation .navmenu:hover > li a {
   opacity: 0.56 !important;
 }
-.site-navigation .navmenu:hover > li:hover > a {
+.site-navigation .navmenu:hover > li:hover, .site-navigation .navmenu:hover > li:hover > a {
   opacity: 1 !important;
 }
 

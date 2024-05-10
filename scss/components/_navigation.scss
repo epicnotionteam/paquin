@@ -57,9 +57,11 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
-        & > li > a {
+        & > li,
+        & > li a {
             opacity: 0.56 !important;
         }
+        & > li:hover,
         & > li:hover > a {
             opacity: 1 !important;
         }

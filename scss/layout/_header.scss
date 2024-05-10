@@ -21,7 +21,10 @@
         }
         // Grid structure
         .site-header-main-content {
-            @include rem( column-gap, spacing(4) );
+            @include rem(( 
+                column-gap: spacing(4),
+                padding: 20px 0 0
+            ));
             display: grid;
             grid-template-columns: max-content 1fr max-content;
             margin: 0;
@@ -68,7 +71,6 @@
         }
         // Actions container
         .site-header-right {
-            @include rem( height, 56px );
             align-items: center;
             display: grid;
             grid-template-columns: 1fr 1fr;

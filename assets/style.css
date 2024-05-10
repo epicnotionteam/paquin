@@ -1333,6 +1333,8 @@ h5,
 .site-header .site-header-main .site-header-main-content {
   column-gap: 24px;
   column-gap: 2.4rem;
+  padding: 20px 0 0;
+  padding: 2rem 0 0;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   margin: 0;
@@ -1384,8 +1386,6 @@ h5,
   border: 0px;
 }
 .site-header .site-header-main .site-header-right {
-  height: 56px;
-  height: 5.6rem;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;

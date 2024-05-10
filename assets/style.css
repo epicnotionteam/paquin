@@ -1797,8 +1797,9 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
-.site-navigation__secondary-menu {
+.site-navigation__secondary-menu li {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
+  opacity: 1;
 }

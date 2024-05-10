@@ -57,5 +57,9 @@
 // --------------------------------------------------
 
 .site-navigation__secondary-menu {
-    @include font-size( 'xsmall' );
+    // Item
+    li {
+        @include font-size( 'xsmall' );
+        opacity: 1;
+    }
 }

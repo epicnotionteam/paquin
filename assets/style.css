@@ -1760,8 +1760,6 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation > .navmenu {
-  column-gap: 24px;
-  column-gap: 2.4rem;
   margin: 0;
 }
 .site-navigation > .navmenu > li {
@@ -1777,7 +1775,8 @@ ul.list--link-arrow li::before {
 .site-navigation > .navmenu > li summary {
   line-height: 64px;
   line-height: 6.4rem;
-  padding: 0;
+  padding: 0 12px;
+  padding: 0 1.2rem;
 }
 .site-navigation > .navmenu > li summary a {
   padding: 0;
@@ -1786,8 +1785,9 @@ ul.list--link-arrow li::before {
 .site-navigation > .navmenu > li > a {
   line-height: 64px;
   line-height: 6.4rem;
+  padding: 0 12px;
+  padding: 0 1.2rem;
   font-weight: 400;
-  padding: 0;
 }
 
 .site-navigation > .navmenu:hover > li {

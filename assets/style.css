@@ -1811,7 +1811,7 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {
-  opacity: 0.16;
+  opacity: 0.72;
 }
 .site-navigation > .navmenu:hover > li:hover > a, .site-navigation > .navmenu:hover > li:hover > details {
   opacity: 1;

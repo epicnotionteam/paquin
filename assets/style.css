@@ -1760,11 +1760,12 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation .navmenu li {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+  letter-spacing: -0.16px;
   padding: 0;
 }
 .site-navigation .navmenu li summary {

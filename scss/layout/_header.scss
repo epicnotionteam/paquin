@@ -21,6 +21,7 @@
         }
         // Grid structure
         .site-header-main-content {
+            @include rem( column-gap, spacing(4) );
             display: grid;
             grid-template-columns: max-content 1fr max-content;
             margin: 0;
@@ -102,5 +103,22 @@
     // Navigation container
     .site-navigation {
         background-color: color( 'steel', '1' );
+    }
+}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    .site-header {
+        .site-header-main {
+            &.site-header--full-width {
+                .site-header-main-content {
+                    // Logo container
+                    .site-header-logo {
+                        @include rem( margin-right, spacing(3) );
+                    }
+                }
+            }
+        }
     }
 }

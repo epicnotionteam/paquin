@@ -1331,6 +1331,8 @@ h5,
   padding: 0;
 }
 .site-header .site-header-main .site-header-main-content {
+  column-gap: 24px;
+  column-gap: 2.4rem;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   margin: 0;
@@ -1414,6 +1416,12 @@ h5,
   background-color: #212224;
 }
 
+@media (min-width: 64em) {
+  .site-header .site-header-main.site-header--full-width .site-header-main-content .site-header-logo {
+    margin-right: 16px;
+    margin-right: 1.6rem;
+  }
+}
 .grid--product #product__header {
   row-gap: 12px;
   row-gap: 1.2rem;

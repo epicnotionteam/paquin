@@ -16,6 +16,7 @@
         @include font-size( 'base' );
         letter-spacing: -0.16px;
         padding: 0;
+        transition: opacity 0.24s ease-out;
         // Empty item wrapper
         summary {
             @include rem(( 
@@ -26,7 +27,7 @@
             a {
                 padding: 0;
                 font-weight: font-weight( 'base' );
-                transition: opacity 0.24s ease-out;
+                opacity: 1;
             }
         }
     }
@@ -36,8 +37,8 @@
             line-height: 64px,
             padding: 0 12px
         ));
+        opacity: 1;
         font-weight: font-weight( 'base' );
-        transition: opacity 0.24s ease-out;
     }
     // Child dropdown container [Level 2]
     .navmenu-depth-2 {
@@ -49,6 +50,7 @@
         & > li > a {
             @include rem( padding, 2px spacing(4) );
             @include font-size( 'small' );
+            opacity: 1;
         }
     }
 }
@@ -58,10 +60,10 @@
 .site-navigation {
     // Navigation [:Hover]
     .navmenu:hover {
-        & > li a {
+        & > li {
             opacity: 0.56 !important;
         }
-        & > li:hover a {
+        & > li:hover {
             opacity: 1 !important;
         }
     }

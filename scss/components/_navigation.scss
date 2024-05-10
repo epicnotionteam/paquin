@@ -40,7 +40,7 @@
 // State management
 // Navigation [:Hover]
 .site-navigation .navmenu:hover {
-    li {
+    & > li {
         opacity: 0.8;
         &:hover {
             opacity: 1;
@@ -51,3 +51,11 @@
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {}
+
+
+// Navigation [Secondary, Desktop]
+// --------------------------------------------------
+
+.site-navigation__secondary-menu {
+    @include font-size( 'xsmall' );
+}

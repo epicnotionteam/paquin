@@ -1790,9 +1790,15 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 
-.site-navigation .navmenu:hover li {
+.site-navigation .navmenu:hover > li {
   opacity: 0.8;
 }
-.site-navigation .navmenu:hover li:hover {
+.site-navigation .navmenu:hover > li:hover {
   opacity: 1;
+}
+
+.site-navigation__secondary-menu {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
 }

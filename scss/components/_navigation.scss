@@ -11,6 +11,7 @@
 .site-navigation .navmenu {
     // Item container
     li {
+        @include font-size( 'small' );
         padding: 0;
         // Empty item wrapper
         summary {

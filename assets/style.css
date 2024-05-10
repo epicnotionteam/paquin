@@ -1760,6 +1760,11 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation .navmenu li {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   padding: 0;
 }
 .site-navigation .navmenu li summary {

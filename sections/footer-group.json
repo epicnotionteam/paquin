@@ -19,7 +19,7 @@
         "menu_2": {
           "type": "menu",
           "settings": {
-            "menu": "main-menu"
+            "menu": "footer-store"
           }
         },
         "menu_3": {

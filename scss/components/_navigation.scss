@@ -40,10 +40,10 @@
     }
     // Child dropdown container [Level 2]
     .navmenu-depth-2 {
-        padding: 0;
+        @include rem( padding, spacing(2) 0 );
         // Link
         & > li > a {
-            @include rem( padding, 0 spacing(4) );
+            @include rem( padding, 2px spacing(4) );
             @include font-size( 'small' );
         }
     }

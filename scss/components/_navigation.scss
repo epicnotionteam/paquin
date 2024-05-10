@@ -94,7 +94,7 @@
 
 .site-navigation .site-navigation__secondary-menu {
     // Item
-    li {
+    li.navmenu-item {
         @include font-size( 'xsmall' );
         opacity: 1;
         // Link
@@ -108,7 +108,7 @@
 // State management
 .site-navigation .site-navigation__secondary-menu {
     // Link [:Hover]
-    li:hover {
+    li.navmenu-item:hover {
         opacity: 1;
     }
 }

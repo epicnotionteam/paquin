@@ -1827,16 +1827,16 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
-.site-navigation .site-navigation__secondary-menu li {
+.site-navigation .site-navigation__secondary-menu li.navmenu-item {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
   opacity: 1;
 }
-.site-navigation .site-navigation__secondary-menu li a {
+.site-navigation .site-navigation__secondary-menu li.navmenu-item a {
   padding: 0;
 }
 
-.site-navigation .site-navigation__secondary-menu li:hover {
+.site-navigation .site-navigation__secondary-menu li.navmenu-item:hover {
   opacity: 1;
 }

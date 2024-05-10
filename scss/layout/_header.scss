@@ -18,6 +18,8 @@
         .site-header-main-content {
             display: grid;
             grid-template-columns: max-content 1fr max-content;
+            margin: 0;
+            padding: 0;
         }
         // Cart marker
         .site-header-cart--count::after {
@@ -36,7 +38,7 @@
 
 // Logo container
 .site-header-logo {
-    // @include rem( margin, 0 spacing(6) 0 0 );
+    margin: 0;
     // Image
     .site-logo {
         @include rem( max-width, 128px );
@@ -50,27 +52,31 @@
 // --------------------------------------------------
 
 // Search container
-.live-search-form {
-    border-radius: 0;
-    border: 0 none;
-    box-shadow: none;
-    
-    .live-search-form-field {
-        @include rem( padding, spacing(3) );
-        @include font-size( 'small' );
-    }
-    .live-search-filter-wrapper .live-search-filter-label {
-        @include rem( padding, spacing(3) ); 
-        @include font-size( 'small' );
-        background: color( 'steel', '3' );
-        color: white;
-    }
-    .live-search-button {
-        background: white;
-        border: 0px;
-        :not(.disabled):hover {
+.live-search {
+    margin: 0;
+    // Form
+    .live-search-form {
+        border-radius: 0;
+        border: 0 none;
+        box-shadow: none;
+        
+        .live-search-form-field {
+            @include rem( padding, spacing(3) );
+            @include font-size( 'small' );
+        }
+        .live-search-filter-wrapper .live-search-filter-label {
+            @include rem( padding, spacing(3) ); 
+            @include font-size( 'small' );
+            background: color( 'steel', '3' );
+            color: white;
+        }
+        .live-search-button {
             background: white;
             border: 0px;
+            :not(.disabled):hover {
+                background: white;
+                border: 0px;
+            }
         }
     }
 }

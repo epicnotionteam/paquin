@@ -1326,6 +1326,8 @@ h5,
 .site-header .site-header-main .site-header-main-content {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
+  margin: 0;
+  padding: 0;
 }
 .site-header .site-header-main .site-header-cart--count::after {
   background-color: #0F7F92;
@@ -1334,6 +1336,9 @@ h5,
   background-color: #212224;
 }
 
+.site-header-logo {
+  margin: 0;
+}
 .site-header-logo .site-logo {
   max-width: 128px;
   max-width: 12.8rem;
@@ -1341,12 +1346,15 @@ h5,
   width: 100%;
 }
 
-.live-search-form {
+.live-search {
+  margin: 0;
+}
+.live-search .live-search-form {
   border-radius: 0;
   border: 0 none;
   box-shadow: none;
 }
-.live-search-form .live-search-form-field {
+.live-search .live-search-form .live-search-form-field {
   padding: 16px;
   padding: 1.6rem;
   font-size: 15px;
@@ -1355,7 +1363,7 @@ h5,
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
 }
-.live-search-form .live-search-filter-wrapper .live-search-filter-label {
+.live-search .live-search-form .live-search-filter-wrapper .live-search-filter-label {
   padding: 16px;
   padding: 1.6rem;
   font-size: 15px;
@@ -1366,11 +1374,11 @@ h5,
   background: #30373A;
   color: white;
 }
-.live-search-form .live-search-button {
+.live-search .live-search-form .live-search-button {
   background: white;
   border: 0px;
 }
-.live-search-form .live-search-button :not(.disabled):hover {
+.live-search .live-search-form .live-search-button :not(.disabled):hover {
   background: white;
   border: 0px;
 }

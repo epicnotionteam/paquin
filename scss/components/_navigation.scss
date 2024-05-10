@@ -9,7 +9,7 @@
 // --------------------------------------------------
 
 .site-navigation > .navmenu {
-    @include rem(  transform, translateX( -12px ) );
+    @include rem( transform, translateX( -12px ) );
     margin: 0;
     // Parent item container
     & > li {
@@ -76,7 +76,7 @@
     // Child dropdown container [Level 2, :Hover]
     .navmenu-depth-2:hover {
         & > li > a {
-            opacity: 0.48;
+            opacity: 0.56;
         }
         & > li:hover > a {
             opacity: 1;
@@ -96,6 +96,19 @@
     // Item
     li {
         @include font-size( 'xsmall' );
+        opacity: 1;
+        // Link
+        a {
+            padding: 0;
+        }
+    }
+}
+
+
+// State management
+.site-navigation .site-navigation__secondary-menu {
+    // Link [:Hover]
+    li > a:hover {
         opacity: 1;
     }
 }

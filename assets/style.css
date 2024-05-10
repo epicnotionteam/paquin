@@ -1777,10 +1777,13 @@ ul.list--link-arrow li::before {
   padding: 0;
 }
 .site-navigation .navmenu li summary a {
-  line-height: 2;
+  line-height: 56px;
+  line-height: 5.6rem;
   padding: 0;
 }
 .site-navigation .navmenu a {
+  line-height: 56px;
+  line-height: 5.6rem;
   line-height: 2;
   padding: 0;
 }

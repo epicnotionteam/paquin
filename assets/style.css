@@ -1813,6 +1813,9 @@ ul.list--link-arrow li::before {
 .site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {
   opacity: 0.16;
 }
+.site-navigation > .navmenu:hover > li:hover > a, .site-navigation > .navmenu:hover > li:hover > details {
+  opacity: 0.16;
+}
 
 .site-navigation .site-navigation__secondary-menu li {
   font-size: 13px;

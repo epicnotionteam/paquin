@@ -38,6 +38,14 @@
         ));
         font-weight: font-weight( 'base' );
     }
+    // Child dropdown container [Level 2]
+    .navmenu-depth-2 {
+        padding: 0;
+        // Link
+        & > li > a {
+            @include font-size( 'small' );
+        }
+    }
 }
 
 

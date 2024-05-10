@@ -1791,6 +1791,16 @@ ul.list--link-arrow li::before {
   padding: 0 1.2rem;
   font-weight: 400;
 }
+.site-navigation > .navmenu .navmenu-depth-2 {
+  padding: 0;
+}
+.site-navigation > .navmenu .navmenu-depth-2 > li > a {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
 
 .site-navigation > .navmenu:hover > li {
   opacity: 0.64;

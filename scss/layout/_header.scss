@@ -10,9 +10,15 @@
 
 .site-header {
     background-color: color( 'steel', '1' );
+    padding: 0 4vw;
     // Primary header content container
     .site-header-main {
         background-color: color( 'steel', '1' );
+        &.site-header--full-width {
+            @include rem( max-width, 1590px );
+            margin: 0 auto;
+            padding: 0;
+        }
         // Grid structure
         .site-header-main-content {
             display: grid;

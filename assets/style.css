@@ -1319,9 +1319,16 @@ h5,
 
 .site-header {
   background-color: #212224;
+  padding: 0 4vw;
 }
 .site-header .site-header-main {
   background-color: #212224;
+}
+.site-header .site-header-main.site-header--full-width {
+  max-width: 1590px;
+  max-width: 159rem;
+  margin: 0 auto;
+  padding: 0;
 }
 .site-header .site-header-main .site-header-main-content {
   display: grid;

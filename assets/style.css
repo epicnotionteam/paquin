@@ -1471,11 +1471,15 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 1.2rem auto 0;
   max-width: 800px;
   max-width: 80rem;
+  text-align: center;
   width: 100%;
 }
 .template-collection .productgrid--masthead .collection--description p {
-  text-align: center;
   margin: 0;
+}
+.template-collection .productgrid--masthead .collection--description .link--arrow-down {
+  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 
 .template-collection .productgrid--items {

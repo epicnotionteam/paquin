@@ -51,11 +51,15 @@
             margin: 12px auto 0, 
             max-width: 800px 
         ));
+        text-align: center;
         width: 100%;
         // Content
         p {
-            text-align: center;
             margin: 0;
+        }
+        // 'Learn more' link
+        .link--arrow-down {
+            @include rem( margin-top, spacing(3) );
         }
     }
 }

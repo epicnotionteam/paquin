@@ -1485,7 +1485,8 @@ footer .site-footer-wrapper .site-footer-item {
   display: grid;
 }
 .template-collection .productgrid--items .productgrid--item {
-  width: 100%;
+  padding: 0;
+  width: 100% !important;
 }
 
 @media (min-width: 64em) {

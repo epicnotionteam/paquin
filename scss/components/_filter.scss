@@ -29,10 +29,9 @@
     .collection-filters__filter {
         @include rem( margin-top, 12px );
         .collection-filters__filter-list-item {
-            @include font-size( 'small' );
             padding: 0;
             .collection-filters__filter-link {
-                @include font-size( 'small' );
+                @include font-size( 'xsmall' );
                 font-weight: font-weight( 'base' );
                 padding: 0;
                 margin: 0;

@@ -1486,6 +1486,7 @@ footer .site-footer-wrapper .site-footer-item {
 }
 .template-collection .productgrid--items .productgrid--item {
   padding: 0;
+  transition: box-shadow 0.16s ease-out;
   width: 100% !important;
 }
 .template-collection .productgrid--items .productgrid--item .productitem {
@@ -1517,6 +1518,10 @@ footer .site-footer-wrapper .site-footer-item {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.template-collection .productgrid--items .productgrid--item:hover {
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24);
+}
+
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

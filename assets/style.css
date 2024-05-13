@@ -2015,22 +2015,16 @@ ul.list--link-arrow li::before {
   line-height: 21px;
   margin: 16px auto;
   margin: 1.6rem auto;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
   line-height: 1.5;
   padding: 0;
 }
 .breadcrumbs-container > * {
-  white-space: nowrap;
-  margin-right: 0.5rem;
+  white-space: normal;
 }
 .breadcrumbs-container a {
   font-weight: 600;
-}
-.breadcrumbs-container::after {
-  content: "›";
-  margin-left: 0.5rem;
 }
 
 .breadcrumbs-container a:hover {

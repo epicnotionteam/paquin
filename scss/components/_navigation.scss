@@ -152,25 +152,19 @@
     @include font-size('xsmall');
     @include rem(margin, spacing(3) auto);
     color: color('type', '3');
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    align-items: center; // Ensures vertical alignment of items
     line-height: 1.5;
     padding: 0;
     // Child element (link or span)
     & > * {
-        white-space: nowrap; // Prevents individual items from wrapping
-        margin-right: 0.5rem; // Adjust margin as needed
+        white-space: normal;
+        // margin-right: 8px;
     }
     // Link
     a {
         color: color('type', '1');
         font-weight: font-weight('bold');
-    }
-    // Chevron icon
-    &::after {
-        content: '›';
-        margin-left: 0.5rem; // Adjust spacing before the chevron
     }
 }
 

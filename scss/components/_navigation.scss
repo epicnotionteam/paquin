@@ -142,3 +142,13 @@
         text-decoration: underline;
     }
 }
+
+
+// Navigation [Breadcrumbs]
+// --------------------------------------------------
+
+// Component container
+.breadcrumbs-container {
+    @include font-size( 'small' );
+    color: color( 'type', '3' );
+}

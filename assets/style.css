@@ -1308,8 +1308,8 @@ h5,
 }
 
 .wrap--max {
-  max-width: 1600px;
-  max-width: 160rem;
+  max-width: 1590px;
+  max-width: 159rem;
   width: 100%;
 }
 
@@ -1436,9 +1436,10 @@ footer .site-footer-wrapper .site-footer-item {
   }
 }
 .collection--section .productgrid--outer {
-  margin: 0;
-  max-width: none;
-  padding: 0;
+  max-width: 1590px;
+  max-width: 159rem;
+  margin: 0 auto;
+  padding: 0 4vw;
   width: 100%;
 }
 

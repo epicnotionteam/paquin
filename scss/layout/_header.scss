@@ -15,7 +15,7 @@
     .site-header-main {
         background-color: color( 'steel', '1' );
         &.site-header--full-width {
-            @include rem( max-width, 1590px );
+            @include rem( max-width, wrap( 'max' ) );
             margin: 0 auto;
             padding: 0;
         }
@@ -103,7 +103,7 @@
     }
     // Navigation container
     #site-header-nav {
-        @include rem( max-width, 1590px );
+        @include rem( max-width, wrap( 'max' ) );
         margin: 0 auto;
         .site-navigation {
             background-color: color( 'steel', '1' );

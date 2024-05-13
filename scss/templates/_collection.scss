@@ -10,9 +10,9 @@
 
 // Grid container
 .collection--section .productgrid--outer {
-    margin: 0;
-    max-width: none;
-    padding: 0;
+    @include rem( max-width, wrap( 'max' ) );
+    margin: 0 auto;
+    padding: 0 4vw;
     width: 100%;
 }
 

@@ -149,6 +149,6 @@
 
 // Component container
 .breadcrumbs-container {
-    @include font-size( 'small' );
+    @include font-size( 'xsmall' );
     color: color( 'type', '3' );
 }

@@ -1477,6 +1477,19 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0;
 }
 
+.template-collection .productgrid--items {
+  column-gap: 24px;
+  column-gap: 2.4rem;
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
+
+@media (min-width: 64em) {
+  .template-collection .productgrid--items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

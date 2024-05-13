@@ -31,7 +31,7 @@
 
 
 // Section [Page Header]
-// Contains collection title description
+// Contains collection title & description
 // --------------------------------------------------
 
 // Section container
@@ -65,6 +65,30 @@
 @include mq( $from: medium ) {
 
     .template-collection .productgrid--masthead {}
+
+}
+
+
+// Section [Page Header]
+// Contains collection title & description
+// --------------------------------------------------
+
+// Section container
+.template-collection .productgrid--items {
+    @include rem((
+        column-gap: spacing(4),
+        row-gap: spacing(5)
+    ));
+    display: grid;
+}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+
+    .template-collection .productgrid--items {
+        grid-template-columns: repeat( 4, 1fr );
+    }
 
 }
 

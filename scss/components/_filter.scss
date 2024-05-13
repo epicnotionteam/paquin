@@ -9,12 +9,16 @@
 // --------------------------------------------------
 
 // Single filter button
-.collection-filters__filter-group-heading.productgrid--sidebar-button {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    // Filter label
-    .collection-filters__filter-title {
-        @extend %h5;
+.collection-filters__filter-group {
+    @include rem( padding, 12px 0 );
+    .collection-filters__filter-group-heading.productgrid--sidebar-button {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        // Filter label
+        .collection-filters__filter-title {
+            @extend %h5;
+            margin: 0;
+        }
     }
 }

@@ -1262,7 +1262,7 @@ h4,
 
 h5,
 .h5,
-.collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
+.collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
 .button--base,
 .product-form--atc-button {
   font-size: 14px;
@@ -1713,11 +1713,19 @@ footer .site-footer-wrapper .site-footer-item {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-.collection-filters__filter-group-heading.productgrid--sidebar-button {
+.collection-filters__filter-group {
+  padding: 12px 0;
+  padding: 1.2rem 0;
+}
+.collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content;
 }
+.collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title {
+  margin: 0;
+}
+
 label {
   font-size: 15px;
   font-size: 1.5rem;

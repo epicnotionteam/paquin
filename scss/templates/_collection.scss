@@ -81,6 +81,17 @@
             border: 0 none;
             box-shadow: none;
             padding: 0;
+            // Title
+            .productitem--title {
+                @include font-size( 'base' );
+                font-family: font-family( 'base' );
+                font-weight: font-weight( 'bold' );
+                margin: 0;
+            }
+            // Price
+            .price.productitem__price {
+                margin: 0;
+            }
         }
     }
 }

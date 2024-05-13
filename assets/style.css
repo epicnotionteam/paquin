@@ -1493,6 +1493,19 @@ footer .site-footer-wrapper .site-footer-item {
   box-shadow: none;
   padding: 0;
 }
+.template-collection .productgrid--items .productgrid--item .productitem .productitem--title {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+  font-family: "Paquin Sans Text", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.template-collection .productgrid--items .productgrid--item .productitem .price.productitem__price {
+  margin: 0;
+}
 
 @media (min-width: 64em) {
   .template-collection .productgrid--items {

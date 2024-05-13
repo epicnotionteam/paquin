@@ -27,11 +27,13 @@
     }
     // Filter option container
     .collection-filters__filter {
-        @include rem((
-            margin-top: 12px,
-            row-gap: spacing(2)
-        ));
-        display: grid;
+        &.filter-group-active {
+            @include rem((
+                margin-top: 12px,
+                row-gap: spacing(2)
+            ));
+            display: grid;
+        }
         .collection-filters__filter-list-item {
             margin: 0;
             padding: 0;

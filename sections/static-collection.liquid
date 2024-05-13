@@ -143,11 +143,10 @@
       {% if collection.description != blank %}
         <div class="collection--description rte" data-collection-description>
           {{ collection.description }}
+          {% if collection.metafields.custom.collection_information %}
+            <a href="#section--collection-information link--arrow-down">Learn more</a>
+          {% endif %}
         </div>
-      {% endif %}
-
-      {% if collection.metafields.custom.collection_information %}
-        <a href="#section--collection-information link--arrow-down">Learn more</a>
       {% endif %}
 
       {% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}

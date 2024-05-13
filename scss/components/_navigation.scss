@@ -152,14 +152,11 @@
     @include font-size('xsmall');
     @include rem(margin, spacing(3) auto);
     color: color('type', '3');
-    // display: flex;
-    flex-wrap: wrap;
     line-height: 1.5;
     padding: 0;
     // Child element (link or span)
     & > * {
         white-space: normal;
-        // margin-right: 8px;
     }
     // Link
     a {
@@ -167,7 +164,6 @@
         font-weight: font-weight('bold');
     }
 }
-
 
 
 // State management

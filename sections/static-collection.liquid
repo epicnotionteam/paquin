@@ -146,6 +146,42 @@
         </div>
       {% endif %}
 
+      {% comment %} {% if collection.metafields.custom.collection_information != blank %}
+        <div class="collection__link--infromation">
+          {{ collection.description }}
+        </div>
+      {% endif %} {% endcomment %}
+
+
+
+      {% assign collection_info = collection.metafields.custom.collection_information %}
+      {% if collection_info %}
+        <section class="collection-information">
+          <div class="container">
+            {% if collection_info.heading_small %}
+              <h2 class="heading-small">{{ collection_info.heading_small }}</h2>
+            {% endif %}
+            
+            {% if collection_info.heading_large %}
+              <h1 class="heading-large">{{ collection_info.heading_large }}</h1>
+            {% endif %}
+            
+            {% if collection_info.subheading %}
+              <h3 class="subheading">{{ collection_info.subheading }}</h3>
+            {% endif %}
+            
+            {% if collection_info.content %}
+              <div class="content">{{ collection_info.content }}</div>
+            {% endif %}
+          </div>
+        </section>
+      {% endif %}
+
+
+
+
+
+
       {% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
         {%
           render 'subcollections-collection',

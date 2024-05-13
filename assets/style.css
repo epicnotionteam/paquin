@@ -1713,6 +1713,11 @@ footer .site-footer-wrapper .site-footer-item {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+.collection-filters__filter-group-heading.productgrid--sidebar-button {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
 label {
   font-size: 15px;
   font-size: 1.5rem;

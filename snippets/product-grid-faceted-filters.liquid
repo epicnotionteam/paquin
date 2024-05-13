@@ -5,9 +5,11 @@
 
 {%- assign total_active_values = 0 -%}
 
-<h2 class="productgrid--sidebar-title h5">
+{% comment %} 
+<h2 class="productgrid--sidebar-title">
   {{ 'product_grid.filters.title_count' | t: count: 0 }}
-</h2>
+</h2> 
+{% endcomment %}
 
 {% assign active_filters = false %}
 {% for filter in context.filters %}

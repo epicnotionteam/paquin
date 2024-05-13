@@ -1313,8 +1313,15 @@ h5,
   width: 100%;
 }
 
-.site-footer-wrapper {
+footer .site-footer-wrapper {
   background-color: #212224;
+  padding: 0 4vw;
+}
+footer .site-footer-wrapper .site-footer-item {
+  margin: 0 auto;
+  max-width: none;
+  padding: 0;
+  width: 100%;
 }
 
 .site-header {

@@ -1436,7 +1436,7 @@ footer .site-footer-wrapper .site-footer-item {
   }
 }
 .template-collection .breadcrumbs-container {
-  justify-content: center;
+  text-align: center;
 }
 
 .grid--product #product__header {

@@ -1852,3 +1852,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
   font-weight: 400;
 }
+
+.site-footer-block-menu .navmenu-item a:hover {
+  text-decoration: underline;
+}

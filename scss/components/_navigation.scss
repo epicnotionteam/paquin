@@ -8,6 +8,7 @@
 // Navigation [Primary, Desktop]
 // --------------------------------------------------
 
+// Component container
 .site-navigation > .navmenu {
     @include rem( transform, translateX( -12px ) );
     margin: 0;
@@ -92,6 +93,7 @@
 // Navigation [Secondary, Desktop]
 // --------------------------------------------------
 
+// Component container
 .site-navigation .site-navigation__secondary-menu {
     // Item
     li.navmenu-item {
@@ -117,6 +119,7 @@
 // Navigation [Footer]
 // --------------------------------------------------
 
+// Component container
 .site-footer-block-menu {
     // Item container
     .navmenu-item:not(:first-child) {
@@ -126,5 +129,14 @@
             @include font-size( 'small' );
             font-weight: font-weight( 'base' );
         }
+    }
+}
+
+
+// State management
+.site-footer-block-menu {
+    // Link [:Hover]
+    .navmenu-item a:hover {
+        text-decoration: underline;
     }
 }

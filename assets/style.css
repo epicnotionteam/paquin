@@ -1741,6 +1741,12 @@ footer .site-footer-wrapper .site-footer-item {
   padding: 0;
 }
 .productgrid--sidebar .collection-filters__filter .collection-filters__filter-list-item .collection-filters__filter-link {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  font-weight: 400;
   padding: 0;
   margin: 0;
 }

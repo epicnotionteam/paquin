@@ -32,6 +32,8 @@
             @include font-size( 'small' );
             padding: 0;
             .collection-filters__filter-link {
+                @include font-size( 'small' );
+                font-weight: font-weight( 'base' );
                 padding: 0;
                 margin: 0;
             }

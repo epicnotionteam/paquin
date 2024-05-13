@@ -102,9 +102,13 @@
         }
     }
     // Navigation container
-    .site-navigation {
-        background-color: color( 'steel', '1' );
-        padding: 0;
+    .site-header-nav {
+        @include rem( max-width, 1590px );
+        .site-navigation {
+            background-color: color( 'steel', '1' );
+            margin: 0 auto;
+            padding: 0;
+        }
     }
 }
 

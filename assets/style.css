@@ -1419,8 +1419,13 @@ footer .site-footer-wrapper .site-footer-item {
 .site-header .site-header-main .site-header-right .site-header-cart .site-header-cart--count::after {
   background-color: #0F7F92;
 }
-.site-header .site-navigation {
+.site-header .site-header-nav {
+  max-width: 1590px;
+  max-width: 159rem;
+}
+.site-header .site-header-nav .site-navigation {
   background-color: #212224;
+  margin: 0 auto;
   padding: 0;
 }
 

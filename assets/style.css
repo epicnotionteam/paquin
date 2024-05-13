@@ -1437,6 +1437,7 @@ footer .site-footer-wrapper .site-footer-item {
 }
 .template-collection .breadcrumbs-container {
   text-align: center;
+  width: 100%;
 }
 
 .grid--product #product__header {

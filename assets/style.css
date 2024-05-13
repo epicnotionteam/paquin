@@ -1876,8 +1876,14 @@ ul.list--link-arrow li::before {
   line-height: 21px;
   margin: 16px auto;
   margin: 1.6rem auto;
+  align-items: center;
+  display: flex;
   padding: 0;
 }
 .breadcrumbs-container a {
   font-weight: 600;
+}
+
+.breadcrumbs-container a:hover {
+  text-decoration: underline;
 }

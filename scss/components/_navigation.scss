@@ -151,11 +151,22 @@
 .breadcrumbs-container {
     @include font-size( 'xsmall' );
     @include rem( margin, spacing(3) auto );
+    align-items: center;
     color: color( 'type', '3' );
+    display: flex;
     padding: 0;
     // Link
     a {
         color: color( 'type', '1' );
         font-weight: font-weight( 'bold' );
+    }
+}
+
+
+// State management
+.breadcrumbs-container {
+    // Link [:Hover]
+    a:hover {
+        text-decoration: underline;
     }
 }

@@ -1435,6 +1435,20 @@ footer .site-footer-wrapper .site-footer-item {
     margin-right: 1.6rem;
   }
 }
+.template-collection .productgrid--masthead .collection--title {
+  max-width: 800px;
+  max-width: 80rem;
+  text-align: center;
+  margin: 0;
+}
+.template-collection .productgrid--masthead .collection__description {
+  margin: 32px 0 0;
+  margin: 3.2rem 0 0;
+  max-width: 800px;
+  max-width: 80rem;
+  text-align: center;
+}
+
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

@@ -82,12 +82,17 @@
             border: 0 none;
             box-shadow: none;
             padding: 0;
+            // Image
+            .productitem--image {
+                @include rem( margin-bottom, 12px );
+                border: $border--base;
+            }
             // Title
             .productitem--title {
+                @include rem( margin-bottom, 2px );
                 @include font-size( 'base' );
                 font-family: font-family( 'base' );
                 font-weight: font-weight( 'bold' );
-                margin: 0;
             }
             // Price
             .price.productitem__price {

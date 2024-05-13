@@ -1494,7 +1494,14 @@ footer .site-footer-wrapper .site-footer-item {
   box-shadow: none;
   padding: 0;
 }
+.template-collection .productgrid--items .productgrid--item .productitem .productitem--image {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
 .template-collection .productgrid--items .productgrid--item .productitem .productitem--title {
+  margin-bottom: 2px;
+  margin-bottom: 0.2rem;
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 25px;
@@ -1502,7 +1509,6 @@ footer .site-footer-wrapper .site-footer-item {
   letter-spacing: -0.012rem;
   font-family: "Paquin Sans Text", sans-serif;
   font-weight: 600;
-  margin: 0;
 }
 .template-collection .productgrid--items .productgrid--item .productitem .price.productitem__price {
   font-size: 15px;

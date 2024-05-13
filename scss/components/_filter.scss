@@ -10,5 +10,8 @@
 
 // Single filter button
 .collection-filters__filter-group-heading.productgrid--sidebar-button {
-    @extend %h5;
+    // Filter label
+    .collection-filters__filter-title {
+        @extend %h5;
+    }
 }

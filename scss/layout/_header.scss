@@ -102,7 +102,7 @@
         }
     }
     // Navigation container
-    .site-header-nav {
+    #site-header-nav {
         @include rem( max-width, 1590px );
         .site-navigation {
             background-color: color( 'steel', '1' );

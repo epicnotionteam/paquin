@@ -5,11 +5,6 @@
     "footer": {
       "type": "static-footer",
       "blocks": {
-        "social_accounts": {
-          "type": "social_accounts",
-          "settings": {
-          }
-        },
         "menu": {
           "type": "menu",
           "settings": {
@@ -25,23 +20,22 @@
         "menu_3": {
           "type": "menu",
           "settings": {
-            "menu": "main-menu"
+            "menu": "footer-social"
           }
         },
-        "newsletter": {
-          "type": "newsletter",
+        "rich_text_KqdJVx": {
+          "type": "rich_text",
           "settings": {
-            "title": "Subscribe",
-            "text": "<p>Invite customers to join your mailing list.<\/p>"
+            "title": "Contact Paquin",
+            "text": "<p>9286 Mercantile Dr.<br\/>Mentor, OH 44060<\/p><p>216-261-5700 (Sales)<\/p><p>1-800-260-5664 (General)<\/p>"
           }
         }
       },
       "block_order": [
-        "social_accounts",
         "menu",
         "menu_2",
         "menu_3",
-        "newsletter"
+        "rich_text_KqdJVx"
       ],
       "settings": {
         "show_follow_on_shop": true,

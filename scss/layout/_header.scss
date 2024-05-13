@@ -104,16 +104,11 @@
     // Navigation container
     #site-header-nav {
         @include rem( max-width, 1590px );
+        margin: 0 auto;
         .site-navigation {
             background-color: color( 'steel', '1' );
-            margin: 0 auto;
             padding: 0;
         }
-        // Remove pseudo elements
-        &::before,
-        &::after {
-            display: none;
-        }    
     }
 }
 

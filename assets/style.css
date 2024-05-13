@@ -1422,14 +1422,11 @@ footer .site-footer-wrapper .site-footer-item {
 .site-header #site-header-nav {
   max-width: 1590px;
   max-width: 159rem;
+  margin: 0 auto;
 }
 .site-header #site-header-nav .site-navigation {
   background-color: #212224;
-  margin: 0 auto;
   padding: 0;
-}
-.site-header #site-header-nav::before, .site-header #site-header-nav::after {
-  display: none;
 }
 
 @media (min-width: 64em) {

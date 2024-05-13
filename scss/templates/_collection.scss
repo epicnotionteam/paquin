@@ -80,6 +80,10 @@
         row-gap: spacing(5)
     ));
     display: grid;
+    // Item container:
+    .productgrid--item {
+        width: 100%;
+    }
 }
 
 

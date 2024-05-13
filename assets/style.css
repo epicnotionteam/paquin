@@ -1484,6 +1484,9 @@ footer .site-footer-wrapper .site-footer-item {
   row-gap: 3.2rem;
   display: grid;
 }
+.template-collection .productgrid--items .productgrid--item {
+  width: 100%;
+}
 
 @media (min-width: 64em) {
   .template-collection .productgrid--items {

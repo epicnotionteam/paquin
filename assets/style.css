@@ -1504,6 +1504,11 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0;
 }
 .template-collection .productgrid--items .productgrid--item .productitem .price.productitem__price {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   margin: 0;
 }
 

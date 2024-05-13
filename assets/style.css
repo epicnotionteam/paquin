@@ -1436,8 +1436,8 @@ footer .site-footer-wrapper .site-footer-item {
   }
 }
 .template-collection .productgrid--masthead {
-  padding: 48px 0;
-  padding: 4.8rem 0;
+  padding: 24px 0 40px;
+  padding: 2.4rem 0 4rem;
 }
 .template-collection .productgrid--masthead .collection--title {
   max-width: 800px;

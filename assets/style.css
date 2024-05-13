@@ -1884,6 +1884,9 @@ ul.list--link-arrow li::before {
   display: flex;
   padding: 0;
 }
+.breadcrumbs-container > * {
+  white-space: wrap;
+}
 .breadcrumbs-container a {
   font-weight: 600;
 }

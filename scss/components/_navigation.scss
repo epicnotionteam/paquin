@@ -122,8 +122,10 @@
 // Component container
 .site-footer-block-menu {
     // Item container
-    .navmenu-item:not(:first-child) {
-        margin: 0;
+    .navmenu-item {
+        &:not(:first-child) {
+            margin: 0;
+        }
         // Link
         a {
             @include font-size( 'small' );

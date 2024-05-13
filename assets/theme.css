@@ -12011,8 +12011,6 @@ rgb(255, 255, 255)
 }
 .breadcrumbs-container a,
 .breadcrumbs-container span {
-  
-  display: inline-block;
   vertical-align: middle;
 }
 .breadcrumbs-container span {

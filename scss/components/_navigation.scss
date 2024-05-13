@@ -151,13 +151,12 @@
 .breadcrumbs-container {
     @include font-size( 'xsmall' );
     @include rem( margin, spacing(3) auto );
-    align-items: center;
     color: color( 'type', '3' );
     display: inline-table;
+    line-height: 1.5;
     padding: 0;
     // Child element (link or span)
     & > * {
-        display: unset;
         white-space: wrap;
     }
     // Link

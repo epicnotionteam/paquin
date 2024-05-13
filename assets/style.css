@@ -1735,8 +1735,8 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0;
 }
 .productgrid--sidebar .collection-filters__filter:not([data-accordion-state=closed]) {
-  margin-top: 12px;
-  margin-top: 1.2rem;
+  margin: 12px 0 8px;
+  margin: 1.2rem 0 0.8rem;
   row-gap: 8px;
   row-gap: 0.8rem;
   display: grid;

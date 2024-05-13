@@ -29,7 +29,7 @@
     .collection-filters__filter {
         &:not([data-accordion-state="closed"]) {
             @include rem((
-                margin-top: 12px,
+                margin: 12px 0 spacing(2),
                 row-gap: spacing(2)
             ));
             display: grid;

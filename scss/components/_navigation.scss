@@ -152,7 +152,7 @@
     @include font-size('xsmall');
     @include rem(margin, spacing(3) auto);
     color: color('type', '3');
-    display: flex;
+    // display: flex;
     flex-wrap: wrap;
     line-height: 1.5;
     padding: 0;

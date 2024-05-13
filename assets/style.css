@@ -2015,7 +2015,6 @@ ul.list--link-arrow li::before {
   line-height: 21px;
   margin: 16px auto;
   margin: 1.6rem auto;
-  display: flex;
   flex-wrap: wrap;
   line-height: 1.5;
   padding: 0;

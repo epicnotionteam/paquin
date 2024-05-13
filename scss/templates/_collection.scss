@@ -10,7 +10,7 @@
 // --------------------------------------------------
 
 // Section container
-.template--collection .section--page-header {
+.template-collection .section--page-header {
 
     // Title
     .collection__title {}
@@ -26,4 +26,16 @@
 
     .template--collection .section--page-header {}
 
+}
+
+
+// Component Adjustments
+// ----------------------------------------------------------------------------------------------------
+
+// Component [Breadcrumb Navigation]
+// --------------------------------------------------
+
+// Adjust alignment
+.template-collection .breadcrumbs-container {
+    justify-content: center;
 }

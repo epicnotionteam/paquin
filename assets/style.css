@@ -1479,6 +1479,8 @@ footer .site-footer-wrapper .site-footer-item {
 }
 
 .template-collection .productgrid--items {
+  margin-top: -12px;
+  margin-top: -1.2rem;
   row-gap: 32px;
   row-gap: 3.2rem;
   display: grid;
@@ -1516,6 +1518,10 @@ footer .site-footer-wrapper .site-footer-item {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  column-gap: 4px;
+  column-gap: 0.4rem;
+  align-items: center;
+  display: flex;
   margin: 0;
 }
 

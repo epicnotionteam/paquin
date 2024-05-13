@@ -67,7 +67,10 @@
 
 // Section container
 .template-collection .productgrid--items {
-    @include rem( row-gap, spacing(5) );
+    @include rem(( 
+        margin-top: -12px,
+        row-gap: spacing(5) 
+    ));
     display: grid;
     // Item container:
     .productgrid--item {
@@ -94,7 +97,12 @@
             // Price
             .price.productitem__price {
                 @include font-size( 'small' );
+                @include rem( column-gap, spacing(1) );
+                align-items: center;
+                display: flex;
                 margin: 0;
+                // Original Price
+
             }
         }
     }

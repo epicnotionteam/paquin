@@ -1874,7 +1874,10 @@ ul.list--link-arrow li::before {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
-  margin: 24px auto;
-  margin: 2.4rem auto;
+  margin: 16px auto;
+  margin: 1.6rem auto;
   padding: 0;
+}
+.breadcrumbs-container a {
+  font-weight: 600;
 }

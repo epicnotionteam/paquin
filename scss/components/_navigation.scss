@@ -150,7 +150,12 @@
 // Component container
 .breadcrumbs-container {
     @include font-size( 'xsmall' );
-    @include rem( margin, spacing(4) auto );
+    @include rem( margin, spacing(3) auto );
     color: color( 'type', '3' );
     padding: 0;
+    // Link
+    a {
+        color: color( 'type', '1' );
+        font-weight: font-weight( 'bold' );
+    }
 }

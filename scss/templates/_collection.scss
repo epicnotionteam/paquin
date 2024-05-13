@@ -11,7 +11,7 @@
 
 // Section container
 .template-collection .productgrid--masthead {
-    @include rem( padding, spacing(4) 0 spacing(6) );
+    @include rem( padding, spacing(4) 0 spacing(8) );
     border-bottom: $border--base;
     // Title
     .collection--title {

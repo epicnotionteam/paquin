@@ -1436,8 +1436,8 @@ footer .site-footer-wrapper .site-footer-item {
   }
 }
 .template-collection .productgrid--masthead {
-  padding: 24px 0 40px;
-  padding: 2.4rem 0 4rem;
+  padding: 24px 0 56px;
+  padding: 2.4rem 0 5.6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
 .template-collection .productgrid--masthead .collection--title {

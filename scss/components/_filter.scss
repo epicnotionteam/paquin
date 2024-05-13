@@ -27,7 +27,7 @@
     }
     // Filter option container
     .collection-filters__filter {
-        &:not([aria-expanded="false"]) {
+        &:not([data-accordion-state="closed"]) {
             @include rem((
                 margin-top: 12px,
                 row-gap: spacing(2)

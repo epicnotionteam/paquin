@@ -1478,8 +1478,9 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0;
 }
 .template-collection .productgrid--masthead .collection--description .link--arrow-down {
-  margin-top: 16px;
-  margin-top: 1.6rem;
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  display: inline-block;
 }
 
 .template-collection .productgrid--items {

@@ -59,7 +59,8 @@
         }
         // 'Learn more' link
         .link--arrow-down {
-            @include rem( margin-top, spacing(3) );
+            @include rem( margin-top, 12px );
+            display: inline-block;
         }
     }
 }

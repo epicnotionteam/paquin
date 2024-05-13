@@ -112,3 +112,12 @@
         opacity: 1;
     }
 }
+
+
+// Navigation [Footer]
+// --------------------------------------------------
+
+.site-footer-block-content .navmenu li a {
+    @include font-size( 'small' );
+    font-weight: font-weight( 'base' );
+}

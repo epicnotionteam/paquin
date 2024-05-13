@@ -149,20 +149,22 @@
 
 // Component container
 .breadcrumbs-container {
-    @include font-size( 'xsmall' );
-    @include rem( margin, spacing(3) auto );
-    color: color( 'type', '3' );
-    display: inline-table;
+    @include font-size('xsmall');
+    @include rem(margin, spacing(3) auto);
+    color: color('type', '3');
+    display: flex;
+    flex-wrap: wrap;
     line-height: 1.5;
     padding: 0;
     // Child element (link or span)
     & > * {
-        white-space: wrap;
+        white-space: normal;
+        margin-right: 0.5rem; // Adjust margin as needed
     }
     // Link
     a {
-        color: color( 'type', '1' );
-        font-weight: font-weight( 'bold' );
+        color: color('type', '1');
+        font-weight: font-weight('bold');
     }
 }
 

@@ -1734,6 +1734,13 @@ footer .site-footer-wrapper .site-footer-item {
 .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title {
   margin: 0;
 }
+.productgrid--sidebar .collection-filters__filter:not([aria-expanded=false]) {
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  row-gap: 8px;
+  row-gap: 0.8rem;
+  display: grid;
+}
 .productgrid--sidebar .collection-filters__filter .collection-filters__filter-list-item {
   margin: 0;
   padding: 0;

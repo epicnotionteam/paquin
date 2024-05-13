@@ -11,6 +11,7 @@
 
 // Section container
 .template-collection .productgrid--masthead {
+    @include rem( padding, spacing(7) 0 );
     // Title
     .collection--title {
         @include rem( max-width, 800px );
@@ -21,13 +22,14 @@
     // Description
     .collection--description {
         @include rem((
-            margin: spacing(5) auto 0, 
+            margin: 12px auto 0, 
             max-width: 800px 
         ));
         width: 100%;
         // Content
         p {
             text-align: center;
+            margin: 0;
         }
     }
 }

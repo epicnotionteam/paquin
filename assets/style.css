@@ -1478,8 +1478,6 @@ footer .site-footer-wrapper .site-footer-item {
 }
 
 .template-collection .productgrid--items {
-  column-gap: 24px;
-  column-gap: 2.4rem;
   row-gap: 32px;
   row-gap: 3.2rem;
   display: grid;
@@ -1490,6 +1488,8 @@ footer .site-footer-wrapper .site-footer-item {
   width: 100% !important;
 }
 .template-collection .productgrid--items .productgrid--item .productitem {
+  padding: 12px;
+  padding: 1.2rem;
   border: 0 none;
   box-shadow: none;
   padding: 0;

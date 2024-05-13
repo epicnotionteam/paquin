@@ -67,10 +67,7 @@
 
 // Section container
 .template-collection .productgrid--items {
-    @include rem((
-        column-gap: spacing(4),
-        row-gap: spacing(5)
-    ));
+    @include rem( row-gap, spacing(5) );
     display: grid;
     // Item container:
     .productgrid--item {
@@ -79,6 +76,7 @@
         width: 100% !important;
         // Item wrap
         .productitem {
+            @include rem( padding, 12px );
             border: 0 none;
             box-shadow: none;
             padding: 0;

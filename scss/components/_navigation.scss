@@ -153,13 +153,12 @@
     @include rem( margin, spacing(3) auto );
     align-items: center;
     color: color( 'type', '3' );
-    display: flex;
+    display: inline-table;
     padding: 0;
-    // Child element
+    // Child element (link or span)
     & > * {
-        white-space: wrap; // Prevent links from breaking unless necessary
-        // overflow: hidden;
-        // text-overflow: ellipsis;
+        display: unset;
+        white-space: wrap;
     }
     // Link
     a {

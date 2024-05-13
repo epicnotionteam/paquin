@@ -1881,10 +1881,11 @@ ul.list--link-arrow li::before {
   margin: 16px auto;
   margin: 1.6rem auto;
   align-items: center;
-  display: flex;
+  display: inline-table;
   padding: 0;
 }
 .breadcrumbs-container > * {
+  display: unset;
   white-space: wrap;
 }
 .breadcrumbs-container a {

@@ -109,6 +109,11 @@
             margin: 0 auto;
             padding: 0;
         }
+        // Remove pseudo elements
+        &::before,
+        &::after {
+            display: none;
+        }    
     }
 }
 

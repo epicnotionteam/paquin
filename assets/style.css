@@ -1428,6 +1428,9 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0 auto;
   padding: 0;
 }
+.site-header #site-header-nav::before, .site-header #site-header-nav::after {
+  display: none;
+}
 
 @media (min-width: 64em) {
   .site-header .site-header-main.site-header--full-width .site-header-main-content .site-header-logo {

@@ -1731,8 +1731,12 @@ footer .site-footer-wrapper .site-footer-item {
 .productgrid--sidebar .collection-filters__filter {
   margin-top: 12px;
   margin-top: 1.2rem;
+  row-gap: 4px;
+  row-gap: 0.4rem;
+  display: grid;
 }
 .productgrid--sidebar .collection-filters__filter .collection-filters__filter-list-item {
+  margin: 0;
   padding: 0;
 }
 .productgrid--sidebar .collection-filters__filter .collection-filters__filter-list-item .collection-filters__filter-link {

@@ -61,14 +61,6 @@
 }
 
 
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {
-
-    .template-collection .productgrid--masthead {}
-
-}
-
-
 // Section [Page Header]
 // Contains collection title & description
 // --------------------------------------------------
@@ -84,6 +76,12 @@
     .productgrid--item {
         padding: 0;
         width: 100% !important;
+        // Item wrap
+        .productitem {
+            border: 0 none;
+            box-shadow: none;
+            padding: 0;
+        }
     }
 }
 

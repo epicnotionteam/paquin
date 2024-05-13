@@ -1488,6 +1488,11 @@ footer .site-footer-wrapper .site-footer-item {
   padding: 0;
   width: 100% !important;
 }
+.template-collection .productgrid--items .productgrid--item .productitem {
+  border: 0 none;
+  box-shadow: none;
+  padding: 0;
+}
 
 @media (min-width: 64em) {
   .template-collection .productgrid--items {

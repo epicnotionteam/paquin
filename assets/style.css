@@ -1841,7 +1841,10 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
-.site-footer-block-content .navmenu li a {
+.site-footer-block-menu .navmenu-item:not(:first-child) {
+  margin: 0;
+}
+.site-footer-block-menu .navmenu-item:not(:first-child) a {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;

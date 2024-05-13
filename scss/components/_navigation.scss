@@ -117,7 +117,14 @@
 // Navigation [Footer]
 // --------------------------------------------------
 
-.site-footer-block-content .navmenu li a {
-    @include font-size( 'small' );
-    font-weight: font-weight( 'base' );
+.site-footer-block-menu {
+    // Item container
+    .navmenu-item:not(:first-child) {
+        margin: 0;
+        // Link
+        a {
+            @include font-size( 'small' );
+            font-weight: font-weight( 'base' );
+        }
+    }
 }

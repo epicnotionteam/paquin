@@ -25,4 +25,12 @@
             }
         }
     }
+    // Filter option container
+    .collection-filters__filter {
+        @include rem( margin-top, 12px );
+        .collection-filters__filter-list-item {
+            @include font-size( 'small' );
+            padding: 0;
+        }
+    }
 }

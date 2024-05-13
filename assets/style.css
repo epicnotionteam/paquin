@@ -1435,6 +1435,13 @@ footer .site-footer-wrapper .site-footer-item {
     margin-right: 1.6rem;
   }
 }
+.collection--section .productgrid--outer {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  width: 100%;
+}
+
 .template-collection .productgrid--masthead {
   padding: 24px 0 56px;
   padding: 2.4rem 0 5.6rem;

@@ -19,7 +19,7 @@
         width: 100%;
     }
     // Description
-    .collection__description {
+    .collection--description {
         @include rem((
             margin: spacing(5) auto 0, 
             max-width: 800px 

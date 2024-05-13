@@ -1442,14 +1442,14 @@ footer .site-footer-wrapper .site-footer-item {
   margin: 0 auto;
   width: 100%;
 }
-.template-collection .productgrid--masthead .collection__description {
+.template-collection .productgrid--masthead .collection--description {
   margin: 32px auto 0;
   margin: 3.2rem auto 0;
   max-width: 800px;
   max-width: 80rem;
   width: 100%;
 }
-.template-collection .productgrid--masthead .collection__description p {
+.template-collection .productgrid--masthead .collection--description p {
   text-align: center;
 }
 

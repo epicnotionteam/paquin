@@ -150,7 +150,7 @@
 // Component container
 .breadcrumbs-container {
     @include font-size( 'xsmall' );
+    @include rem( margin, spacing(4) auto );
     color: color( 'type', '3' );
-    margin: 0;
     padding: 0;
 }

@@ -17,6 +17,19 @@
 }
 
 
+// Adjust @medium breakpoint
+@include mq( $from: 860px ) {
+    // Adjust template grid structure
+    .collection--section .productgrid--outer {
+        @include rem((
+            column-gap: spacing(4),
+            grid-template-columns: 256px 1fr,
+            row-gap: spacing(4)
+        ));
+    }
+}
+
+
 // Section [Page Header]
 // Contains collection title description
 // --------------------------------------------------

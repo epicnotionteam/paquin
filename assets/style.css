@@ -1443,6 +1443,16 @@ footer .site-footer-wrapper .site-footer-item {
   width: 100%;
 }
 
+@media (min-width: 53.75em) {
+  .collection--section .productgrid--outer {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    grid-template-columns: 256px 1fr;
+    grid-template-columns: 25.6rem 1fr;
+    row-gap: 24px;
+    row-gap: 2.4rem;
+  }
+}
 .template-collection .productgrid--masthead {
   padding: 24px 0 56px;
   padding: 2.4rem 0 5.6rem;

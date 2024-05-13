@@ -14,8 +14,8 @@ footer .site-footer-wrapper {
     padding: 0 4vw;
     // Widget wrapper
     .site-footer-item {
+        @include rem( max-width, 1590px );
         margin: 0 auto;
-        max-width: none;
         padding: 0;
         width: 100%;
     }

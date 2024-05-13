@@ -1318,8 +1318,9 @@ footer .site-footer-wrapper {
   padding: 0 4vw;
 }
 footer .site-footer-wrapper .site-footer-item {
+  max-width: 1590px;
+  max-width: 159rem;
   margin: 0 auto;
-  max-width: none;
   padding: 0;
   width: 100%;
 }

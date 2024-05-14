@@ -1491,6 +1491,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 4.8rem;
   right: 0;
 }
+.site-header .mobile-nav-panel .mobile-nav-close svg {
+  color: red !important;
+}
+
 /*
 .site-header {
     background-color: color( 'steel', '1' );

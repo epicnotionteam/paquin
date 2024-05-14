@@ -89,7 +89,8 @@
             right: 0;
             // Icon
             svg {
-                color: color( 'type', '3' );
+                // color: color( 'type', '3' );
+                color: red !important;
             }
         }
     }

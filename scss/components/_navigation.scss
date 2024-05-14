@@ -187,6 +187,8 @@
         & > li.navmenu-item > a {
             @extend %h4;
             font-family: font-family( 'heading' );
+            margin: 0;
+            padding: 0 4vw;
         }
     }
 }

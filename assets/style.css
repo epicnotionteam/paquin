@@ -1332,9 +1332,12 @@ footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-title {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin: 12px 0;
+  margin: 1.2rem 0;
   padding: 0;
+}
+footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-item:first-of-type .site-footer-block-title {
+  margin-top: 0;
 }
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-content {
   font-size: 15px;
@@ -1367,6 +1370,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
+  footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-title {
+    margin: 0 0 12px;
+    margin: 0 0 1.2rem;
+  }
   footer .site-footer-wrapper .site-footer__row--second {
     column-gap: 24px;
     column-gap: 2.4rem;

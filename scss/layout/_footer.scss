@@ -23,8 +23,11 @@ footer .site-footer-wrapper {
             border-top: $border--dark;
             // Heading
             .site-footer-block-title {
-                @include rem( margin-bottom, 12px );
+                @include rem( margin, 12px 0 );
                 padding: 0;
+            }
+            .site-footer-block-item:first-of-type .site-footer-block-title {
+                margin-top: 0;
             }
             // Content
             .site-footer-block-content {
@@ -63,6 +66,10 @@ footer .site-footer-wrapper {
 @include mq( $from: medium ) {
     // Adjust spacing
     footer .site-footer-wrapper {
+        // Widget heading
+        .site-footer-item .site-footer-blocks .site-footer-block-title {
+            @include rem( margin, 0 0 12px );
+        }
         // Footer [Secondary]
         .site-footer__row--second {
             @include rem( column-gap, spacing(4) );

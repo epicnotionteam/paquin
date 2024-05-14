@@ -26,6 +26,10 @@ footer .site-footer-wrapper {
                 @include rem( margin-bottom, 12px );
                 padding: 0;
             }
+            // Content
+            .site-footer-block-content {
+                @include font-size( 'small' );
+            }
         }
     }
     // Footer [Secondary]

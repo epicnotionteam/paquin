@@ -1487,6 +1487,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 auto;
   padding: 0;
 }
+.site-header .site-navigation-wrapper {
+  background-color: transparent;
+}
 .site-header .mobile-nav-panel {
   left: -4vw;
 }

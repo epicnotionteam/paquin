@@ -145,7 +145,7 @@
         // Primary header content container
         // Adjust grid structure
         .site-header-main {
-            grid-template-columns: 1fr;
+            grid-template-columns: max-content 1fr;
             transform: translateX( 0 );
             width: 100%;
             // Adjust grid structure
@@ -158,8 +158,16 @@
             }
             // Hide mobile menu trigger
             .site-header-menu-toggle {
-                display: none;
+                width: 0;
+                transition: width 0.16s ease-out;
             }
+        }
+    }
+
+    &.site-header-sticky--scrolled {
+        // Hide mobile menu trigger
+        .site-header-menu-toggle {
+            width: auto;
         }
     }
 }

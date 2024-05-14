@@ -33,7 +33,7 @@ footer .site-footer-wrapper {
             // Content
             .site-footer-block-content {
                 @include font-size( 'small' );
-                @include rem( margin-bottom, spacing(4) );
+                padding: 0;
             }
             // Menu 
             .navmenu {
@@ -77,10 +77,6 @@ footer .site-footer-wrapper {
             // Heading
             .site-footer-block-title {
                 @include rem( margin, 0 0 12px );
-            }
-            // Content
-            .site-footer-block-content {
-                margin-bottom: 0;
             }
             // Menu 
             .navmenu {

@@ -95,7 +95,10 @@ footer .site-footer-wrapper {
         }
         // Footer [Secondary]
         .site-footer__row--second {
-            @include rem( column-gap, spacing(4) );
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(7)
+            ));
             grid-template-columns: repeat( 12, 1fr );
             // Child containers
             & > * {

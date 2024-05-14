@@ -1350,6 +1350,9 @@ footer .site-footer-wrapper .site-footer__row--second .container--brand p {
   footer .site-footer-wrapper .site-footer__row--second > * {
     grid-column: span 6;
   }
+  footer .site-footer-wrapper .site-footer__row--second .container--brand {
+    align-content: flex-end;
+  }
 }
 .site-header {
   background-color: #212224;

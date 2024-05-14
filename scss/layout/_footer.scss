@@ -53,6 +53,10 @@ footer .site-footer-wrapper {
             & > * {
                 grid-column: span 6;
             }
+            // Container [Brand]
+            .container--brand {
+                align-content: flex-end;
+            }
         }
     }
 }

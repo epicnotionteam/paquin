@@ -1414,7 +1414,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 @media (max-width: 63.99em) {
-  .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
+  .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover),
+  .live-search-filter-wrapper {
     display: none;
   }
 }

@@ -8,7 +8,8 @@
 
 // Adjust @medium breakpoint
 @include mq( $until: medium ) {
-    .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
+    .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover),
+    .live-search-filter-wrapper {
         display: none;
     }
 }

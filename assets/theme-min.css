@@ -1884,11 +1884,7 @@ rgb(18, 18, 18)
   width: 100%;
   max-width: 100%;
 }
-@media screen and (max-width: 719px) {
-  .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
-    display: none;
-  }
-}
+
 @media screen and (min-width: 680px) {
   .site-header-main .live-search {
     flex: 1 1 auto;

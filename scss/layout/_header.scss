@@ -26,6 +26,10 @@
         &::after {
             display: none;
         }
+        // Set positioning for all children 
+        & > * {
+            position: relative;
+        }
         // Trigger [Mobile Menu]
         .site-header-menu-toggle {}
         // Trigger [Mobile Search]

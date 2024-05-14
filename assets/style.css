@@ -1429,6 +1429,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .site-header-main::before, .site-header .site-header-main::after {
   display: none;
 }
+.site-header .site-header-main > * {
+  position: relative;
+}
 .site-header .site-header-main .site-header-main-content .site-header-logo img {
   max-width: 128px;
   max-width: 12.8rem;

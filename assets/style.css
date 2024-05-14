@@ -1678,8 +1678,9 @@ hr,
 .divider--base {
   height: 1px;
   height: 0.1rem;
-  margin: 40px;
-  margin: 4rem;
+  margin: 40px 0;
+  margin: 4rem 0;
+  background-color: #D6DBDD;
 }
 
 @media (min-width: 64em) {

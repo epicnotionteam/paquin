@@ -219,7 +219,9 @@
       <div class="site-footer__row site-footer__row--second">
         {% comment %} Container [Brand] {% endcomment %}
         <div class="container--brand">
-          Logo
+          <a class="site-logo" href="{{ routes.root_url }}">
+            {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company' }}
+          </a>
           {%- assign year = 'now' | date: '%Y' -%}
           <p>{{ 'footer.general.copyright_html' | t: year: year, shop_name: 'The Paquin Company' }}</p>
         </div>

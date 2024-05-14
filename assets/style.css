@@ -2238,6 +2238,7 @@ ul.list--link-arrow li::before {
 .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent {
   column-gap: 8px;
   column-gap: 0.8rem;
+  align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content;
 }
@@ -2272,4 +2273,10 @@ ul.list--link-arrow li::before {
 .mobile-nav-content .navmenu.navmenu-depth-2 {
   margin: 4px 0;
   margin: 0.4rem 0;
+  background-color: white;
+}
+.mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
+  padding: 8px 4vw;
+  padding: 0.8rem 4vw;
+  font-weight: 400;
 }

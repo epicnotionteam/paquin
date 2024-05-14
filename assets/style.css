@@ -1111,6 +1111,7 @@ p,
 .mobile-nav-content .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
+  font-family: "Paquin Sans Text", sans-serif;
   font-weight: 400;
 }
 

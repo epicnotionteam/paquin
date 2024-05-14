@@ -44,6 +44,7 @@ body {
 p,  
 %p {
 	@include rem( margin-bottom, spacing(3) );
+	font-family: font-family( 'base' );
   	font-weight: font-weight( 'base' );
 }
 

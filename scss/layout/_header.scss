@@ -21,6 +21,11 @@
         align-items: center;
         background-color: color( 'steel', '1' );
         display: grid;
+        // Strip pseudo elements
+        &::before,
+        &::after {
+            display: none;
+        }
         // Trigger [Mobile Menu]
         .site-header-menu-toggle {}
         // Trigger [Mobile Search]

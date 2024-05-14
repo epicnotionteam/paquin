@@ -1436,7 +1436,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   column-gap: 1.6rem;
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr max-content max-content;
+  grid-template-columns: 1fr max-content;
   width: 100%;
 }
 .site-header .site-header-main .site-header-main-content .site-header-logo img {
@@ -1454,6 +1454,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-template-columns: max-content max-content;
 }
 .site-header .site-header-main svg {
+  display: block;
   fill: white;
 }
 .site-header .site-header-main.site-header--full-width {

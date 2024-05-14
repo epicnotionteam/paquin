@@ -136,6 +136,9 @@
 @include mq( $from: 1024px ) {
     // Component container
     .site-header {
+        &.site-header-sticky--scrolled {
+            @include rem( padding, 12px 4vw );
+        }
         // Primary header content container
         // Adjust grid structure
         .site-header-main {

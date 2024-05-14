@@ -1345,6 +1345,7 @@ footer .site-footer-wrapper .site-footer__row--second .container--brand p {
   footer .site-footer-wrapper .site-footer__row--second {
     column-gap: 24px;
     column-gap: 2.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
     grid-template-columns: repeat(12, 1fr);
   }
   footer .site-footer-wrapper .site-footer__row--second > * {

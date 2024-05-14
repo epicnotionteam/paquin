@@ -48,6 +48,7 @@ footer .site-footer-wrapper {
         // Footer [Secondary]
         .site-footer__row--second {
             @include rem( column-gap, spacing(4) );
+            border-top: $border--dark;
             grid-template-columns: repeat( 12, 1fr );
             // Child containers
             & > * {

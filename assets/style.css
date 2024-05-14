@@ -1332,6 +1332,7 @@ footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-rich-text {
+  border-bottom: 0 none;
   padding-bottom: 24px;
   padding-bottom: 2.4rem;
 }
@@ -1379,6 +1380,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
+  footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-rich-text {
+    padding-bottom: 0;
+  }
   footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-title {
     margin: 0 0 12px;
     margin: 0 0 1.2rem;

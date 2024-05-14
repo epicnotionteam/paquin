@@ -23,6 +23,7 @@ footer .site-footer-wrapper {
             border-top: $border--dark;
             // Rich content block
             .site-footer-block-rich-text {
+                border-bottom: 0 none;
                 @include rem( padding-bottom, spacing(4) );
             }
             // Heading
@@ -78,6 +79,10 @@ footer .site-footer-wrapper {
     footer .site-footer-wrapper {
         // Widget heading
         .site-footer-item .site-footer-blocks {
+             // Rich content block
+             .site-footer-block-rich-text {
+                padding-bottom: 0;
+            }
             // Heading
             .site-footer-block-title {
                 @include rem( margin, 0 0 12px );

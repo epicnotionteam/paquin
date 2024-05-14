@@ -1437,6 +1437,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content max-content;
+  width: 100%;
 }
 .site-header .site-header-main .site-header-main-content .site-header-logo img {
   max-width: 128px;
@@ -1444,6 +1445,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
   margin: 0 auto;
   width: 100%;
+}
+.site-header .site-header-main .site-header-main-content .site-header-right {
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: max-content max-content;
 }
 .site-header .site-header-main svg {
   fill: white;

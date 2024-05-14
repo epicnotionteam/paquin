@@ -38,6 +38,7 @@
             align-items: center;
             display: grid;
             grid-template-columns: 1fr max-content max-content;
+            width: 100%;
             // Container [Logo]
             .site-header-logo img {
                 @include rem( max-width, 128px );
@@ -46,7 +47,12 @@
                 width: 100%;
             }
             // Container [Actions]
-            .site-header-right {}
+            .site-header-right {
+                @include rem( column-gap, spacing(3) );
+                align-items: center;
+                display: grid;
+                grid-template-columns: max-content max-content;
+            }
         }
         // Icon
         svg {

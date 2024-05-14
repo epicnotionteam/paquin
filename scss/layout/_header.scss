@@ -93,6 +93,11 @@
             }
         }
     }
+    // Navigation divider
+    .mobile-nav-content__border {
+        @include rem( margin, spacing(4) 4vw );
+        border-bottom: $border--base;
+    }
 }
 
 

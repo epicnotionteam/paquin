@@ -10,7 +10,7 @@
 
 // Breakpoint [Small]
 .site-header {
-    @include rem( padding, spacing(3) 4vw );
+    @include rem( padding, spacing(1) 4vw );
     background-color: color( 'steel', '1' );
     // Primary header content container
     .site-header-main {
@@ -27,10 +27,6 @@
         & > * {
             position: relative;
         }
-        // Trigger [Mobile Menu]
-        .site-header-menu-toggle {}
-        // Trigger [Mobile Search]
-        .site-header-mobile-search-button {}
         // Container [Main]
         .site-header-main-content {
             align-items: center;
@@ -39,7 +35,7 @@
             width: 100%;
             // Container [Logo]
             .site-header-logo img {
-                @include rem( max-width, 128px );
+                @include rem( max-width, 112px );
                 display: block;
                 margin: 0 auto;
                 width: 100%;

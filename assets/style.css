@@ -2253,7 +2253,10 @@ ul.list--link-arrow li::before {
   right: 0;
   top: 0;
 }
-.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent .navmenu-icon svg {
+.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent .navmenu-button .navmenu-button-wrapper {
+  background-color: white;
+}
+.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent .navmenu-button .navmenu-button-wrapper .navmenu-icon svg {
   height: 8px;
   height: 0.8rem;
   width: 12px;

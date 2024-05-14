@@ -200,14 +200,18 @@
                     position: relative;
                     right: 0;
                     top: 0;
-                }
-                // Dropdown indicator
-                .navmenu-icon svg {
-                    @include rem((
-                        height: 8px,
-                        width: 12px
-                    ));
-                    color: color( 'steel', '4' );
+                    // Icon container
+                    .navmenu-button-wrapper {
+                        background-color: white;
+                        // Dropdown indicator icon
+                        .navmenu-icon svg {
+                            @include rem((
+                                height: 8px,
+                                width: 12px
+                            ));
+                            color: color( 'steel', '4' );
+                        }
+                    }
                 }
             }
             & > a {

@@ -1517,6 +1517,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-template-columns: max-content 1fr max-content;
   }
 }
+@media (min-width: 64em) {
+  .site-header .site-header-main .site-header-menu-toggle {
+    display: none;
+  }
+}
 /*
 .site-header {
     background-color: color( 'steel', '1' );

@@ -123,6 +123,25 @@
 }
 
 
+// Adjust @custom breakpoint
+// Inherited from parent
+@include mq( $from: 1024px ) {
+    // Component container
+    .site-header {
+        // Primary header content container
+        // Adjust grid structure
+        .site-header-main {
+            // grid-template-columns: max-content 1fr;
+            // Hide mobile menu trigger
+            .site-header-menu-toggle {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
 /*
 .site-header {
     background-color: color( 'steel', '1' );

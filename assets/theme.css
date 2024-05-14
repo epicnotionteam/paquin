@@ -2010,7 +2010,6 @@ rgb(18, 18, 18)
   right: 0px;
   display: flex;
   align-items: center;
-  width: 50px;
   transition: right 150ms cubic-bezier(0.4, 0, 0.2, 1), top 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 1023px) and (min-width: 680px) {
@@ -2019,11 +2018,6 @@ rgb(18, 18, 18)
     top: 0;
     right: 0;
     flex: 0 0 auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .site-header-cart {
-    right: 15px;
   }
 }
 .site-header-cart svg {

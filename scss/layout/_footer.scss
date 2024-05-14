@@ -15,7 +15,6 @@ footer .site-footer-wrapper {
     // Widget wrapper
     .site-footer-item {
         @include rem( max-width, wrap( 'max' ) );
-        border-top: $border--dark;
         margin: 0 auto;
         padding: 0;
         width: 100%;
@@ -24,6 +23,7 @@ footer .site-footer-wrapper {
                 margin-top: spacing(7),
                 padding: spacing(4) 0 96px
             ));
+            border-top: $border--dark;
         }
     }
     // Footer [Secondary]

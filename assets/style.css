@@ -1321,7 +1321,6 @@ footer .site-footer-wrapper {
 footer .site-footer-wrapper .site-footer-item {
   max-width: 1590px;
   max-width: 159rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -1331,6 +1330,7 @@ footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
   margin-top: 4.8rem;
   padding: 24px 0 96px;
   padding: 2.4rem 0 9.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 footer .site-footer-wrapper .site-footer__row--second {
   padding: 40px 0 96px;

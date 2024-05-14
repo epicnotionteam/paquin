@@ -86,8 +86,11 @@
                 padding: 18px,
                 width: 48px
             ));
-            color: color( 'type', '3' );
             right: 0;
+            // Icon
+            svg {
+                fill: color( 'type', '3' );
+            }
         }
     }
 }

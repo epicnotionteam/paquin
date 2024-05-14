@@ -107,10 +107,16 @@
     // Component container
     .site-header {
         // Primary header content container
+        // Adjust grid structure
         .site-header-main {
+            grid-template-columns: max-content 1fr;
             // Hide mobile search trigger
             .site-header-mobile-search-button {
                 display: none;
+            }
+            // Adjust grid structure
+            .site-header-main-content {
+                grid-template-columns: max-content 1fr max-content;
             }
         }
     }

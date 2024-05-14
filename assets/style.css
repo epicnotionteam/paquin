@@ -1507,8 +1507,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 44.9375em) {
+  .site-header .site-header-main {
+    grid-template-columns: max-content 1fr;
+  }
   .site-header .site-header-main .site-header-mobile-search-button {
     display: none;
+  }
+  .site-header .site-header-main .site-header-main-content {
+    grid-template-columns: max-content 1fr max-content;
   }
 }
 /*

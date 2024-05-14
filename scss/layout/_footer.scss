@@ -21,6 +21,10 @@ footer .site-footer-wrapper {
         .site-footer-blocks {
             @include rem( padding, spacing(4) 0 96px );
             border-top: $border--dark;
+            // Rich content block
+            .site-footer-block-rich-text {
+                @include rem( padding-bottom, spacing(4) );
+            }
             // Heading
             .site-footer-block-title {
                 @include rem( margin, 12px 0 );

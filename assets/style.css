@@ -1331,6 +1331,10 @@ footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
   padding: 2.4rem 0 9.6rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
+footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-rich-text {
+  padding-bottom: 24px;
+  padding-bottom: 2.4rem;
+}
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-title {
   margin: 12px 0;
   margin: 1.2rem 0;

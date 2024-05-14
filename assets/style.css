@@ -1213,8 +1213,8 @@ h1,
   letter-spacing: 0.04rem;
   letter-spacing: 0.4px;
   letter-spacing: 0.04rem;
-  margin: 0 0 32px;
-  margin: 0 0 3.2rem;
+  margin: 0 0 24px;
+  margin: 0 0 2.4rem;
   font-weight: 400;
 }
 
@@ -1227,8 +1227,8 @@ h2,
   letter-spacing: 0.024rem;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin: 0 0 24px;
-  margin: 0 0 2.4rem;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
   font-weight: 400;
 }
 
@@ -1241,8 +1241,8 @@ h3,
   letter-spacing: 0.016rem;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 12px;
+  margin: 0 0 1.2rem;
   font-weight: 400;
 }
 
@@ -1255,8 +1255,8 @@ h4,
   letter-spacing: 0.016rem;
   letter-spacing: 0.26px;
   letter-spacing: 0.026rem;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
   font-weight: 400;
 }
 
@@ -1879,6 +1879,7 @@ ul.list--base li::before {
   color: #0F7F92;
   content: "•";
   font-size: 200%;
+  line-height: 0.88;
   position: absolute;
   top: 0;
   left: 0;

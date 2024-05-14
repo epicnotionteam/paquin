@@ -48,6 +48,9 @@ footer .site-footer-wrapper {
             @include font-size( 'xsmall' );
             margin: 0;
         }
+        .footer__form {
+            @include rem( margin-bottom, spacing(3) );
+        }
     }
 }
 

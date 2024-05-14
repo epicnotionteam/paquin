@@ -1354,6 +1354,10 @@ footer .site-footer-wrapper .site-footer__row--second p {
   line-height: 21px;
   margin: 0;
 }
+footer .site-footer-wrapper .site-footer__row--second .footer__form {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
 
 @media (min-width: 64em) {
   footer .site-footer-wrapper .site-footer__row--second {

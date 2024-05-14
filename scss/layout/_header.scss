@@ -5,6 +5,15 @@
 // Component Instances
 // ----------------------------------------------------------------------------------------------------
 
+
+// Adjust @medium breakpoint
+@include mq( $until: medium ) {
+    .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
+        display: none;
+    }
+}
+
+
 // Header [Base]
 // --------------------------------------------------
 

@@ -1413,6 +1413,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     order: 1;
   }
 }
+@media (max-width: 63.99em) {
+  .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
+    display: none;
+  }
+}
 .site-header {
   padding: 4px 4vw;
   padding: 0.4rem 4vw;

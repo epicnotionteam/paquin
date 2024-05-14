@@ -1884,7 +1884,11 @@ rgb(18, 18, 18)
   width: 100%;
   max-width: 100%;
 }
-
+@media screen and (max-width: 719px) {
+  .site-header-main[data-site-header-mobile-search-button] .live-search:not(.live-search--takeover) {
+    display: none;
+  }
+}
 @media screen and (min-width: 680px) {
   .site-header-main .live-search {
     flex: 1 1 auto;
@@ -12883,7 +12887,11 @@ rgb(255, 255, 255)
   display: flex;
   flex-shrink: 0;
 }
-
+@media screen and (max-width: 719px) {
+  .live-search-filter-wrapper {
+    display: none;
+  }
+}
 .live-search-filter-wrapper:focus-within {
   box-shadow: 0 0 0 2px rgba(5, 105, 197, 0.55);
 }

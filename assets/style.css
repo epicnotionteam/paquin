@@ -1346,6 +1346,10 @@ footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-b
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
 }
+footer .site-footer-wrapper .site-footer-item .site-footer-blocks .navmenu {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
 footer .site-footer-wrapper .site-footer__row--second {
   padding: 40px 0 96px;
   padding: 4rem 0 9.6rem;
@@ -1373,6 +1377,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-title {
     margin: 0 0 12px;
     margin: 0 0 1.2rem;
+  }
+  footer .site-footer-wrapper .site-footer-item .site-footer-blocks .navmenu {
+    margin-bottom: 0;
   }
   footer .site-footer-wrapper .site-footer__row--second {
     column-gap: 24px;

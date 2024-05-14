@@ -26,12 +26,17 @@ footer .site-footer-wrapper {
                 @include rem( margin, 12px 0 );
                 padding: 0;
             }
+            // Strip margin from first block heading
             .site-footer-block-item:first-of-type .site-footer-block-title {
                 margin-top: 0;
             }
             // Content
             .site-footer-block-content {
                 @include font-size( 'small' );
+            }
+            // Menu 
+            .navmenu {
+                @include rem( margin-bottom, 12px );
             }
         }
     }
@@ -67,8 +72,15 @@ footer .site-footer-wrapper {
     // Adjust spacing
     footer .site-footer-wrapper {
         // Widget heading
-        .site-footer-item .site-footer-blocks .site-footer-block-title {
-            @include rem( margin, 0 0 12px );
+        .site-footer-item .site-footer-blocks {
+            // Heading
+            .site-footer-block-title {
+                @include rem( margin, 0 0 12px );
+            }
+            // Menu 
+            .navmenu {
+                margin-bottom: 0;
+            }
         }
         // Footer [Secondary]
         .site-footer__row--second {

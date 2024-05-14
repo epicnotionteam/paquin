@@ -1414,8 +1414,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .site-header {
+  padding: 16px 4vw;
+  padding: 1.6rem 4vw;
   background-color: #212224;
-  padding: 0 4vw;
 }
 .site-header .site-header-main {
   align-items: center;

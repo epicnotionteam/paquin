@@ -10,8 +10,8 @@
 
 // Breakpoint [Small]
 .site-header {
+    @include rem( padding, spacing(3) 4vw );
     background-color: color( 'steel', '1' );
-    padding: 0 4vw;
     // Primary header content container
     .site-header-main {
         align-items: center;

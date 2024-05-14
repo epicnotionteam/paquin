@@ -137,7 +137,7 @@
     // Component container
     .site-header {
         @include rem( padding, 12px 4vw 0 );
-        transition: padding 0.24s ease-out;
+        transition: padding 0.16s ease-out;
         &.site-header-sticky--scrolled {
             @include rem( padding, 12px 4vw );
         }

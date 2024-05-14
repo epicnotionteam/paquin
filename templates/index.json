@@ -9,11 +9,11 @@
         "placeholder": "What are you looking for?",
         "filter_search_by": "disabled",
         "enable_live_search": true,
-        "enable_live_search_images": false,
+        "enable_live_search_images": true,
         "show-overlay": false,
         "color": "#ffffff",
         "background": "#000000",
-        "opacity": 50
+        "opacity": 64
       }
     }
   },

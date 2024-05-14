@@ -21,6 +21,11 @@ footer .site-footer-wrapper {
         .site-footer-blocks {
             @include rem( padding, spacing(4) 0 96px );
             border-top: $border--dark;
+            // Heading
+            .site-footer-block-title {
+                @include rem( margin-bottom, 12px );
+                padding: 0;
+            }
         }
     }
     // Footer [Secondary]

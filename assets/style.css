@@ -1480,6 +1480,17 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .mobile-nav-panel {
   left: -4vw;
 }
+.site-header .mobile-nav-panel .mobile-nav-close {
+  top: 4px;
+  top: 0.4rem;
+  height: 48px;
+  height: 4.8rem;
+  padding: 18px;
+  padding: 1.8rem;
+  width: 48px;
+  width: 4.8rem;
+  right: 0;
+}
 
 /*
 .site-header {

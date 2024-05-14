@@ -2157,6 +2157,10 @@ ul.list--link-arrow li::before {
   left: 0;
 }
 
+.site-navigation {
+  background-color: transparent;
+  padding: 0;
+}
 .site-navigation > .navmenu {
   transform: translateX(-12px);
   transform: translateX(-12px);

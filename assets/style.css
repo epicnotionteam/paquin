@@ -2271,8 +2271,8 @@ ul.list--link-arrow li::before {
   margin: 0;
 }
 .mobile-nav-content .navmenu.navmenu-depth-2 {
-  margin: 4px 0;
-  margin: 0.4rem 0;
+  margin: 4px 0 12px;
+  margin: 0.4rem 0 1.2rem;
   background-color: white;
 }
 .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {

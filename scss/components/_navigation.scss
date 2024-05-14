@@ -225,9 +225,7 @@
     }
     // Child item container
     .navmenu.navmenu-depth-2 {
-        @include rem((
-            margin: spacing(1) 0
-        ));
+        @include rem( margin, spacing(1) 0 12px );
         background-color: white;
         & > li {
             & > a {

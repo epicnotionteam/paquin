@@ -1327,8 +1327,8 @@ footer .site-footer-wrapper .site-footer-item {
   width: 100%;
 }
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
-  padding: 24px 0 96px;
-  padding: 2.4rem 0 9.6rem;
+  padding: 24px 0 64px;
+  padding: 2.4rem 0 6.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-rich-text {
@@ -1380,6 +1380,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
+  footer .site-footer-wrapper .site-footer-item .site-footer-blocks {
+    padding: 24px 0 96px;
+    padding: 2.4rem 0 9.6rem;
+  }
   footer .site-footer-wrapper .site-footer-item .site-footer-blocks .site-footer-block-rich-text {
     padding-bottom: 0;
   }

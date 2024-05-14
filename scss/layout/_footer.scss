@@ -19,7 +19,7 @@ footer .site-footer-wrapper {
         padding: 0;
         width: 100%;
         .site-footer-blocks {
-            @include rem( padding, spacing(4) 0 96px );
+            @include rem( padding, spacing(4) 0 spacing(9) );
             border-top: $border--dark;
             // Rich content block
             .site-footer-block-rich-text {
@@ -79,6 +79,7 @@ footer .site-footer-wrapper {
     footer .site-footer-wrapper {
         // Widget heading
         .site-footer-item .site-footer-blocks {
+            @include rem( padding, spacing(4) 0 96px );
              // Rich content block
              .site-footer-block-rich-text {
                 padding-bottom: 0;

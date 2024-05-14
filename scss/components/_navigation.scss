@@ -184,11 +184,26 @@
     // Parent item container
     .navmenu.navmenu-depth-1 {
         // Parent link
-        & > li.navmenu-item > a {
-            @extend %h4;
-            @include rem( padding, spacing(2) 4vw );
-            font-family: font-family( 'heading' );
-            margin: 0;
+        & > li.navmenu-item {
+            &.navmenu-item-parent {
+                @include rem( column-gap, spacing(2) );
+                display: grid;
+                grid-template-columns: 1fr max-content;
+                // Dropdown indicator
+                .navmenu-icon svg {
+                    @include rem((
+                        height: 8px,
+                        width: 12px
+                    ));
+                    color: color( 'steel', '4' );
+                }
+            }
+            & > a {
+                @extend %h4;
+                @include rem( padding, spacing(2) 4vw );
+                font-family: font-family( 'heading' );
+                margin: 0;
+            }
         }
     }
     // Child item container

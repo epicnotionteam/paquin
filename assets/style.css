@@ -2235,6 +2235,19 @@ ul.list--link-arrow li::before {
   text-decoration: underline;
 }
 
+.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent {
+  column-gap: 8px;
+  column-gap: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item.navmenu-item-parent .navmenu-icon svg {
+  height: 8px;
+  height: 0.8rem;
+  width: 12px;
+  width: 1.2rem;
+  color: #66787F;
+}
 .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a {
   padding: 8px 4vw;
   padding: 0.8rem 4vw;

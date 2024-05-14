@@ -1329,8 +1329,8 @@ footer .site-footer-wrapper .site-footer__row--second {
   display: grid;
 }
 footer .site-footer-wrapper .site-footer__row--second .container--brand img {
-  margin-bottom: 16px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   width: 128px;
   width: 12.8rem;
 }

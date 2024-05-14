@@ -1541,7 +1541,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding: 1.2rem 4vw;
   }
   .site-header .site-header-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content 1fr;
     transform: translateX(0);
     width: 100%;
   }
@@ -1553,7 +1553,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-right: 0;
   }
   .site-header .site-header-main .site-header-menu-toggle {
-    display: none;
+    width: 0;
+    transition: width 0.16s ease-out;
+  }
+  .site-header.site-header-sticky--scrolled {
+    background-color: red;
+  }
+  .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
+    width: auto;
   }
 }
 /*

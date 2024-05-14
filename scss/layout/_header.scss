@@ -162,13 +162,12 @@
                 transition: width 0.16s ease-out;
             }
         }
-    }
-
-    &.site-header-sticky--scrolled {
-        background-color: red;
-        // Hide mobile menu trigger
-        .site-header-menu-toggle {
-            width: auto;
+        &.site-header-sticky--scrolled {
+            background-color: red;
+            // Hide mobile menu trigger
+            .site-header-menu-toggle {
+                width: auto;
+            }
         }
     }
 }

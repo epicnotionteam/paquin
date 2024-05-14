@@ -1528,6 +1528,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .site-header {
+    transition: padding 0.24s ease-out;
+  }
+  .site-header.site-header-sticky--scrolled {
     padding: 12px 4vw;
     padding: 1.2rem 4vw;
   }
@@ -1535,6 +1538,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-template-columns: 1fr;
     transform: translateX(0);
     width: 100%;
+  }
+  .site-header .site-header-main .site-header-main-content {
+    column-gap: 24px;
+    column-gap: 2.4rem;
   }
   .site-header .site-header-main .live-search {
     margin-right: 0;

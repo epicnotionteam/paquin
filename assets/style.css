@@ -1680,14 +1680,15 @@ hr,
   height: 0.1rem;
   margin: 40px 0;
   margin: 4rem 0;
-  background-color: red;
+  background-color: #D6DBDD;
+  border: 0 none;
 }
 
 @media (min-width: 64em) {
   hr,
   .divider--base {
-    margin: 48px;
-    margin: 4.8rem;
+    margin: 48px 0;
+    margin: 4.8rem 0;
   }
 }
 .feed--table-specification {

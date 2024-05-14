@@ -14,7 +14,8 @@ hr,
         height: 1px,
         margin: spacing(6) 0
     ));
-    background-color: red;
+    background-color: color( 'steel', '5' );
+    border: 0 none;
 }
 
 
@@ -23,6 +24,6 @@ hr,
     // Adjust spacing
     hr,
     .divider--base {
-        @include rem( margin, spacing(7) );
+        @include rem( margin, spacing(7) 0 );
     }
 }

@@ -220,7 +220,7 @@
         {% comment %} Container [Brand] {% endcomment %}
         <div class="container--brand">
           <a class="site-logo" href="{{ routes.root_url }}">
-            {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company' }}
+            {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company', 'class:logo--footer' }}
           </a>
           {%- assign year = 'now' | date: '%Y' -%}
           <p>{{ 'footer.general.copyright_html' | t: year: year, shop_name: 'The Paquin Company' }}</p>

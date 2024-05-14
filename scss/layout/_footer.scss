@@ -19,4 +19,23 @@ footer .site-footer-wrapper {
         padding: 0;
         width: 100%;
     }
+    // Footer [Secondary]
+    .site-footer__row--second {
+        display: grid;
+        // Container [Brand]
+        .container--brand {
+            // Logo
+            .logo--footer {
+                @include rem(( 
+                    margin-bottom: spacing(3),
+                    width: 128px
+                ));
+            }
+            // Content
+            p {
+                @include font-size( 'xsmall' );
+                margin: 0;
+            }
+        }
+    }
 }

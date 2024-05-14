@@ -1325,6 +1325,21 @@ footer .site-footer-wrapper .site-footer-item {
   padding: 0;
   width: 100%;
 }
+footer .site-footer-wrapper .site-footer__row--second {
+  display: grid;
+}
+footer .site-footer-wrapper .site-footer__row--second .container--brand .logo--footer {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  width: 128px;
+  width: 12.8rem;
+}
+footer .site-footer-wrapper .site-footer__row--second .container--brand p {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
+  margin: 0;
+}
 
 .site-header {
   background-color: #212224;

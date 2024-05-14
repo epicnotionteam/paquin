@@ -2222,7 +2222,12 @@ ul.list--link-arrow li::before {
 }
 
 .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a {
+  padding: 8px 4vw;
+  padding: 0.8rem 4vw;
   font-family: "Paquin Sans Display", sans-serif;
   margin: 0;
-  padding: 0 4vw;
+}
+.mobile-nav-content .navmenu.navmenu-depth-2 {
+  margin: 4px 0;
+  margin: 0.4rem 0;
 }

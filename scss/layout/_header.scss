@@ -8,6 +8,46 @@
 // Header [Base]
 // --------------------------------------------------
 
+// Breakpoint [Small]
+.site-header {
+    background-color: color( 'steel', '1' );
+    padding: 0 4vw;
+    // Primary header content container
+    .site-header-main {
+        @include rem((
+            column-gap: spacing(3),
+            grid-template-columns: 48px 48px 1fr
+        ));
+        align-items: center;
+        background-color: color( 'steel', '1' );
+        // Trigger [Mobile Menu]
+        .site-header-menu-toggle {}
+        // Trigger [Mobile Search]
+        .site-header-mobile-search-button {}
+        // Container [Main]
+        .site-header-main-content {
+            // Container [Logo]
+            .site-header-logo {}
+            // Container [Actions]
+            .site-header-right {}
+        }
+        // Icon
+        svg {
+            color: yellow;
+            fill: red;
+        }
+        // Variant [Fill Width]
+        &.site-header--full-width {
+            @include rem( max-width, wrap( 'max' ) );
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+
+}
+
+
+/*
 .site-header {
     background-color: color( 'steel', '1' );
     padding: 0 4vw;
@@ -19,6 +59,7 @@
             margin: 0 auto;
             padding: 0;
         }
+
         // Grid structure
         .site-header-main-content {
             @include rem(( 
@@ -128,3 +169,4 @@
         }
     }
 }
+*/

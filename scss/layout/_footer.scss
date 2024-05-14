@@ -39,3 +39,20 @@ footer .site-footer-wrapper {
         }
     }
 }
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Adjust spacing
+    footer .site-footer-wrapper {
+        // Footer [Secondary]
+        .site-footer__row--second {
+            @include rem( column-gap, spacing(4) );
+            grid-template-columns: repeat( 12, 1fr );
+            // Child containers
+            & > * {
+                grid-column: span 6;
+            }
+        }
+    }
+}

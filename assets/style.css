@@ -1341,6 +1341,16 @@ footer .site-footer-wrapper .site-footer__row--second .container--brand p {
   margin: 0;
 }
 
+@media (min-width: 64em) {
+  footer .site-footer-wrapper .site-footer__row--second {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  footer .site-footer-wrapper .site-footer__row--second > * {
+    grid-column: span 6;
+  }
+}
 .site-header {
   background-color: #212224;
   padding: 0 4vw;

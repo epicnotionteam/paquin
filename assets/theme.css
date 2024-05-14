@@ -1974,14 +1974,7 @@ rgb(18, 18, 18)
   transform: rotate(-45deg);
 }
 
-.site-header-menu-toggle--button {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: transparent;
-}
-.site-header-menu-toggle--button:focus {
-  outline: none;
-}
+
 .site-header-menu-toggle--button .toggle-icon--bar {
   display: block;
   width: 22px;

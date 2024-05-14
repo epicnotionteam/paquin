@@ -98,10 +98,6 @@
         @include rem( margin, spacing(4) 4vw );
         border-bottom: $border--base;
     }
-    // Navigation [Secondary] » Link
-    .mobile-nav-content__secondary-menu a {
-        @include font-size( 'base' );
-    }
 }
 
 

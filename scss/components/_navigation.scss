@@ -234,4 +234,8 @@
             }
         } 
     }
+    // Navigation [Secondary] » Link
+    .mobile-nav-content__secondary-menu a {
+        @include font-size( 'small' );
+    }
 }

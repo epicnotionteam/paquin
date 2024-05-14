@@ -1499,13 +1499,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 2.4rem 4vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
-.site-header .mobile-nav-content__secondary-menu a {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
-}
 
 /*
 .site-header {
@@ -2291,4 +2284,11 @@ ul.list--link-arrow li::before {
   padding: 8px 4vw;
   padding: 0.8rem 4vw;
   font-weight: 400;
+}
+.mobile-nav-content .mobile-nav-content__secondary-menu a {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }

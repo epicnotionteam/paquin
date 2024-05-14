@@ -57,7 +57,7 @@ footer .site-footer-wrapper {
             img {
                 @include rem(( 
                     margin-bottom: 12px,
-                    width: 128px
+                    width: 112px
                 ));
             }
         }
@@ -109,6 +109,10 @@ footer .site-footer-wrapper {
                 align-content: flex-end;
                 order: 0;
                 width: 100%;
+                 // Logo
+                img {
+                    @include rem( width, 128px );
+                }
             }
             // Container [Signup]
             .container--signup {

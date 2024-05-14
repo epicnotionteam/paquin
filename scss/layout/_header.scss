@@ -8,7 +8,7 @@
 // Header [Base]
 // --------------------------------------------------
 
-// Breakpoint [Small]
+// Component container
 .site-header {
     @include rem( padding, spacing(1) 4vw );
     background-color: color( 'steel', '1' );
@@ -97,6 +97,22 @@
     .mobile-nav-content__border {
         @include rem( margin, spacing(4) 4vw );
         border-bottom: $border--base;
+    }
+}
+
+
+// Adjust @custom breakpoint
+// Inherited from parent
+@include mq( $from: 719px ) {
+    // Component container
+    .site-header {
+        // Primary header content container
+        .site-header-main {
+            // Hide mobile search trigger
+            .site-header-mobile-search-button {
+                display: none;
+            }
+        }
     }
 }
 

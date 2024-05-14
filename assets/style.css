@@ -1420,17 +1420,23 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .site-header-main {
   column-gap: 16px;
   column-gap: 1.6rem;
-  grid-template-columns: 56px 56px 1fr;
-  grid-template-columns: 5.6rem 5.6rem 1fr;
   align-items: center;
   background-color: #212224;
   display: grid;
+  grid-template-columns: max-content max-content 1fr;
 }
 .site-header .site-header-main::before, .site-header .site-header-main::after {
   display: none;
 }
 .site-header .site-header-main > * {
   position: relative;
+}
+.site-header .site-header-main .site-header-main-content {
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
 }
 .site-header .site-header-main .site-header-main-content .site-header-logo img {
   max-width: 128px;

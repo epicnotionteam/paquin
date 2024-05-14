@@ -10,9 +10,8 @@
 
 // Component container
 footer .site-footer-wrapper {
-    @include rem( margin-top, spacing(7) );
+    @include rem( padding, spacing(7) 4vw 0 );
     background-color: color( 'steel', '1' );
-    padding: 0 4vw;
     // Widget wrapper
     .site-footer-item {
         @include rem( max-width, wrap( 'max' ) );

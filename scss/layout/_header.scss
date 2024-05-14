@@ -14,7 +14,6 @@
     padding: 0 4vw;
     // Primary header content container
     .site-header-main {
-        @include rem( column-gap, spacing(3) );
         align-items: center;
         background-color: color( 'steel', '1' );
         display: grid;
@@ -34,7 +33,6 @@
         .site-header-mobile-search-button {}
         // Container [Main]
         .site-header-main-content {
-            @include rem( column-gap, spacing(3) );
             align-items: center;
             display: grid;
             grid-template-columns: 1fr max-content;
@@ -48,7 +46,6 @@
             }
             // Container [Actions]
             .site-header-right {
-                @include rem( column-gap, spacing(3) );
                 align-items: center;
                 display: grid;
                 grid-template-columns: max-content max-content;

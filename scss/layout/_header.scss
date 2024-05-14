@@ -14,6 +14,10 @@
     background-color: color( 'steel', '1' );
     // Primary header content container
     .site-header-main {
+        @include rem(( 
+            transform: translateX( -12px ),
+            width: calc( 100% + 24px )
+        ));
         align-items: center;
         background-color: color( 'steel', '1' );
         display: grid;
@@ -133,6 +137,8 @@
         // Adjust grid structure
         .site-header-main {
             grid-template-columns: 1fr;
+            transform: translateX( 0 );
+            width: 100%;
             // Live search container
             .live-search {
                 margin-right: 0;

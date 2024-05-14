@@ -10,6 +10,7 @@
 
 // Component container
 footer .site-footer-wrapper {
+    @include rem( margin-top, spacing(7) );
     background-color: color( 'steel', '1' );
     padding: 0 4vw;
     // Widget wrapper
@@ -19,16 +20,14 @@ footer .site-footer-wrapper {
         padding: 0;
         width: 100%;
         .site-footer-blocks {
-            @include rem(( 
-                margin-top: spacing(7),
-                padding: spacing(4) 0 96px
-            ));
+            @include rem( padding, spacing(4) 0 96px );
             border-top: $border--dark;
         }
     }
     // Footer [Secondary]
     .site-footer__row--second {
         @include rem( padding, spacing(6) 0 96px );
+        border-top: $border--dark;
         display: grid;
         // Container [Brand]
         .container--brand {

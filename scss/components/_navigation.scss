@@ -130,6 +130,7 @@
         a {
             @include font-size( 'small' );
             font-weight: font-weight( 'base' );
+            line-height: 1.8;
         }
     }
 }

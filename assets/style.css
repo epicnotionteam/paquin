@@ -2079,6 +2079,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   font-weight: 400;
+  line-height: 1.8;
 }
 
 .site-footer-block-menu .navmenu-item a:hover {

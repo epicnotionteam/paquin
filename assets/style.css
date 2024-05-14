@@ -2220,3 +2220,7 @@ ul.list--link-arrow li::before {
 .breadcrumbs-container a:hover {
   text-decoration: underline;
 }
+
+.mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a {
+  font-family: "Paquin Sans Display", sans-serif;
+}

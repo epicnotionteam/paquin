@@ -186,6 +186,7 @@
         // Parent link
         & > li.navmenu-item > a {
             @extend %h4;
+            font-family: font-family( 'heading' );
         }
     }
 }

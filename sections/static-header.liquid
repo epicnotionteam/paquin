@@ -90,34 +90,8 @@
       "
     >
       <div class="site-header-logo">
-        <a
-          class="site-logo"
-          href="{{ routes.root_url }}">
-          {% if section.settings.logo %}
-            {% assign logo_alt = section.settings.logo.alt %}
-            {% if logo_alt == '' %}
-              {% assign logo_alt = shop.name | strip %}
-            {% endif %}
-
-            {%
-              render 'rimg',
-              img: section.settings.logo,
-              class: 'site-logo-image',
-              alt: logo_alt,
-              size: logo_size,
-              focal_point: section.settings.logo.presentation.focal_point,
-            %}
-          {% else %}
-            {% if template == 'index' %}
-              <h1 class="site-logo-text">
-                {{ shop.name }}
-              </h1>
-            {% else %}
-              <span class="site-logo-text">
-                {{ shop.name }}
-              </span>
-            {% endif %}
-          {% endif %}
+        <a class="site-logo" href="{{ routes.root_url }}">
+          {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company' }}
         </a>
       </div>
 

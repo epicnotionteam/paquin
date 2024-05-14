@@ -116,6 +116,7 @@
             }
             // Adjust grid structure
             .site-header-main-content {
+                @include rem( column-gap, spacing(3) );
                 grid-template-columns: max-content 1fr max-content;
             }
         }
@@ -131,7 +132,11 @@
         // Primary header content container
         // Adjust grid structure
         .site-header-main {
-            // grid-template-columns: max-content 1fr;
+            grid-template-columns: 1fr;
+            // Live search container
+            .live-search {
+                margin-right: 0;
+            }
             // Hide mobile menu trigger
             .site-header-menu-toggle {
                 display: none;

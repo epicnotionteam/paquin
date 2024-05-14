@@ -1514,10 +1514,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     display: none;
   }
   .site-header .site-header-main .site-header-main-content {
+    column-gap: 16px;
+    column-gap: 1.6rem;
     grid-template-columns: max-content 1fr max-content;
   }
 }
 @media (min-width: 64em) {
+  .site-header .site-header-main {
+    grid-template-columns: 1fr;
+  }
+  .site-header .site-header-main .live-search {
+    margin-right: 0;
+  }
   .site-header .site-header-main .site-header-menu-toggle {
     display: none;
   }

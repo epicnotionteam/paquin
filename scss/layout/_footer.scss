@@ -19,6 +19,9 @@ footer .site-footer-wrapper {
         margin: 0 auto;
         padding: 0;
         width: 100%;
+        .site-footer-blocks {
+            @include rem( padding, spacing(4) 0 96px );
+        }
     }
     // Footer [Secondary]
     .site-footer__row--second {

@@ -184,7 +184,7 @@
     // Parent item container
     .navmenu.navmenu-depth-1 {
         // Parent link
-        & > a {
+        & > li.navmenu-item > a {
             @extend %h4;
         }
     }

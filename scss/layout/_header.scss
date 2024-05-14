@@ -27,14 +27,18 @@
         // Container [Main]
         .site-header-main-content {
             // Container [Logo]
-            .site-header-logo {}
+            .site-header-logo img {
+                @include rem( max-width, 128px );
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
             // Container [Actions]
             .site-header-right {}
         }
         // Icon
         svg {
-            color: yellow;
-            fill: red;
+            fill: white;
         }
         // Variant [Fill Width]
         &.site-header--full-width {

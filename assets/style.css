@@ -1425,9 +1425,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   align-items: center;
   background-color: #212224;
 }
+.site-header .site-header-main .site-header-main-content .site-header-logo img {
+  max-width: 128px;
+  max-width: 12.8rem;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
 .site-header .site-header-main svg {
-  color: yellow;
-  fill: red;
+  fill: white;
 }
 .site-header .site-header-main.site-header--full-width {
   max-width: 1590px;

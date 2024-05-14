@@ -174,3 +174,18 @@
         text-decoration: underline;
     }
 }
+
+
+// Navigation [Mobile, Off-Canvas]
+// --------------------------------------------------
+
+// Component container
+.mobile-nav-content {
+    // Parent item container
+    .navmenu.navmenu-depth-1 {
+        // Parent link
+        & > a {
+            @extend %h4;
+        }
+    }
+}

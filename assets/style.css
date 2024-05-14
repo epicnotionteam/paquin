@@ -1405,6 +1405,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   footer .site-footer-wrapper .site-footer__row--second .container--brand {
     align-content: flex-end;
     order: 0;
+    width: 100%;
   }
   footer .site-footer-wrapper .site-footer__row--second .container--signup {
     order: 1;

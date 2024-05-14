@@ -165,6 +165,7 @@
     }
 
     &.site-header-sticky--scrolled {
+        background-color: red;
         // Hide mobile menu trigger
         .site-header-menu-toggle {
             width: auto;

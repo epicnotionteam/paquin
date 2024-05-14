@@ -1514,6 +1514,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 44.9375em) {
+  .site-header {
+    padding: 12px 4vw;
+    padding: 1.2rem 4vw;
+  }
   .site-header .site-header-main {
     grid-template-columns: max-content 1fr;
   }

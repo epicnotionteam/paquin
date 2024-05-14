@@ -113,6 +113,7 @@
 @include mq( $from: 719px ) {
     // Component container
     .site-header {
+        @include rem( padding, 12px 4vw );
         // Primary header content container
         // Adjust grid structure
         .site-header-main {

@@ -1321,6 +1321,7 @@ footer .site-footer-wrapper {
 footer .site-footer-wrapper .site-footer-item {
   max-width: 1590px;
   max-width: 159rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -1336,7 +1337,7 @@ footer .site-footer-wrapper .site-footer__row--second .container--brand img {
   width: 128px;
   width: 12.8rem;
 }
-footer .site-footer-wrapper .site-footer__row--second .container--brand p {
+footer .site-footer-wrapper .site-footer__row--second p {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
@@ -1347,7 +1348,6 @@ footer .site-footer-wrapper .site-footer__row--second .container--brand p {
   footer .site-footer-wrapper .site-footer__row--second {
     column-gap: 24px;
     column-gap: 2.4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
     grid-template-columns: repeat(12, 1fr);
   }
   footer .site-footer-wrapper .site-footer__row--second > * {

@@ -16,7 +16,7 @@
     .site-header-main {
         @include rem((
             column-gap: spacing(3),
-            grid-template-columns: 48px 48px 1fr
+            grid-template-columns: 128px 1fr 128px
         ));
         align-items: center;
         background-color: color( 'steel', '1' );

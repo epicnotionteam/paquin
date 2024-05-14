@@ -1420,8 +1420,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .site-header-main {
   column-gap: 16px;
   column-gap: 1.6rem;
-  grid-template-columns: 48px 48px 1fr;
-  grid-template-columns: 4.8rem 4.8rem 1fr;
+  grid-template-columns: 128px 1fr 128px;
+  grid-template-columns: 12.8rem 1fr 12.8rem;
   align-items: center;
   background-color: #212224;
 }

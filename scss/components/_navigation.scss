@@ -235,7 +235,7 @@
         } 
     }
     // Navigation [Secondary] » Link
-    .mobile-nav-content__secondary-menu a {
+    .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
         @include font-size( 'small' );
     }
 }

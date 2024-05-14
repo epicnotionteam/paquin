@@ -221,12 +221,14 @@
         <div class="container--brand">
           Logo
           {%- assign year = 'now' | date: '%Y' -%}
-          {{ 'footer.general.copyright_html' | t: year: year, shop_name: shop.name }}
+          <p>{{ 'footer.general.copyright_html' | t: year: year, shop_name: 'The Paquin Company' }}</p>
         </div>
         {% comment %} Container [Signup, Email Subscription] {% endcomment %}
         <div class="container--signup">
-          Email Signup
-          {{ footer_right_column }}
+          <h3>Industry Insights and Product News to Your Inbox</h3>
+          [FORM]
+          <p>Sign up for our newsletter to access promotions and stay up to date on industry trends and new product releases.</p>
+          <p>Your details are secure — view our <a href="/pages/privacy-policy" target="_blank">Privacy Policy</a> for more details.</p>
         </div>
       </div>
 
@@ -374,4 +376,4 @@
   }
 }
 
-{% endschema %}
+{% endschema %}]

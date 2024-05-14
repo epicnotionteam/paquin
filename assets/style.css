@@ -1404,6 +1404,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   footer .site-footer-wrapper .site-footer__row--second .container--brand {
     align-content: flex-end;
+    order: 0;
+  }
+  footer .site-footer-wrapper .site-footer__row--second .container--brand {
+    order: 1;
   }
 }
 .site-header {

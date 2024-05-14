@@ -104,6 +104,11 @@ footer .site-footer-wrapper {
             // Container [Brand]
             .container--brand {
                 align-content: flex-end;
+                order: 0;
+            }
+            // Container [Signup]
+            .container--brand {
+                order: 1;
             }
         }
     }

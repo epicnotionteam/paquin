@@ -207,14 +207,6 @@
     <div class="site-footer-item site-footer-item--information">
       {% comment %} Footer [Secondary] {% endcomment %}
       <div class="site-footer__row site-footer__row--second">
-        {% comment %} Container [Brand] {% endcomment %}
-        <div class="container--brand">
-          <a class="site-logo" href="{{ routes.root_url }}">
-            {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company' }}
-          </a>
-          {%- assign year = 'now' | date: '%Y' -%}
-          <p>{{ 'footer.general.copyright_html' | t: year: year, shop_name: 'The Paquin Company' }}</p>
-        </div>
         {% comment %} Container [Signup, Email Subscription] {% endcomment %}
         <div class="container--signup">
           <h3>Industry Insights and Product News to Your Inbox</h3>
@@ -222,6 +214,14 @@
             [FORM]
           </div>
           <p>Sign up for our newsletter to access promotions and stay up to date on industry trends and new product releases. Your details are secure — view our <a href="/pages/privacy-policy" target="_blank">Privacy Policy</a> for more details.</p>
+        </div>
+        {% comment %} Container [Brand] {% endcomment %}
+        <div class="container--brand">
+          <a class="site-logo" href="{{ routes.root_url }}">
+            {{ 'logo--dark.svg' | asset_url | img_tag: 'The Paquin Company' }}
+          </a>
+          {%- assign year = 'now' | date: '%Y' -%}
+          <p>{{ 'footer.general.copyright_html' | t: year: year, shop_name: 'The Paquin Company' }}</p>
         </div>
       </div>
 

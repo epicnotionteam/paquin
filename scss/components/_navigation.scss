@@ -189,6 +189,18 @@
                 @include rem( column-gap, spacing(2) );
                 display: grid;
                 grid-template-columns: 1fr max-content;
+                .navmenu-button {
+                    @include rem((
+                        height: 48px,
+                        width: 48px
+                    ));
+                    border-radius: 0;
+                    margin-right: 0;
+                    padding: 0;
+                    position: relative;
+                    right: 0;
+                    top: 0;
+                }
                 // Dropdown indicator
                 .navmenu-icon svg {
                     @include rem((

@@ -65,11 +65,15 @@
             ));
             background-color: transparent;
             border: 0 none;
-        }
-        // Icon
-        svg {
-            display: block;
-            fill: white;
+            cursor: pointer;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            // Icon
+            svg {
+                display: block;
+                fill: white;
+            }
         }
         // Variant [Fill Width]
         &.site-header--full-width {

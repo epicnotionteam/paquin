@@ -1463,8 +1463,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 5.6rem;
   background-color: transparent;
   border: 0 none;
+  cursor: pointer;
+  display: flex;
+  place-content: center;
+  place-items: center;
 }
-.site-header .site-header-main svg {
+.site-header .site-header-main .site-header-menu-toggle svg,
+.site-header .site-header-main .site-header-mobile-search-button svg,
+.site-header .site-header-main .site-header-account--button svg,
+.site-header .site-header-main .site-header-cart--button svg {
   display: block;
   fill: white;
 }

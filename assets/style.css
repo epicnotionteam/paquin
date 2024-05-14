@@ -1674,6 +1674,21 @@ footer .site-footer-wrapper .site-footer-item {
   border: 0 none !important;
 }
 
+hr,
+.divider--base {
+  height: 1px;
+  height: 0.1rem;
+  margin: 40px;
+  margin: 4rem;
+}
+
+@media (min-width: 64em) {
+  hr,
+  .divider--base {
+    margin: 48px;
+    margin: 4.8rem;
+  }
+}
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

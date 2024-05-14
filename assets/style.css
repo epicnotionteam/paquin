@@ -1453,6 +1453,17 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
   grid-template-columns: max-content max-content;
 }
+.site-header .site-header-main .site-header-menu-toggle,
+.site-header .site-header-main .site-header-mobile-search-button,
+.site-header .site-header-main .site-header-account--button,
+.site-header .site-header-main .site-header-cart--button {
+  height: 56px;
+  height: 5.6rem;
+  width: 56px;
+  width: 5.6rem;
+  background-color: transparent;
+  border: 0 none;
+}
 .site-header .site-header-main svg {
   display: block;
   fill: white;

@@ -1424,6 +1424,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-template-columns: 12.8rem 1fr 12.8rem;
   align-items: center;
   background-color: #212224;
+  display: grid;
 }
 .site-header .site-header-main .site-header-main-content .site-header-logo img {
   max-width: 128px;

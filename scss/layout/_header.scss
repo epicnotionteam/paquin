@@ -20,6 +20,7 @@
         ));
         align-items: center;
         background-color: color( 'steel', '1' );
+        display: grid;
         // Trigger [Mobile Menu]
         .site-header-menu-toggle {}
         // Trigger [Mobile Search]

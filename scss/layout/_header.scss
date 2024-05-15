@@ -73,18 +73,22 @@
                 fill: white;
             }
         }
-        // Trigger [Cart] » Count
-        .site-header-cart--button .site-header-cart--count::after {
-            @include font-size( 'xsmall' );
-            @include rem(( 
-                border-radius: 16px,
-                padding: 4px 6px 
-            ));
-            background-color: color( 'action', '1' );
-            border: 0 none;
-            color: white;
-            font-weight: font-weight( 'bold' );
-            line-height: 1.28;
+        // Trigger [Cart]
+        .site-header-cart--button {
+            position: relative;
+            // Count indicator
+            .site-header-cart--count::after {
+                @include rem(( 
+                    border-radius: 16px,
+                    font-size: 12px,
+                    padding: 4px 6px 
+                ));
+                background-color: color( 'action', '1' );
+                border: 0 none;
+                color: white;
+                font-weight: font-weight( 'bold' );
+                line-height: 1.2;
+            }
         }
         // Variant [Fill Width]
         &.site-header--full-width {

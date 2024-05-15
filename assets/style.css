@@ -2145,6 +2145,10 @@ label {
 .live-search-form .search-flydown--results .search-flydown__list-item {
   padding: 0;
 }
+.live-search-form .search-flydown--results .search-flydown--product-items,
+.live-search-form .search-flydown--results .search-flydown__pages-posts-items {
+  width: 100%;
+}
 .live-search-form .search-flydown--results .search-flydown__products-pages-posts--two-columns {
   display: grid;
 }

@@ -127,6 +127,10 @@ label {
         .search-flydown__list-item {
             padding: 0;
         }
+        .search-flydown--product-items,
+        .search-flydown__pages-posts-items {
+            width: 100%;
+        }
         // Two-column results grid
         .search-flydown__products-pages-posts--two-columns {
             display: grid;

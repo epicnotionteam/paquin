@@ -32,7 +32,7 @@
             "link_text": "Link text",
             "link_url": "",
             "cta": "<p>Call-to-action<\/p>",
-            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
           }
         },
         "carousel_block_aNeN4P": {
@@ -43,7 +43,7 @@
             "link_text": "Link text",
             "link_url": "",
             "cta": "<p>Call-to-action<\/p>",
-            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
           }
         }
       },
@@ -256,7 +256,7 @@
         "content": "<p>Section content<\/p>",
         "link_text": "Link text",
         "link_url": "#test",
-        "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
         "theme": "dark"
       }
     },

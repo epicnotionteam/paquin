@@ -2075,13 +2075,19 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.live-search-form {
+  position: relative;
+  width: 100%;
+}
 .live-search-form .live-search-filter-label {
-  padding: 16px 20px;
-  padding: 1.6rem 2rem;
+  padding: 16px 32px 16px 20px;
+  padding: 1.6rem 3.2rem 1.6rem 2rem;
   background-color: #30373A;
   color: white;
 }
 .live-search-form .form-field-select-wrapper svg {
+  margin-right: 12px;
+  margin-right: 1.2rem;
   color: white;
 }
 

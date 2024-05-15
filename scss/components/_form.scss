@@ -85,14 +85,17 @@ label {
 
 // Component container
 .live-search-form {
+    position: relative;
+    width: 100%;
     // Category dropdown
     .live-search-filter-label {
-        @include rem( padding, spacing(3) 20px );
+        @include rem( padding, spacing(3) spacing(5) spacing(3) 20px );
         background-color: color( 'steel', '3' );
         color: white;
     }
     // Dropdown indicator icon
     .form-field-select-wrapper svg {
+        @include rem( margin-right, 12px );
         color: white;
     }
 }

@@ -85,6 +85,7 @@ label {
 
 // Component container
 .live-search-form {
+    @include rem( height, 48px );
     position: relative;
     width: 100%;
     // Form container
@@ -100,6 +101,10 @@ label {
         .form-field-select-wrapper svg {
             @include rem( margin-right, 12px );
             color: white;
+        }
+        // Search button
+        .live-search-button {
+            background-color: white;
         }
     }
 }

@@ -11,12 +11,12 @@
 {% assign section_cta_secondary_url  = section.settings.cta_secondary_url %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--hero-inline theme--dark" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');">
+<section class="section--hero-inline wrap--container heme--dark" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');">
     {% comment %} Content {% endcomment %}
     <div class="container--content">
         {% comment %} Heading {% endcomment %}
         {% if section_heading != blank %}
-            <h2 class="section__heading h1">{{ section_heading }}</h2>
+            <h2 class="section__heading">{{ section_heading }}</h2>
         {% endif %}
         {% comment %} Content {% endcomment %}
         {% if section_content != blank %}
@@ -28,7 +28,7 @@
         {% endif %}
         {% comment %} CTA [Secondary] {% endcomment %}
         {% if section_cta_secondary_text != blank and section_cta_secondary_url != blank %}
-            <a href="{{ section_cta_secondary_url }}" class="button--base">{{ section_cta_secondary_text }}</a>
+            <a href="{{ section_cta_secondary_url }}" class="button--outline">{{ section_cta_secondary_text }}</a>
         {% endif %}
     </div>
 </section>

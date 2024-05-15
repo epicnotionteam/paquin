@@ -644,6 +644,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/layout\/_section-content-blocks.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_section-content-blocks.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/layout\/_section-content-offset.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -654,6 +669,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_section-content-offset.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/layout\/_section-hero-inline.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_section-hero-inline.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

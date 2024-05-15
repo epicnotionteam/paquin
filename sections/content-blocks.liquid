@@ -12,36 +12,44 @@
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-blocks theme--{{ section_theme }}">
-    {% comment %} Heading [Small] {% endcomment %}
-    {% if section_heading_small != blank %}
-        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
-    {% endif %}
-    {% comment %} Heading [Large] {% endcomment %}
-    {% if section_heading_large != blank %}
-        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
-    {% endif %}
-    {% comment %} Feed {% endcomment %}
-    <div class="feed--block variant--col-{{ section_columns }}">
-        {% for block in section_blocks %}
-            {% comment %} Assign block data to vars {% endcomment %}
-            {% assign block_heading = block.settings.heading %}
-            {% assign block_content = block.settings.content %}
-            {% comment %} Output item {% endcomment %}
-            <div class="item">
-                {% comment %} Number {% endcomment %}
-                {% if section_block_numbering %}
-                    <span class="item__number">_{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
-                {% endif %}
-                {% comment %} Heading {% endcomment %}
-                {% if block_heading != blank %}
-                    <h3 class="item__heading">{{ block_heading }}</h3>
-                {% endif %}
-                {% comment %} Content {% endcomment %}
-                {% if block_content != blank %}
-                    <div class="item__content">{{ block_content | richtext }}</div>
-                {% endif %}
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Heading [Small] {% endcomment %}
+        {% if section_heading_small != blank %}
+            <div class="container--heading-small section__primary-heading">
+                <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
             </div>
-        {% endfor %}
+        {% endif %}
+        {% comment %} Heading [Large] {% endcomment %}
+        {% if section_heading_large != blank %}
+            <div class="container--heading-large">
+                <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+            </div>
+        {% endif %}
+        {% comment %} Feed {% endcomment %}
+        <div class="container--feed">
+            <div class="feed--block variant--col-{{ section_columns }}">
+                {% for block in section_blocks %}
+                    {% comment %} Assign block data to vars {% endcomment %}
+                    {% assign block_heading = block.settings.heading %}
+                    {% assign block_content = block.settings.content %}
+                    {% comment %} Output item {% endcomment %}
+                    <div class="item">
+                        {% comment %} Number {% endcomment %}
+                        {% if section_block_numbering %}
+                            <span class="item__number">_{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+                        {% endif %}
+                        {% comment %} Heading {% endcomment %}
+                        {% if block_heading != blank %}
+                            <h3 class="item__heading">{{ block_heading }}</h3>
+                        {% endif %}
+                        {% comment %} Content {% endcomment %}
+                        {% if block_content != blank %}
+                            <div class="item__content">{{ block_content | richtext }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </section>
 

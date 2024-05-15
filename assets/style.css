@@ -1235,8 +1235,7 @@ h2,
 }
 
 h3,
-.h3,
-.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title {
+.h3 {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 32px;
@@ -1266,7 +1265,7 @@ h4,
 
 h5,
 .h5,
-.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .search-flydown--product-title,
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title,
 .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
 .button--base,
 .product-form--atc-button {
@@ -2158,6 +2157,11 @@ label {
   margin: 0;
 }
 .live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .search-flydown--product-title {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   color: #30373A;
 }
 .live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .price.search-flydown--product__price {

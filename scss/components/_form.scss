@@ -122,7 +122,7 @@ label {
         .search-flydown--product-items {
             // Group title
             .search-flydown__group-title {
-                @extend %h3;
+                @extend %h5;
                 padding: 0;
             }
             // Result container [Product]
@@ -141,7 +141,7 @@ label {
                 }
                 // Title
                 .search-flydown--product-title {
-                    @extend %h5;
+                    @include font-size( 'small' );
                     color: color( 'steel', '3' );
                 }
                 // Price

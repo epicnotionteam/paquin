@@ -104,7 +104,9 @@ label {
         }
         // Search button
         .live-search-button {
+            @include rem( width, 48px );
             background-color: white;
+            border: 0 none;
         }
     }
 }

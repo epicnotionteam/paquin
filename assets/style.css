@@ -2097,7 +2097,10 @@ label {
   color: white;
 }
 .live-search-form > .form-field .live-search-button {
+  width: 48px;
+  width: 4.8rem;
   background-color: white;
+  border: 0 none;
 }
 
 p a,

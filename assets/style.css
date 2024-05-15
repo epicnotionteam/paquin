@@ -1235,7 +1235,8 @@ h2,
 }
 
 h3,
-.h3 {
+.h3,
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 32px;
@@ -2137,6 +2138,38 @@ label {
   width: 4.8rem;
   background-color: white;
   border: 0 none;
+}
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title {
+  padding: 0;
+}
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product {
+  column-gap: 12px;
+  column-gap: 1.2rem;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .search-flydown--product-image {
+  height: 48px;
+  height: 4.8rem;
+  width: 48px;
+  width: 4.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  margin: 0;
+}
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .search-flydown--product-title {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product .price.search-flydown--product__price {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  font-weight: 400;
 }
 
 .live-search-form > .form-field .live-search-form-field:focus {

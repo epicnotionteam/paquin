@@ -116,6 +116,41 @@ label {
             border: 0 none;
         }
     }
+    // Output container
+    .search-flydown--results {
+        // Result group
+        .search-flydown--product-items {
+            // Group title
+            .search-flydown__group-title {
+                @extend %h3;
+                padding: 0;
+            }
+            // Result container [Product]
+            .search-flydown--product {
+                @include rem( column-gap, 12px );
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                // Image
+                .search-flydown--product-image {
+                    @include rem((
+                        height: 48px,    
+                        width: 48px
+                    ));
+                    border: $border--base;
+                    margin: 0;
+                }
+                // Title
+                .search-flydown--product-title {
+                    @include font-size( 'small' );
+                }
+                // Price
+                .price.search-flydown--product__price {
+                    @include font-size( 'small' );
+                    font-weight: font-weight( 'base' );
+                }
+            }
+        }
+    }
 }
 
 

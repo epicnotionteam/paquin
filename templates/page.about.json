@@ -64,28 +64,118 @@
           "type": "team-block",
           "settings": {
             "name": "Michael Graf",
-            "role": "Role",
+            "role": "President",
             "social": "",
-            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_iF8RzN": {
           "type": "team-block",
           "settings": {
             "name": "Robert Williams",
-            "role": "Role",
+            "role": "Chairman & CEO",
             "social": "",
-            "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_AzXKfX": {
+          "type": "team-block",
+          "settings": {
+            "name": "Phil Marcantonio",
+            "role": "Chief Financial Officer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_qcaiPR": {
+          "type": "team-block",
+          "settings": {
+            "name": "Trudy Thompson",
+            "role": "Senior Buyer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_7BciN8": {
+          "type": "team-block",
+          "settings": {
+            "name": "Tom Colbert",
+            "role": "Operations Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_mBNkiF": {
+          "type": "team-block",
+          "settings": {
+            "name": "Steve Woytek",
+            "role": "Sr. Warehouse Technician",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_iNbQHr": {
+          "type": "team-block",
+          "settings": {
+            "name": "Steve Thompson",
+            "role": "Supply Chain Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_83FGGw": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Storey Jr.",
+            "role": "Territory Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_RgQbmV": {
+          "type": "team-block",
+          "settings": {
+            "name": "Cliff Martin",
+            "role": "Quality Control ISO Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_iJBTzG": {
+          "type": "team-block",
+          "settings": {
+            "name": "Denysse Myers",
+            "role": "Global Intex Production Supervisor",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_dWcAQa": {
+          "type": "team-block",
+          "settings": {
+            "name": "Emil Hufgard",
+            "role": "Customer Service",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         }
       },
       "block_order": [
         "team_block_6GiA4R",
-        "team_block_iF8RzN"
+        "team_block_iF8RzN",
+        "team_block_AzXKfX",
+        "team_block_qcaiPR",
+        "team_block_7BciN8",
+        "team_block_mBNkiF",
+        "team_block_iNbQHr",
+        "team_block_83FGGw",
+        "team_block_RgQbmV",
+        "team_block_iJBTzG",
+        "team_block_dWcAQa"
       ],
       "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Heading",
+        "heading_small": "Our Leadership Team",
+        "heading_large": "Driving Excellence in Every Aspect: Meet Our Global Leadership Team",
         "theme": "base"
       }
     },
@@ -96,7 +186,7 @@
         "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
         "subheading": "Our Founding",
         "content": "<p>Founded in 1949, the success of The Paquin Company is best reflected by the quality of the products that we represent and our hard earned reputation for integrity and good customer service, both of which are a testament to the quality of our team. We have maintained a leadership position by attracting, and retaining only the most talented and qualified individuals with the technical know-how, education, and personal skills necessary to support our customers.<\/p><p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems.  We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.  However, we are much more than your typical distributor. <\/p><p>Paquin associates are highly valued contributors to this process, and our organization.  Our work environment encourages creativity and communication.  Internally, we are always moving toward continuous improvement in customer service, products, and processes.  This improves Paquin’s ability to respond to our customers changing needs.<\/p><p>Paquin’s mission is to maintain and expand our reputation for integrity, innovation, quality, and superior customer service.<\/p>",
-        "image": "shopify:\/\/shop_images\/Screenshot2024-03-28at11.43.53AM.png",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
         "theme": "alt"
       }
     },

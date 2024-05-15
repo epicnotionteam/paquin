@@ -2432,6 +2432,10 @@ ul.list--link-arrow li::before {
 }
 
 @media (min-width: 44.9375em) {
+  .mobile-nav-content .navmenu.navmenu-depth-1 > li > a {
+    padding: 4px 24px;
+    padding: 0.4rem 2.4rem;
+  }
   .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
     padding: 4px 24px;
     padding: 0.4rem 2.4rem;

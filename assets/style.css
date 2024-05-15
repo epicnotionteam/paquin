@@ -1707,11 +1707,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 */
 .section--content-offset .section__grid {
+  row-gap: 32px;
+  row-gap: 3.2rem;
   display: grid;
 }
 
 @media (min-width: 64em) {
   .section--content-offset .section__grid {
+    row-gap: 40px;
+    row-gap: 4rem;
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }

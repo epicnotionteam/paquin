@@ -74,7 +74,7 @@
             }
         }
         // Trigger [Cart] » Count
-        .site-header-cart--button .site-header-cart--count {
+        .site-header-cart--button .site-header-cart--count::after {
             background-color: color( 'action', '1' );
             border: 0 none;
             color: white;

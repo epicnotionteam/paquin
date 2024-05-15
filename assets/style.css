@@ -1482,7 +1482,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
   fill: white;
 }
-.site-header .site-header-main .site-header-cart--button .site-header-cart--count {
+.site-header .site-header-main .site-header-cart--button .site-header-cart--count::after {
   background-color: #0F7F92;
   border: 0 none;
   color: white;

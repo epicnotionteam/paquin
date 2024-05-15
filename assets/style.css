@@ -2203,8 +2203,8 @@ ul.list--link-arrow li::before {
   transition: opacity 0.24s ease-out;
 }
 .site-navigation > .navmenu > li details summary {
-  padding: 24px 12px;
-  padding: 2.4rem 1.2rem;
+  padding: 12px 12px 24px;
+  padding: 1.2rem 1.2rem 2.4rem;
 }
 .site-navigation > .navmenu > li details summary a {
   padding: 0;
@@ -2221,8 +2221,8 @@ ul.list--link-arrow li::before {
 .site-navigation > .navmenu .navmenu-depth-2 {
   margin-left: -16px;
   margin-left: -1.6rem;
-  padding: 12px 0;
-  padding: 1.2rem 0;
+  padding: 12px 0 24px;
+  padding: 1.2rem 0 2.4rem;
 }
 .site-navigation > .navmenu .navmenu-depth-2 > li > a {
   padding: 2px 24px;

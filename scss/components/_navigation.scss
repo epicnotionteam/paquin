@@ -26,9 +26,7 @@
             details {
                 transition: opacity 0.24s ease-out;
                 summary {
-                    @include rem(( 
-                        padding: 24px 12px
-                    ));
+                    @include rem( padding, 12px 12px 24px );
                     // Link
                     a {
                         padding: 0;
@@ -51,7 +49,7 @@
         .navmenu-depth-2 {
             @include rem(( 
                 margin-left: -16px,
-                padding: 12px 0 
+                padding: 12px 0 24px 
             ));
             // Link
             & > li > a {

@@ -38,7 +38,7 @@
         }
         // Parent Links
         & > li > a {
-            @include rem( padding, 12px 12px 24px );
+            @include rem( padding, 12px 12px spacing(4) );
             opacity: 1;
             font-weight: font-weight( 'base' );
             transition: opacity 0.24s ease-out;
@@ -86,6 +86,15 @@
 }
 
 
+// Adjust @custom breakpoint
+@include mq( $from: 1024px ) {
+    // Adjust child menu container
+    .site-navigation > .navmenu .navmenu-depth-2 {
+        @include rem( padding, 12px 0 spacing(3)  );
+    }
+}
+
+
 // Navigation [Secondary, Desktop]
 // --------------------------------------------------
 
@@ -113,7 +122,7 @@
 
 
 // Adjust @custom breakpoint
-@include mq( $from: 1024 ) {
+@include mq( $from: 1024px ) {
     .site-navigation .site-navigation__secondary-menu li a {
         @include rem( height, 44px );
         align-items: center;

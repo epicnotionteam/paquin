@@ -2312,6 +2312,12 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
+@media (min-width: 64em) {
+  .site-navigation > .navmenu .navmenu-depth-2 {
+    padding: 12px 0 16px;
+    padding: 1.2rem 0 1.6rem;
+  }
+}
 .site-navigation .site-navigation__secondary-menu li.navmenu-item {
   font-size: 13px;
   font-size: 1.3rem;

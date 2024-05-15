@@ -2145,6 +2145,9 @@ label {
 .live-search-form .search-flydown--results .search-flydown__list-item {
   padding: 0;
 }
+.live-search-form .search-flydown--results .search-flydown__products-pages-posts--two-columns {
+  display: grid;
+}
 .live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product {
   column-gap: 12px;
   column-gap: 1.2rem;
@@ -2180,6 +2183,13 @@ label {
   border: 0 none;
 }
 
+@media (min-width: 64em) {
+  .live-search-form .search-flydown--results .search-flydown__products-pages-posts--two-columns {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 p a,
 li a {
   color: #0F7F92;

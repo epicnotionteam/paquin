@@ -127,6 +127,10 @@ label {
         .search-flydown__list-item {
             padding: 0;
         }
+        // Two-column results grid
+        .search-flydown__products-pages-posts--two-columns {
+            display: grid;
+        }
         // Result group
         .search-flydown--product-items {
             // Result container [Product]
@@ -168,4 +172,19 @@ label {
         }
     }
 }
-            
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+   // Component container
+    .live-search-form {
+        // Output container
+        .search-flydown--results {
+            // Two-column results grid
+            .search-flydown__products-pages-posts--two-columns {
+                @include rem( column-gap, spacing(4) );
+                grid-template-columns: repeat( 2, 1fr );
+            }
+        }
+    }
+}

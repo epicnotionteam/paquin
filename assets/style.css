@@ -1528,6 +1528,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding: 1.2rem 0;
     grid-template-columns: max-content 1fr max-content;
   }
+  .site-header .site-header-main .site-header-main-content .site-header-logo img {
+    margin-right: 12px;
+    margin-right: 1.2rem;
+  }
 }
 @media (min-width: 64em) {
   .site-header {

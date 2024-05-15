@@ -129,6 +129,10 @@
                     padding: 12px 0
                 ));
                 grid-template-columns: max-content 1fr max-content;
+                // Container [Logo]
+                .site-header-logo img {
+                    @include rem( margin-right, 12px );
+                }
             }
         }
     }

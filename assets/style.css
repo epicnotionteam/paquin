@@ -1531,8 +1531,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .site-header {
-    padding: 12px 4vw 0;
-    padding: 1.2rem 4vw 0;
     transition: padding 0.16s ease-out;
   }
   .site-header .site-header-main {

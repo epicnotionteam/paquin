@@ -140,7 +140,6 @@
 @include mq( $from: 1024px ) {
     // Component container
     .site-header {
-        @include rem( padding, 12px 4vw 0 );
         transition: padding 0.16s ease-out;
         // Primary header content container
         // Adjust grid structure

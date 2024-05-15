@@ -2326,6 +2326,14 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 
+@media (min-width: 64em) {
+  .site-navigation .site-navigation__secondary-menu li a {
+    height: 44px;
+    height: 4.4rem;
+    align-items: center;
+    display: flex;
+  }
+}
 .site-footer-block-menu .navmenu-item:not(:first-child) {
   margin: 0;
 }

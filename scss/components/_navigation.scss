@@ -86,10 +86,6 @@
 }
 
 
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {}
-
-
 // Navigation [Secondary, Desktop]
 // --------------------------------------------------
 
@@ -112,6 +108,16 @@
     // Link [:Hover]
     li.navmenu-item:hover {
         opacity: 1;
+    }
+}
+
+
+// Adjust @custom breakpoint
+@include mq( $from: 1024 ) {
+    .site-navigation .site-navigation__secondary-menu li a {
+        @include rem( height, 44px );
+        align-items: center;
+        display: flex;
     }
 }
 

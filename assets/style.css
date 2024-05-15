@@ -2075,6 +2075,11 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.live-search-form .live-search-filter-label {
+  background-color: #30373A;
+  color: white;
+}
+
 p a,
 li a {
   color: #0F7F92;

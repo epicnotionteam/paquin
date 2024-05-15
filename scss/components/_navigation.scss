@@ -38,9 +38,7 @@
         }
         // Parent Links
         & > li > a {
-            @include rem(( 
-                padding: 24px 12px
-            ));
+            @include rem( padding, 12px 12px 24px );
             opacity: 1;
             font-weight: font-weight( 'base' );
             transition: opacity 0.24s ease-out;

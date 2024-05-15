@@ -262,11 +262,11 @@
 @include mq( $from: 719px ) {
     .mobile-nav-content {
         // Adjust child link padding
-        .navmenu.navmenu-depth-1 > li > a {
+        .navmenu.navmenu-depth-1 > li.navmenu-item > a {
             @include rem( padding, spacing(1) spacing(4) );
         }
         // Adjust child link padding
-        .navmenu.navmenu-depth-2 > li > a {
+        .navmenu.navmenu-depth-2 > li.navmenu-item > a {
             @include rem( padding, spacing(1) spacing(4) );
         }
     }

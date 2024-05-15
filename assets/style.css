@@ -2096,11 +2096,23 @@ label {
   margin-right: 1.2rem;
   color: white;
 }
+.live-search-form > .form-field .live-search-form-field {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  border: 0 none;
+}
 .live-search-form > .form-field .live-search-button {
   width: 48px;
   width: 4.8rem;
   background-color: white;
   border: 0 none;
+}
+
+.live-search-form > .form-field .live-search-form-field:focus {
+  outline: none;
 }
 
 p a,

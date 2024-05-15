@@ -102,6 +102,11 @@ label {
             @include rem( margin-right, 12px );
             color: white;
         }
+        // Primary input
+        .live-search-form-field {
+            @include font-size( 'small' );
+            border: 0 none;
+        }
         // Search button
         .live-search-button {
             @include rem( width, 48px );
@@ -110,3 +115,15 @@ label {
         }
     }
 }
+
+
+// State management
+.live-search-form {
+    & > .form-field {
+        // Primary input [:Focus]
+        .live-search-form-field:focus {
+            outline: none;
+        }
+    }
+}
+            

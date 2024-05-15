@@ -163,9 +163,8 @@
 
         // State
         &.site-header-sticky--scrolled {
-            @include rem( padding, 12px 4vw );
-            &.site-header-nav--open {
-                @include rem( padding, 12px 4vw 0 );
+            &:not(.site-header-nav--open) {
+                @include rem( padding, 12px 4vw );
             }
             // Show mobile menu trigger
             .site-header-menu-toggle {

@@ -1553,13 +1553,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     transition: width 0.16s ease-out, margin 0.16s ease-out;
     width: 0;
   }
-  .site-header.site-header-sticky--scrolled {
+  .site-header.site-header-sticky--scrolled:not(.site-header-nav--open) {
     padding: 12px 4vw;
     padding: 1.2rem 4vw;
-  }
-  .site-header.site-header-sticky--scrolled.site-header-nav--open {
-    padding: 12px 4vw 0;
-    padding: 1.2rem 4vw 0;
   }
   .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
     margin-right: 24px;

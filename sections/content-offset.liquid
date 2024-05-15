@@ -11,37 +11,39 @@
 {% assign section_theme         = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--content-offset theme--{{ section_theme }}">
-    {% comment %} Heading [Small] {% endcomment %}
-    {% if section_heading_small != blank %}
-        <div class="container--heading-small">
-            <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
-        </div>
-    {% endif %}
-    {% comment %} Heading [Large] {% endcomment %}
-    {% if section_heading_large != blank %}
-        <div class="container--heading-large">
-            <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
-        </div>
-    {% endif %}
-    {% comment %} Subheading {% endcomment %}
-    {% if section_subheading != blank %}
-        <div class="container--subheading">
-            <p class="section__subheading">{{ section_subheading }}</p>
-        </div>
-    {% endif %}
-    {% comment %} Content {% endcomment %}
-    {% if section_content != blank %}
-        <div class="container--content">
-            <div class="section__content">{{ section_content | richtext }}</div>
-        </div>
-    {% endif %}
-    {% comment %} Image {% endcomment %}
-    {% if section_image != blank %}
-        <div class="container--image">
-            <img class="section__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section_heading_small }}">
-        </div>
-    {% endif %}
+<section class="section--content-offset theme--{{ section_theme }} wrap--container">
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Heading [Small] {% endcomment %}
+        {% if section_heading_small != blank %}
+            <div class="container--heading-small">
+                <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+            </div>
+        {% endif %}
+        {% comment %} Heading [Large] {% endcomment %}
+        {% if section_heading_large != blank %}
+            <div class="container--heading-large">
+                <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+            </div>
+        {% endif %}
+        {% comment %} Subheading {% endcomment %}
+        {% if section_subheading != blank %}
+            <div class="container--subheading">
+                <p class="section__subheading">{{ section_subheading }}</p>
+            </div>
+        {% endif %}
+        {% comment %} Content {% endcomment %}
+        {% if section_content != blank %}
+            <div class="container--content">
+                <div class="section__content">{{ section_content | richtext }}</div>
+            </div>
+        {% endif %}
+        {% comment %} Image {% endcomment %}
+        {% if section_image != blank %}
+            <div class="container--image">
+                <img class="section__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section_heading_small }}">
+            </div>
+        {% endif %}
+    </div>
 </section>
 
 {% schema %}

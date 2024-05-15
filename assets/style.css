@@ -1706,30 +1706,30 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     }
 }
 */
-.section--content-offset {
+.section--content-offset .section__grid {
   display: grid;
 }
 
 @media (min-width: 64em) {
-  .section--content-offset {
+  .section--content-offset .section__grid {
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }
-  .section--content-offset .container--heading-small {
+  .section--content-offset .section__grid .container--heading-small {
     grid-column: 1/span 12;
   }
-  .section--content-offset .container--heading-large {
+  .section--content-offset .section__grid .container--heading-large {
     grid-column: 1/span 6;
   }
-  .section--content-offset .container--subheading {
+  .section--content-offset .section__grid .container--subheading {
     grid-column: 1/span 2;
     grid-row: 3;
   }
-  .section--content-offset .container--content {
+  .section--content-offset .section__grid .container--content {
     grid-column: 3/span 4;
     grid-row: 3;
   }
-  .section--content-offset .container--image {
+  .section--content-offset .section__grid .container--image {
     grid-column: 8/span 4;
     grid-row: 3;
   }

@@ -10,7 +10,10 @@
 
 // Section container
 .section--content-offset {
-    display: grid;
+    // Grid structure
+    .section__grid {
+        display: grid;
+    }
 }
     
 
@@ -18,30 +21,33 @@
 @include mq( $from: medium ) {
     // Section container
     .section--content-offset {
-        grid-auto-rows: auto;
-        grid-template-columns: repeat( 12, 1fr );
-        // Container [Heading, Small]
-        .container--heading-small {
-            grid-column: 1 / span 12;
-        }
-        // Container [Heading, Large]
-        .container--heading-large {
-            grid-column: 1 / span 6;
-        }
-        // Container [Subeading]
-        .container--subheading {
-            grid-column: 1 / span 2;
-            grid-row: 3;
-        }
-        // Container [Content]
-        .container--content {
-            grid-column: 3 / span 4;
-            grid-row: 3;
-        }
-        // Container [Image]
-        .container--image {
-            grid-column: 8 / span 4;
-            grid-row: 3;
+        // Adjust grid structure
+        .section__grid {
+            grid-auto-rows: auto;
+            grid-template-columns: repeat( 12, 1fr );
+            // Container [Heading, Small]
+            .container--heading-small {
+                grid-column: 1 / span 12;
+            }
+            // Container [Heading, Large]
+            .container--heading-large {
+                grid-column: 1 / span 6;
+            }
+            // Container [Subeading]
+            .container--subheading {
+                grid-column: 1 / span 2;
+                grid-row: 3;
+            }
+            // Container [Content]
+            .container--content {
+                grid-column: 3 / span 4;
+                grid-row: 3;
+            }
+            // Container [Image]
+            .container--image {
+                grid-column: 8 / span 4;
+                grid-row: 3;
+            }
         }
     }
 }

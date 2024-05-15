@@ -31,14 +31,17 @@
         // Container [Heading, Small]
         .container--heading-small {
             grid-column: 1 / span 2;
+            grid-row: 3;
         }
         // Container [Content]
         .container--heading-small {
             grid-column: 3 / span 4;
+            grid-row: 3;
         }
         // Container [Heading, Small]
         .container--image {
             grid-column: 8 / span 4;
+            grid-row: 3;
         }
     }
 }

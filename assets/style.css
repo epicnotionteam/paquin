@@ -1723,12 +1723,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .section--content-offset .container--heading-small {
     grid-column: 1/span 2;
+    grid-row: 3;
   }
   .section--content-offset .container--heading-small {
     grid-column: 3/span 4;
+    grid-row: 3;
   }
   .section--content-offset .container--image {
     grid-column: 8/span 4;
+    grid-row: 3;
   }
 }
 .collection--section .productgrid--outer {

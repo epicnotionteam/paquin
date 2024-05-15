@@ -25,20 +25,20 @@
             grid-column: 1 / span 12;
         }
         // Container [Heading, Large]
-        .container--heading-small {
+        .container--heading-large {
             grid-column: 1 / span 6;
         }
-        // Container [Heading, Small]
-        .container--heading-small {
+        // Container [Subeading]
+        .container--subheading {
             grid-column: 1 / span 2;
             grid-row: 3;
         }
         // Container [Content]
-        .container--heading-small {
+        .container--content {
             grid-column: 3 / span 4;
             grid-row: 3;
         }
-        // Container [Heading, Small]
+        // Container [Image]
         .container--image {
             grid-column: 8 / span 4;
             grid-row: 3;

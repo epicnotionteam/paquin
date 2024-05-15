@@ -1718,14 +1718,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--content-offset .container--heading-small {
     grid-column: 1/span 12;
   }
-  .section--content-offset .container--heading-small {
+  .section--content-offset .container--heading-large {
     grid-column: 1/span 6;
   }
-  .section--content-offset .container--heading-small {
+  .section--content-offset .container--subheading {
     grid-column: 1/span 2;
     grid-row: 3;
   }
-  .section--content-offset .container--heading-small {
+  .section--content-offset .container--content {
     grid-column: 3/span 4;
     grid-row: 3;
   }

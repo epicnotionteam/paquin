@@ -1,0 +1,44 @@
+// ====================================================================================================
+// Layout / Section [Content, Offset]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--content-offset {
+    display: grid;
+}
+    
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--content-offset {
+        grid-auto-rows: auto;
+        grid-template-columns: repeat( 12, 1fr );
+        // Container [Heading, Small]
+        .container--heading-small {
+            grid-column: 1 / span 12;
+        }
+        // Container [Heading, Large]
+        .container--heading-small {
+            grid-column: 1 / span 6;
+        }
+        // Container [Heading, Small]
+        .container--heading-small {
+            grid-column: 1 / span 2;
+        }
+        // Container [Content]
+        .container--heading-small {
+            grid-column: 3 / span 4;
+        }
+        // Container [Heading, Small]
+        .container--image {
+            grid-column: 8 / span 4;
+        }
+    }
+}

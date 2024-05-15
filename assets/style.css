@@ -1554,12 +1554,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .site-header .site-header-main .site-header-menu-toggle {
     left: 0;
-    transition: width 0.16s ease-out;
+    transition: width 0.16s ease-out, margin 0.16s ease-out;
     width: 0;
   }
   .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
-    width: 64px;
-    width: 6.4rem;
+    margin-right: 24px;
+    margin-right: 2.4rem;
+    width: 24px;
+    width: 2.4rem;
   }
 }
 /*

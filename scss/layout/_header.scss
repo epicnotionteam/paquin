@@ -159,14 +159,17 @@
             // Hide mobile menu trigger
             .site-header-menu-toggle {
                 left: 0;
-                transition: width 0.16s ease-out;
+                transition: width 0.16s ease-out, margin 0.16s ease-out;
                 width: 0;
             }
         }
         &.site-header-sticky--scrolled {
             // Show mobile menu trigger
             .site-header-menu-toggle {
-                @include rem( width, 64px );
+                @include rem(( 
+                    margin-right: spacing(4),
+                    width: 24px 
+                ));
             }
         }
     }

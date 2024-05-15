@@ -1553,11 +1553,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-right: 0;
   }
   .site-header .site-header-main .site-header-menu-toggle {
-    width: 0;
+    left: 0;
     transition: width 0.16s ease-out;
+    width: 0;
   }
   .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
-    width: 48px;
+    width: 64px;
+    width: 6.4rem;
   }
 }
 /*

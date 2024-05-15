@@ -158,14 +158,15 @@
             }
             // Hide mobile menu trigger
             .site-header-menu-toggle {
-                width: 0;
+                left: 0;
                 transition: width 0.16s ease-out;
+                width: 0;
             }
         }
         &.site-header-sticky--scrolled {
             // Show mobile menu trigger
             .site-header-menu-toggle {
-                width: 48px;
+                @include rem( width, 64px );
             }
         }
     }

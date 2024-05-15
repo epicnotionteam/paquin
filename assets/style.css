@@ -2081,6 +2081,9 @@ label {
   background-color: #30373A;
   color: white;
 }
+.live-search-form .form-field-select-wrapper svg {
+  color: white;
+}
 
 p a,
 li a {

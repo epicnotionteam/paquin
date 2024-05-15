@@ -87,6 +87,7 @@ label {
 .live-search-form {
     // Category dropdown
     .live-search-filter-label {
+        @include rem( padding, spacing(3) 20px );
         background-color: color( 'steel', '3' );
         color: white;
     }

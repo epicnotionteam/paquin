@@ -27,8 +27,7 @@
                 transition: opacity 0.24s ease-out;
                 summary {
                     @include rem(( 
-                        line-height: 64px,
-                        padding: 0 12px
+                        padding: 24px 12px
                     ));
                     // Link
                     a {
@@ -42,8 +41,7 @@
         // Parent Links
         & > li > a {
             @include rem(( 
-                line-height: 64px,
-                padding: 0 12px
+                padding: 24px 12px
             ));
             opacity: 1;
             font-weight: font-weight( 'base' );

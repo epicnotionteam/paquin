@@ -2210,10 +2210,8 @@ ul.list--link-arrow li::before {
   transition: opacity 0.24s ease-out;
 }
 .site-navigation > .navmenu > li details summary {
-  line-height: 64px;
-  line-height: 6.4rem;
-  padding: 0 12px;
-  padding: 0 1.2rem;
+  padding: 24px 12px;
+  padding: 2.4rem 1.2rem;
 }
 .site-navigation > .navmenu > li details summary a {
   padding: 0;
@@ -2221,10 +2219,8 @@ ul.list--link-arrow li::before {
   opacity: 1;
 }
 .site-navigation > .navmenu > li > a {
-  line-height: 64px;
-  line-height: 6.4rem;
-  padding: 0 12px;
-  padding: 0 1.2rem;
+  padding: 24px 12px;
+  padding: 2.4rem 1.2rem;
   opacity: 1;
   font-weight: 400;
   transition: opacity 0.24s ease-out;

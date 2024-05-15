@@ -163,9 +163,9 @@
 
         // State
         &.site-header-sticky--scrolled {
-            &:not(.site-header-nav--open) {
+            // &:not(.site-header-nav--open) {
                 @include rem( padding, 12px 4vw );
-            }
+            // }
             // Show mobile menu trigger
             .site-header-menu-toggle {
                 @include rem(( 

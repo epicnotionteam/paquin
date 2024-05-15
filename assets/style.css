@@ -1553,7 +1553,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     transition: width 0.16s ease-out, margin 0.16s ease-out;
     width: 0;
   }
-  .site-header.site-header-sticky--scrolled:not(.site-header-nav--open) {
+  .site-header.site-header-sticky--scrolled {
     padding: 12px 4vw;
     padding: 1.2rem 4vw;
   }

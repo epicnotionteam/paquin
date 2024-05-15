@@ -2407,10 +2407,9 @@ ul.list--link-arrow li::before {
   color: #66787F;
 }
 .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a {
-  padding: 0 4vw;
-  padding: 0 4vw;
+  padding: 4px 4vw;
+  padding: 0.4rem 4vw;
   font-family: "Paquin Sans Display", sans-serif;
-  line-height: 1.4;
   margin: 0;
 }
 .mobile-nav-content .navmenu.navmenu-depth-2 {
@@ -2422,6 +2421,7 @@ ul.list--link-arrow li::before {
   padding: 8px 4vw;
   padding: 0.8rem 4vw;
   font-weight: 400;
+  line-height: 1.4;
 }
 .mobile-nav-content .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
   font-size: 15px;

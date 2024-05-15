@@ -1482,6 +1482,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
   fill: white;
 }
+.site-header .site-header-main .site-header-cart--button .site-header-cart--count {
+  background-color: #0F7F92;
+  border: 0 none;
+  color: white;
+}
 .site-header .site-header-main.site-header--full-width {
   max-width: 1590px;
   max-width: 159rem;

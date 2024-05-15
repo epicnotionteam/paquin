@@ -73,6 +73,12 @@
                 fill: white;
             }
         }
+        // Trigger [Cart] » Count
+        .site-header-cart--button .site-header-cart--count {
+            background-color: color( 'action', '1' );
+            border: 0 none;
+            color: white;
+        }
         // Variant [Fill Width]
         &.site-header--full-width {
             @include rem( max-width, wrap( 'max' ) );

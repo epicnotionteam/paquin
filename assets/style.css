@@ -1208,7 +1208,7 @@ h1, h2, h3, h4 {
 
 h1,
 .h1,
-.section--content-offset .section__grid .container--heading-large .section__heading--small {
+.section--content-offset .section__grid .container--heading-large .section__heading--large {
   font-size: 48px;
   font-size: 4.8rem;
   line-height: 56px;
@@ -1716,7 +1716,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-offset .section__grid .container--heading-small .section__heading--small {
   margin: 0;
 }
-.section--content-offset .section__grid .container--heading-large .section__heading--small {
+.section--content-offset .section__grid .container--heading-large .section__heading--large {
   margin: 0;
 }
 .section--content-offset .section__grid .container--subheading .section__subheading {

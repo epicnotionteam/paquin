@@ -85,18 +85,19 @@ label {
 
 // Component container
 .live-search-form {
-    @include rem( height, 54px );
-    position: relative;
-    width: 100%;
-    // Category dropdown
-    .live-search-filter-label {
-        @include rem( padding, spacing(3) spacing(5) spacing(3) 20px );
-        background-color: color( 'steel', '3' );
-        color: white;
-    }
-    // Dropdown indicator icon
-    .form-field-select-wrapper svg {
-        @include rem( margin-right, 12px );
-        color: white;
+    & > .form-field {
+        @include rem( height, 48px );
+        width: 100%;
+        // Category dropdown
+        .live-search-filter-label {
+            @include rem( padding, spacing(3) spacing(5) spacing(3) 20px );
+            background-color: color( 'steel', '3' );
+            color: white;
+        }
+        // Dropdown indicator icon
+        .form-field-select-wrapper svg {
+            @include rem( margin-right, 12px );
+            color: white;
+        }
     }
 }

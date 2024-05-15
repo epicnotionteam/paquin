@@ -2075,19 +2075,18 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.live-search-form {
-  height: 54px;
-  height: 5.4rem;
-  position: relative;
+.live-search-form > .form-field {
+  height: 48px;
+  height: 4.8rem;
   width: 100%;
 }
-.live-search-form .live-search-filter-label {
+.live-search-form > .form-field .live-search-filter-label {
   padding: 16px 32px 16px 20px;
   padding: 1.6rem 3.2rem 1.6rem 2rem;
   background-color: #30373A;
   color: white;
 }
-.live-search-form .form-field-select-wrapper svg {
+.live-search-form > .form-field .form-field-select-wrapper svg {
   margin-right: 12px;
   margin-right: 1.2rem;
   color: white;

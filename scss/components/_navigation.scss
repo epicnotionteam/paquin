@@ -244,7 +244,7 @@
         background-color: white;
         & > li {
             & > a {
-                @include rem( padding, spacing(2) 4vw );
+                @include rem( padding, spacing(1) 4vw );
                 font-weight: font-weight( 'base' );
                 line-height: 1.4;
             }
@@ -254,5 +254,16 @@
     .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
         @extend %p;
         @include font-size( 'small' );
+    }
+}
+
+
+// Adjust @custom breakpoint
+@include mq( $from: 719px ) {
+    .mobile-nav-content {
+        // Adjust link padding
+        .navmenu.navmenu-depth-2 > li > a {
+            @include rem( padding, spacing(1) spacing(4) );
+        }
     }
 }

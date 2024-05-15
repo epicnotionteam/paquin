@@ -2418,8 +2418,8 @@ ul.list--link-arrow li::before {
   background-color: white;
 }
 .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
-  padding: 8px 4vw;
-  padding: 0.8rem 4vw;
+  padding: 4px 4vw;
+  padding: 0.4rem 4vw;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -2429,4 +2429,11 @@ ul.list--link-arrow li::before {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+}
+
+@media (min-width: 44.9375em) {
+  .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
+    padding: 4px 24px;
+    padding: 0.4rem 2.4rem;
+  }
 }

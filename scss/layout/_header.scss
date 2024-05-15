@@ -139,9 +139,6 @@
     .site-header {
         @include rem( padding, 12px 4vw 0 );
         transition: padding 0.16s ease-out;
-        &.site-header-sticky--scrolled {
-            @include rem( padding, 12px 4vw );
-        }
         // Primary header content container
         // Adjust grid structure
         .site-header-main {
@@ -163,7 +160,13 @@
                 width: 0;
             }
         }
+
+        // State
         &.site-header-sticky--scrolled {
+            @include rem( padding, 12px 4vw );
+            &.site-header-nav--open {
+                @include rem( padding, 12px 4vw 0 );
+            }
             // Show mobile menu trigger
             .site-header-menu-toggle {
                 @include rem(( 

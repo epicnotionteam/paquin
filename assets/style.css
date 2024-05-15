@@ -2186,7 +2186,10 @@ ul.list--link-arrow li::before {
 }
 
 .site-navigation {
+  max-width: 1590px;
+  max-width: 159rem;
   background-color: transparent;
+  margin: 0 auto;
   padding: 0;
 }
 .site-navigation > .navmenu {

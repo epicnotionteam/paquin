@@ -85,9 +85,11 @@ label {
 
 // Component container
 .live-search-form {
+    position: relative;
+    width: 100%;
+    // Form container
     & > .form-field {
         @include rem( height, 48px );
-        width: 100%;
         // Category dropdown
         .live-search-filter-label {
             @include rem( padding, spacing(3) spacing(5) spacing(3) 20px );

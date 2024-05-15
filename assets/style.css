@@ -2075,10 +2075,13 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.live-search-form {
+  position: relative;
+  width: 100%;
+}
 .live-search-form > .form-field {
   height: 48px;
   height: 4.8rem;
-  width: 100%;
 }
 .live-search-form > .form-field .live-search-filter-label {
   padding: 16px 32px 16px 20px;

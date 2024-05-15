@@ -1550,6 +1550,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     transition: width 0.16s ease-out, margin 0.16s ease-out;
     width: 0;
   }
+  .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
+    margin-right: 24px;
+    margin-right: 2.4rem;
+    width: 24px;
+    width: 2.4rem;
+  }
 }
 /*
 .site-header {

@@ -141,7 +141,8 @@ label {
                 }
                 // Title
                 .search-flydown--product-title {
-                    @include font-size( 'small' );
+                    @extend %h5;
+                    color: color( 'steel', '3' );
                 }
                 // Price
                 .price.search-flydown--product__price {

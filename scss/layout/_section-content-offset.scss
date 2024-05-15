@@ -63,7 +63,10 @@
     .section--content-offset {
         // Adjust grid structure
         .section__grid {
-            @include rem( row-gap, spacing(6) );
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(6) 
+            ));
             grid-auto-rows: auto;
             grid-template-columns: repeat( 12, 1fr );
             // Container [Heading, Small]

@@ -118,13 +118,17 @@ label {
     }
     // Output container
     .search-flydown--results {
+        // Group title
+        .search-flydown__group-title {
+            @extend %h5;
+            padding: 0;
+        }
+        // Group item container
+        .search-flydown__list-item {
+            padding: 0;
+        }
         // Result group
         .search-flydown--product-items {
-            // Group title
-            .search-flydown__group-title {
-                @extend %h5;
-                padding: 0;
-            }
             // Result container [Product]
             .search-flydown--product {
                 @include rem( column-gap, 12px );

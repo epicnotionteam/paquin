@@ -1265,7 +1265,7 @@ h4,
 
 h5,
 .h5,
-.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title,
+.live-search-form .search-flydown--results .search-flydown__group-title,
 .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
 .button--base,
 .product-form--atc-button {
@@ -2139,7 +2139,10 @@ label {
   background-color: white;
   border: 0 none;
 }
-.live-search-form .search-flydown--results .search-flydown--product-items .search-flydown__group-title {
+.live-search-form .search-flydown--results .search-flydown__group-title {
+  padding: 0;
+}
+.live-search-form .search-flydown--results .search-flydown__list-item {
   padding: 0;
 }
 .live-search-form .search-flydown--results .search-flydown--product-items .search-flydown--product {

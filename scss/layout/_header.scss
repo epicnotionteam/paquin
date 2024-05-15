@@ -163,10 +163,9 @@
             }
         }
         &.site-header-sticky--scrolled {
-            background-color: red;
-            // Hide mobile menu trigger
+            // Show mobile menu trigger
             .site-header-menu-toggle {
-                width: auto;
+                width: 48px;
             }
         }
     }

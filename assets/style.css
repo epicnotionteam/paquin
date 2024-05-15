@@ -1556,11 +1556,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     width: 0;
     transition: width 0.16s ease-out;
   }
-  .site-header.site-header-sticky--scrolled {
-    background-color: red;
-  }
   .site-header.site-header-sticky--scrolled .site-header-menu-toggle {
-    width: auto;
+    width: 48px;
   }
 }
 /*

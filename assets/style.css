@@ -1483,9 +1483,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   fill: white;
 }
 .site-header .site-header-main .site-header-cart--button .site-header-cart--count::after {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
+  border-radius: 16px;
+  border-radius: 1.6rem;
+  padding: 4px 6px;
+  padding: 0.4rem 0.6rem;
   background-color: #0F7F92;
   border: 0 none;
   color: white;
+  font-weight: 600;
+  line-height: 1.28;
 }
 .site-header .site-header-main.site-header--full-width {
   max-width: 1590px;

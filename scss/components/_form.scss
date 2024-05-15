@@ -105,8 +105,9 @@ label {
         // Primary input
         .live-search-form-field {
             @include font-size( 'small' );
-            @include rem( padding, spacing(3) 20px );
+            @include rem( padding, spacing(3) );
             border: 0 none;
+            font-family: font-family( 'base' );
         }
         // Search button
         .live-search-button {

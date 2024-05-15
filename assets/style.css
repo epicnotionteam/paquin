@@ -2102,9 +2102,10 @@ label {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  padding: 16px 20px;
-  padding: 1.6rem 2rem;
+  padding: 16px;
+  padding: 1.6rem;
   border: 0 none;
+  font-family: "Paquin Sans Text", sans-serif;
 }
 .live-search-form > .form-field .live-search-button {
   width: 48px;

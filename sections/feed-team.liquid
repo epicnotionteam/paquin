@@ -9,49 +9,57 @@
 {% assign section_theme         = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--feed-team theme--{{ section_theme }}">
-    {% comment %} Heading [Small] {% endcomment %}
-    {% if section_heading_small != blank %}
-        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
-    {% endif %}
-    {% comment %} Heading [Large] {% endcomment %}
-    {% if section_heading_large != blank %}
-        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
-    {% endif %}
-    {% comment %} Feed {% endcomment %}
-    <div class="feed--team">
-        {% for block in section_blocks %}
-            {% comment %} Assign block data to vars {% endcomment %}
-            {% assign block_image  = block.settings.image %}
-            {% assign block_name   = block.settings.name %}
-            {% assign block_role   = block.settings.role %}
-            {% assign block_social = block.settings.role %}
-            {% comment %} Output item {% endcomment %}
-            <div class="item">
-                {% comment %} Container [Content] {% endcomment %}
-                <div class="container--image">
-                    {% comment %} Image {% endcomment %}
-                    {% if block_image != blank %}
-                        <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{  block_name }}">
-                    {% endif %}
-                </div>
-                {% comment %} Container [Content] {% endcomment %}
-                <div class="container--content">
-                    {% comment %} Name {% endcomment %}
-                    {% if block_name != blank %}
-                        <h3 class="item__name">{{ block_name }}</h3>
-                    {% endif %}
-                    {% comment %} Role {% endcomment %}
-                    {% if block_role != blank %}
-                        <p class="item__role">{{ block_role }}</p>
-                    {% endif %}
-                    {% comment %} LinkedIn {% endcomment %}
-                    {% if block_social != blank %}
-                        <a href="{{ block_social }}" class="item__link link--arrow-outgoing">LinkedIn</a>
-                    {% endif %}
-                </div>
+<section class="section--feed-team theme--{{ section_theme }} wrap--container">
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Heading [Small] {% endcomment %}
+        {% if section_heading_small != blank %}
+            <div class="container--heading-small">
+                <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
             </div>
-        {% endfor %}
+        {% endif %}
+        {% comment %} Heading [Large] {% endcomment %}
+        {% if section_heading_large != blank %}
+            <div class="container--heading-large">
+                <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+            </div>
+        {% endif %}
+        {% comment %} Feed {% endcomment %}
+        <div class="container--feed">
+            <div class="feed--team">
+                {% for block in section_blocks %}
+                    {% comment %} Assign block data to vars {% endcomment %}
+                    {% assign block_image  = block.settings.image %}
+                    {% assign block_name   = block.settings.name %}
+                    {% assign block_role   = block.settings.role %}
+                    {% assign block_social = block.settings.role %}
+                    {% comment %} Output item {% endcomment %}
+                    <div class="item">
+                        {% comment %} Container [Content] {% endcomment %}
+                        <div class="container--image">
+                            {% comment %} Image {% endcomment %}
+                            {% if block_image != blank %}
+                                <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{  block_name }}">
+                            {% endif %}
+                        </div>
+                        {% comment %} Container [Content] {% endcomment %}
+                        <div class="container--content">
+                            {% comment %} Name {% endcomment %}
+                            {% if block_name != blank %}
+                                <h3 class="item__name">{{ block_name }}</h3>
+                            {% endif %}
+                            {% comment %} Role {% endcomment %}
+                            {% if block_role != blank %}
+                                <p class="item__role">{{ block_role }}</p>
+                            {% endif %}
+                            {% comment %} LinkedIn {% endcomment %}
+                            {% if block_social != blank %}
+                                <a href="{{ block_social }}" class="item__link link--arrow-outgoing">LinkedIn</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </section>
 

@@ -2139,6 +2139,10 @@ label {
   background-color: white;
   border: 0 none;
 }
+.live-search-form .search-flydown--results {
+  padding: 16px;
+  padding: 1.6rem;
+}
 .live-search-form .search-flydown--results .search-flydown__group-title {
   padding: 0;
 }

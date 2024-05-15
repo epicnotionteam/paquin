@@ -118,6 +118,7 @@ label {
     }
     // Output container
     .search-flydown--results {
+        @include rem( padding, spacing(3) );
         // Group title
         .search-flydown__group-title {
             @extend %h5;

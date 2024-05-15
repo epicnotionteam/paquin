@@ -2102,6 +2102,8 @@ label {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
   border: 0 none;
 }
 .live-search-form > .form-field .live-search-button {
@@ -2112,7 +2114,7 @@ label {
 }
 
 .live-search-form > .form-field .live-search-form-field:focus {
-  outline: none;
+  border: 0 none;
 }
 
 p a,

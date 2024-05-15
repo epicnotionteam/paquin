@@ -105,6 +105,7 @@ label {
         // Primary input
         .live-search-form-field {
             @include font-size( 'small' );
+            @include rem( padding, spacing(3) 20px );
             border: 0 none;
         }
         // Search button
@@ -122,7 +123,7 @@ label {
     & > .form-field {
         // Primary input [:Focus]
         .live-search-form-field:focus {
-            outline: none;
+            border: 0 none;
         }
     }
 }

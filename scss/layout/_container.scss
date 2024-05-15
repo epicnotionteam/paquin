@@ -41,3 +41,16 @@
     @include rem( max-width, wrap( 'max' ) );
     width: 100%;
 }
+
+
+// General
+// ----------------------------------------------------------------------------------------------------
+
+// Section headings
+.section__primary-heading {
+    @include rem((
+        margin-top: spacing(6),
+        padding-top: spacing(4)
+    ));
+    border-top: $border--base;
+}

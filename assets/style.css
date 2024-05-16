@@ -2134,6 +2134,8 @@ hr,
   }
 }
 .feed--block {
+  row-gap: 32px;
+  row-gap: 3.2rem;
   display: grid;
 }
 .feed--block .item {
@@ -2156,6 +2158,13 @@ hr,
   margin: 0;
 }
 
+@media (min-width: 48em) {
+  .feed--block {
+    column-gap: 48px;
+    column-gap: 4.8rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 64em) {
   .feed--block.variant--col-3 {
     column-gap: 48px;

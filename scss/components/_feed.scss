@@ -10,6 +10,7 @@
 
 // Component container
 .feed--block {
+    @include rem( row-gap, spacing(5) );
     display: grid;
     // Item container
     .item {
@@ -30,6 +31,16 @@
                 margin: 0;
             }
         }
+    }
+}
+
+
+// Adjust @small breakpoint
+@include mq( $from: small ) {
+    // Adjust grid structure
+    .feed--block {
+        @include rem( column-gap, spacing(7) );
+        grid-template-columns: repeat( 2, 1fr );
     }
 }
 

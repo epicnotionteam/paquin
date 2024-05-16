@@ -13,13 +13,28 @@
     @include rem((
         min-height: 512px
     ));
+    justify-content: center;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
     // Container [Content]
     .container--content {
         @include rem( max-width, 800px );
-        margin: 0 auto;
         text-align: center;
+        // Heading
+        .section__heading {
+            margin: 0;
+        }
+        // Content
+        .section__content {
+            // Strip margin from final <p>
+            p:last-child {
+                margin: 0;
+            }
+        }
+        // CTAs
+        .section__cta {}
     }
 }
     

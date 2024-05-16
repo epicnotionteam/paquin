@@ -1934,16 +1934,23 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-inline {
   min-height: 512px;
   min-height: 51.2rem;
+  justify-content: center;
   background-position: center;
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 .section--hero-inline .container--content {
   max-width: 800px;
   max-width: 80rem;
-  margin: 0 auto;
   text-align: center;
 }
-
+.section--hero-inline .container--content .section__heading {
+  margin: 0;
+}
+.section--hero-inline .container--content .section__content p:last-child {
+  margin: 0;
+}
 @media (min-width: 64em) {
   .section--hero-inline {
     min-height: 640px;

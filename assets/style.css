@@ -1252,16 +1252,28 @@ h4,
 .h4,
 .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a,
 .feed--team .item .item__name {
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: 26px;
-  letter-spacing: 0.16px;
-  letter-spacing: 0.016rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  letter-spacing: 0.12px;
+  letter-spacing: 0.012rem;
   letter-spacing: 0.26px;
   letter-spacing: 0.026rem;
   margin: 0 0 8px;
   margin: 0 0 0.8rem;
   font-weight: 400;
+}
+@media screen and (min-width: 1240px) {
+  h4,
+  .h4,
+  .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a,
+  .feed--team .item .item__name {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 26px;
+    letter-spacing: 0.16px;
+    letter-spacing: 0.016rem;
+  }
 }
 
 h5,

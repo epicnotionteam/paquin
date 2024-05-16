@@ -52,6 +52,9 @@
             // Container [Content]
             .container--content {
                 grid-column: 1 / span 6;
+                & > * {
+                    @include rem( max-width, 512px );
+                }
             }
             // Container [Media]
             .container--media {

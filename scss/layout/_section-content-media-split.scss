@@ -61,12 +61,15 @@
             }
             // Container [Content]
             .container--content {
-                @include rem( row-gap, spacing(3) );
                 align-content: center;
-                display: grid;
                 grid-column: 1 / span 6;
                 .section__wrap--content {
-                    @include rem( max-width, 512px );
+                    @include rem(( 
+                        max-width: 512px,
+                        row-gap: spacing(3)
+                    ));
+                    align-content: center;
+                    display: grid;
                 }
             }
             // Container [Media]

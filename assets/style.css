@@ -1767,7 +1767,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .section--carousel-content-media .section__grid .container--heading-small .section__heading--small {
-  color: red !important;
   margin: 0;
 }
 @media (min-width: 64em) {

@@ -10,11 +10,11 @@
 
 // Component container
 .carousel--content-media {
-    background-color: red;
     // Item container
     .item {
         // Grid structure
         .item__grid {
+            display: grid;
             // Container [Content]
             .container--content {
                 // Wrap [Content]
@@ -44,7 +44,13 @@
                 }
             }
             // Container [Media]
-            .container--media {}
+            .container--media {
+                // Image
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
         }
     }
 }
@@ -54,13 +60,13 @@
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
-
     // Component container
     .carousel--content-media {
         // Item container
         .item {
             // Grid structure
             .item__grid {
+                grid-template-columns: repeat( 2, 1fr );
                 // Container [Content]
                 .container--content {
                     // Wrap [Content]

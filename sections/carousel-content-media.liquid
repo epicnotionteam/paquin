@@ -30,46 +30,48 @@
                 {% assign block_image      = block.settings.image %}
                 {% comment %} Output item {% endcomment %}
                 <div class="item">
-                    {% comment %} Container [Content] {% endcomment %}
-                    <div class="container--content">
-                        {% comment %} Wrap [Content] {% endcomment %}
-                        <div class="item__wrap--content">
-                            {% comment %} Logo {% endcomment %}
-                            {% if block_logo != blank %}
-                                <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
-                            {% endif %}
-                            {% comment %} Subeading {% endcomment %}
-                            {% if block_subheading != blank %}
-                                <p class="item__subheading">{{ block_subheading }}</p>
-                            {% endif %}
-                            {% comment %} Heading {% endcomment %}
-                            {% if block_heading != blank %}
-                                <h3 class="item__heading">{{ block_heading }}</h3>
-                            {% endif %}
-                            {% comment %} Content {% endcomment %}
-                            {% if block_content != blank %}
-                                <div class="item__content">{{ block_content | richtext }}</div>
-                            {% endif %}
-                            {% comment %} Link {% endcomment %}
-                            {% if block_link_text != blank and block_link_url != blank %}
-                                <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
-                            {% endif %}
-                        </div>
-                            {% comment %} Wrap [Actions] {% endcomment %}
-                            <div class="item__wrap--actions">
-                                {% comment %} CTA {% endcomment %}
-                                {% if block_cta != blank %}
-                                    <div class="item__cta">{{ block_cta | richtext }}</div>
+                    <div class="item__grid">
+                        {% comment %} Container [Content] {% endcomment %}
+                        <div class="container--content">
+                            {% comment %} Wrap [Content] {% endcomment %}
+                            <div class="item__wrap--content">
+                                {% comment %} Logo {% endcomment %}
+                                {% if block_logo != blank %}
+                                    <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
                                 {% endif %}
-                                {% comment %} Navigation {% endcomment %}
-                                <p>Navigation arrows</p>
+                                {% comment %} Subeading {% endcomment %}
+                                {% if block_subheading != blank %}
+                                    <p class="item__subheading">{{ block_subheading }}</p>
+                                {% endif %}
+                                {% comment %} Heading {% endcomment %}
+                                {% if block_heading != blank %}
+                                    <h3 class="item__heading">{{ block_heading }}</h3>
+                                {% endif %}
+                                {% comment %} Content {% endcomment %}
+                                {% if block_content != blank %}
+                                    <div class="item__content">{{ block_content | richtext }}</div>
+                                {% endif %}
+                                {% comment %} Link {% endcomment %}
+                                {% if block_link_text != blank and block_link_url != blank %}
+                                    <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
+                                {% endif %}
+                            </div>
+                                {% comment %} Wrap [Actions] {% endcomment %}
+                                <div class="item__wrap--actions">
+                                    {% comment %} CTA {% endcomment %}
+                                    {% if block_cta != blank %}
+                                        <div class="item__cta">{{ block_cta | richtext }}</div>
+                                    {% endif %}
+                                    {% comment %} Navigation {% endcomment %}
+                                    <p>Navigation arrows</p>
+                            </div>
                         </div>
-                    </div>
-                    {% comment %} Container [Media] {% endcomment %}
-                    <div class="container--media">
-                        {% if block_image != blank %}
-                            <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
-                        {% endif %}
+                        {% comment %} Container [Media] {% endcomment %}
+                        <div class="container--media">
+                            {% if block_image != blank %}
+                                <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             {% endfor %}

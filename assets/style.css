@@ -2273,8 +2273,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border: 0 none !important;
 }
 
-.carousel--content-media {
-  background-color: red;
+.carousel--content-media .item .item__grid {
+  display: grid;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--content .item__subheading {
   font-size: 13px;
@@ -2291,7 +2291,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
   grid-template-columns: 11fr max-content;
 }
+.carousel--content-media .item .item__grid .container--media img {
+  display: block;
+  max-width: 100%;
+}
+
 @media (min-width: 64em) {
+  .carousel--content-media .item .item__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .carousel--content-media .item .item__grid .container--content .item__wrap--content {
     max-width: 512px;
     max-width: 51.2rem;

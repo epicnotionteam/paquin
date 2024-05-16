@@ -22,6 +22,18 @@
                 margin: 0;
             }
         }
+        // Container [Content]
+        .container--content {
+            // Subheading
+            .section__subheading {
+                @include font-size( 'xsmall' );
+                @include rem( margin-bottom, spacing(1) );
+            }
+            // Heading [Large]
+            .section__heading--large {
+                @include rem( margin-bottom, spacing(2) );
+            }
+        }
         // Container [Media] » Image
         .container--media img {
             display: block;
@@ -49,6 +61,9 @@
             }
             // Container [Content]
             .container--content {
+                @include rem( row-gap, spacing(3) );
+                align-content: center;
+                display: grid;
                 grid-column: 1 / span 6;
                 .section__wrap--content {
                     @include rem( max-width, 512px );

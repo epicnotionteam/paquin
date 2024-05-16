@@ -2234,6 +2234,10 @@ hr,
   .feed--team {
     grid-template-columns: repeat(4, 1fr);
   }
+  .feed--team .container--content {
+    padding-right: 8px;
+    padding-right: 0.8rem;
+  }
 }
 @media (min-width: 77.5em) {
   .feed--team {

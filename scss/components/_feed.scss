@@ -125,6 +125,10 @@
     // Component container
     .feed--team {
         grid-template-columns: repeat( 4, 1fr );
+        // Container [Content]
+        .container--content {
+            @include rem( padding-right, spacing(2) );
+        }
     }
 }
 

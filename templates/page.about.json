@@ -252,12 +252,12 @@
     "about-careers": {
       "type": "content-media-split",
       "settings": {
-        "heading_small": "Heading",
-        "subheading": "Subheading",
-        "heading_large": "Heading",
-        "content": "<p>Section content<\/p>",
-        "link_text": "Link text",
-        "link_url": "#test",
+        "heading_small": "Careers at The Paquin Company",
+        "subheading": "Where Engineering Talent Thrives",
+        "heading_large": "Join Our Team and Help Shape the Future of Engineering",
+        "content": "<p>Join our team and be part of an innovative engineering journey. At Paquin, we value creativity, precision, and a passion for problem-solving, offering roles that challenge and advance your career in a dynamic environment.<\/p>",
+        "link_text": "Explore career opportunities",
+        "link_url": "shopify:\/\/pages\/careers",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
         "theme": "dark"
       }

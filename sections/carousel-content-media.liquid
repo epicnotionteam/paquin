@@ -18,100 +18,92 @@
         {% endif %}
         {% comment %} Carousel {% endcomment %}
         <div class="container--carousel">
-            <div class="carousel--content-media">
-                {% assign block_count = section_blocks.size %}
-                {% for block in section_blocks %}
-                    {% comment %} Assign block data to vars {% endcomment %}
-                    {% assign block_logo         = block.settings.logo %}
-                    {% assign block_subheading   = block.settings.subheading %}
-                    {% assign block_heading      = block.settings.heading %}
-                    {% assign block_heading_size = block.settings.heading_size %}
-                    {% assign block_content      = block.settings.content %}
-                    {% assign block_link_text    = block.settings.link_text %}
-                    {% assign block_link_url     = block.settings.link_url %}
-                    {% assign block_cta          = block.settings.cta %}
-                    {% assign block_image        = block.settings.image %}
-                    {% comment %} Output item {% endcomment %}
-                    <div class="item">
-                        <div class="item__grid">
-                            {% comment %} Container [Content] {% endcomment %}
-                            <div class="container--content">
-                                {% comment %} Wrap [Content] {% endcomment %}
-                                <div class="item__wrap--content">
-                                    {% comment %} Logo {% endcomment %}
-                                    {% if block_logo != blank %}
-                                        <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
-                                    {% endif %}
-                                    {% comment %} Subeading {% endcomment %}
-                                    {% if block_subheading != blank %}
-                                        <p class="item__subheading">{{ block_subheading }}</p>
-                                    {% endif %}
-                                    {% comment %} Heading {% endcomment %}
-                                    {% if block_heading != blank %}
-                                        <h3 class="item__heading {{ block_heading_size }}">{{ block_heading }}</h3>
-                                    {% endif %}
-                                    {% comment %} Content {% endcomment %}
-                                    {% if block_content != blank %}
-                                        <div class="item__content">{{ block_content | richtext }}</div>
-                                    {% endif %}
-                                    {% comment %} Link {% endcomment %}
-                                    {% if block_link_text != blank and block_link_url != blank %}
-                                        <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
-                                    {% endif %}
-                                </div>
-                                {% comment %} Wrap [Actions] {% endcomment %}
-                                <div class="item__wrap--actions">
-                                    {% comment %} CTA {% endcomment %}
-                                    {% if block_cta != blank %}
-                                        <div class="item__cta">{{ block_cta | richtext }}</div>
-                                    {% endif %}
-                                    {% comment %} Navigation {% endcomment %}
-                                    <div class="item__navigation">
-                                        <span class="item__count">{{ forloop.index }} / {{ block_count }}</span>
-                                        <button class="trigger--next">Navigation arrows</button>
+            <div class="glide carousel--content-media" data-carousel>
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                        {% assign block_count = section_blocks.size %}
+                        {% for block in section_blocks %}
+                            {% comment %} Assign block data to vars {% endcomment %}
+                            {% assign block_logo         = block.settings.logo %}
+                            {% assign block_subheading   = block.settings.subheading %}
+                            {% assign block_heading      = block.settings.heading %}
+                            {% assign block_heading_size = block.settings.heading_size %}
+                            {% assign block_content      = block.settings.content %}
+                            {% assign block_link_text    = block.settings.link_text %}
+                            {% assign block_link_url     = block.settings.link_url %}
+                            {% assign block_cta          = block.settings.cta %}
+                            {% assign block_image        = block.settings.image %}
+                            {% comment %} Output item {% endcomment %}
+                            <li class="glide__slide item">
+                                <div class="item__grid">
+                                    {% comment %} Container [Content] {% endcomment %}
+                                    <div class="container--content">
+                                        {% comment %} Wrap [Content] {% endcomment %}
+                                        <div class="item__wrap--content">
+                                            {% comment %} Logo {% endcomment %}
+                                            {% if block_logo != blank %}
+                                                <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
+                                            {% endif %}
+                                            {% comment %} Subeading {% endcomment %}
+                                            {% if block_subheading != blank %}
+                                                <p class="item__subheading">{{ block_subheading }}</p>
+                                            {% endif %}
+                                            {% comment %} Heading {% endcomment %}
+                                            {% if block_heading != blank %}
+                                                <h3 class="item__heading {{ block_heading_size }}">{{ block_heading }}</h3>
+                                            {% endif %}
+                                            {% comment %} Content {% endcomment %}
+                                            {% if block_content != blank %}
+                                                <div class="item__content">{{ block_content | richtext }}</div>
+                                            {% endif %}
+                                            {% comment %} Link {% endcomment %}
+                                            {% if block_link_text != blank and block_link_url != blank %}
+                                                <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
+                                            {% endif %}
+                                        </div>
+                                        {% comment %} Wrap [Actions] {% endcomment %}
+                                        <div class="item__wrap--actions">
+                                            {% comment %} CTA {% endcomment %}
+                                            {% if block_cta != blank %}
+                                                <div class="item__cta">{{ block_cta | richtext }}</div>
+                                            {% endif %}
+                                            {% comment %} Navigation {% endcomment %}
+                                            <div class="item__navigation">
+                                                <span class="item__count">{{ forloop.index }} / {{ block_count }}</span>
+                                                <button class="trigger--next">Navigation arrows</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% comment %} Container [Media] {% endcomment %}
+                                    <div class="container--media">
+                                        {% if block_image != blank %}
+                                            <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
+                                        {% endif %}
                                     </div>
                                 </div>
-                            </div>
-                            {% comment %} Container [Media] {% endcomment %}
-                            <div class="container--media">
-                                {% if block_image != blank %}
-                                    <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-{% comment %} Load jQuery and Slick Carousel JavaScript {% endcomment %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-<script src="{{ 'slick.min.js' | asset_url }}" defer></script>
-<script type="text/javascript">
-    window.addEventListener("load", function() {
-        jQuery.noConflict();
-        (function($) {
-            setTimeout(function() {
-                if (typeof $.fn.slick !== 'undefined') {
-                    var $carousel = $('.carousel--content-media').slick({
-                        speed: 300,
-                        slidesToShow: 1,
-                        arrows: false,
-                        dots: false
-                    });
-                    // Navigation
-                    $('.trigger--next').on('click', function() {
-                        $carousel.slick('slickNext');
-                    });
-                } else {
-                    console.error('Slick is not defined');
-                }
-            }, 500);
-        })(jQuery);
+{% comment %} Load Glide.js {% endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Glide('[data-carousel]', {
+        type: 'carousel',
+        perView: 1,
+        gap: 0,
+        keyboard: true
+      }).mount();
     });
-</script>
+  </script>
 
 {% schema %}
 {

@@ -15,8 +15,9 @@
         @include rem( row-gap, 12px );
         // Number
         .item__number {
-            @include rem( margin-bottom, spacing(1) );
+            @include rem( margin-bottom, 12px );
             @extend %h5;
+            display: block;
         }
         // Heading
         .item__heading {}
@@ -27,6 +28,26 @@
             & > p:last-child {
                 margin: 0;
             }
+        }
+    }
+}
+
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component Variants
+    .feed--block {
+        // Columns [3, Desktop]
+        &.variant--col-3 {
+            grid-template-columns: repeat( 3, 1fr );
+        }
+        // Columns [4, Desktop]
+        &.variant--col-4 {
+            grid-template-columns: repeat( 4, 1fr );
+        }
+        // Columns [6, Desktop]
+        &.variant--col-6 {
+            grid-template-columns: repeat( 6, 1fr );
         }
     }
 }

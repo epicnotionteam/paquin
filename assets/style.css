@@ -2138,8 +2138,9 @@ hr,
   row-gap: 1.2rem;
 }
 .feed--block .item .item__number {
-  margin-bottom: 4px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  display: block;
 }
 .feed--block .item .item__content {
   font-size: 15px;
@@ -2152,6 +2153,17 @@ hr,
   margin: 0;
 }
 
+@media (min-width: 64em) {
+  .feed--block.variant--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feed--block.variant--col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .feed--block.variant--col-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

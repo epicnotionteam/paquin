@@ -9,11 +9,21 @@
 // --------------------------------------------------
 
 // Section container
-.section {}
+.section--hero-inline {
+    @include rem((
+        min-height: 512px
+    ));
+    background-position: center;
+    background-size: cover;
+}
     
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Section container
-    .section {}
+    .section--hero-inline {
+        @include rem((
+            min-height: 640px
+        ));
+    }
 }

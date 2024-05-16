@@ -1931,6 +1931,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
+.section--hero-inline {
+  min-height: 512px;
+  min-height: 51.2rem;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 64em) {
+  .section--hero-inline {
+    min-height: 640px;
+    min-height: 64rem;
+  }
+}
 .collection--section .productgrid--outer {
   max-width: 1590px;
   max-width: 159rem;

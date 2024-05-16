@@ -24,9 +24,11 @@
         "carousel_block_XfzB8a": {
           "type": "carousel-block",
           "settings": {
+            "subheading": "Subheading",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
+            "heading_size": "h2",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
-            "link_text": "Link text",
+            "link_text": "",
             "link_url": "",
             "cta": "<p>Call-to-action<\/p>",
             "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
@@ -35,9 +37,11 @@
         "carousel_block_aNeN4P": {
           "type": "carousel-block",
           "settings": {
+            "subheading": "Subheading",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
+            "heading_size": "h2",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
-            "link_text": "Link text",
+            "link_text": "",
             "link_url": "",
             "cta": "<p>Call-to-action<\/p>",
             "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
@@ -50,7 +54,6 @@
       ],
       "settings": {
         "heading_small": "Our Specialized Divisions",
-        "heading_large": "",
         "theme": "base"
       }
     },

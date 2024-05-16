@@ -11,7 +11,9 @@
 // Section container
 .section--hero-inline {
     @include rem((
-        min-height: 512px
+        min-height: 512px,
+        padding-bottom: 72px,
+        padding-top: 72px
     ));
     justify-content: center;
     background-position: center;
@@ -20,7 +22,11 @@
     align-items: center;
     // Container [Content]
     .container--content {
-        @include rem( max-width, 800px );
+        @include rem(( 
+            max-width: 800px,
+            row-gap, spacing(5)
+        ));
+        display: grid;
         text-align: center;
         // Heading
         .section__heading {

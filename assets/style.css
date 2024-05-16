@@ -1934,6 +1934,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-inline {
   min-height: 512px;
   min-height: 51.2rem;
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+  padding-top: 72px;
+  padding-top: 7.2rem;
   justify-content: center;
   background-position: center;
   background-size: cover;

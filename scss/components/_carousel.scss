@@ -74,6 +74,7 @@
                 // Container [Content]
                 .container--content {
                     display: flex;
+                    flex-direction: column;
                     // Wrap [Content]
                     .item__wrap--content {
                         @include rem( max-width, 512px );

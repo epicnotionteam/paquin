@@ -107,7 +107,11 @@
         }
          // Name
          .item__name {
-            @extend %h4;
+            @include rem(( 
+                font-size: 1.8rem,
+                line-height: 24px,
+                margin-bottom: spacing(1)
+            ));
             margin: 0;
          }
           // Role
@@ -134,5 +138,10 @@
     // Component container
     .feed--team {
         grid-template-columns: repeat( 6, 1fr );
+        // Name
+        .item .item__name {
+            @extend %h4;
+            @include rem( margin-bottom, spacing(2) );
+        }
     }
 }

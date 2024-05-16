@@ -27,11 +27,16 @@
             // Subheading
             .section__subheading {
                 @include font-size( 'xsmall' );
-                @include rem( margin-bottom, spacing(1) );
+                margin-bottom: 0;
             }
             // Heading [Large]
             .section__heading--large {
                 @include rem( margin-bottom, spacing(2) );
+            }
+            // Content
+            // Strip margin from final <p>
+            .section__content p:last-child {
+                margin: 0;
             }
         }
         // Container [Media] » Image

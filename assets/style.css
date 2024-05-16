@@ -1758,12 +1758,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
-  margin-bottom: 4px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 .section--content-media-split .section__grid .container--content .section__heading--large {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
+}
+.section--content-media-split .section__grid .container--content .section__content p:last-child {
+  margin: 0;
 }
 .section--content-media-split .section__grid .container--media img {
   display: block;

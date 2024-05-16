@@ -25,21 +25,24 @@
         }
         // Container [Content]
         .container--content {
-            @include rem( row-gap, spacing(3) );
-            display: grid;
-            // Subheading
-            .section__subheading {
-                @include font-size( 'xsmall' );
-                margin-bottom: 0;
-            }
-            // Heading [Large]
-            .section__heading--large {
-                @include rem( margin-bottom, spacing(2) );
-            }
-            // Content
-            // Strip margin from final <p>
-            .section__content p:last-child {
-                margin: 0;
+            // Wrap [Content]
+            .section__wrap--content {
+                @include rem( row-gap, spacing(3) );
+                display: grid;
+                // Subheading
+                .section__subheading {
+                    @include font-size( 'xsmall' );
+                    margin-bottom: 0;
+                }
+                // Heading [Large]
+                .section__heading--large {
+                    @include rem( margin-bottom, spacing(2) );
+                }
+                // Content
+                // Strip margin from final <p>
+                .section__content p:last-child {
+                    margin: 0;
+                }
             }
         }
         // Container [Media] » Image
@@ -74,7 +77,6 @@
                 grid-column: 1 / span 6;
                 .section__wrap--content {
                     @include rem( max-width, 512px );
-                    align-content: center;
                 }
             }
             // Container [Media]

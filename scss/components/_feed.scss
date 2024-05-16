@@ -10,6 +10,7 @@
 
 // Component container
 .feed--block {
+    display: grid;
     // Item container
     .item {
         @include rem( row-gap, 12px );
@@ -39,14 +40,17 @@
     .feed--block {
         // Columns [3, Desktop]
         &.variant--col-3 {
+            @include rem( column-gap, spacing(7) );
             grid-template-columns: repeat( 3, 1fr );
         }
         // Columns [4, Desktop]
         &.variant--col-4 {
+            @include rem( column-gap, spacing(7) );
             grid-template-columns: repeat( 4, 1fr );
         }
         // Columns [6, Desktop]
         &.variant--col-6 {
+            @include rem( column-gap, spacing(4) );
             grid-template-columns: repeat( 6, 1fr );
         }
     }

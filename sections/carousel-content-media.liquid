@@ -58,14 +58,14 @@
                                         <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
                                     {% endif %}
                                 </div>
-                                    {% comment %} Wrap [Actions] {% endcomment %}
-                                    <div class="item__wrap--actions">
-                                        {% comment %} CTA {% endcomment %}
-                                        {% if block_cta != blank %}
-                                            <div class="item__cta">{{ block_cta | richtext }}</div>
-                                        {% endif %}
-                                        {% comment %} Navigation {% endcomment %}
-                                        <p>Navigation arrows</p>
+                                {% comment %} Wrap [Actions] {% endcomment %}
+                                <div class="item__wrap--actions">
+                                    {% comment %} CTA {% endcomment %}
+                                    {% if block_cta != blank %}
+                                        <div class="item__cta">{{ block_cta | richtext }}</div>
+                                    {% endif %}
+                                    {% comment %} Navigation {% endcomment %}
+                                    <button class="trigger--next">Navigation arrows</button>
                                 </div>
                             </div>
                             {% comment %} Container [Media] {% endcomment %}
@@ -95,6 +95,10 @@
                     speed: 300,
                     slidesToShow: 1,
                     arrows: false
+                });
+                // NAvigation trigger
+                $('.trigger--next').on('click', function() {
+                    $carousel.slick('slickNext');
                 });
             } else {
                 console.error('Slick is not defined');

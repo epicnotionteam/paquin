@@ -19,12 +19,15 @@
             .container--content {
                 // Wrap [Content]
                 .item__wrap--content {
+                    @include rem( row-gap, 12px );
+                    display: grid;
                     // Subheading
                     .item__subheading {
                         @include font-size( 'xsmall' );
                     }
                     // Heading
                     .item__heading {
+                        @extend %h2;
                         margin: 0;
                     }
                     // Content

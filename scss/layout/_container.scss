@@ -48,6 +48,9 @@
 
 // Section headings
 .section__primary-heading {
-    @include rem( padding-top, spacing(4) );
+    @include rem(( 
+        margin-top: spacing(6),
+        padding-top: spacing(4) 
+    ));
     border-top: $border--base;
 }

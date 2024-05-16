@@ -1337,6 +1337,8 @@ h5,
 }
 
 .section__primary-heading {
+  margin-top: 40px;
+  margin-top: 4rem;
   padding-top: 24px;
   padding-top: 2.4rem;
   border-top: 1px solid #D6DBDD;

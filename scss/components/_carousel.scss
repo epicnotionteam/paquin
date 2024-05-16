@@ -24,6 +24,7 @@
                     // Subheading
                     .item__subheading {
                         @include font-size( 'xsmall' );
+                        margin: 0;
                     }
                     // Heading
                     .item__heading {

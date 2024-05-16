@@ -2219,7 +2219,7 @@ hr,
 .feed--team .item .item__name {
   margin: 0;
 }
-.feed--team .item .item__job-title {
+.feed--team .item .item__role {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;

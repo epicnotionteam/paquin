@@ -113,8 +113,8 @@
             @extend %h4;
             margin: 0;
          }
-          // Job Title
-        .item__job-title {
+          // Role
+        .item__role {
             @include font-size( 'small' );
             @include rem( margin, spacing(1) 0 0 );
         }

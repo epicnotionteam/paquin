@@ -1084,7 +1084,7 @@ body {
   color: white;
 }
 .theme--dark h1,
-.theme--dark h2, .theme--dark .carousel--content-media .item .item__grid .container--content .item__wrap--content .item__heading, .carousel--content-media .item .item__grid .container--content .item__wrap--content .theme--dark .item__heading,
+.theme--dark h2,
 .theme--dark h3,
 .theme--dark h4, .theme--dark .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a, .mobile-nav-content .theme--dark .navmenu.navmenu-depth-1 > li.navmenu-item > a, .theme--dark .feed--team .item .item__name, .feed--team .item .theme--dark .item__name,
 .theme--dark h5, .theme--dark .live-search-form .search-flydown--results .search-flydown__group-title, .live-search-form .search-flydown--results .theme--dark .search-flydown__group-title, .theme--dark .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title, .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .theme--dark .collection-filters__filter-title, .theme--dark .feed--block .item .item__number, .feed--block .item .theme--dark .item__number, .theme--dark .button--base,
@@ -1244,8 +1244,7 @@ h1,
 }
 
 h2,
-.h2,
-.carousel--content-media .item .item__grid .container--content .item__wrap--content .item__heading {
+.h2 {
   font-size: 36px;
   font-size: 3.6rem;
   line-height: 44px;

@@ -85,20 +85,21 @@
 {% comment %} Load jQuery and Slick Carousel JavaScript {% endcomment %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-{% comment %} Initialize Slick Carousel {% endcomment %}
+{% comment %} Initialize Slick Carousel with Custom Navigation {% endcomment %}
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
         $.noConflict();
         jQuery(document).ready(function($) {
-            if ($.fn.slick) {
+            if (typeof $.fn.slick !== 'undefined') {
                 var $carousel = $('.carousel--content-media').slick({
                     speed: 300,
                     slidesToShow: 1,
                     arrows: false,
                     dots: false
                 });
+
                 $('.trigger--next').on('click', function() {
-                    $carousel.slick('slickNext');
+                    $('.carousel--content-media').slick('slickNext');
                 });
             } else {
                 console.error('Slick is not defined');
@@ -106,7 +107,6 @@
         });
     });
 </script>
-
 
 {% schema %}
 {

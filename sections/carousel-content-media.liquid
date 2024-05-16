@@ -73,12 +73,11 @@
 </section>
 
 {% comment %} Load assets & initialize carousel {% endcomment %}
-{% comment %} Load jQuery {% endcomment %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
 <script src="{{ 'slick.min.js' | asset_url }}" type="text/javascript"></script>
-{% comment %} Initialize carousel {% endcomment %}
+{% comment %} Initialize Slick Carousel {% endcomment %}
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(window).on('load', function(){
+        console.log('Initializing carousel...');
         $('.carousel--content-media').slick({
             speed: 300,
             slidesToShow: 1,

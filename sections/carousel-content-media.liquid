@@ -20,14 +20,15 @@
         <div class="carousel--content-media">
             {% for block in section_blocks %}
                 {% comment %} Assign block data to vars {% endcomment %}
-                {% assign block_logo       = block.settings.logo %}
-                {% assign block_subheading = block.settings.subheading %}
-                {% assign block_heading    = block.settings.heading %}
-                {% assign block_content    = block.settings.content %}
-                {% assign block_link_text  = block.settings.link_text %}
-                {% assign block_link_url   = block.settings.link_url %}
-                {% assign block_cta        = block.settings.cta %}
-                {% assign block_image      = block.settings.image %}
+                {% assign block_logo         = block.settings.logo %}
+                {% assign block_subheading   = block.settings.subheading %}
+                {% assign block_heading      = block.settings.heading %}
+                {% assign block_heading_size = section.settings.heading_size %}
+                {% assign block_content      = block.settings.content %}
+                {% assign block_link_text    = block.settings.link_text %}
+                {% assign block_link_url     = block.settings.link_url %}
+                {% assign block_cta          = block.settings.cta %}
+                {% assign block_image        = block.settings.image %}
                 {% comment %} Output item {% endcomment %}
                 <div class="item">
                     <div class="item__grid">
@@ -45,7 +46,7 @@
                                 {% endif %}
                                 {% comment %} Heading {% endcomment %}
                                 {% if block_heading != blank %}
-                                    <h3 class="item__heading">{{ block_heading }}</h3>
+                                    <h3 class="item__heading {{ block_heading_size }}">{{ block_heading }}</h3>
                                 {% endif %}
                                 {% comment %} Content {% endcomment %}
                                 {% if block_content != blank %}
@@ -146,6 +147,23 @@
                     "id": "heading",
                     "label": "Heading",
                     "default": "Heading"
+                },
+                {
+                    "type": "select",
+                    "id": "heading_size",
+                    "label": "Heading Size",
+                    "info" : "Select an element size for the block heading",
+                    "options": [
+                      {
+                        "value": "h2",
+                        "label": "H2"
+                      },
+                      {
+                        "value": "h3",
+                        "label": "H3"
+                      }
+                    ],
+                    "default": "h2"
                 },
                 {
                     "type": "richtext",

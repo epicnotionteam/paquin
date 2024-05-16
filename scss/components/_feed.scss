@@ -110,6 +110,7 @@
         }
          // Name
          .item__name {
+            @extend %h4;
             margin: 0;
          }
           // Job Title

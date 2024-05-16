@@ -7,6 +7,10 @@
 
 .theme--alt {
 	background-color: color( 'titanium', '2' );
+	// Component [Primary Section Heading]
+	.section__primary-heading {
+		border-top: rgba( 0, 0, 0, 0.12 );
+	}
 }
 
 
@@ -27,6 +31,6 @@
 	}
 	// Component [Primary Section Heading]
 	.section__primary-heading {
-		border-top: $border--dark
+		border-top: $border--dark;
 	}
 }

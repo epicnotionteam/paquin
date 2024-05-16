@@ -1,0 +1,74 @@
+// ====================================================================================================
+// Components / Component
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Component [Content/Media]
+// --------------------------------------------------
+
+// Component container
+.carousel--content-media {
+    // Item container
+    .item {
+        // Grid structure
+        .item__grid {
+            // Container [Content]
+            .container--content {
+                // Wrap [Content]
+                .item__wrap--content {
+                    // Subheading
+                    .item__subheading {
+                        @include font-size( 'xsmall' );
+                    }
+                    // Heading
+                    .item__heading {
+                        margin: 0;
+                    }
+                    // Content
+                    .item__content {
+                        // Strip margin from final <p>
+                        p:last-child {
+                            margin: 0;
+                        }
+                    }
+                    // Link
+                    .item__link {}
+                }
+                // Wrap [Actions]
+                .item__wrap--actions {
+                    display: grid;
+                    grid-template-columns: 11fr max-content;
+                }
+            }
+            // Container [Media]
+            .container--media {}
+        }
+    }
+}
+
+// State management
+.carousel--content-media {}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+
+    // Component container
+    .carousel--content-media {
+        // Item container
+        .item {
+            // Grid structure
+            .item__grid {
+                // Container [Content]
+                .container--content {
+                    // Wrap [Content]
+                    .item__wrap--content {
+                        @include rem( max-width, 512px );
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -2273,6 +2273,27 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border: 0 none !important;
 }
 
+.carousel--content-media .item .item__grid .container--content .item__wrap--content .item__subheading {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
+}
+.carousel--content-media .item .item__grid .container--content .item__wrap--content .item__heading {
+  margin: 0;
+}
+.carousel--content-media .item .item__grid .container--content .item__wrap--content .item__content p:last-child {
+  margin: 0;
+}
+.carousel--content-media .item .item__grid .container--content .item__wrap--actions {
+  display: grid;
+  grid-template-columns: 11fr max-content;
+}
+@media (min-width: 64em) {
+  .carousel--content-media .item .item__grid .container--content .item__wrap--content {
+    max-width: 512px;
+    max-width: 51.2rem;
+  }
+}
 hr,
 .divider--base {
   height: 1px;

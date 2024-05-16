@@ -19,6 +19,7 @@
         {% comment %} Carousel {% endcomment %}
         <div class="container--carousel">
             <div class="carousel--content-media">
+                {% assign block_count = section_blocks.size %}
                 {% for block in section_blocks %}
                     {% comment %} Assign block data to vars {% endcomment %}
                     {% assign block_logo         = block.settings.logo %}
@@ -65,7 +66,10 @@
                                         <div class="item__cta">{{ block_cta | richtext }}</div>
                                     {% endif %}
                                     {% comment %} Navigation {% endcomment %}
-                                    <button class="trigger--next">Navigation arrows</button>
+                                    <div class="item__navigation">
+                                        <span class="slide-count">{{ forloop.index }} / {{ total_slides }}</span>
+                                        <button class="trigger--next">Navigation arrows</button>
+                                    </div>
                                 </div>
                             </div>
                             {% comment %} Container [Media] {% endcomment %}

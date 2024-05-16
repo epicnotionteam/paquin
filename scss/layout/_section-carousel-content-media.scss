@@ -1,0 +1,55 @@
+// ====================================================================================================
+// Layout / Section [Content, Blocks]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--carousel-content-media {
+    @include rem( padding-bottom, $gap--section-small );
+    // Grid structure
+    .section__grid {
+        @include rem( row-gap, spacing(5) );
+        display: grid;
+        // Container [Heading, Small]
+        .container--heading-small {
+            // Heading [Small]
+            .section__heading--small {
+                @extend %h5;
+                margin: 0;
+            }
+        }
+        // Container [Carousel]
+        .container--carousel {}
+    }
+}
+    
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--carousel-content-media {
+        @include rem( padding-bottom, $gap--section-large );
+        // Adjust grid structure
+        .section__grid {
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(6) 
+            ));
+            grid-auto-rows: auto;
+            grid-template-columns: repeat( 12, 1fr );
+            // Container [Heading, Small]
+            .container--heading-small {
+                grid-column: 1 / span 12;
+            }
+            // Container [Carousel]
+            .container--carousel {
+                grid-column: 1 / span 12;
+            }
+        }
+    }
+}

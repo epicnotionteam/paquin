@@ -4,72 +4,71 @@
 
 {% comment %} Assign section data to vars {% endcomment %}
 {% assign section_heading_small = section.settings.heading_small %}
-{% assign section_heading_large = section.settings.heading_large %}
 {% assign section_blocks        = section.blocks %}
 {% assign section_theme         = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--carousel-content-media theme--{{ section_theme }}">
+<section class="section--carousel-content-media theme--{{ section_theme }} wrap--container">
     {% comment %} Heading [Small] {% endcomment %}
     {% if section_heading_small != blank %}
-        <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
-    {% endif %}
-    {% comment %} Heading [Large] {% endcomment %}
-    {% if section_heading_large != blank %}
-        <h3 class="section__heading--large h2">{{ section_heading_large }}</h3>
+        <div class="container--heading-small section__primary-heading">
+            <h2 class="section__heading--small">{{ section_heading_small }}</h2>
+        </div>
     {% endif %}
     {% comment %} Carousel {% endcomment %}
-    <div class="carousel--content-media">
-        {% for block in section_blocks %}
-            {% comment %} Assign block data to vars {% endcomment %}
-            {% assign block_logo      = block.settings.logo %}
-            {% assign block_heading   = block.settings.heading %}
-            {% assign block_content   = block.settings.content %}
-            {% assign block_link_text = block.settings.link_text %}
-            {% assign block_link_url  = block.settings.link_url %}
-            {% assign block_cta       = block.settings.cta %}
-            {% assign block_image     = block.settings.image %}
-            {% comment %} Output item {% endcomment %}
-            <div class="item">
-                {% comment %} Container [Content] {% endcomment %}
-                <div class="container--content">
-                    {% comment %} Wrap [Content] {% endcomment %}
-                    <div class="item__wrap--content">
-                        {% comment %} Logo {% endcomment %}
-                        {% if block_logo != blank %}
-                            <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
-                        {% endif %}
-                        {% comment %} Heading {% endcomment %}
-                        {% if block_heading != blank %}
-                            <h3 class="item__heading">{{ block_heading }}</h3>
-                        {% endif %}
-                        {% comment %} Content {% endcomment %}
-                        {% if block_content != blank %}
-                            <div class="item__content">{{ block_content | richtext }}</div>
-                        {% endif %}
-                        {% comment %} Link {% endcomment %}
-                        {% if block_link_text != blank and block_link_url != blank %}
-                            <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
-                        {% endif %}
-                    </div>
-                        {% comment %} Wrap [Actions] {% endcomment %}
-                        <div class="item__wrap--actions">
-                            {% comment %} CTA {% endcomment %}
-                            {% if block_cta != blank %}
-                                <div class="item__cta">{{ block_cta | richtext }}</div>
+    <div class="container--carousel">
+        <div class="carousel--content-media">
+            {% for block in section_blocks %}
+                {% comment %} Assign block data to vars {% endcomment %}
+                {% assign block_logo      = block.settings.logo %}
+                {% assign block_heading   = block.settings.heading %}
+                {% assign block_content   = block.settings.content %}
+                {% assign block_link_text = block.settings.link_text %}
+                {% assign block_link_url  = block.settings.link_url %}
+                {% assign block_cta       = block.settings.cta %}
+                {% assign block_image     = block.settings.image %}
+                {% comment %} Output item {% endcomment %}
+                <div class="item">
+                    {% comment %} Container [Content] {% endcomment %}
+                    <div class="container--content">
+                        {% comment %} Wrap [Content] {% endcomment %}
+                        <div class="item__wrap--content">
+                            {% comment %} Logo {% endcomment %}
+                            {% if block_logo != blank %}
+                                <img class="item__logo" src="{{ block_logo | img_url: '800x' }}" alt="">
                             {% endif %}
-                            {% comment %} Navigation {% endcomment %}
-                            <p>Navigation arrows</p>
+                            {% comment %} Heading {% endcomment %}
+                            {% if block_heading != blank %}
+                                <h3 class="item__heading">{{ block_heading }}</h3>
+                            {% endif %}
+                            {% comment %} Content {% endcomment %}
+                            {% if block_content != blank %}
+                                <div class="item__content">{{ block_content | richtext }}</div>
+                            {% endif %}
+                            {% comment %} Link {% endcomment %}
+                            {% if block_link_text != blank and block_link_url != blank %}
+                                <a href="{{ block_link_url }}" class="item__link link--arrow-forward">{{ block_link_text }}</a>
+                            {% endif %}
+                        </div>
+                            {% comment %} Wrap [Actions] {% endcomment %}
+                            <div class="item__wrap--actions">
+                                {% comment %} CTA {% endcomment %}
+                                {% if block_cta != blank %}
+                                    <div class="item__cta">{{ block_cta | richtext }}</div>
+                                {% endif %}
+                                {% comment %} Navigation {% endcomment %}
+                                <p>Navigation arrows</p>
+                        </div>
+                    </div>
+                    {% comment %} Container [Media] {% endcomment %}
+                    <div class="container--media">
+                        {% if block_image != blank %}
+                            <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
+                        {% endif %}
                     </div>
                 </div>
-                {% comment %} Container [Media] {% endcomment %}
-                <div class="container--media">
-                    {% if block_image != blank %}
-                        <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
-                    {% endif %}
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 

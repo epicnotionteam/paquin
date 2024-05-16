@@ -1270,6 +1270,7 @@ h5,
 .button--base,
 .product-form--atc-button,
 .section--content-offset .section__grid .container--heading-small .section__heading--small,
+.section--content-media-split .section__grid .container--heading-small .section__heading--small,
 .section--content-blocks .section__grid .container--heading-small .section__heading--small {
   font-size: 14px;
   font-size: 1.4rem;
@@ -1743,6 +1744,34 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .section--content-blocks .section__grid .container--feed {
     grid-column: 1/span 12;
+  }
+}
+.section--content-media-split .section__grid {
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
+.section--content-media-split .section__grid .container--heading-small .section__heading--small {
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .section--content-media-split .section__grid {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    row-gap: 40px;
+    row-gap: 4rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .section--content-media-split .section__grid .container--heading-small {
+    grid-column: 1/span 12;
+  }
+  .section--content-media-split .section__grid .container--content {
+    grid-column: 1/span 6;
+  }
+  .section--content-media-split .section__grid .container--media {
+    grid-column: 7/span 6;
   }
 }
 .section--content-offset .section__grid {

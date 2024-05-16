@@ -1,0 +1,62 @@
+// ====================================================================================================
+// Layout / Section [Content/Media Split]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--content-media-split {
+    // Grid structure
+    .section__grid {
+        @include rem( row-gap, spacing(5) );
+        display: grid;
+        // Container [Heading, Small]
+        .container--heading-small {
+            // Heading [Small]
+            .section__heading--small {
+                @extend %h5;
+                margin: 0;
+            }
+        }
+        // Container [Heading, Large]
+        // .container--heading-large {
+        //     // Heading [Large]
+        //     .section__heading--large {
+        //         margin: 0;
+        //     }
+        // }
+    }
+}
+    
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--content-media-split {
+        // Adjust grid structure
+        .section__grid {
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(6) 
+            ));
+            grid-auto-rows: auto;
+            grid-template-columns: repeat( 12, 1fr );
+            // Container [Heading, Small]
+            .container--heading-small {
+                grid-column: 1 / span 12;
+            }
+            // Container [Content]
+            .container--content {
+                grid-column: 1 / span 6;
+            }
+            // Container [Media]
+            .container--media {
+                grid-column: 7 / span 6;
+            }
+        }
+    }
+}

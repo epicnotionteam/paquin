@@ -97,7 +97,8 @@
     grid-template-columns: repeat( 2, 1fr );
     // Item
     .item {
-        @include rem( row-gap, spacing(1) );
+        @include rem( row-gap, spacing(3) );
+        align-content: flex-start;
         display: grid;
         // Image
         .item__image {

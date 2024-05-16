@@ -2208,8 +2208,9 @@ hr,
   grid-template-columns: repeat(2, 1fr);
 }
 .feed--team .item {
-  row-gap: 4px;
-  row-gap: 0.4rem;
+  row-gap: 16px;
+  row-gap: 1.6rem;
+  align-content: flex-start;
   display: grid;
 }
 .feed--team .item .item__image {

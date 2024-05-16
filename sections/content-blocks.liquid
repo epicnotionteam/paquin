@@ -3,13 +3,13 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign section_heading_small      = section.settings.heading_small %}
-{% assign section_heading_large      = section.settings.heading_large %}
-{% assign section_heading_large_size = section.settings.heading_large_size %}
-{% assign section_blocks             = section.blocks %}
-{% assign section_block_numbering    = section.settings.show_numbering %}
-{% assign section_columns            = section.settings.columns %}
-{% assign section_theme              = section.settings.theme %}
+{% assign section_heading_small   = section.settings.heading_small %}
+{% assign section_heading_large   = section.settings.heading_large %}
+{% assign section_heading_size    = section.settings.heading_large_size %}
+{% assign section_blocks          = section.blocks %}
+{% assign section_block_numbering = section.settings.show_numbering %}
+{% assign section_columns         = section.settings.columns %}
+{% assign section_theme           = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-blocks theme--{{ section_theme }} wrap--container">
@@ -17,7 +17,7 @@
         {% comment %} Heading [Small] {% endcomment %}
         {% if section_heading_small != blank %}
             <div class="container--heading-small section__primary-heading">
-                <h2 class="section__heading--small {{ section_heading_large_size }}">{{ section_heading_small }}</h2>
+                <h2 class="section__heading--small {{ section_heading_size }}">{{ section_heading_small }}</h2>
             </div>
         {% endif %}
         {% comment %} Heading [Large] {% endcomment %}
@@ -74,8 +74,8 @@
         },
         {
             "type": "select",
-            "id": "heading_large_size",
-            "label": "Heading [Large] Scale",
+            "id": "heading_size",
+            "label": "Heading [Large] Size",
             "info" : "Select an element size for the display heading",
             "options": [
               {

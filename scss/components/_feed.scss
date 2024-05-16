@@ -120,8 +120,8 @@
     }
 }
 
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {
+// Adjust @small breakpoint
+@include mq( $from: small ) {
     // Component container
     .feed--team {
         @include rem( column-gap, spacing(4) );

@@ -22,6 +22,11 @@
                 margin: 0;
             }
         }
+        // Container [Media] » Image
+        .container--media img {
+            display: block;
+            max-width: 100%;
+        }
     }
 }
     

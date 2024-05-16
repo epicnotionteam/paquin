@@ -1754,6 +1754,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-media-split .section__grid .container--heading-small .section__heading--small {
   margin: 0;
 }
+.section--content-media-split .section__grid .container--media img {
+  display: block;
+  max-width: 100%;
+}
 
 @media (min-width: 64em) {
   .section--content-media-split .section__grid {

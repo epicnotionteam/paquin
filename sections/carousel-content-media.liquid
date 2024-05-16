@@ -67,7 +67,7 @@
                                     {% endif %}
                                     {% comment %} Navigation {% endcomment %}
                                     <div class="item__navigation">
-                                        <span class="slide-count">{{ forloop.index }} / {{ total_slides }}</span>
+                                        <span class="item__count">{{ forloop.index }} / {{ block_count }}</span>
                                         <button class="trigger--next">Navigation arrows</button>
                                     </div>
                                 </div>
@@ -101,9 +101,9 @@
                     arrows: false,
                     dots: false
                 });
-
+                // Navigation
                 $('.trigger--next').on('click', function() {
-                    $('.carousel--content-media').slick('slickNext');
+                    $carousel.slick('slickNext');
                 });
             } else {
                 console.error('Slick is not defined');

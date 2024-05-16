@@ -91,15 +91,15 @@
         $.noConflict();
         jQuery(document).ready(function($) {
             if ($.fn.slick) {
-                $('.carousel--content-media').slick({
+                var $carousel = $('.carousel--content-media').slick({
                     speed: 300,
                     slidesToShow: 1,
-                    arrows: false
+                    arrows: false,
+                    dots: false
                 });
-                // Navigation trigger
-                {% comment %} $('.trigger--next').on('click', function() {
+                $('.trigger--next').on('click', function() {
                     $carousel.slick('slickNext');
-                }); {% endcomment %}
+                });
             } else {
                 console.error('Slick is not defined');
             }

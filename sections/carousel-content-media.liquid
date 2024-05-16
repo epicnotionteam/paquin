@@ -87,9 +87,8 @@
 </section>
 
 {% comment %} Load jQuery and Slick Carousel JavaScript {% endcomment %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-{% comment %} Initialize Slick Carousel with Custom Navigation {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+<script src="{{ 'slick.min.js' | asset_url }}" defer></script>
 <script type="text/javascript">
     window.addEventListener("load", function() {
         jQuery.noConflict();
@@ -109,7 +108,7 @@
                 } else {
                     console.error('Slick is not defined');
                 }
-            }, 5000);
+            }, 500);
         })(jQuery);
     });
 </script>

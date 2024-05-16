@@ -25,6 +25,8 @@
         }
         // Container [Content]
         .container--content {
+            @include rem( row-gap, spacing(3) );
+            display: grid;
             // Subheading
             .section__subheading {
                 @include font-size( 'xsmall' );
@@ -71,12 +73,8 @@
                 align-content: center;
                 grid-column: 1 / span 6;
                 .section__wrap--content {
-                    @include rem(( 
-                        max-width: 512px,
-                        row-gap: spacing(3)
-                    ));
+                    @include rem( max-width, 512px );
                     align-content: center;
-                    display: grid;
                 }
             }
             // Container [Media]

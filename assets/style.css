@@ -1807,6 +1807,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-media-split .section__grid .container--heading-small .section__heading--small {
   margin: 0;
 }
+.section--content-media-split .section__grid .container--content {
+  row-gap: 16px;
+  row-gap: 1.6rem;
+  display: grid;
+}
 .section--content-media-split .section__grid .container--content .section__subheading {
   font-size: 13px;
   font-size: 1.3rem;
@@ -1848,10 +1853,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--content-media-split .section__grid .container--content .section__wrap--content {
     max-width: 512px;
     max-width: 51.2rem;
-    row-gap: 16px;
-    row-gap: 1.6rem;
     align-content: center;
-    display: grid;
   }
   .section--content-media-split .section__grid .container--media {
     grid-column: 7/span 6;

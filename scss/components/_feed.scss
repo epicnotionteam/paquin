@@ -132,7 +132,6 @@
 @include mq( $from: large ) {
     // Component container
     .feed--team {
-        @include rem( column-gap, spacing(4) );
         grid-template-columns: repeat( 6, 1fr );
         // Name
         .item .item__name {

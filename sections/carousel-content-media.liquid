@@ -96,10 +96,10 @@
                     slidesToShow: 1,
                     arrows: false
                 });
-                // NAvigation trigger
-                $('.trigger--next').on('click', function() {
+                // Navigation trigger
+                {% comment %} $('.trigger--next').on('click', function() {
                     $carousel.slick('slickNext');
-                });
+                }); {% endcomment %}
             } else {
                 console.error('Slick is not defined');
             }

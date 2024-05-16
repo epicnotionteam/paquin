@@ -15,11 +15,12 @@
         padding-bottom: 72px,
         padding-top: 72px
     ));
-    justify-content: center;
+    align-items: center;
     background-position: center;
     background-size: cover;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    position: relative;
     // Container [Content]
     .container--content {
         @include rem(( 
@@ -28,6 +29,8 @@
         ));
         display: grid;
         text-align: center;
+        position: relative;
+        z-index: 1;
         // Heading
         .section__heading {
             @include font-size( 'headline' );
@@ -46,6 +49,15 @@
             display: flex;
             justify-content: center;
         }
+    }
+    &::before {
+        background: linear-gradient( 0deg, rgba( 48, 55, 58, 1 ) 0%, rgba( 48, 55, 58, 0 ) 100% );
+        bottom: 0;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
     }
 }
     

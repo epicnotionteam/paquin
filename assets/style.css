@@ -1998,11 +1998,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-bottom: 7.2rem;
   padding-top: 72px;
   padding-top: 7.2rem;
-  justify-content: center;
+  align-items: center;
   background-position: center;
   background-size: cover;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .section--hero-inline .container--content {
   max-width: 800px;
@@ -2011,6 +2012,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   row-gap: 3.2rem;
   display: grid;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .section--hero-inline .container--content .section__heading {
   font-size: 64px;
@@ -2027,6 +2030,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+.section--hero-inline::before {
+  background: linear-gradient(0deg, rgb(48, 55, 58) 0%, rgba(48, 55, 58, 0) 100%);
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 
 @media (min-width: 64em) {

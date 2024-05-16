@@ -2304,11 +2304,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 64em) {
   .carousel--content-media .item .item__grid {
+    column-gap: 48px;
+    column-gap: 4.8rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .carousel--content-media .item .item__grid .container--content {
+    display: flex;
   }
   .carousel--content-media .item .item__grid .container--content .item__wrap--content {
     max-width: 512px;
     max-width: 51.2rem;
+    margin: auto 0;
+  }
+  .carousel--content-media .item .item__grid .container--content .item__wrap--content {
+    margin-top: auto;
   }
 }
 hr,

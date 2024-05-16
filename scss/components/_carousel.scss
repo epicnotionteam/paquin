@@ -69,16 +69,22 @@
         .item {
             // Grid structure
             .item__grid {
+                @include rem( column-gap, spacing(7) );
                 grid-template-columns: repeat( 2, 1fr );
                 // Container [Content]
                 .container--content {
+                    display: flex;
                     // Wrap [Content]
                     .item__wrap--content {
                         @include rem( max-width, 512px );
+                        margin: auto 0;
+                    }
+                    // Wrap [Actions]
+                    .item__wrap--content {
+                        margin-top: auto;
                     }
                 }
             }
         }
     }
-
 }

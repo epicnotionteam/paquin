@@ -2218,7 +2218,8 @@ hr,
   width: 100%;
 }
 .feed--team .item .item__name {
-  margin: 0;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
 }
 .feed--team .item .item__role {
   font-size: 15px;
@@ -2239,6 +2240,10 @@ hr,
 @media (min-width: 77.5em) {
   .feed--team {
     grid-template-columns: repeat(6, 1fr);
+  }
+  .feed--team .item .item__name {
+    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
   }
 }
 .productgrid--sidebar {

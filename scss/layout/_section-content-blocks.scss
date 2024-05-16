@@ -10,6 +10,7 @@
 
 // Section container
 .section--content-blocks {
+    @include rem( padding-bottom, $gap--section-small );
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );
@@ -37,6 +38,7 @@
 @include mq( $from: medium ) {
     // Section container
     .section--content-blocks {
+        @include rem( padding-bottom, $gap--section-large );
         // Adjust grid structure
         .section__grid {
             @include rem(( 

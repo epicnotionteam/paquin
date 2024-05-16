@@ -2232,13 +2232,13 @@ hr,
 }
 @media (min-width: 48em) {
   .feed--team {
-    column-gap: 24px;
-    column-gap: 2.4rem;
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 77.5em) {
   .feed--team {
+    column-gap: 24px;
+    column-gap: 2.4rem;
     grid-template-columns: repeat(6, 1fr);
   }
   .feed--team .item .item__name {

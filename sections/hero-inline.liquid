@@ -22,14 +22,17 @@
         {% if section_content != blank %}
             <div class="section__content">{{ section_content | richtext }}</div>
         {% endif %}
-        {% comment %} CTA [Primary] {% endcomment %}
-        {% if section_cta_primary_text != blank and section_cta_primary_url != blank %}
-            <a href="{{ section_cta_primary_url }}" class="button--base">{{ section_cta_primary_text }}</a>
-        {% endif %}
-        {% comment %} CTA [Secondary] {% endcomment %}
-        {% if section_cta_secondary_text != blank and section_cta_secondary_url != blank %}
-            <a href="{{ section_cta_secondary_url }}" class="button--outline">{{ section_cta_secondary_text }}</a>
-        {% endif %}
+        {% comment %} CTA container {% endcomment %}
+        <div class="container--cta">
+            {% comment %} CTA [Primary] {% endcomment %}
+            {% if section_cta_primary_text != blank and section_cta_primary_url != blank %}
+                <a href="{{ section_cta_primary_url }}" class="button--base">{{ section_cta_primary_text }}</a>
+            {% endif %}
+            {% comment %} CTA [Secondary] {% endcomment %}
+            {% if section_cta_secondary_text != blank and section_cta_secondary_url != blank %}
+                <a href="{{ section_cta_secondary_url }}" class="button--outline">{{ section_cta_secondary_text }}</a>
+            {% endif %}
+        </div>
     </div>
 </section>
 

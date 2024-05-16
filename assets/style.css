@@ -1963,6 +1963,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-inline .container--content .section__content p:last-child {
   margin: 0;
 }
+.section--hero-inline .container--content .container--cta {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 64em) {
   .section--hero-inline {
     min-height: 640px;

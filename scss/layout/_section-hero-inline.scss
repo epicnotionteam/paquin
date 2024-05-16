@@ -40,8 +40,12 @@
                 margin: 0;
             }
         }
-        // CTAs
-        .section__cta {}
+        // Container [CTA]
+        .container--cta {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
     }
 }
     

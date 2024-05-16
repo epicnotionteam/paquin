@@ -91,24 +91,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 {% comment %} Initialize Slick Carousel with Custom Navigation {% endcomment %}
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        $.noConflict();
-        jQuery(document).ready(function($) {
-            if (typeof $.fn.slick !== 'undefined') {
-                var $carousel = $('.carousel--content-media').slick({
-                    speed: 300,
-                    slidesToShow: 1,
-                    arrows: false,
-                    dots: false
-                });
-                // Navigation
-                $('.trigger--next').on('click', function() {
-                    $carousel.slick('slickNext');
-                });
-            } else {
-                console.error('Slick is not defined');
-            }
-        });
+    window.addEventListener("load", function() {
+        jQuery.noConflict();
+        (function($) {
+            setTimeout(function() {
+                if (typeof $.fn.slick !== 'undefined') {
+                    var $carousel = $('.carousel--content-media').slick({
+                        speed: 300,
+                        slidesToShow: 1,
+                        arrows: false,
+                        dots: false
+                    });
+                    // Navigation
+                    $('.trigger--next').on('click', function() {
+                        $carousel.slick('slickNext');
+                    });
+                } else {
+                    console.error('Slick is not defined');
+                }
+            }, 500);
+        })(jQuery);
     });
 </script>
 

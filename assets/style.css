@@ -1946,6 +1946,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   text-align: center;
 }
 .section--hero-inline .container--content .section__heading {
+  font-size: 64px;
+  font-size: 6.4rem;
+  line-height: 72px;
+  letter-spacing: 0.56px;
+  letter-spacing: 0.056rem;
   margin: 0;
 }
 .section--hero-inline .container--content .section__content p:last-child {

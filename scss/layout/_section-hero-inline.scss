@@ -24,6 +24,7 @@
         text-align: center;
         // Heading
         .section__heading {
+            @include font-size( 'headline' );
             margin: 0;
         }
         // Content

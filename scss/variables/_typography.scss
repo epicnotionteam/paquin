@@ -85,6 +85,9 @@ $font-sizeDefaults: (
 		'base':   (font-size: 24px, line-height: 1.45),
 		'large':  (font-size: 32px, line-height: 1.4)
 	),
+	'headline': (
+		'base': (font-size: 64px, line-height: 72px, letter-spacing: 0.56px),
+	),
 	'h1': (
 		'base': (font-size: 48px, line-height: 56px, letter-spacing: 0.4px),
 	),

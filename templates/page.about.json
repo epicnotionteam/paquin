@@ -6,10 +6,7 @@
     "about-history",
     "about-hero-cta",
     "about-process",
-    "about-careers",
-    "content_offset_careers_Er7CNF",
-    "content_offset_resume_gqRgQz",
-    "content_introduction_3XMmK6"
+    "about-careers"
   ],
   "sections": {
     "about-hero": {
@@ -260,72 +257,6 @@
         "link_url": "shopify:\/\/pages\/careers",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
         "theme": "dark"
-      }
-    },
-    "content_offset_careers_Er7CNF": {
-      "type": "content-offset-careers",
-      "blocks": {
-        "role_block_NYPXkH": {
-          "type": "role-block",
-          "settings": {
-            "title": "Title",
-            "division": "Division",
-            "location": "Location",
-            "link": ""
-          }
-        },
-        "role_block_WDbAgj": {
-          "type": "role-block",
-          "settings": {
-            "title": "Title",
-            "division": "Division",
-            "location": "Location",
-            "link": ""
-          }
-        },
-        "role_block_PaXKnw": {
-          "type": "role-block",
-          "settings": {
-            "title": "Title",
-            "division": "Division",
-            "location": "Location",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "role_block_NYPXkH",
-        "role_block_WDbAgj",
-        "role_block_PaXKnw"
-      ],
-      "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Heading",
-        "subheading": "Subheading",
-        "content": "<p>Content<\/p>",
-        "theme": "base"
-      }
-    },
-    "content_offset_resume_gqRgQz": {
-      "type": "content-offset-resume",
-      "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Heading",
-        "subheading": "Subheading",
-        "content": "<p>Content<\/p>",
-        "theme": "base"
-      }
-    },
-    "content_introduction_3XMmK6": {
-      "type": "content-introduction",
-      "settings": {
-        "heading": "Superior Quality, Innovation and Customer Service Since 1949",
-        "heading_size": "headline",
-        "content": "<p>Content<\/p>",
-        "link_text": "Link text",
-        "link_url": "#test",
-        "link_type": "button",
-        "theme": "base"
       }
     }
   }

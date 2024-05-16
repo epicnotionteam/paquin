@@ -5,6 +5,7 @@
 {% comment %} Assign section data to vars {% endcomment %}
 {% assign section_heading_small = section.settings.heading_small %}
 {% assign section_heading_large = section.settings.heading_large %}
+{% assign section_heading_size  = section.settings.heading_size %}
 {% assign section_subheading    = section.settings.subheading %}
 {% assign section_content       = section.settings.content %}
 {% assign section_image         = section.settings.image %}
@@ -63,6 +64,27 @@
             "label": "Heading [Large]",
             "default": "Heading",
             "info": "Secondary section heading (h3)"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "label": "Heading [Large] Size",
+            "info" : "Select an element size for the display heading",
+            "options": [
+              {
+                "value": "text--headline",
+                "label": "Headline"
+              },
+              {
+                "value": "h1",
+                "label": "H1"
+              },
+              {
+                "value": "h2",
+                "label": "H2"
+              }
+            ],
+            "default": "h1"
         },
         {
             "type": "text",

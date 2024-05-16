@@ -5,6 +5,33 @@
 // Component Instances
 // ----------------------------------------------------------------------------------------------------
 
+// Feed [Block]
+// --------------------------------------------------
+
+// Component container
+.feed--block {
+    // Item container
+    .item {
+        @include rem( row-gap, 12px );
+        // Number
+        .item__number {
+            @include rem( margin-bottom, spacing(1) );
+            @extend %h5;
+        }
+        // Heading
+        .item__heading {}
+        // Content
+        .item__content {
+            @include font-size( 'small' );
+            // Strip margin from final <p>
+            & > p:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
 // Feed [Table, Specification]
 // --------------------------------------------------
 

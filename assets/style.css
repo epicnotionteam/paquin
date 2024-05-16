@@ -1267,6 +1267,7 @@ h5,
 .h5,
 .live-search-form .search-flydown--results .search-flydown__group-title,
 .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
+.feed--block .item .item__number,
 .button--base,
 .product-form--atc-button,
 .section--content-offset .section__grid .container--heading-small .section__heading--small,
@@ -2132,6 +2133,25 @@ hr,
     margin: 4.8rem 0;
   }
 }
+.feed--block .item {
+  row-gap: 12px;
+  row-gap: 1.2rem;
+}
+.feed--block .item .item__number {
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+}
+.feed--block .item .item__content {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+.feed--block .item .item__content > p:last-child {
+  margin: 0;
+}
+
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

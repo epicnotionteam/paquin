@@ -2200,8 +2200,8 @@ hr,
 }
 
 .feed--team {
-  column-gap: 24px;
-  column-gap: 2.4rem;
+  column-gap: 16px;
+  column-gap: 1.6rem;
   row-gap: 32px;
   row-gap: 3.2rem;
   display: grid;
@@ -2230,6 +2230,8 @@ hr,
 }
 @media (min-width: 64em) {
   .feed--team {
+    column-gap: 24px;
+    column-gap: 2.4rem;
     grid-template-columns: repeat(4, 1fr);
   }
 }

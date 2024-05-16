@@ -21,8 +21,6 @@
             @extend %h5;
             display: block;
         }
-        // Heading
-        .item__heading {}
         // Content
         .item__content {
             @include font-size( 'small' );
@@ -34,7 +32,6 @@
     }
 }
 
-
 // Adjust @small breakpoint
 @include mq( $from: small ) {
     // Adjust grid structure
@@ -43,7 +40,6 @@
         grid-template-columns: repeat( 2, 1fr );
     }
 }
-
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
@@ -94,7 +90,7 @@
 // Component container
 .feed--team {
     @include rem(( 
-        column-gap: spacing(4),
+        column-gap: spacing(3),
         row-gap: spacing(5) 
     ));
     display: grid;
@@ -127,6 +123,7 @@
 @include mq( $from: medium ) {
     // Component container
     .feed--team {
+        @include rem( column-gap, spacing(4) );
         grid-template-columns: repeat( 4, 1fr );
     }
 }

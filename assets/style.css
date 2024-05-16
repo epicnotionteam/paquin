@@ -2034,6 +2034,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-inline::before {
   background: linear-gradient(0deg, rgb(48, 55, 58) 0%, rgba(48, 55, 58, 0) 100%);
   bottom: 0;
+  content: "";
   height: 50%;
   left: 0;
   position: absolute;

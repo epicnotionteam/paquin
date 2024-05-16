@@ -88,11 +88,17 @@
 {% comment %} Initialize Slick Carousel {% endcomment %}
 <script type="text/javascript">
     $(document).ready(function() {
-        $('.carousel--content-media').slick({
-            speed: 300,
-            slidesToShow: 1,
-            arrows: false
-        });
+        console.log('jQuery version:', $.fn.jquery); // Check jQuery version
+        console.log('Initializing carousel...');
+        if ($.fn.slick) {
+            $('.carousel--content-media').slick({
+                speed: 300,
+                slidesToShow: 1,
+                arrows: false
+            });
+        } else {
+            console.error('Slick is not defined');
+        }
     });
 </script>
 

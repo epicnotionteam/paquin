@@ -1947,6 +1947,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-inline .container--content {
   max-width: 800px;
   max-width: 80rem;
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
   text-align: center;
 }
 .section--hero-inline .container--content .section__heading {

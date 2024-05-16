@@ -24,7 +24,7 @@
     .container--content {
         @include rem(( 
             max-width: 800px,
-            row-gap, spacing(5)
+            row-gap: spacing(5)
         ));
         display: grid;
         text-align: center;

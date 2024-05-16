@@ -50,7 +50,7 @@
             // Container [Content]
             .container--content {
                 grid-column: 1 / span 6;
-                & > * {
+                .section__wrap--content {
                     @include rem( max-width, 512px );
                 }
             }

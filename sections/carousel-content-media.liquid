@@ -86,14 +86,14 @@
     </div>
 </section>
 
-{% comment %} Load jQuery and Slick Carousel JavaScript with defer {% endcomment %}
+{% comment %} Load jQuery and Slick Carousel JavaScript {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 {% comment %} Initialize Slick Carousel with Custom Navigation {% endcomment %}
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
+        $.noConflict();
         jQuery(document).ready(function($) {
-            console.log('Initializing Slick carousel...');
-            console.log('jQuery version:', $.fn.jquery);
-            console.log('Slick function exists:', typeof $.fn.slick !== 'undefined');
             if (typeof $.fn.slick !== 'undefined') {
                 var $carousel = $('.carousel--content-media').slick({
                     speed: 300,
@@ -101,7 +101,6 @@
                     arrows: false,
                     dots: false
                 });
-                console.log('Slick carousel initialized.');
                 // Navigation
                 $('.trigger--next').on('click', function() {
                     $carousel.slick('slickNext');

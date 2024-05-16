@@ -76,6 +76,15 @@
 <script src="{{ 'slick.min.js' | asset_url }}" type="text/javascript"></script>
 {% comment %} Initialize carousel {% endcomment %}
 <script type="text/javascript">
+    window.onload = function() {
+        if (window.jQuery) {  
+            // jQuery is loaded  
+            alert("Yeah!");
+        } else {
+            // jQuery is not loaded
+            alert("Doesn't Work");
+        }
+    }
     $(document).ready(function(){
         $('.carousel--content-media').slick({
             speed: 300,

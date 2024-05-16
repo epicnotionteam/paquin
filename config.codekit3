@@ -157,6 +157,17 @@
       "oAP" : "\/assets\/ripple.css.liquid",
       "oF" : 0
     },
+    "\/assets\/slick.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/slick.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/style.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -1064,7 +1075,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/vendor\/_vendor.scss" : {
+    "\/scss\/vendor\/_slick.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -1073,7 +1084,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_vendor.css",
+      "oAP" : "\/assets\/_slick.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

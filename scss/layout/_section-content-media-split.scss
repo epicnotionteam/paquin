@@ -10,6 +10,7 @@
 
 // Section container
 .section--content-media-split {
+    @include rem( padding-bottom, $gap--section-small );
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );
@@ -52,10 +53,11 @@
 @include mq( $from: medium ) {
     // Section container
     .section--content-media-split {
+        @include rem( padding-bottom, $gap--section-large );
         // Adjust grid structure
         .section__grid {
             @include rem(( 
-                column-gap: spacing(4),
+                column-gap: spacing(7),
                 row-gap: spacing(6) 
             ));
             grid-auto-rows: auto;

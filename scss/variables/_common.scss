@@ -32,3 +32,11 @@ $border__input--disabled: 0 0 0 1px color('state', 'disabled') inset !default;
 
 $highlight--hidden: 1.5px solid transparent;
 $highlight--active: 1.5px solid color( 'primary', '4' );
+
+
+// Define common spacing vars
+// Utilized in section padding config
+// --------------------------------------------------
+
+$gap--section-small: 72px;
+$gap--section-large: 96px;

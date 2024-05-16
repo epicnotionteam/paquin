@@ -1283,6 +1283,7 @@ h5,
 .feed--block .item .item__number,
 .button--base,
 .product-form--atc-button,
+.section--feed-team .section__grid .container--heading-small .section__heading--small,
 .section--content-offset .section__grid .container--heading-small .section__heading--small,
 .section--content-media-split .section__grid .container--heading-small .section__heading--small,
 .section--content-blocks .section__grid .container--heading-small .section__heading--small {
@@ -1889,6 +1890,45 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--content-offset .section__grid .container--image {
     grid-column: 8/span 4;
     grid-row: 3;
+  }
+}
+.section--feed-team {
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+}
+.section--feed-team .section__grid {
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
+.section--feed-team .section__grid .container--heading-small .section__heading--small {
+  margin: 0;
+}
+.section--feed-team .section__grid .container--heading-large .section__heading--large {
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .section--feed-team {
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
+  .section--feed-team .section__grid {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    row-gap: 40px;
+    row-gap: 4rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .section--feed-team .section__grid .container--heading-small {
+    grid-column: 1/span 12;
+  }
+  .section--feed-team .section__grid .container--heading-large {
+    grid-column: 1/span 6;
+  }
+  .section--feed-team .section__grid .container--feed {
+    grid-column: 1/span 12;
   }
 }
 .collection--section .productgrid--outer {

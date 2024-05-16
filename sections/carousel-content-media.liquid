@@ -70,7 +70,9 @@
                                             {% comment %} Navigation {% endcomment %}
                                             <div class="item__navigation">
                                                 <span class="item__count">{{ forloop.index }} / {{ block_count }}</span>
-                                                <button class="trigger--next" data-glide-dir=">">Next</button>
+                                                <div class="glide__arrows" data-glide-el="controls">
+                                                    <button class="trigger--next" data-glide-dir=">">Next</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -96,13 +98,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      new Glide('[data-carousel]', {
-        type: 'carousel',
-        perView: 1,
-        gap: 40,
-      }).mount();
+        new Glide('[data-carousel]', {
+            type: 'carousel',
+            perView: 1,
+            gap: 40,
+        }).mount();
     });
-  </script>
+</script>
 
 {% schema %}
 {

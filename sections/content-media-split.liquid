@@ -15,8 +15,8 @@
 {% comment %} Output section {% endcomment %}
 <section class="section--content-media-split theme--{{ section_theme }} wrap--container">
     <div class="section__grid wrap--max push--center">
-        {% comment %} Container [Heading] {% endcomment %}
-        <div class="container--heading">
+        {% comment %} Container [Heading, Small] {% endcomment %}
+        <div class="container--heading-small">
             {% comment %} Heading [Small] {% endcomment %}
             {% if section_heading_small != blank %}
                 <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
@@ -24,7 +24,7 @@
         </div>
         {% comment %} Container [Content] {% endcomment %}
         <div class="container--content">
-            {% comment %} Subheading {% endcomment %}
+            {% comment %} Subheading {% endcomment %} 
             {% if section_subheading != blank %}
                 <p class="section__subheading">{{ section_subheading }}</p>
             {% endif %}
@@ -41,8 +41,8 @@
                 <a href="{{ section_link_url }}" class="section__link link--arrow-forward">{{ section_link_text }}</a>
             {% endif %}
         </div>
-        {% comment %} Container [Image] {% endcomment %}
-            <div class="container--image">
+        {% comment %} Container [Media] {% endcomment %}
+            <div class="container--media">
             {% comment %} Image {% endcomment %}
             <div class="section__image">
                 {% if section_image != blank %}

@@ -20,13 +20,14 @@
         <div class="carousel--content-media">
             {% for block in section_blocks %}
                 {% comment %} Assign block data to vars {% endcomment %}
-                {% assign block_logo      = block.settings.logo %}
-                {% assign block_heading   = block.settings.heading %}
-                {% assign block_content   = block.settings.content %}
-                {% assign block_link_text = block.settings.link_text %}
-                {% assign block_link_url  = block.settings.link_url %}
-                {% assign block_cta       = block.settings.cta %}
-                {% assign block_image     = block.settings.image %}
+                {% assign block_logo       = block.settings.logo %}
+                {% assign block_subheading = block.settings.subheading %}
+                {% assign block_heading    = block.settings.heading %}
+                {% assign block_content    = block.settings.content %}
+                {% assign block_link_text  = block.settings.link_text %}
+                {% assign block_link_url   = block.settings.link_url %}
+                {% assign block_cta        = block.settings.cta %}
+                {% assign block_image      = block.settings.image %}
                 {% comment %} Output item {% endcomment %}
                 <div class="item">
                     {% comment %} Container [Content] {% endcomment %}

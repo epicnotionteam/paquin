@@ -1368,6 +1368,7 @@ footer .site-footer-wrapper {
   padding: 48px 4vw 0;
   padding: 4.8rem 4vw 0;
   background-color: #212224;
+  margin-top: 0;
 }
 footer .site-footer-wrapper .site-footer-item {
   max-width: 1590px;

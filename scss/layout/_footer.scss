@@ -12,6 +12,7 @@
 footer .site-footer-wrapper {
     @include rem( padding, spacing(7) 4vw 0 );
     background-color: color( 'steel', '1' );
+    margin-top: 0;
     // Widget wrapper
     .site-footer-item {
         @include rem( max-width, wrap( 'max' ) );

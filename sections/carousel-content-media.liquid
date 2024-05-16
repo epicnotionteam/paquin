@@ -101,6 +101,10 @@
                     arrows: false,
                     dots: false
                 });
+                // Navigation
+                $('.trigger--next').on('click', function() {
+                    $carousel.slick('slickNext');
+                });
             } else {
                 console.error('Slick is not defined');
             }

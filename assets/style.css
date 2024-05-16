@@ -2220,8 +2220,13 @@ hr,
   margin: 0;
 }
 .feed--team .item .item__job-title {
-  margin-top: 4px;
-  margin-top: 0.4rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  margin: 4px 0 0;
+  margin: 0.4rem 0 0;
 }
 @media (min-width: 64em) {
   .feed--team {

@@ -115,7 +115,8 @@
          }
           // Job Title
         .item__job-title {
-            @include rem( margin-top, spacing(1) );
+            @include font-size( 'small' );
+            @include rem( margin, spacing(1) 0 0 );
         }
          // LinkedIn
          .item__linkedin {}

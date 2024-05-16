@@ -1937,6 +1937,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-position: center;
   background-size: cover;
 }
+.section--hero-inline .container--content {
+  max-width: 800px;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
 
 @media (min-width: 64em) {
   .section--hero-inline {

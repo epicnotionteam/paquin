@@ -2116,7 +2116,24 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-template-columns: max-content 1fr;
 }
 .section--hero-internal .section__wrap--content .section__wrap--navigation-internal .navigation__label {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   font-weight: 600;
+  margin: 0;
+}
+.section--hero-internal .section__wrap--content .section__wrap--navigation-internal select#navigation--jump-links {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
 }
 
 @media (min-width: 64em) {

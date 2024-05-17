@@ -28,7 +28,16 @@
         grid-template-columns: max-content 1fr;
         // Label
         .navigation__label {
+            @include font-size( 'small' );
             font-weight: font-weight( 'bold' );
+            margin: 0;
+        }
+        select#navigation--jump-links {
+            @include font-size( 'small' );
+            appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            -webkit-appearance: none;
         }
     }
 }

@@ -38,8 +38,8 @@
             // Wrap [Content]
             .section__wrap--content {
                 @include rem( max-width, 600px );
-                // Wrap [Content, INternal]
-                .section__wrap--content {
+                // Wrap [Content, Internal]
+                .section__wrap--content-internal {
                     @include rem( max-width, 512px );
                 }
             }

@@ -2297,8 +2297,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .carousel--content-media .item .item__grid {
-  row-gap: 32px;
-  row-gap: 3.2rem;
+  row-gap: 40px;
+  row-gap: 4rem;
   display: grid;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--content {
@@ -2381,13 +2381,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 100%;
 }
 
-.carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
-  border-color: #D6DBDD;
-}
-.carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover::before {
-  color: #30373A;
-}
-
 @media (min-width: 64em) {
   .carousel--content-media .item .item__grid {
     column-gap: 48px;
@@ -2409,6 +2402,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-top: auto;
   }
 }
+.carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
+  border-color: #D6DBDD;
+}
+.carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover::before {
+  color: #30373A;
+}
+
 hr,
 .divider--base {
   height: 1px;

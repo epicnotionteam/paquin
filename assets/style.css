@@ -2325,9 +2325,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation {
   column-gap: 12px;
   column-gap: 1.2rem;
-  align-items: center;
+  align-items: flex-end;
   display: grid;
-  grid-template-columns: rpeat(2, max-content);
+  grid-template-columns: repeat(2, max-content);
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .item__count {
   font-size: 13px;
@@ -2339,9 +2339,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   height: 6.4rem;
   width: 64px;
   width: 6.4rem;
+  background-color: white;
   border: 1px solid #D6DBDD;
   border-radius: 100%;
   display: flex;
+  place-content: center;
   place-items: center;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:before {

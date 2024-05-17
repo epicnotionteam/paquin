@@ -1237,11 +1237,11 @@ h1, h2, h3, h4 {
 
 h1,
 .h1 {
-  font-size: 40px;
-  font-size: 4rem;
-  line-height: 48px;
-  letter-spacing: 0.32px;
-  letter-spacing: 0.032rem;
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 44px;
+  letter-spacing: 0.24px;
+  letter-spacing: 0.024rem;
   letter-spacing: 0.4px;
   letter-spacing: 0.04rem;
   margin: 0 0 24px;
@@ -2056,11 +2056,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   z-index: 1;
 }
 .section--hero-inline .container--content .section__heading {
-  font-size: 40px;
-  font-size: 4rem;
-  line-height: 48px;
-  letter-spacing: 0.32px;
-  letter-spacing: 0.032rem;
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 44px;
+  letter-spacing: 0.24px;
+  letter-spacing: 0.024rem;
   margin: 0;
 }
 @media screen and (min-width: 1240px) {

@@ -18,7 +18,7 @@
         // Wrap [Content]
         .section__wrap--content {
             .section__wrap--content-internal {
-                @include rem( padding, spacing(7) 0 );
+                @include rem( padding, spacing(7) 0 spacing(5) );
             }
             .section__wrap--navigation-internal {
                 @include rem(( 
@@ -75,6 +75,7 @@
                 // Wrap [Content, Internal]
                 .section__wrap--content-internal {
                     @include rem( max-width, 640px );
+                    padding: 0;
                 }
             }
         }

@@ -53,6 +53,26 @@
                             margin: 0;
                         }
                     }
+                    // Slide Navigation
+                    .item__navigation {
+                        @include rem( column-gap, 12px );
+                        align-items: center;
+                        display: grid;
+                        grid-template-columns: rpeat( 2, max-content );
+                        // Slide Count
+                        .item__count {
+                            @include font-size( 'xsmall' );
+                        }
+                        // Trigger [Next]
+                        @include rem((
+                            height: 64px,
+                            width: 64px,
+                        ));
+                        border: $border--base;
+                        border-radius: 100%;
+                        display: flex;
+                        place-items: center;
+                    }
                 }
             }
             // Container [Media]

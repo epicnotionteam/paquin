@@ -2101,6 +2101,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-color: #212224;
   display: grid;
 }
+.section--hero-internal .container--content {
+  padding: 48px 4vw;
+  padding: 4.8rem 4vw;
+}
 .section--hero-internal .container--image {
   background-position: center;
   background-size: cover;

@@ -10,9 +10,12 @@
 
 // Section container
 .section--hero-internal {
-    @include rem( spacing(7) 4vw );
     background-color: color( 'steel', '1' );
     display: grid;
+    // Container [Content]
+    .container--content {
+        @include rem( padding, spacing(7) 4vw );
+    }
     // Container [Image]
     .container--image {
         background-position: center;

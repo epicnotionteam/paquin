@@ -2098,7 +2098,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--hero-internal {
+  background-color: #212224;
   display: grid;
+}
+.section--hero-internal .container--image {
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 64em) {

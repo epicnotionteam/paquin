@@ -50,10 +50,17 @@
                 select.appendChild(option);
             }
         });
-    }  
-    // Call the function when the DOM is loaded
-    document.addEventListener('DOMContentLoaded', createSectionAnchors);
-    </script>
+        // Add event listener for the change event
+        select.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const selectedAnchor = selectedOption.querySelector('a');
+            if (selectedAnchor) {
+                const href = selectedAnchor.getAttribute('href');
+                window.location.href = href;
+            }
+        });
+    }
+</script>
 
 {% schema %}
 {

@@ -22,11 +22,38 @@
                     <a href="{{ section_link_url }}" class="button--base">{{ section_link_text }}</a>
                 {% endif %}
             </div>
+            <div class="section__wrap--navigation-internal">
+                <select id="navigation--jump-links">
+                    <!-- Options will be dynamically populated by JavaScript -->
+                </select>
+            </div>
         </div>
     </div>
     {% comment %} Image {% endcomment %}
     <div class="container--image" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');"></div>
 </section>
+
+{% comment %} Generate jump link options {% endcomment %}
+<script>
+    function createSectionAnchors() {
+        const sections = document.querySelectorAll('.shopify-section > section');
+        const select = document.getElementById('navigation--jump-links');
+        sections.forEach(section => {
+            const heading = section.querySelector('.section__heading--small');
+            if (heading) {
+                const option = document.createElement('option');
+                const anchor = document.createElement('a');
+                const sectionId = section.parentElement.id;
+                anchor.href = `#${sectionId}`;
+                anchor.textContent = heading.textContent;
+                option.appendChild(anchor);
+                select.appendChild(option);
+            }
+        });
+    }  
+    // Call the function when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', createSectionAnchors);
+    </script>
 
 {% schema %}
 {

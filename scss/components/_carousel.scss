@@ -76,7 +76,6 @@
                             display: flex;
                             place-content: center;
                             place-items: center;
-                            transition: border-color 0.16s ease-out;
                             // Place icon
                             @include icon( 'before', 'chevron_right' ) {
                                 @include rem( font-size, 32px );
@@ -99,13 +98,10 @@
 
 // State management
 .carousel--content-media {
-    // Item container
-    .item {
-        // Trigger [Next:Hover]
-        .trigger--next:hover {
-            border-color: color( 'steel', '4' );
-        }
-    }                        
+    // Trigger [Next:Hover]
+    .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
+        border-color: color( 'steel', '4' );
+    }
 }
 
 // Adjust @medium breakpoint

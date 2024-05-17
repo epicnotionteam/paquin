@@ -2114,6 +2114,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-internal {
     grid-template-columns: repeat(2, 1fr);
   }
+  .section--hero-internal .container--content {
+    padding: 48px 48px 48px 4vw;
+    padding: 4.8rem 4.8rem 4.8rem 4vw;
+    justify-content: flex-end;
+    display: flex;
+  }
+  .section--hero-internal .container--content .section__wrap--content {
+    max-width: 600px;
+    max-width: 60rem;
+  }
+  .section--hero-internal .container--content .section__wrap--content .section__wrap--content {
+    max-width: 512px;
+    max-width: 51.2rem;
+  }
 }
 .collection--section .productgrid--outer {
   max-width: 1590px;

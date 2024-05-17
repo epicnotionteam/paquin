@@ -11,14 +11,18 @@
 <section class="section--hero-internal theme--dark">
     {% comment %} Container [Content] {% endcomment %}
     <div class="container--content">
-        {% comment %} Heading {% endcomment %}
-        {% if section_heading != blank %}
-            <h1 class="section__heading">{{ section_heading }}</h1>
-        {% endif %}
-        {% comment %} Link {% endcomment %}
-        {% if section_link_text != blank and section_link_url != blank %}
-            <a href="{{ section_link_url }}" class="button--base">{{ section_link_text }}</a>
-        {% endif %}
+        <div class="section__wrap--content">
+            <div class="section__wrap--content-internal">
+                {% comment %} Heading {% endcomment %}
+                {% if section_heading != blank %}
+                    <h1 class="section__heading">{{ section_heading }}</h1>
+                {% endif %}
+                {% comment %} Link {% endcomment %}
+                {% if section_link_text != blank and section_link_url != blank %}
+                    <a href="{{ section_link_url }}" class="button--base">{{ section_link_text }}</a>
+                {% endif %}
+            </div>
+        </div>
     </div>
     {% comment %} Image {% endcomment %}
     <div class="container--image" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');"></div>

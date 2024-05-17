@@ -30,5 +30,19 @@
     .section--hero-internal {
         // Grid structure
         grid-template-columns: repeat( 2, 1fr );
+        // Container [Content]
+        .container--content {
+            @include rem( padding, spacing(7) spacing(7) spacing(7) 4vw );
+            justify-content: flex-end;
+            display: flex;
+            // Wrap [Content]
+            .section__wrap--content {
+                @include rem( max-width, 600px );
+                // Wrap [Content, INternal]
+                .section__wrap--content {
+                    @include rem( max-width, 512px );
+                }
+            }
+        }
     }
 }

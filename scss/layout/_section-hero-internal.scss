@@ -74,8 +74,11 @@
                 width: 100%;
                 // Wrap [Content, Internal]
                 .section__wrap--content-internal {
-                    @include rem( max-width, 640px );
-                    padding: 0;
+                    @include rem(( 
+                        max-width: 640px,
+                        min-height: 512px,
+                        padding: 0 0 spacing(9) 0
+                    ));
                 }
             }
         }

@@ -2165,7 +2165,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
     max-width: 640px;
     max-width: 64rem;
-    padding: 0;
+    min-height: 512px;
+    min-height: 51.2rem;
+    padding: 0 0 64px 0;
+    padding: 0 0 6.4rem 0;
   }
   .section--hero-internal .container--image {
     aspect-ratio: unset;

@@ -14,37 +14,40 @@
     display: grid;
     // Container [Content]
     .container--content {
-        @include rem( padding, spacing(7) 4vw );
-    }
-    // Container [Image]
-    .container--image {
-        background-position: center;
-        background-size: cover;
-    }
-    // Wrap [Content]
-    .section__wrap--content .section__wrap--navigation-internal {
-        @include rem(( 
-            column-gap: spacing(2),
-            padding-top: spacing(3)
-        ));
-        border-top: $border--dark;
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        // Label
-        .navigation__label {
-            @include font-size( 'small' );
-            font-weight: font-weight( 'bold' );
-            margin: 0;
+        padding: 0 4vw;
+        // Wrap [Content]
+        .section__wrap--content {
+            @include rem( padding, spacing(7) 0 );
+                .section__wrap--navigation-internal {
+                @include rem(( 
+                    column-gap: spacing(2),
+                    padding-top: spacing(3)
+                ));
+                border-top: $border--dark;
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                // Label
+                .navigation__label {
+                    @include font-size( 'small' );
+                    font-weight: font-weight( 'bold' );
+                    margin: 0;
+                }
+                select#navigation--jump-links {
+                    @include font-size( 'small' );
+                    appearance: none;
+                    background: transparent;
+                    border: 0 none;
+                    color: white;
+                    -moz-appearance: none;
+                    -o-appearance: none;
+                    -webkit-appearance: none;
+                }
+            }
         }
-        select#navigation--jump-links {
-            @include font-size( 'small' );
-            appearance: none;
-            background: transparent;
-            border: 0 none;
-            color: white;
-            -moz-appearance: none;
-            -o-appearance: none;
-            -webkit-appearance: none;
+        // Container [Image]
+        .container--image {
+            background-position: center;
+            background-size: cover;
         }
     }
 }

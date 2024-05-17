@@ -102,7 +102,8 @@
 .carousel--content-media {
     // Trigger [Next:Hover]
     .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
-        border-color: color( 'steel', '1' );
+        border-color: color( 'steel', '2' );
+        color: color( 'steel', '2' );
     }
 }
 

@@ -82,6 +82,10 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
+                    // Link
+                    .section__link {
+                        align-self: flex-start;
+                    }
                 }
             }
         }

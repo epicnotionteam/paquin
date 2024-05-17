@@ -73,6 +73,10 @@
                             border-radius: 100%;
                             display: flex;
                             place-items: center;
+                            // Place icon
+                            @include icon( 'before', 'chevron_right' ) {
+                                @include rem( font-size, 40px );
+                            }
                         }
                     }
                 }

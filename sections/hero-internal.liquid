@@ -36,6 +36,16 @@
 
 {% comment %} Generate jump link options {% endcomment %}
 <script>
+    function smoothScroll(target) {
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+    
     function createSectionAnchors() {
       const sections = document.querySelectorAll('.shopify-section > section');
       const select = document.getElementById('navigation--jump-links');
@@ -57,16 +67,16 @@
       // Add event listener for the change event
       select.addEventListener('change', function() {
         const selectedOption = this.options[this.selectedIndex];
-        const href = selectedOption.value;
-        if (href) {
-          window.location.href = href;
+        const target = selectedOption.value;
+        if (target) {
+          smoothScroll(target);
         }
       });
     }
     
     // Call the function when the DOM is loaded
     document.addEventListener('DOMContentLoaded', createSectionAnchors);
-    </script>
+</script>
 
 {% schema %}
 {

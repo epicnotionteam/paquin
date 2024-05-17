@@ -44,8 +44,9 @@
         const heading = section.querySelector('.section__heading--small');
         if (heading) {
           const option = document.createElement('option');
-          const sectionId = section.parentElement.id;
+          const sectionId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
     
+          section.id = sectionId;
           option.value = `#${sectionId}`;
           option.textContent = heading.textContent;
     
@@ -65,7 +66,7 @@
     
     // Call the function when the DOM is loaded
     document.addEventListener('DOMContentLoaded', createSectionAnchors);
-</script>
+    </script>
 
 {% schema %}
 {

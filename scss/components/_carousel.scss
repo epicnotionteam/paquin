@@ -81,6 +81,7 @@
                             @include icon( 'before', 'chevron_right' ) {
                                 @include rem( font-size, 32px );
                                 color: color( 'steel', '4' );
+                                transition: color 0.16s ease-out;
                             }
                         }
                     }
@@ -103,7 +104,9 @@
     // Trigger [Next:Hover]
     .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
         border-color: color( 'steel', '2' );
-        color: color( 'steel', '2' );
+        &::before {
+            color: color( 'steel', '2' );
+        }
     }
 }
 

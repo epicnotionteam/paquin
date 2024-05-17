@@ -2367,6 +2367,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   font-size: 32px;
   font-size: 3.2rem;
   color: #66787F;
+  transition: color 0.16s ease-out;
 }
 .carousel--content-media .item .item__grid .container--media img {
   display: block;
@@ -2375,6 +2376,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
   border-color: #272A2D;
+}
+.carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover::before {
   color: #272A2D;
 }
 

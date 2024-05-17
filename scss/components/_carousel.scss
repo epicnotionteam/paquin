@@ -74,6 +74,7 @@
                             background-color: white;
                             border: $border--base;
                             border-radius: 100%;
+                            cursor: pointer;
                             display: flex;
                             place-content: center;
                             place-items: center;
@@ -105,7 +106,7 @@
     .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
         border-color: color( 'steel', '2' );
         &::before {
-            color: color( 'steel', '2' );
+            color: color( 'steel', '3' );
         }
     }
 }

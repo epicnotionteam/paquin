@@ -2351,6 +2351,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-color: white;
   border: 1px solid #D6DBDD;
   border-radius: 100%;
+  cursor: pointer;
   display: flex;
   place-content: center;
   place-items: center;
@@ -2378,7 +2379,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border-color: #272A2D;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover::before {
-  color: #272A2D;
+  color: #30373A;
 }
 
 @media (min-width: 64em) {

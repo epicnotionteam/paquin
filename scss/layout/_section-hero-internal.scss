@@ -50,6 +50,7 @@
     }
     // Container [Image]
     .container--image {
+        aspect-ratio: 4/3;
         background-position: center;
         background-size: cover;
     }
@@ -76,6 +77,10 @@
                     @include rem( max-width, 640px );
                 }
             }
+        }
+        // Container [Image]
+        .container--image {
+            aspect-ratio: unset;
         }
     }
 }

@@ -2142,6 +2142,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -webkit-appearance: none;
 }
 .section--hero-internal .container--image {
+  aspect-ratio: 4/3;
   background-position: center;
   background-size: cover;
 }
@@ -2164,6 +2165,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
     max-width: 640px;
     max-width: 64rem;
+  }
+  .section--hero-internal .container--image {
+    aspect-ratio: unset;
   }
 }
 .collection--section .productgrid--outer {

@@ -1775,6 +1775,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--carousel-content-media .section__grid .container--heading-small .section__heading--small {
   margin: 0;
 }
+.section--carousel-content-media .section__grid .container--carousel {
+  overflow: hidden;
+}
+
 @media (min-width: 64em) {
   .section--carousel-content-media {
     padding-bottom: 96px;
@@ -2376,7 +2380,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
-  border-color: #66787F;
+  border-color: #D6DBDD;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover::before {
   color: #30373A;

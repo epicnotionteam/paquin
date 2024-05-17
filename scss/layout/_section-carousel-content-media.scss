@@ -24,7 +24,9 @@
             }
         }
         // Container [Carousel]
-        .container--carousel {}
+        .container--carousel {
+            overflow: hidden;
+        }
     }
 }
     

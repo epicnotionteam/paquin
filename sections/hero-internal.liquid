@@ -23,6 +23,7 @@
                 {% endif %}
             </div>
             <div class="section__wrap--navigation-internal">
+                <p class="navigation__description">Jump to section:</p>
                 <select id="navigation--jump-links">
                     <option value="">Select a section</option>
                     {% comment %} Options added dynamically via script below {% endcomment %}
@@ -37,48 +38,39 @@
 {% comment %} Generate jump link options {% endcomment %}
 <script>
     function smoothScroll(target) {
-      const element = document.querySelector(target);
-      if (element) {
-        const offset = window.innerWidth < 719 ? 56 : 80;
-        const elementPosition = element.offsetTop;
-        const offsetPosition = elementPosition - offset;
-    
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+        const element = document.querySelector(target);
+        if (element) {
+            const offset = window.innerWidth < 719 ? 56 : 80;
+            const elementPosition = element.offsetTop;
+            const offsetPosition = elementPosition - offset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     }
-    
     function createSectionAnchors() {
-      const sections = document.querySelectorAll('.shopify-section > section');
-      const select = document.getElementById('navigation--jump-links');
-    
-      sections.forEach(section => {
-        const heading = section.querySelector('.section__heading--small');
-        if (heading) {
-          const option = document.createElement('option');
-          const sectionId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
-    
-          section.id = sectionId;
-          option.value = `#${sectionId}`;
-          option.textContent = heading.textContent;
-    
-          select.appendChild(option);
-        }
-      });
-    
-      // Add event listener for the change event
-      select.addEventListener('change', function() {
-        const selectedOption = this.options[this.selectedIndex];
-        const target = selectedOption.value;
-        if (target) {
-          smoothScroll(target);
-        }
-      });
+        const sections = document.querySelectorAll('.shopify-section > section');
+        const select = document.getElementById('navigation--jump-links');
+        sections.forEach(section => {
+            const heading = section.querySelector('.section__heading--small');
+            if (heading) {
+                const option = document.createElement('option');
+                const sectionId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+                section.id = sectionId;
+                option.value = `#${sectionId}`;
+                option.textContent = heading.textContent;
+                select.appendChild(option);
+            }
+        });
+        select.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const target = selectedOption.value;
+            if (target) {
+                smoothScroll(target);
+            }
+        });
     }
-    
-    // Call the function when the DOM is loaded
     document.addEventListener('DOMContentLoaded', createSectionAnchors);
 </script>
 

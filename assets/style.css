@@ -2097,6 +2097,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     min-height: 64rem;
   }
 }
+.section--hero-internal {
+  display: grid;
+}
+
+@media (min-width: 64em) {
+  .section--hero-internal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .collection--section .productgrid--outer {
   max-width: 1590px;
   max-width: 159rem;

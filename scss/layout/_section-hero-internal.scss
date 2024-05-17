@@ -9,11 +9,16 @@
 // --------------------------------------------------
 
 // Section container
-.section {}
+.section--hero-internal {
+    display: grid;
+}
     
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Section container
-    .section {}
+    .section--hero-internal {
+        // Grid structure
+        grid-template-columns: repeat( 2, 1fr );
+    }
 }

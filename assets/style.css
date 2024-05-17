@@ -2365,7 +2365,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {
-  border-color: #66787F;
+  border-color: #212224;
 }
 
 @media (min-width: 64em) {

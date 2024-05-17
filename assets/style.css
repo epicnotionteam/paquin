@@ -2131,6 +2131,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   appearance: none;
+  background: transparent;
+  border: 0 none;
   -moz-appearance: none;
   -o-appearance: none;
   -webkit-appearance: none;

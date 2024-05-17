@@ -35,6 +35,8 @@
         select#navigation--jump-links {
             @include font-size( 'small' );
             appearance: none;
+            background: transparent;
+            border: 0 none;
             -moz-appearance: none;
             -o-appearance: none;
             -webkit-appearance: none;

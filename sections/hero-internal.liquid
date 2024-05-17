@@ -39,9 +39,13 @@
     function smoothScroll(target) {
       const element = document.querySelector(target);
       if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const offset = window.innerWidth < 719 ? 56 : 70;
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - offset;
+    
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
       }
     }

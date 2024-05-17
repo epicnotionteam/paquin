@@ -80,6 +80,7 @@
                             // Place icon
                             @include icon( 'before', 'chevron_right' ) {
                                 @include rem( font-size, 32px );
+                                color: color( 'steel', '4' );
                             }
                         }
                     }

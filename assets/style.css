@@ -2366,6 +2366,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -moz-osx-font-smoothing: grayscale;
   font-size: 32px;
   font-size: 3.2rem;
+  color: #66787F;
 }
 .carousel--content-media .item .item__grid .container--media img {
   display: block;

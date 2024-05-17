@@ -2346,6 +2346,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: flex;
   place-content: center;
   place-items: center;
+  transition: border-color 0.16s ease-out;
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:before {
   content: "\e409";
@@ -2362,6 +2363,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .carousel--content-media .item .item__grid .container--media img {
   display: block;
   max-width: 100%;
+}
+
+.carousel--content-media .item .trigger--next:hover {
+  border-color: #66787F;
 }
 
 @media (min-width: 64em) {

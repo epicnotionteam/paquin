@@ -63,7 +63,7 @@
         grid-template-columns: repeat( 2, 1fr );
         // Container [Content]
         .container--content {
-            @include rem( padding, spacing(7) spacing(7) spacing(7) 4vw );
+            @include rem( padding, spacing(7) spacing(7) 0 4vw );
             justify-content: flex-end;
             display: flex;
             // Wrap [Content]

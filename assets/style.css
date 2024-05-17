@@ -2150,8 +2150,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-template-columns: repeat(2, 1fr);
   }
   .section--hero-internal .container--content {
-    padding: 48px 48px 48px 4vw;
-    padding: 4.8rem 4.8rem 4.8rem 4vw;
+    padding: 48px 48px 0 4vw;
+    padding: 4.8rem 4.8rem 0 4vw;
     justify-content: flex-end;
     display: flex;
   }

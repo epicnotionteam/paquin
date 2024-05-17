@@ -2121,12 +2121,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     display: flex;
   }
   .section--hero-internal .container--content .section__wrap--content {
-    max-width: 600px;
-    max-width: 60rem;
+    max-width: 750px;
+    max-width: 75rem;
   }
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
-    max-width: 512px;
-    max-width: 51.2rem;
+    max-width: 640px;
+    max-width: 64rem;
   }
 }
 .collection--section .productgrid--outer {

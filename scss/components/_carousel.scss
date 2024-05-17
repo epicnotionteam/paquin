@@ -64,14 +64,16 @@
                             @include font-size( 'xsmall' );
                         }
                         // Trigger [Next]
-                        @include rem((
-                            height: 64px,
-                            width: 64px,
-                        ));
-                        border: $border--base;
-                        border-radius: 100%;
-                        display: flex;
-                        place-items: center;
+                        .trigger--next {
+                            @include rem((
+                                height: 64px,
+                                width: 64px,
+                            ));
+                            border: $border--base;
+                            border-radius: 100%;
+                            display: flex;
+                            place-items: center;
+                        }
                     }
                 }
             }

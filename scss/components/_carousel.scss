@@ -68,6 +68,7 @@
                         .trigger--next {
                             @include rem((
                                 height: 64px,
+                                margin-bottom: 1px,
                                 width: 64px,
                             ));
                             background-color: white;
@@ -120,11 +121,14 @@
                     flex-direction: column;
                     // Wrap [Content]
                     .item__wrap--content {
-                        @include rem( max-width, 512px );
+                        @include rem(( 
+                            max-width: 512px,
+                            padding: spacing(7) 0
+                        ));
                         margin: auto 0;
                     }
                     // Wrap [Actions]
-                    .item__wrap--content {
+                    .item__wrap--actions {
                         margin-top: auto;
                     }
                 }

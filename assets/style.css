@@ -2338,6 +2338,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next {
   height: 64px;
   height: 6.4rem;
+  margin-bottom: 1px;
+  margin-bottom: 0.1rem;
   width: 64px;
   width: 6.4rem;
   background-color: white;
@@ -2381,9 +2383,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .carousel--content-media .item .item__grid .container--content .item__wrap--content {
     max-width: 512px;
     max-width: 51.2rem;
+    padding: 48px 0;
+    padding: 4.8rem 0;
     margin: auto 0;
   }
-  .carousel--content-media .item .item__grid .container--content .item__wrap--content {
+  .carousel--content-media .item .item__grid .container--content .item__wrap--actions {
     margin-top: auto;
   }
 }

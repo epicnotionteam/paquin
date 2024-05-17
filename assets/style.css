@@ -1095,6 +1095,12 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
+.theme--base + .theme--base .section__primary-heading,
+.theme--alt + .theme--alt .section__primary-heading,
+.theme--dark + .theme--dark .section__primary-heading {
+  margin-top: 0;
+}
+
 body {
   font-size: 17px;
   font-size: 1.7rem;

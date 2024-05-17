@@ -21,6 +21,16 @@
         background-position: center;
         background-size: cover;
     }
+    // Wrap [Content]
+    .section__wrap--content .section__wrap--navigation-internal {
+        @include rem( column-gap, spacing(2) );
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        // Label
+        .navigation__label {
+            font-weight: font-weight( 'bold' );
+        }
+    }
 }
     
 

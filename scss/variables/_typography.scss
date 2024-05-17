@@ -86,16 +86,20 @@ $font-sizeDefaults: (
 		'large':  (font-size: 32px, line-height: 1.4)
 	),
 	'headline': (
-		'base': (font-size: 64px, line-height: 72px, letter-spacing: 0.56px),
+		'base':  (font-size: 40px, line-height: 48px, letter-spacing: 0.32px),
+		'large': (font-size: 64px, line-height: 72px, letter-spacing: 0.56px),
 	),
 	'h1': (
-		'base': (font-size: 48px, line-height: 56px, letter-spacing: 0.4px),
+		'base':  (font-size: 40px, line-height: 48px, letter-spacing: 0.32px),
+		'large': (font-size: 48px, line-height: 56px, letter-spacing: 0.4px),
 	),
 	'h2': (
-		'base': (font-size: 36px, line-height: 44px, letter-spacing: 0.24px),
+		'base':  (font-size: 28px, line-height: 36px, letter-spacing: 0.16px),
+		'large': (font-size: 36px, line-height: 44px, letter-spacing: 0.24px),
 	),
 	'h3': (
-		'base': (font-size: 24px, line-height: 32px, letter-spacing: 0.16px),
+		'base': (font-size: 20px, line-height: 28px, letter-spacing: 0.12px),
+		'large': (font-size: 24px, line-height: 32px, letter-spacing: 0.16px),
 	),
 	'h4': (
 		'base': (font-size: 18px, line-height: 24px, letter-spacing: 0.12px),

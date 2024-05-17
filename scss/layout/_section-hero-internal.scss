@@ -38,6 +38,7 @@
             // Wrap [Content]
             .section__wrap--content {
                 @include rem( max-width, 750px );
+                width: 100%;
                 // Wrap [Content, Internal]
                 .section__wrap--content-internal {
                     @include rem( max-width, 640px );

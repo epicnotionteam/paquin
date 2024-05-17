@@ -17,8 +17,10 @@
         padding: 0 4vw;
         // Wrap [Content]
         .section__wrap--content {
-            @include rem( padding, spacing(7) 0 );
-                .section__wrap--navigation-internal {
+            .section__wrap--content-internal {
+                @include rem( padding, spacing(7) 0 );
+            }
+            .section__wrap--navigation-internal {
                 @include rem(( 
                     column-gap: spacing(2),
                     padding-top: spacing(3)
@@ -44,11 +46,11 @@
                 }
             }
         }
-        // Container [Image]
-        .container--image {
-            background-position: center;
-            background-size: cover;
-        }
+    }
+    // Container [Image]
+    .container--image {
+        background-position: center;
+        background-size: cover;
     }
 }
     

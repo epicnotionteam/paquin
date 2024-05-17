@@ -2104,7 +2104,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-internal .container--content {
   padding: 0 4vw;
 }
-.section--hero-internal .container--content .section__wrap--content {
+.section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
   padding: 48px 0;
   padding: 4.8rem 0;
 }
@@ -2140,7 +2140,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -o-appearance: none;
   -webkit-appearance: none;
 }
-.section--hero-internal .container--content .container--image {
+.section--hero-internal .container--image {
   background-position: center;
   background-size: cover;
 }

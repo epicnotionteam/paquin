@@ -44,6 +44,14 @@
                 .item__wrap--actions {
                     display: grid;
                     grid-template-columns: 11fr max-content;
+                    // CTA
+                    .item__cta  {
+                        @include font-size( 'xsmall' );
+                        // Strip margin from final <p>
+                        p:last-child {
+                            margin: 0;
+                        }
+                    }
                 }
             }
             // Container [Media]

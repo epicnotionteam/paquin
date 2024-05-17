@@ -2169,6 +2169,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     min-height: 51.2rem;
     padding: 0 0 64px 0;
     padding: 0 0 6.4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   .section--hero-internal .container--image {
     aspect-ratio: unset;

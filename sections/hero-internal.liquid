@@ -37,30 +37,32 @@
 {% comment %} Generate jump link options {% endcomment %}
 <script>
     function createSectionAnchors() {
-        const sections = document.querySelectorAll('.shopify-section > section');
-        const select = document.getElementById('navigation--jump-links');
-        sections.forEach(section => {
-            const heading = section.querySelector('.section__heading--small');
-            if (heading) {
-                const option = document.createElement('option');
-                const anchor = document.createElement('a');
-                const sectionId = section.parentElement.id;
-                anchor.href = `#${sectionId}`;
-                anchor.textContent = heading.textContent;
-                option.appendChild(anchor);
-                select.appendChild(option);
-            }
-        });
-        // Add event listener for the change event
-        select.addEventListener('change', function() {
-            const selectedOption = this.options[this.selectedIndex];
-            const selectedAnchor = selectedOption.querySelector('a');
-            if (selectedAnchor) {
-                const href = selectedAnchor.getAttribute('href');
-                window.location.href = href;
-            }
-        });
+      const sections = document.querySelectorAll('.shopify-section > section');
+      const select = document.getElementById('navigation--jump-links');
+    
+      sections.forEach(section => {
+        const heading = section.querySelector('.section__heading--small');
+        if (heading) {
+          const option = document.createElement('option');
+          const sectionId = section.parentElement.id;
+    
+          option.value = `#${sectionId}`;
+          option.textContent = heading.textContent;
+    
+          select.appendChild(option);
+        }
+      });
+    
+      // Add event listener for the change event
+      select.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        const href = selectedOption.value;
+        if (href) {
+          window.location.href = href;
+        }
+      });
     }
+    
     // Call the function when the DOM is loaded
     document.addEventListener('DOMContentLoaded', createSectionAnchors);
 </script>

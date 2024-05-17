@@ -1167,7 +1167,7 @@ small,
   font-size: 1.9rem;
   line-height: 1.4;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   .text--large,
   .text--large p {
     font-size: 21px;
@@ -1182,7 +1182,7 @@ small,
   font-size: 1.9rem;
   line-height: 1.45;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   .text--xlarge,
   .text--xlarge p {
     font-size: 23px;
@@ -1197,7 +1197,7 @@ small,
   font-size: 2.4rem;
   line-height: 1.45;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   .text--xxlarge,
   .text--xxlarge p {
     font-size: 32px;
@@ -1248,7 +1248,7 @@ h1,
   margin: 0 0 2.4rem;
   font-weight: 400;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   h1,
   .h1 {
     font-size: 48px;
@@ -1272,7 +1272,7 @@ h2,
   margin: 0 0 0.8rem;
   font-weight: 400;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   h2,
   .h2 {
     font-size: 36px;
@@ -1296,7 +1296,7 @@ h3,
   margin: 0 0 1.2rem;
   font-weight: 400;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   h3,
   .h3 {
     font-size: 24px;
@@ -1322,7 +1322,7 @@ h4,
   margin: 0 0 0.8rem;
   font-weight: 400;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   h4,
   .h4,
   .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a,
@@ -2063,7 +2063,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: 0.024rem;
   margin: 0;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   .section--hero-inline .container--content .section__heading {
     font-size: 64px;
     font-size: 6.4rem;
@@ -2219,7 +2219,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: 0.016rem;
   margin: 0;
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   .grid--product #product__header #product__title {
     font-size: 36px;
     font-size: 3.6rem;

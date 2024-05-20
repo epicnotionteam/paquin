@@ -29,7 +29,7 @@
 
     // Hover
     &:hover {
-        background-color: color( 'action', '2' );
+        filter: brightness(1.04);
     }
 
 }

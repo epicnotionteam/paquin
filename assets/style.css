@@ -2436,7 +2436,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .button--base:hover,
 .product-form--atc-button:hover {
-  background-color: #35ADC2;
+  filter: brightness(1.04);
 }
 
 .product-form--atc-button {

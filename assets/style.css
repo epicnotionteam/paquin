@@ -2880,6 +2880,10 @@ hr,
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.feed--collection .item .item__wrap--image:hover {
+  border-color: #66787F;
+}
+
 .feed--post {
   row-gap: 32px;
   row-gap: 3.2rem;

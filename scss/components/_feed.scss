@@ -134,6 +134,14 @@
     }
 }
 
+// State management
+.feed--collection {
+    // Item image:hover
+    .item .item__wrap--image:hover {
+        border-color: color( 'steel', '4' );
+    }
+}
+
 
 // Feed [Post]
 // --------------------------------------------------

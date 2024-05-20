@@ -44,7 +44,7 @@
 	a:not([class*='button']):not(.breadcrumbs-container a),
 	p a,
 	li a {
-		color: white;
+		color: white !important;
 	}
 	// Component [Primary Section Heading]
 	.section__primary-heading {

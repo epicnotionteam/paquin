@@ -2789,14 +2789,14 @@ hr,
   display: grid;
 }
 .feed--post .item .item__wrap--image {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
 }
 .feed--post .item .item__wrap--image .item__image {
-  margin-bottom: 8px;
-  margin-bottom: 0.8rem;
   display: block;
   transition: transform 0.8s ease-out;
   width: 100%;

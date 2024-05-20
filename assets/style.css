@@ -2845,7 +2845,7 @@ hr,
   margin: 0;
 }
 .feed--collection .item .item__title a {
-  color: #212224;
+  color: #212224 !important;
   font-weight: 400 !important;
 }
 .feed--collection .item .item__description {

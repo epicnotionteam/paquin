@@ -97,7 +97,7 @@
             margin: 0;
             // Link
             a {
-                color: color( 'steel', '1' );
+                color: color( 'steel', '1' ) !important;
                 font-weight: font-weight( 'base' ) !important;
             }
         }

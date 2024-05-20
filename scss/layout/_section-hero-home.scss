@@ -18,7 +18,7 @@
     background-size: cover;
     // Container [Content]
     .container--content {
-        // @include rem( row-gap, spacing(5) );
+        @include rem( row-gap, spacing(4) );
         display: grid;
         // Heading
         .section__heading {

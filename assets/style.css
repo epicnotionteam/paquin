@@ -2121,6 +2121,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-size: cover;
 }
 .section--hero-home .container--content {
+  row-gap: 24px;
+  row-gap: 2.4rem;
   display: grid;
 }
 .section--hero-home .container--content .section__heading {

@@ -2821,6 +2821,8 @@ hr,
 
 @media (min-width: 64em) {
   .feed--post {
+    column-gap: 24px;
+    column-gap: 2.4rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }

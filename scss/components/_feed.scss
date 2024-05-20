@@ -108,6 +108,7 @@
 @include mq( $from: medium ) {
     // Component container
     .feed--post {
+        @include rem( column-gap, spacing(4) );
         grid-template-columns: repeat( 2, 1fr );
     }
 }

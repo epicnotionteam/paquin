@@ -91,7 +91,7 @@
 }
 
 
-// Button [Has Icon, Before]
+// Button [Icon, Before]
 // --------------------------------------------------
 
 .button--icon-before {
@@ -105,7 +105,7 @@
 }
 
 
-// Button [Has Icon, After]
+// Button [Icon, After]
 // --------------------------------------------------
 
 .button--icon-after {
@@ -129,7 +129,7 @@
     // Icon-specific adjustments
     &::before,
     &::after {
-        @include rem( margin-top, 1px );
+        @include rem( margin-top, 2px );
         font-size: 128%;
         line-height: 1;
     }

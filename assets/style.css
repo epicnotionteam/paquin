@@ -2525,8 +2525,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -moz-osx-font-smoothing: grayscale;
 }
 .button--icon-arrow-down::before, .button--icon-arrow-down::after {
-  margin-top: 1px;
-  margin-top: 0.1rem;
+  margin-top: 2px;
+  margin-top: 0.2rem;
   font-size: 128%;
   line-height: 1;
 }
@@ -3018,6 +3018,7 @@ li a:hover::after {
 .link--icon-before::before {
   margin-right: 6px;
   margin-right: 0.6rem;
+  display: inline-block;
   line-height: 1;
 }
 .link--icon-before::after {
@@ -3030,6 +3031,7 @@ li a:hover::after {
 .link--icon-after::after {
   margin-left: 4px;
   margin-left: 0.4rem;
+  display: inline-block;
   line-height: 1;
 }
 

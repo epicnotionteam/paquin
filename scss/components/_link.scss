@@ -34,12 +34,13 @@ li a {
 }
 
 
-// Link [Has Icon, Before]
+// Link [Icon, Before]
 // --------------------------------------------------
 
 .link--icon-before {
     &::before {
         @include rem( margin-right, 6px );
+        display: inline-block;
         line-height: 1;
     }
      // Remove :after pseudo-element
@@ -49,7 +50,7 @@ li a {
 }
 
 
-// Link [Has Icon, After]
+// Link [Icon, After]
 // --------------------------------------------------
 
 .link--icon-after {
@@ -60,6 +61,7 @@ li a {
     // Icon
     &::after {
         @include rem( margin-left, spacing(1) );
+        display: inline-block;
         line-height: 1;
     }
 }

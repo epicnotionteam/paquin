@@ -2750,8 +2750,8 @@ hr,
   display: grid;
 }
 .feed--post .item {
-  column-gap: 12px;
-  column-gap: 1.2rem;
+  row-gap: 12px;
+  row-gap: 1.2rem;
   display: grid;
 }
 .feed--post .item .item__image {

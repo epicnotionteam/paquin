@@ -73,7 +73,7 @@
     display: grid;
     // Item container
     .item {
-        @include rem( column-gap, 12px );
+        @include rem( row-gap, 12px );
         display: grid;
         // Image
         .item__image {

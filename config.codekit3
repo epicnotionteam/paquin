@@ -1400,12 +1400,12 @@
       "oAP" : "\/sections\/dynamic-video.liquid",
       "oF" : 0
     },
-    "\/sections\/feed-post copy.liquid" : {
+    "\/sections\/feed-collection.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/feed-post copy.liquid",
+      "oAP" : "\/sections\/feed-collection.liquid",
       "oF" : 0
     },
     "\/sections\/feed-post.liquid" : {

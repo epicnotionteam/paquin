@@ -79,6 +79,7 @@
         .item__wrap--image {
             @include rem( margin-bottom, spacing(2) );
             aspect-ratio: 1/1;
+            border: $border--base;
             overflow: hidden;
             // Image
             .item__image {
@@ -149,7 +150,6 @@
         .item__wrap--image {
             @include rem( margin-bottom, spacing(2) );
             aspect-ratio: 1/1;
-            border: 1px solid red !important;
             overflow: hidden;
             // Image
             .item__image {

@@ -2830,6 +2830,7 @@ hr,
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   aspect-ratio: 1/1;
+  border: 1px solid #D6DBDD;
   overflow: hidden;
 }
 .feed--collection .item .item__wrap--image .item__image {
@@ -2893,7 +2894,6 @@ hr,
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   aspect-ratio: 1/1;
-  border: 1px solid red !important;
   overflow: hidden;
 }
 .feed--post .item .item__wrap--image .item__image {

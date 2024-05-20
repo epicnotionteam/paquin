@@ -311,8 +311,10 @@
         .item {
             @include rem((
                 column-gap: spacing(2),
-                grid-template-columns: 16px 1fr 
+                grid-template-columns: 16px 1fr,
+                padding-top: spacing(5)
             ));
+            border-top: $border--dark;
             display: grid;
         }
     }

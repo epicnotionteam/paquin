@@ -14,7 +14,7 @@
         <div class="section__wrap--content">
             <div class="section__wrap--content-internal">
                 {% comment %} Breadcrumbs {% endcomment %}
-                <p>Breadcrumbs</p>
+                {% render 'breadcrumbs' %}
                 {% comment %} Heading {% endcomment %}
                 {% if section_heading != blank %}
                     <h1 class="section__heading">{{ section_heading }}</h1>

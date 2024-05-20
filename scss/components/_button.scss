@@ -20,8 +20,9 @@
     border: 0 none;
     border-radius: 0;
     color: white;
-    display: flex;
+    display: inline-flex;
     font-weight: font-weight( 'bold' );
+    justify-content: center;
     line-height: 1.2;
     margin: 0;
     text-decoration: none;
@@ -75,8 +76,9 @@
     box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;
     border-radius: 0;
     color: color( 'steel', '1' );
-    display: flex;
+    display: inline-flex;
     font-weight: font-weight( 'bold' );
+    justify-content: center;
     line-height: 1.2;
     margin: 0;
     text-decoration: none;

@@ -2430,8 +2430,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border: 0 none;
   border-radius: 0;
   color: white;
-  display: flex;
+  display: inline-flex;
   font-weight: 600;
+  justify-content: center;
   line-height: 1.2;
   margin: 0;
   text-decoration: none;
@@ -2475,8 +2476,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   box-shadow: 0 0 0 1px #D6DBDD inset;
   border-radius: 0;
   color: #212224;
-  display: flex;
+  display: inline-flex;
   font-weight: 600;
+  justify-content: center;
   line-height: 1.2;
   margin: 0;
   text-decoration: none;

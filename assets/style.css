@@ -2425,11 +2425,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   min-height: 5.4rem;
   padding: 16px 32px;
   padding: 1.6rem 3.2rem;
+  align-items: center;
   background-color: #0F7F92;
   border: 0 none;
   border-radius: 0;
   color: white;
-  display: inline-block;
+  display: flex;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
@@ -2468,12 +2469,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   min-height: 5.4rem;
   padding: 16px 32px;
   padding: 1.6rem 3.2rem;
+  align-items: center;
   background-color: transparent;
   border: 0 none;
   box-shadow: 0 0 0 1px #D6DBDD inset;
   border-radius: 0;
   color: #212224;
-  display: inline-block;
+  display: flex;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;

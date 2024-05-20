@@ -15,11 +15,12 @@
         min-height: 54px,
         padding: spacing(3) spacing(5) 
     ));
+    align-items: center;
     background-color: color( 'action', '1' );
     border: 0 none;
     border-radius: 0;
     color: white;
-    display: inline-block;
+    display: flex;
     font-weight: font-weight( 'bold' );
     line-height: 1.2;
     margin: 0;
@@ -68,12 +69,13 @@
         min-height: 54px,
         padding: spacing(3) spacing(5) 
     ));
+    align-items: center;
     background-color: transparent;
     border: 0 none;
     box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;
     border-radius: 0;
     color: color( 'steel', '1' );
-    display: inline-block;
+    display: flex;
     font-weight: font-weight( 'bold' );
     line-height: 1.2;
     margin: 0;

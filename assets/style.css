@@ -2421,6 +2421,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .button--base,
 .product-form--atc-button {
+  min-height: 54px;
+  min-height: 5.4rem;
   padding: 16px 32px;
   padding: 1.6rem 3.2rem;
   background-color: #0F7F92;
@@ -2462,6 +2464,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .button--outline {
+  min-height: 54px;
+  min-height: 5.4rem;
   padding: 16px 32px;
   padding: 1.6rem 3.2rem;
   background-color: transparent;

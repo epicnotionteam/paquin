@@ -11,7 +11,10 @@
 .button--base,
 %button--base {
     @extend %h5;
-    @include rem( padding, spacing(3) spacing(5) );
+    @include rem((
+        min-height: 54px,
+        padding: spacing(3) spacing(5) 
+    ));
     background-color: color( 'action', '1' );
     border: 0 none;
     border-radius: 0;
@@ -61,7 +64,10 @@
 
 .button--outline {
     @extend %h5;
-    @include rem( padding, spacing(3) spacing(5) );
+    @include rem((
+        min-height: 54px,
+        padding: spacing(3) spacing(5) 
+    ));
     background-color: transparent;
     border: 0 none;
     box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;

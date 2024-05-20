@@ -2080,9 +2080,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--hero-inline .container--content .container--cta {
+  gap: 12px;
+  gap: 1.2rem;
   align-items: center;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+.section--hero-inline .container--content .container--cta a {
+  flex: 1 1 100%;
 }
 .section--hero-inline::before {
   background: linear-gradient(0deg, rgb(48, 55, 58) 0%, rgba(48, 55, 58, 0) 100%);
@@ -2413,6 +2418,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: inline-block;
   font-weight: 600;
   line-height: 1.2;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -2454,6 +2460,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: inline-block;
   font-weight: 600;
   line-height: 1.2;
+  margin: 0;
   text-decoration: none;
 }
 

@@ -45,9 +45,15 @@
         }
         // Container [CTA]
         .container--cta {
+            @include rem( gap, 12px );
             align-items: center;
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            // justify-content: center;
+            // Button(s)
+            a {
+                flex: 1 1 100%;
+            }
         }
     }
     &::before {

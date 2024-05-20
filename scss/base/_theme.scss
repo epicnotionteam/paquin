@@ -34,6 +34,12 @@
 	.breadcrumbs-container a {
 		color: white;
 	}
+	// Component [Button, Outline:Hover]
+	//
+	.button--outline:hover {
+		color: white;
+		box-shadow: 0 0 0 1px white inset;
+	}
 	// Component [Primary Section Heading]
 	.section__primary-heading {
 		border-top: $border--dark;

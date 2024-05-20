@@ -1094,6 +1094,10 @@ body {
 .theme--dark .breadcrumbs-container a {
   color: white;
 }
+.theme--dark .button--outline:hover {
+  color: white;
+  box-shadow: 0 0 0 1px white inset;
+}
 .theme--dark .section__primary-heading {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
@@ -2111,7 +2115,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     justify-content: center;
   }
   .section--hero-inline .container--content .container--cta a {
-    flex: auto;
+    flex: unset;
   }
 }
 .section--hero-internal {

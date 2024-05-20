@@ -2080,9 +2080,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--hero-inline .container--content .container--cta {
-  gap: 12px;
-  gap: 1.2rem;
-  align-items: center;
+  row-gap: 8px;
+  row-gap: 0.8rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -2104,6 +2103,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-inline {
     min-height: 640px;
     min-height: 64rem;
+  }
+  .section--hero-inline .container--content .container--cta {
+    column-gap: 12px;
+    column-gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .section--hero-inline .container--content .container--cta a {
+    flex: auto;
   }
 }
 .section--hero-internal {

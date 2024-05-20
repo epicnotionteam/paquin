@@ -100,6 +100,13 @@
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
       }
     },
+    "feed_post_CzipWa": {
+      "type": "feed-post",
+      "settings": {
+        "heading_small": "Recent News & Insights",
+        "theme": "dark"
+      }
+    },
     "content_media_split_bLyRpL": {
       "type": "content-media-split",
       "settings": {
@@ -119,6 +126,7 @@
     "carousel_content_media_mNDabb",
     "content_blocks_3NfM3m",
     "hero_inline_HNjXCG",
+    "feed_post_CzipWa",
     "content_media_split_bLyRpL"
   ]
 }

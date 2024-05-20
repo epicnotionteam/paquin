@@ -81,8 +81,12 @@
         }
         // Title
         .item__title {
-            @extend %h3;
+            @extend %h4;
             margin: 0;
+            // Link
+            a {
+                font-weight: font-weight( 'base' );
+            }
         }
         // Excerpt
         .item__excerpt {

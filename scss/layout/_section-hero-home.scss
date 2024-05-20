@@ -16,8 +16,11 @@
     // ));
     background-position: center;
     background-size: cover;
+    position: relative;
     // Container [Content]
     .container--content {
+        position: relative;
+        z-index: 1;
         // Wrap [Content]
         .section__wrap--content {
             @include rem(( 
@@ -48,6 +51,16 @@
                 }
             }
         }
+    }
+    // Overlay [Darken]
+    &::before {
+        background-color: rgba( 16, 16, 16, 0.32 );
+        content: '';
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
     }
 }
    

@@ -42,17 +42,15 @@
    {% if section_blocks.size > 0 %}
         <div class="glide carousel--trust-signals" data-carousel>
             <div data-glide-el="track" class="glide__track">
-                <ul class="glide__slides">
+                <ul class="glide__slides feed--trust-signal">
                    {% for block in section_blocks %}
                         <li class="glide__slide item">
-                            <div class="trust-signal">
-                                {% if block.settings.heading != blank %}
-                                    <p class="trust-signal__heading">{{ block.settings.heading }}</p>
-                                {% endif %}
-                                {% if block.settings.content != blank %}
-                                    <div class="trust-signal__content">{{ block.settings.content }}</div>
-                                {% endif %}
-                            </div>
+                            {% if block.settings.heading != blank %}
+                                <p class="trust-signal__heading">{{ block.settings.heading }}</p>
+                            {% endif %}
+                            {% if block.settings.content != blank %}
+                                <div class="trust-signal__content">{{ block.settings.content }}</div>
+                            {% endif %}
                         </li>
                    {% endfor %}
                 </ul>

@@ -2119,6 +2119,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-home {
   background-position: center;
   background-size: cover;
+  position: relative;
+}
+.section--hero-home .container--content {
+  position: relative;
+  z-index: 1;
 }
 .section--hero-home .container--content .section__wrap--content {
   padding: 64px 0;
@@ -2155,6 +2160,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .section--hero-home .container--content .section__wrap--content .container--cta a {
   flex: 1 1 100%;
+}
+.section--hero-home::before {
+  background-color: rgba(16, 16, 16, 0.32);
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
 
 @media (min-width: 48em) {
@@ -3086,6 +3100,21 @@ hr,
 @media (min-width: 77.5em) {
   .feed--team {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 77.5em) {
+  .feed--trust-signal {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feed--trust-signal .item {
+    column-gap: 8px;
+    column-gap: 0.8rem;
+    grid-template-columns: 16px 1fr;
+    grid-template-columns: 1.6rem 1fr;
+    display: grid;
   }
 }
 .productgrid--sidebar {

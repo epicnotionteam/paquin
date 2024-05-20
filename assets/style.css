@@ -2993,7 +2993,7 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#site-main a:not([class*=button]),
+#site-main a:not([class*=button]):not(.breadcrumbs-container a),
 p a,
 li a {
   color: #0F7F92;
@@ -3001,7 +3001,7 @@ li a {
   text-decoration: none;
 }
 
-#site-main a:not([class*=button]):hover,
+#site-main a:not([class*=button]):not(.breadcrumbs-container a):hover,
 p a:hover,
 li a:hover {
   text-decoration: underline;

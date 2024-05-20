@@ -2763,7 +2763,7 @@ hr,
   margin: 0;
 }
 .feed--post .item .item__title a {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .feed--post .item .item__excerpt {
   font-size: 15px;

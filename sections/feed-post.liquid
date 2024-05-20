@@ -35,7 +35,13 @@
                         {% endif %}
                         {% comment %} Title {% endcomment %}
                         <h3 class="item__title"><a href="{{ item_url }}">{{ item_title }}</a></h3>
-                        <p class="item__excerpt">{{ item_excerpt }}</p>
+                        <p class="item__excerpt">
+                            {% if item_excerpt != blank %}
+                                {{ item_excerpt }}
+                            {% else %}
+                                {{ item_content | strip_html | truncatewords: 24 }}...
+                            {% endif %}
+                        </p>
                         <a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>
                     </div>
                 {% endfor %}

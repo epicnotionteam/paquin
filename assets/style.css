@@ -3206,7 +3206,7 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#site-main a:not([class*=button]):not(.breadcrumbs-container a),
+#site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 p a,
 li a {
   color: #0F7F92;

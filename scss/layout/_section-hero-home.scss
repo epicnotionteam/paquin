@@ -1,0 +1,70 @@
+// ====================================================================================================
+// Layout / Section [Hero, Inline]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--hero-home {
+    // @include rem((
+    //     padding-bottom: 72px,
+    //     padding-top: 72px
+    // ));
+    background-position: center;
+    background-size: cover;
+    // Container [Content]
+    .container--content {
+        // @include rem( row-gap, spacing(5) );
+        display: grid;
+        // Heading
+        .section__heading {
+            @include font-size( 'headline' );
+            margin: 0;
+        }
+        // Content
+        .section__content {
+            // Strip margin from final <p>
+            p:last-child {
+                margin: 0;
+            }
+        }
+        // Container [CTA]
+        .container--cta {
+            @include rem( row-gap, spacing(2) );
+            display: flex;
+            flex-wrap: wrap;
+            // Button(s)
+            a {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
+   
+// Adjust @small breakpoint
+@include mq( $from: small ) {
+    // Section container
+    .section--hero-home .container--content .container--cta {
+        @include rem( column-gap, 12px );
+        align-items: center;
+        justify-content: center;
+        // Button(s)
+        a {
+            flex: unset;
+        }
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--hero-home {
+        // @include rem((
+        //     min-height: 640px
+        // ));
+    }
+}

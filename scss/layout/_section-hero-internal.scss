@@ -17,6 +17,11 @@
         padding: 0 4vw;
         // Wrap [Content]
         .section__wrap--content {
+            // Breadcrumb container
+            .wrap--container {
+                margin-bottom: auto;
+                padding: 0;
+            }
             .section__wrap--content-internal {
                 @include rem( padding, spacing(7) 0 spacing(5) );
             }

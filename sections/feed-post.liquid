@@ -30,7 +30,7 @@
                     <div class="item">
                         {% comment %} Image {% endcomment %}
                         {% if item_image %}
-                            <a href="{{ item_url }}">
+                            <a class="item__wrap--image" href="{{ item_url }}">
                                 <img class="item__image" src="{{ item_image }}" alt="{{ item_title }}">
                             </a>
                         {% endif %}

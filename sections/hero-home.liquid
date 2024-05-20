@@ -40,7 +40,7 @@
    </div>
    {% comment %} Trust Signals {% endcomment %}
    {% if section_blocks.size > 0 %}
-        <div class="glide carousel--content-media" data-carousel>
+        <div class="glide carousel--trust-signals" data-carousel>
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
                    {% for block in section_blocks %}
@@ -73,7 +73,7 @@
         function initializeCarousel() {
             if (window.innerWidth < 1024) {
                 // Initialize carousel if window width is <1024px
-                glide = new Glide('.carousel--content-media', {
+                glide = new Glide('.carousel--trust-signals', {
                     type: 'carousel',
                     autoplay: 3200,
                     perView: 1,

@@ -64,11 +64,11 @@
 }
 
 
-// Feed [Post]
+// Feed [Collection]
 // --------------------------------------------------
 
 // Component container
-.feed--post {
+.feed--collection {
     @include rem( row-gap, spacing(5) );
     display: grid;
     // Item container
@@ -99,10 +99,80 @@
                 font-weight: font-weight( 'base' ) !important;
             }
         }
+        // Description
+        .item__description {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+        // Link
+        .item__link {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+    }
+}
+
+// Adjust @small breakpoint
+@include mq( $from: small ) {
+    // Component container
+    .feed--collection {
+        @include rem( column-gap, spacing(4) );
+        grid-template-columns: repeat( 2, 1fr );
+        // Item description
+        .item .item__description {
+            @include rem( padding-right, spacing(2) );
+        }
+    }
+}
+
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Component container
+    .feed--collection {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+}
+
+
+// Feed [Post]
+// --------------------------------------------------
+
+// Component container
+.feed--post {
+    @include rem( row-gap, spacing(5) );
+    display: grid;
+    // Item container
+    .item {
+        @include rem( row-gap, 12px );
+        display: grid;
+        // Wrap [Image]
+        .item__wrap--image {
+            @include rem( margin-bottom, spacing(2) );
+            aspect-ratio: 1/1;
+            border: $border--base;
+            overflow: hidden;
+            // Image
+            .item__image {
+                display: block;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: transform 0.8s ease-out;
+                width: 100%;
+            }
+        }
+        // Title
+        .item__title {
+            @extend %h4;
+            margin: 0;
+            // Link
+            a {
+                font-weight: font-weight( 'base' ) !important;
+            }
+        }
         // Excerpt
         .item__excerpt {
             @include font-size( 'small' );
-            @include rem( padding-right, spacing(2) );
             margin: 0;
         }
         // Link
@@ -119,6 +189,10 @@
     .feed--post {
         @include rem( column-gap, spacing(4) );
         grid-template-columns: repeat( 2, 1fr );
+        // Item excerpt
+        .item .item__excerpt {
+            @include rem( padding-right, spacing(2) );
+        }
     }
 }
 

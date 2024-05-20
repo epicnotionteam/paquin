@@ -3209,7 +3209,8 @@ label {
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
 #site-main li a,
-#site-main .link--icon-before {
+#site-main .link--icon-before,
+#site-main .link--icon-after {
   color: #0F7F92;
   font-weight: 600;
   text-decoration: none;
@@ -3220,7 +3221,9 @@ label {
 #site-main li a::before,
 #site-main li a::after,
 #site-main .link--icon-before::before,
-#site-main .link--icon-before::after {
+#site-main .link--icon-before::after,
+#site-main .link--icon-after::before,
+#site-main .link--icon-after::after {
   text-decoration: none;
 }
 

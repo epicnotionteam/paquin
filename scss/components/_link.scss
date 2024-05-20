@@ -12,7 +12,8 @@
     a:not([class]):not([class*='button']):not(.breadcrumbs-container a),
     p a,
     li a,
-    .link--icon-before {
+    .link--icon-before,
+    .link--icon-after {
         color: color( 'action', '1' );
         font-weight: font-weight( 'bold' );
         text-decoration: none;

@@ -64,9 +64,9 @@
     @extend %h5;
     @include rem( padding, spacing(3) spacing(5) );
     background-color: transparent;
-    border: 2px solid color( 'steel', '5' );
+    box-shadow: 0 0 1px 0 solid color( 'steel', '5' ) inset;
     border-radius: 0;
-    color: color( 'steel', '4' );
+    color: color( 'steel', '1' );
     display: inline-block;
     font-weight: font-weight( 'bold' );
     line-height: 1.2;
@@ -76,6 +76,5 @@
 // State management
 // Button:hover
 .button--outline:hover {
-    border: 2px solid color( 'steel', '3' );
-    color: color( 'steel', '2' );
+    box-shadow: 0 0 1px 0 solid color( 'steel', '2' ) inset;
 }

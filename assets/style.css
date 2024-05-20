@@ -2448,7 +2448,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 1.6rem 3.2rem;
   background-color: transparent;
   border: 0 none;
-  box-shadow: 0 0 1px 0 solid #D6DBDD inset;
+  box-shadow: 0 0 1px #D6DBDD inset;
   border-radius: 0;
   color: #212224;
   display: inline-block;
@@ -2458,7 +2458,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .button--outline:hover {
-  box-shadow: 0 0 1px 0 solid #272A2D inset;
+  box-shadow: 0 0 1px #272A2D inset;
 }
 
 .carousel--content-media .item .item__grid {

@@ -16,6 +16,46 @@
         "opacity": 64
       }
     },
+    "hero_home_ewDHzj": {
+      "type": "hero-home",
+      "blocks": {
+        "trust_signal_CFjqxp": {
+          "type": "trust_signal",
+          "settings": {
+            "heading": "100% Product Quality Guarantee",
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
+          }
+        },
+        "trust_signal_Lkj6zP": {
+          "type": "trust_signal",
+          "settings": {
+            "heading": "100% Product Quality Guarantee",
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
+          }
+        },
+        "trust_signal_KB8VLe": {
+          "type": "trust_signal",
+          "settings": {
+            "heading": "100% Product Quality Guarantee",
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "trust_signal_CFjqxp",
+        "trust_signal_Lkj6zP",
+        "trust_signal_KB8VLe"
+      ],
+      "settings": {
+        "heading": "Parts for the World’s Most Important Projects",
+        "content": "<p>Paquin offers a complete sensor-based instrumentation portfolio including fully packaged solutions.  <\/p>",
+        "cta_primary": "Contact Our Team",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_secondary": "Shop For Parts",
+        "cta_secondary_url": "#test",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+      }
+    },
     "carousel_content_media_mNDabb": {
       "type": "carousel-content-media",
       "blocks": {
@@ -162,6 +202,7 @@
   },
   "order": [
     "dynamic_search",
+    "hero_home_ewDHzj",
     "carousel_content_media_mNDabb",
     "content_blocks_3NfM3m",
     "feed_collection_exVNWe",

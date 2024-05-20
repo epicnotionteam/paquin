@@ -91,6 +91,14 @@ li a {
     @include icon( after, 'arrow_forward' );
 }
 
+// State management
+.link--icon-arrow-forward:hover {
+    text-decoration: none;
+    &::after {
+        transform: translateX( 2px );
+    }
+}
+
 
 // Link [Icon, Arrow, Outgoing]
 // --------------------------------------------------
@@ -102,7 +110,8 @@ li a {
 
 // State management
 .link--icon-arrow-outgoing:hover {
+    text-decoration: none;
     &::after {
-        transform: translate(2px, -2px);
+        transform: translate( 2px, -2px );
     }
 }

@@ -3087,6 +3087,13 @@ li a:hover::after {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.link--icon-arrow-forward:hover {
+  text-decoration: none;
+}
+.link--icon-arrow-forward:hover::after {
+  transform: translateX(2px);
+}
+
 .link--icon-arrow-outgoing:before {
   content: "\f8ce";
   font-family: "Material Symbols Outlined";
@@ -3108,6 +3115,9 @@ li a:hover::after {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.link--icon-arrow-outgoing:hover {
+  text-decoration: none;
+}
 .link--icon-arrow-outgoing:hover::after {
   transform: translate(2px, -2px);
 }

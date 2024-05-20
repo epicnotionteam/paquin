@@ -40,22 +40,22 @@
    </div>
    {% comment %} Trust Signals {% endcomment %}
    {% if section_blocks.size > 0 %}
-       <div class="section__trust-signals">
-           <div class="trust-signals__carousel" data-glide-el="track">
-               <div class="glide__slides">
+        <div class="glide carousel--content-media" data-carousel>
+            <div data-glide-el="track" class="glide__track">
+                <ul class="glide__slides">
                    {% for block in section_blocks %}
-                       <div class="glide__slide">
-                           <div class="trust-signal">
-                               {% if block.settings.heading != blank %}
-                                   <p class="trust-signal__heading">{{ block.settings.heading }}</p>
-                               {% endif %}
-                               {% if block.settings.content != blank %}
-                                   <div class="trust-signal__content">{{ block.settings.content }}</div>
-                               {% endif %}
-                           </div>
-                       </div>
+                        <li class="glide__slide item">
+                            <div class="trust-signal">
+                                {% if block.settings.heading != blank %}
+                                    <p class="trust-signal__heading">{{ block.settings.heading }}</p>
+                                {% endif %}
+                                {% if block.settings.content != blank %}
+                                    <div class="trust-signal__content">{{ block.settings.content }}</div>
+                                {% endif %}
+                            </div>
+                        </li>
                    {% endfor %}
-               </div>
+                </ul>
            </div>
        </div>
    {% endif %}
@@ -66,19 +66,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const glide = new Glide('.trust-signals__carousel', {
+    document.addEventListener('DOMContentLoaded', function () {
+        new Glide('[data-carousel]', {
             type: 'carousel',
             perView: 1,
-            gap: 20,
-            breakpoints: {
-                1024: {
-                    destroy: true,
-                },
-            },
-        });
-        glide.mount();
-      });
+            animationDuration: 800,
+            gap: 40,
+        }).mount();
+    });
 </script>
 
 {% schema %}

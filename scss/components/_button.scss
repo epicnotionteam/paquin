@@ -64,6 +64,7 @@
     @extend %h5;
     @include rem( padding, spacing(3) spacing(5) );
     background-color: transparent;
+    border: 0 none;
     box-shadow: 0 0 1px 0 solid color( 'steel', '5' ) inset;
     border-radius: 0;
     color: color( 'steel', '1' );

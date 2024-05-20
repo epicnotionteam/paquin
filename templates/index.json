@@ -90,9 +90,40 @@
     },
     "feed_collection_exVNWe": {
       "type": "feed-collection",
+      "blocks": {
+        "collection_NPceRF": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_bFJhze": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_MnPLHw": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_TtcqBR": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        }
+      },
+      "block_order": [
+        "collection_NPceRF",
+        "collection_bFJhze",
+        "collection_MnPLHw",
+        "collection_TtcqBR"
+      ],
       "settings": {
         "heading_small": "Browse parts by type",
-        "count": "4",
         "theme": "base"
       }
     },

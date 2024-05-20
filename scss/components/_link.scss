@@ -11,7 +11,8 @@
 #site-main {
     a:not([class]):not([class*='button']):not(.breadcrumbs-container a),
     p a,
-    li a {
+    li a,
+    .link--icon-before {
         color: color( 'action', '1' );
         font-weight: font-weight( 'bold' );
         text-decoration: none;

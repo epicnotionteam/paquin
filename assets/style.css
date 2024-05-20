@@ -3208,7 +3208,8 @@ label {
 }
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
-#site-main li a {
+#site-main li a,
+#site-main .link--icon-before {
   color: #0F7F92;
   font-weight: 600;
   text-decoration: none;
@@ -3217,7 +3218,9 @@ label {
 #site-main p a::before,
 #site-main p a::after,
 #site-main li a::before,
-#site-main li a::after {
+#site-main li a::after,
+#site-main .link--icon-before::before,
+#site-main .link--icon-before::after {
   text-decoration: none;
 }
 

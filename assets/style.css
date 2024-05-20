@@ -2497,7 +2497,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .button--icon-arrow-forward:before {
-  content: "";
+  content: "\e5c8";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;
@@ -2507,7 +2507,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -moz-osx-font-smoothing: grayscale;
 }
 .button--icon-arrow-forward:after {
-  content: "";
+  content: "\e5c8";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;

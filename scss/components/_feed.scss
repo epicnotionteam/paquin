@@ -80,6 +80,7 @@
             aspect-ratio: 1/1;
             object-fit: cover;
             object-position: center;
+            overflow: hidden;
             // Image
             .item__image {
                 @include rem( margin-bottom, spacing(2) );

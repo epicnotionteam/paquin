@@ -1440,6 +1440,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/sections\/hero-home.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/hero-home.liquid",
+      "oF" : 0
+    },
     "\/sections\/hero-inline.liquid" : {
       "cB" : 0,
       "ft" : 8192,

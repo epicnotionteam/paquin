@@ -40,7 +40,7 @@
                             {% if item_excerpt != blank %}
                                 {{ item_excerpt }}
                             {% else %}
-                                {{ item_content | strip_html | truncatewords: 20 }}...
+                                {{ item_content | strip_html | truncatewords: 20 }}
                             {% endif %}
                         </p>
                         <a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>

@@ -38,7 +38,7 @@
                        {% comment %} Title {% endcomment %}
                        <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
                        {% comment %} Description {% endcomment %}
-                       <div class="item__description">{{ collection_description | strip_html | truncatewords: 16 }}...</div>
+                       <div class="item__description">{{ collection_description | strip_html | truncatewords: 16 }}</div>
                        {% comment %} Link {% endcomment %}
                        <a href="{{ collection_url }}" class="item__link link--icon-after link--icon-arrow-forward">View products</a>
                    </div>

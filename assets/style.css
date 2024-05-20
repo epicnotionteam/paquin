@@ -2120,12 +2120,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-position: center;
   background-size: cover;
 }
-.section--hero-home .container--content {
+.section--hero-home .container--content .section__wrap--content {
   row-gap: 24px;
   row-gap: 2.4rem;
   display: grid;
 }
-.section--hero-home .container--content .section__heading {
+.section--hero-home .container--content .section__wrap--content .section__heading {
   font-size: 32px;
   font-size: 3.2rem;
   line-height: 40px;
@@ -2134,7 +2134,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  .section--hero-home .container--content .section__heading {
+  .section--hero-home .container--content .section__wrap--content .section__heading {
     font-size: 64px;
     font-size: 6.4rem;
     line-height: 72px;
@@ -2142,16 +2142,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     letter-spacing: 0.056rem;
   }
 }
-.section--hero-home .container--content .section__content p:last-child {
+.section--hero-home .container--content .section__wrap--content .section__content p:last-child {
   margin: 0;
 }
-.section--hero-home .container--content .container--cta {
+.section--hero-home .container--content .section__wrap--content .container--cta {
   row-gap: 8px;
   row-gap: 0.8rem;
   display: flex;
   flex-wrap: wrap;
 }
-.section--hero-home .container--content .container--cta a {
+.section--hero-home .container--content .section__wrap--content .container--cta a {
   flex: 1 1 100%;
 }
 

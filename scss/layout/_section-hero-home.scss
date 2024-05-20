@@ -18,28 +18,31 @@
     background-size: cover;
     // Container [Content]
     .container--content {
-        @include rem( row-gap, spacing(4) );
-        display: grid;
-        // Heading
-        .section__heading {
-            @include font-size( 'headline' );
-            margin: 0;
-        }
-        // Content
-        .section__content {
-            // Strip margin from final <p>
-            p:last-child {
+        // Wrap [Content]
+        .section__wrap--content {
+            @include rem( row-gap, spacing(4) );
+            display: grid;
+            // Heading
+            .section__heading {
+                @include font-size( 'headline' );
                 margin: 0;
             }
-        }
-        // Container [CTA]
-        .container--cta {
-            @include rem( row-gap, spacing(2) );
-            display: flex;
-            flex-wrap: wrap;
-            // Button(s)
-            a {
-                flex: 1 1 100%;
+            // Content
+            .section__content {
+                // Strip margin from final <p>
+                p:last-child {
+                    margin: 0;
+                }
+            }
+            // Container [CTA]
+            .container--cta {
+                @include rem( row-gap, spacing(2) );
+                display: flex;
+                flex-wrap: wrap;
+                // Button(s)
+                a {
+                    flex: 1 1 100%;
+                }
             }
         }
     }

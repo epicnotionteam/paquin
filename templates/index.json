@@ -87,11 +87,24 @@
         "columns": "4",
         "theme": "alt"
       }
+    },
+    "hero_inline_HNjXCG": {
+      "type": "hero-inline",
+      "settings": {
+        "heading": "Engineering Your Vision: Custom Parts Built to Your Exact Requirements",
+        "content": "<p>The design, construction and delivery of industry unique control equipment is our passion.<\/p>",
+        "cta_primary_text": "Contact Our Team",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_secondary_text": "",
+        "cta_secondary_url": "",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+      }
     }
   },
   "order": [
     "dynamic_search",
     "carousel_content_media_mNDabb",
-    "content_blocks_3NfM3m"
+    "content_blocks_3NfM3m",
+    "hero_inline_HNjXCG"
   ]
 }

@@ -3005,6 +3005,14 @@ li a {
 p a:hover,
 li a:hover {
   filter: brightness(1.12);
+  text-decoration: underline;
+}
+#site-main a:not([class*=button]):not(.breadcrumbs-container a):hover::before, #site-main a:not([class*=button]):not(.breadcrumbs-container a):hover::after,
+p a:hover::before,
+p a:hover::after,
+li a:hover::before,
+li a:hover::after {
+  text-decoration: none;
 }
 
 .link--icon-before::before {

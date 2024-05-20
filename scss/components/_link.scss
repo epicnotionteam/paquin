@@ -24,6 +24,12 @@ li a {
     // Hover
     &:hover {
         filter: brightness(1.12);
+        text-decoration: underline;
+        // Strip decoration from icon
+        &::before,
+        &::after {
+            text-decoration: none;
+        }
     }
 }
 

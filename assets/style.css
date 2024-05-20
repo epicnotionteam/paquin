@@ -2144,11 +2144,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   z-index: 0;
 }
 
-@media (min-width: 64em) {
-  .section--hero-inline {
-    min-height: 640px;
-    min-height: 64rem;
-  }
+@media (min-width: 48em) {
   .section--hero-inline .container--content .container--cta {
     column-gap: 12px;
     column-gap: 1.2rem;
@@ -2157,6 +2153,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .section--hero-inline .container--content .container--cta a {
     flex: unset;
+  }
+}
+@media (min-width: 64em) {
+  .section--hero-inline {
+    min-height: 640px;
+    min-height: 64rem;
   }
 }
 .section--hero-internal {

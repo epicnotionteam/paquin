@@ -65,7 +65,20 @@
         z-index: 0;
     }
 }
-    
+   
+// Adjust @small breakpoint
+@include mq( $from: small ) {
+    // Section container
+    .section--hero-inline .container--content .container--cta {
+        @include rem( column-gap, 12px );
+        align-items: center;
+        justify-content: center;
+        // Button(s)
+        a {
+            flex: unset;
+        }
+    }
+}
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
@@ -74,18 +87,5 @@
         @include rem((
             min-height: 640px
         ));
-        // Container [Content]
-        .container--content {
-            // Container [CTA]
-            .container--cta {
-                @include rem( column-gap, 12px );
-                align-items: center;
-                justify-content: center;
-                // Button(s)
-                a {
-                    flex: unset;
-                }
-            }
-        }
     }
 }

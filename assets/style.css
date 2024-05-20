@@ -1101,7 +1101,7 @@ body {
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
 .theme--dark li a {
-  color: #35ADC2;
+  color: white;
 }
 .theme--dark .section__primary-heading {
   border-top: 1px solid rgba(255, 255, 255, 0.16);

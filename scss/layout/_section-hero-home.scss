@@ -51,7 +51,7 @@
 // Adjust @small breakpoint
 @include mq( $from: small ) {
     // Section container
-    .section--hero-home .container--content .container--cta {
+    .section--hero-home .container--content .section__wrap--content .container--cta {
         @include rem( column-gap, 12px );
         // Button(s)
         a {

@@ -2156,11 +2156,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 48em) {
-  .section--hero-home .container--content .container--cta {
+  .section--hero-home .container--content .section__wrap--content .container--cta {
     column-gap: 12px;
     column-gap: 1.2rem;
   }
-  .section--hero-home .container--content .container--cta a {
+  .section--hero-home .container--content .section__wrap--content .container--cta a {
     flex: unset;
   }
 }

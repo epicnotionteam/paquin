@@ -40,10 +40,58 @@
         "heading_small": "Why choose Paquin?",
         "theme": "base"
       }
+    },
+    "content_blocks_3NfM3m": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_AtVi3y": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Paquin Sensors",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+          }
+        },
+        "content_block_LVEVAK": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Global Intex",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+          }
+        },
+        "content_block_p9Ei6p": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Excell Manufacturing",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+          }
+        },
+        "content_block_LtUemM": {
+          "type": "content-block",
+          "settings": {
+            "heading": "Paquin Global",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_AtVi3y",
+        "content_block_LVEVAK",
+        "content_block_p9Ei6p",
+        "content_block_LtUemM"
+      ],
+      "settings": {
+        "heading_small": "Paquin Company divisions",
+        "heading_large": "",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "4",
+        "theme": "alt"
+      }
     }
   },
   "order": [
     "dynamic_search",
-    "carousel_content_media_mNDabb"
+    "carousel_content_media_mNDabb",
+    "content_blocks_3NfM3m"
   ]
 }

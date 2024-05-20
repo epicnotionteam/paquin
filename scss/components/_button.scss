@@ -22,7 +22,6 @@
     text-decoration: none;
 }
 
-
 // State management
 .button--base,
 %button--base {
@@ -51,9 +50,32 @@
     }
 }
 
-
 // State management
 // Button:hover
 .product-form--atc-button:hover {
     border: 0 none !important;
+}
+
+
+// Button [Outline]
+// --------------------------------------------------
+
+.button--outline {
+    @extend %h5;
+    @include rem( padding, spacing(3) spacing(5) );
+    background-color: transparent;
+    border: 2px solid color( 'steel', '4' );
+    border-radius: 0;
+    color: color( 'steel', '2' );
+    display: inline-block;
+    font-weight: font-weight( 'bold' );
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+// State management
+// Button:hover
+.button--outline:hover {
+    border: 2px solid color( 'steel', '3' );
+    color: color( 'steel', '1' );
 }

@@ -3206,17 +3206,14 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#site-main a:not([class]),
-#site-main a:not([class*=button]), #site-main:not(.breadcrumbs-container a),
+#site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
 #site-main li a {
   color: #0F7F92;
   font-weight: 600;
   text-decoration: none;
 }
-#site-main a:not([class])::before, #site-main a:not([class])::after,
-#site-main a:not([class*=button])::before,
-#site-main a:not([class*=button])::after, #site-main:not(.breadcrumbs-container a)::before, #site-main:not(.breadcrumbs-container a)::after,
+#site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a)::before, #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a)::after,
 #site-main p a::before,
 #site-main p a::after,
 #site-main li a::before,
@@ -3224,16 +3221,13 @@ label {
   text-decoration: none;
 }
 
-#site-main a:not([class]):hover,
-#site-main a:not([class*=button]):hover, #site-main:not(.breadcrumbs-container a):hover,
+#site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a):hover,
 #site-main p a:hover,
 #site-main li a:hover {
   filter: brightness(1.12);
   text-decoration: underline;
 }
-#site-main a:not([class]):hover::before, #site-main a:not([class]):hover::after,
-#site-main a:not([class*=button]):hover::before,
-#site-main a:not([class*=button]):hover::after, #site-main:not(.breadcrumbs-container a):hover::before, #site-main:not(.breadcrumbs-container a):hover::after,
+#site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a):hover::before, #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a):hover::after,
 #site-main p a:hover::before,
 #site-main p a:hover::after,
 #site-main li a:hover::before,

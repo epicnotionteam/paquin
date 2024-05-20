@@ -98,12 +98,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        new Glide('[data-carousel]', {
-            type: 'carousel',
-            perView: 1,
-            animationDuration: 800,
-            gap: 40,
-        }).mount();
+        // Assign carousel instance to var
+        let carousel_content_media;
+        // Initialize carousel
+        function initializeCarouselContentMedia() {
+            carousel_content_media = new Glide('.carousel--content-media', {
+                type: 'carousel',
+                perView: 1,
+                animationDuration: 800,
+                gap: 40,
+            });
+            carousel_content_media.mount();
+        }
+        // Call function initially
+        initializeCarouselContentMedia();
     });
 </script>
 

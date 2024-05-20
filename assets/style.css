@@ -3004,7 +3004,7 @@ li a {
 #site-main a:not([class*=button]):not(.breadcrumbs-container a):hover,
 p a:hover,
 li a:hover {
-  text-decoration: underline;
+  filter: brightness(1.12);
 }
 
 .link--icon-before::before {

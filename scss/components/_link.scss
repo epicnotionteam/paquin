@@ -21,12 +21,10 @@ li a {
 #site-main a:not([class*='button']):not(.breadcrumbs-container a),
 p a,
 li a {
-
     // Hover
     &:hover {
-        text-decoration: underline;
+        filter: brightness(1.12);
     }
-
 }
 
 

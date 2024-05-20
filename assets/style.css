@@ -3031,6 +3031,10 @@ li a:hover::after {
   display: none;
 }
 
+.link--icon-before:hover {
+  text-decoration: none;
+}
+
 .link--icon-after::before {
   display: none;
 }
@@ -3040,6 +3044,10 @@ li a:hover::after {
   display: inline-block;
   line-height: 1;
   transition: transform 0.16s ease-out;
+}
+
+.link--icon-after:hover {
+  text-decoration: none;
 }
 
 .link--icon-data-sheet:before {
@@ -3087,9 +3095,6 @@ li a:hover::after {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.link--icon-arrow-forward:hover {
-  text-decoration: none;
-}
 .link--icon-arrow-forward:hover::after {
   transform: translateX(2px);
 }
@@ -3115,9 +3120,6 @@ li a:hover::after {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.link--icon-arrow-outgoing:hover {
-  text-decoration: none;
-}
 .link--icon-arrow-outgoing:hover::after {
   transform: translate(2px, -2px);
 }

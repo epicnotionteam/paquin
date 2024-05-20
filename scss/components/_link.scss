@@ -50,6 +50,11 @@ li a {
     }
 }
 
+// State management
+.link--icon-before:hover {
+    text-decoration: none;
+}
+
 
 // Link [Icon, After]
 // --------------------------------------------------
@@ -66,6 +71,11 @@ li a {
         line-height: 1;
         transition: transform 0.16s ease-out;
     }
+}
+
+// State management
+.link--icon-after:hover {
+    text-decoration: none;
 }
 
 
@@ -93,7 +103,6 @@ li a {
 
 // State management
 .link--icon-arrow-forward:hover {
-    text-decoration: none;
     &::after {
         transform: translateX( 2px );
     }
@@ -110,7 +119,6 @@ li a {
 
 // State management
 .link--icon-arrow-outgoing:hover {
-    text-decoration: none;
     &::after {
         transform: translate( 2px, -2px );
     }

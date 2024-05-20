@@ -3025,6 +3025,7 @@ li a:hover::after {
   margin-right: 0.6rem;
   display: inline-block;
   line-height: 1;
+  transition: transform 0.16s ease-out;
 }
 .link--icon-before::after {
   display: none;
@@ -3038,6 +3039,7 @@ li a:hover::after {
   margin-left: 0.4rem;
   display: inline-block;
   line-height: 1;
+  transition: transform 0.16s ease-out;
 }
 
 .link--icon-data-sheet:before {

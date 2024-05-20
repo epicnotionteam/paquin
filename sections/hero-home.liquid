@@ -68,12 +68,12 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Assign carousel instance to var
-        let carousel_trust_signals;
+        let carouselTrustSignals;
         // Initialize or destroy carousel based on window width
         function initializeCarousel() {
             if (window.innerWidth < 1024) {
                 // Initialize carousel if window width is <1024px
-                carousel_trust_signals = new Glide('.carousel--trust-signals', {
+                carouselTrustSignals = new Glide('.carousel--trust-signals', {
                     type: 'carousel',
                     autoplay: 3200,
                     perView: 1,
@@ -81,11 +81,11 @@
                     gap: 24,
                 });
                 // Mount carousel instance
-                carousel_trust_signals.mount(); 
+                carouselTrustSignals.mount(); 
             } else {
                 // Destroy carousel if window width is >1024px
-                if (carousel_trust_signals) {
-                    carousel_trust_signals.destroy();
+                if (carouselTrustSignals) {
+                    carouselTrustSignals.destroy();
                 }
             }
         }

@@ -3,6 +3,7 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
+{% assign section_id            = section.id %}
 {% assign section_heading_small = section.settings.heading_small %}
 {% assign section_blocks        = section.blocks %}
 {% assign section_theme         = section.settings.theme %}
@@ -18,7 +19,7 @@
         {% endif %}
         {% comment %} Carousel {% endcomment %}
         <div class="container--carousel">
-            <div class="glide carousel--content-media" data-carousel>
+            <div class="glide carousel--content-media" data-carousel="{{ section.id }}">
                 <div data-glide-el="track" class="glide__track">
                     <ul class="glide__slides">
                         {% assign block_count = section_blocks.size %}
@@ -98,20 +99,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Assign carousel instance to var
-        let carousel_content_media;
-        // Initialize carousel
-        function initializeCarouselContentMedia() {
-            carousel_content_media = new Glide('.carousel--content-media', {
+        // Get all carousel containers on current page
+        const carouselContainers = document.querySelectorAll('.section--carousel-content-media [data-carousel]');
+        // Initialize each carousel
+        carouselContainers.forEach(function (container) {
+            const carouselId = container.dataset.carousel;
+            new Glide(`[data-carousel="${carouselId}"]`, {
                 type: 'carousel',
                 perView: 1,
                 animationDuration: 800,
                 gap: 40,
-            });
-            carousel_content_media.mount();
-        }
-        // Call function initially
-        initializeCarouselContentMedia();
+            }).mount();
+        });
     });
 </script>
 

@@ -2172,6 +2172,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-home .container--content .section__wrap--content {
     min-height: 512px;
     min-height: 51.2rem;
+    align-content: flex-end;
+    grid-auto-rows: max-content;
   }
   .section--hero-home .container--content .section__wrap--content .section__content {
     max-width: 512px;

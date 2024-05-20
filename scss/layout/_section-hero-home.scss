@@ -72,6 +72,8 @@
             @include rem( max-width, 800px );
             .section__wrap--content {
                 @include rem( min-height, 512px );
+                align-content: flex-end;
+                grid-auto-rows: max-content;
                 // Content
                 .section__content {
                     @include rem( max-width, 512px );

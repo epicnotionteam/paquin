@@ -69,6 +69,10 @@
         // Container [Content]
         .container--content {
             @include rem( max-width, 800px );
+            // Content
+            .section__content {
+                @include rem( max-width, 512px );
+            }
         }
     }
 }

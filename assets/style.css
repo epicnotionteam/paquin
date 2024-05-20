@@ -1300,8 +1300,8 @@ h3,
   font-size: 20px;
   font-size: 2rem;
   line-height: 28px;
-  letter-spacing: 0.12px;
-  letter-spacing: 0.012rem;
+  letter-spacing: 0.16px;
+  letter-spacing: 0.016rem;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
   margin: 0 0 12px;
@@ -1314,8 +1314,8 @@ h3,
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 32px;
-    letter-spacing: 0.16px;
-    letter-spacing: 0.016rem;
+    letter-spacing: 0.24px;
+    letter-spacing: 0.024rem;
   }
 }
 
@@ -1328,8 +1328,8 @@ h4,
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 24px;
-  letter-spacing: 0.12px;
-  letter-spacing: 0.012rem;
+  letter-spacing: 0.16px;
+  letter-spacing: 0.016rem;
   letter-spacing: 0.26px;
   letter-spacing: 0.026rem;
   margin: 0 0 8px;
@@ -1346,8 +1346,8 @@ h4,
     font-size: 20px;
     font-size: 2rem;
     line-height: 26px;
-    letter-spacing: 0.16px;
-    letter-spacing: 0.016rem;
+    letter-spacing: 0.24px;
+    letter-spacing: 0.024rem;
   }
 }
 

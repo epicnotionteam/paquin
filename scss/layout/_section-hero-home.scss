@@ -50,8 +50,6 @@
     // Section container
     .section--hero-home .container--content .container--cta {
         @include rem( column-gap, 12px );
-        align-items: center;
-        justify-content: center;
         // Button(s)
         a {
             flex: unset;

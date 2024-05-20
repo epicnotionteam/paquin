@@ -2157,8 +2157,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-home .container--content .container--cta {
     column-gap: 12px;
     column-gap: 1.2rem;
-    align-items: center;
-    justify-content: center;
   }
   .section--hero-home .container--content .container--cta a {
     flex: unset;

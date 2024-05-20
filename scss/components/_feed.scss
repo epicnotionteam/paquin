@@ -105,18 +105,18 @@
             display: block;
             width: 100%;
         }
-         // Name
-         .item__name {
+        // Name
+        .item__name {
             @extend %h4;
             @include rem( margin-bottom, spacing(1) );
          }
-          // Role
+        // Role
         .item__role {
             @include font-size( 'small' );
             @include rem( margin, spacing(1) 0 0 );
         }
-         // LinkedIn
-         .item__linkedin {}
+        // LinkedIn
+        .item__linkedin {}
     }
 }
 
@@ -137,9 +137,5 @@
     // Component container
     .feed--team {
         grid-template-columns: repeat( 6, 1fr );
-        // Name
-        .item .item__name {
-            @include rem( margin-bottom, spacing(2) );
-        }
     }
 }

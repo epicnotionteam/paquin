@@ -28,23 +28,60 @@ li a {
 }
 
 
-// Link [Icon]
+// Link [Has Icon, Before]
 // --------------------------------------------------
 
-.link--icon {
-    @include rem( column-gap, 6px );
-    display: grid;
-    grid-template-columns: max-content 1fr;
-
-    // Icon
+.link--icon-before {
     &::before {
-        color: color( 'action', '1' );
-        line-height: 1.2;
-        font-size: 128%;
+        @include rem( margin-right, 6px );
     }
-
+     // Remove :after pseudo-element
+     &::after {
+        display: none;
+    }
 }
 
+
+// Link [Has Icon, After]
+// --------------------------------------------------
+
+.link--icon-after {
+    // Remove :before pseudo-element
+    &::before {
+        display: none;
+    }
+    // Icon
+    &::after {
+        @include rem( margin-left, 6px );
+    }
+}
+
+
+// Link [Icon, Data Sheet]
+// --------------------------------------------------
+
 .link--icon-data-sheet {
-    @include icon( before, 'data_sheet');
+    @include icon( before, 'data_sheet' );
+    @include icon( after, 'data_sheet' );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        font-size: 128%;
+        line-height: 1;
+    }
+}
+
+
+// Link [Icon, Arrow, Outgoing]
+// --------------------------------------------------
+
+.link--icon-arrow-outgoing {
+    @include icon( before, 'arrow_up_right' );
+    @include icon( after, 'arrow_up_right' );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        font-size: 128%;
+        line-height: 1;
+    }
 }

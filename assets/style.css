@@ -2797,10 +2797,6 @@ hr,
   .feed--team {
     grid-template-columns: repeat(6, 1fr);
   }
-  .feed--team .item .item__name {
-    margin-bottom: 8px;
-    margin-bottom: 0.8rem;
-  }
 }
 .productgrid--sidebar {
   width: 100%;
@@ -3001,16 +2997,20 @@ li a:hover {
   text-decoration: underline;
 }
 
-.link--icon {
-  column-gap: 6px;
-  column-gap: 0.6rem;
-  display: grid;
-  grid-template-columns: max-content 1fr;
+.link--icon-before::before {
+  margin-right: 6px;
+  margin-right: 0.6rem;
 }
-.link--icon::before {
-  color: #0F7F92;
-  line-height: 1.2;
-  font-size: 128%;
+.link--icon-before::after {
+  display: none;
+}
+
+.link--icon-after::before {
+  display: none;
+}
+.link--icon-after::after {
+  margin-left: 6px;
+  margin-left: 0.6rem;
 }
 
 .link--icon-data-sheet:before {
@@ -3022,6 +3022,45 @@ li a:hover {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-data-sheet:after {
+  content: "\e032";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-data-sheet::before, .link--icon-data-sheet::after {
+  font-size: 128%;
+  line-height: 1;
+}
+
+.link--icon-arrow-outgoing:before {
+  content: "\f1e1";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-arrow-outgoing:after {
+  content: "\f1e1";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-arrow-outgoing::before, .link--icon-arrow-outgoing::after {
+  font-size: 128%;
+  line-height: 1;
 }
 
 main#site-main ul:not([class]) li,

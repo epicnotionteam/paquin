@@ -2784,6 +2784,14 @@ hr,
   margin: 4px 0 0;
   margin: 0.4rem 0 0;
 }
+.feed--team .item .item__linkedin {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+
 @media (min-width: 48em) {
   .feed--team {
     grid-template-columns: repeat(4, 1fr);

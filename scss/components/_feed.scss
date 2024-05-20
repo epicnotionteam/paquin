@@ -116,7 +116,9 @@
             @include rem( margin, spacing(1) 0 0 );
         }
         // LinkedIn
-        .item__linkedin {}
+        .item__linkedin {
+            @include font-size( 'small' );
+        }
     }
 }
 

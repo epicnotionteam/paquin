@@ -26,11 +26,11 @@
         <div class="container--cta">
             {% comment %} CTA [Primary] {% endcomment %}
             {% if section_cta_primary_text != blank and section_cta_primary_url != blank %}
-                <a href="{{ section_cta_primary_url }}" class="button--base">{{ section_cta_primary_text }}</a>
+                <a href="{{ section_cta_primary_url }}" class="button--base button--icon-before button--icon-arrow-forward">{{ section_cta_primary_text }}</a>
             {% endif %}
             {% comment %} CTA [Secondary] {% endcomment %}
             {% if section_cta_secondary_text != blank and section_cta_secondary_url != blank %}
-                <a href="{{ section_cta_secondary_url }}" class="button--outline">{{ section_cta_secondary_text }}</a>
+                <a href="{{ section_cta_secondary_url }}" class="button--outline button--icon-before button--icon-arrow-forward">{{ section_cta_secondary_text }}</a>
             {% endif %}
         </div>
     </div>

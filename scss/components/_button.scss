@@ -26,12 +26,10 @@
 // State management
 .button--base,
 %button--base {
-
     // Hover
     &:hover {
-        filter: brightness(1.04);
+        filter: brightness(1.12);
     }
-
 }
 
 
@@ -80,4 +78,42 @@
 // Button:hover
 .button--outline:hover {
     box-shadow: 0 0 0 1px color( 'steel', '2' ) inset;
+}
+
+
+// Button [Has Icon, Before]
+// --------------------------------------------------
+
+.button--icon-before {
+    &::before {
+        @include rem( margin-right, 12px );
+    }
+     // Remove :after pseudo-element
+     &::after {
+        display: none;
+    }
+}
+
+
+// Button [Has Icon, After]
+// --------------------------------------------------
+
+.button--icon-after {
+    // Remove :before pseudo-element
+    &::before {
+        display: none;
+    }
+    // Icon
+    &::after {
+        @include rem( margin-left, 12px );
+    }
+}
+
+
+// Button [Icon, Arrow Forward]
+// --------------------------------------------------
+
+.button--icon-arrow-forward {
+    @include icon( before, 'arrow-forward' );
+    @include icon( after, 'arrow-forward' );
 }

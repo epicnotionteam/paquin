@@ -2436,7 +2436,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .button--base:hover,
 .product-form--atc-button:hover {
-  filter: brightness(1.04);
+  filter: brightness(1.12);
 }
 
 .product-form--atc-button {
@@ -2478,6 +2478,43 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .button--outline:hover {
   box-shadow: 0 0 0 1px #272A2D inset;
+}
+
+.button--icon-before::before {
+  margin-right: 12px;
+  margin-right: 1.2rem;
+}
+.button--icon-before::after {
+  display: none;
+}
+
+.button--icon-after::before {
+  display: none;
+}
+.button--icon-after::after {
+  margin-left: 12px;
+  margin-left: 1.2rem;
+}
+
+.button--icon-arrow-forward:before {
+  content: "";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-arrow-forward:after {
+  content: "";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .carousel--content-media .item .item__grid {

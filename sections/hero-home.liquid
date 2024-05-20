@@ -61,19 +61,41 @@
    {% endif %}
 </section>
 
-{% comment %} Initialize carousel {% endcomment %}
+{% comment %} Conditional carousel initialization {% endcomment %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        new Glide('[data-carousel]', {
-            type: 'carousel',
-            autoplay: 3200,
-            perView: 1,
-            animationDuration: 800,
-            gap: 24,
-        }).mount();
+        // Assign carousel instance to var
+        let glide;
+        // Initialize or destroy carousel based on window width
+        function initializeCarousel() {
+            if (window.innerWidth < 1024) {
+                // Initialize carousel if window width is <1024px
+                glide = new Glide('[data-carousel]', {
+                    type: 'carousel',
+                    autoplay: 3200,
+                    perView: 1,
+                    animationDuration: 800,
+                    gap: 24,
+                });
+                // Mount carousel instance
+                glide.mount(); 
+            } else {
+                // Destroy carousel if window width is >1024px
+                if (glide) {
+                    glide.destroy();
+                }
+            }
+        }
+        // Call function initially
+        initializeCarousel(); 
+        // Event listener for window resize
+        window.addEventListener('resize', function () {
+            // Reinitialize or destroy carousel on window resize
+            initializeCarousel();
+        });
     });
 </script>
 

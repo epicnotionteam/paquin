@@ -2839,6 +2839,9 @@ hr,
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.feed--post .item .item__wrap--image:hover {
+  filter: none !important;
+}
 .feed--post .item .item__wrap--image:hover .item__image {
   transform: scale(1.12);
 }

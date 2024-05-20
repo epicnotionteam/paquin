@@ -133,8 +133,11 @@
 // State management
 .feed--post {
     // Image:hover
-    .item .item__wrap--image:hover .item__image {
-        transform: scale( 1.12 );
+    .item .item__wrap--image:hover {
+        filter: none !important;
+        .item__image {
+            transform: scale( 1.12 );
+        }
     }
 }
 

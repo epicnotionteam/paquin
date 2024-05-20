@@ -75,11 +75,18 @@
     .item {
         @include rem( row-gap, 12px );
         display: grid;
-        // Image
-        .item__image {
-            @include rem( margin-bottom, spacing(2) );
-            display: block;
-            width: 100%;
+        // Wrap [Image]
+        .item__wrap--image {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: center;
+            // Image
+            .item__image {
+                @include rem( margin-bottom, spacing(2) );
+                display: block;
+                transition: transform 0.8s ease-out;
+                width: 100%;
+            }
         }
         // Title
         .item__title {
@@ -104,8 +111,8 @@
     }
 }
 
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {
+// Adjust @small breakpoint
+@include mq( $from: small ) {
     // Component container
     .feed--post {
         @include rem( column-gap, spacing(4) );
@@ -118,6 +125,14 @@
     // Component container
     .feed--post {
         grid-template-columns: repeat( 4, 1fr );
+    }
+}
+
+// State management
+.feed--post {
+    // Image:hover
+    .item .item__wrap--image:hover .item__image {
+        transform: scale( 1.12 );
     }
 }
 

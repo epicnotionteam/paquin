@@ -2788,10 +2788,16 @@ hr,
   row-gap: 1.2rem;
   display: grid;
 }
-.feed--post .item .item__image {
+.feed--post .item .item__wrap--image {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+.feed--post .item .item__wrap--image .item__image {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   display: block;
+  transition: transform 0.8s ease-out;
   width: 100%;
 }
 .feed--post .item .item__title {
@@ -2819,7 +2825,7 @@ hr,
   margin: 0;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .feed--post {
     column-gap: 24px;
     column-gap: 2.4rem;
@@ -2831,6 +2837,10 @@ hr,
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.feed--post .item .item__wrap--image:hover .item__image {
+  transform: scale(1.12);
+}
+
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

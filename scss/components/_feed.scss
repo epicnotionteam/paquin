@@ -79,12 +79,13 @@
         .item__wrap--image {
             @include rem( margin-bottom, spacing(2) );
             aspect-ratio: 1/1;
-            object-fit: cover;
-            object-position: center;
             overflow: hidden;
             // Image
             .item__image {
                 display: block;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
                 transition: transform 0.8s ease-out;
                 width: 100%;
             }

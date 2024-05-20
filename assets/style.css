@@ -2985,7 +2985,7 @@ label {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#site-main a,
+#site-main a:not([class*=button]),
 p a,
 li a {
   color: #0F7F92;
@@ -2993,7 +2993,7 @@ li a {
   text-decoration: none;
 }
 
-#site-main a:hover,
+#site-main a:not([class*=button]):hover,
 p a:hover,
 li a:hover {
   text-decoration: underline;

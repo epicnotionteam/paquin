@@ -118,7 +118,23 @@
 }
 
 
-// Button [Icon, Arrow Forward]
+// Button [Icon, Arrow, Down]
+// --------------------------------------------------
+
+.button--icon-arrow-down {
+    @include icon( before, 'arrow_down' );
+    @include icon( after, 'arrow_down' );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        @include rem( margin-top, 1px );
+        font-size: 128%;
+        line-height: 1;
+    }
+}
+
+
+// Button [Icon, Arrow, Forward]
 // --------------------------------------------------
 
 .button--icon-arrow-forward {

@@ -2502,6 +2502,33 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-left: 1.2rem;
 }
 
+.button--icon-arrow-down:before {
+  content: "\e5db";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-arrow-down:after {
+  content: "\e5db";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-arrow-down::before, .button--icon-arrow-down::after {
+  margin-top: 1px;
+  margin-top: 0.1rem;
+  font-size: 128%;
+  line-height: 1;
+}
+
 .button--icon-arrow-forward:before {
   content: "\e5c8";
   font-family: "Material Symbols Outlined";

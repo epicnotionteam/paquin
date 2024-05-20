@@ -65,7 +65,7 @@
     @include rem( padding, spacing(3) spacing(5) );
     background-color: transparent;
     border: 0 none;
-    box-shadow: 0 0 1px color( 'steel', '5' ) inset;
+    box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;
     border-radius: 0;
     color: color( 'steel', '1' );
     display: inline-block;
@@ -77,5 +77,5 @@
 // State management
 // Button:hover
 .button--outline:hover {
-    box-shadow: 0 0 1px color( 'steel', '2' ) inset;
+    box-shadow: 0 0 0 1px color( 'steel', '2' ) inset;
 }

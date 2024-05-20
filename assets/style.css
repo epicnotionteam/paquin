@@ -3021,11 +3021,11 @@ li a:hover::after {
 }
 
 .link--icon-before::before {
-  margin-right: 6px;
-  margin-right: 0.6rem;
+  margin-right: 2px;
+  margin-right: 0.2rem;
   display: inline-block;
   line-height: 1;
-  transition: transform 0.16s ease-out;
+  transition: transform 0.08s ease-out;
 }
 .link--icon-before::after {
   display: none;
@@ -3035,8 +3035,8 @@ li a:hover::after {
   display: none;
 }
 .link--icon-after::after {
-  margin-left: 4px;
-  margin-left: 0.4rem;
+  margin-left: 2px;
+  margin-left: 0.2rem;
   display: inline-block;
   line-height: 1;
   transition: transform 0.16s ease-out;

@@ -79,6 +79,7 @@
         .item__image {
             @include rem( margin-bottom, spacing(2) );
             display: block;
+            width: 100%;
         }
         // Title
         .item__title {
@@ -92,6 +93,7 @@
         // Excerpt
         .item__excerpt {
             @include font-size( 'small' );
+            @include rem( padding-right, spacing(2) );
             margin: 0;
         }
         // Link

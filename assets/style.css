@@ -2792,6 +2792,7 @@ hr,
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   display: block;
+  width: 100%;
 }
 .feed--post .item .item__title {
   margin: 0;
@@ -2805,6 +2806,8 @@ hr,
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  padding-right: 8px;
+  padding-right: 0.8rem;
   margin: 0;
 }
 .feed--post .item .item__link {

@@ -93,7 +93,7 @@
                     justify-content: flex-end;
                     // Heading
                     .section__heading {
-                        margin-top: 0;
+                        @include rem( margin-top, spacing(9) );
                     }
                     // Link
                     .section__link {

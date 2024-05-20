@@ -2185,7 +2185,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     justify-content: flex-end;
   }
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__heading {
-    margin-top: 0;
+    margin-top: 64px;
+    margin-top: 6.4rem;
   }
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__link {
     align-self: flex-start;

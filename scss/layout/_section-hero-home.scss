@@ -66,5 +66,9 @@
         // @include rem((
         //     min-height: 640px
         // ));
+        // Container [Content]
+        .container--content {
+            @include rem( max-width, 800px );
+        }
     }
 }

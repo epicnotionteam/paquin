@@ -2164,6 +2164,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     flex: unset;
   }
 }
+@media (min-width: 64em) {
+  .section--hero-home .container--content {
+    max-width: 800px;
+    max-width: 80rem;
+  }
+}
 .section--hero-inline {
   min-height: 512px;
   min-height: 51.2rem;

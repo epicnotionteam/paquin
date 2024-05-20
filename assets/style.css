@@ -3032,7 +3032,7 @@ li a:hover::after {
 }
 
 .link--icon-before:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .link--icon-after::before {
@@ -3047,7 +3047,7 @@ li a:hover::after {
 }
 
 .link--icon-after:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .link--icon-data-sheet:before {

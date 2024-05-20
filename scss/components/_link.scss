@@ -52,7 +52,7 @@ li a {
 
 // State management
 .link--icon-before:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 
@@ -75,7 +75,7 @@ li a {
 
 // State management
 .link--icon-after:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 

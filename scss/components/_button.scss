@@ -124,4 +124,11 @@
 .button--icon-arrow-forward {
     @include icon( before, 'arrow_forward' );
     @include icon( after, 'arrow_forward' );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        @include rem( margin-top, 1px );
+        font-size: 128%;
+        line-height: 1;
+    }
 }

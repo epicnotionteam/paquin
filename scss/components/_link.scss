@@ -81,6 +81,15 @@ li a {
 }
 
 
+// Link [Icon, Arrow, Forward]
+// --------------------------------------------------
+
+.link--icon-arrow-forward {
+    @include icon( before, 'arrow_forward' );
+    @include icon( after, 'arrow_forward' );
+}
+
+
 // Link [Icon, Arrow, Outgoing]
 // --------------------------------------------------
 

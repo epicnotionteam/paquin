@@ -3064,6 +3064,27 @@ li a:hover::after {
   font-size: 128%;
 }
 
+.link--icon-arrow-forward:before {
+  content: "\e5c8";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-arrow-forward:after {
+  content: "\e5c8";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .link--icon-arrow-outgoing:before {
   content: "\f8ce";
   font-family: "Material Symbols Outlined";

@@ -1370,6 +1370,14 @@
       "oAP" : "\/sections\/dynamic-video.liquid",
       "oF" : 0
     },
+    "\/sections\/feed-post.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/feed-post.liquid",
+      "oF" : 0
+    },
     "\/sections\/feed-team.liquid" : {
       "cB" : 0,
       "ft" : 8192,

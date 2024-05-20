@@ -1,0 +1,86 @@
+{% comment %}
+// Output Feed [Post] component
+{% endcomment %}
+
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_theme         = section.settings.theme %}
+
+{% comment %} Output section {% endcomment %}
+<section class="section--feed-post theme--{{ section_theme }} wrap--container">
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Container [Heading, Small] {% endcomment %}
+        <div class="container--heading-small section__primary-heading">
+            {% comment %} Heading [Small] {% endcomment %}
+            {% if section_heading_small != blank %}
+                <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+            {% endif %}
+        </div>
+        {% comment %} Container [Feed] {% endcomment %}
+        <div class="container--feed">
+            <div class="feed--post">
+                {% for article in blogs['news'].articles limit: 4 %}
+                    {% comment %} Assign block data to vars {% endcomment %}
+                    {% assign item_url   = article.url %}
+                    {% assign item_image = article.image | img_url: '400x' %}
+                    {% assign item_title = article.title %}
+                    {% assign item_excerpt = article.excerpt %}
+                    {% comment %} Output item {% endcomment %}
+                    <div class="item">
+                        {% comment %} Image {% endcomment %}
+                        {% if item_image %}
+                            <a href="{{ item_url }}">
+                                <img class="item__image" src="{{ item_image }}" alt="{{ item_title }}">
+                            </a>
+                        {% endif %}
+                        {% comment %} Title {% endcomment %}
+                        <h4 class="item__title"><a href="{{ item_url }}">{{ item_title }}</a></h4>
+                        <p class="item__excerpt">{{ item_excerpt }}</p>
+                        <a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Feed [Post]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "select",
+            "id": "theme",
+            "label": "Section Theme",
+            "options": [
+              {
+                "value": "base",
+                "label": "Base"
+              },
+              {
+                "value": "alt",
+                "label": "Alternative"
+              },
+              {
+                "value": "dark",
+                "label": "Dark"
+              }
+            ],
+            "default": "base"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Feed [Post]",
+            "category": "Paquin"
+        }
+    ]
+}
+{% endschema %}

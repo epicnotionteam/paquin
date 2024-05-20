@@ -3106,6 +3106,10 @@ li a:hover::after {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.link--icon-arrow-outgoing:hover::after {
+  transform: translate(2px, -2px);
+}
+
 main#site-main ul:not([class]) li,
 ul.list--base li {
   margin-bottom: 8px;

@@ -97,3 +97,10 @@ li a {
     @include icon( before, 'arrow_up_right' );
     @include icon( after, 'arrow_up_right' );
 }
+
+// State management
+.link--icon-arrow-outgoing:hover {
+    &::after {
+        transform: translate(2px, -2px);
+    }
+}

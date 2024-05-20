@@ -88,6 +88,14 @@
         "theme": "alt"
       }
     },
+    "feed_collection_exVNWe": {
+      "type": "feed-collection",
+      "settings": {
+        "heading_small": "Browse parts by type",
+        "count": "4",
+        "theme": "base"
+      }
+    },
     "hero_inline_HNjXCG": {
       "type": "hero-inline",
       "settings": {
@@ -125,6 +133,7 @@
     "dynamic_search",
     "carousel_content_media_mNDabb",
     "content_blocks_3NfM3m",
+    "feed_collection_exVNWe",
     "hero_inline_HNjXCG",
     "feed_post_CzipWa",
     "content_media_split_bLyRpL"

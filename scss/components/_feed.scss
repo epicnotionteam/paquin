@@ -64,9 +64,60 @@
 }
 
 
+// Feed [Post]
+// --------------------------------------------------
+
+// Component container
+.feed--post {
+    @include rem( row-gap, spacing(5) );
+    display: grid;
+    // Item container
+    .item {
+        @include rem( column-gap, 12px );
+        display: grid;
+        // Image
+        .item__image {
+            @include rem( margin-bottom, spacing(2) );
+        }
+        // Title
+        .item__title {
+            @extend %h3;
+            margin: 0;
+        }
+        // Excerpt
+        .item__excerpt {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+        // Link
+        .item__link {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--post {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+}
+
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Component container
+    .feed--post {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+}
+
+
 // Feed [Table, Specification]
 // --------------------------------------------------
 
+// Component container
 .feed--table-specification {
     @include rem( row-gap, spacing(1) );
     display: grid;

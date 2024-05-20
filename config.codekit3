@@ -745,6 +745,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/layout\/_section-feed-collection.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_section-feed-collection.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/layout\/_section-feed-post.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1383,6 +1398,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/dynamic-video.liquid",
+      "oF" : 0
+    },
+    "\/sections\/feed-post copy.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/feed-post copy.liquid",
       "oF" : 0
     },
     "\/sections\/feed-post.liquid" : {

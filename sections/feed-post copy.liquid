@@ -1,0 +1,109 @@
+{% comment %}
+// Output Feed [Collection] component
+{% endcomment %}
+
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_count         = section.settings.count %}
+{% assign section_theme         = section.settings.theme %}
+
+{% comment %} Output section {% endcomment %}
+<section class="section--feed-collection theme--{{ section_theme }} wrap--container">
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Container [Heading, Small] {% endcomment %}
+        <div class="container--heading-small section__primary-heading">
+            {% comment %} Heading [Small] {% endcomment %}
+            {% if section_heading_small != blank %}
+                <h2 class="section__heading--small h5">{{ section_heading_small }}</h2>
+            {% endif %}
+        </div>
+        {% comment %} Container [Feed] {% endcomment %}
+        <div class="container--feed">
+            <div class="feed--collection">
+                {% for collection in collections limit: section_collection_count %}
+                    {% comment %} Assign collection data to vars {% endcomment %}
+                    {% assign collection_url = collection.url %}
+                    {% assign collection_image = collection.image | img_url: '400x' %}
+                    {% assign collection_title = collection.title %}
+                    {% assign collection_description = collection.description %}
+                    {% comment %} Output item {% endcomment %}
+                    <div class="item">
+                        {% comment %} Image {% endcomment %}
+                        {% if collection_image %}
+                            <a class="collection__wrap--image" href="{{ collection_url }}">
+                                <img class="collection__image" src="{{ collection_image }}" alt="{{ collection_title }}">
+                            </a>
+                        {% endif %}
+                        {% comment %} Title {% endcomment %}
+                        <h3 class="collection__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
+                        {% comment %} Description {% endcomment %}
+                        <p class="collection__description">{{ collection_description }}</p>
+                        {% comment %} Link {% endcomment %}
+                        <a href="{{ collection_url }}" class="collection__link link--icon-after link--icon-arrow-forward">View products</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Feed [Collection]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "select",
+            "id": "count",
+            "label": "Number of collections to display",
+            "options": [
+                {
+                    "value": "4",
+                    "label": "4"
+                },
+                {
+                    "value": "8",
+                    "label": "8"
+                },
+                {
+                    "value": "12",
+                    "label": "12"
+                }
+            ],
+            "default": "4"
+        },
+        {
+            "type": "select",
+            "id": "theme",
+            "label": "Section Theme",
+            "options": [
+              {
+                "value": "base",
+                "label": "Base"
+              },
+              {
+                "value": "alt",
+                "label": "Alternative"
+              },
+              {
+                "value": "dark",
+                "label": "Dark"
+              }
+            ],
+            "default": "base"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Feed [Collection]",
+            "category": "Paquin"
+        }
+    ]
+}
+{% endschema %}

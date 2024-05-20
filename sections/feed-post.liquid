@@ -22,7 +22,7 @@
                 {% for article in blogs['news'].articles limit: 4 %}
                     {% comment %} Assign block data to vars {% endcomment %}
                     {% assign item_url    = article.url %}
-                    {% assign item_image  = article.image | img_url: '400x' %}
+                    {% assign item_image  = article.image | img_url: '512x' %}
                     {% assign item_title  = article.title %}
                     {% assign item_excerpt = article.excerpt %}
                     {% assign item_content = article.content %}

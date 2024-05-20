@@ -78,6 +78,7 @@
         // Image
         .item__image {
             @include rem( margin-bottom, spacing(2) );
+            display: block;
         }
         // Title
         .item__title {

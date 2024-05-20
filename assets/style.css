@@ -2757,6 +2757,7 @@ hr,
 .feed--post .item .item__image {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
+  display: block;
 }
 .feed--post .item .item__title {
   margin: 0;

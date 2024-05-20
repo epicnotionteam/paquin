@@ -31,16 +31,16 @@
                    <div class="item">
                        {% comment %} Image {% endcomment %}
                        {% if collection_image %}
-                           <a class="collection__wrap--image" href="{{ collection_url }}">
-                               <img class="collection__image" src="{{ collection_image }}" alt="{{ collection_title }}">
+                           <a class="item__wrap--image" href="{{ collection_url }}">
+                               <img class="item__image" src="{{ collection_image }}" alt="{{ collection_title }}">
                            </a>
                        {% endif %}
                        {% comment %} Title {% endcomment %}
-                       <h3 class="collection__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
+                       <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
                        {% comment %} Description {% endcomment %}
-                       <p class="collection__description">{{ collection_description }}</p>
+                       <p class="item__description">{{ collection_description }}</p>
                        {% comment %} Link {% endcomment %}
-                       <a href="{{ collection_url }}" class="collection__link link--icon-after link--icon-arrow-forward">View products</a>
+                       <a href="{{ collection_url }}" class="item__link link--icon-after link--icon-arrow-forward">View products</a>
                    </div>
                {% endfor %}
            </div>

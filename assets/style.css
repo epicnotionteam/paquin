@@ -3010,6 +3010,7 @@ li a:hover {
 .link--icon-before::before {
   margin-right: 6px;
   margin-right: 0.6rem;
+  line-height: 1;
 }
 .link--icon-before::after {
   display: none;
@@ -3019,8 +3020,9 @@ li a:hover {
   display: none;
 }
 .link--icon-after::after {
-  margin-left: 6px;
-  margin-left: 0.6rem;
+  margin-left: 4px;
+  margin-left: 0.4rem;
+  line-height: 1;
 }
 
 .link--icon-data-sheet:before {
@@ -3045,11 +3047,10 @@ li a:hover {
 }
 .link--icon-data-sheet::before, .link--icon-data-sheet::after {
   font-size: 128%;
-  line-height: 1;
 }
 
 .link--icon-arrow-outgoing:before {
-  content: "\f1e1";
+  content: "\f8ce";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;
@@ -3059,7 +3060,7 @@ li a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 .link--icon-arrow-outgoing:after {
-  content: "\f1e1";
+  content: "\f8ce";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;
@@ -3067,10 +3068,6 @@ li a:hover {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.link--icon-arrow-outgoing::before, .link--icon-arrow-outgoing::after {
-  font-size: 128%;
-  line-height: 1;
 }
 
 main#site-main ul:not([class]) li,
@@ -3125,7 +3122,7 @@ ul.list--link-arrow li {
   position: relative;
 }
 ul.list--link-arrow li:before {
-  content: "\f1e1";
+  content: "\f8ce";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;

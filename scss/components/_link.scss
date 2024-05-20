@@ -36,6 +36,7 @@ li a {
 .link--icon-before {
     &::before {
         @include rem( margin-right, 6px );
+        line-height: 1;
     }
      // Remove :after pseudo-element
      &::after {
@@ -54,7 +55,8 @@ li a {
     }
     // Icon
     &::after {
-        @include rem( margin-left, 6px );
+        @include rem( margin-left, spacing(1) );
+        line-height: 1;
     }
 }
 
@@ -69,7 +71,6 @@ li a {
     &::before,
     &::after {
         font-size: 128%;
-        line-height: 1;
     }
 }
 
@@ -80,10 +81,4 @@ li a {
 .link--icon-arrow-outgoing {
     @include icon( before, 'arrow_up_right' );
     @include icon( after, 'arrow_up_right' );
-    // Icon-specific adjustments
-    &::before,
-    &::after {
-        font-size: 128%;
-        line-height: 1;
-    }
 }

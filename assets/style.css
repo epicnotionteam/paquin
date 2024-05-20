@@ -1098,7 +1098,7 @@ body {
   color: white;
   box-shadow: 0 0 0 1px white inset;
 }
-.theme--dark #site-main a:not([class*=button]):not(.breadcrumbs-container a),
+.theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
 .theme--dark li a {
   color: #35ADC2;

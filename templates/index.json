@@ -141,7 +141,7 @@
       }
     },
     "content_certifications_aBcDeF": {
-      "type": "content-certifications",
+      "type": "home-content-certifications",
       "blocks": {
         "certification_logo_1": {
           "type": "certification_logo",

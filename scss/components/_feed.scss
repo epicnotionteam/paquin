@@ -37,7 +37,7 @@
         }
         // Image
         .item__image {
-            @include rem( margin-bottom, spacing(4) );
+            @include rem( margin-bottom, spacing(1) );
             align-self: flex-start;
             display: block;
             // Variant [Logo]

@@ -107,17 +107,9 @@
     {% comment %}Inject theme-object end{% endcomment %}
 
     {% comment %} Carousel [Glide] {% endcomment %}
-	{% comment %} Debugging template name {% endcomment %}
+	{% comment %} Output on custom pages only {% endcomment %}
 	{% assign current_template = template.name %}
-	<div style="display: none;">
-	Template name: {{ current_template }}
-	{% if current_template contains 'product' or current_template contains 'collection' or current_template contains 'customers' or current_template contains 'checkout' or current_template contains 'cart' or current_template contains 'blog' or current_template contains 'article' %}
-		Excluded: Yes
-	{% else %}
-		Excluded: No
-	{% endif %}
-	</div>
-	{% unless current_template contains 'product' or current_template contains 'collection' or current_template contains 'customers' or current_template contains 'checkout' or current_template contains 'cart' or current_template contains 'blog' or current_template contains 'article' %}
+	{% unless current_template contains 'product' or current_template contains 'collection' or current_template contains 'customers' or current_template contains 'checkout' or current_template contains 'cart' or current_template contains 'blog' or current_template contains 'article' or current_template == 'account' or current_template == 'login' or current_template == 'register' or current_template == 'activate_account' or current_template == 'reset_password' or current_template == 'order' or current_template == 'addresses' %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>

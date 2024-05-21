@@ -87,6 +87,21 @@
 }
 
 
+// Feed [Certification]
+// --------------------------------------------------
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--certification {
+        @include rem( column-gap, spacing(7) );
+        display: flex;
+        // Item container
+        .item {}
+    }
+}
+
+
 // Feed [Collection]
 // --------------------------------------------------
 

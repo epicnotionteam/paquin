@@ -2932,6 +2932,13 @@ hr,
     grid-template-columns: repeat(6, 1fr);
   }
 }
+@media (min-width: 64em) {
+  .feed--certification {
+    column-gap: 48px;
+    column-gap: 4.8rem;
+    display: flex;
+  }
+}
 .feed--collection {
   row-gap: 32px;
   row-gap: 3.2rem;

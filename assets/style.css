@@ -2938,6 +2938,16 @@ hr,
     grid-template-columns: repeat(6, 1fr);
   }
 }
+.feed--certification {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  animation: ticker 30s linear infinite;
+}
+.feed--certification .item {
+  flex: 1 1 12%;
+}
 .feed--certification .item .item__image {
   max-height: 56px;
   max-height: 5.6rem;
@@ -2965,6 +2975,14 @@ hr,
     max-height: 5.6rem;
     max-width: 128px;
     max-width: 12.8rem;
+  }
+}
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 .feed--collection {

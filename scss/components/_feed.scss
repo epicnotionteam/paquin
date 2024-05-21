@@ -92,8 +92,14 @@
 
 // Component container
 .feed--certification {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    animation: ticker 30s linear infinite;
     // Item container
     .item {
+        flex: 1 1 12%;
         // Image
         .item__image {
             @include rem(( 
@@ -128,6 +134,15 @@
                 ));
             }
         }
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 

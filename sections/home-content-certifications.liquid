@@ -44,6 +44,7 @@
 </section>
 
 {% comment %} Conditional carousel initialization {% endcomment %}
+{% comment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Assign carousel instance to var
@@ -77,6 +78,39 @@
         });
     });
 </script>
+{% endcomment %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth < 1024) {
+            const feed = document.querySelector('.feed--certification');
+            const items = Array.from(feed.children);
+            
+            // Duplicate the items for a seamless loop
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                feed.appendChild(clone);
+            });
+    
+            // Ensure continuous scrolling
+            const firstItem = items[0];
+            const itemWidth = firstItem.offsetWidth;
+            let position = 0;
+    
+            function moveTicker() {
+                position -= 1;
+                if (position <= -itemWidth) {
+                    position = 0;
+                    feed.appendChild(feed.firstElementChild);
+                }
+                feed.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(moveTicker);
+            }
+    
+            moveTicker();
+        }
+    });
+    </script>
+
 
 {% schema %}
 {

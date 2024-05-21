@@ -95,7 +95,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 0;
+    gap: 32px;
     animation: ticker 30s linear infinite;
     // Item container
     .item {

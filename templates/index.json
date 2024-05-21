@@ -142,42 +142,6 @@
     },
     "content_certifications_aBcDeF": {
       "type": "home-content-certifications",
-      "blocks": {
-        "certification_logo_1": {
-          "type": "certification_logo",
-          "settings": {
-            "logo": "shopify://shop_images/asset__placeholder--1-1.png",
-            "title": "Certification 1"
-          }
-        },
-        "certification_logo_2": {
-          "type": "certification_logo",
-          "settings": {
-            "logo": "shopify://shop_images/asset__placeholder--1-1.png",
-            "title": "Certification 2"
-          }
-        },
-        "certification_logo_3": {
-          "type": "certification_logo",
-          "settings": {
-            "logo": "shopify://shop_images/asset__placeholder--1-1.png",
-            "title": "Certification 3"
-          }
-        },
-        "certification_logo_4": {
-          "type": "certification_logo",
-          "settings": {
-            "logo": "shopify://shop_images/asset__placeholder--1-1.png",
-            "title": "Certification 4"
-          }
-        }
-      },
-      "block_order": [
-        "certification_logo_1",
-        "certification_logo_2",
-        "certification_logo_3",
-        "certification_logo_4"
-      ],
       "settings": {
         "heading": "Our Certifications",
         "content": "<p>We are proud to hold certifications from industry-leading organizations, demonstrating our commitment to quality, safety, and excellence.</p>"

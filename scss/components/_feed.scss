@@ -312,14 +312,18 @@
         border-top: $border--dark;
         display: grid;
         // Container [Icon]
-        .container--icon {}
+        .container--icon {
+            @include icon( before, 'check ') {
+                color: color( 'action', '2' );
+            }
+        }
         // Container [Content]
         .container--content {
             // Heading
             .item__heading {
                 @include font-size( 'small' );
+                @include rem( margin-bottom, spacing(1) );
                 font-weight: font-weight( 'bold' );
-                margin: 0;
             }
             // Content
             .item__content {

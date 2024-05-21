@@ -2949,7 +2949,7 @@ hr,
     width: auto !important;
     height: auto !important;
   }
-  .feed--certification .item .item_image {
+  .feed--certification .item .item__image {
     max-height: 56px;
     max-height: 5.6rem;
     max-width: 128px;

@@ -106,7 +106,7 @@
             width: auto !important;
             height: auto !important;
             // Image
-            .item_image {
+            .item__image {
                 @include rem(( 
                     max-height: 56px,
                     max-width: 128px

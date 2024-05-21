@@ -1218,6 +1218,23 @@ small,
   }
 }
 
+.text--headline {
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 46px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
+}
+@media screen and (min-width: 1024px) {
+  .text--headline {
+    font-size: 64px;
+    font-size: 6.4rem;
+    line-height: 72px;
+    letter-spacing: 0.56px;
+    letter-spacing: 0.056rem;
+  }
+}
+
 em,
 .text--italic {
   font-style: italic;
@@ -1242,7 +1259,10 @@ sup {
   font-weight: 400;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Paquin Sans Display", sans-serif;
   text-transform: none;
 }

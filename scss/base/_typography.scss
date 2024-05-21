@@ -74,6 +74,10 @@ small,
   @include font-size( 'xxlarge' );
 }
 
+.text--headline {
+  @include font-size( 'headline' );
+}
+
 em,
 .text--italic {
   font-style: italic;
@@ -102,7 +106,10 @@ sup {
 // Heading styles
 // --------------------------------------------------
 
-h1, h2, h3, h4 {
+h1, 
+h2, 
+h3, 
+h4 {
 	font-family: font-family( 'heading' );
 	text-transform: none;
 }

@@ -1811,6 +1811,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--content-introduction .section__grid .container--cta {
+  margin-top: 16px;
+  margin-top: 1.6rem;
   display: flex;
   flex-wrap: wrap;
 }

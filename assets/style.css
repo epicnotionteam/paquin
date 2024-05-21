@@ -1550,6 +1550,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .site-header-main .site-header-main-content {
   padding: 4px 0;
   padding: 0.4rem 0;
+  background: transparent;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -1689,129 +1690,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     width: 2.4rem;
   }
 }
-/*
-.site-header {
-    background-color: color( 'steel', '1' );
-    padding: 0 4vw;
-    // Primary header content container
-    .site-header-main {
-        background-color: color( 'steel', '1' );
-        &.site-header--full-width {
-            @include rem( max-width, wrap( 'max' ) );
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        // Grid structure
-        .site-header-main-content {
-            @include rem(( 
-                column-gap: spacing(4),
-                padding: 20px 0 0
-            ));
-            display: grid;
-            grid-template-columns: max-content 1fr max-content;
-            margin: 0;
-            // Logo container
-            .site-header-logo {
-                margin: 0;
-                // Image
-                .site-logo {
-                    @include rem( max-width, 128px );
-                    height: auto;
-                    width: 100%;
-                }
-            }
-            // Live search container
-            .live-search {
-                margin: 0;
-                // Form
-                .live-search-form {
-                    border-radius: 0;
-                    border: 0 none;
-                    box-shadow: none;
-
-                    .live-search-form-field {
-                        @include rem( padding, spacing(3) );
-                        @include font-size( 'small' );
-                    }
-                    .live-search-filter-wrapper .live-search-filter-label {
-                        @include rem( padding, spacing(3) ); 
-                        @include font-size( 'small' );
-                        background: color( 'steel', '3' );
-                        color: white;
-                    }
-                    .live-search-button {
-                        background: white;
-                        border: 0px;
-                        :not(.disabled):hover {
-                            background: white;
-                            border: 0px;
-                        }
-                    }
-                }
-            }
-        }
-        // Actions container
-        .site-header-right {
-            align-items: center;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            // Buttons
-            .site-header-account, 
-            .site-header-cart {
-                &--button {
-                    @include rem( padding, 12px );
-                    display: block;
-                    position: relative;
-                    right: unset;
-                    text-align: center;
-                }
-                .site-header-account-icon, .site-header-cart-icon {
-                    &--svg {
-                        fill: color('type', 'white');
-                    }
-                }
-            }
-            // Cart action
-            .site-header-cart {
-                margin-top: unset;
-                position: unset;
-                width: unset;
-                // Cart marker
-                .site-header-cart--count::after {
-                    background-color: color( 'action', '1' );
-                }
-            }
-        }
-    }
-    // Navigation container
-    #site-header-nav {
-        @include rem( max-width, wrap( 'max' ) );
-        margin: 0 auto;
-        .site-navigation {
-            background-color: color( 'steel', '1' );
-            padding: 0;
-        }
-    }
-}
-
-
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {
-    .site-header {
-        .site-header-main {
-            &.site-header--full-width {
-                .site-header-main-content {
-                    // Logo container
-                    .site-header-logo {
-                        @include rem( margin-right, spacing(3) );
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 .section--carousel-content-media {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

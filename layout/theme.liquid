@@ -108,18 +108,13 @@
 
     {% comment %} Carousel [Glide] {% endcomment %}
 	{% comment %} Output on custom pages only {% endcomment %}
+	{% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article,account,login,register,activate_account,reset_password,order,addresses" | split: "," %}
 	{% assign current_template = template.name %}
-	{% unless current_template contains 'product' or current_template contains 'collection' or current_template contains 'customers' or current_template contains 'checkout' or current_template contains 'cart' or current_template contains 'blog' or current_template contains 'article' or current_template == 'account' or current_template == 'login' or current_template == 'register' or current_template == 'activate_account' or current_template == 'reset_password' or current_template == 'order' or current_template == 'addresses' %}
+	{% unless current_template == blank or excluded_templates contains current_template %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 	{% endunless %}
-	{% comment %} {% assign current_template = template.name %}
-	{% unless current_template contains 'product' or current_template contains 'collection' or current_template contains 'customers' or current_template contains 'checkout' or current_template contains 'cart' or current_template contains 'blog' or current_template contains 'article' %}
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
-	{% endunless %} {% endcomment %}
     {% comment %} Typography [Typekit] {% endcomment %}
     <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
     {% comment %} Icons [Google Material Symbols] {% endcomment %}

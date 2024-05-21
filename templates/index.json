@@ -114,7 +114,9 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
             "image_type": "logo",
             "heading": "Paquin Sensors",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
+            "link_text": "Link text",
+            "link_url": "#test"
           }
         },
         "content_block_LVEVAK": {
@@ -123,7 +125,9 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
             "image_type": "logo",
             "heading": "Global Intex",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
+            "link_text": "Link text",
+            "link_url": "#test"
           }
         },
         "content_block_p9Ei6p": {
@@ -132,7 +136,9 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
             "image_type": "logo",
             "heading": "Excell Manufacturing",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         },
         "content_block_LtUemM": {
@@ -141,7 +147,9 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
             "image_type": "logo",
             "heading": "Paquin Global",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         }
       },

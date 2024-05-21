@@ -30,9 +30,11 @@
                             {% assign block_image = block.settings.image %}
                             {% assign block_title = block.settings.title %}
                             {% comment %} Output item {% endcomment %}
-                            <li class="glide__slide item">
-                                <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
-                            </li>
+                            {% if block_image != blank %}
+                                <li class="glide__slide item">
+                                    <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
+                                </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -103,8 +105,8 @@
             "settings": [
                 {
                     "type": "image_picker",
-                    "id": "logo",
-                    "label": "Logo"
+                    "id": "image",
+                    "label": "Image"
                 },
                 {
                     "type": "text",

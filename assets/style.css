@@ -1826,6 +1826,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--content-certifications .section__grid .container--feed {
+  max-width: 1024px;
+  max-width: 102.4rem;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
   width: 100%;

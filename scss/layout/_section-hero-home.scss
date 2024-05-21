@@ -52,12 +52,18 @@
             }
         }
     }
+    // Carousel
+    .carousel--trust-signals {
+        position: relative;
+        z-index: 1;
+    }
     // Overlay [Darken]
     .section__overlay {
         background-color: rgba( 16, 16, 16, 0.32 );
         content: '';
         height: 100%;
         left: 0;
+        position: absolute;
         top: 0;
         width: 100%;
         z-index: 0;

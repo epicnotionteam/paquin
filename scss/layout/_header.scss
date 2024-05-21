@@ -203,5 +203,10 @@
                 opacity: 0;
             }
         }
+        &.site-header-sticky--scrolled.site-header-nav--open {
+            .site-navigation {
+                opacity: 1;
+            }
+        }
     }
 }

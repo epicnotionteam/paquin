@@ -13,12 +13,12 @@
 {% comment %} Determine link element type based on link type {% endcomment %}
 {% if section.settings.link_type == 'link' %}
     {% assign section_link_element = 'link--icon-after link--icon-arrow-forward' %}
-  {% else %}
+{% else %}
     {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-forward' %}
 {% endif %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--content-introduction theme--{{ section_theme }}">
+<section class="section--content-introduction wrap--container theme--{{ section_theme }}">
     {% comment %} Heading {% endcomment %}
     {% if section_heading != blank %}
         <h2 class="section__heading {{ section_heading_size }}">{{ section_heading }}</h2>
@@ -48,18 +48,18 @@
             "id": "heading_size",
             "label": "Heading Size",
             "options": [
-              {
-                "value": "headline",
-                "label": "Headline"
-              },
-              {
-                "value": "h1",
-                "label": "H1"
-              },
-              {
-                "value": "h2",
-                "label": "H2"
-              }
+				{
+					"value": "headline",
+					"label": "Headline"
+				},
+				{
+					"value": "h1",
+					"label": "H1"
+				},
+				{
+					"value": "h2",
+					"label": "H2"
+				}
             ],
             "default": "headline"
         },
@@ -86,14 +86,14 @@
             "id": "link_type",
             "label": "Link Type",
             "options": [
-              {
-                "value": "link",
-                "label": "Link"
-              },
-              {
-                "value": "button",
-                "label": "Button"
-              }
+				{
+					"value": "link",
+					"label": "Link"
+				},
+				{
+					"value": "button",
+					"label": "Button"
+				}
             ],
             "default": "link"
         },
@@ -102,18 +102,18 @@
             "id": "theme",
             "label": "Section Theme",
             "options": [
-              {
-                "value": "base",
-                "label": "Base"
-              },
-              {
-                "value": "alt",
-                "label": "Alternative"
-              },
-              {
-                "value": "dark",
-                "label": "Dark"
-              }
+				{
+					"value": "base",
+					"label": "Base"
+				},
+				{
+					"value": "alt",
+					"label": "Alternative"
+				},
+				{
+					"value": "dark",
+					"label": "Dark"
+				}
             ],
             "default": "base"
         }

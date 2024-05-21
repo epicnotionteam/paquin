@@ -10,7 +10,11 @@
 
 // Section container
 .section--content-introduction {
-    @include rem( padding-bottom, $gap--section-small );
+    @include rem((
+        padding-bottom: 96px,
+        padding-top: 96px
+    ));
+    text-align: center;
 }
     
 
@@ -18,6 +22,9 @@
 @include mq( $from: medium ) {
     // Section container
     .section--content-introduction {
-        @include rem( padding-bottom, $gap--section-large );
+        @include rem((
+            padding-bottom: 128px,
+            padding-top: 128px
+        ));
     }
 }

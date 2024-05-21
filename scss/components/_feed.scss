@@ -335,12 +335,11 @@
     // Container
     &.glide__slides {
         @include rem( padding-bottom, spacing(6) !important);
-        display: grid !important;
     }
 }
 
 // Adjust @large breakpoint
-@include mq( $from: large ) {
+@include mq( $from: 1024px ) {
     // Component container
     .feed--trust-signal {
         @include rem( column-gap, spacing(4) );

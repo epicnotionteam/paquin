@@ -10,10 +10,6 @@
 
 // Section container
 .section--hero-home {
-    // @include rem((
-    //     padding-bottom: 72px,
-    //     padding-top: 72px
-    // ));
     background-position: center;
     background-size: cover;
     position: relative;
@@ -31,10 +27,13 @@
             // Heading
             .section__heading {
                 @include font-size( 'headline' );
-                margin: 0;
+                @include rem( max-width, 800px );
+                margin: 0 auto;
             }
             // Content
             .section__content {
+                @include rem( max-width, 512px );
+                margin: 0 auto;
                 // Strip margin from final <p>
                 p:last-child {
                     margin: 0;

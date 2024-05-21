@@ -2052,7 +2052,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 46px;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin: 0;
+  max-width: 800px;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
   .section--hero-home .container--content .section__wrap--content .section__heading {
@@ -2062,6 +2064,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     letter-spacing: 0.56px;
     letter-spacing: 0.056rem;
   }
+}
+.section--hero-home .container--content .section__wrap--content .section__content {
+  max-width: 512px;
+  max-width: 51.2rem;
+  margin: 0 auto;
 }
 .section--hero-home .container--content .section__wrap--content .section__content p:last-child {
   margin: 0;

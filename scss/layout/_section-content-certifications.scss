@@ -1,0 +1,66 @@
+// ====================================================================================================
+// Layout / Section [Content, Certifications]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--content-certifications {
+    @include rem((
+        padding-bottom: 96px,
+        padding-top: 96px
+    ));
+    text-align: center;
+    // // Grid
+    // .section__grid {
+    //     display: grid;
+    //     @include rem( row-gap, 12px );
+    //     // Heading
+    //     .section__heading {
+    //         @include rem( max-width, 900px );
+    //         margin: 0 auto;
+    //         // Style [Headline]
+    //         &.text--headline {
+    //             @include rem( margin-bottom, spacing(3) );
+    //         }
+    //         // Style [H1]
+    //         &.h1 {
+    //             @include rem( margin-bottom, spacing(2) );
+    //         }
+    //     }
+    //     // Content
+    //     .section__content {
+    //         @include rem( max-width, 640px );
+    //         margin: 0 auto;
+    //         // Strip margin from final <p>
+    //         p:last-child {
+    //             margin: 0;
+    //         }
+    //     }
+    //     // Container [CTA]
+    //     .container--cta {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         // Button(s)
+    //         .button--base {
+    //             @include rem( margin-top, spacing(3) );
+    //             flex: 1 1 100%;
+    //         }
+    //     }
+    // }
+}
+    
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--content-certifications {
+        @include rem((
+            padding-bottom: 128px,
+            padding-top: 128px
+        ));
+    }
+}

@@ -1785,6 +1785,22 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
+.section--content-certifications {
+  padding-bottom: 96px;
+  padding-bottom: 9.6rem;
+  padding-top: 96px;
+  padding-top: 9.6rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .section--content-certifications {
+    padding-bottom: 128px;
+    padding-bottom: 12.8rem;
+    padding-top: 128px;
+    padding-top: 12.8rem;
+  }
+}
 .section--content-introduction {
   padding-bottom: 96px;
   padding-bottom: 9.6rem;

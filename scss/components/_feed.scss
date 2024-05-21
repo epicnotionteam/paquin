@@ -302,7 +302,6 @@
 
 // Component container
 .feed--trust-signal {
-    @include rem( padding-bottom, spacing(6));
     // Item container
     .item {
         @include rem((
@@ -335,6 +334,7 @@
     // Glide carousel instance
     // Container
     &.glide__slides {
+        @include rem( padding-bottom, spacing(6) !important);
         display: grid !important;
     }
 }
@@ -343,13 +343,13 @@
 @include mq( $from: large ) {
     // Component container
     .feed--trust-signal {
-        @include rem(( 
-            column-gap: spacing(4),
-            padding-bottom: spacing(6)
-        ));
+        @include rem( column-gap, spacing(4) );
         display: grid;
         grid-template-columns: repeat( 3, 1fr );
-        // Item container
-        .item {}
+         // Glide carousel instance
+        // Container
+        &.glide__slides {
+            @include rem( padding-bottom, spacing(7) !important);
+        }
     }
 }

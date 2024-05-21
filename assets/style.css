@@ -3102,10 +3102,6 @@ hr,
     grid-template-columns: repeat(6, 1fr);
   }
 }
-.feed--trust-signal {
-  padding-bottom: 40px;
-  padding-bottom: 4rem;
-}
 .feed--trust-signal .item {
   column-gap: 8px;
   column-gap: 0.8rem;
@@ -3136,6 +3132,8 @@ hr,
   margin: 0;
 }
 .feed--trust-signal.glide__slides {
+  padding-bottom: 40px !important;
+  padding-bottom: 4rem !important;
   display: grid !important;
 }
 
@@ -3143,10 +3141,12 @@ hr,
   .feed--trust-signal {
     column-gap: 24px;
     column-gap: 2.4rem;
-    padding-bottom: 40px;
-    padding-bottom: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .feed--trust-signal.glide__slides {
+    padding-bottom: 48px !important;
+    padding-bottom: 4.8rem !important;
   }
 }
 .productgrid--sidebar {

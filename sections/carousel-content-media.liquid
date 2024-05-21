@@ -93,10 +93,13 @@
     </div>
 </section>
 
-{% comment %} Load Glide.js {% endcomment %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+{% comment %} Conditional carousel initialization {% endcomment %}
+{% unless glide_loaded %}
+    {% assign glide_loaded = true %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+{% endunless %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Get all carousel containers on current page

@@ -19,7 +19,7 @@
             width: calc( 100% + 24px )
         ));
         align-items: center;
-        background: transparent;
+        background-color: color( 'steel', '1' );
         display: grid;
         grid-template-columns: max-content max-content 1fr;
         // Strip pseudo elements
@@ -198,14 +198,6 @@
                     margin-right: spacing(4),
                     width: 24px 
                 ));
-            }
-            .site-navigation {
-                opacity: 0;
-            }
-        }
-        &.site-header-sticky--scrolled.site-header-nav--open {
-            .site-navigation {
-                opacity: 1;
             }
         }
     }

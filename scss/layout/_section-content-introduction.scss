@@ -48,8 +48,11 @@
 // Adjust @small breakpoint
 @include mq( $from: small ) {
     // Button(s)
-    .section--content-introduction .section__grid .container--cta .button--base {
-        flex: unset;
+    .section--content-introduction .section__grid .container--cta {
+        justify-content: center;
+        .button--base {
+            flex: unset;
+        }
     }
 }
     

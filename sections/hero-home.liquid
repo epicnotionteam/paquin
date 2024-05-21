@@ -45,12 +45,19 @@
                 <ul class="glide__slides feed--trust-signal">
                    {% for block in section_blocks %}
                         <li class="glide__slide item">
-                            {% if block.settings.heading != blank %}
-                                <p class="trust-signal__heading">{{ block.settings.heading }}</p>
-                            {% endif %}
-                            {% if block.settings.content != blank %}
-                                <div class="trust-signal__content">{{ block.settings.content }}</div>
-                            {% endif %}
+                            {% comment %} Container [Icon] {% endcomment %}
+                            <div class="container--icon"></div>
+                            {% comment %} Container [Content] {% endcomment %}
+                            <div class="container--content">
+                                {% comment %} Heading {% endcomment %}
+                                {% if block.settings.heading != blank %}
+                                    <p class="item__heading">{{ block.settings.heading }}</p>
+                                {% endif %}
+                                {% comment %} Content {% endcomment %}
+                                {% if block.settings.content != blank %}
+                                    <div class="item__content">{{ block.settings.content | richtext }}</div>
+                                {% endif %}
+                            </div>
                         </li>
                    {% endfor %}
                 </ul>

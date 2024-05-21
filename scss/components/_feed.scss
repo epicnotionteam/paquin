@@ -300,6 +300,39 @@
 // Feed [Trust Signal]
 // --------------------------------------------------
 
+// Component container
+.feed--trust-signal {
+    // Item container
+    .item {
+        @include rem((
+            column-gap: spacing(2),
+            grid-template-columns: 16px 1fr,
+            padding-top: spacing(5)
+        ));
+        border-top: $border--dark;
+        display: grid;
+        // Container [Icon]
+        .container--icon {}
+        // Container [Content]
+        .container--content {
+            // Heading
+            .item__heading {
+                @include font-size( 'small ');
+                font-weight: font-weight( 'bold' );
+                margin: 0;
+            }
+            // Content
+            .item__content {
+                @include font-size( 'small ');
+                // Strip margin from final <p>
+                p:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
 // Adjust @large breakpoint
 @include mq( $from: large ) {
     // Component container
@@ -308,14 +341,6 @@
         display: grid;
         grid-template-columns: repeat( 3, 1fr );
         // Item container
-        .item {
-            @include rem((
-                column-gap: spacing(2),
-                grid-template-columns: 16px 1fr,
-                padding-top: spacing(5)
-            ));
-            border-top: $border--dark;
-            display: grid;
-        }
+        .item {}
     }
 }

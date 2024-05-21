@@ -3102,22 +3102,23 @@ hr,
     grid-template-columns: repeat(6, 1fr);
   }
 }
+.feed--trust-signal .item {
+  column-gap: 8px;
+  column-gap: 0.8rem;
+  grid-template-columns: 16px 1fr;
+  grid-template-columns: 1.6rem 1fr;
+  padding-top: 32px;
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  display: grid;
+}
+
 @media (min-width: 77.5em) {
   .feed--trust-signal {
     column-gap: 24px;
     column-gap: 2.4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .feed--trust-signal .item {
-    column-gap: 8px;
-    column-gap: 0.8rem;
-    grid-template-columns: 16px 1fr;
-    grid-template-columns: 1.6rem 1fr;
-    padding-top: 32px;
-    padding-top: 3.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-    display: grid;
   }
 }
 .productgrid--sidebar {

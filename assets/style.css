@@ -2827,6 +2827,18 @@ hr,
   margin-bottom: 0.4rem;
   display: block;
 }
+.feed--block .item .item__image {
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+  align-self: flex-start;
+  display: block;
+}
+.feed--block .item .item__image.variant--logo {
+  max-height: 56px;
+  max-height: 5.6rem;
+  max-width: 128px;
+  max-width: 12.8rem;
+}
 .feed--block .item .item__heading {
   margin: 0;
 }
@@ -2840,17 +2852,12 @@ hr,
 .feed--block .item .item__content > p:last-child {
   margin: 0;
 }
-.feed--block .item .item__image {
-  margin-bottom: 4px;
-  margin-bottom: 0.4rem;
-  align-self: flex-start;
-  display: block;
-}
-.feed--block .item .item__image.variant--logo {
-  max-height: 56px;
-  max-height: 5.6rem;
-  max-width: 128px;
-  max-width: 12.8rem;
+.feed--block .item .item__link {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }
 
 @media (min-width: 48em) {

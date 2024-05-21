@@ -23,18 +23,6 @@
             @extend %h5;
             display: block;
         }
-        // Content
-        .item__heading {
-            margin: 0;
-        }
-        // Content
-        .item__content {
-            @include font-size( 'small' );
-            // Strip margin from final <p>
-            & > p:last-child {
-                margin: 0;
-            }
-        }
         // Image
         .item__image {
             @include rem( margin-bottom, spacing(1) );
@@ -48,6 +36,22 @@
                 ));
             }
         }
+        // Content
+        .item__heading {
+            margin: 0;
+        }
+        // Content
+        .item__content {
+            @include font-size( 'small' );
+            // Strip margin from final <p>
+            & > p:last-child {
+                margin: 0;
+            }
+        }
+        // Link
+        .item__link {
+            @include font-size( 'small');
+        } 
     }
 }
 

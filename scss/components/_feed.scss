@@ -313,7 +313,7 @@
         display: grid;
         // Container [Icon]
         .container--icon {
-            @include icon( before, 'check ') {
+            @include icon( before, 'check_contained' ) {
                 color: color( 'action', '2' );
             }
         }

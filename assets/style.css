@@ -3113,7 +3113,7 @@ hr,
   display: grid;
 }
 .feed--trust-signal .item .container--icon:before {
-  content: "";
+  content: "\e86c";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;

@@ -43,6 +43,44 @@
 	</div>
 </section>
 
+{% comment %} Conditional carousel initialization {% endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Assign carousel instance to var
+        let carouselCertifications;
+        // Initialize or destroy carousel based on window width
+        function initializeCarousel() {
+            if (window.innerWidth < 1024) {
+                // Initialize carousel if window width is <1024px
+                carouselCertifications = new Glide('.carousel--certification', {
+                    type: 'carousel',
+                    autoplay: 3200,
+                    perView: 3,
+                    animationDuration: 800,
+                    gap: 24,
+                });
+                // Mount carousel instance
+                carouselCertifications.mount(); 
+            } else {
+                // Destroy carousel if window width is >1024px
+                if (carouselCertifications) {
+                    carouselCertifications.destroy();
+                }
+            }
+        }
+        // Call function initially
+        initializeCarousel(); 
+        // Event listener for window resize
+        window.addEventListener('resize', function () {
+            // Reinitialize or destroy carousel on window resize
+            initializeCarousel();
+        });
+    });
+</script>
+
 {% schema %}
 {
     "name": "Certifications",

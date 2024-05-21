@@ -349,6 +349,7 @@
         // Container
         &.glide__slides {
             @include rem( padding-bottom, spacing(7) !important);
+            display: grid !important;
         }
     }
 }

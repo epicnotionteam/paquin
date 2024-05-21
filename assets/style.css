@@ -3146,6 +3146,7 @@ hr,
   .feed--trust-signal.glide__slides {
     padding-bottom: 48px !important;
     padding-bottom: 4.8rem !important;
+    display: grid !important;
   }
 }
 .productgrid--sidebar {

@@ -1803,6 +1803,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 46px;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
   max-width: 900px;
   max-width: 90rem;
   margin: 0 auto;

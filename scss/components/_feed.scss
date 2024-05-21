@@ -90,6 +90,21 @@
 // Feed [Certification]
 // --------------------------------------------------
 
+// Component container
+.feed--certification {
+    // Item container
+    .item {
+        // Image
+        .item__image {
+            @include rem(( 
+                max-height: 56px,
+                max-width: 128px
+            ));
+            display: block;
+        }
+    }
+}
+
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Component container
@@ -111,7 +126,6 @@
                     max-height: 56px,
                     max-width: 128px
                 ));
-                display: block;
             }
         }
     }

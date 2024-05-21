@@ -35,11 +35,11 @@
         }
         // Container [CTA]
         .container--cta {
-            @include rem( margin-top, spacing(3) );
             display: flex;
             flex-wrap: wrap;
             // Button(s)
             .button--base {
+                @include rem( margin-top, spacing(3) );
                 flex: 1 1 100%;
             }
         }

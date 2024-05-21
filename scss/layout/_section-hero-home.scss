@@ -27,13 +27,10 @@
             // Heading
             .section__heading {
                 @include font-size( 'headline' );
-                @include rem( max-width, 800px );
-                margin: 0 auto;
+                margin: 0;
             }
             // Content
             .section__content {
-                @include rem( max-width, 512px );
-                margin: 0 auto;
                 // Strip margin from final <p>
                 p:last-child {
                     margin: 0;

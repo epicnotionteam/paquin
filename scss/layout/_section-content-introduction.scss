@@ -15,6 +15,34 @@
         padding-top: 96px
     ));
     text-align: center;
+    // Grid
+    .section__grid {
+        display: grid;
+        @include rem( row-gap, 12px );
+        // Heading
+        .section__heading {
+            @include rem( max-width, 800px );
+            margin: 0 auto;
+        }
+        // Content
+        .section__content {
+            @include rem( max-width, 512px );
+            margin: 0 auto;
+            // Strip margin from final <p>
+            p:last-child {
+                margin: 0;
+            }
+        }
+        // Container [CTA]
+        // .container--cta {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     // Button(s)
+        //     a {
+        //         flex: 1 1 100%;
+        //     }
+        // }
+    }
 }
     
 

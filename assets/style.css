@@ -2835,6 +2835,15 @@ hr,
 .feed--block .item .item__content > p:last-child {
   margin: 0;
 }
+.feed--block .item .item__image {
+  display: block;
+}
+.feed--block .item .item__image.variant--logo {
+  max-height: 56px;
+  max-height: 5.6rem;
+  max-width: 128px;
+  max-width: 12.8rem;
+}
 
 @media (min-width: 48em) {
   .feed--block {

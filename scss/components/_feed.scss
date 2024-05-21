@@ -29,6 +29,17 @@
                 margin: 0;
             }
         }
+        // Image
+        .item__image {
+            display: block;
+            // Variant [Logo]
+            &.variant--logo {
+                @include rem((
+                    max-height: 56px,
+                    max-width: 128px
+                ));
+            }
+        }
     }
 }
 

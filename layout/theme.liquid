@@ -106,10 +106,15 @@
     </script>
     {% comment %}Inject theme-object end{% endcomment %}
 
-    {% comment %} Custom Assets [Scripts] {% endcomment %}
-    {% comment %} {{ 'components.js' | asset_url | script_tag }} {% endcomment %}
-    {% comment %} Custom Assets [Styles] {% endcomment %}
+    {% comment %} Carousel [Glide] {% endcomment %}
+    {% if content_for_header contains 'data-carousel' %}
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+    {% endif %}
+    {% comment %} Typography [Typekit] {% endcomment %}
     <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
+    {% comment %} Icons [Google Material Symbols] {% endcomment %}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
   </head>

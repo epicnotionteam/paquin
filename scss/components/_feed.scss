@@ -94,15 +94,24 @@
 @include mq( $from: medium ) {
     // Component container
     .feed--certification {
-        @include rem( column-gap, spacing(7) );
+        @include rem(( 
+            column-gap: spacing(7),
+            row-gap: spacing(6)
+        ));
         display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
         // Item container
         .item {
             width: auto !important;
             height: auto !important;
             // Image
             .item_image {
-                @include rem( max-height, 56px );
+                @include rem(( 
+                    max-height: 56px,
+                    max-width: 128px
+                ));
+                display: block;
             }
         }
     }

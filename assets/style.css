@@ -2939,7 +2939,11 @@ hr,
   .feed--certification {
     column-gap: 48px;
     column-gap: 4.8rem;
+    row-gap: 40px;
+    row-gap: 4rem;
     display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .feed--certification .item {
     width: auto !important;
@@ -2948,6 +2952,9 @@ hr,
   .feed--certification .item .item_image {
     max-height: 56px;
     max-height: 5.6rem;
+    max-width: 128px;
+    max-width: 12.8rem;
+    display: block;
   }
 }
 .feed--collection {

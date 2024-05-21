@@ -2819,7 +2819,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .carousel--content-media .item .item__grid .container--media img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 64em) {
@@ -2964,10 +2964,14 @@ hr,
 
 @media (min-width: 40em) {
   .feed--certification {
-    flex-wrap: wrap;
     gap: 16px;
+    gap: 1.6rem;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: auto;
+  }
+  .feed--certification .item {
+    padding: 0;
   }
 }
 .feed--collection {

@@ -118,10 +118,14 @@
 @include mq( $from: 640px ) {
     // Component container
     .feed--certification {
+        @include rem( gap, spacing(3) );
         flex-wrap: wrap;
-        gap: 16px;
         justify-content: space-between;
         width: auto;
+        // Item container
+        .item {
+            padding: 0;
+        }
     }
 }
 

@@ -3636,7 +3636,9 @@ ul.list--link-arrow li::before {
   max-width: 159rem;
   background-color: transparent;
   margin: 0 auto;
+  opacity: 1;
   padding: 0;
+  transition: opacity 0.16s ease-out;
 }
 .site-navigation > .navmenu {
   transform: translateX(-12px);

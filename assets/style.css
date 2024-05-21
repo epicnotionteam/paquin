@@ -2841,6 +2841,9 @@ hr,
   margin: 0;
 }
 .feed--block .item .item__image {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  align-self: flex-start;
   display: block;
 }
 .feed--block .item .item__image.variant--logo {

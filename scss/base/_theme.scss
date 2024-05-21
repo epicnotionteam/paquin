@@ -57,8 +57,10 @@
 // ----------------------------------------------------------------------------------------------------
 
 // Adjust section heading margin when two consecutive sections themes occur 
-.theme--base + .theme--base .section__primary-heading,
-.theme--alt + .theme--alt .section__primary-heading,
-.theme--dark + .theme--dark .section__primary-heading {
-    margin-top: 0;
+.section-theme--base + .section-theme--base,
+.section-theme--alt + .section-theme--alt,
+.section-theme--dark + .section-theme--dark {
+	.section__primary-heading {
+		margin-top: 0;
+	}
 }

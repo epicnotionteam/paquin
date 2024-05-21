@@ -25,7 +25,7 @@
             margin: 0 auto;
             // Style [Headline]
             &.text--headline {
-                @include rem( margin-bottom, spacing(3) );
+                @include rem( margin-bottom, spacing(2) );
             }
             // Style [H1]
             &.h1 {
@@ -73,5 +73,9 @@
             padding-bottom: 128px,
             padding-top: 128px
         ));
+        // Heading style [Headline]
+        .section__grid .section__heading.text--headline {
+            @include rem( margin-bottom, spacing(3) );
+        }
     }
 }

@@ -1855,8 +1855,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 auto;
 }
 .section--content-introduction .section__grid .section__heading.text--headline {
-  margin-bottom: 16px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 .section--content-introduction .section__grid .section__heading.h1 {
   margin-bottom: 8px;
@@ -1894,6 +1894,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 12.8rem;
     padding-top: 128px;
     padding-top: 12.8rem;
+  }
+  .section--content-introduction .section__grid .section__heading.text--headline {
+    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 }
 .section--content-media-split {

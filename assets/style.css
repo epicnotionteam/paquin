@@ -1794,8 +1794,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .section--content-certifications .section__grid {
   display: grid;
-  row-gap: 12px;
-  row-gap: 1.2rem;
+  row-gap: 24px;
+  row-gap: 2.4rem;
 }
 .section--content-certifications .section__grid .section__heading {
   font-size: 38px;
@@ -1803,8 +1803,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 46px;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin-bottom: 16px;
-  margin-bottom: 1.6rem;
   max-width: 900px;
   max-width: 90rem;
   margin: 0 auto;
@@ -1819,9 +1817,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--content-certifications .section__grid .section__content {
+  margin: 0 auto 16px;
+  margin: 0 auto 1.6rem;
   max-width: 640px;
   max-width: 64rem;
-  margin: 0 auto;
 }
 .section--content-certifications .section__grid .section__content p:last-child {
   margin: 0;

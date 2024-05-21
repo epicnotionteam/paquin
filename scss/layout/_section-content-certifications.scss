@@ -18,20 +18,19 @@
     // Grid
     .section__grid {
         display: grid;
-        @include rem( row-gap, 12px );
+        @include rem( row-gap, spacing(4) );
         // Heading
         .section__heading {
             @include font-size( 'headline' );
-            @include rem((
-                margin-bottom: spacing(3),
-                max-width: 900px 
-            ));
-            margin: 0 auto;
+            @include rem( max-width, 900px );
+            margin: 0 auto,
         }
         // Content
         .section__content {
-            @include rem( max-width, 640px );
-            margin: 0 auto;
+            @include rem((
+                margin: 0 auto spacing(3),
+                max-width: 640px 
+            ));
             // Strip margin from final <p>
             p:last-child {
                 margin: 0;

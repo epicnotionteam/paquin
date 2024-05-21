@@ -202,9 +202,7 @@
             .site-navigation {
                 opacity: 0;
             }
-        }
-        &.site-header-nav--open {
-            .site-navigation {
+            &.site-header-nav--open .site-navigation {
                 opacity: 1 !important;
             }
         }

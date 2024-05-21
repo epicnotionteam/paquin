@@ -99,7 +99,7 @@
     will-change: transform;
     // Item container
     .item {
-        @include rem( padding, 0 spacing(3) );
+        @include rem(padding, 0 spacing(3));
         flex: 0 0 auto;
         white-space: nowrap;
         display: inline-block;
@@ -115,7 +115,7 @@
 }
 
 // Adjust @medium breakpoint
-@include mq( $from: medium ) {
+@include mq($from: medium) {
     // Component container
     .feed--certification {
         position: static;

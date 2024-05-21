@@ -2133,11 +2133,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .section--hero-home .container--content .section__wrap--content .section__heading {
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 40px;
-  letter-spacing: 0.24px;
-  letter-spacing: 0.024rem;
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 46px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
@@ -2228,11 +2228,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   z-index: 1;
 }
 .section--hero-inline .container--content .section__heading {
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 40px;
-  letter-spacing: 0.24px;
-  letter-spacing: 0.024rem;
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 46px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
   margin: 0;
 }
 @media screen and (min-width: 1024px) {

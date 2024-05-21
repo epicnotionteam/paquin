@@ -34,16 +34,10 @@
                 margin: 0;
             }
         }
-        // // Container [CTA]
-        // .container--cta {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     // Button(s)
-        //     .button--base {
-        //         @include rem( margin-top, spacing(3) );
-        //         flex: 1 1 100%;
-        //     }
-        // }
+         // Container [Feed]
+        .container--feed {
+            overflow: hidden;
+        }
     }
 }
     

@@ -111,6 +111,8 @@
         "content_block_AtVi3y": {
           "type": "content-block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "image_type": "logo",
             "heading": "Paquin Sensors",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
@@ -118,6 +120,8 @@
         "content_block_LVEVAK": {
           "type": "content-block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "image_type": "logo",
             "heading": "Global Intex",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
@@ -125,6 +129,8 @@
         "content_block_p9Ei6p": {
           "type": "content-block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "image_type": "logo",
             "heading": "Excell Manufacturing",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
@@ -132,6 +138,8 @@
         "content_block_LtUemM": {
           "type": "content-block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "image_type": "logo",
             "heading": "Paquin Global",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }

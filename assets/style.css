@@ -1712,9 +1712,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .site-header.site-header-sticky--scrolled .site-navigation {
     opacity: 0;
   }
-  .site-header.site-header-sticky--scrolled.site-header-nav--open .site-navigation {
-    opacity: 1 !important;
-  }
 }
 .section--carousel-content-media {
   padding-bottom: 72px;

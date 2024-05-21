@@ -5,7 +5,7 @@
       "disabled": true,
       "settings": {
         "title": "Search",
-        "text": "<p>Use this section to help customers find the products they're looking for.</p>",
+        "text": "<p>Use this section to help customers find the products they're looking for.<\/p>",
         "placeholder": "What are you looking for?",
         "filter_search_by": "disabled",
         "enable_live_search": true,
@@ -23,21 +23,21 @@
           "type": "trust_signal",
           "settings": {
             "heading": "100% Product Quality Guarantee",
-            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.</p>"
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
           }
         },
         "trust_signal_Lkj6zP": {
           "type": "trust_signal",
           "settings": {
             "heading": "100% Product Quality Guarantee",
-            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.</p>"
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
           }
         },
         "trust_signal_KB8VLe": {
           "type": "trust_signal",
           "settings": {
             "heading": "100% Product Quality Guarantee",
-            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.</p>"
+            "content": "<p>We're dedicated to excellence in every product, proudly offering a 100% quality guarantee, lorem ipsum dolor sit amet.<\/p>"
           }
         }
       },
@@ -48,12 +48,12 @@
       ],
       "settings": {
         "heading": "Parts for the World's Most Important Projects",
-        "content": "<p>Paquin offers a complete sensor-based instrumentation portfolio including fully packaged solutions.  </p>",
+        "content": "<p>Paquin offers a complete sensor-based instrumentation portfolio including fully packaged solutions.  <\/p>",
         "cta_primary": "Contact Our Team",
-        "cta_primary_url": "shopify://pages/contact",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary": "Shop For Parts",
         "cta_secondary_url": "#test",
-        "image": "shopify://shop_images/asset__placeholder--4-3.png"
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
       }
     },
     "content_introduction_XyfLT8": {
@@ -61,9 +61,9 @@
       "settings": {
         "heading": "Superior Quality, Innovation and Customer Service Since 1949",
         "heading_size": "text--headline",
-        "content": "<p>A solutions-oriented manufacturing and distribution hybrid engineering partner.</p>",
+        "content": "<p>A solutions-oriented manufacturing and distribution hybrid engineering partner.<\/p>",
         "link_text": "Meet The Paquin Company",
-        "link_url": "shopify://pages/about",
+        "link_url": "shopify:\/\/pages\/about",
         "link_type": "button",
         "theme": "base"
       }
@@ -77,11 +77,11 @@
             "subheading": "Get The Right Part For Your Project",
             "heading": "We Scale With You, Providing Both Custom and Stock Parts",
             "heading_size": "h2",
-            "content": "<p>Paquin's sensor-based product portfolio is designed to provide solutions which are outside of the norm. We do this by matching the right product technology to each application requirement. <br/><br/>This can only be achieved by putting the goals of our customers first and rejecting a \"one size fits all\" business model. From fresh water to hazardous chemicals, and from controlled climates to the harshest on Earth, Paquin produces a wide selection within all our product categories.</p>",
+            "content": "<p>Paquin's sensor-based product portfolio is designed to provide solutions which are outside of the norm. We do this by matching the right product technology to each application requirement. <br\/><br\/>This can only be achieved by putting the goals of our customers first and rejecting a \"one size fits all\" business model. From fresh water to hazardous chemicals, and from controlled climates to the harshest on Earth, Paquin produces a wide selection within all our product categories.<\/p>",
             "link_text": "Learn more",
             "link_url": "#test",
-            "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
-            "image": "shopify://shop_images/asset__placeholder--4-3.png"
+            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
           }
         }
       },
@@ -100,28 +100,28 @@
           "type": "content-block",
           "settings": {
             "heading": "Paquin Sensors",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.</p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
         },
         "content_block_LVEVAK": {
           "type": "content-block",
           "settings": {
             "heading": "Global Intex",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.</p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
         },
         "content_block_p9Ei6p": {
           "type": "content-block",
           "settings": {
             "heading": "Excell Manufacturing",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.</p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
         },
         "content_block_LtUemM": {
           "type": "content-block",
           "settings": {
             "heading": "Paquin Global",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.</p>"
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>"
           }
         }
       },
@@ -142,9 +142,45 @@
     },
     "content_certifications_aBcDeF": {
       "type": "home-content-certifications",
+      "blocks": {
+        "certification_qeBjyD": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "title": "Certification Title"
+          }
+        },
+        "certification_bnzreg": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "title": "Certification Title"
+          }
+        },
+        "certification_GgYw4P": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "title": "Certification Title"
+          }
+        },
+        "certification_JEtiL7": {
+          "type": "certification",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "title": "Certification Title"
+          }
+        }
+      },
+      "block_order": [
+        "certification_qeBjyD",
+        "certification_bnzreg",
+        "certification_GgYw4P",
+        "certification_JEtiL7"
+      ],
       "settings": {
-        "heading": "Our Certifications",
-        "content": "<p>We are proud to hold certifications from industry-leading organizations, demonstrating our commitment to quality, safety, and excellence.</p>"
+        "heading": "Certified Excellence",
+        "content": "<p>Paquin invests heavily into global certifications and approvals.<\/p>"
       }
     },
     "feed_collection_exVNWe": {
@@ -190,12 +226,12 @@
       "type": "hero-inline",
       "settings": {
         "heading": "Engineering Your Vision: Custom Parts Built to Your Exact Requirements",
-        "content": "<p>The design, construction and delivery of industry unique control equipment is our passion.</p>",
+        "content": "<p>The design, construction and delivery of industry unique control equipment is our passion.<\/p>",
         "cta_primary_text": "Contact Our Team",
-        "cta_primary_url": "shopify://pages/contact",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary_text": "",
         "cta_secondary_url": "",
-        "image": "shopify://shop_images/asset__placeholder--4-3.png"
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
       }
     },
     "feed_post_CzipWa": {
@@ -211,10 +247,10 @@
         "heading_small": "Careers at The Paquin Company",
         "subheading": "Where Engineering Talent Thrives",
         "heading_large": "Join Our Team and Help Shape the Future of Engineering",
-        "content": "<p>Join our team and be part of an innovative engineering journey. At Paquin, we value creativity, precision, and a passion for problem-solving, offering roles that challenge and advance your career in a dynamic environment.</p>",
+        "content": "<p>Join our team and be part of an innovative engineering journey. At Paquin, we value creativity, precision, and a passion for problem-solving, offering roles that challenge and advance your career in a dynamic environment.<\/p>",
         "link_text": "Explore career opportunities",
-        "link_url": "shopify://pages/careers",
-        "image": "shopify://shop_images/asset__placeholder--4-3.png",
+        "link_url": "shopify:\/\/pages\/careers",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
         "theme": "dark"
       }
     }

@@ -95,9 +95,11 @@
     // Component container
     .feed--certification {
         @include rem( column-gap, spacing(7) );
-        display: flex;
+        display: flex !important;
         // Item container
         .item {
+            width: auto !important;
+            height: auto !important;
             // Image
             .item_image {
                 @include rem( max-height, 56px );

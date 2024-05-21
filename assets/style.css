@@ -2936,7 +2936,11 @@ hr,
   .feed--certification {
     column-gap: 48px;
     column-gap: 4.8rem;
-    display: flex;
+    display: flex !important;
+  }
+  .feed--certification .item {
+    width: auto !important;
+    height: auto !important;
   }
   .feed--certification .item .item_image {
     max-height: 56px;

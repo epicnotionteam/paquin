@@ -80,9 +80,9 @@
         function initTicker() {
             const feed = document.querySelector('.feed--certification');
             if (!feed) return;
-            
+    
             const items = Array.from(feed.children);
-            
+    
             // Clone the items for a seamless loop
             items.forEach(item => {
                 const clone = item.cloneNode(true);
@@ -90,15 +90,19 @@
             });
     
             let position = 0;
+            const speed = 1;  // Adjust the speed as needed
     
             function moveTicker() {
-                position -= 1;
-                if (position <= -items[0].offsetWidth) {
+                position -= speed;
+                const firstItemWidth = feed.firstElementChild.offsetWidth;
+                
+                if (position <= -firstItemWidth) {
                     // Move the first item to the end
                     feed.appendChild(feed.firstElementChild);
-                    // Reset the position to show the next item smoothly
-                    position = 0;
+                    // Adjust position to prevent jumpiness
+                    position += firstItemWidth;
                 }
+    
                 feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
             }
@@ -118,7 +122,7 @@
             }
         });
     });
-</script>
+    </script>
 
 
 {% schema %}

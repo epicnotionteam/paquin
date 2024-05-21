@@ -108,7 +108,8 @@
 
     {% comment %} Carousel [Glide] {% endcomment %}
 	{% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article" | split: "," %}
-	{% unless template.name == blank or excluded_templates contains template.name %}
+	{% assign current_template = template.name %}
+	{% unless current_template == blank or excluded_templates contains current_template %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>

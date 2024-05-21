@@ -12,9 +12,9 @@
 
 {% comment %} Determine link element type based on link type {% endcomment %}
 {% if section.settings.link_type == 'link' %}
-    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-forward' %}
-  {% else %}
     {% assign section_link_element = 'link--icon-after link--icon-arrow-forward' %}
+  {% else %}
+    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-forward' %}
 {% endif %}
 
 {% comment %} Output section {% endcomment %}

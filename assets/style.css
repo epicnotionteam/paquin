@@ -2825,6 +2825,9 @@ hr,
   margin-bottom: 1.2rem;
   display: block;
 }
+.feed--block .item .item__heading {
+  margin: 0;
+}
 .feed--block .item .item__content {
   font-size: 15px;
   font-size: 1.5rem;

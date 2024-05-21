@@ -35,6 +35,8 @@
                     {% assign block_image_type = block.settings.image_type %}
                     {% assign block_heading    = block.settings.heading %}
                     {% assign block_content    = block.settings.content %}
+                    {% assign block_link_text  = block.settings.link_text %}
+                    {% assign block_link_url   = block.settings.link_url %}
                     {% comment %} Output item {% endcomment %}
                     <div class="item">
                         {% comment %} Image {% endcomment %}
@@ -52,6 +54,10 @@
                         {% comment %} Content {% endcomment %}
                         {% if block_content != blank %}
                             <div class="item__content">{{ block_content | richtext }}</div>
+                        {% endif %}
+                        {% comment %} Link {% endcomment %}
+                        {% if block_link_text != blank and block_link_url != blank %}
+                            <a href="{{ block_link_url }}" class="item__link link--icon-after link--icon-arrow-forward">{{ block_link_text }}</a>
                         {% endif %}
                     </div>
                 {% endfor %}
@@ -180,6 +186,18 @@
                     "id": "content",
                     "label": "Content",
                     "default": "<p>Content</p>"
+                },
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text",
+                    "default": "Link text",
+                    "info": "Leave empty if no link is required"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link URL"
                 }
             ]
         }

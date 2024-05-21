@@ -15,7 +15,7 @@
     margin: 0 auto;
     opacity: 1;
     padding: 0;
-    transition: opacity 0.16s ease-out;
+    // transition: opacity 0.16s ease-out;
     & > .navmenu {
         @include rem( transform, translateX( -12px ) );
         margin: 0;

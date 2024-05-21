@@ -1709,6 +1709,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     width: 24px;
     width: 2.4rem;
   }
+  .site-header.site-header-sticky--scrolled .site-navigation {
+    opacity: 0;
+  }
 }
 .section--carousel-content-media {
   padding-bottom: 72px;
@@ -3638,7 +3641,6 @@ ul.list--link-arrow li::before {
   margin: 0 auto;
   opacity: 1;
   padding: 0;
-  transition: opacity 0.16s ease-out;
 }
 .site-navigation > .navmenu {
   transform: translateX(-12px);

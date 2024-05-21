@@ -1792,6 +1792,38 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-top: 9.6rem;
   text-align: center;
 }
+.section--content-certifications .section__grid {
+  display: grid;
+  row-gap: 12px;
+  row-gap: 1.2rem;
+}
+.section--content-certifications .section__grid .section__heading {
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 46px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
+  max-width: 900px;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .section--content-certifications .section__grid .section__heading {
+    font-size: 64px;
+    font-size: 6.4rem;
+    line-height: 72px;
+    letter-spacing: 0.56px;
+    letter-spacing: 0.056rem;
+  }
+}
+.section--content-certifications .section__grid .section__content {
+  max-width: 640px;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.section--content-certifications .section__grid .section__content p:last-child {
+  margin: 0;
+}
 
 @media (min-width: 64em) {
   .section--content-certifications {

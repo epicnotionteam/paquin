@@ -1537,7 +1537,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: calc(100% + 24px);
   width: calc(100% + 24px);
   align-items: center;
-  background-color: #212224;
   display: grid;
   grid-template-columns: max-content max-content 1fr;
 }
@@ -1550,7 +1549,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .site-header .site-header-main .site-header-main-content {
   padding: 4px 0;
   padding: 0.4rem 0;
-  background: transparent;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content;

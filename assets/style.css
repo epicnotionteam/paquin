@@ -1828,6 +1828,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-certifications .section__grid .container--feed {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 @media (min-width: 64em) {
@@ -2944,8 +2945,6 @@ hr,
   justify-content: flex-start;
   align-items: center;
   gap: 0;
-  position: absolute;
-  width: 100%;
   will-change: transform;
 }
 .feed--certification .item {
@@ -2953,13 +2952,6 @@ hr,
   padding-left: 30px;
   white-space: nowrap;
   display: inline-block;
-}
-.feed--certification .item .item__image {
-  max-height: 56px;
-  max-height: 5.6rem;
-  max-width: 128px;
-  max-width: 12.8rem;
-  display: block;
 }
 
 @media (min-width: 64em) {
@@ -2969,12 +2961,6 @@ hr,
     justify-content: space-between;
     gap: 16px;
     width: auto;
-  }
-  .feed--certification .item .item__image {
-    max-height: 56px;
-    max-height: 5.6rem;
-    max-width: 128px;
-    max-width: 12.8rem;
   }
 }
 .feed--collection {

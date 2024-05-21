@@ -77,72 +77,38 @@
 {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        function getWidthSum(parent, childSelector) {
-            let width = 0;
-            parent.querySelectorAll(childSelector).forEach(function(child) {
-                width += child.offsetWidth;
-            });
-            return width;
-        }
-    
-        function createBatch(feed, items, containerWidth) {
-            const batch = document.createElement('div');
-            batch.classList.add('batch');
-            batch.style.left = `${containerWidth}px`;
-    
-            items.forEach(item => {
-                batch.appendChild(item.cloneNode(true));
-            });
-    
-            feed.appendChild(batch);
-            return {
-                element: batch,
-                width: getWidthSum(batch, '.item'),
-                left: containerWidth,
-                threshold: -(getWidthSum(batch, '.item') - containerWidth)
-            };
-        }
-    
         function initTicker() {
-            const container = document.querySelector('.container--feed');
             const feed = document.querySelector('.feed--certification');
             if (!feed) return;
-    
             const items = Array.from(feed.children);
-            const containerWidth = container.offsetWidth;
-            const batches = [];
-    
-            batches.push(createBatch(feed, items, containerWidth));
-    
+            let position = 0;
+            const speed = 1; // Adjust the speed as needed
             function moveTicker() {
-                for (let i = 0; i < batches.length; i++) {
-                    batches[i].left -= 1;
-                    if (batches[i].left < batches[i].threshold && batches.length === 1) {
-                        batches.push(createBatch(feed, items, containerWidth));
-                    }
-                    if (batches[i].left <= -batches[i].width) {
-                        batches[i].element.remove();
-                        batches.shift();
-                    }
-                    batches[i].element.style.left = `${batches[i].left}px`;
-                }
+                position -= speed;
+                // Calculate the total width of all items
+                const totalWidth = items.reduce((acc, item) => acc + item.offsetWidth, 0);
+                // Move the first item to the end if it's out of view
+                if (Math.abs(position) >= items[0].offsetWidth) {
+                    position += items[0].offsetWidth;
+                    feed.appendChild(feed.firstElementChild);
+                }   
+                feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
             }
-    
             moveTicker();
         }
-    
+        // Initialize the ticker if the viewport is smaller than 1024px
         if (window.innerWidth < 1024) {
             initTicker();
-        }
-    
+        }    
+        // Reinitialize the ticker on window resize
         window.addEventListener('resize', function() {
             if (window.innerWidth < 1024) {
                 initTicker();
             }
         });
     });
-    </script>
+</script>
 
 
 {% schema %}

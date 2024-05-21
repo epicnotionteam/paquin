@@ -2067,22 +2067,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
-  .section--feed-team {
+  .section--feed-post {
     padding-bottom: 96px;
     padding-bottom: 9.6rem;
   }
-  .section--feed-team .section__grid {
-    column-gap: 24px;
-    column-gap: 2.4rem;
+  .section--feed-post .section__grid {
     row-gap: 40px;
     row-gap: 4rem;
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }
-  .section--feed-team .section__grid .container--heading-small {
+  .section--feed-post .section__grid .container--heading-small {
     grid-column: 1/span 12;
   }
-  .section--feed-team .section__grid .container--feed {
+  .section--feed-post .section__grid .container--feed {
     grid-column: 1/span 12;
   }
 }

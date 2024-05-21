@@ -2819,10 +2819,12 @@ hr,
 .feed--block .item {
   row-gap: 12px;
   row-gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 .feed--block .item .item__number {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
   display: block;
 }
 .feed--block .item .item__heading {

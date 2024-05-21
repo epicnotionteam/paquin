@@ -15,9 +15,11 @@
     // Item container
     .item {
         @include rem( row-gap, 12px );
+        display: flex;
+        flex-direction: column;
         // Number
         .item__number {
-            @include rem( margin-bottom, 12px );
+            @include rem( margin-bottom, spacing(1) );
             @extend %h5;
             display: block;
         }

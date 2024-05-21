@@ -92,17 +92,17 @@
 
 // Component container
 .feed--certification {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
+    display: flex;
     gap: 0;
+    justify-content: flex-start;
     will-change: transform;
     // Item container
     .item {
-        @include rem(padding, 0 spacing(3));
+        @include rem( padding, 0 spacing(3) );
+        display: inline-block;
         flex: 0 0 auto;
         white-space: nowrap;
-        display: inline-block;
         // Image
         .item__image {
             @include rem((
@@ -114,13 +114,13 @@
     }
 }
 
-// Adjust @medium breakpoint
-@include mq($from: medium) {
+// Adjust @custom breakpoint
+@include mq( $from: 640px ) {
     // Component container
     .feed--certification {
         flex-wrap: wrap;
-        justify-content: space-between;
         gap: 16px;
+        justify-content: space-between;
         width: auto;
     }
 }

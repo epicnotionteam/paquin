@@ -75,13 +75,13 @@
         }
         // Check viewport width and initialize/stop ticker
         function checkViewport() {
-            if (window.innerWidth < 1024) {
+            if (window.innerWidth < 640) {
                 initTicker();
             } else {
                 stopTicker();
             }
         }
-        // Initialize ticker if viewport is <1024px
+        // Initialize ticker if viewport is <640px
         checkViewport();
         // Reinitialize/stop ticker on window resize
         window.addEventListener('resize', checkViewport);

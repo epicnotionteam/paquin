@@ -2941,18 +2941,18 @@ hr,
   }
 }
 .feed--certification {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
+  display: flex;
   gap: 0;
+  justify-content: flex-start;
   will-change: transform;
 }
 .feed--certification .item {
   padding: 0 16px;
   padding: 0 1.6rem;
+  display: inline-block;
   flex: 0 0 auto;
   white-space: nowrap;
-  display: inline-block;
 }
 .feed--certification .item .item__image {
   max-height: 56px;
@@ -2962,11 +2962,11 @@ hr,
   display: block;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .feed--certification {
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 16px;
+    justify-content: space-between;
     width: auto;
   }
 }

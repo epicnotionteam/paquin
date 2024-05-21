@@ -2977,6 +2977,13 @@ hr,
     padding: 0;
   }
 }
+@media (min-width: 64em) {
+  .feed--certification {
+    gap: 40px;
+    gap: 4rem;
+    justify-content: center;
+  }
+}
 .feed--collection {
   row-gap: 32px;
   row-gap: 3.2rem;

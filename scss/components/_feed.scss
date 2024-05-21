@@ -129,6 +129,15 @@
     }
 }
 
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--certification {
+        @include rem( gap, spacing(6) );
+        justify-content: center;
+    }
+}
+
 
 // Feed [Collection]
 // --------------------------------------------------

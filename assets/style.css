@@ -2953,6 +2953,13 @@ hr,
   white-space: nowrap;
   display: inline-block;
 }
+.feed--certification .item .item__image {
+  max-height: 56px;
+  max-height: 5.6rem;
+  max-width: 128px;
+  max-width: 12.8rem;
+  display: block;
+}
 
 @media (min-width: 64em) {
   .feed--certification {

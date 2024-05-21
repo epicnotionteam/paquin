@@ -103,6 +103,14 @@
         padding-left: 30px;
         white-space: nowrap;
         display: inline-block;
+        // Image
+        .item__image {
+            @include rem((
+                max-height: 56px,
+                max-width: 128px
+            ));
+            display: block;
+        }
     }
 }
 

@@ -80,28 +80,35 @@
         function initTicker() {
             const feed = document.querySelector('.feed--certification');
             if (!feed) return;
-            const items = Array.from(feed.children);
+    
             let position = 0;
             const speed = 0.4; // Adjust the speed as needed
+    
             function moveTicker() {
                 position -= speed;
-                const firstItemWidth = items[0].offsetWidth;
+                const firstItem = feed.firstElementChild;
+                const firstItemWidth = firstItem.offsetWidth;
+    
                 // Move the first item to the end if it's out of view
                 if (Math.abs(position) >= firstItemWidth) {
                     position += firstItemWidth;
-                    feed.appendChild(feed.firstElementChild);
+                    feed.appendChild(firstItem);
                     // Adjust position to prevent jumpiness
                     feed.style.transform = `translateX(${position}px)`;
                 }
+    
                 feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
             }
+    
             moveTicker();
         }
+    
         // Initialize the ticker if the viewport is smaller than 1024px
         if (window.innerWidth < 1024) {
             initTicker();
         }
+    
         // Reinitialize the ticker on window resize
         window.addEventListener('resize', function() {
             if (window.innerWidth < 1024) {

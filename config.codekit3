@@ -1504,6 +1504,14 @@
       "oAP" : "\/sections\/hero-internal.liquid",
       "oF" : 0
     },
+    "\/sections\/home-content-certifications.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/home-content-certifications.liquid",
+      "oF" : 0
+    },
     "\/sections\/login.liquid" : {
       "cB" : 0,
       "ft" : 8192,

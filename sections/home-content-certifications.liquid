@@ -1,0 +1,83 @@
+{% comment %}
+// Output Content [Certifications] component
+// Built specifically for homepage template
+{% endcomment %}
+
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading = section.settings.heading %}
+{% assign section_content = section.settings.content %}
+{% assign section_blocks  = section.settings.link_url %}
+
+{% comment %} Output section {% endcomment %}
+<section class="section--content-certifications wrap--container theme--base">
+	<div class="section__grid">
+		{% comment %} Heading {% endcomment %}
+		{% if section_heading != blank %}
+			<h2 class="section__heading {{ section_heading_size }}">{{ section_heading }}</h2>
+		{% endif %}
+		{% comment %} Content {% endcomment %}
+		{% if section_content != blank %}
+			<div class="section__content">{{ section_content | richtext }}</div>
+		{% endif %}
+		{% comment %} Container [Feed] {% endcomment %}
+		<div class="container--feed">
+			{% comment %} Loop over blocks, output logos in carousel, then convert to grid at desktop {% endcomment %}
+            <div class="glide carousel--certification" data-carousel>
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides feed--certication">
+                        {% for block in section_blocks %}
+                            {% comment %} Assign block data to vars {% endcomment %}
+                            {% assign block_image = block.settings.image %}
+                            {% assign block_title = block.settings.title %}
+                            {% comment %} Output item {% endcomment %}
+                            {% if block_image != blank %}
+                            <li class="glide__slide item">
+                                <img src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+    "name": "Certifications",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Content</p>"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "certification",
+            "name": "Certification",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "logo",
+                    "label": "Logo"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Certification Title"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

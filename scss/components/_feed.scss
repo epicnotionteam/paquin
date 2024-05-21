@@ -317,6 +317,7 @@
             .item__heading {
                 @include font-size( 'small' );
                 @include rem( margin-bottom, spacing(1) );
+                color: white;
                 font-weight: font-weight( 'bold' );
             }
             // Content

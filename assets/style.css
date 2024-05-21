@@ -3125,6 +3125,7 @@ hr,
   letter-spacing: -0.008rem;
   margin-bottom: 4px;
   margin-bottom: 0.4rem;
+  color: white;
   font-weight: 600;
 }
 .feed--trust-signal .item .container--content .item__content {

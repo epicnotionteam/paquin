@@ -3112,6 +3112,28 @@ hr,
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   display: grid;
 }
+.feed--trust-signal .item .container--content .item__heading {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  font-weight: 600;
+  margin: 0;
+}
+.feed--trust-signal .item .container--content .item__content {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+.feed--trust-signal .item .container--content .item__content p:last-child {
+  margin: 0;
+}
+.feed--trust-signal.glide-slides {
+  display: grid !important;
+}
 
 @media (min-width: 77.5em) {
   .feed--trust-signal {

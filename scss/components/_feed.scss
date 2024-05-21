@@ -317,19 +317,24 @@
         .container--content {
             // Heading
             .item__heading {
-                @include font-size( 'small ');
+                @include font-size( 'small' );
                 font-weight: font-weight( 'bold' );
                 margin: 0;
             }
             // Content
             .item__content {
-                @include font-size( 'small ');
+                @include font-size( 'small' );
                 // Strip margin from final <p>
                 p:last-child {
                     margin: 0;
                 }
             }
         }
+    }
+    // Carousel instance
+    // Container
+    &.glide-slides {
+        display: grid !important;
     }
 }
 

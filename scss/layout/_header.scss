@@ -19,7 +19,7 @@
             width: calc( 100% + 24px )
         ));
         align-items: center;
-        // background-color: color( 'steel', '1' );
+        background: transparent;
         display: grid;
         grid-template-columns: max-content max-content 1fr;
         // Strip pseudo elements

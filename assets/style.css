@@ -1537,6 +1537,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: calc(100% + 24px);
   width: calc(100% + 24px);
   align-items: center;
+  background: transparent;
   display: grid;
   grid-template-columns: max-content max-content 1fr;
 }

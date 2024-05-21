@@ -21,12 +21,12 @@
         @include rem( row-gap, 12px );
         // Heading
         .section__heading {
-            @include rem( max-width, 800px );
+            @include rem( max-width, 900px );
             margin: 0 auto;
         }
         // Content
         .section__content {
-            @include rem( max-width, 512px );
+            @include rem( max-width, 640px );
             margin: 0 auto;
             // Strip margin from final <p>
             p:last-child {

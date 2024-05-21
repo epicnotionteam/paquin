@@ -1798,13 +1798,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   row-gap: 1.2rem;
 }
 .section--content-introduction .section__grid .section__heading {
-  max-width: 800px;
-  max-width: 80rem;
+  max-width: 900px;
+  max-width: 90rem;
   margin: 0 auto;
 }
 .section--content-introduction .section__grid .section__content {
-  max-width: 512px;
-  max-width: 51.2rem;
+  max-width: 640px;
+  max-width: 64rem;
   margin: 0 auto;
 }
 .section--content-introduction .section__grid .section__content p:last-child {

@@ -212,6 +212,20 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
             "title": "Certification Title"
           }
+        },
+        "certification_9LVLR7": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "title": "Certification Title"
+          }
+        },
+        "certification_36ihUa": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+            "title": "Certification Title"
+          }
         }
       },
       "block_order": [
@@ -220,7 +234,9 @@
         "certification_eqza7A",
         "certification_9UQeRX",
         "certification_tb7pUe",
-        "certification_eCHL6W"
+        "certification_eCHL6W",
+        "certification_9LVLR7",
+        "certification_36ihUa"
       ],
       "settings": {
         "heading": "Certified Excellence",

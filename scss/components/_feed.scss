@@ -338,8 +338,8 @@
     }
 }
 
-// Adjust @large breakpoint
-@include mq( $from: 1024px ) {
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
     // Component container
     .feed--trust-signal {
         @include rem( column-gap, spacing(4) );

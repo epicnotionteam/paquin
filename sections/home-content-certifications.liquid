@@ -77,45 +77,65 @@
 {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        function getWidthSum(parent, childSelector) {
+            let width = 0;
+            parent.querySelectorAll(childSelector).forEach(function(child) {
+                width += child.offsetWidth;
+            });
+            return width;
+        }
+    
+        function createBatch(feed, items, containerWidth) {
+            const batch = document.createElement('div');
+            batch.classList.add('batch');
+            batch.style.left = `${containerWidth}px`;
+    
+            items.forEach(item => {
+                batch.appendChild(item.cloneNode(true));
+            });
+    
+            feed.appendChild(batch);
+            return {
+                element: batch,
+                width: getWidthSum(batch, '.item'),
+                left: containerWidth,
+                threshold: -(getWidthSum(batch, '.item') - containerWidth)
+            };
+        }
+    
         function initTicker() {
+            const container = document.querySelector('.container--feed');
             const feed = document.querySelector('.feed--certification');
             if (!feed) return;
     
             const items = Array.from(feed.children);
-            const itemWidth = items[0].offsetWidth;
-            
-            // Clone the items for a seamless loop
-            items.forEach(item => {
-                const clone = item.cloneNode(true);
-                feed.appendChild(clone);
-            });
+            const containerWidth = container.offsetWidth;
+            const batches = [];
     
-            let position = 0;
-            const speed = 1; // Adjust the speed as needed
+            batches.push(createBatch(feed, items, containerWidth));
     
             function moveTicker() {
-                position -= speed;
-                
-                if (position <= -itemWidth) {
-                    // Move the first item to the end
-                    feed.appendChild(feed.firstElementChild);
-                    // Adjust position to prevent jumpiness
-                    position += itemWidth;
+                for (let i = 0; i < batches.length; i++) {
+                    batches[i].left -= 1;
+                    if (batches[i].left < batches[i].threshold && batches.length === 1) {
+                        batches.push(createBatch(feed, items, containerWidth));
+                    }
+                    if (batches[i].left <= -batches[i].width) {
+                        batches[i].element.remove();
+                        batches.shift();
+                    }
+                    batches[i].element.style.left = `${batches[i].left}px`;
                 }
-    
-                feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
             }
     
             moveTicker();
         }
     
-        // Initialize the ticker if the viewport is smaller than 1024px
         if (window.innerWidth < 1024) {
             initTicker();
         }
     
-        // Reinitialize the ticker on window resize
         window.addEventListener('resize', function() {
             if (window.innerWidth < 1024) {
                 initTicker();

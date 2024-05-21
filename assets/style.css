@@ -1827,6 +1827,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .section--content-certifications .section__grid .container--feed {
   overflow: hidden;
+  position: relative;
 }
 
 @media (min-width: 64em) {
@@ -2942,11 +2943,16 @@ hr,
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 32px;
-  animation: ticker 30s linear infinite;
+  gap: 0;
+  position: absolute;
+  width: 100%;
+  will-change: transform;
 }
 .feed--certification .item {
-  flex: 1 1 12%;
+  flex: 0 0 auto;
+  padding-left: 30px;
+  white-space: nowrap;
+  display: inline-block;
 }
 .feed--certification .item .item__image {
   max-height: 56px;
@@ -2958,31 +2964,17 @@ hr,
 
 @media (min-width: 64em) {
   .feed--certification {
-    column-gap: 48px;
-    column-gap: 4.8rem;
-    row-gap: 40px;
-    row-gap: 4rem;
-    display: flex !important;
+    position: static;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  .feed--certification .item {
-    width: auto !important;
-    height: auto !important;
+    justify-content: space-between;
+    gap: 16px;
+    width: auto;
   }
   .feed--certification .item .item__image {
     max-height: 56px;
     max-height: 5.6rem;
     max-width: 128px;
     max-width: 12.8rem;
-  }
-}
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
 .feed--collection {

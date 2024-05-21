@@ -2944,10 +2944,12 @@ hr,
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 32px;
+  gap: 0;
   will-change: transform;
 }
 .feed--certification .item {
+  padding: 0 16px;
+  padding: 0 1.6rem;
   flex: 0 0 auto;
   white-space: nowrap;
   display: inline-block;

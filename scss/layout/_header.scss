@@ -199,8 +199,10 @@
                     width: 24px 
                 ));
             }
-            .site-navigation {
-                opacity: 0;
+            &:not(.site-header-nav--open) {
+                .site-navigation {
+                    opacity: 0;
+                }
             }
         }
     }

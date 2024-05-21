@@ -1709,7 +1709,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     width: 24px;
     width: 2.4rem;
   }
-  .site-header.site-header-sticky--scrolled .site-navigation {
+  .site-header.site-header-sticky--scrolled:not(.site-header-nav--open) .site-navigation {
     opacity: 0;
   }
 }

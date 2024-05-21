@@ -39,82 +39,52 @@
 	</div>
 </section>
 
-{% comment %} Conditional carousel initialization {% endcomment %}
-{% comment %}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Assign carousel instance to var
-        let carouselCertifications;
-        // Initialize or destroy carousel based on window width
-        function initializeCarousel() {
-            if (window.innerWidth < 1024) {
-                // Initialize carousel if window width is <1024px
-                carouselCertifications = new Glide('.carousel--certification', {
-                    type: 'carousel',
-                    autoplay: 3200,
-                    perView: 3,
-                    animationDuration: 800,
-                    gap: 24,
-                });
-                // Mount carousel instance
-                carouselCertifications.mount(); 
-            } else {
-                // Destroy carousel if window width is >1024px
-                if (carouselCertifications) {
-                    carouselCertifications.destroy();
-                }
-            }
-        }
-        // Call function initially
-        initializeCarousel(); 
-        // Event listener for window resize
-        window.addEventListener('resize', function () {
-            // Reinitialize or destroy carousel on window resize
-            initializeCarousel();
-        });
-    });
-</script>
-{% endcomment %}
+{% comment %} Logo ticker functionality {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Initialize ticker function
         function initTicker() {
             const feed = document.querySelector('.feed--certification');
             if (!feed) return;
-    
             let position = 0;
-            const speed = 0.4; // Adjust the speed as needed
-    
+            const speed = 0.4;
+            // Move ticker
             function moveTicker() {
                 position -= speed;
                 const firstItem = feed.firstElementChild;
                 const firstItemWidth = firstItem.offsetWidth;
-    
-                // Move the first item to the end if it's out of view
+                // Move first item to the end on viewport exit
                 if (Math.abs(position) >= firstItemWidth) {
                     position += firstItemWidth;
                     feed.appendChild(firstItem);
-                    // Adjust position to prevent jumpiness
+                    // Adjust position to prevent jumping
                     feed.style.transform = `translateX(${position}px)`;
                 }
-    
                 feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
             }
-    
             moveTicker();
         }
-    
-        // Initialize the ticker if the viewport is smaller than 1024px
-        if (window.innerWidth < 1024) {
-            initTicker();
+        // Stop ticker
+        function stopTicker() {
+            const feed = document.querySelector('.feed--certification');
+            if (feed) {
+                // Reset the transform property
+                feed.style.transform = '';
+            }
         }
-    
-        // Reinitialize the ticker on window resize
-        window.addEventListener('resize', function() {
+        // Check viewport width and initialize/stop ticker
+        function checkViewport() {
             if (window.innerWidth < 1024) {
                 initTicker();
+            } else {
+                stopTicker();
             }
-        });
+        }
+        // Initialize ticker if viewport is <1024px
+        checkViewport();
+        // Reinitialize/stop ticker on window resize
+        window.addEventListener('resize', checkViewport);
     });
 </script>
 

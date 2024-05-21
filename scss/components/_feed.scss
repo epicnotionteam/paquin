@@ -97,14 +97,12 @@
     align-items: center;
     gap: 0;
     will-change: transform;
-
     // Item container
     .item {
         @include rem(padding, 0 spacing(3));
         flex: 0 0 auto;
         white-space: nowrap;
         display: inline-block;
-
         // Image
         .item__image {
             @include rem((
@@ -120,7 +118,6 @@
 @include mq($from: medium) {
     // Component container
     .feed--certification {
-        position: static;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 16px;

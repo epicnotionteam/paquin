@@ -56,6 +56,18 @@
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
       }
     },
+    "content_introduction_XyfLT8": {
+      "type": "content-introduction",
+      "settings": {
+        "heading": "Superior Quality, Innovation and Customer Service Since 1949",
+        "heading_size": "headline",
+        "content": "<p>A solutions-oriented manufacturing and distribution hybrid engineering partner.<\/p>",
+        "link_text": "Meet The Paquin Company",
+        "link_url": "shopify:\/\/pages\/about",
+        "link_type": "button",
+        "theme": "base"
+      }
+    },
     "carousel_content_media_mNDabb": {
       "type": "carousel-content-media",
       "blocks": {
@@ -203,6 +215,7 @@
   "order": [
     "dynamic_search",
     "hero_home_ewDHzj",
+    "content_introduction_XyfLT8",
     "carousel_content_media_mNDabb",
     "content_blocks_3NfM3m",
     "feed_collection_exVNWe",

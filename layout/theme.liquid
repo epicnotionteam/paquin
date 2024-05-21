@@ -115,6 +115,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
 	{% endunless %}
+	{% comment %} Component-specific functionality {% endcomment %}
+	<script src="{{ 'components.min.js' | asset_url }}" defer></script>
     {% comment %} Typography [Typekit] {% endcomment %}
     <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
     {% comment %} Icons [Google Material Symbols] {% endcomment %}

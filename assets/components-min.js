@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll('#site-main section[class*="theme--"]').forEach((function(e){var t=e.closest(".shopify-section"),s=Array.from(e.classList).find((e=>e.startsWith("theme--"))).replace("theme--","section-theme--");s&&t.classList.add(s)}))}));

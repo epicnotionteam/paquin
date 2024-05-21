@@ -30,11 +30,9 @@
                             {% assign block_image = block.settings.image %}
                             {% assign block_title = block.settings.title %}
                             {% comment %} Output item {% endcomment %}
-                            {% if block_image != blank %}
                             <li class="glide__slide item">
                                 <img src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
                             </li>
-                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

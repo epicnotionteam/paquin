@@ -77,26 +77,27 @@
 {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        if (window.innerWidth < 1024) {
+        function initTicker() {
             const feed = document.querySelector('.feed--certification');
+            if (!feed) return;
+            
             const items = Array.from(feed.children);
             
-            // Duplicate the items for a seamless loop
+            // Clone the items for a seamless loop
             items.forEach(item => {
                 const clone = item.cloneNode(true);
                 feed.appendChild(clone);
             });
     
-            // Ensure continuous scrolling
-            const firstItem = items[0];
-            const itemWidth = firstItem.offsetWidth;
             let position = 0;
     
             function moveTicker() {
                 position -= 1;
-                if (position <= -itemWidth) {
-                    position = 0;
+                if (position <= -items[0].offsetWidth) {
+                    // Move the first item to the end
                     feed.appendChild(feed.firstElementChild);
+                    // Reset the position to show the next item smoothly
+                    position = 0;
                 }
                 feed.style.transform = `translateX(${position}px)`;
                 requestAnimationFrame(moveTicker);
@@ -104,8 +105,20 @@
     
             moveTicker();
         }
+    
+        // Initialize the ticker if the viewport is smaller than 1024px
+        if (window.innerWidth < 1024) {
+            initTicker();
+        }
+    
+        // Reinitialize the ticker on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth < 1024) {
+                initTicker();
+            }
+        });
     });
-    </script>
+</script>
 
 
 {% schema %}

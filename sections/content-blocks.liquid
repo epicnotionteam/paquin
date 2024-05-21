@@ -31,10 +31,16 @@
             <div class="feed--block variant--col-{{ section_columns }}">
                 {% for block in section_blocks %}
                     {% comment %} Assign block data to vars {% endcomment %}
-                    {% assign block_heading = block.settings.heading %}
-                    {% assign block_content = block.settings.content %}
+                    {% assign block_image      = block.settings.image %}
+                    {% assign block_image_type = block.settings.image_type %}
+                    {% assign block_heading    = block.settings.heading %}
+                    {% assign block_content    = block.settings.content %}
                     {% comment %} Output item {% endcomment %}
                     <div class="item">
+                        {% comment %} Image {% endcomment %}
+                        {% if block_image != blank %}
+                            <img class="item__image variant--{{ block_image_type }}" src="{{ block_image | img_url: '256x' }}" alt="{{ block_heading }}">
+                        {% endif %}
                         {% comment %} Number {% endcomment %}
                         {% if section_block_numbering %}
                             <span class="item__number">_{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>

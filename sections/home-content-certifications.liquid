@@ -13,7 +13,7 @@
 	<div class="section__grid">
 		{% comment %} Heading {% endcomment %}
 		{% if section_heading != blank %}
-			<h2 class="section__heading {{ section_heading_size }}">{{ section_heading }}</h2>
+			<h2 class="section__heading">{{ section_heading }}</h2>
 		{% endif %}
 		{% comment %} Content {% endcomment %}
 		{% if section_content != blank %}
@@ -31,7 +31,7 @@
                             {% assign block_title = block.settings.title %}
                             {% comment %} Output item {% endcomment %}
                             <li class="glide__slide item">
-                                <img src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
+                                <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
                             </li>
                         {% endfor %}
                     </ul>

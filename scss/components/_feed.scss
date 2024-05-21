@@ -97,7 +97,12 @@
         @include rem( column-gap, spacing(7) );
         display: flex;
         // Item container
-        .item {}
+        .item {
+            // Image
+            .item_image {
+                @include rem( max-height, 56px );
+            }
+        }
     }
 }
 

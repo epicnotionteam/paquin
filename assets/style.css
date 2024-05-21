@@ -2938,6 +2938,10 @@ hr,
     column-gap: 4.8rem;
     display: flex;
   }
+  .feed--certification .item .item_image {
+    max-height: 56px;
+    max-height: 5.6rem;
+  }
 }
 .feed--collection {
   row-gap: 32px;

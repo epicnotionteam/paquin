@@ -23,6 +23,14 @@
         .section__heading {
             @include rem( max-width, 900px );
             margin: 0 auto;
+            // Style [Headline]
+            &.text--headline {
+                @include rem( margin-bottom, spacing(3) );
+            }
+            // Style [H1]
+            &.h1 {
+                @include rem( margin-bottom, spacing(2) );
+            }
         }
         // Content
         .section__content {

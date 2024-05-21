@@ -82,7 +82,8 @@
             if (!feed) return;
     
             const items = Array.from(feed.children);
-    
+            const itemWidth = items[0].offsetWidth;
+            
             // Clone the items for a seamless loop
             items.forEach(item => {
                 const clone = item.cloneNode(true);
@@ -90,17 +91,16 @@
             });
     
             let position = 0;
-            const speed = 1;  // Adjust the speed as needed
+            const speed = 1; // Adjust the speed as needed
     
             function moveTicker() {
                 position -= speed;
-                const firstItemWidth = feed.firstElementChild.offsetWidth;
                 
-                if (position <= -firstItemWidth) {
+                if (position <= -itemWidth) {
                     // Move the first item to the end
                     feed.appendChild(feed.firstElementChild);
                     // Adjust position to prevent jumpiness
-                    position += firstItemWidth;
+                    position += itemWidth;
                 }
     
                 feed.style.transform = `translateX(${position}px)`;

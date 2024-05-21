@@ -3131,7 +3131,7 @@ hr,
 .feed--trust-signal .item .container--content .item__content p:last-child {
   margin: 0;
 }
-.feed--trust-signal.glide-slides {
+.feed--trust-signal.glide__slides {
   display: grid !important;
 }
 

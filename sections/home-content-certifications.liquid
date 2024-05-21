@@ -22,22 +22,18 @@
 		{% comment %} Container [Feed] {% endcomment %}
 		<div class="container--feed">
 			{% comment %} Loop over blocks, output logos in carousel, then convert to grid at desktop {% endcomment %}
-            <div class="glide carousel--certification" data-carousel>
-                <div data-glide-el="track" class="glide__track">
-                    <ul class="glide__slides feed--certification">
-                        {% for block in section_blocks %}
-                            {% comment %} Assign block data to vars {% endcomment %}
-                            {% assign block_image = block.settings.image %}
-                            {% assign block_title = block.settings.title %}
-                            {% comment %} Output item {% endcomment %}
-                            {% if block_image != blank %}
-                                <li class="glide__slide item">
-                                    <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
+            <div class="feed--certification">
+                {% for block in section_blocks %}
+                    {% comment %} Assign block data to vars {% endcomment %}
+                    {% assign block_image = block.settings.image %}
+                    {% assign block_title = block.settings.title %}
+                    {% comment %} Output item {% endcomment %}
+                    {% if block_image != blank %}
+                        <div class="item">
+                            <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 		</div>
 	</div>

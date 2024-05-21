@@ -2161,7 +2161,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-home .container--content .section__wrap--content .container--cta a {
   flex: 1 1 100%;
 }
-.section--hero-home::before {
+.section--hero-home .section__overlay {
   background-color: rgba(16, 16, 16, 0.32);
   content: "";
   height: 100%;

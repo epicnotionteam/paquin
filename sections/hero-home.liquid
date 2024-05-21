@@ -46,7 +46,10 @@
                    {% for block in section_blocks %}
                         <li class="glide__slide item">
                             {% comment %} Container [Icon] {% endcomment %}
-                            <div class="container--icon"></div>
+                            {% assign icon_check_contained = 'icon__check--contained.svg' | asset_url %}
+                            <div class="container--icon">
+                                <img src="{{ icon_check_contained }}" alt="" width="16" height="16" />
+                            </div>
                             {% comment %} Container [Content] {% endcomment %}
                             <div class="container--content">
                                 {% comment %} Heading {% endcomment %}

@@ -312,11 +312,7 @@
         border-top: $border--dark;
         display: grid;
         // Container [Icon]
-        .container--icon {
-            @include icon( before, 'check_contained' ) {
-                color: color( 'action', '2' );
-            }
-        }
+        .container--icon {}
         // Container [Content]
         .container--content {
             // Heading

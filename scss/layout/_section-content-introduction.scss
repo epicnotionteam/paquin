@@ -34,18 +34,25 @@
             }
         }
         // Container [CTA]
-        // .container--cta {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     // Button(s)
-        //     a {
-        //         flex: 1 1 100%;
-        //     }
-        // }
+        .container--cta {
+            display: flex;
+            flex-wrap: wrap;
+            // Button(s)
+            .button--base {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
+
+// Adjust @small breakpoint
+@include mq( $from: small ) {
+    // Button(s)
+    .section--content-introduction .section__grid .container--cta .button--base {
+        flex: unset;
     }
 }
     
-
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Section container

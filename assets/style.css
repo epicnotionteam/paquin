@@ -1810,7 +1810,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-introduction .section__grid .section__content p:last-child {
   margin: 0;
 }
+.section--content-introduction .section__grid .container--cta {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section--content-introduction .section__grid .container--cta .button--base {
+  flex: 1 1 100%;
+}
 
+@media (min-width: 48em) {
+  .section--content-introduction .section__grid .container--cta .button--base {
+    flex: unset;
+  }
+}
 @media (min-width: 64em) {
   .section--content-introduction {
     padding-bottom: 128px;

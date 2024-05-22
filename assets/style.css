@@ -2365,8 +2365,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__heading.text--headline {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+}
+.section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__content {
+  margin-top: 4px;
+  margin-top: 0.4rem;
 }
 .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__content p:last-child {
   margin: 0;

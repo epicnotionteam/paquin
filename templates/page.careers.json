@@ -26,8 +26,9 @@
         "heading_size": "h1",
         "content": "<p>At Paquin we all feel right at home and work like a family,  our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
         "link_text": "Learn more about our benefits package",
-        "link_url": "#test",
+        "link_url": "#perks-and-benefits",
         "link_type": "link",
+        "link_icon": "down",
         "theme": "base"
       }
     },

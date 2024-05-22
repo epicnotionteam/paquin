@@ -1,0 +1,124 @@
+{% comment %}
+// Output Content [Offset, Resume Form] component
+// Built specifically for Careers template
+{% endcomment %}
+
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign section_heading_small = section.settings.heading_small %}
+{% assign section_heading_large = section.settings.heading_large %}
+{% assign section_heading_size  = section.settings.heading_size %}
+{% assign section_subheading    = section.settings.subheading %}
+{% assign section_content       = section.settings.content %}
+{% assign section_form          = section.settings.form %}
+{% assign section_theme         = section.settings.theme %}
+
+{% comment %} Output section {% endcomment %}
+<section class="section--content-offset-resume-form theme--{{ section_theme }} wrap--container">
+    <div class="section__grid wrap--max push--center">
+        {% comment %} Heading [Small] {% endcomment %}
+        {% if section_heading_small != blank %}
+            <div class="container--heading-small section__primary-heading">
+                <h2 class="section__heading--small">{{ section_heading_small }}</h2>
+            </div>
+        {% endif %}
+        {% comment %} Heading [Large] {% endcomment %}
+        {% if section_heading_large != blank %}
+            <div class="container--heading-large">
+                <h3 class="section__heading--large {{ section_heading_size }}">{{ section_heading_large }}</h3>
+            </div>
+        {% endif %}
+        {% comment %} Subheading {% endcomment %}
+        {% if section_subheading != blank %}
+            <div class="container--subheading">
+                <p class="section__subheading">{{ section_subheading }}</p>
+            </div>
+        {% endif %}
+        {% comment %} Content {% endcomment %}
+        {% if section_content != blank %}
+            <div class="container--content">
+                <div class="section__content">{{ section_content | richtext }}</div>
+            </div>
+        {% endif %}
+         {% comment %} Form {% endcomment %}
+         {% if section_form != blank %}
+            <div class="container--form"></div>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Content [Offset, Resume Form]",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_small",
+            "label": "Heading [Small]",
+            "default": "Heading",
+            "info": "Primary section heading (h2)"
+        },
+        {
+            "type": "text",
+            "id": "heading_large",
+            "label": "Heading [Large]",
+            "default": "Heading",
+            "info": "Secondary section heading (h3)"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "label": "Heading [Large] Size",
+            "info" : "Select an element size for the display heading",
+            "options": [
+              {
+                "value": "h1",
+                "label": "H1"
+              },
+              {
+                "value": "h2",
+                "label": "H2"
+              }
+            ],
+            "default": "h1"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Subheading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Content</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "form",
+            "label": "Form Embed",
+            "default": "<p>Form embed code</p>"
+        },
+        {
+            "type": "select",
+            "id": "theme",
+            "label": "Section Theme",
+            "options": [
+              {
+                "value": "base",
+                "label": "Base"
+              },
+              {
+                "value": "alt",
+                "label": "Alternative"
+              },
+              {
+                "value": "dark",
+                "label": "Dark"
+              }
+            ],
+            "default": "base"
+        }
+    ]
+}
+{% endschema %}

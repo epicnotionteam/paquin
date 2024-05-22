@@ -1246,20 +1246,20 @@
       "oAP" : "\/sections\/apps.liquid",
       "oF" : 0
     },
-    "\/sections\/careers-open-roles.liquid" : {
+    "\/sections\/careers-resume.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/careers-open-roles.liquid",
+      "oAP" : "\/sections\/careers-resume.liquid",
       "oF" : 0
     },
-    "\/sections\/careers-resume-form.liquid" : {
+    "\/sections\/careers-roles.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/careers-resume-form.liquid",
+      "oAP" : "\/sections\/careers-roles.liquid",
       "oF" : 0
     },
     "\/sections\/carousel-content-media.liquid" : {

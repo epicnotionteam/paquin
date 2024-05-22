@@ -110,7 +110,7 @@
       }
     },
     "careers-roles": {
-      "type": "careers-open-roles",
+      "type": "careers-roles",
       "blocks": {
         "role_block_9c4HLG": {
           "type": "role-block",
@@ -155,7 +155,7 @@
       }
     },
     "careers-resume": {
-      "type": "careers-resume-form",
+      "type": "careers-resume",
       "settings": {
         "heading_small": "Small Heading",
         "heading_large": "Large Heading",

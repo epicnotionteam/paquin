@@ -91,7 +91,6 @@
     .section--hero-internal {
         // Container [Content]
         .container--content {
-            @include rem( padding, 0 );
             justify-content: flex-end;
             display: flex;
             // Wrap [Content]
@@ -111,6 +110,10 @@
 .section--hero-internal.variant--has-image {
     @include rem( min-height, 512px );
     padding: 0;
+    // Container [Content]
+    .container--content {
+        padding: 0 4vw;
+    }
     // Container [Image]
     .container--image {
         aspect-ratio: 4/3;

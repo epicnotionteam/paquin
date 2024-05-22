@@ -2418,8 +2418,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 64em) {
   .section--hero-internal .container--content {
-    padding: 0;
-    padding: 0;
     justify-content: flex-end;
     display: flex;
   }
@@ -2433,6 +2431,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   min-height: 512px;
   min-height: 51.2rem;
   padding: 0;
+}
+.section--hero-internal.variant--has-image .container--content {
+  padding: 0 4vw;
 }
 .section--hero-internal.variant--has-image .container--image {
   aspect-ratio: 4/3;

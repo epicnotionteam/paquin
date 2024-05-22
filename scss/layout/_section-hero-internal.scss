@@ -37,12 +37,12 @@
                 .section__heading {
                     margin: 0;
                     &.text--headline {
-                        @include rem( margin-bottom, spacing(2) );
+                        @include rem( margin-bottom, spacing(1) );
                     }
                 }
                  // Content
                  .section__content {
-                    @include rem( margin-top, spacing(1) );
+                    @include rem( margin-top, spacing(2) );
                     // Strip margin from final <p>
                     p:last-child {
                         margin: 0

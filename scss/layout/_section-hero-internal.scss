@@ -29,7 +29,10 @@
             }
             // Wrap [Content, Internal]
             .section__wrap--content-internal {
-                @include rem( padding-bottom, spacing(9) );
+                @include rem((
+                    padding-bottom: spacing(9),
+                    row-gap: 12px
+                ));
                 // Heading
                 .section__heading {
                     margin: 0
@@ -44,6 +47,7 @@
                 // Link
                 .section__link {
                     @include rem( margin-top, spacing(2) );
+                    align-self: flex-start;
                 }
             }
             .section__wrap--navigation-internal {

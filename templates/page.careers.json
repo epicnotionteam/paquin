@@ -2,7 +2,9 @@
   "order": [
     "careers-hero",
     "careers-introduction",
-    "careers-benefits"
+    "careers-benefits",
+    "careers-roles",
+    "careers-resume"
   ],
   "sections": {
     "careers-hero": {
@@ -105,6 +107,62 @@
         "show_numbering": true,
         "columns": "3",
         "theme": "base"
+      }
+    },
+    "careers-roles": {
+      "type": "careers-open-roles",
+      "blocks": {
+        "role_block_9c4HLG": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
+        },
+        "role_block_HnCGaK": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
+        },
+        "role_block_nMYg6r": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "role_block_9c4HLG",
+        "role_block_HnCGaK",
+        "role_block_nMYg6r"
+      ],
+      "settings": {
+        "heading_small": "Current Openings",
+        "heading_large": "Available Roles at Paquin",
+        "heading_size": "h1",
+        "subheading": "Browse Positions",
+        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for engineering excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
+        "theme": "alt"
+      }
+    },
+    "careers-resume": {
+      "type": "careers-resume-form",
+      "settings": {
+        "heading_small": "Small Heading",
+        "heading_large": "Large Heading",
+        "heading_size": "h1",
+        "subheading": "Subheading",
+        "content": "<p>Content<\/p>",
+        "theme": "dark"
       }
     }
   }

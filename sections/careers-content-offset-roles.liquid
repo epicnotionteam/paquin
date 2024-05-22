@@ -51,14 +51,21 @@
                                 {% if block_title != blank %}
                                     <p class="item__title">{{ block_title }}</p>
                                 {% endif %}
-                                {% comment %} Division {% endcomment %}
-                                {% if block_division != blank %}
-                                    <p class="item__division">{{ block_division }}</p>
-                                {% endif %}
-                                {% comment %} Location {% endcomment %}
-                                {% if block_location != blank %}
-                                    <p class="item__location">{{ block_location }}</p>
-                                {% endif %}
+                                {% comment %} Container [Details] {% endcomment %}
+                                <div class="container--details">
+                                    {% comment %} Division {% endcomment %}
+                                    {% if block_division != blank %}
+                                        <span class="item__division">{{ block_division }}</span>
+                                    {% endif %}
+                                    {% comment %} Conditional Divider {% endcomment %}
+                                    {% if block_division != blank and block_location != blank %}
+                                        <span class="item__divider">·</span>
+                                    {% endif %}
+                                    {% comment %} Location {% endcomment %}
+                                    {% if block_location != blank %}
+                                        <span class="item__location">{{ block_location }}</span>
+                                    {% endif %}
+                                </div>
                             </div>
                             {% comment %} Container [Link] {% endcomment %}
                             <div class="container--link">

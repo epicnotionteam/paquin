@@ -3186,13 +3186,24 @@ hr,
   border-bottom: 1px solid #D6DBDD;
   display: grid;
 }
+.feed--role .item .container--overview {
+  row-gap: 4px;
+  row-gap: 0.4rem;
+  display: grid;
+}
 .feed--role .item .container--overview .item__title {
   margin: 0;
 }
-.feed--role .item .container--overview .item__division {
+.feed--role .item .container--overview .container--details {
+  column-gap: 2px;
+  column-gap: 0.2rem;
+  align-items: center;
+  display: flex;
+}
+.feed--role .item .container--overview .container--details .item__division {
   margin: 0;
 }
-.feed--role .item .container--overview .item__location {
+.feed--role .item .container--overview .container--details .item__location {
   margin: 0;
 }
 .feed--role .item .container--link .item__link {

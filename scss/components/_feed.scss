@@ -306,17 +306,24 @@
         display: grid;
         // Container [Overview]
         .container--overview {
+            @include rem( row-gap, spacing(1) );
+            display: grid;
             // Title
             .item__title {
-                margin: 0
+                margin: 0;
             }
-            // Division
-            .item__division {
-                margin: 0
-            }
-            // Location
-            .item__location {
-                margin: 0
+            .container--details {
+                @include rem( column-gap, 2px );
+                align-items: center;
+                display: flex;
+                 // Division
+                .item__division {
+                    margin: 0
+                }
+                // Location
+                .item__location {
+                    margin: 0
+                }
             }
         }
         // Container [Link]

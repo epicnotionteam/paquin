@@ -11,7 +11,7 @@
         "content": "<p>Short, single line description summarizing page content<\/p>",
         "link_text": "",
         "link_url": "",
-        "show_jump_links": false
+        "show_jump_links": true
       }
     },
     "contact-content-offset-form": {

@@ -13,10 +13,10 @@
 
 {% comment %} Determine link class based on link type & icon choice {% endcomment %}
 {% capture section_link_class %}
-  {% if section.settings.link_type == 'link' %}
+  {% if section_link_icon == 'link' %}
     link--icon-{% if section.settings.link_icon == 'down' %}before link--icon-arrow-down{% else %}after link--icon-arrow-forward{% endif %}
   {% else %}
-    button--base button--icon-{% if section.settings.link_icon == 'down' %}before button--icon-arrow-down{% else %}after button--icon-arrow-forward{% endif %}
+    button--base button--icon-before button--icon-arrow-{% if section.settings.link_icon == 'down' %}down{% else %}forward{% endif %}
   {% endif %}
 {% endcapture %}
 

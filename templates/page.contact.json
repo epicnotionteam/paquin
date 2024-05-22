@@ -1,32 +1,32 @@
 {
-  "order": [
-    	"contact-hero",
-    	"contact-form"
-  	],
-  	"sections": {
-      	"contact-hero": {
-			"type": "hero-internal",
-			"settings": {
-				"heading": "Contact Paquin",
-				"content": "<p>Short, single line description summarizing page content</p>",
-				"link_text": "",
-				"link_url": "",
-				"image": ""
-			}
-      	},
-      	"contact-form": {
-			"type": "contact-content-offset-form",
-			"settings": {
-				"heading_small": "Heading",
-				"heading_large": "Heading",
-				"heading_size": "h1",
-				"subheading": "Subheading",
-				"form": "<p>Form embed code</p>",
-				"method_phone": "",
-				"method_phone_alt": "",
-				"method_address": "",
-				"theme": "base"
-         	}
-      	}
-  	}
+    "order": [
+        "contact-hero",
+        "contact-content-offset-form"
+    ],
+    "sections": {
+        "contact-hero": {
+            "type": "hero-internal",
+            "settings": {
+                "heading": "Contact Paquin",
+                "content": "<p>Short, single line description summarizing page content</p>",
+                "link_text": "",
+                "link_url": "",
+                "image": ""
+            }
+        },
+        "contact-content-offset-form": {
+            "type": "contact-content-offset-form",
+            "settings": {
+                "heading_small": "Heading",
+                "heading_large": "Heading",
+                "heading_size": "h1",
+                "subheading": "Subheading",
+                "form": "<p>Form embed code</p>",
+                "method_phone": "Phone number",
+                "method_phone_alt": "Alternative phone number",
+                "method_address": "Address",
+                "theme": "base"
+            }
+        }
+    }
 }

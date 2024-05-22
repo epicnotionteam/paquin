@@ -3189,8 +3189,8 @@ hr,
 .feed--role .item {
   padding: 24px 0;
   padding: 2.4rem 0;
-  row-gap: 32px;
-  row-gap: 3.2rem;
+  row-gap: 12px;
+  row-gap: 1.2rem;
   border-bottom: 1px solid #D6DBDD;
   display: grid;
 }
@@ -3220,16 +3220,16 @@ hr,
 .feed--role .item:first-child {
   padding-top: 0;
 }
-.feed--role .item:last-child {
-  border-bottom: 0 none;
-  padding-bottom: 0;
-}
 
 @media (min-width: 64em) {
   .feed--role .item {
     column-gap: 24px;
     column-gap: 2.4rem;
     grid-template-columns: 1fr max-content;
+  }
+  .feed--role .item:last-child {
+    border-bottom: 0 none;
+    padding-bottom: 0;
   }
 }
 .feed--table-specification {

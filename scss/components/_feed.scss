@@ -301,7 +301,7 @@
     .item {
         @include rem((
             padding: spacing(4) 0,
-            row-gap: spacing(5)
+            row-gap: 12px
         ));
         border-bottom: $border--base;
         display: grid;
@@ -340,11 +340,6 @@
         &:first-child {
             padding-top: 0;
         }
-        // Adjust last item
-        &:last-child {
-            border-bottom: 0 none;
-            padding-bottom: 0;
-        }
     }
 }
 
@@ -358,6 +353,11 @@
                 column-gap: spacing(4)
             ));
             grid-template-columns: 1fr max-content;
+             // Adjust last item
+            &:last-child {
+                border-bottom: 0 none;
+                padding-bottom: 0;
+            }
         }
     }
 }

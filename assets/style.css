@@ -3194,7 +3194,8 @@ hr,
   margin: 0;
 }
 .feed--role .item .container--overview .container--details .item__divider {
-  margin: 0 4px;
+  margin: 0 2px;
+  margin: 0 0.2rem;
 }
 .feed--role .item .container--overview .container--details .item__location {
   margin: 0;

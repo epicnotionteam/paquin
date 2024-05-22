@@ -319,7 +319,7 @@
                 }
                 // Divider
                 .item__divider {
-                    margin: 0 spacing(1);
+                    @include rem( margin, 0 2px );
                 }
                 // Location
                 .item__location {

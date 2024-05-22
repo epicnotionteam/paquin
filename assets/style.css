@@ -3187,8 +3187,9 @@ hr,
   display: grid;
 }
 .feed--role .item .container--overview .item__title {
+  margin: 0 0 1px;
+  margin: 0 0 0.1rem;
   font-weight: 600;
-  margin: 0;
 }
 .feed--role .item .container--overview .container--details .item__division {
   margin: 0;

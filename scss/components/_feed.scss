@@ -308,8 +308,8 @@
         .container--overview {
             // Title
             .item__title {
+                @include rem( margin, 0 0 1px );
                 font-weight: font-weight( 'bold' );
-                margin: 0;
             }
             // Container [Details]
             .container--details {

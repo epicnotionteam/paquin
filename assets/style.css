@@ -2340,6 +2340,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--hero-internal {
+  min-height: 320px;
+  min-height: 32rem;
   background-color: #212224;
   display: grid;
   padding: 0 4vw;
@@ -2410,6 +2412,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--hero-internal.variant--has-image {
+  min-height: 512px;
+  min-height: 51.2rem;
   padding: 0;
 }
 .section--hero-internal.variant--has-image .container--image {

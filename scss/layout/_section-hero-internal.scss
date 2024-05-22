@@ -10,6 +10,7 @@
 
 // Section container
 .section--hero-internal {
+    @include rem( min-height, 320px );
     background-color: color( 'steel', '1' );
     display: grid;
     padding: 0 4vw;
@@ -97,6 +98,7 @@
 
 // Section container
 .section--hero-internal.variant--has-image {
+    @include rem( min-height, 512px );
     padding: 0;
     // Container [Image]
     .container--image {

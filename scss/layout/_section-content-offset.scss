@@ -53,15 +53,6 @@
                 max-width: 100%;
             }
         }
-        // Container [Contact Methods]
-        // Utilized in 'contact-content-offset-form'
-        .container--methods {
-            // Method
-            .method--phone,
-            .method--phone-alt {
-                @include font-size( 'small' );
-            }
-        }
     }
 }
     
@@ -102,6 +93,25 @@
                 grid-column: 8 / span 4;
                 grid-row: 3;
             }
+        }
+    }
+}
+
+
+// Section [Contact Form]
+// Built specifically for Contact template
+// --------------------------------------------------
+
+.section--content-offset.variant--contact-form {
+    // Container [Contact Methods]
+    // Utilized in 'contact-content-offset-form'
+    .section__grid .container--methods {
+        @include rem( row-gap, spacing(1) );
+        display: grid;
+        // Method
+        .method--phone,
+        .method--phone-alt {
+            @include font-size( 'small' );
         }
     }
 }

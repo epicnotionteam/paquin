@@ -2013,14 +2013,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
   max-width: 100%;
 }
-.section--content-offset .section__grid .container--methods .method--phone,
-.section--content-offset .section__grid .container--methods .method--phone-alt {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
-}
 
 @media (min-width: 64em) {
   .section--content-offset {
@@ -2054,6 +2046,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-row: 3;
   }
 }
+.section--content-offset.variant--contact-form .section__grid .container--methods {
+  row-gap: 4px;
+  row-gap: 0.4rem;
+  display: grid;
+}
+.section--content-offset.variant--contact-form .section__grid .container--methods .method--phone,
+.section--content-offset.variant--contact-form .section__grid .container--methods .method--phone-alt {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+
 .section--feed-collection {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

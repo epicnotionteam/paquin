@@ -119,10 +119,30 @@
             "location": "West Union, SC",
             "link": "https:\/\/www.linkedin.com\/"
           }
+        },
+        "role_block_HnCGaK": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
+        },
+        "role_block_nMYg6r": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
         }
       },
       "block_order": [
-        "role_block_9c4HLG"
+        "role_block_9c4HLG",
+        "role_block_HnCGaK",
+        "role_block_nMYg6r"
       ],
       "settings": {
         "heading_small": "Current Openings",

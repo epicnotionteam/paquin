@@ -3186,10 +3186,26 @@ hr,
   border-bottom: 1px solid #D6DBDD;
   display: grid;
 }
+.feed--role .item .container--overview .item__title {
+  margin: 0;
+}
+.feed--role .item .container--overview .item__division {
+  margin: 0;
+}
+.feed--role .item .container--overview .item__location {
+  margin: 0;
+}
+.feed--role .item .container--link .item__link {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
 .feed--role .item:first-child {
   padding-top: 0;
 }
-.feed--role .item:first-child {
+.feed--role .item:last-child {
   border-bottom: 0 none;
   padding-bottom: 0;
 }

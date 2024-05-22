@@ -13,6 +13,7 @@
       "type": "hero-internal",
       "settings": {
         "heading": "Providing Superior Quality, Innovation and Customer Service Since 1949",
+        "content": "",
         "link_text": "Meet The Paquin Company",
         "link_url": "#test",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
@@ -209,29 +210,41 @@
         "content_block_RKK6JJ": {
           "type": "content-block",
           "settings": {
+            "image_type": "logo",
             "heading": "Designing with Precision",
-            "content": "<p>Our initial phase involves transforming client ideas into detailed designs with cutting-edge software and teamwork, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.<\/p>"
+            "content": "<p>Our initial phase involves transforming client ideas into detailed designs with cutting-edge software and teamwork, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         },
         "content_block_CmpMHh": {
           "type": "content-block",
           "settings": {
+            "image_type": "logo",
             "heading": "Materials Matter",
-            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.<\/p>"
+            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         },
         "content_block_hwEqpe": {
           "type": "content-block",
           "settings": {
+            "image_type": "logo",
             "heading": "Manufacturing Innovation",
-            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy, and innovative techniques to produce high-quality, industry-leading results.<\/p>"
+            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy, and innovative techniques to produce high-quality, industry-leading results.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         },
         "content_block_M9W7y7": {
           "type": "content-block",
           "settings": {
+            "image_type": "logo",
             "heading": "Testing and Quality Control",
-            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>"
+            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
           }
         }
       },

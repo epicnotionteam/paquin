@@ -301,6 +301,7 @@
     .item {
         @include rem((
             padding: spacing(4) 0,
+            row-gap: spacing(5)
         ));
         border-bottom: $border--base;
         display: grid;
@@ -320,6 +321,7 @@
                 // Divider
                 .item__divider {
                     @include rem( margin, 0 2px );
+                    font-weight: font-weight( 'bold' );
                 }
                 // Location
                 .item__location {
@@ -353,13 +355,9 @@
         // Item container
         .item {
             @include rem((
-                column-gap: spacing(3)
+                column-gap: spacing(4)
             ));
             grid-template-columns: 1fr max-content;
-            // Container [Overview]
-            .container--overview {}
-            // Container [Link]
-            .container--link {}
         }
     }
 }

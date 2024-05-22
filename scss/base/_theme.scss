@@ -7,6 +7,11 @@
 
 .theme--alt {
 	background-color: color( 'titanium', '2' );
+	// Component [Feed, Role]
+	// Adjust item border
+	.feed--role .item {
+		border-bottom: $border--alt;
+	}
 	// Component [Primary Section Heading]
 	.section__primary-heading {
 		border-top: $border--alt;
@@ -35,7 +40,6 @@
 		color: white;
 	}
 	// Component [Button, Outline:Hover]
-	//
 	.button--outline {
 		box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;
 		// State:hover
@@ -43,6 +47,11 @@
 			color: white;
 			box-shadow: 0 0 0 1px white inset;
 		}
+	}
+	// Component [Feed, Role]
+	// Adjust item border
+	.feed--role .item {
+		border-bottom: $border--dark;
 	}
 	// Component [Link, Base]
 	a:not([class*='button']):not(.breadcrumbs-container a),

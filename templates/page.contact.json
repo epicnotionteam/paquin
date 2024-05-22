@@ -1,6 +1,7 @@
 {
   "order": [
-    "contact-hero"
+    "contact-hero",
+    "contact-form"
   ],
   "sections": {
     "contact-hero": {
@@ -12,6 +13,9 @@
         "link_url": "",
         "image": ""
       }
+    },
+    "contact-form": {
+      "type": "contact-content-offset-form"
     }
   }
 }

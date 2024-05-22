@@ -168,7 +168,6 @@
         }
         // Title
         .item__title {
-            @extend %h4;
             margin: 0;
             // Link
             a {

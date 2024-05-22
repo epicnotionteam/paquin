@@ -3580,8 +3580,8 @@ label {
 }
 
 .link--icon-before::before {
-  margin-right: 2px;
-  margin-right: 0.2rem;
+  margin-right: 4px;
+  margin-right: 0.4rem;
   display: inline-block;
   line-height: 1;
   transition: transform 0.12s ease-out;
@@ -3598,8 +3598,8 @@ label {
   display: none;
 }
 .link--icon-after::after {
-  margin-left: 2px;
-  margin-left: 0.2rem;
+  margin-left: 4px;
+  margin-left: 0.4rem;
   display: inline-block;
   line-height: 1;
   transition: transform 0.12s ease-out;

@@ -50,7 +50,7 @@
 
 .link--icon-before {
     &::before {
-        @include rem( margin-right, 2px );
+        @include rem( margin-right, 4px );
         display: inline-block;
         line-height: 1;
         transition: transform 0.12s ease-out;
@@ -77,7 +77,7 @@
     }
     // Icon
     &::after {
-        @include rem( margin-left, 2px );
+        @include rem( margin-left, 4px );
         display: inline-block;
         line-height: 1;
         transition: transform 0.12s ease-out;

@@ -1,0 +1,92 @@
+// ====================================================================================================
+// Layout / Section [Content, Offset, Resume Form]
+// ====================================================================================================
+
+// Section Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--content-offset-resume-form {
+    @include rem( padding-bottom, $gap--section-small );
+    // Grid structure
+    .section__grid {
+        @include rem( row-gap, spacing(5) );
+        display: grid;
+        // Container [Heading, Small]
+        .container--heading-small {
+            // Heading [Small]
+            .section__heading--small {
+                @extend %h5;
+                margin: 0;
+            }
+        }
+        // Container [Heading, Large]
+        .container--heading-large {
+            // Heading [Large]
+            .section__heading--large {
+                margin: 0;
+            }
+        }
+        // Container [Subheading]
+        .container--subheading {
+            // Subheading
+            .section__subheading {
+                @include font-size( 'xsmall' );
+                margin: 0;
+            }
+        }
+        // Container [Content]
+        .container--content {
+            // Strip margin from final <p>
+            .section__content p:last-child {
+                margin: 0;
+            }
+        }
+        // Container [Feed]
+        .container--form {}
+    }
+}
+    
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--content-offset-resume-form {
+        @include rem( padding-bottom, $gap--section-large );
+        // Adjust grid structure
+        .section__grid {
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(6) 
+            ));
+            grid-auto-rows: auto;
+            grid-template-columns: repeat( 12, 1fr );
+            // Container [Heading, Small]
+            .container--heading-small {
+                grid-column: 1 / span 12;
+            }
+            // Container [Heading, Large]
+            .container--heading-large {
+                grid-column: 1 / span 6;
+            }
+            // Container [Subeading]
+            .container--subheading {
+                grid-column: 1 / span 2;
+                grid-row: 3;
+            }
+            // Container [Content]
+            .container--content {
+                grid-column: 3 / span 4;
+                grid-row: 3;
+            }
+            // Container [Form]
+            .container--form {
+                grid-column: 8 / span 4;
+                grid-row: 3;
+            }
+        }
+    }
+}

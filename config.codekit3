@@ -770,6 +770,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/layout\/_section-content-offset-resume-form.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_section-content-offset-resume-form.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/layout\/_section-content-offset-roles.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1246,20 +1261,20 @@
       "oAP" : "\/sections\/apps.liquid",
       "oF" : 0
     },
-    "\/sections\/careers-open-roles.liquid" : {
+    "\/sections\/careers-content-offset-resume-form.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/careers-open-roles.liquid",
+      "oAP" : "\/sections\/careers-content-offset-resume-form.liquid",
       "oF" : 0
     },
-    "\/sections\/careers-resume-form.liquid" : {
+    "\/sections\/careers-content-offset-roles.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/careers-resume-form.liquid",
+      "oAP" : "\/sections\/careers-content-offset-roles.liquid",
       "oF" : 0
     },
     "\/sections\/carousel-content-media.liquid" : {

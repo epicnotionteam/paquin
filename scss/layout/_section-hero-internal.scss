@@ -34,6 +34,13 @@
                 .section__heading {
                     margin: 0
                 }
+                 // Content
+                 .section__content {
+                    // Strip margin from final <p>
+                    p:last-child {
+                        margin: 0
+                    }
+                }
                 // Link
                 .section__link {
                     @include rem( margin-top, spacing(2) );

@@ -16,7 +16,8 @@
         "content": "",
         "link_text": "Meet The Paquin Company",
         "link_url": "#test",
-        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "show_jump_links": true
       }
     },
     "about-divisions": {

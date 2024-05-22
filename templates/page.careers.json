@@ -101,7 +101,7 @@
         "content_block_FH4WtQ"
       ],
       "settings": {
-        "heading_small": "Perks & Benefits",
+        "heading_small": "Perks and Benefits",
         "heading_large": "Where Talent Thrives: Comprehensive Benefits and Growth Opportunities",
         "heading_size": "h2",
         "show_numbering": true,
@@ -157,11 +157,12 @@
     "careers-resume": {
       "type": "careers-content-offset-resume-form",
       "settings": {
-        "heading_small": "Small Heading",
-        "heading_large": "Large Heading",
+        "heading_small": "Submit Your Résumé",
+        "heading_large": "Start Your Journey With Paquin — Upload Your Resume Today",
         "heading_size": "h1",
-        "subheading": "Subheading",
-        "content": "<p>Content<\/p>",
+        "subheading": "Take The First Step",
+        "content": "<p>We are a close-knit team. Many say it feels like a family. We work hard, but we also play hard, making time to enjoy life, share laughs around the water cooler, and build team culture.<br\/><br\/>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.<\/p>",
+        "form": "<p>Form embed code<\/p>",
         "theme": "dark"
       }
     }

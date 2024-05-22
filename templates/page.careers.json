@@ -109,7 +109,7 @@
       }
     },
     "careers-roles": {
-      "type": "content-offset-roles",
+      "type": "careers-content-offset-roles",
       "settings": {
         "heading_small": "Current Openings",
         "heading_large": "Join Our Team: Discover Your Next Career Move",

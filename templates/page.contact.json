@@ -10,9 +10,9 @@
         "heading": "Contact Paquin",
         "heading_size": "text--headline",
         "content": "<p>Short, single line description summarizing page content<\/p>",
-        "link_text": "",
+        "link_text": "Test Button",
         "link_url": "#test",
-        "show_jump_links": false
+        "show_jump_links": true
       }
     },
     "contact-content-offset-form": {

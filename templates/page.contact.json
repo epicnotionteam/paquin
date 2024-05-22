@@ -1,32 +1,31 @@
 {
-    "order": [
-        "contact-hero",
-        "contact-content-offset-form"
-    ],
-    "sections": {
-        "contact-hero": {
-            "type": "hero-internal",
-            "settings": {
-                "heading": "Contact Paquin",
-                "content": "<p>Short, single line description summarizing page content</p>",
-                "link_text": "",
-                "link_url": "",
-                "image": ""
-            }
-        },
-        "contact-content-offset-form": {
-            "type": "contact-content-offset-form",
-            "settings": {
-                "heading_small": "Heading",
-                "heading_large": "Heading",
-                "heading_size": "h1",
-                "subheading": "Subheading",
-                "form": "<p>Form embed code</p>",
-                "method_phone": "Phone number",
-                "method_phone_alt": "Alternative phone number",
-                "method_address": "Address",
-                "theme": "base"
-            }
-        }
+  "order": [
+    "contact-hero",
+    "contact-content-offset-form"
+  ],
+  "sections": {
+    "contact-hero": {
+      "type": "hero-internal",
+      "settings": {
+        "heading": "Contact Paquin",
+        "content": "<p>Short, single line description summarizing page content<\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "contact-content-offset-form": {
+      "type": "contact-content-offset-form",
+      "settings": {
+        "heading_small": "How to reach us",
+        "heading_large": "Connect With Our Team for Personalized Service and Support",
+        "heading_size": "h1",
+        "subheading": "Contact Options",
+        "form": "<p>[FORM]<\/p>",
+        "method_phone": "(216) 261-5700",
+        "method_phone_alt": "1-800-260-5664",
+        "method_address": "9286 Mercantile Dr. Mentor, OH 44060",
+        "theme": "base"
+      }
     }
+  }
 }

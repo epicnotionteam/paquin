@@ -52,6 +52,7 @@
                 }
                 select#navigation--jump-links {
                     @include font-size( 'small' );
+                    @include rem( max-width, 448px );
                     appearance: none;
                     background: transparent;
                     border: 0 none;

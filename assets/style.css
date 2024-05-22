@@ -2387,6 +2387,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  max-width: 448px;
+  max-width: 44.8rem;
   appearance: none;
   background: transparent;
   border: 0 none;

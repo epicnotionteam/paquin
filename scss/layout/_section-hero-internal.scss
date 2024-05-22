@@ -30,7 +30,7 @@
             // Wrap [Content, Internal]
             .section__wrap--content-internal {
                 @include rem((
-                    padding-bottom: spacing(9),
+                    padding-bottom: spacing(8),
                     row-gap: 12px
                 ));
                 display: grid;
@@ -47,8 +47,8 @@
                 }
                 // Link
                 .section__link {
-                    @include rem( margin-top, spacing(2) );
-                    align-self: flex-start;
+                    @include rem( margin-top, 12px );
+                    justify-self: flex-start;
                 }
             }
             .section__wrap--navigation-internal {

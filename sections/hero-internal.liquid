@@ -4,6 +4,7 @@
 
 {% comment %} Assign section data to vars {% endcomment %}
 {% assign section_heading   = section.settings.heading %}
+{% assign section_content   = section.settings.heading %}
 {% assign section_link_text = section.settings.link_text %}
 {% assign section_link_url  = section.settings.link_url %}
 
@@ -19,6 +20,10 @@
                 {% if section_heading != blank %}
                     <h1 class="section__heading">{{ section_heading }}</h1>
                 {% endif %}
+                {% comment %} Content {% endcomment %}
+		        {% if section_content != blank %}
+			        <div class="section__content">{{ section_content | richtext }}</div>
+		        {% endif %}
                 {% comment %} Link {% endcomment %}
                 {% if section_link_text != blank and section_link_url != blank %}
                     <a href="{{ section_link_url }}" class="section__link button--base button--icon-before button--icon-arrow-down">{{ section_link_text }}</a>
@@ -85,6 +90,12 @@
             "id": "heading",
             "label": "Heading",
             "default": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Content</p>"
         },
         {
             "type": "text",

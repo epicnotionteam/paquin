@@ -3633,10 +3633,6 @@ label {
   font-size: 128%;
 }
 
-.link--icon-arrow-down {
-  margin-top: -2px;
-  margin-top: -0.2rem;
-}
 .link--icon-arrow-down:before {
   content: "\e5db";
   font-family: "Material Symbols Outlined";
@@ -3656,6 +3652,10 @@ label {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-arrow-down::before, .link--icon-arrow-down::after {
+  margin-top: -2px;
+  margin-top: -0.2rem;
 }
 
 .link--icon-arrow-forward:before {

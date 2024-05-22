@@ -110,7 +110,11 @@
 .link--icon-arrow-down {
     @include icon( before, 'arrow_down' );
     @include icon( after, 'arrow_down' );
-    @include rem( margin-top, -2px );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        @include rem( margin-top, -2px );
+    }
 }
 
 

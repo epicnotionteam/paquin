@@ -2340,8 +2340,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--hero-internal {
-  min-height: 320px;
-  min-height: 32rem;
+  min-height: 288px;
+  min-height: 28.8rem;
   background-color: #212224;
   display: grid;
   padding: 0 4vw;

@@ -3193,6 +3193,9 @@ hr,
 .feed--role .item .container--overview .container--details .item__division {
   margin: 0;
 }
+.feed--role .item .container--overview .container--details .item__divider {
+  margin: 0 4px;
+}
 .feed--role .item .container--overview .container--details .item__location {
   margin: 0;
 }

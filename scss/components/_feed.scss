@@ -304,8 +304,8 @@
         ));
         border-bottom: $border--base;
         display: grid;
-        // Container [Content]
-        .container--content {}
+        // Container [Overview]
+        .container--overview {}
         // Container [Link]
         .container--link {}
         // Adjust first item
@@ -330,8 +330,8 @@
                 column-gap: spacing(3)
             ));
             grid-template-columns: 1fr max-content;
-            // Container [Content]
-            .container--content {}
+            // Container [Overview]
+            .container--overview {}
             // Container [Link]
             .container--link {}
         }

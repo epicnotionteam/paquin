@@ -12,7 +12,7 @@
 
 {% comment %} Determine link element type based on link type {% endcomment %}
 {% if section.settings.link_type == 'link' %}
-    {% assign section_link_element = 'link--icon-after link--icon-arrow-forward' %}
+    {% assign section_link_element = 'section__link' %}
 {% else %}
     {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-forward' %}
 {% endif %}
@@ -32,7 +32,7 @@
 		<div class="container--cta">
 			{% comment %} Link {% endcomment %}
 			{% if section_link_text != blank and section_link_url != blank %}
-				<a href="{{ section_link_url }}" class="section__link {{ section_link_element }}">{{ section_link_text }}</a>
+				<a href="{{ section_link_url }}" class="{{ section_link_element }}">{{ section_link_text }}</a>
 			{% endif %}
 		</div>
 	</div>

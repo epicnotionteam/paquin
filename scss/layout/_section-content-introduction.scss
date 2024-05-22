@@ -45,10 +45,14 @@
         .container--cta {
             display: flex;
             flex-wrap: wrap;
-            // Button(s)
+            // Button
             .button--base {
                 @include rem( margin-top, spacing(3) );
                 flex: 1 1 100%;
+            }
+            // Link
+            .section__link {
+                @include rem( margin-top, spacing(2) );
             }
         }
     }

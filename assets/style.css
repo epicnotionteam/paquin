@@ -1895,6 +1895,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-top: 1.6rem;
   flex: 1 1 100%;
 }
+.section--content-introduction .section__grid .container--cta .section__link {
+  margin-top: 8px;
+  margin-top: 0.8rem;
+}
 
 @media (min-width: 48em) {
   .section--content-introduction .section__grid .container--cta {

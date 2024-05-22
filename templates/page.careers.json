@@ -12,7 +12,7 @@
         "heading": "Want To Be a Part of Something Special?",
         "link_text": "Meet The Paquin Company",
         "link_url": "#test",
-        "image": "shopify://shop_images/asset__placeholder--4-3.png"
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
       }
     },
     "careers-introduction": {
@@ -20,7 +20,7 @@
       "settings": {
         "heading": "Why Join The Paquin Company",
         "heading_size": "text--headline",
-        "content": "<p>At Paquin we all feel right at home and work like a family,  our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.</p>",
+        "content": "<p>At Paquin we all feel right at home and work like a family,  our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
         "link_text": "Learn more about our benefits package",
         "link_url": "#test",
         "link_type": "link",
@@ -35,7 +35,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Competitive Salary Packages",
-            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standsards, clearly underscoring our deep commitment to team value and satisfaction.</p>",
+            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standsards, clearly underscoring our deep commitment to team value and satisfaction.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -45,7 +45,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Bonus and Commission Structures",
-            "content": "<p>We reward hard work and success with meaningful bonuses and commissions, recognizing and celebrating each contribution to our growth.</p>",
+            "content": "<p>We reward hard work and success with meaningful bonuses and commissions, recognizing and celebrating each contribution to our growth.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -55,7 +55,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Comprehensive Healthcare Benefits",
-            "content": "<p>Prioritizing health, we offer extensive, company-subsidized healthcare benefits for employees and their families, reinforcing our investment in collective well-being.</p>",
+            "content": "<p>Prioritizing health, we offer extensive, company-subsidized healthcare benefits for employees and their families, reinforcing our investment in collective well-being.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -65,7 +65,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Continued Education",
-            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for all employees.</p>",
+            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for all employees.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -75,7 +75,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Growth Opportunities",
-            "content": "<p>Our forward-thinking growth strategy focuses on internal promotion, creating ample opportunities for leadership and advancement within our ever-evolving industry.</p>",
+            "content": "<p>Our forward-thinking growth strategy focuses on internal promotion, creating ample opportunities for leadership and advancement within our ever-evolving industry.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -85,7 +85,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "401K Retirement Plans",
-            "content": "<p>Our 401K plans significantly underline our steadfast dedication to our employees' long-term security, offering substantial, flexible options for a stable and secure financial future.</p>",
+            "content": "<p>Our 401K plans significantly underline our steadfast dedication to our employees' long-term security, offering substantial, flexible options for a stable and secure financial future.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -110,12 +110,26 @@
     },
     "careers-roles": {
       "type": "careers-content-offset-roles",
+      "blocks": {
+        "role_block_9c4HLG": {
+          "type": "role-block",
+          "settings": {
+            "title": "Technical Support Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": "https:\/\/www.linkedin.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "role_block_9c4HLG"
+      ],
       "settings": {
         "heading_small": "Current Openings",
-        "heading_large": "Join Our Team: Discover Your Next Career Move",
-        "heading_size": "h2",
-        "subheading": "Explore our current job openings and find the perfect role to match your skills and ambitions.",
-        "content": "<p>If you don't see a role that aligns with your expertise but believe you would be a valuable addition to our team, we encourage you to submit your resume to <a href=\"mailto:careers@paquin.com\" title=\"Careers at Paquin\">careers@paquin.com</a>. We are always on the lookout for exceptional talent and potential that may not fit a predefined role.</p>",
+        "heading_large": "Available Roles at Paquin",
+        "heading_size": "h1",
+        "subheading": "Browse Positions",
+        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for engineering excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
         "theme": "alt"
       }
     }

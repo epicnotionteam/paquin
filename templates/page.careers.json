@@ -1,6 +1,8 @@
 {
   "order": [
-    "careers-hero"
+    "careers-hero",
+    "content_introduction_8zfWkN",
+    "content_blocks_XdcPef"
   ],
   "sections": {
     "careers-hero": {
@@ -10,6 +12,99 @@
         "link_text": "Meet The Paquin Company",
         "link_url": "#test",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+      }
+    },
+    "content_introduction_8zfWkN": {
+      "type": "content-introduction",
+      "settings": {
+        "heading": "Why Join The Paquin Company",
+        "heading_size": "text--headline",
+        "content": "<p>At Paquin we all feel right at home and work like a family,  our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
+        "link_text": "Learn more about our benefits package",
+        "link_url": "#test",
+        "link_type": "link",
+        "theme": "base"
+      }
+    },
+    "content_blocks_XdcPef": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_3yed8L": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Competitive Salary Packages",
+            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standsards, clearly underscoring our deep commitment to team value and satisfaction.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_YQmByb": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Bonus and Commission Structures",
+            "content": "<p>We reward hard work and success with meaningful bonuses and commissions, recognizing and celebrating each contribution to our growth.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_HHiYJR": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Comprehensive Healthcare Benefits",
+            "content": "<p>Prioritizing health, we offer extensive, company-subsidized healthcare benefits for employees and their families, reinforcing our investment in collective well-being.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_eNiDXJ": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Continued Education",
+            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for all employees.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_rTRdG7": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Growth Opportunities",
+            "content": "<p>Our forward-thinking growth strategy focuses on internal promotion, creating ample opportunities for leadership and advancement within our ever-evolving industry.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_FH4WtQ": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "401K Retirement Plans",
+            "content": "<p>Our 401K plans significantly underline our steadfast dedication to our employees' long-term security, offering substantial, flexible options for a stable and secure financial future.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_3yed8L",
+        "content_block_YQmByb",
+        "content_block_HHiYJR",
+        "content_block_eNiDXJ",
+        "content_block_rTRdG7",
+        "content_block_FH4WtQ"
+      ],
+      "settings": {
+        "heading_small": "Perks & Benefits",
+        "heading_large": "Where Talent Thrives: Comprehensive Benefits and Growth Opportunities",
+        "heading_size": "h2",
+        "show_numbering": true,
+        "columns": "3",
+        "theme": "base"
       }
     }
   }

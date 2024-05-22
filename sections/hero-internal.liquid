@@ -3,11 +3,12 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign section_heading   = section.settings.heading %}
-{% assign section_content   = section.settings.content %}
-{% assign section_link_text = section.settings.link_text %}
-{% assign section_link_url  = section.settings.link_url %}
-{% assign section_image     = section.settings.image %}
+{% assign section_heading         = section.settings.heading %}
+{% assign section_content         = section.settings.content %}
+{% assign section_link_text       = section.settings.link_text %}
+{% assign section_link_url        = section.settings.link_url %}
+{% assign section_image           = section.settings.image %}
+{% assign section_show_jump_links = section.settings.show_jump_links %}
 
 {% comment %} Determine component variant class based on image data {% endcomment %}
 {% if section_image != blank %}
@@ -37,13 +38,15 @@
                     <a href="{{ section_link_url }}" class="section__link button--base button--icon-before button--icon-arrow-down">{{ section_link_text }}</a>
                 {% endif %}
             </div>
-            <div class="section__wrap--navigation-internal">
-                <p class="navigation__label">Jump to section:</p>
-                <select id="navigation--jump-links">
-                    <option value="">Select a section</option>
-                    {% comment %} Options added dynamically via script below {% endcomment %}
-                </select>
-            </div>
+            {% if section_show_jump_links %}
+                <div class="section__wrap--navigation-internal">
+                    <p class="navigation__label">Jump to section:</p>
+                    <select id="navigation--jump-links">
+                        <option value="">Select a section</option>
+                        {% comment %} Options added dynamically via script below {% endcomment %}
+                    </select>
+                </div>
+            {% endif %}
         </div>
     </div>
     {% comment %} Image {% endcomment %}
@@ -123,6 +126,12 @@
             "type": "image_picker",
             "id": "image",
             "label": "Background Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_jump_links",
+            "label": "Show jump links",
+            "default": false
         }
     ],
     "presets": [

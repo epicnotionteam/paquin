@@ -2350,8 +2350,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0 4vw;
 }
 .section--hero-internal .container--content .section__wrap--content .wrap--container {
+  padding: 0 0 48px !important;
+  padding: 0 0 4.8rem !important;
   margin-bottom: auto;
-  padding: 0 !important;
 }
 .section--hero-internal .container--content .section__wrap--content .wrap--container .breadcrumbs-container {
   margin: 0;
@@ -2365,8 +2366,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   column-gap: 0.8rem;
   margin-top: 64px;
   margin-top: 6.4rem;
-  padding: 24px 0;
-  padding: 2.4rem 0;
+  padding: 24px 0 32px;
+  padding: 2.4rem 0 3.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   display: grid;
   grid-template-columns: max-content 1fr;

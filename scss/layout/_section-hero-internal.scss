@@ -16,8 +16,13 @@
     padding: 0 4vw;
     // Container [Content]
     .container--content {
+        justify-content: flex-end;
+        display: flex;
         // Wrap [Content]
         .section__wrap--content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
             // Breadcrumb container
             .wrap--container {
                 @include rem( padding, 0 0 spacing(7) !important );
@@ -91,14 +96,8 @@
     .section--hero-internal {
         // Container [Content]
         .container--content {
-            justify-content: flex-end;
-            display: flex;
             // Wrap [Content]
-            .section__wrap--content {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-            }
+            .section__wrap--content {}
         }
     }
 }

@@ -3633,6 +3633,10 @@ label {
   font-size: 128%;
 }
 
+.link--icon-arrow-down {
+  margin-top: -2px;
+  margin-top: -0.2rem;
+}
 .link--icon-arrow-down:before {
   content: "\e5db";
   font-family: "Material Symbols Outlined";
@@ -3654,10 +3658,6 @@ label {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.link--icon-arrow-forward {
-  margin-top: -2px;
-  margin-top: -0.2rem;
-}
 .link--icon-arrow-forward:before {
   content: "\e5c8";
   font-family: "Material Symbols Outlined";

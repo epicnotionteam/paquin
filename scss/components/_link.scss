@@ -110,6 +110,7 @@
 .link--icon-arrow-down {
     @include icon( before, 'arrow_down' );
     @include icon( after, 'arrow_down' );
+    @include rem( margin-top, -2px );
 }
 
 
@@ -119,7 +120,6 @@
 .link--icon-arrow-forward {
     @include icon( before, 'arrow_forward' );
     @include icon( after, 'arrow_forward' );
-    @include rem( margin-top, -2px );
 }
 
 // State management

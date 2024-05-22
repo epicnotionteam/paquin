@@ -104,6 +104,23 @@
 }
 
 
+// Link [Icon, Arrow, Down]
+// --------------------------------------------------
+
+.link--icon-arrow-down {
+    @include icon( before, 'arrow_down' );
+    @include icon( after, 'arrow_down' );
+}
+
+// State management
+.link--icon-arrow-down:hover {
+    &::after {
+        transform: translateY( 2px );
+    }
+}
+
+
+
 // Link [Icon, Arrow, Forward]
 // --------------------------------------------------
 

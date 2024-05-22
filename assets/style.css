@@ -3633,6 +3633,31 @@ label {
   font-size: 128%;
 }
 
+.link--icon-arrow-down:before {
+  content: "\e5db";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link--icon-arrow-down:after {
+  content: "\e5db";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.link--icon-arrow-down:hover::after {
+  transform: translateY(2px);
+}
+
 .link--icon-arrow-forward:before {
   content: "\e5c8";
   font-family: "Material Symbols Outlined";

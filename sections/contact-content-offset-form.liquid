@@ -15,7 +15,7 @@
 {% assign section_theme            = section.settings.theme %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--content-offset theme--{{ section_theme }} wrap--container">
+<section class="section--content-offset variant--contact-form theme--{{ section_theme }} wrap--container">
     <div class="section__grid wrap--max push--center">
         {% comment %} Heading [Small] {% endcomment %}
         {% if section_heading_small != blank %}
@@ -48,12 +48,12 @@
             <h5>Contact Our Sales Team</h5>
             {% if section_method_phone != blank %}
                 {% assign formatted_phone = section_method_phone | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                <p class="method--phone"><a href="tel:{{ formatted_phone }}">{{ section_method_phone }}</a></p>
+                <p class="method--phone"><a href="tel:{{ formatted_phone }}" class="link--icon-after link--icon-arrow-outgoing">{{ section_method_phone }}</a></p>
             {% endif %}
             {% comment %} Phone [Alt] {% endcomment %}
             {% if section_method_phone_alt != blank %}
                 {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                <p class="method--phone-alt"><a href="tel:{{ formatted_phone_alt }}">{{ section_method_phone_alt }}</a></p>
+                <p class="method--phone-alt"><a href="tel:{{ formatted_phone_alt }}" class="link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a></p>
             {% endif %}
             {% comment %} Address {% endcomment %}
             {% if section_method_address != blank %}

@@ -1879,8 +1879,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 0.8rem;
 }
 .section--content-introduction .section__grid .section__content {
-  max-width: 640px;
-  max-width: 64rem;
+  max-width: 768px;
+  max-width: 76.8rem;
   margin: 0 auto;
 }
 .section--content-introduction .section__grid .section__content p:last-child {

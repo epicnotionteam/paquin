@@ -34,7 +34,7 @@
         }
         // Content
         .section__content {
-            @include rem( max-width, 640px );
+            @include rem( max-width, 768px );
             margin: 0 auto;
             // Strip margin from final <p>
             p:last-child {

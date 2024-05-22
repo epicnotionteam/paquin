@@ -12,6 +12,7 @@
 .section--hero-internal {
     background-color: color( 'steel', '1' );
     display: grid;
+    padding: 0 4vw;
     // Container [Content]
     .container--content {
         padding: 0 4vw;
@@ -65,7 +66,7 @@
     .section--hero-internal {
         // Container [Content]
         .container--content {
-            @include rem( padding, 0 spacing(7) 0 4vw );
+            @include rem( padding, 0 );
             justify-content: flex-end;
             display: flex;
             // Wrap [Content]
@@ -93,6 +94,7 @@
 
 // Section container
 .section--hero-internal.variant--has-image {
+    padding: 0;
     // Container [Image]
     .container--image {
         aspect-ratio: 4/3;
@@ -109,6 +111,7 @@
         grid-template-columns: repeat( 2, 1fr );
         // Container [Content]
         .container--content {
+            @include rem( padding, 0 spacing(7) 0 4vw );
             // Wrap [Content]
             .section__wrap--content {
                 @include rem( max-width, 750px );

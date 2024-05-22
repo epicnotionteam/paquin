@@ -2342,6 +2342,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-internal {
   background-color: #212224;
   display: grid;
+  padding: 0 4vw;
 }
 .section--hero-internal .container--content {
   padding: 0 4vw;
@@ -2388,8 +2389,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 64em) {
   .section--hero-internal .container--content {
-    padding: 0 48px 0 4vw;
-    padding: 0 4.8rem 0 4vw;
+    padding: 0;
+    padding: 0;
     justify-content: flex-end;
     display: flex;
   }
@@ -2405,6 +2406,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     align-self: flex-start;
   }
 }
+.section--hero-internal.variant--has-image {
+  padding: 0;
+}
 .section--hero-internal.variant--has-image .container--image {
   aspect-ratio: 4/3;
   background-position: center;
@@ -2414,6 +2418,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 @media (min-width: 64em) {
   .section--hero-internal.variant--has-image {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .section--hero-internal.variant--has-image .container--content {
+    padding: 0 48px 0 4vw;
+    padding: 0 4.8rem 0 4vw;
   }
   .section--hero-internal.variant--has-image .container--content .section__wrap--content {
     max-width: 750px;

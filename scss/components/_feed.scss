@@ -292,6 +292,53 @@
 }
 
 
+// Feed [Role]
+// --------------------------------------------------
+
+// Component container
+.feed--role {
+    // Item container
+    .item {
+        @include rem((
+            padding: spacing(4) 0,
+        ));
+        border-bottom: $border--base;
+        display: grid;
+        // Container [Content]
+        .container--content {}
+        // Container [Link]
+        .container--link {}
+        // Adjust first item
+        &:first-child {
+            padding-top: 0;
+        }
+        // Adjust last item
+        &:first-child {
+            border-bottom: 0 none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--role {
+        // Item container
+        .item {
+            @include rem((
+                column-gap: spacing(3)
+            ));
+            grid-template-columns: 1fr max-content;
+            // Container [Content]
+            .container--content {}
+            // Container [Link]
+            .container--link {}
+        }
+    }
+}
+
+
 // Feed [Table, Specification]
 // --------------------------------------------------
 

@@ -3180,6 +3180,27 @@ hr,
   transform: scale(1.12);
 }
 
+.feed--role .item {
+  padding: 24px 0;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid #D6DBDD;
+  display: grid;
+}
+.feed--role .item:first-child {
+  padding-top: 0;
+}
+.feed--role .item:first-child {
+  border-bottom: 0 none;
+  padding-bottom: 0;
+}
+
+@media (min-width: 64em) {
+  .feed--role .item {
+    column-gap: 16px;
+    column-gap: 1.6rem;
+    grid-template-columns: 1fr max-content;
+  }
+}
 .feed--table-specification {
   row-gap: 4px;
   row-gap: 0.4rem;

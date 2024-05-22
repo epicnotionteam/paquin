@@ -15,8 +15,9 @@
         "heading": "Providing Superior Quality, Innovation and Customer Service Since 1949",
         "content": "",
         "link_text": "Meet The Paquin Company",
-        "link_url": "#test",
-        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+        "link_url": "#our-specialized-divisions",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "show_jump_links": true
       }
     },
     "about-divisions": {

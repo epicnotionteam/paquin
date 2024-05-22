@@ -13,10 +13,10 @@
 
 {% comment %} Determine link element type based on link type {% endcomment %}
 {% if section.settings.link_type == 'link' %}
-    {% assign section_link_element = 'section__link link--icon-before link--icon-arrow-{{ section_link_icon }}' %}
-{% else %}
-    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-{{ section_link_icon }}' %}
-{% endif %}
+    {% assign section_link_element = 'section__link link--icon-before link--icon-arrow-' | append: section_link_icon %}
+  {% else %}
+    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-' | append: section_link_icon %}
+  {% endif %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-introduction wrap--container theme--{{ section_theme }}">

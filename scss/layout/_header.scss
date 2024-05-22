@@ -140,6 +140,10 @@
             .site-header-mobile-search-button {
                 display: none;
             }
+            // Live search container
+            .live-search {
+                @include rem( height, 48px );
+            }
             // Adjust grid structure
             .site-header-main-content {
                 @include rem(( 

@@ -1676,6 +1676,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .site-header .site-header-main .site-header-mobile-search-button {
     display: none;
   }
+  .site-header .site-header-main .live-search {
+    height: 48px;
+    height: 4.8rem;
+  }
   .site-header .site-header-main .site-header-main-content {
     column-gap: 16px;
     column-gap: 1.6rem;

@@ -4,6 +4,7 @@
 
 {% comment %} Assign section data to vars {% endcomment %}
 {% assign section_heading         = section.settings.heading %}
+{% assign section_heading_size    = section.settings.heading_size %}
 {% assign section_content         = section.settings.content %}
 {% assign section_link_text       = section.settings.link_text %}
 {% assign section_link_url        = section.settings.link_url %}
@@ -28,7 +29,7 @@
             <div class="section__wrap--content-internal">
                 {% comment %} Heading {% endcomment %}
                 {% if section_heading != blank %}
-                    <h1 class="section__heading">{{ section_heading }}</h1>
+                    <h1 class="section__heading {{ section_heading_size }}">{{ section_heading }}</h1>
                 {% endif %}
                 {% comment %} Content {% endcomment %}
 		        {% if section_content != blank %}
@@ -105,6 +106,26 @@
             "id": "heading",
             "label": "Heading",
             "default": "Heading"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "options": [
+				{
+					"value": "text--headline",
+					"label": "Headline"
+				},
+				{
+					"value": "h1",
+					"label": "H1"
+				},
+				{
+					"value": "h2",
+					"label": "H2"
+				}
+            ],
+            "default": "h1"
         },
         {
             "type": "richtext",

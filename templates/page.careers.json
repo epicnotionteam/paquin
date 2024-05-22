@@ -117,41 +117,7 @@
         "subheading": "Explore our current job openings and find the perfect role to match your skills and ambitions.",
         "content": "<p>If you don't see a role that aligns with your expertise but believe you would be a valuable addition to our team, we encourage you to submit your resume to <a href=\"mailto:careers@paquin.com\" title=\"Careers at Paquin\">careers@paquin.com</a>. We are always on the lookout for exceptional talent and potential that may not fit a predefined role.</p>",
         "theme": "alt"
-      },
-      "blocks": [
-        {
-          "type": "role-block",
-          "settings": {
-            "title": "Marketing Coordinator",
-            "division": "Marketing",
-            "location": "Cleveland, OH",
-            "link": "https://www.linkedin.com/jobs/view/3618182670/"
-          }
-        },
-        {
-          "type": "role-block",
-          "settings": {
-            "title": "Account Manager",
-            "division": "Sales",
-            "location": "Remote",
-            "link": "https://www.linkedin.com/jobs/view/3621748919/"
-          }
-        },
-        {
-          "type": "role-block",
-          "settings": {
-            "title": "Product Development Engineer",
-            "division": "Engineering",
-            "location": "Cleveland, OH",
-            "link": "https://www.linkedin.com/jobs/view/3624853161/"
-          }
-        }
-      ],
-      "block_order": [
-        "role-block-1",
-        "role-block-2",
-        "role-block-3"
-      ]
+      }
     }
   }
 }

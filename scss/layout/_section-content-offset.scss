@@ -110,11 +110,16 @@
         .container--phone {
             @include rem( row-gap, spacing(2) );
             display: grid;
-            // Method
+            // Method [Phone]
             .method--phone,
             .method--phone-alt {
                 @include font-size( 'small' );
             }
+        }
+        // Method [Address]
+        .method--address {
+            @include font-size( 'small' );
+            margin: 0;
         }
     }
 }

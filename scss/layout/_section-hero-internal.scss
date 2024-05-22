@@ -41,9 +41,6 @@
                 // Heading
                 .section__heading {
                     margin: 0;
-                    &.text--headline {
-                        @include rem( margin-bottom, spacing(1) );
-                    }
                 }
                  // Content
                  .section__content {
@@ -101,6 +98,10 @@
                 // Wrap [Content, Internal]
                 .section__wrap--content-internal {
                     @include rem( padding-bottom, spacing(7) );
+                    // Heading
+                    .section__heading.text--headline {
+                        @include rem( margin-bottom, spacing(1) );
+                    }
                 }
             }
         }

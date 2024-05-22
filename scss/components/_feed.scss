@@ -306,14 +306,13 @@
         display: grid;
         // Container [Overview]
         .container--overview {
-            @include rem( row-gap, spacing(1) );
-            display: grid;
             // Title
             .item__title {
+                font-weight: font-weight( 'bold' );
                 margin: 0;
             }
             .container--details {
-                @include rem( column-gap, 2px );
+                @include rem( column-gap, spacing(1) );
                 align-items: center;
                 display: flex;
                  // Division

@@ -8,13 +8,14 @@
 {% assign section_content      = section.settings.content %}
 {% assign section_link_text    = section.settings.link_text %}
 {% assign section_link_url     = section.settings.link_url %}
+{% assign section_link_icon    = section.settings.link_icon %}
 {% assign section_theme        = section.settings.theme %}
 
 {% comment %} Determine link element type based on link type {% endcomment %}
 {% if section.settings.link_type == 'link' %}
-    {% assign section_link_element = 'section__link' %}
+    {% assign section_link_element = 'section__link link--icon-before link--icon-arrow-{{ section_link_icon }}' %}
 {% else %}
-    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-forward' %}
+    {% assign section_link_element = 'button--base button--icon-before button--icon-arrow-{{ section_link_icon }}' %}
 {% endif %}
 
 {% comment %} Output section {% endcomment %}
@@ -101,6 +102,22 @@
 				}
             ],
             "default": "link"
+        },
+        {
+            "type": "select",
+            "id": "link_icon",
+            "label": "Link Arrow Direction",
+            "options": [
+				{
+					"value": "forward",
+					"label": "Forward"
+				},
+				{
+					"value": "down",
+					"label": "Down"
+				}            
+            ],
+            "default": "forward"
         },
         {
             "type": "select",

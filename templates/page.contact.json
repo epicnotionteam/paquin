@@ -1,1 +1,17 @@
-{"sections":{"main":{"type":"page-contact","settings":{}}},"order":["main"]}
+{
+  "order": [
+    "contact-hero"
+  ],
+  "sections": {
+    "contact-hero": {
+      "type": "hero-internal",
+      "settings": {
+        "heading": "Contact Paquin",
+        "content": "Short, single line description summarizing page content",
+        "link_text": "",
+        "link_url": "",
+        "image": ""
+      }
+    }
+  }
+}

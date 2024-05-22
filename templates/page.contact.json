@@ -7,7 +7,7 @@
       "type": "hero-internal",
       "settings": {
         "heading": "Contact Paquin",
-        "content": "Short, single line description summarizing page content",
+        "content": "<p>Short, single line description summarizing page content</p>",
         "link_text": "",
         "link_url": "",
         "image": ""

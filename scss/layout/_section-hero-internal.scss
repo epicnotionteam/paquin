@@ -27,9 +27,13 @@
                     margin: 0;
                 }
             }
+            // Wrap [Content, Internal]
             .section__wrap--content-internal {
+                @include rem( padding-bottom, spacing(9) );
                 // Heading
-                .section__heading {}
+                .section__heading {
+                    margin: 0
+                }
                 // Link
                 .section__link {
                     @include rem( margin-top, spacing(2) );
@@ -38,7 +42,6 @@
             .section__wrap--navigation-internal {
                 @include rem(( 
                     column-gap: spacing(2),
-                    margin-top: spacing(9),
                     padding: spacing(4) 0 spacing(5)
                 ));
                 border-top: $border--dark;

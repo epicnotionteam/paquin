@@ -2357,6 +2357,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-internal .container--content .section__wrap--content .wrap--container .breadcrumbs-container {
   margin: 0;
 }
+.section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
+  padding-bottom: 64px;
+  padding-bottom: 6.4rem;
+}
+.section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__heading {
+  margin: 0;
+}
 .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__link {
   margin-top: 8px;
   margin-top: 0.8rem;
@@ -2364,8 +2371,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--hero-internal .container--content .section__wrap--content .section__wrap--navigation-internal {
   column-gap: 8px;
   column-gap: 0.8rem;
-  margin-top: 64px;
-  margin-top: 6.4rem;
   padding: 24px 0 32px;
   padding: 2.4rem 0 3.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);

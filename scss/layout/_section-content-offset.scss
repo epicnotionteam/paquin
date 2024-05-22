@@ -108,7 +108,7 @@
     .section__grid .container--methods {
         // Container [Phone]
         .container--phone {
-            @include rem( row-gap, spacing(1) );
+            @include rem( row-gap, spacing(2) );
             display: grid;
             // Method
             .method--phone,

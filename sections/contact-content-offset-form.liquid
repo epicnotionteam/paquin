@@ -54,7 +54,7 @@
                 {% comment %} Phone [Alt] {% endcomment %}
                 {% if section_method_phone_alt != blank %}
                     {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                    <a href="tel:{{ formatted_phone_alt }}" class="method--phone-alt link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a></p>
+                    <a href="tel:{{ formatted_phone_alt }}" class="method--phone-alt link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a>
                 {% endif %}
             </div>
             {% comment %} Address {% endcomment %}

@@ -2047,8 +2047,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--content-offset.variant--contact-form .section__grid .container--methods .container--phone {
-  row-gap: 4px;
-  row-gap: 0.4rem;
+  row-gap: 8px;
+  row-gap: 0.8rem;
   display: grid;
 }
 .section--content-offset.variant--contact-form .section__grid .container--methods .container--phone .method--phone,

@@ -112,14 +112,6 @@
     @include icon( after, 'arrow_down' );
 }
 
-// State management
-.link--icon-arrow-down:hover {
-    &::after {
-        transform: translateY( 2px );
-    }
-}
-
-
 
 // Link [Icon, Arrow, Forward]
 // --------------------------------------------------
@@ -127,6 +119,7 @@
 .link--icon-arrow-forward {
     @include icon( before, 'arrow_forward' );
     @include icon( after, 'arrow_forward' );
+    @include rem( margin-top, -2px );
 }
 
 // State management

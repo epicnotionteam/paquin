@@ -3,7 +3,8 @@
     "careers-hero",
     "careers-introduction",
     "careers-benefits",
-    "careers-roles"
+    "careers-roles",
+    "careers-resume"
   ],
   "sections": {
     "careers-hero": {
@@ -151,6 +152,17 @@
         "subheading": "Browse Positions",
         "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for engineering excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
         "theme": "alt"
+      }
+    },
+    "careers-resume": {
+      "type": "careers-content-offset-resume-form",
+      "settings": {
+        "heading_small": "Small Heading",
+        "heading_large": "Large Heading",
+        "heading_size": "h1",
+        "subheading": "Subheading",
+        "content": "<p>Content<\/p>",
+        "theme": "dark"
       }
     }
   }

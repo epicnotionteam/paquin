@@ -7,9 +7,17 @@
 {% assign section_content   = section.settings.content %}
 {% assign section_link_text = section.settings.link_text %}
 {% assign section_link_url  = section.settings.link_url %}
+{% assign section_image     = section.settings.image %}
+
+{% comment %} Determine component variant class based on image data {% endcomment %}
+{% if section_image != blank %}
+    {% assign section_class_variant = 'variant--has-image' %}
+{% else %}
+    {% assign section_class_variant = 'variant--base' %}
+{% endif %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--hero-internal theme--dark">
+<section class="section--hero-internal theme--dark {{ section_class_variant }}">
     {% comment %} Container [Content] {% endcomment %}
     <div class="container--content">
         <div class="section__wrap--content">
@@ -39,7 +47,9 @@
         </div>
     </div>
     {% comment %} Image {% endcomment %}
-    <div class="container--image" style="background-image: url('{{ section.settings.image | img_url: '1024x' }}');"></div>
+    {% if section_image != blank %}
+        <div class="container--image" style="background-image: url('{{ section_image | img_url: '1024x' }}');"></div>
+    {% endif %}
 </section>
 
 {% comment %} Generate jump link options {% endcomment %}

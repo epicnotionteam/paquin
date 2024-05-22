@@ -80,7 +80,6 @@
                 width: 100%;
                 // Wrap [Content, Internal]
                 .section__wrap--content-internal {
-                    align-self: flex-end;
                     // Heading
                     .section__heading {}
                     // Link
@@ -89,9 +88,7 @@
                     }
                 }
                 // Wrap [Breadcrumbs]
-                .section__wrap--navigation-internal {
-                    align-self: flex-end;
-                }
+                .section__wrap--navigation-internal {}
             }
         }
     }

@@ -28,6 +28,10 @@
                 .section__heading {
                     @include rem( margin-top, spacing(5) );
                 }
+                // Link
+                .section__link {
+                    @include rem( margin-top, spacing(2) );
+                }
             }
             .section__wrap--navigation-internal {
                 @include rem(( 

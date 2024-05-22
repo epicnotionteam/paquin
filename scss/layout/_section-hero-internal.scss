@@ -36,7 +36,10 @@
                 display: grid;
                 // Heading
                 .section__heading {
-                    margin: 0
+                    margin: 0;
+                    &.text--headline {
+                        @include rem( margin-bottom, 12px );
+                    }
                 }
                  // Content
                  .section__content {

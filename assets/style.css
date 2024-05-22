@@ -3190,12 +3190,6 @@ hr,
   font-weight: 600;
   margin: 0;
 }
-.feed--role .item .container--overview .container--details {
-  column-gap: 4px;
-  column-gap: 0.4rem;
-  align-items: center;
-  display: flex;
-}
 .feed--role .item .container--overview .container--details .item__division {
   margin: 0;
 }

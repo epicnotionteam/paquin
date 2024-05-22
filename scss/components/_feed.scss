@@ -311,17 +311,15 @@
                 font-weight: font-weight( 'bold' );
                 margin: 0;
             }
+            // Container [Details]
             .container--details {
-                @include rem( column-gap, spacing(1) );
-                align-items: center;
-                display: flex;
                  // Division
                 .item__division {
-                    margin: 0
+                    margin: 0;
                 }
                 // Location
                 .item__location {
-                    margin: 0
+                    margin: 0;
                 }
             }
         }

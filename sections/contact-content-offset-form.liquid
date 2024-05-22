@@ -44,12 +44,18 @@
         {% comment %} Contact Methods {% endcomment %}
         <div class="container--methods">
             <h5>Contact Our Sales Team</h5>
+            {% comment %} Phone {% endcomment %}
+            <h5>Contact Our Sales Team</h5>
             {% if section_method_phone != blank %}
-                <p class="method--phone">{{ section_method_phone }}</p>
+                {% assign formatted_phone = section_method_phone | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
+                <p class="method--phone"><a href="tel:{{ formatted_phone }}">{{ section_method_phone }}</a></p>
             {% endif %}
+            {% comment %} Phone [Alt] {% endcomment %}
             {% if section_method_phone_alt != blank %}
-                <p class="method--phone-alt">{{ section_method_phone_alt }}</p>
+                {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
+                <p class="method--phone-alt"><a href="tel:{{ formatted_phone_alt }}">{{ section_method_phone_alt }}</a></p>
             {% endif %}
+            {% comment %} Address {% endcomment %}
             {% if section_method_address != blank %}
                 <hr class="divider--base">
                 <h5>Visit or write to us</h5>

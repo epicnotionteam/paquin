@@ -2400,15 +2400,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     display: flex;
   }
   .section--hero-internal .container--content .section__wrap--content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-self: flex-end;
   }
   .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__link {
     align-self: flex-start;
+  }
+  .section--hero-internal .container--content .section__wrap--content .section__wrap--navigation-internal {
+    align-self: flex-end;
   }
 }
 .section--hero-internal.variant--has-image {

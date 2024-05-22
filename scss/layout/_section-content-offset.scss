@@ -23,36 +23,45 @@
                 margin: 0;
             }
         }
-         // Container [Heading, Large]
-         .container--heading-large {
+        // Container [Heading, Large]
+        .container--heading-large {
             // Heading [Large]
             .section__heading--large {
                 margin: 0;
             }
-         }
-         // Container [Subheading]
-         .container--subheading {
+        }
+        // Container [Subheading]
+        .container--subheading {
             // Subheading
             .section__subheading {
                 @include font-size( 'xsmall' );
                 margin: 0;
             }
-         }
-         // Container [Content]
-         .container--content {
+        }
+        // Container [Content]
+        .container--content {
             // Strip margin from final <p>
             .section__content p:last-child {
                 margin: 0;
             }
-         }
-         // Container [Image]
-         .container--image {
+        }
+        // Container [Image]
+        .container--image {
             // Image
             .section__image {
                 display: block;
                 max-width: 100%;
             }
-         }
+        }
+        // Container [Contact Methods]
+        // Utilized in 'contact-content-offset-form'
+        .container--methods {
+            // Method
+            .method--phone,
+            .method--phone-alt {
+                @include font-size( 'small' );
+            }
+        }
     }
 }
     

@@ -390,7 +390,9 @@
             <div>
               {% for paragraph in faq.content.children %}
                 {% for text in paragraph.children %}
-                  <p>{{ text.value }}</p>
+                  {% if text.type == 'text' %}
+                    <p>{{ text.value }}</p>
+                  {% endif %}
                 {% endfor %}
               {% endfor %}
             </div>
@@ -410,7 +412,9 @@
       <div>
         {% for paragraph in info.content.children %}
           {% for text in paragraph.children %}
-            <p>{{ text.value }}</p>
+            {% if text.type == 'text' %}
+              <p>{{ text.value }}</p>
+            {% endif %}
           {% endfor %}
         {% endfor %}
       </div>

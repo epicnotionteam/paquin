@@ -34,7 +34,7 @@
             // Wrap [Content, Internal]
             .section__wrap--content-internal {
                 @include rem((
-                    padding-bottom: spacing(8),
+                    padding-bottom: spacing(7),
                     row-gap: 12px
                 ));
                 display: grid;
@@ -97,7 +97,12 @@
         // Container [Content]
         .container--content {
             // Wrap [Content]
-            .section__wrap--content {}
+            .section__wrap--content {
+                // Wrap [Content, Internal]
+                .section__wrap--content-internal {
+                    @include rem( padding-bottom, spacing(7) );
+                }
+            }
         }
     }
 }

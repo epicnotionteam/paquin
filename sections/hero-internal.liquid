@@ -22,9 +22,10 @@
     {% comment %} Container [Content] {% endcomment %}
     <div class="container--content">
         <div class="section__wrap--content">
+            {% comment %} Breadcrumbs {% endcomment %}
+            {% render 'breadcrumbs' %}
+            {% comment %} Wrap [Content, Internal] {% endcomment %}
             <div class="section__wrap--content-internal">
-                {% comment %} Breadcrumbs {% endcomment %}
-                {% render 'breadcrumbs' %}
                 {% comment %} Heading {% endcomment %}
                 {% if section_heading != blank %}
                     <h1 class="section__heading">{{ section_heading }}</h1>
@@ -38,6 +39,7 @@
                     <a href="{{ section_link_url }}" class="section__link button--base button--icon-before button--icon-arrow-down">{{ section_link_text }}</a>
                 {% endif %}
             </div>
+            {% comment %} Jump Links {% endcomment %}
             {% if section_show_jump_links %}
                 <div class="section__wrap--navigation-internal">
                     <p class="navigation__label">Jump to section:</p>

@@ -74,37 +74,40 @@
 {% comment %} Conditional carousel initialization {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Assign carousel instance to var
-        let carouselTrustSignals;
-        // Initialize or destroy carousel based on window width
-        function initializeCarousel() {
-            if (window.innerWidth < 1024) {
-                // Initialize carousel if window width is <1024px
-                carouselTrustSignals = new Glide('.carousel--trust-signals', {
-                    type: 'carousel',
-                    autoplay: 3200,
-                    perView: 1,
-                    animationDuration: 800,
-                    gap: 24,
-                });
-                // Mount carousel instance
-                carouselTrustSignals.mount(); 
-            } else {
-                // Destroy carousel if window width is >1024px
-                if (carouselTrustSignals) {
-                    carouselTrustSignals.destroy();
-                }
-            }
+      // Assign carousel instance to var
+      let carouselTrustSignals;
+      // Initialize or destroy carousel based on window width
+      function initializeCarousel() {
+        if (window.innerWidth < 1024) {
+          // Initialize carousel if window width is <1024px
+          if (!carouselTrustSignals) {
+            carouselTrustSignals = new Glide('.carousel--trust-signals', {
+              type: 'carousel',
+              autoplay: 3200,
+              perView: 1,
+              animationDuration: 800,
+              gap: 24,
+            });
+            // Mount carousel instance
+            carouselTrustSignals.mount();
+          }
+        } else {
+          // Destroy carousel if window width is >1024px
+          if (carouselTrustSignals) {
+            carouselTrustSignals.destroy();
+            carouselTrustSignals = null;
+          }
         }
-        // Call function initially
-        initializeCarousel(); 
-        // Event listener for window resize
-        window.addEventListener('resize', function () {
-            // Reinitialize or destroy carousel on window resize
-            initializeCarousel();
-        });
+      }
+      // Call function initially
+      initializeCarousel();
+      // Event listener for window resize
+      window.addEventListener('resize', function () {
+        // Reinitialize or destroy carousel on window resize
+        initializeCarousel();
+      });
     });
-</script>
+    </script>
 
 {% schema %}
 {

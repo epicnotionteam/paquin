@@ -11,6 +11,7 @@
       "type": "hero-internal",
       "settings": {
         "heading": "Want To Be a Part of Something Special?",
+        "content": "<p>If so, then take a look at what Paquin has to offer below.<\/p>",
         "link_text": "Explore open roles",
         "link_url": "#test",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"

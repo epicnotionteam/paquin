@@ -13,7 +13,6 @@
     @include rem( max-width, wrap( 'max' ) );
     background-color: transparent;
     margin: 0 auto;
-    opacity: 1;
     padding: 0;
     & > .navmenu {
         @include rem( transform, translateX( -12px ) );

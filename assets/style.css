@@ -1094,6 +1094,9 @@ body {
 .theme--dark .breadcrumbs-container a {
   color: white;
 }
+.theme--dark .button--outline {
+  box-shadow: 0 0 0 1px #D6DBDD inset;
+}
 .theme--dark .button--outline:hover {
   color: white;
   box-shadow: 0 0 0 1px white inset;
@@ -3636,7 +3639,6 @@ ul.list--link-arrow li::before {
   max-width: 159rem;
   background-color: transparent;
   margin: 0 auto;
-  opacity: 1;
   padding: 0;
 }
 .site-navigation > .navmenu {

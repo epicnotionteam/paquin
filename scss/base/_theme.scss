@@ -36,9 +36,13 @@
 	}
 	// Component [Button, Outline:Hover]
 	//
-	.button--outline:hover {
-		color: white;
-		box-shadow: 0 0 0 1px white inset;
+	.button--outline {
+		box-shadow: 0 0 0 1px color( 'steel', '5' ) inset;
+		// State:hover
+		&:hover {
+			color: white;
+			box-shadow: 0 0 0 1px white inset;
+		}
 	}
 	// Component [Link, Base]
 	a:not([class*='button']):not(.breadcrumbs-container a),

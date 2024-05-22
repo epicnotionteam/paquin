@@ -10,7 +10,7 @@
 
 // Section container
 .section--hero-internal {
-    @include rem( min-height, 288px );
+    @include rem( min-height, 256px );
     background-color: color( 'steel', '1' );
     display: grid;
     padding: 0 4vw;
@@ -91,6 +91,7 @@
 @include mq( $from: medium ) {
     // Section container
     .section--hero-internal {
+        @include rem( min-height, 288px );
         // Container [Content]
         .container--content {
             // Wrap [Content]

@@ -2046,13 +2046,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-row: 3;
   }
 }
-.section--content-offset.variant--contact-form .section__grid .container--methods {
+.section--content-offset.variant--contact-form .section__grid .container--methods .container--phone {
   row-gap: 4px;
   row-gap: 0.4rem;
   display: grid;
 }
-.section--content-offset.variant--contact-form .section__grid .container--methods .method--phone,
-.section--content-offset.variant--contact-form .section__grid .container--methods .method--phone-alt {
+.section--content-offset.variant--contact-form .section__grid .container--methods .container--phone .method--phone,
+.section--content-offset.variant--contact-form .section__grid .container--methods .container--phone .method--phone-alt {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;

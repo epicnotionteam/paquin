@@ -44,16 +44,19 @@
         {% comment %} Contact Methods {% endcomment %}
         <div class="container--methods">
             <h5>Contact Our Sales Team</h5>
-            {% comment %} Phone {% endcomment %}
-            {% if section_method_phone != blank %}
-                {% assign formatted_phone = section_method_phone | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                <a href="tel:{{ formatted_phone }}" class="method--phone link--icon-after link--icon-arrow-outgoing">{{ section_method_phone }}</a>
-            {% endif %}
-            {% comment %} Phone [Alt] {% endcomment %}
-            {% if section_method_phone_alt != blank %}
-                {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                <a href="tel:{{ formatted_phone_alt }}" class="method--phone-alt link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a></p>
-            {% endif %}
+            {% comment %} Container [Phone] {% endcomment %}
+            <div class="container--phone">
+                {% comment %} Phone {% endcomment %}
+                {% if section_method_phone != blank %}
+                    {% assign formatted_phone = section_method_phone | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
+                    <a href="tel:{{ formatted_phone }}" class="method--phone link--icon-after link--icon-arrow-outgoing">{{ section_method_phone }}</a>
+                {% endif %}
+                {% comment %} Phone [Alt] {% endcomment %}
+                {% if section_method_phone_alt != blank %}
+                    {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
+                    <a href="tel:{{ formatted_phone_alt }}" class="method--phone-alt link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a></p>
+                {% endif %}
+            </div>
             {% comment %} Address {% endcomment %}
             {% if section_method_address != blank %}
                 <hr class="divider--base">

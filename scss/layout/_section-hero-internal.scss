@@ -47,7 +47,7 @@
                 }
                 // Link
                 .section__link {
-                    @include rem( margin-top, 12px );
+                    @include rem( margin-top, spacing(3) );
                     justify-self: flex-start;
                 }
             }
@@ -96,17 +96,6 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                // Wrap [Content, Internal]
-                .section__wrap--content-internal {
-                    // Heading
-                    .section__heading {}
-                    // Link
-                    .section__link {
-                        align-self: flex-start;
-                    }
-                }
-                // Wrap [Breadcrumbs]
-                .section__wrap--navigation-internal {}
             }
         }
     }

@@ -2371,8 +2371,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__link {
-  margin-top: 12px;
-  margin-top: 1.2rem;
+  margin-top: 16px;
+  margin-top: 1.6rem;
   justify-self: flex-start;
 }
 .section--hero-internal .container--content .section__wrap--content .section__wrap--navigation-internal {
@@ -2422,9 +2422,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-  .section--hero-internal .container--content .section__wrap--content .section__wrap--content-internal .section__link {
-    align-self: flex-start;
   }
 }
 .section--hero-internal.variant--has-image {

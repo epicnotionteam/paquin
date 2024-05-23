@@ -2659,7 +2659,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
   line-height: 1;
 }
-.accordion .item.active .item__content {
+.accordion .item.state--active .item__content {
   padding: 0 20px 20px;
   opacity: 1;
 }

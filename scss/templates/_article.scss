@@ -96,6 +96,22 @@
     @include rem( column-gap, spacing(3) );
     align-items: center;
     display: grid;
+    grid-template-columns: max-content 1fr;
+    // Container [Image]
+    .container--image  {
+        @include rem((
+            height: 64px,
+            width: 64px
+        ));
+        border-radius: 100%;
+        overflow: hidden;
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+    }
     // Container [Information]
     .container--information  {
         // Name

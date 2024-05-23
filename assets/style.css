@@ -2520,6 +2520,21 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   column-gap: 1.6rem;
   align-items: center;
   display: grid;
+  grid-template-columns: max-content 1fr;
+}
+.article__author .container--image {
+  height: 64px;
+  height: 6.4rem;
+  width: 64px;
+  width: 6.4rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.article__author .container--image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 .article__author .container--information .author__name {
   font-size: 15px;

@@ -2539,6 +2539,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-top: 4rem;
   padding: 40px 0 72px;
   padding: 4rem 0 7.2rem;
+  row-gap: 32px;
+  row-gap: 3.2rem;
   border-top: 1px solid #D6DBDD;
   display: grid;
 }

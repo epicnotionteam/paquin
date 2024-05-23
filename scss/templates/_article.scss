@@ -85,7 +85,8 @@
     .section__grid {
         @include rem((
             margin-top: spacing(6),
-            padding: spacing(6) 0 $gap--section-small
+            padding: spacing(6) 0 $gap--section-small,
+            row-gap: spacing(5)
         ));
         border-top: $border--base;
         display: grid;
@@ -100,7 +101,7 @@
             @include rem(( 
                 column-gap: spacing(4),
                 padding: spacing(6) 0 $gap--section-large,
-                row-gap: spacing(6) 
+                row-gap: spacing(6)
             ));
             grid-template-columns: repeat( 12, 1fr );
             // Container [Sidebar]

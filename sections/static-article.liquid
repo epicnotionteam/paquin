@@ -25,30 +25,19 @@
 {%- endcapture  -%}
 
 <section class="article--outer">
-  {% if article.image %}
-    <figure
-      class="article-image article-image--{{- section.settings.featured_image_width }}"
-      {%
-        render 'rimg',
-        img: article.image,
-        size: '1800x',
-        lazy: true,
-        crop: 'center',
-        background: true
-      %}
-    >
-      {%
-        render 'rimg',
-        img: article.image,
-        size: '1800x',
-        crop: 'center',
-        lazy: true,
-        canvas: true
-      %}
-    </figure>
-  {% endif %}
-
   <div class="article--container">
+
+    {% comment %} Page Header {% endcomment %}
+    <section class="wrap--container theme--alt">
+    	<div class="wrap--max psuh--center">
+        	{% comment %} Author {% endcomment %}
+        	<h1>{{ article.title }}</h1>
+        	{% comment %} Author {% endcomment %}
+        	<div class="post__author">
+          		{{ article.author }}
+        	</div>
+      	</div>
+    </section>
 
     {% if has_share %}
       <div class="article--sidebar">

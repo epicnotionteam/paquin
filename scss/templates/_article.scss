@@ -5,11 +5,11 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
-// Section [Article Header]
+// Section [Article Content]
 // --------------------------------------------------
 
 // Component container
-.section--article-header {
+.section--article-content {
     // Grid structure
     .section__grid {
         display: grid;
@@ -18,7 +18,7 @@
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
-    .section--article-header {
+    .section--article-content {
         // Adjust grid structure
         .section__grid {
             @include rem(( 

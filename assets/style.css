@@ -2513,8 +2513,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .section--article-header {
-    padding-bottom: 64px;
-    padding-bottom: 6.4rem;
+    padding-bottom: 56px;
+    padding-bottom: 5.6rem;
   }
   .section--article-header .section__grid {
     grid-auto-rows: auto;
@@ -2524,6 +2524,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
   .section--article-header .section__grid .container--heading {
+    margin-top: 32px;
+    margin-top: 3.2rem;
     grid-column: 1/span 8;
     grid-row: 2;
   }

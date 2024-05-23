@@ -4208,6 +4208,6 @@ ul.list--link-arrow li::before {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
-  color: #212224;
-  font-weight: normal;
+  color: #212224 !important;
+  font-weight: normal !important;
 }

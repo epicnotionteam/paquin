@@ -275,7 +275,7 @@
     // Link
     a {
         @include font-size( 'xsmall' );
-        color: color( 'steel', '1' );
-        font-weight: normal;
+        color: color( 'steel', '1' ) !important;
+        font-weight: normal !important;
     }
 }

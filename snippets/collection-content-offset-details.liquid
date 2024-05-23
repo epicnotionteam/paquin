@@ -3,14 +3,14 @@
 // Built specifically for Collection pages
 {% endcomment %}
 
-{% comment %} Assign section data to vars
+{% comment %} Assign section data to vars {% endcomment %}
 {% assign data_collection = collection %}
-{% assign section_data_information = data_collection.metafields.custom.collection_information %}
+{% assign section_data_information = data_collection.metafields.custom.collection_information.value %}
 {% assign section_heading_small = section_data_information.heading_small %}
 {% assign section_heading_large = section_data_information.heading_large %}
 {% assign section_subheading = section_data_information.subheading %}
 {% assign section_content = section_data_information.content %}
-{% assign section_data_faq = data_collection.metafields.custom.collection_faqs %}
+{% assign section_data_faq = data_collection.metafields.custom.collection_faqs.value %}
 
 {% if data_collection != blank %}
     <pre>{{ data_collection | json }}</pre>
@@ -73,30 +73,4 @@
             </div>
         {% endif %}
     </div>
-</section> {% endcomment %}
-
-
-{% if collection.metafields.custom.collection_faqs != blank %}
-    <div class="collection-faqs">
-      <h2>FAQs</h2>
-      <ul>
-        {% for faq in collection.metafields.custom.collection_faqs.value %}
-          <li>
-            <h3>{{ faq.heading }}</h3>
-            <p>{{ faq.content| metafield_tag }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-  
-  {% if collection.metafields.custom.collection_information != blank %}
-    <div class="collection-information">
-      <h2>Collection Information</h2>
-      {% assign info = collection.metafields.custom.collection_information.value %}
-      <h3 class="heading-small">{{ info.heading_small }}</h3>
-      <h3 class="subheading">{{ info.subheading }}</h3>
-      <h3 class="heading-large">{{ info.heading_large }}</h3>
-      <p>{{ info.content | metafield_tag }}</p>
-    </div>
-  {% endif %}
+</section>

@@ -388,12 +388,7 @@
         {% for faq in collection.metafields.custom.collection_faqs.value %}
           <li>
             <h3>{{ faq.heading }}</h3>
-            {% if faq.content.type == 'root' %}
-              {% assign content = faq.content.children | map: 'children' | map: 'value' | join: ' ' %}
-              <p>{{ content }}</p>
-            {% else %}
-              <p>{{ faq.content }}</p>
-            {% endif %}
+            <p>{{ faq.content | metafield_tag }}</p>
           </li>
         {% endfor %}
       </ul>

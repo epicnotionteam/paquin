@@ -4,25 +4,13 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign data_collection = collection %}
+{% assign data_collection          = collection %}
 {% assign section_data_information = data_collection.metafields.custom.collection_information.value %}
-{% assign section_heading_small = section_data_information.heading_small %}
-{% assign section_heading_large = section_data_information.heading_large %}
-{% assign section_subheading = section_data_information.subheading %}
-{% assign section_content = section_data_information.content %}
-{% assign section_data_faq = data_collection.metafields.custom.collection_faqs.value %}
-
-{% if data_collection != blank %}
-    <pre>{{ data_collection | json }}</pre>
-{% endif %}
-
-{% if section_data_information != blank %}
-    <pre>{{ section_data_information | json }}</pre>
-{% endif %}
-
-{% if section_data_faq != blank %}
-    <pre>{{ section_data_faq | json }}</pre>
-{% endif %}
+{% assign section_heading_small    = section_data_information.heading_small %}
+{% assign section_heading_large    = section_data_information.heading_large %}
+{% assign section_subheading       = section_data_information.subheading %}
+{% assign section_content          = section_data_information.content %}
+{% assign section_data_faq         = data_collection.metafields.custom.collection_faqs.value %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-offset theme--alt wrap--container">

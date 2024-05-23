@@ -31,6 +31,8 @@
     <section class="section--article-header wrap--container theme--alt">
     	<div class="wrap--max push--center">
 			<div class="section__grid">
+				{% comment %} Breadcrumbs {% endcomment %}
+				{% render 'breadcrumbs' %}
 				{% comment %} Heading {% endcomment %}
 				<div class="container--heading">
 					<h1 class="article__heading">{{ article.title }}</h1>

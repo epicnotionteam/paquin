@@ -12,6 +12,10 @@
 {% assign section_content          = section_data_information.content %}
 {% assign section_data_faq         = data_collection.metafields.custom.collection_faqs %}
 
+{% if section_heading_large != blank %} 
+    HAS COLLECTION DATA
+{% endif %}
+
 {% comment %} Output section {% endcomment %}
 <section class="section--content-offset theme--alt wrap--container">
     <div class="section__grid wrap--max push--center">

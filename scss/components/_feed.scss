@@ -335,6 +335,11 @@
                 display: flex;
                 margin: 0;
             }
+            // Container [Actions]
+            .container--actions {
+                @include rem( row-gap, 6px );
+                display: grid;
+            }
         }
     }
 }

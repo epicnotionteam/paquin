@@ -3194,6 +3194,11 @@ hr,
   display: flex;
   margin: 0;
 }
+.productgrid--items .productgrid--item .productitem .container--actions {
+  row-gap: 6px;
+  row-gap: 0.6rem;
+  display: grid;
+}
 
 @media (min-width: 64em) {
   .template-collection .productgrid--items {

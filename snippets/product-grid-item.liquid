@@ -604,12 +604,15 @@
               </div>
             {% endif %} {% endcomment %}
 
-            <a class="button--base" href="{{ product.url }}">View details</a>
-
-            {% comment %} Data Sheet {% endcomment %}
-            {% if product.metafields.custom.data_sheet != blank %}
-              {% render 'product-data-sheet', product: product %}
-            {% endif %}
+            {% comment %} Container [Actions] {% endcomment %}
+            <div class="container--actions">
+              {% comment %} Button [View Details] {% endcomment %}
+              <a class="button--base" href="{{ product.url }}">View details</a>
+              {% comment %} Button [View Data Sheet] {% endcomment %}
+              {% if product.metafields.custom.data_sheet != blank %}
+                {% render 'product-data-sheet', product: product %}
+              {% endif %}
+            </div>
                 
           </div>
         {% endif %}

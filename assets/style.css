@@ -2633,6 +2633,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 .accordion .item .item__heading {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
   cursor: pointer;
   font-weight: 600;
   margin: 0;

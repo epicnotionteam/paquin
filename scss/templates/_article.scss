@@ -24,6 +24,16 @@
     // Grid structure
     .section__grid {
         display: grid;
+        // Container [Heading]
+        .container--heading {
+            // Heading
+            .section__heading {
+                @include font-size( 'headline' );
+                margin: 0;
+            }
+        }
+        // Container [Author]
+        .container--author {}
     }
 }
 

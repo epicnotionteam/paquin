@@ -54,7 +54,7 @@
 				<div class="container--content">
 					{% comment %} Post Content {% endcomment %}
 					<div class="section__wrap--content">
-						{{ article.content }}
+						{{ article.content | richtext }}
 					</div>
 					<div class="section__wrap--author">
 						{% render 'article-author', article: article, show_tags: true %}

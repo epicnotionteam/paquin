@@ -21,6 +21,7 @@
 
 // Component container
 .section--article-header {
+    @include rem( padding-bottom, spacing(7) );
     // Grid structure
     .section__grid {
         display: grid;
@@ -48,6 +49,7 @@
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     .section--article-header {
+        @include rem( padding-bottom, spacing(9) );
         // Adjust grid structure
         .section__grid {
             @include rem( row-gap, spacing(4) );

@@ -2475,6 +2475,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
+.section--article-header {
+  padding-bottom: 48px;
+  padding-bottom: 4.8rem;
+}
 .section--article-header .section__grid {
   display: grid;
 }
@@ -2502,6 +2506,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 @media (min-width: 64em) {
+  .section--article-header {
+    padding-bottom: 64px;
+    padding-bottom: 6.4rem;
+  }
   .section--article-header .section__grid {
     row-gap: 24px;
     row-gap: 2.4rem;

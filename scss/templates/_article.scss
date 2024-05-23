@@ -113,6 +113,10 @@
             .container--content {
                 grid-column: 4 / span 6;
                 order: 1;
+                // Widget [Author]
+                .article__author {
+                    @include rem( margin-top, spacing(6) );
+                }
             }
         }
     }

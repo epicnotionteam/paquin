@@ -2503,10 +2503,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .section--article-header .section__grid {
-    column-gap: 24px;
-    column-gap: 2.4rem;
-    row-gap: 40px;
-    row-gap: 4rem;
+    row-gap: 24px;
+    row-gap: 2.4rem;
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }

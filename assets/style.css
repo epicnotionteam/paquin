@@ -2786,6 +2786,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.button--icon-data-sheet::before, .button--icon-data-sheet::after {
+  margin-top: 1px;
+  margin-top: 0.1rem;
+  font-size: 128%;
+  line-height: 1;
+}
 
 .carousel--content-media .item .item__grid {
   row-gap: 40px;

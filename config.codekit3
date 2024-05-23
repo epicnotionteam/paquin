@@ -1861,6 +1861,14 @@
       "oAP" : "\/snippets\/age-gate.liquid",
       "oF" : 0
     },
+    "\/snippets\/article-author.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/article-author.liquid",
+      "oF" : 0
+    },
     "\/snippets\/article-comment-item.liquid" : {
       "cB" : 0,
       "ft" : 8192,

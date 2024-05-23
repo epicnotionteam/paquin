@@ -37,7 +37,7 @@
 				</div>
 				{% comment %} Author {% endcomment %}
 				<div class="container--author">
-					{{ article.author }}
+					{{ render 'article-author', article: article }}
 				</div>
 			</div>
       	</div>
@@ -59,12 +59,18 @@
 						{{ article.content }}
 					</div>
 					<div class="section__wrap--author">
-						{{ article.author }}
+						{{ render 'article-author', article: article }}
 					</div>
 				</div>
 			</div>
       	</div>
     </section>
+
+	{% comment %} Related Articles {% endcomment %}
+    <section class="section--related-articles wrap--container theme--alt">
+    	<div class="wrap--max push--center">
+		</div>
+	</section>
 
 
     {% comment %} <div class="article--inner">

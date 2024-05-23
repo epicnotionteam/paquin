@@ -1,0 +1,45 @@
+{% comment %}
+// Output Article Author component
+{% endcomment %}
+
+{% comment %} Assign section data to vars {% endcomment %}
+{% assign article_author = article.author %}
+
+{% comment %} Define author data array {% endcomment %}
+{% assign authors = [
+    {
+        'name': 'Graeme Bryson',
+        'image': 'graeme-bryson.jpg'
+    },
+    {
+        'name': 'Rob Kinkopf',
+        'image': 'rob-kinkopf.jpg'
+    }
+] %}
+
+{% comment %} Output component {% endcomment %}
+<div class="article__author">
+    {% assign author_found = false %}
+    {% for author in authors %}
+        {% if article_author == author.name %}
+            {% assign author_found = true %}
+            {% comment %} Image {% endcomment %}
+            <div class="author__image">
+                <img src="{{ author.image | asset_url }}" alt="{{ author.name }}">
+            </div>
+            {% comment %} Name {% endcomment %}
+            <h3 class="author__name">{{ author.name }}</h3>
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {% comment %} Fallback author block {% endcomment %}
+    {% if author_found == false %}
+        {% comment %} Fallback (if unset/invalid) {% endcomment %}
+        <div class="article__author-image">
+            <img src="{{ 'default-author.jpg' | asset_url }}" alt="Default Author">
+        </div>
+        <div class="article__author-info">
+            <h3>The Paquin Team</h3>
+        </div>
+    {% endif %}
+</div>

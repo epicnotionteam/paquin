@@ -2479,10 +2479,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .collection--section .productgrid--outer {
     column-gap: 24px;
     column-gap: 2.4rem;
-    grid-template-columns: 256px 1fr;
-    grid-template-columns: 25.6rem 1fr;
     row-gap: 24px;
     row-gap: 2.4rem;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .collection--section .productgrid--outer .productgrid--masthead {
+    grid-column: 1/span 12;
+  }
+  .collection--section .productgrid--outer .productgrid--sidebar {
+    grid-column: 1/span 2;
+  }
+  .collection--section .productgrid--outer .productgrid--wrapper {
+    grid-column: 3/span 10;
   }
 }
 .template-collection .productgrid--masthead {

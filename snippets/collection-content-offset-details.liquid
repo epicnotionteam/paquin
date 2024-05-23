@@ -4,26 +4,18 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign data_collection          = collection %}
-{% assign section_data_information = data_collection.metafields.custom.collection_information %}
-{% assign section_heading_small    = section_data_information.heading_small %}
-{% assign section_heading_large    = section_data_information.heading_large %}
-{% assign section_subheading       = section_data_information.subheading %}
-{% assign section_content          = section_data_information.content %}
-{% assign section_data_faq         = data_collection.metafields.custom.collection_faqs %}
+{% assign data_collection = collection %}
 
-{% if data_collection != blank %} 
-    <pre>{{ data_collection | json }}</pre>
-{% endif %}
-{% if data_collection.metafields != blank %}
-    <pre>{{ data_collection.metafields | json }}</pre>
-{% endif %}
-{% if data_collection.metafields.custom != blank %}
-    <pre>{{ data_collection.metafields.custom | json }}</pre>
-{% endif %}
-{% if section_data_information != blank %}
-    <pre>{{ section_data_information | json }}</pre>
-{% endif %}
+{% comment %} Fetch collection_information Metaobject {% endcomment %}
+{% assign collection_information = shopify.liquid_object_to_liquid_tag(data_collection.metafields.custom.collection_information) %}
+
+{% assign section_heading_small = collection_information.heading_small %}
+{% assign section_heading_large = collection_information.heading_large %}
+{% assign section_subheading = collection_information.subheading %}
+{% assign section_content = collection_information.content %}
+
+{% comment %} Fetch collection_faqs Metaobjects {% endcomment %}
+{% assign section_data_faq = data_collection.metafields.custom.collection_faqs %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-offset theme--alt wrap--container">
@@ -58,9 +50,10 @@
             <div class="container--faq">
                 <div class="feed--faq">
                     {% for faq in section_data_faq %}
+                        {% assign faq_data = shopify.liquid_object_to_liquid_tag(faq) %}
                         {% comment %} Assign item data to vars {% endcomment %}
-                        {% assign item_heading = faq.heading %}
-                        {% assign item_content = faq.content %}
+                        {% assign item_heading = faq_data.heading %}
+                        {% assign item_content = faq_data.content %}
                         <div class="item">
                             {% if item_heading != blank %}
                                 <h3 class="item__heading">{{ item_heading }}</h3>
@@ -70,8 +63,8 @@
                                 <div class="item__content">{{ item_content | metafield_tag }}</div>
                             {% endif %}
                         </div>
-                  {% endfor %}
-              </div>
+                    {% endfor %}
+                </div>
             </div>
         {% endif %}
     </div>

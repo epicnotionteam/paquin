@@ -3194,7 +3194,13 @@ hr,
   display: flex;
   margin: 0;
 }
-.productgrid--items .productgrid--item .productitem .container--actions {
+.productgrid--items .productgrid--item .productitem .productitem--actions {
+  margin: 0 12px;
+  margin: 0 1.2rem;
+}
+.productgrid--items .productgrid--item .productitem .productitem--actions .container--actions {
+  margin-top: 12px;
+  margin-top: 1.2rem;
   row-gap: 6px;
   row-gap: 0.6rem;
   display: grid;

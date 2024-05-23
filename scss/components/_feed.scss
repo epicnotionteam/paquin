@@ -336,10 +336,16 @@
                 margin: 0;
             }
             // Container [Actions]
-            .container--actions {
-                @include rem( row-gap, 6px );
-                display: grid;
-                width: 100%;
+            .productitem--actions {
+                @include rem( margin, 0 12px );
+                .container--actions {
+                    @include rem(( 
+                        margin-top: 12px,
+                        row-gap: 6px 
+                    ));
+                    display: grid;
+                    width: 100%;
+                }
             }
         }
     }

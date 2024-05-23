@@ -604,7 +604,7 @@
 
               {% comment %} Data Sheet {% endcomment %}
               {% if product.metafields.custom.data_sheet != blank %}
-                {% render 'product-data-sheet' %}
+                {% render 'product-data-sheet', product: product %}
               {% endif %}
 
             {% endif %}

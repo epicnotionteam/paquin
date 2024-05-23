@@ -43,7 +43,7 @@
         {% comment %} FAQs {% endcomment %}
         {% if section_data_faq != blank %}
             <div class="container--faq">
-                <div class="feed--faq">
+                <div class="feed--faq accordion">
                     {% for faq in section_data_faq %}
                         {% assign item_heading = faq.heading %}
                         {% assign item_content = faq.content %}

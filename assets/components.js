@@ -13,31 +13,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Accordion Component
 	const accordions = document.querySelectorAll(".accordion");
-	const openAccordion = (accordion) => {
-		const content = accordion.querySelector(".accordion__content");
-		accordion.classList.add("accordion__active");
-		content.style.maxHeight = content.scrollHeight + "px";
-	};
-	const closeAccordion = (accordion) => {
-		const content = accordion.querySelector(".accordion__content");
-		accordion.classList.remove("accordion__active");
-		content.style.maxHeight = null;
-	};
-	accordions.forEach((accordion) => {
-		const intro = accordion.querySelector(".accordion__intro");
-		const content = accordion.querySelector(".accordion__content");
-		intro.onclick = () => {
-			if (content.style.maxHeight) {
-				closeAccordion(accordion);
-			} else {
-				accordions.forEach((otherAccordion) => {
-					if (otherAccordion !== accordion) {
-						closeAccordion(otherAccordion);
-					}
-				});
-				openAccordion(accordion);
-			}
-		};
-	});
+
+  const openAccordion = (item) => {
+    const content = item.querySelector(".item__content");
+    item.classList.add("state--active");
+    content.style.maxHeight = content.scrollHeight + "px";
+  };
+
+  const closeAccordion = (item) => {
+    const content = item.querySelector(".item__content");
+    item.classList.remove("state--active");
+    content.style.maxHeight = null;
+  };
+
+  accordions.forEach((accordion) => {
+    const items = accordion.querySelectorAll(".item");
+
+    items.forEach((item) => {
+      const heading = item.querySelector(".item__heading");
+      const content = item.querySelector(".item__content");
+
+      heading.onclick = () => {
+        if (item.classList.contains("state--active")) {
+          closeAccordion(item);
+        } else {
+          items.forEach((otherItem) => {
+            if (otherItem !== item) {
+              closeAccordion(otherItem);
+            }
+          });
+          openAccordion(item);
+        }
+      };
+    });
+  });
 
 });

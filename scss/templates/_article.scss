@@ -24,6 +24,7 @@
     @include rem( padding-bottom, spacing(7) );
     // Grid structure
     .section__grid {
+        @include rem( row-gap, spacing(4) );
         display: grid;
         // Container [Breadcrumbs]
         & > .wrap--container {
@@ -52,7 +53,6 @@
         @include rem( padding-bottom, spacing(9) );
         // Adjust grid structure
         .section__grid {
-            @include rem( row-gap, spacing(4) );
             grid-auto-rows: auto;
             grid-template-columns: repeat( 12, 1fr );
              // Container [Breadcrumbs]

@@ -2480,6 +2480,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-bottom: 4.8rem;
 }
 .section--article-header .section__grid {
+  row-gap: 24px;
+  row-gap: 2.4rem;
   display: grid;
 }
 .section--article-header .section__grid > .wrap--container {
@@ -2511,8 +2513,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 6.4rem;
   }
   .section--article-header .section__grid {
-    row-gap: 24px;
-    row-gap: 2.4rem;
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }

@@ -31,10 +31,12 @@
     <section class="section--article-header wrap--container theme--alt">
     	<div class="wrap--max push--center">
 			<div class="section__grid">
+				{% comment %} Title {% endcomment %}
+				<div class="container--title">
+					<h1>{{ article.title }}</h1>
+				</div>
 				{% comment %} Author {% endcomment %}
-				<h1>{{ article.title }}</h1>
-				{% comment %} Author {% endcomment %}
-				<div class="post__author">
+				<div class="container--author">
 					{{ article.author }}
 				</div>
 			</div>

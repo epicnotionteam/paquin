@@ -2775,6 +2775,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-area: core;
   }
 }
+blockquote {
+  margin: 24px 16px 24px 0;
+  margin: 2.4rem 1.6rem 2.4rem 0;
+  padding-left: 16px;
+  padding-left: 1.6rem;
+  border-left: 3px solid #212224;
+  color: #66787F;
+}
+
 .accordion {
   overflow: hidden;
   width: 100%;

@@ -27,11 +27,24 @@
       class="share-buttons--button share-buttons--facebook"
       target="_blank"
       href="//www.facebook.com/sharer.php?u={{ share_url }}">
-      {%-
+      {% comment %} {%-
         render 'social-icon',
         id: 'facebook'
-      -%}
+      -%} {% endcomment %}
+      Facebook
       <span class="visually-hidden">{{ 'general.accessibility.share_on_facebook' | t }}</span>
+    </a>
+
+    <a
+      class="share-buttons--button share-buttons--linkedin"
+      target="_blank"
+      href="//www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ share_title }}">
+      {% comment %} {%-
+        render 'social-icon',
+        id: 'linkedin'
+      -%} {% endcomment %}
+      LinkedIn
+      <span class="visually-hidden">{{ 'general.accessibility.share_on_linkedin' | t }}</span>
     </a>
 
     <a
@@ -41,35 +54,13 @@
       "
       target="_blank"
       href="//x.com/intent/tweet?url={{ share_url }}">
-      {%-
+      {% comment %} {%-
         render 'social-icon',
         id: 'x',
-      -%}
+      -%} {% endcomment %}
+      X
       <span class="visually-hidden">{{ 'general.accessibility.share_on_x' | t }}</span>
     </a>
 
-    <a
-      class="share-buttons--button share-buttons--linkedin"
-      target="_blank"
-      href="//www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ share_title }}">
-      {%-
-        render 'social-icon',
-        id: 'linkedin'
-      -%}
-      <span class="visually-hidden">{{ 'general.accessibility.share_on_linkedin' | t }}</span>
-    </a>
-
-    {% if share_image %}
-      <a
-        class="share-buttons--button share-buttons--pinterest"
-        target="_blank"
-        href="//pinterest.com/pin/create/button/?url={{ share_url }}&amp;media={{ share_image }}&amp;description={{ share_title }}">
-        {%-
-          render 'social-icon',
-          id: 'pinterest'
-        -%}
-        <span class="visually-hidden">{{ 'general.accessibility.share_on_pinterest' | t }}</span>
-      </a>
-    {% endif %}
   </div>
 </aside>

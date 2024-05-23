@@ -150,3 +150,12 @@
         line-height: 1;
     }
 }
+
+
+// Button [Icon, Data Sheet]
+// --------------------------------------------------
+
+.button--icon-data-sheet {
+    @include icon( before, 'data_sheet' );
+    @include icon( after, 'data_sheet' );
+}

@@ -2766,6 +2766,27 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 1;
 }
 
+.button--icon-data-sheet:before {
+  content: "\e032";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-data-sheet:after {
+  content: "\e032";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .carousel--content-media .item .item__grid {
   row-gap: 40px;
   row-gap: 4rem;

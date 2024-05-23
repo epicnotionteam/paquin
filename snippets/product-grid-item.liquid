@@ -607,10 +607,10 @@
             {% comment %} Container [Actions] {% endcomment %}
             <div class="container--actions">
               {% comment %} Button [View Details] {% endcomment %}
-              <a class="button--base" href="{{ product.url }}">View details</a>
+              <a class="button--base button--icon-before button--icon-arrow-forward" href="{{ product.url }}">View details</a>
               {% comment %} Button [View Data Sheet] {% endcomment %}
               {% if product.metafields.custom.data_sheet != blank %}
-                <a class="button--outline" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
+                <a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
               {% endif %}
             </div>
                 

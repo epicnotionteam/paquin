@@ -1316,8 +1316,8 @@ h2,
   letter-spacing: 0.016rem;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin: 0 0 8px;
-  margin: 0 0 0.8rem;
+  margin: 0 0 16px;
+  margin: 0 0 1.6rem;
   font-weight: 400;
 }
 @media screen and (min-width: 1024px) {
@@ -1340,8 +1340,8 @@ h3,
   letter-spacing: 0.016rem;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
-  margin: 0 0 12px;
-  margin: 0 0 1.2rem;
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
   font-weight: 400;
 }
 @media screen and (min-width: 1024px) {

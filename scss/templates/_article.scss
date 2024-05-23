@@ -24,6 +24,10 @@
     // Grid structure
     .section__grid {
         display: grid;
+        // Container [Breadcrumbs]
+        & > .wrap--container {
+            padding: 0;
+        }
         // Container [Heading]
         .container--heading {
             // Heading
@@ -48,14 +52,19 @@
             ));
             grid-auto-rows: auto;
             grid-template-columns: repeat( 12, 1fr );
+             // Container [Breadcrumbs]
+            & > .wrap--container {
+                grid-column: 1 / span 12;
+            }
             // Container [Heading]
             .container--heading {
                 grid-column: 1 / span 8;
+                grid-row: 2;
             }
             // Container [Author]
             .container--author {
                 grid-column: 1 / span 12;
-                grid-row: 2;
+                grid-row: 3;
             }
         }
     }

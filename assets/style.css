@@ -2478,6 +2478,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--article-header .section__grid {
   display: grid;
 }
+.section--article-header .section__grid > .wrap--container {
+  padding: 0;
+}
 .section--article-header .section__grid .container--heading .article__heading {
   font-size: 38px;
   font-size: 3.8rem;
@@ -2504,12 +2507,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }
+  .section--article-header .section__grid > .wrap--container {
+    grid-column: 1/span 12;
+  }
   .section--article-header .section__grid .container--heading {
     grid-column: 1/span 8;
+    grid-row: 2;
   }
   .section--article-header .section__grid .container--author {
     grid-column: 1/span 12;
-    grid-row: 2;
+    grid-row: 3;
   }
 }
 .section--article-content .section__grid {

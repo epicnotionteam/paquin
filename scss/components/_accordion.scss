@@ -8,47 +8,37 @@
 // Accordion [Base]
 // --------------------------------------------------
 
+// Component container
 .accordion {
-    width: 100%;
-    max-width: 500px;
     overflow: hidden;
-    margin-top: 20px;
-    background-color: #2c3e50;
-  
+    width: 100%;
+    // Item container
     .item {
-      &__heading {
-        position: relative;
-        padding: 20px;
-        cursor: pointer;
-        color: #fff;
-        font-size: 26px;
-        font-weight: 500;
-        margin: 0;
-        line-height: 1;
-      }
-  
-      &__content {
-        padding: 0 20px;
-        max-height: 0;
-        overflow: hidden;
-        will-change: max-height;
-        transition: all 0.25s ease-out;
-        color: #f1f1f1;
-        opacity: 0;
-        
-        p {
-          color: #f1f1f1;
-          font-size: 15px;
-          margin: 0;
-          line-height: 1;
+        // Heading
+        .item__heading {
+            cursor: pointer;
+            font-weight: font-weight( 'bold' );
+            margin: 0;
+            position: relative;
         }
-      }
-  
-      &.state--active {
+        // Content
         .item__content {
-          padding: 0 20px 20px;
-          opacity: 1;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.24s ease-out;
+            will-change: max-height;
         }
-      }
     }
-  }
+}
+
+// State management
+.accordion {
+    // Item [:Active]
+    .item.state--active {
+        // Display content
+        .item__content {
+            opacity: 1;
+        }
+    }
+}

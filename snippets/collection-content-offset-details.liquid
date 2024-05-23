@@ -15,6 +15,15 @@
 {% if data_collection != blank %} 
     <pre>{{ data_collection | json }}</pre>
 {% endif %}
+{% if data_collection.metafields != blank %}
+    <pre>{{ data_collection.metafields | json }}</pre>
+{% endif %}
+{% if data_collection.metafields.custom != blank %}
+    <pre>{{ data_collection.metafields.custom | json }}</pre>
+{% endif %}
+{% if section_data_information != blank %}
+    <pre>{{ section_data_information | json }}</pre>
+{% endif %}
 
 {% comment %} Output section {% endcomment %}
 <section class="section--content-offset theme--alt wrap--container">

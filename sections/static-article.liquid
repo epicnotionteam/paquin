@@ -30,12 +30,14 @@
     {% comment %} Post Header {% endcomment %}
     <section class="section--article-header wrap--container theme--alt">
     	<div class="wrap--max push--center">
-        	{% comment %} Author {% endcomment %}
-        	<h1>{{ article.title }}</h1>
-        	{% comment %} Author {% endcomment %}
-        	<div class="post__author">
-          		{{ article.author }}
-        	</div>
+			<div class="section__grid">
+				{% comment %} Author {% endcomment %}
+				<h1>{{ article.title }}</h1>
+				{% comment %} Author {% endcomment %}
+				<div class="post__author">
+					{{ article.author }}
+				</div>
+			</div>
       	</div>
     </section>
 

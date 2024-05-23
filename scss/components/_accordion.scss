@@ -14,7 +14,7 @@
     width: 100%;
     // Item container
     .item {
-        @include rem( padding, spacing(3) 0 );
+        @include rem( padding, spacing(4) 0 );
         border-bottom: $border--base;
         // Heading
         .item__heading {
@@ -40,6 +40,10 @@
             p:last-child {
                 margin-bottom: 0;
             }
+        }
+        // Adjust first item container
+        &:first-child {
+            padding-top: 0;
         }
     }
 }

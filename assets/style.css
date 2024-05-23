@@ -2633,8 +2633,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 .accordion .item {
-  padding: 16px 0;
-  padding: 1.6rem 0;
+  padding: 24px 0;
+  padding: 2.4rem 0;
   border-bottom: 1px solid #D6DBDD;
 }
 .accordion .item .item__heading {
@@ -2661,6 +2661,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .accordion .item .item__content p:last-child {
   margin-bottom: 0;
+}
+.accordion .item:first-child {
+  padding-top: 0;
 }
 
 .accordion .item.state--active .item__content {

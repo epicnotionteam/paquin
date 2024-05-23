@@ -2478,7 +2478,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--article-header .section__grid {
   display: grid;
 }
-.section--article-header .section__grid .container--heading .section__heading {
+.section--article-header .section__grid .container--heading .article__heading {
   font-size: 38px;
   font-size: 3.8rem;
   line-height: 46px;
@@ -2487,7 +2487,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  .section--article-header .section__grid .container--heading .section__heading {
+  .section--article-header .section__grid .container--heading .article__heading {
     font-size: 64px;
     font-size: 6.4rem;
     line-height: 72px;

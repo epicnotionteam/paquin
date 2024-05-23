@@ -12,52 +12,32 @@ document.addEventListener("DOMContentLoaded", function() {
   	});
 
 	// Accordion Component
-	const accordions = document.querySelectorAll('.accordion');
-	accordions.forEach(function(accordion) {
-	  const items = accordion.querySelectorAll('.item');
-	  // [1] On load, automatically assign state--active to the first item in the accordion
-	  items[0].classList.add('state--active');
-	  items[0].querySelector('.item__content').style.display = 'block';
-	  items.forEach(function(item) {
-		const heading = item.querySelector('.item__heading');
-		const content = item.querySelector('.item__content');
-		heading.addEventListener('click', function() {
-		  if (item.classList.contains('state--active')) {
-			// If the clicked item is already active, remove the active state and slide up the content
-			item.classList.remove('state--active');
-			slideUp(content);
-		  } else {
-			// If the clicked item is not active, remove the active state from all other items and slide up their content
-			items.forEach(function(otherItem) {
-			  otherItem.classList.remove('state--active');
-			  slideUp(otherItem.querySelector('.item__content'));
-			});
-			// Add the active state to the clicked item and slide down its content
-			item.classList.add('state--active');
-			slideDown(content);
-		  }
-		});
-	  });
+	const accordions = document.querySelectorAll(".accordion");
+	const openAccordion = (accordion) => {
+		const content = accordion.querySelector(".accordion__content");
+		accordion.classList.add("accordion__active");
+		content.style.maxHeight = content.scrollHeight + "px";
+	};
+	const closeAccordion = (accordion) => {
+		const content = accordion.querySelector(".accordion__content");
+		accordion.classList.remove("accordion__active");
+		content.style.maxHeight = null;
+	};
+	accordions.forEach((accordion) => {
+		const intro = accordion.querySelector(".accordion__intro");
+		const content = accordion.querySelector(".accordion__content");
+		intro.onclick = () => {
+			if (content.style.maxHeight) {
+				closeAccordion(accordion);
+			} else {
+				accordions.forEach((otherAccordion) => {
+					if (otherAccordion !== accordion) {
+						closeAccordion(otherAccordion);
+					}
+				});
+				openAccordion(accordion);
+			}
+		};
 	});
-	// [2] Slide up animation
-	function slideUp(element) {
-	  element.style.maxHeight = '0';
-	  element.style.overflow = 'hidden';
-	  element.style.transition = 'max-height 0.3s ease-out';
-	  setTimeout(function() {
-		element.style.display = 'none';
-	  }, 300);
-	}
-	// [2] Slide down animation
-	function slideDown(element) {
-	  element.style.display = 'block';
-	  element.style.maxHeight = element.scrollHeight + 'px';
-	  element.style.overflow = 'hidden';
-	  element.style.transition = 'max-height 0.3s ease-in';
-	  setTimeout(function() {
-		element.style.maxHeight = 'none';
-		element.style.overflow = 'visible';
-	  }, 300);
-	}
 
 });

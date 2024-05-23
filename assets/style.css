@@ -2481,6 +2481,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--article-header .section__grid > .wrap--container {
   padding: 0;
 }
+.section--article-header .section__grid > .wrap--container .breadcrumbs-container {
+  max-width: none;
+}
 .section--article-header .section__grid .container--heading .article__heading {
   font-size: 38px;
   font-size: 3.8rem;

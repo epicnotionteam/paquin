@@ -17,10 +17,9 @@
 {% endif %}
 
 <aside class="share-buttons" aria-label="{{ snippet_title | t }}">
-
-  <h5 class="share-buttons--title">Share</h5>
-
-  <div class="share-buttons--list">
+  <h5>Share</h5>
+  <div class="nav--social-sharing">
+    {% comment %} Facebook {% endcomment %}
     <a target="_blank" href="//www.facebook.com/sharer.php?u={{ share_url }}">
       {% comment %} {%-
         render 'social-icon',
@@ -29,7 +28,7 @@
       Facebook
       <span class="visually-hidden">{{ 'general.accessibility.share_on_facebook' | t }}</span>
     </a>
-
+    {% comment %} LinkedIn {% endcomment %}
     <a target="_blank" href="//www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ share_title }}">
       {% comment %} {%-
         render 'social-icon',
@@ -38,7 +37,7 @@
       LinkedIn
       <span class="visually-hidden">{{ 'general.accessibility.share_on_linkedin' | t }}</span>
     </a>
-
+    {% comment %} X {% endcomment %}
     <a target="_blank" href="//x.com/intent/tweet?url={{ share_url }}">
       {% comment %} {%-
         render 'social-icon',
@@ -47,6 +46,5 @@
       X
       <span class="visually-hidden">{{ 'general.accessibility.share_on_x' | t }}</span>
     </a>
-
   </div>
 </aside>

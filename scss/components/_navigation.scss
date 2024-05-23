@@ -60,6 +60,13 @@
     }
 }
 
+// Adjust @custom breakpoint
+@include mq( $from: 1024px ) {
+    // Adjust child menu container
+    .site-navigation > .navmenu .navmenu-depth-2 {
+        @include rem( padding, 12px 0 spacing(3)  );
+    }
+}
 
 // State management
 .site-navigation {
@@ -86,15 +93,6 @@
 }
 
 
-// Adjust @custom breakpoint
-@include mq( $from: 1024px ) {
-    // Adjust child menu container
-    .site-navigation > .navmenu .navmenu-depth-2 {
-        @include rem( padding, 12px 0 spacing(3)  );
-    }
-}
-
-
 // Navigation [Secondary, Desktop]
 // --------------------------------------------------
 
@@ -111,22 +109,20 @@
     }
 }
 
-
-// State management
-.site-navigation .site-navigation__secondary-menu {
-    // Link [:Hover]
-    li.navmenu-item:hover {
-        opacity: 1;
-    }
-}
-
-
 // Adjust @custom breakpoint
 @include mq( $from: 1024px ) {
     .site-navigation .site-navigation__secondary-menu li a {
         @include rem( height, 44px );
         align-items: center;
         display: flex;
+    }
+}
+
+// State management
+.site-navigation .site-navigation__secondary-menu {
+    // Link [:Hover]
+    li.navmenu-item:hover {
+        opacity: 1;
     }
 }
 
@@ -149,7 +145,6 @@
         }
     }
 }
-
 
 // State management
 .site-footer-block-menu {
@@ -180,7 +175,6 @@
         font-weight: font-weight('bold');
     }
 }
-
 
 // State management
 .breadcrumbs-container {
@@ -257,7 +251,6 @@
     }
 }
 
-
 // Adjust @custom breakpoint
 @include mq( $from: 719px ) {
     .mobile-nav-content {
@@ -269,5 +262,20 @@
         .navmenu.navmenu-depth-2 > li.navmenu-item > a {
             @include rem( padding, spacing(1) spacing(4) );
         }
+    }
+}
+
+
+
+// Navigation [Social Sharing]
+// --------------------------------------------------
+
+// Component container
+.nav--social-sharing {
+    // Link
+    a {
+        @include font-size( 'xsmall' );
+        color: color( 'steel', '1' );
+        font-weight: normal;
     }
 }

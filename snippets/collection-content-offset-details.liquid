@@ -83,7 +83,7 @@
         {% for faq in collection.metafields.custom.collection_faqs.value %}
           <li>
             <h3>{{ faq.heading }}</h3>
-            <p>{{ faq.content }}</p>
+            <p>{{ faq.content| metafield_tag }}</p>
           </li>
         {% endfor %}
       </ul>
@@ -97,6 +97,6 @@
       <h3 class="heading-small">{{ info.heading_small }}</h3>
       <h3 class="subheading">{{ info.subheading }}</h3>
       <h3 class="heading-large">{{ info.heading_large }}</h3>
-      <p>{{ info.content }}</p>
+      <p>{{ info.content | metafield_tag }}</p>
     </div>
   {% endif %}

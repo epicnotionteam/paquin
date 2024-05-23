@@ -1,18 +1,19 @@
 {% comment %}
-// Output Content [Offset] component
+// Output Content [Offset, Details] component
+// Built specifically for Collection pages
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign section_heading_small = section.settings.heading_small %}
-{% assign section_heading_large = section.settings.heading_large %}
-{% assign section_heading_size  = section.settings.heading_size %}
-{% assign section_subheading    = section.settings.subheading %}
-{% assign section_content       = section.settings.content %}
-{% assign section_image         = section.settings.image %}
-{% assign section_theme         = section.settings.theme %}
+{% assign data_collection = section.settings.collection %}
+{% assign section_data_information = data_collection.metafields.custom.collection_information %}
+{% assign section_heading_small    = section_data_information.heading_small %}
+{% assign section_heading_large    = section_data_information.heading_large %}
+{% assign section_subheading       = section_data_information.subheading %}
+{% assign section_content          = section_data_information.content %}
+{% assign section_data_faq         = data_collection.metafields.custom.collection_faqs %}
 
 {% comment %} Output section {% endcomment %}
-<section class="section--content-offset theme--{{ section_theme }} wrap--container">
+<section class="section--content-offset theme--alt wrap--container">
     <div class="section__grid wrap--max push--center">
         {% comment %} Heading [Small] {% endcomment %}
         {% if section_heading_small != blank %}
@@ -23,7 +24,7 @@
         {% comment %} Heading [Large] {% endcomment %}
         {% if section_heading_large != blank %}
             <div class="container--heading-large">
-                <h3 class="section__heading--large {{ section_heading_size }}">{{ section_heading_large }}</h3>
+                <h3 class="section__heading--large h1">{{ section_heading_large }}</h3>
             </div>
         {% endif %}
         {% comment %} Subheading {% endcomment %}
@@ -35,13 +36,29 @@
         {% comment %} Content {% endcomment %}
         {% if section_content != blank %}
             <div class="container--content">
-                <div class="section__content">{{ section_content | richtext }}</div>
+                {% comment %} <div class="section__content">{{ section_content | richtext }}</div> {% endcomment %}
+                <div class="section__content">{{ section_content | metafield_tag }}</div>
             </div>
         {% endif %}
-        {% comment %} Image {% endcomment %}
-        {% if section_image != blank %}
-            <div class="container--image">
-                <img class="section__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section_heading_small }}">
+        {% comment %} FAQs {% endcomment %}
+        {% if section_data_faq != blank %}
+            <div class="container--faq">
+                <div class="feed--faq">
+                    {% for faq in section_data_faq %}
+                        {% comment %} Assign item data to vars {% endcomment %}
+                        {% assign item_heading = faq.heading %}
+                        {% assign item_content = faq.content %}
+                        <div class="item">
+                            {% if item_heading != blank %}
+                                <h3 class="item__heading">{{ item_heading }}</h3>
+                            {% endif %}
+                            {% if item_content != blank %}
+                                {% comment %} <div class="item__content">{{ item_content | richtext }}</div> {% endcomment %}
+                                <div class="item__content">{{ item_content | metafield_tag }}</div>
+                            {% endif %}
+                        </div>
+                  {% endfor %}
+              </div>
             </div>
         {% endif %}
     </div>
@@ -49,81 +66,12 @@
 
 {% schema %}
 {
-    "name": "Content [Offset]",
+    "name": "Collection Details",
     "settings": [
         {
-            "type": "text",
-            "id": "heading_small",
-            "label": "Heading [Small]",
-            "default": "Heading",
-            "info": "Primary section heading (h2)"
-        },
-        {
-            "type": "text",
-            "id": "heading_large",
-            "label": "Heading [Large]",
-            "default": "Heading",
-            "info": "Secondary section heading (h3)"
-        },
-        {
-            "type": "select",
-            "id": "heading_size",
-            "label": "Heading [Large] Size",
-            "info" : "Select an element size for the display heading",
-            "options": [
-              {
-                "value": "h1",
-                "label": "H1"
-              },
-              {
-                "value": "h2",
-                "label": "H2"
-              }
-            ],
-            "default": "h1"
-        },
-        {
-            "type": "text",
-            "id": "subheading",
-            "label": "Subheading",
-            "default": "Subheading"
-        },
-        {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content",
-            "default": "<p>Content</p>"
-        },
-        {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-        },
-        {
-            "type": "select",
-            "id": "theme",
-            "label": "Section Theme",
-            "options": [
-              {
-                "value": "base",
-                "label": "Base"
-              },
-              {
-                "value": "alt",
-                "label": "Alternative"
-              },
-              {
-                "value": "dark",
-                "label": "Dark"
-              }
-            ],
-            "default": "base"
-        }
-    ],
-    "presets": [
-        {
-            "name": "Content [Offset]",
-            "category": "Paquin"
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
         }
     ]
 }

@@ -37,7 +37,7 @@
 				</div>
 				{% comment %} Author {% endcomment %}
 				<div class="container--author">
-					{% render 'article-author', article: article %}
+					{% render 'article-author', article: article, show_tags: true %}
 				</div>
 			</div>
       	</div>
@@ -59,7 +59,7 @@
 						{{ article.content }}
 					</div>
 					<div class="section__wrap--author">
-						{% render 'article-author', article: article %}
+						{% render 'article-author', article: article, show_tags: true %}
 					</div>
 				</div>
 			</div>

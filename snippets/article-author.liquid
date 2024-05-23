@@ -6,16 +6,34 @@
 {% assign article_author = article.author %}
 
 {% comment %} Define author data array using string variables {% endcomment %}
+{% comment %} Requires staff account with same name to create match and output data {% endcomment %}
+{% comment %} Add additional authors with '|Full Name:full-name.jpg' {% endcomment %}
 {% assign authors = "Graeme Bryson:graeme-bryson.jpg|Rob Kinkopf:rob-kinkopf.jpg" %}
+
+{% comment %} Process tags {% endcomment %}
+{% assign tag_count = article.tags.size %}
+{% if tag_count > 0 %}
+    {% if tag_count == 1 %}
+        {% assign tag_string = "Posted in " | append: article.tags[0] %}
+    {% elsif tag_count == 2 %}
+        {% assign tag_string = "Posted in " | append: article.tags[0] | append: " and " | append: article.tags[1] %}
+    {% else %}
+        {% assign tag_string = "Posted in " | append: article.tags[0] %}
+        {% for tag in article.tags offset:1 limit:tag_count-2 %}
+            {% assign tag_string = tag_string | append: ", " | append: tag %}
+        {% endfor %}
+        {% assign tag_string = tag_string | append: " and " | append: article.tags[tag_count-1] %}
+    {% endif %}
+{% endif %}
 
 {% comment %} Output component {% endcomment %}
 <div class="article__author">
     {% assign author_found = false %}
-    {% assign author_list = authors | split: "|" %}
+    {% assign author_list  = authors | split: "|" %}
     {% for author in author_list %}
         {% assign author_details = author | split: ":" %}
-        {% assign author_name = author_details[0] %}
-        {% assign author_image = author_details[1] %}
+        {% assign author_name    = author_details[0] %}
+        {% assign author_image   = author_details[1] %}
         {% if article_author == author_name %}
             {% assign author_found = true %}
             {% comment %} Image {% endcomment %}
@@ -24,6 +42,9 @@
             </div>
             {% comment %} Name {% endcomment %}
             <h3 class="author__name">{{ author_name }}</h3>
+            {% if show_tags and tag_count > 0 %}
+                <p class="article__tags">{{ tag_string }}</p>
+            {% endif %}
             {% break %}
         {% endif %}
     {% endfor %}
@@ -35,6 +56,9 @@
         </div>
         <div class="article__author-info">
             <h3>The Paquin Team</h3>
+            {% if show_tags and tag_count > 0 %}
+                <p class="article__tags">{{ tag_string }}</p>
+            {% endif %}
         </div>
     {% endif %}
 </div>

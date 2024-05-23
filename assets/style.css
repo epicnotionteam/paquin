@@ -2527,15 +2527,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  font-weight: 600;
   margin: 0;
 }
+.article__author .container--information .author__name span {
+  font-weight: 600;
+}
 .article__author .container--information .article__tags {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
+  color: #66787F;
   margin: 0;
 }
 

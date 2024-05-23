@@ -101,12 +101,15 @@
         // Name
         .author__name {
             @include font-size( 'small' );
-            font-weight: font-weight( 'bold' );
             margin: 0;
+            span {
+                font-weight: font-weight( 'bold' );
+            }
         }
         // Tags
         .article__tags {
-            @include font-size( 'small' );
+            @include font-size( 'xsmall' );
+            color: color( 'steel', '4' );
             margin: 0;
         }
     }

@@ -42,7 +42,7 @@
             </div>
             <div class="container--information">
                 {% comment %} Name {% endcomment %}
-                <h3 class="author__name">{{ author_name }}</h3>
+                <p class="author__name">{{ author_name }}</p>
                 {% if show_tags and tag_count > 0 %}
                     <p class="article__tags">{{ tag_string }}</p>
                 {% endif %}
@@ -57,7 +57,7 @@
             <img src="{{ 'default-author.jpg' | asset_url }}" alt="Default Author">
         </div>
         <div class="article__author-info">
-            <h3>The Paquin Team</h3>
+            <p>The Paquin Team</p>
             {% if show_tags and tag_count > 0 %}
                 <p class="article__tags">{{ tag_string }}</p>
             {% endif %}

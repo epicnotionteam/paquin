@@ -37,7 +37,7 @@
         {% if article_author == author_name %}
             {% assign author_found = true %}
             {% comment %} Image {% endcomment %}
-            <div class="author__image">
+            <div class="container--image">
                 <img src="{{ author_image | asset_url }}" alt="{{ author_name }}">
             </div>
             <div class="container--information">
@@ -53,10 +53,10 @@
     {% comment %} Fallback author block {% endcomment %}
     {% if author_found == false %}
         {% comment %} Fallback (if unset/invalid) {% endcomment %}
-        <div class="article__author-image">
+        <div class="container--image">
             <img src="{{ 'default-author.jpg' | asset_url }}" alt="Default Author">
         </div>
-        <div class="article__author-info">
+        <div class="container--information">
             <p class="author__name">Written by <span>The Paquin Team</span></p>
             {% if show_tags and tag_count > 0 %}
                 <p class="article__tags">{{ tag_string }}</p>

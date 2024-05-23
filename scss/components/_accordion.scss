@@ -34,7 +34,7 @@
             will-change: max-height;
             // Apply spacing to first <p>
             p:first-child {
-                @include rem( margin-top, spacing(1) );
+                @include rem( margin-top, spacing(2) );
             }
             // Strip margin from final <p>
             p:last-child {

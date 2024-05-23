@@ -2656,8 +2656,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   will-change: max-height;
 }
 .accordion .item .item__content p:first-child {
-  margin-top: 4px;
-  margin-top: 0.4rem;
+  margin-top: 8px;
+  margin-top: 0.8rem;
 }
 .accordion .item .item__content p:last-child {
   margin-bottom: 0;

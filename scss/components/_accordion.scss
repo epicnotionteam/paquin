@@ -16,6 +16,7 @@
     .item {
         // Heading
         .item__heading {
+            @extend %p;
             cursor: pointer;
             font-weight: font-weight( 'bold' );
             margin: 0;

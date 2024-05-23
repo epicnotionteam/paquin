@@ -1158,7 +1158,8 @@ body {
 }
 
 p,
-.mobile-nav-content .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
+.mobile-nav-content .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a,
+.accordion .item .item__heading {
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
   font-family: "Paquin Sans Text", sans-serif;

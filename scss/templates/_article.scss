@@ -36,6 +36,7 @@
         }
         // Container [Heading]
         .container--heading {
+            @include rem( margin-top, spacing(3) );
             // Heading
             .article__heading {
                 @include font-size( 'headline' );

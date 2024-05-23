@@ -12,38 +12,42 @@ document.addEventListener("DOMContentLoaded", function() {
   	});
 
 	// Accordion Component
-	const accordions = document.querySelectorAll(".accordion");
-	// Open accordion
-  	const openAccordion = (item) => {
-    	const content = item.querySelector(".item__content");
-    	item.classList.add("state--active");
-    	content.style.maxHeight = content.scrollHeight + "px";
-  	};
-	// Close accordion
-  	const closeAccordion = (item) => {
-    	const content = item.querySelector(".item__content");
-    	item.classList.remove("state--active");
-    	content.style.maxHeight = null;
-	};
-	// Open/close active items
-  	accordions.forEach((accordion) => {
-    	const items = accordion.querySelectorAll(".item");
-    	items.forEach((item) => {
-      		const heading = item.querySelector(".item__heading");
-      		const content = item.querySelector(".item__content");
-      		heading.onclick = () => {
-        		if (item.classList.contains("state--active")) {
-          			closeAccordion(item);
-        		} else {
-					items.forEach((otherItem) => {
-						if (otherItem !== item) {
-							closeAccordion(otherItem);
-						}
-					});
-					openAccordion(item);
-				}
-      		};
-    	});
-  	});
+    const accordions = document.querySelectorAll(".accordion");
+    // Open accordion
+    const openAccordion = (item) => {
+        const content = item.querySelector(".item__content");
+        item.classList.add("state--active");
+        content.style.maxHeight = content.scrollHeight + "px";
+    };
+    // Close accordion
+    const closeAccordion = (item) => {
+        const content = item.querySelector(".item__content");
+        item.classList.remove("state--active");
+        content.style.maxHeight = null;
+    };
+    // Open/close active items
+    accordions.forEach((accordion) => {
+        const items = accordion.querySelectorAll(".item");
+        // Open first item in each accordion
+        if (items.length > 0) {
+            openAccordion(items[0]);
+        }
+        items.forEach((item) => {
+            const heading = item.querySelector(".item__heading");
+            const content = item.querySelector(".item__content");
+            heading.onclick = () => {
+                if (item.classList.contains("state--active")) {
+                    closeAccordion(item);
+                } else {
+                    items.forEach((otherItem) => {
+                        if (otherItem !== item) {
+                            closeAccordion(otherItem);
+                        }
+                    });
+                    openAccordion(item);
+                }
+            };
+        });
+    });
 
 });

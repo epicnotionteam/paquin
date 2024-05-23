@@ -380,6 +380,7 @@
 
 <section class="section--collection-information">
   <h2>Collection Information</h2>
+
   {% if collection.metafields.custom.collection_faqs != blank %}
     <div class="collection-faqs">
       <h2>FAQs</h2>
@@ -387,12 +388,18 @@
         {% for faq in collection.metafields.custom.collection_faqs.value %}
           <li>
             <h3>{{ faq.heading }}</h3>
-            <p>{{ faq.content }}</p>
+            {% if faq.content.type == 'root' %}
+              {% assign content = faq.content.children | map: 'children' | map: 'value' | join: ' ' %}
+              <p>{{ content }}</p>
+            {% else %}
+              <p>{{ faq.content }}</p>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
     </div>
   {% endif %}
+
   {% if collection.metafields.custom.collection_information != blank %}
     <div class="collection-information">
       <h2>Collection Information</h2>
@@ -400,7 +407,12 @@
       <h3 class="heading-small">{{ info.heading_small }}</h3>
       <h3 class="subheading">{{ info.subheading }}</h3>
       <h3 class="heading-large">{{ info.heading_large }}</h3>
-      <p>{{ info.content }}</p>
+      {% if info.content.type == 'root' %}
+        {% assign content = info.content.children | map: 'children' | map: 'value' | join: ' ' %}
+        <p>{{ content }}</p>
+      {% else %}
+        <p>{{ info.content }}</p>
+      {% endif %}
     </div>
   {% endif %}
 </section>

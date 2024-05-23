@@ -610,7 +610,7 @@
               <a class="button--base" href="{{ product.url }}">View details</a>
               {% comment %} Button [View Data Sheet] {% endcomment %}
               {% if product.metafields.custom.data_sheet != blank %}
-                {% render 'product-data-sheet', product: product %}
+                <a class="button--outline" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
               {% endif %}
             </div>
                 

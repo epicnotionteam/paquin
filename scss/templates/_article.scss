@@ -1,0 +1,39 @@
+// ====================================================================================================
+// Templates / Article
+// ====================================================================================================
+
+// Template Structure
+// ----------------------------------------------------------------------------------------------------
+
+// Section [Article Header]
+// --------------------------------------------------
+
+// Component container
+.section--article-header {
+    // Grid structure
+    .section__grid {
+        display: grid;
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    .section--article-header {
+        // Adjust grid structure
+        .section__grid {
+            @include rem(( 
+                column-gap: spacing(4),
+                row-gap: spacing(6) 
+            ));
+            grid-template-columns: repeat( 12, 1fr );
+            // Container [Sidebar]
+            .container--subheading {
+                grid-column: 1 / span 2;
+            }
+            // Container [Content]
+            .container--content {
+                grid-column: 4 / span 6;
+            }
+        }
+    }
+}

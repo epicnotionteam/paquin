@@ -21,10 +21,7 @@
   <h5 class="share-buttons--title">Share</h5>
 
   <div class="share-buttons--list">
-    <a
-      class="share-buttons--button share-buttons--facebook"
-      target="_blank"
-      href="//www.facebook.com/sharer.php?u={{ share_url }}">
+    <a target="_blank" href="//www.facebook.com/sharer.php?u={{ share_url }}">
       {% comment %} {%-
         render 'social-icon',
         id: 'facebook'
@@ -33,10 +30,7 @@
       <span class="visually-hidden">{{ 'general.accessibility.share_on_facebook' | t }}</span>
     </a>
 
-    <a
-      class="share-buttons--button share-buttons--linkedin"
-      target="_blank"
-      href="//www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ share_title }}">
+    <a target="_blank" href="//www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ share_title }}">
       {% comment %} {%-
         render 'social-icon',
         id: 'linkedin'
@@ -45,13 +39,7 @@
       <span class="visually-hidden">{{ 'general.accessibility.share_on_linkedin' | t }}</span>
     </a>
 
-    <a
-      class="
-        share-buttons--button
-        share-buttons--x
-      "
-      target="_blank"
-      href="//x.com/intent/tweet?url={{ share_url }}">
+    <a target="_blank" href="//x.com/intent/tweet?url={{ share_url }}">
       {% comment %} {%-
         render 'social-icon',
         id: 'x',

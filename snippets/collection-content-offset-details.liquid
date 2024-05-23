@@ -13,7 +13,7 @@
 {% assign section_data_faq         = data_collection.metafields.custom.collection_faqs %}
 
 {% if data_collection != blank %} 
-    HAS COLLECTION DATA
+    <pre>{{ data_collection | json }}</pre>
 {% endif %}
 
 {% comment %} Output section {% endcomment %}

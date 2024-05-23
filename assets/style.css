@@ -2649,13 +2649,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   position: relative;
 }
 .accordion .item .item__content {
-  padding-top: 4px;
-  padding-top: 0.4rem;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 0.24s ease-out;
   will-change: max-height;
+}
+.accordion .item .item__content p:first-child {
+  margin-top: 4px;
+  margin-top: 0.4rem;
 }
 .accordion .item .item__content p:last-child {
   margin: 0;

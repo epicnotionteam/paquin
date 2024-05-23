@@ -276,6 +276,8 @@
     a {
         @include font-size( 'xsmall' );
         color: color( 'steel', '1' ) !important;
+        display: block;
         font-weight: normal !important;
+        line-height: 1.8;
     }
 }

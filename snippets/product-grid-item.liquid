@@ -602,6 +602,8 @@
                 </button>
               </div>
 
+              <a class="button--base" href="{{ product.url }}">View details</a>
+
               {% comment %} Data Sheet {% endcomment %}
               {% if product.metafields.custom.data_sheet != blank %}
                 {% render 'product-data-sheet', product: product %}

@@ -104,12 +104,14 @@
             ));
             grid-template-columns: repeat( 12, 1fr );
             // Container [Sidebar]
-            .container--subheading {
+            .container--sidebar {
                 grid-column: 1 / span 2;
+                order: 0;
             }
             // Container [Content]
             .container--content {
                 grid-column: 4 / span 6;
+                order: 1;
             }
         }
     }

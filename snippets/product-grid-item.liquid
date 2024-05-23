@@ -601,6 +601,12 @@
                   </span>
                 </button>
               </div>
+
+              {% comment %} Data Sheet {% endcomment %}
+              {% if product.metafields.custom.data_sheet != blank %}
+                {% render 'product-data-sheet' %}
+              {% endif %}
+
             {% endif %}
           </div>
         {% endif %}

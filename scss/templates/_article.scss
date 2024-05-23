@@ -84,3 +84,30 @@
         }
     }
 }
+
+
+// Template-Specific Components
+// ----------------------------------------------------------------------------------------------------
+
+// Article Author
+// --------------------------------------------------
+
+.article__author {
+    @include rem( column-gap, spacing(3) );
+    align-items: center;
+    display: grid;
+    // Container [Information]
+    .container--information  {
+        // Name
+        .author__name {
+            @include font-size( 'small' );
+            font-weight: font-weight( 'bold' );
+            margin: 0;
+        }
+        // Tags
+        .author__tags {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+    }
+}

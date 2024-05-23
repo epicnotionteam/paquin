@@ -40,11 +40,13 @@
             <div class="author__image">
                 <img src="{{ author_image | asset_url }}" alt="{{ author_name }}">
             </div>
-            {% comment %} Name {% endcomment %}
-            <h3 class="author__name">{{ author_name }}</h3>
-            {% if show_tags and tag_count > 0 %}
-                <p class="article__tags">{{ tag_string }}</p>
-            {% endif %}
+            <div class="container--information">
+                {% comment %} Name {% endcomment %}
+                <h3 class="author__name">{{ author_name }}</h3>
+                {% if show_tags and tag_count > 0 %}
+                    <p class="article__tags">{{ tag_string }}</p>
+                {% endif %}
+            </div>
             {% break %}
         {% endif %}
     {% endfor %}

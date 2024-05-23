@@ -2515,6 +2515,30 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 4/span 6;
   }
 }
+.article__author {
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  align-items: center;
+  display: grid;
+}
+.article__author .container--information .author__name {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  font-weight: 600;
+  margin: 0;
+}
+.article__author .container--information .author__tags {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  margin: 0;
+}
+
 .collection--section .productgrid--outer {
   max-width: 1590px;
   max-width: 159rem;

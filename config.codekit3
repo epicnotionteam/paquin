@@ -1255,14 +1255,6 @@
       "oAP" : "\/sections\/carousel-content-media.liquid",
       "oF" : 0
     },
-    "\/sections\/collection-content-offset-details.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collection-content-offset-details.liquid",
-      "oF" : 0
-    },
     "\/sections\/contact-content-offset-form.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1917,6 +1909,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/cart-shipping.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/collection-content-offset-details.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/collection-content-offset-details.liquid",
       "oF" : 0
     },
     "\/snippets\/collection-list-item.liquid" : {

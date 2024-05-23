@@ -3198,6 +3198,7 @@ hr,
   row-gap: 6px;
   row-gap: 0.6rem;
   display: grid;
+  width: 100%;
 }
 
 @media (min-width: 64em) {

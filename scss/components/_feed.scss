@@ -339,6 +339,7 @@
             .container--actions {
                 @include rem( row-gap, 6px );
                 display: grid;
+                width: 100%;
             }
         }
     }

@@ -2535,6 +2535,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--article-content .section__grid {
+  margin-top: 32px;
+  margin-top: 3.2rem;
+  padding: 24px 0 72px;
+  padding: 2.4rem 0 7.2rem;
+  border-top: 1px solid #D6DBDD;
   display: grid;
 }
 
@@ -2542,6 +2547,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--article-content .section__grid {
     column-gap: 24px;
     column-gap: 2.4rem;
+    padding: 24px 0 96px;
+    padding: 2.4rem 0 9.6rem;
     row-gap: 40px;
     row-gap: 4rem;
     grid-template-columns: repeat(12, 1fr);

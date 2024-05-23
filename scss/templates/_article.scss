@@ -83,6 +83,11 @@
 .section--article-content {
     // Grid structure
     .section__grid {
+        @include rem((
+            margin-top: spacing(5),
+            padding: spacing(4) 0 $gap--section-small
+        ));
+        border-top: $border--base;
         display: grid;
     }
 }
@@ -94,6 +99,7 @@
         .section__grid {
             @include rem(( 
                 column-gap: spacing(4),
+                padding: spacing(4) 0 $gap--section-large,
                 row-gap: spacing(6) 
             ));
             grid-template-columns: repeat( 12, 1fr );

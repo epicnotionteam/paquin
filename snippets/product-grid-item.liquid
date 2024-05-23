@@ -503,7 +503,8 @@
       </div>
 
       {% unless recently_viewed or countdown_timer %}
-        {% if enable_quickshop or atc_button %}
+        
+        {% comment %} {% if enable_quickshop or atc_button %}
           {% comment %}
             Default button appearance and text
           {% endcomment %}
@@ -601,17 +602,18 @@
                   </span>
                 </button>
               </div>
-
-              <a class="button--base" href="{{ product.url }}">View details</a>
-
-              {% comment %} Data Sheet {% endcomment %}
-              {% if product.metafields.custom.data_sheet != blank %}
-                {% render 'product-data-sheet', product: product %}
-              {% endif %}
-
             {% endif %}
+            
           </div>
+        {% endif %} {% endcomment %}
+
+        <a class="button--base" href="{{ product.url }}">View details</a>
+
+        {% comment %} Data Sheet {% endcomment %}
+        {% if product.metafields.custom.data_sheet != blank %}
+          {% render 'product-data-sheet', product: product %}
         {% endif %}
+
       {% endunless %}
     </div>
   </div>

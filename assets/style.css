@@ -2632,6 +2632,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   overflow: hidden;
   width: 100%;
 }
+.accordion .item {
+  padding: 16px 0;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #D6DBDD;
+}
 .accordion .item .item__heading {
   font-size: 17px;
   font-size: 1.7rem;
@@ -2644,11 +2649,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   position: relative;
 }
 .accordion .item .item__content {
+  padding-top: 4px;
+  padding-top: 0.4rem;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 0.24s ease-out;
   will-change: max-height;
+}
+.accordion .item .item__content p:last-child {
+  margin: 0;
 }
 
 .accordion .item.state--active .item__content {

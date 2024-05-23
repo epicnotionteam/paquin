@@ -3222,6 +3222,8 @@ hr,
   margin: 0;
 }
 .productgrid--items .productgrid--item .productitem .productitem--actions {
+  bottom: 12px;
+  bottom: 1.2rem;
   margin: 0 12px;
   margin: 0 1.2rem;
 }

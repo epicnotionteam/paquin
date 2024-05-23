@@ -337,7 +337,10 @@
             }
             // Container [Actions]
             .productitem--actions {
-                @include rem( margin, 0 12px );
+                @include rem(( 
+                    bottom: 12px,
+                    margin: 0 12px 
+                ));
                 .container--actions {
                     @include rem(( 
                         margin-top: 12px,

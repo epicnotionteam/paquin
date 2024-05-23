@@ -2535,10 +2535,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--article-content .section__grid {
-  margin-top: 32px;
-  margin-top: 3.2rem;
-  padding: 24px 0 72px;
-  padding: 2.4rem 0 7.2rem;
+  margin-top: 40px;
+  margin-top: 4rem;
+  padding: 32px 0 72px;
+  padding: 3.2rem 0 7.2rem;
   border-top: 1px solid #D6DBDD;
   display: grid;
 }

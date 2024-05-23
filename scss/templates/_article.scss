@@ -84,8 +84,8 @@
     // Grid structure
     .section__grid {
         @include rem((
-            margin-top: spacing(5),
-            padding: spacing(4) 0 $gap--section-small
+            margin-top: spacing(6),
+            padding: spacing(5) 0 $gap--section-small
         ));
         border-top: $border--base;
         display: grid;

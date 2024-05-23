@@ -528,9 +528,6 @@
           {% endunless %}
 
           <div class="productitem--actions" data-product-actions>
-            <div class="productitem--listview-price">
-              {{ product_item_price }}
-            </div>
 
             <div class="productitem--listview-badge">
               {%
@@ -546,6 +543,10 @@
                 show_saved: consistent_saved,
                 include_range: true,
               %}
+            </div>
+
+            <div class="productitem--listview-price">
+              {{ product_item_price }}
             </div>
 
             {% comment %} {% if enable_quickshop %}

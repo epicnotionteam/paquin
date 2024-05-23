@@ -3180,7 +3180,7 @@ hr,
   font-weight: 600;
 }
 .productgrid--items .productgrid--item .productitem .productitem--title a {
-  color: red !important;
+  color: #212224 !important;
 }
 .productgrid--items .productgrid--item .productitem .price.productitem__price {
   font-size: 15px;

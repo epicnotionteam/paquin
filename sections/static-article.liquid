@@ -27,9 +27,9 @@
 <section class="article--outer">
   <div class="article--container">
 
-    {% comment %} Page Header {% endcomment %}
-    <section class="wrap--container theme--alt">
-    	<div class="wrap--max psuh--center">
+    {% comment %} Post Header {% endcomment %}
+    <section class="section--post-header wrap--container theme--alt">
+    	<div class="wrap--max push--center">
         	{% comment %} Author {% endcomment %}
         	<h1>{{ article.title }}</h1>
         	{% comment %} Author {% endcomment %}
@@ -39,13 +39,31 @@
       	</div>
     </section>
 
-    {% if has_share %}
-      <div class="article--sidebar">
-        {{- share_buttons -}}
-      </div>
-    {% endif %}
+	{% comment %} Post Content {% endcomment %}
+    <section class="section--post-content wrap--container">
+    	<div class="wrap--max push--center">
+			<div class="section__grid">
+				{% comment %} Container [Sidebar] {% endcomment %}
+				<div class="container--sidebar">
+					{% comment %} Sharing Links {% endcomment %}
+					{{- share_buttons -}}
+				</div>
+				{% comment %} Container [Content] {% endcomment %}
+				<div class="container--content">
+					{% comment %} Post Content {% endcomment %}
+					<div class="section__wrap--content">
+						{{ article.content }}
+					</div>
+					<div class="section__wrap--author">
+						{{ article.author }}
+					</div>
+				</div>
+			</div>
+      	</div>
+    </section>
 
-    <div class="article--inner">
+
+    {% comment %} <div class="article--inner">
       {% if section.settings.show_date or section.settings.show_author %}
         <div class="article--meta">
           {% if section.settings.show_date %}
@@ -61,10 +79,6 @@
           {% endif %}
         </div>
       {% endif %}
-
-      <h1 class="article--title">
-        {{ article.title }}
-      </h1>
 
       <div class="article--content rte">
         {{ article.content }}
@@ -139,7 +153,8 @@
       {% endif %}
 
       {% render 'article-comments', comment: comment %}
-    </div>
+    </div> {% endcomment %}
+
   </div>
 </section>
 

@@ -3,7 +3,17 @@
 // Update default common values in 'variables/common'
 // ====================================================================================================
 
+// Breaks
+// --------------------------------------------------
+
+br {
+    @include rem( margin, 6px 0 );
+    display: block;
+}
+
+
 // Generic border classes
 // --------------------------------------------------
 
 .border__all--base { border: $border--base; }
+

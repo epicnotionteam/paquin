@@ -2468,6 +2468,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     aspect-ratio: unset;
   }
 }
+.article--container {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  width: 100%;
+}
+
 .section--article-header .section__grid {
   display: grid;
 }

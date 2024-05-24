@@ -3275,9 +3275,12 @@ hr,
   }
 }
 .feed--collection {
+  column-gap: 16px;
+  column-gap: 1.6rem;
   row-gap: 24px;
   row-gap: 2.4rem;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .feed--collection .item {
   align-content: flex-start;
@@ -3340,7 +3343,6 @@ hr,
   .feed--collection {
     column-gap: 24px;
     column-gap: 2.4rem;
-    grid-template-columns: repeat(2, 1fr);
   }
   .feed--collection .item .item__description {
     padding-right: 8px;

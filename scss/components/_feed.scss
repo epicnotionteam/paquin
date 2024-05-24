@@ -144,8 +144,12 @@
 
 // Component container
 .feed--collection {
-    @include rem( row-gap, spacing(4) );
+    @include rem(( 
+        column-gap: spacing(3),
+        row-gap: spacing(4) 
+    ));
     display: grid;
+    grid-template-columns: repeat( 2, 1fr );
     // Item container
     .item {
         align-content: flex-start;
@@ -194,7 +198,6 @@
     // Component container
     .feed--collection {
         @include rem( column-gap, spacing(4) );
-        grid-template-columns: repeat( 2, 1fr );
         // Item description
         .item .item__description {
             @include rem( padding-right, spacing(2) );

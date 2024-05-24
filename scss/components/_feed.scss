@@ -201,11 +201,19 @@
     }
 }
 
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--collection {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+}
+
 // Adjust @large breakpoint
 @include mq( $from: large ) {
     // Component container
     .feed--collection {
-        grid-template-columns: repeat( 4, 1fr );
+        grid-template-columns: repeat( 6, 1fr );
     }
 }
 
@@ -360,14 +368,6 @@
     // Adjust grid structure
     .template-collection .productgrid--items {
         grid-template-columns: repeat( 4, 1fr );
-    }
-}
-
-// Adjust @large breakpoint
-@include mq( $from: large ) {
-    // Adjust grid structure
-    .template-collection .productgrid--items {
-        grid-template-columns: repeat( 6, 1fr );
     }
 }
 

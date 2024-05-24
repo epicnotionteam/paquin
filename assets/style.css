@@ -2622,6 +2622,27 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 
+.section--blog-header .container--content .section__heading {
+  font-size: 38px;
+  font-size: 3.8rem;
+  line-height: 46px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .section--blog-header .container--content .section__heading {
+    font-size: 64px;
+    font-size: 6.4rem;
+    line-height: 72px;
+    letter-spacing: 0.56px;
+    letter-spacing: 0.056rem;
+  }
+}
+.section--blog-header .container--content .section__content p:last-child {
+  margin: 0;
+}
+
 .section--feed-blog {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

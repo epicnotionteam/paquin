@@ -8,6 +8,27 @@
 // Containers
 // --------------------------------------------------
 
+// Section [Blog Header]
+// --------------------------------------------------
+
+.section--blog-header {
+    // Container [Content]
+    .container--content {
+        // Heading
+        .section__heading {
+            @include font-size( 'headline' );
+            margin: 0;
+        }
+        // Content
+        .section__content {
+            // Strip margin from final <p>
+            p:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
 
 // Section [Feed, Blog]
 // --------------------------------------------------

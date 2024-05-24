@@ -12,6 +12,11 @@
 	.feed--role .item {
 		border-bottom: $border--alt;
 	}
+	// Component [Navigation, Tag]
+	// Adjust border color
+	.nav--tag a {
+		border: $border--alt;
+	}
 	// Component [Primary Section Heading]
 	.section__primary-heading {
 		border-top: $border--alt;

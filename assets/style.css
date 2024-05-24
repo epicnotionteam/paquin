@@ -1078,6 +1078,9 @@ body {
 .theme--alt .feed--role .item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+.theme--alt .nav--tag a {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
 .theme--alt .section__primary-heading {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }

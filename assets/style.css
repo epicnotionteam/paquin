@@ -2551,6 +2551,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border-top: 1px solid #D6DBDD;
   display: grid;
 }
+.section--article-content .section__grid .container--content img:not([class]) {
+  margin: 32px 0;
+  margin: 3.2rem 0;
+  display: block;
+  width: 100%;
+}
 
 @media (min-width: 64em) {
   .section--article-content .section__grid {
@@ -2569,12 +2575,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--article-content .section__grid .container--content {
     grid-column: 4/span 6;
     order: 1;
-  }
-  .section--article-content .section__grid .container--content img {
-    margin: 32px 0;
-    margin: 3.2rem 0;
-    display: block;
-    width: 100%;
   }
   .section--article-content .section__grid .container--content .article__author {
     margin-top: 40px;

@@ -99,6 +99,11 @@
                 display: block;
                 width: 100%;
             }
+            // Override break spacing
+            br {
+                @include rem( margin, 6px 0 );
+                display: block;
+            }
         }
     }
 }

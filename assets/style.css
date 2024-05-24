@@ -1054,12 +1054,6 @@ textarea {
   color: #ECEBEA;
 }
 
-br {
-  margin: 6px 0;
-  margin: 0.6rem 0;
-  display: block;
-}
-
 .border__all--base {
   border: 1px solid #D6DBDD;
 }
@@ -2558,6 +2552,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
   width: 100%;
 }
+.section--article-content .section__grid .container--content br {
+  margin: 6px 0;
+  margin: 0.6rem 0;
+  display: block;
+}
 
 @media (min-width: 64em) {
   .section--article-content .section__grid {
@@ -3286,8 +3285,8 @@ hr,
   display: grid;
 }
 .feed--collection .item .item__wrap--image {
-  margin-bottom: 16px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   aspect-ratio: 1/1;
   border: 1px solid #D6DBDD;
   overflow: hidden;

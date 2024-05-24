@@ -4352,6 +4352,7 @@ ul.list--link-arrow li::before {
 }
 .nav--tag a.state--active {
   background-color: #30373A;
+  border: 1px solid #30373A;
   color: white !important;
   text-decoration: none !important;
 }

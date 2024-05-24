@@ -315,6 +315,7 @@
     // Link [:Active]
     a.state--active {
         background-color: color( 'steel', '3' );
+        border: 1px solid color( 'steel', '3' ); 
         color: white !important;
         text-decoration: none !important;
     }

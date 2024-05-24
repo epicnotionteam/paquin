@@ -3369,6 +3369,7 @@ hr,
 }
 .feed--post .item .item__title a {
   font-weight: 400 !important;
+  color: #212224;
 }
 .feed--post .item .item__excerpt {
   font-size: 15px;

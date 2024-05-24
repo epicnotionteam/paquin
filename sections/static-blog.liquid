@@ -35,16 +35,16 @@
                 <p>Browse by topic:</p>
                 <nav class="nav--tag">
                     <a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
-                    {% assign tag_counts = {} %}
+                    {% assign tags_array = "" %}
                     {% for tag in blog.tags %}
-                        {% assign tag_name = tag %}
-                        {% assign tag_count = blog.tags[tag] %}
-                        {% assign tag_counts = tag_counts | merge: {{ tag_name | replace: "'", "\'" }}: tag_count %}
+                        {% assign tags_array = tags_array | append: tag | append: "," | append: blog.tags[tag] | append: "|" %}
                     {% endfor %}
-                    {% assign sorted_tags = tag_counts | sort: "value" | reverse %}
+                    {% assign tags_array = tags_array | split: "|" %}
+                    {% assign sorted_tags = tags_array | sort: "size" | reverse %}
                     {% for tag in sorted_tags %}
-                        {% assign tag_name = tag[0] %}
-                        {% assign tag_count = tag[1] %}
+                        {% assign tag_parts = tag | split: "," %}
+                        {% assign tag_name = tag_parts[0] %}
+                        {% assign tag_count = tag_parts[1] %}
                         <a href="{{ blog.url }}/tagged/{{ tag_name | handleize }}" {% if current_tags contains tag_name %}class="state--active"{% endif %}>{{ tag_name }} ({{ tag_count }})</a>
                     {% endfor %}
                 </nav>

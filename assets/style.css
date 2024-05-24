@@ -3282,6 +3282,7 @@ hr,
 .feed--collection .item {
   row-gap: 4px;
   row-gap: 0.4rem;
+  align-content: flex-start;
   display: grid;
 }
 .feed--collection .item .item__wrap--image {

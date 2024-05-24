@@ -35,17 +35,21 @@
                 <p>Browse by topic:</p>
                 <nav class="nav--tag">
                     <a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
-                    {% assign tags_array = "" %}
+                    {% assign tags_with_counts = '' %}
                     {% for tag in blog.tags %}
-                        {% assign tags_array = tags_array | append: tag | append: "," | append: blog.tags[tag] | append: "|" %}
+                        {% assign tag_name = tag %}
+                        {% assign tag_count = blog.tags[tag] %}
+                        {% assign tags_with_counts = tags_with_counts | append: tag_name | append: '__' | append: tag_count | append: '|' %}
                     {% endfor %}
-                    {% assign tags_array = tags_array | split: "|" %}
-                    {% assign sorted_tags = tags_array | sort: "size" | reverse %}
-                    {% for tag in sorted_tags %}
-                        {% assign tag_parts = tag | split: "," %}
-                        {% assign tag_name = tag_parts[0] %}
-                        {% assign tag_count = tag_parts[1] %}
+                    {% assign tags_with_counts = tags_with_counts | split: '|' %}
+                    {% assign sorted_tags_with_counts = tags_with_counts | sort: 'split__1' | reverse %}
+                    {% for tag_with_count in sorted_tags_with_counts %}
+                        {% assign parts = tag_with_count | split: '__' %}
+                        {% assign tag_name = parts[0] %}
+                        {% assign tag_count = parts[1] %}
+                        {% if tag_name != '' %}
                         <a href="{{ blog.url }}/tagged/{{ tag_name | handleize }}" {% if current_tags contains tag_name %}class="state--active"{% endif %}>{{ tag_name }} ({{ tag_count }})</a>
+                        {% endif %}
                     {% endfor %}
                 </nav>
             </div>

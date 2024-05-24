@@ -31,18 +31,18 @@
                 </div>
             </div>
             {% comment %} Tags {% endcomment %}
-            <div class="container--tags">
-                <p>Browse by topic:</p>
-                <nav class="nav--tag">
-                    <a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
-                    {% assign tag_counts = blog.tags | sort_by: 'last' | reverse %}
-                    {% for tag in tag_counts %}
-                        {% assign tag_name = tag | first %}
-                        {% assign tag_count = tag | last | size %}
-                        <a href="{{ blog.url }}/tagged/{{ tag_name | handleize }}" {% if current_tags contains tag_name %}class="state--active"{% endif %}>{{ tag_name }} ({{ tag_count }})</a>
-                    {% endfor %}
-                </nav>
-            </div>
+			<div class="container--tags">
+				<p>Browse by topic:</p>
+				<nav class="nav--tag">
+					<a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
+					{% assign tag_counts = blog.tags | sort: 'size' | reverse %}
+					{% for tag in tag_counts %}
+						{% assign tag_name = tag %}
+						{% assign tag_count = blog.tags[tag] %}
+						<a href="{{ blog.url }}/tagged/{{ tag_name | handleize }}" {% if current_tags contains tag_name %}class="state--active"{% endif %}>{{ tag_name }} ({{ tag_count }})</a>
+					{% endfor %}
+				</nav>
+			</div>
         </div>
     </div>
 </section>

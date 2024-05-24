@@ -30,7 +30,7 @@
     // Container [Tags]
     .container--tags {
         p {
-            @include font-size( 'small' );
+            @include font-size( 'xsmall' );
             color: color( 'steel', '4' );
             margin: 0;
         }

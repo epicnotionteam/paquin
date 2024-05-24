@@ -2644,11 +2644,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .section--blog-header .container--tags p {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
   color: #66787F;
   margin: 0;
 }

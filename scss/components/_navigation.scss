@@ -296,10 +296,18 @@
         @include rem(( 
             font-size: 12px,
             letter-spacing: 0.24px,
-            padding: spacing(2) 12px 
+            padding: spacing(1) 12px 
         ));
         border-radius: $border-radius--base;
         border: $border--base;
-        color: color( 'steel', '1' );
+        color: color( 'steel', '1' ) !important;
+    }
+}
+
+// State management
+.nav--tag {
+    // Link [:Hover]
+    a:hover {
+        border: 1px solid color( 'steel', '3' ); 
     }
 }

@@ -4338,9 +4338,13 @@ ul.list--link-arrow li::before {
   font-size: 1.2rem;
   letter-spacing: 0.24px;
   letter-spacing: 0.024rem;
-  padding: 8px 12px;
-  padding: 0.8rem 1.2rem;
+  padding: 4px 12px;
+  padding: 0.4rem 1.2rem;
   border-radius: 6px;
   border: 1px solid #D6DBDD;
-  color: #212224;
+  color: #212224 !important;
+}
+
+.nav--tag a:hover {
+  border: 1px solid #30373A;
 }

@@ -3,11 +3,8 @@
     "main": {
       "type": "static-blog",
       "settings": {
-        "show_rss_link": true,
-        "show_date": true,
-        "show_author": false,
-        "show_excerpt": true,
-        "featured_post": "",
+        "heading": "News & Insights",
+        "content": "<p>Check out the latest and greatest from Paquin<\/p>",
         "posts_per_page_range": 12
       }
     }

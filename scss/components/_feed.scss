@@ -144,7 +144,7 @@
 
 // Component container
 .feed--collection {
-    @include rem( row-gap, spacing(5) );
+    @include rem( row-gap, spacing(4) );
     display: grid;
     // Item container
     .item {

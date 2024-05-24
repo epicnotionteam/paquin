@@ -40,7 +40,7 @@
                        {% comment %} Description {% endcomment %}
                        {% comment %} <div class="item__description">{{ collection_description | strip_html | truncatewords: 16 }}</div> {% endcomment %}
                        {% comment %} Link {% endcomment %}
-                       <a href="{{ collection_url }}" class="item__link link--icon-after link--icon-arrow-forward">View products</a>
+                       {% comment %} <a href="{{ collection_url }}" class="item__link link--icon-after link--icon-arrow-forward">View products</a> {% endcomment %}
                    </div>
                {% endfor %}
            </div>

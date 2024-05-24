@@ -3275,8 +3275,8 @@ hr,
   }
 }
 .feed--collection {
-  row-gap: 32px;
-  row-gap: 3.2rem;
+  row-gap: 24px;
+  row-gap: 2.4rem;
   display: grid;
 }
 .feed--collection .item {

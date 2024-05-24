@@ -115,7 +115,7 @@
                 grid-column: 4 / span 6;
                 order: 1;
                 // Image
-                img:not([class]) {
+                img {
                     @include rem( margin, spacing(5) 0 );
                     display: block;
                     width: 100%;

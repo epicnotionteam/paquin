@@ -301,6 +301,7 @@
         border-radius: $border-radius--base;
         border: $border--base;
         color: color( 'steel', '1' ) !important;
+        transition: all 0.16s ease-out;
     }
 }
 
@@ -315,5 +316,6 @@
     a.state--active {
         background-color: color( 'steel', '3' );
         color: white !important;
+        text-decoration: none !important;
     }
 }

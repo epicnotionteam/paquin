@@ -3,8 +3,8 @@
     "main": {
       "type": "static-blog",
       "settings": {
-        "heading": "News & Insights",
-        "content": "<p>Check out the latest and greatest from Paquin<\/p>",
+        "heading": "",
+        "content": "",
         "posts_per_page_range": 12
       }
     }

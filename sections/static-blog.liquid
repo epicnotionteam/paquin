@@ -1,148 +1,126 @@
-<script
-  type="application/json"
-  data-section-type="static-blog"
-  data-section-id="{{ section.id }}">
-</script>
+{% comment %}
+// Output default Blog template
+{% endcomment %}
 
-{% assign featured_post = section.settings.featured_post %}
-{% assign paginate_by = section.settings.posts_per_page_range | times: 1 %}
-
-{% assign show_featured = false %}
-{% if featured_post != '' and featured_post != blank %}
-  {% assign show_featured = true %}
-
-  {% comment %}
-    Don't show highlighted post if is not first page, or if tags are active
-  {% endcomment %}
-  {% if paginate.current_page != 1 and current_tags != blank %}
-    {% assign show_featured = false %}
-  {% endif %}
-{% endif %}
+{% comment %} Assign template/section data to vars {% endcomment %}
+{% assign paginate_by     = section.settings.posts_per_page_range | times: 1 %}
+{% assign section_heading = section.settings.heading %}
+{% assign section_content = section.settings.content %}
 
 {% comment %} Post Header {% endcomment %}
 <section class="section--blog-header wrap--container theme--alt">
-  	<div class="wrap--max push--center">
-  		<div class="section__grid">
-    		{% comment %} Breadcrumbs {% endcomment %}
-    		{% render 'breadcrumbs' %}
-    		{% comment %} Content {% endcomment %}
-    		<div class="container--content">
-				{% comment %} Heading {% endcomment %}
-      			<h1 class="blog__heading">{{ blog.title }}</h1>
-				{% comment %} Content {% endcomment %}
-				<div class="blog__content">[CONTENT]</div>
-    		</div>
-    		{% comment %} Tags {% endcomment %}
-    		<div class="container--tags">
-				<p>Browse by topic:</p>
-      			[TAGS]
-    		</div>
-  		</div>
-    </div>
+	<div class="wrap--max push--center">
+		<div class="section__grid">
+		  {% comment %} Breadcrumbs {% endcomment %}
+		  {% render 'breadcrumbs' %}
+		  {% comment %} Content {% endcomment %}
+		  <div class="container--content">
+			  {% comment %} Heading {% endcomment %}
+				<h1 class="blog__heading">{{ blog.title }}</h1>
+			  {% comment %} Content {% endcomment %}
+			  <div class="blog__content">[CONTENT]</div>
+		  </div>
+		  {% comment %} Tags {% endcomment %}
+		  <div class="container--tags">
+			  <p>Browse by topic:</p>
+				[TAGS]
+		  </div>
+		</div>
+  </div>
 </section>
 
 {% comment %} Post Header {% endcomment %}
 <section class="section--feed-blog wrap--container theme--alt">
-	<div class="wrap--max push--center">
-		<div class="section__grid">
-			{% comment %} Container [Heading, Small] {% endcomment %}
-			<div class="container--heading-small section__primary-heading">
-				{% comment %} Heading [Small] {% endcomment %}
-				<h2 class="section__heading--small h5">Articles</h2>
-			</div>
-			{% comment %} Container [Feed] {% endcomment %}
-			<div class="container--feed">
-				{% paginate blog.articles by paginate_by %}
-					{% comment %}
-					{% if show_featured %}
-						{% render 'article-excerpt-featured', article: articles[featured_post] %}
-					{% endif %}
-					{% endcomment %}
-					<div class="feed--post">
-						{% for article in blog.articles %}
-							{% comment %} Assign block data to vars {% endcomment %}
-							{% assign item_url     = article.url %}
-							{% assign item_image   = article.image | img_url: '512x' %}
-							{% assign item_title   = article.title %}
-							{% assign item_excerpt = article.excerpt %}
-							{% assign item_content = article.content %}
-							{% comment %} Output item {% endcomment %}
-							<div class="item">
-								{% comment %} Image {% endcomment %}
-								{% if item_image %}
-									<a class="item__wrap--image" href="{{ item_url }}">
-										<img class="item__image" src="{{ item_image }}" alt="{{ item_title }}">
-									</a>
-								{% endif %}
-								{% comment %} Title {% endcomment %}
-								<h3 class="item__title"><a href="{{ item_url }}">{{ item_title }}</a></h3>
-								<p class="item__excerpt">
-									{% if item_excerpt != blank %}
-										{{ item_excerpt }}
-									{% else %}
-										{{ item_content | strip_html | truncatewords: 20 }}
-									{% endif %}
-								</p>
-								<a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>
-							</div>
-						{% else %}
-							<article class="blog--no-results">
-								<h2 class="blog--no-results-title">
-									{{ 'blog.general.empty_blog' | t }}
-								</h2>
-							</article>
-						{% endfor %}
-					</div>
-					{% render 'pagination', paginate: paginate %}
-				{% endpaginate %}
-			</div>
-		</div>
-  	</div>
+  <div class="wrap--max push--center">
+	  <div class="section__grid">
+		  {% comment %} Container [Heading, Small] {% endcomment %}
+		  <div class="container--heading-small section__primary-heading">
+			  {% comment %} Heading [Small] {% endcomment %}
+			  <h2 class="section__heading--small h5">Articles</h2>
+		  </div>
+		  {% comment %} Container [Feed] {% endcomment %}
+		  <div class="container--feed">
+			  {% paginate blog.articles by paginate_by %}
+				  {% comment %}
+				  {% if show_featured %}
+					  {% render 'article-excerpt-featured', article: articles[featured_post] %}
+				  {% endif %}
+				  {% endcomment %}
+				  <div class="feed--post">
+					  {% for article in blog.articles %}
+						  {% comment %} Assign block data to vars {% endcomment %}
+						  {% assign item_url     = article.url %}
+						  {% assign item_image   = article.image | img_url: '512x' %}
+						  {% assign item_title   = article.title %}
+						  {% assign item_excerpt = article.excerpt %}
+						  {% assign item_content = article.content %}
+						  {% comment %} Output item {% endcomment %}
+						  <div class="item">
+							  {% comment %} Image {% endcomment %}
+							  {% if item_image %}
+								  <a class="item__wrap--image" href="{{ item_url }}">
+									  <img class="item__image" src="{{ item_image }}" alt="{{ item_title }}">
+								  </a>
+							  {% endif %}
+							  {% comment %} Title {% endcomment %}
+							  <h3 class="item__title"><a href="{{ item_url }}">{{ item_title }}</a></h3>
+							  <p class="item__excerpt">
+								  {% if item_excerpt != blank %}
+									  {{ item_excerpt }}
+								  {% else %}
+									  {{ item_content | strip_html | truncatewords: 20 }}
+								  {% endif %}
+							  </p>
+							  <a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>
+						  </div>
+					  {% else %}
+						  <article class="blog--no-results">
+							  <h2 class="blog--no-results-title">
+								  {{ 'blog.general.empty_blog' | t }}
+							  </h2>
+						  </article>
+					  {% endfor %}
+				  </div>
+				  {% render 'pagination', paginate: paginate %}
+			  {% endpaginate %}
+		  </div>
+	  </div>
+	</div>
 </section>
+
+<script
+	type="application/json"
+	data-section-type="static-blog"
+	data-section-id="{{ section.id }}">
+</script>
 
 {% schema %}
 {
-  "name": "t:sections.blog_pages.name",
-  "class": "blog--section section--canonical",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_rss_link",
-      "label": "t:sections.blog_pages.show_rss_link.label",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_date",
-      "label": "t:sections.blog_pages.show_date.label",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_author",
-      "label": "t:sections.blog_pages.show_author.label",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_excerpt",
-      "label": "t:sections.blog_pages.show_excerpt.label",
-      "default": true
-    },
-    {
-      "type": "article",
-      "id": "featured_post",
-      "label": "t:sections.blog_pages.featured_post.label"
-    },
-    {
-      "type": "range",
-      "id": "posts_per_page_range",
-      "label": "t:sections.blog_pages.posts_per_page_range.label",
-      "min": 6,
-      "max": 12,
-      "step": 3,
-      "default": 9
-    }
-  ]
+    "name": "t:sections.blog_pages.name",
+  	"class": "blog--section section--canonical",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading",
+            "info": "Primary page heading"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Content</p>"
+        },
+        {
+			"type": "range",
+			"id": "posts_per_page_range",
+			"label": "Posts per page",
+			"min": 4,
+			"max": 12,
+			"step": 4,
+			"default": 12
+		}
+    ]
 }
 {% endschema %}

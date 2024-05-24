@@ -148,11 +148,11 @@
     display: grid;
     // Item container
     .item {
-        @include rem( row-gap, 12px );
+        @include rem( row-gap, spacing(1) );
         display: grid;
         // Wrap [Image]
         .item__wrap--image {
-            @include rem( margin-bottom, spacing(2) );
+            @include rem( margin-bottom, spacing(3) );
             aspect-ratio: 1/1;
             border: $border--base;
             overflow: hidden;

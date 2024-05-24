@@ -3281,13 +3281,13 @@ hr,
   display: grid;
 }
 .feed--collection .item {
-  row-gap: 12px;
-  row-gap: 1.2rem;
+  row-gap: 4px;
+  row-gap: 0.4rem;
   display: grid;
 }
 .feed--collection .item .item__wrap--image {
-  margin-bottom: 8px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
   aspect-ratio: 1/1;
   border: 1px solid #D6DBDD;
   overflow: hidden;

@@ -23,16 +23,12 @@
 			{% comment %} Tags {% endcomment %}
 			<div class="container--tags">
 				<p>Browse by topic:</p>
-				<ul class="tag-list">
-					<li class="tag-item">
-						<a href="{{ blog.url }}">All</a>
-					</li>
+				<nav class="nav--tag">
+					<a href="{{ blog.url }}">All</a>
 					{% for tag in blog.all_tags %}
-						<li class="tag-item">
-							<a href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
-						</li>
+						<a href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
 					{% endfor %}
-				</ul>
+				</nav>
 			</div>
 		</div>
   	</div>

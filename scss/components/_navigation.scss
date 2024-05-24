@@ -266,7 +266,6 @@
 }
 
 
-
 // Navigation [Social Sharing]
 // --------------------------------------------------
 
@@ -279,5 +278,28 @@
         display: block;
         font-weight: normal !important;
         line-height: 1.8;
+    }
+}
+
+
+// Navigation [Tag]
+// --------------------------------------------------
+
+// Component container
+.nav--tag {
+    @include rem( gap, 6px );
+    display: flex;
+    flex-wrap: wrap;
+    // Link
+    a {
+        @extend %h5;
+        @include rem(( 
+            font-size: 12px,
+            letter-spacing: 0.24px,
+            padding: spacing(2) 12px 
+        ));
+        border-radius: $border-radius--base;
+        border: $border--base;
+        color: color( 'steel', '1' );
     }
 }

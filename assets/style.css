@@ -3301,7 +3301,21 @@ hr,
   width: 100%;
 }
 .feed--collection .item .item__title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  letter-spacing: 0.016rem;
   margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .feed--collection .item .item__title {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 26px;
+    letter-spacing: 0.24px;
+    letter-spacing: 0.024rem;
+  }
 }
 .feed--collection .item .item__title a {
   color: #212224 !important;

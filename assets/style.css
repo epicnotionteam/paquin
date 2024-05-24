@@ -2642,6 +2642,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--blog-header .container--content .section__content p:last-child {
   margin: 0;
 }
+.section--blog-header .container--tags p {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  color: #66787F;
+  margin: 0;
+}
 
 .section--feed-blog {
   padding-bottom: 72px;

@@ -11,22 +11,31 @@
 <section class="section--blog-header wrap--container theme--alt">
 	<div class="wrap--max push--center">
 		<div class="section__grid">
-		  {% comment %} Breadcrumbs {% endcomment %}
-		  {% render 'breadcrumbs' %}
-		  {% comment %} Content {% endcomment %}
-		  <div class="container--content">
-			  {% comment %} Heading {% endcomment %}
-				<h1 class="section__heading">{{ section_heading }}</h1>
-			  {% comment %} Content {% endcomment %}
-			  <div class="section__content">{{ section_content }}</div>
-		  </div>
-		  {% comment %} Tags {% endcomment %}
-		  <div class="container--tags">
-			  <p>Browse by topic:</p>
-				[TAGS]
-		  </div>
+			{% comment %} Breadcrumbs {% endcomment %}
+			{% render 'breadcrumbs' %}
+			{% comment %} Content {% endcomment %}
+			<div class="container--content">
+				{% comment %} Heading {% endcomment %}
+					<h1 class="section__heading">{{ section_heading }}</h1>
+				{% comment %} Content {% endcomment %}
+				<div class="section__content">{{ section_content }}</div>
+			</div>
+			{% comment %} Tags {% endcomment %}
+			<div class="container--tags">
+				<p>Browse by topic:</p>
+				<ul class="tag-list">
+					<li class="tag-item">
+						<a href="{{ blog.url }}">All</a>
+					</li>
+					{% for tag in blog.all_tags %}
+						<li class="tag-item">
+							<a href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
-  </div>
+  	</div>
 </section>
 
 {% comment %} Post Header {% endcomment %}

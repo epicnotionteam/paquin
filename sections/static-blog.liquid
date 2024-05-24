@@ -31,16 +31,31 @@
                 </div>
             </div>
             {% comment %} Tags {% endcomment %}
-			<div class="container--tags">
-				<p>Browse by topic:</p>
-				<nav class="nav--tag">
-					<a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
-					{% for tag in blog.all_tags %}
-						{% assign tag_count = blog.articles_count[tag] %}
-						<a href="{{ blog.url }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}class="state--active"{% endif %}>{{ tag }} [{{ tag_count }}]</a>
-					{% endfor %}
-				</nav>
-			</div>
+            <div class="container--tags">
+                <p>Browse by topic:</p>
+                <nav class="nav--tag">
+                    <a href="{{ blog.url }}" {% if current_tags == blank %}class="state--active"{% endif %}>All</a>
+                    {% assign tags_with_counts = "" %}
+                    {% for tag in blog.all_tags %}
+                        {% assign tag_count = 0 %}
+                        {% for article in blog.articles %}
+                            {% if article.tags contains tag %}
+                                {% assign tag_count = tag_count | plus: 1 %}
+                            {% endif %}
+                        {% endfor %}
+                        {% assign tags_with_counts = tags_with_counts | append: tag | append: "__" | append: tag_count | append: '|' %}
+                    {% endfor %}
+                    {% assign tags_with_counts = tags_with_counts | split: '|' %}
+                    {% for tag_with_count in tags_with_counts %}
+                        {% assign parts = tag_with_count | split: '__' %}
+                        {% assign tag_name = parts[0] %}
+                        {% assign tag_count = parts[1] %}
+                        {% if tag_name != '' %}
+                        <a href="{{ blog.url }}/tagged/{{ tag_name | handleize }}" {% if current_tags contains tag_name %}class="state--active"{% endif %}>{{ tag_name }} [{{ tag_count }}]</a>
+                        {% endif %}
+                    {% endfor %}
+                </nav>
+            </div>
         </div>
     </div>
 </section>
@@ -112,7 +127,7 @@
     "settings": [
         {
             "type": "range",
-            "id": "posts_per_page_range",
+           id: "posts_per_page_range",
             "label": "Posts per page",
             "min": 4,
             "max": 12,

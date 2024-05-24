@@ -58,9 +58,33 @@
 						{% render 'article-excerpt-featured', article: articles[featured_post] %}
 					{% endif %}
 					{% endcomment %}
-					<ul class="feed--post">
+					<div class="feed--post">
 						{% for article in blog.articles %}
-							{% render 'article-excerpt', article: article %}
+							{% comment %} Assign block data to vars {% endcomment %}
+							{% assign item_url     = article.url %}
+							{% assign item_image   = article.image | img_url: '512x' %}
+							{% assign item_title   = article.title %}
+							{% assign item_excerpt = article.excerpt %}
+							{% assign item_content = article.content %}
+							{% comment %} Output item {% endcomment %}
+							<div class="item">
+								{% comment %} Image {% endcomment %}
+								{% if item_image %}
+									<a class="item__wrap--image" href="{{ item_url }}">
+										<img class="item__image" src="{{ item_image }}" alt="{{ item_title }}">
+									</a>
+								{% endif %}
+								{% comment %} Title {% endcomment %}
+								<h3 class="item__title"><a href="{{ item_url }}">{{ item_title }}</a></h3>
+								<p class="item__excerpt">
+									{% if item_excerpt != blank %}
+										{{ item_excerpt }}
+									{% else %}
+										{{ item_content | strip_html | truncatewords: 20 }}
+									{% endif %}
+								</p>
+								<a href="{{ item_url }}" class="item__link link--icon-after link--icon-arrow-forward">Continue reading</a>
+							</div>
 						{% else %}
 							<article class="blog--no-results">
 								<h2 class="blog--no-results-title">
@@ -68,7 +92,7 @@
 								</h2>
 							</article>
 						{% endfor %}
-					</ul>
+					</div>
 					{% render 'pagination', paginate: paginate %}
 				{% endpaginate %}
 			</div>

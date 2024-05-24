@@ -363,6 +363,14 @@
     }
 }
 
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Adjust grid structure
+    .template-collection .productgrid--items {
+        grid-template-columns: repeat( 6, 1fr );
+    }
+}
+
 // State management
 .template-collection .productgrid--items {
     // Item:hover

@@ -19,43 +19,53 @@
   {% endif %}
 {% endif %}
 
-<section class="blog--container">
-  <header class="blog-title">
-    <h1>{{ blog.title }}</h1>
-    {% if section.settings.show_rss_link %}
-      <a href="{{ blog.url }}.atom">
-        {% render 'icon-rss' %}
-        <span class="visually-hidden">{{ 'general.accessibility.rss' | t: platform: title | escape }}</span>
-      </a>
-    {% endif %}
-  </header>
+{% comment %} Post Header {% endcomment %}
+<section class="section--blog-header wrap--container theme--alt">
+  	<div class="wrap--max push--center">
+  		<div class="section__grid">
+    		{% comment %} Breadcrumbs {% endcomment %}
+    		{% render 'breadcrumbs' %}
+    		{% comment %} Content {% endcomment %}
+    		<div class="container--content">
+				{% comment %} Heading {% endcomment %}
+      			<h1 class="blog__heading">{{ blog.title }}</h1>
+				{% comment %} Content {% endcomment %}
+				<div class="blog__content">[CONTENT]</div>
+    		</div>
+    		{% comment %} Tags {% endcomment %}
+    		<div class="container--tags">
+				<p>Browse by topic:</p>
+      			{% render 'article-author', article: article, show_tags: true %}
+    		</div>
+  		</div>
+    </div>
+</section>
 
-  {% paginate blog.articles by paginate_by %}
-
-    {% if show_featured %}
-      {%
-        render 'article-excerpt-featured',
-        article: articles[featured_post]
-      %}
-    {% endif %}
-
-    <ul class="blog--inner">
-      {% for article in blog.articles %}
-        {%
-          render 'article-excerpt',
-          article: article
-          %}
-      {% else %}
-        <article class="blog--no-results">
-          <h2 class="blog--no-results-title">
-            {{ 'blog.general.empty_blog' | t }}
-          </h2>
-        </article>
-      {% endfor %}
-    </ul>
-
-    {% render 'pagination', paginate: paginate %}
-  {% endpaginate %}
+{% comment %} Post Header {% endcomment %}
+<section class="section--feed-blog wrap--container theme--alt">
+	<div class="wrap--max push--center">
+		<div class="section__grid">
+			{% paginate blog.articles by paginate_by %}
+				{% comment %}
+				{% if show_featured %}
+					{% render 'article-excerpt-featured', article: articles[featured_post] %}
+				{% endif %}
+				{% endcomment %}
+				<ul class="feed--post">
+					{% for article in blog.articles %}
+						{% render 'article-excerpt', article: article %}
+					{% else %}
+						<article class="blog--no-results">
+							<h2 class="blog--no-results-title">
+								{{ 'blog.general.empty_blog' | t }}
+							</h2>
+						</article>
+					{% endfor %}
+				</ul>
+				{% render 'pagination', paginate: paginate %}
+  			{% endpaginate %}
+		</div>
+  	</div>
 </section>
 
 {% schema %}

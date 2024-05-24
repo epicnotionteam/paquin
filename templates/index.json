@@ -77,6 +77,7 @@
         "link_text": "Meet The Paquin Company",
         "link_url": "shopify:\/\/pages\/about",
         "link_type": "button",
+        "link_icon": "forward",
         "theme": "base"
       }
     },
@@ -269,13 +270,69 @@
           "settings": {
             "collection": "test"
           }
+        },
+        "collection_TnbtRk": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_kqCrAU": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_LRNdRf": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_WkTPfk": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_MKw7d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_yXBkDD": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_c6GfpM": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
+        },
+        "collection_X4LfRw": {
+          "type": "collection",
+          "settings": {
+            "collection": "test"
+          }
         }
       },
       "block_order": [
         "collection_NPceRF",
         "collection_bFJhze",
         "collection_MnPLHw",
-        "collection_TtcqBR"
+        "collection_TtcqBR",
+        "collection_TnbtRk",
+        "collection_kqCrAU",
+        "collection_LRNdRf",
+        "collection_WkTPfk",
+        "collection_MKw7d3",
+        "collection_yXBkDD",
+        "collection_c6GfpM",
+        "collection_X4LfRw"
       ],
       "settings": {
         "heading_small": "Browse parts by type",

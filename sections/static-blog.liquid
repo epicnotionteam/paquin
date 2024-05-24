@@ -35,7 +35,7 @@
     		{% comment %} Tags {% endcomment %}
     		<div class="container--tags">
 				<p>Browse by topic:</p>
-      			{% render 'article-author', article: article, show_tags: true %}
+      			[TAGS]
     		</div>
   		</div>
     </div>
@@ -45,25 +45,33 @@
 <section class="section--feed-blog wrap--container theme--alt">
 	<div class="wrap--max push--center">
 		<div class="section__grid">
-			{% paginate blog.articles by paginate_by %}
-				{% comment %}
-				{% if show_featured %}
-					{% render 'article-excerpt-featured', article: articles[featured_post] %}
-				{% endif %}
-				{% endcomment %}
-				<ul class="feed--post">
-					{% for article in blog.articles %}
-						{% render 'article-excerpt', article: article %}
-					{% else %}
-						<article class="blog--no-results">
-							<h2 class="blog--no-results-title">
-								{{ 'blog.general.empty_blog' | t }}
-							</h2>
-						</article>
-					{% endfor %}
-				</ul>
-				{% render 'pagination', paginate: paginate %}
-  			{% endpaginate %}
+			{% comment %} Container [Heading, Small] {% endcomment %}
+			<div class="container--heading-small section__primary-heading">
+				{% comment %} Heading [Small] {% endcomment %}
+				<h2 class="section__heading--small h5">Articles</h2>
+			</div>
+			{% comment %} Container [Feed] {% endcomment %}
+			<div class="container--feed">
+				{% paginate blog.articles by paginate_by %}
+					{% comment %}
+					{% if show_featured %}
+						{% render 'article-excerpt-featured', article: articles[featured_post] %}
+					{% endif %}
+					{% endcomment %}
+					<ul class="feed--post">
+						{% for article in blog.articles %}
+							{% render 'article-excerpt', article: article %}
+						{% else %}
+							<article class="blog--no-results">
+								<h2 class="blog--no-results-title">
+									{{ 'blog.general.empty_blog' | t }}
+								</h2>
+							</article>
+						{% endfor %}
+					</ul>
+					{% render 'pagination', paginate: paginate %}
+				{% endpaginate %}
+			</div>
 		</div>
   	</div>
 </section>

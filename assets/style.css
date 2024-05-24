@@ -1097,7 +1097,7 @@ body {
 .theme--dark h3,
 .theme--dark h4, .theme--dark .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a, .mobile-nav-content .theme--dark .navmenu.navmenu-depth-1 > li.navmenu-item > a, .theme--dark .feed--team .item .item__name, .feed--team .item .theme--dark .item__name, .theme--dark .feed--post .item .item__title, .feed--post .item .theme--dark .item__title,
 .theme--dark h5, .theme--dark .live-search-form .search-flydown--results .search-flydown__group-title, .live-search-form .search-flydown--results .theme--dark .search-flydown__group-title, .theme--dark .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title, .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .theme--dark .collection-filters__filter-title, .theme--dark .feed--block .item .item__number, .feed--block .item .theme--dark .item__number, .theme--dark .button--outline, .theme--dark .button--base,
-.theme--dark .product-form--atc-button, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
+.theme--dark .product-form--atc-button, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
   color: white;
 }
 .theme--dark .breadcrumbs-container a {
@@ -1393,6 +1393,7 @@ h5,
 .button--outline,
 .button--base,
 .product-form--atc-button,
+.section--feed-blog .section__grid .container--heading-small .section__heading--small,
 .section--feed-team .section__grid .container--heading-small .section__heading--small,
 .section--feed-post .section__grid .container--heading-small .section__heading--small,
 .section--feed-collection .section__grid .container--heading-small .section__heading--small,
@@ -2622,6 +2623,37 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 
+.section--feed-blog {
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+}
+.section--feed-blog .section__grid {
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
+.section--feed-blog .section__grid .container--heading-small .section__heading--small {
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .section--feed-post {
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
+  .section--feed-post .section__grid {
+    row-gap: 40px;
+    row-gap: 4rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .section--feed-post .section__grid .container--heading-small {
+    grid-column: 1/span 12;
+  }
+  .section--feed-post .section__grid .container--feed {
+    grid-column: 1/span 12;
+  }
+}
 .collection--section .productgrid--outer {
   max-width: 1590px;
   max-width: 159rem;

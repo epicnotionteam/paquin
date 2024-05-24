@@ -148,7 +148,6 @@
     display: grid;
     // Item container
     .item {
-        @include rem( row-gap, spacing(1) );
         align-content: flex-start;
         display: grid;
         // Wrap [Image]

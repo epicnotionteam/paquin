@@ -304,19 +304,19 @@
         "collection_yXBkDD": {
           "type": "collection",
           "settings": {
-            "collection": "test"
+            "collection": "valves"
           }
         },
         "collection_c6GfpM": {
           "type": "collection",
           "settings": {
-            "collection": "test"
+            "collection": "pumps"
           }
         },
         "collection_X4LfRw": {
           "type": "collection",
           "settings": {
-            "collection": "test"
+            "collection": "load-force"
           }
         }
       },

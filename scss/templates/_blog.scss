@@ -31,8 +31,8 @@
     .container--tags {
         p {
             @include font-size( 'xsmall' );
+            @include rem( margin-bottom, spacing(2) );
             color: color( 'steel', '4' );
-            margin: 0;
         }
     }
 }

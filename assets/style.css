@@ -2650,8 +2650,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   color: #66787F;
-  margin: 0;
 }
 
 .section--feed-blog {

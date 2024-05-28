@@ -17,10 +17,11 @@
         // Heading
         .section__heading {
             @include font-size( 'headline' );
-            @include rem( margin, $gap--section-small 0 0 );
+            @include rem( margin, $gap--section-small 0 spacing(3) );
         }
         // Content
         .section__content {
+            @include font-size( 'large' );
             // Strip margin from final <p>
             p:last-child {
                 margin: 0;
@@ -43,7 +44,7 @@
     .section--blog-header {
         // Heading
         .container--content .section__heading {
-            @include rem( margin, $gap--section-large 0 0 );
+            @include rem( margin, $gap--section-large 0 spacing(3) );
         }
     }
 }

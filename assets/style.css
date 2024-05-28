@@ -2632,8 +2632,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 46px;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin: 72px 0 0;
-  margin: 7.2rem 0 0;
+  margin: 72px 0 16px;
+  margin: 7.2rem 0 1.6rem;
 }
 @media screen and (min-width: 1024px) {
   .section--blog-header .container--content .section__heading {
@@ -2642,6 +2642,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     line-height: 72px;
     letter-spacing: 0.56px;
     letter-spacing: 0.056rem;
+  }
+}
+.section--blog-header .container--content .section__content {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1024px) {
+  .section--blog-header .container--content .section__content {
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 1.4;
   }
 }
 .section--blog-header .container--content .section__content p:last-child {
@@ -2658,8 +2670,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 64em) {
   .section--blog-header .container--content .section__heading {
-    margin: 96px 0 0;
-    margin: 9.6rem 0 0;
+    margin: 96px 0 16px;
+    margin: 9.6rem 0 1.6rem;
   }
 }
 .section--feed-blog {

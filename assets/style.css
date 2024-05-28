@@ -4556,6 +4556,12 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control.has-error textarea {
   border-bottom: 1px solid #7D4448 !important;
 }
-.globo-form-app .block-container .globo-form-control button.submit:hover {
+.globo-form-app button.submit:hover {
   box-shadow: none !important;
+}
+.globo-form-app button.submit:active, .globo-form-app button.submit:focus {
+  background-color: #0F7F92 !important;
+  box-shadow: none !important;
+  color: white !important;
+  filter: brightness(1.12);
 }

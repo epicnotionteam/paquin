@@ -108,10 +108,22 @@
                     border-bottom: 1px solid color( 'rust', '2' ) !important;
                 }
             }
-            // Submit button [:Hover]
-            button.submit:hover {
-                box-shadow: none !important;
-            }
+        }
+    }
+    // Submit button
+    button.submit {
+        // State [:Hover]
+        &:hover {
+            box-shadow: none !important;
+        }
+        // State [:Active]
+        // State [:Focus]
+        &:active,
+        &:focus {
+			background-color: color( 'action', '1' ) !important;
+			box-shadow: none !important;
+			color: white !important;
+			filter: brightness( 1.12 );
         }
     }
 }

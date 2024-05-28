@@ -35,6 +35,10 @@
                 box-shadow: none !important;  
                 font-family: font-family( 'base' );
             }
+			// Select
+			select {
+				@include rem( min-height, 128px );
+			}
             // Placeholder
             ::placeholder {
                 color: color( 'steel', '3' );

@@ -4478,6 +4478,10 @@ ul.list--link-arrow li::before {
   box-shadow: none !important;
   font-family: "Paquin Sans Text", sans-serif;
 }
+.globo-form-app .block-container .globo-form-control select {
+  min-height: 128px;
+  min-height: 12.8rem;
+}
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #30373A;
 }

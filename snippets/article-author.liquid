@@ -13,15 +13,16 @@
 {% comment %} Process tags {% endcomment %}
 {% assign tag_count = article.tags.size %}
 {% if tag_count > 0 %}
-    {% assign tag_string = "Posted in " | append: article.tags[0] %}
-    {% for tag in article.tags offset:1 limit:tag_count-2 %}
-        {% assign tag_string = tag_string | append: ", " | append: tag %}
+    {% assign tag_string = "Posted in " %}
+    {% for tag in article.tags %}
+        {% if forloop.last and tag_count > 1 %}
+            {% assign tag_string = tag_string | append: " and " | append: tag %}
+        {% elsif forloop.first %}
+            {% assign tag_string = tag_string | append: tag %}
+        {% else %}
+            {% assign tag_string = tag_string | append: ", " | append: tag %}
+        {% endif %}
     {% endfor %}
-    {% if tag_count > 2 %}
-        {% assign tag_string = tag_string | append: ", and " | append: article.tags[tag_count-1] %}
-    {% elsif tag_count == 2 %}
-        {% assign tag_string = tag_string | append: " and " | append: article.tags[1] %}
-    {% endif %}
 {% endif %}
 
 {% comment %} Output component {% endcomment %}

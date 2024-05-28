@@ -14,11 +14,7 @@
 .section--blog-header {
     // Container [Breadcrumbs]
     & > .wrap--max > .section__grid > .wrap--container {
-        padding: 0 !important;
-        // Breadcrumbs
-        .breadcrumbs-container {
-            @include rem( padding-bottom, spacing(7) !important );
-        }
+        @include rem( padding, spacing(2) 0 spacing(7) !important );
     }
     // Container [Content]
     .container--content {
@@ -52,7 +48,7 @@
     // Section container
     .section--blog-header {
         // Breadcrumbs
-        & > .wrap--max > .section__grid > .wrap--container .breadcrumbs-container {
+        & > .wrap--max > .section__grid > .wrap--container {
             @include rem( padding-bottom, 72px !important );
         }
     }

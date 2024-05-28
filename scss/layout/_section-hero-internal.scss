@@ -25,7 +25,7 @@
             width: 100%;
             // Breadcrumb container
             .wrap--container {
-                @include rem( padding, spacing(3) 0 spacing(7) !important );
+                @include rem( padding, spacing(2) 0 spacing(7) !important );
                 margin-bottom: auto;
                 .breadcrumbs-container {
                     margin: 0;

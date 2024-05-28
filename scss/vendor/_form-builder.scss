@@ -36,6 +36,10 @@
             button.submit {
                 box-shadow: none !important;
             }
+            // Alert
+            small.messages {
+                color: color( 'rust', '2' );
+            }
         }
     }
     .gfb__footer {

@@ -4472,6 +4472,9 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control button.submit {
   box-shadow: none !important;
 }
+.globo-form-app .block-container .globo-form-control small.messages {
+  color: #7D4448;
+}
 .globo-form-app .gfb__footer {
   margin-top: 24px;
   margin-top: 2.4rem;

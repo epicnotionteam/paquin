@@ -1120,6 +1120,11 @@ body {
 .theme--dark .feed--role .item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
+.theme--dark .form--base input,
+.theme--dark .form--base select,
+.theme--dark .form--base textarea {
+  background-color: white;
+}
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
 .theme--dark li a {

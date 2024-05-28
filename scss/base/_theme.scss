@@ -58,6 +58,14 @@
 	.feed--role .item {
 		border-bottom: $border--dark;
 	}
+	// Component [Form]
+	.form--base {
+		input,
+		select,
+		textarea {
+			background-color: white;
+		}
+	}
 	// Component [Link, Base]
 	a:not([class*='button']):not(.breadcrumbs-container a),
 	p a,

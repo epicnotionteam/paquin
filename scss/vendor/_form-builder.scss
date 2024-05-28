@@ -23,7 +23,7 @@
             input,
             select,
             textarea {
-                @include font-size( 'base' );
+                @include font-size( 'small' );
                 box-shadow: none !important;
             }
             // Submit button

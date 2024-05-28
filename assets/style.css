@@ -3797,11 +3797,11 @@ label {
 .form--base input,
 .form--base select,
 .form--base textarea {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   min-height: 54px;
   min-height: 5.4rem;
   background-color: #D6DBDD;
@@ -4441,11 +4441,11 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control input,
 .globo-form-app .block-container .globo-form-control select,
 .globo-form-app .block-container .globo-form-control textarea {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   box-shadow: none !important;
 }
 .globo-form-app .block-container .globo-form-control button.submit {

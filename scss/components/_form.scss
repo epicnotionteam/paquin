@@ -29,7 +29,7 @@ label {
     input,
     select,
     textarea {
-        @include font-size( 'base' );
+        @include font-size( 'small' );
         @include rem( min-height, 54px );
         background-color: color( 'steel', '5' );
         border: 0 none !important;

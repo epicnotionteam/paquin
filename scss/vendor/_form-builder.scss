@@ -38,8 +38,8 @@
             }
             // Alert
             small.messages p {
+                @include rem( margin, spacing(1) 0 0 );
                 color: color( 'rust', '2' );
-                margin: 0;
             }
         }
     }

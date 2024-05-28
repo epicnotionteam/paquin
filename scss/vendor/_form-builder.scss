@@ -40,6 +40,11 @@
             small.messages p {
                 @include rem( margin, spacing(1) 0 0 );
                 color: color( 'rust', '2' );
+                &.help-block.error {
+                    @include icon( before, 'error' ) {
+                        @include rem( margin-right, 2px );
+                    }
+                }
             }
         }
     }

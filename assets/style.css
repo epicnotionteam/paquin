@@ -4477,6 +4477,18 @@ ul.list--link-arrow li::before {
   margin: 0.4rem 0 0;
   color: #7D4448;
 }
+.globo-form-app .block-container .globo-form-control small.messages p.help-block.error:before {
+  content: "\e000";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 2px;
+  margin-right: 0.2rem;
+}
 .globo-form-app .gfb__footer {
   margin-top: 24px;
   margin-top: 2.4rem;

@@ -235,7 +235,9 @@ label {
 // --------------------------------------------------
 
 // Component container
-.form--general-inquiry {}
+.form--general-inquiry {
+    @include rem( margin-top, spacing(3) );
+}
 
 
 // Form [Product Inquiry]

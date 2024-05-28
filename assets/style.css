@@ -3821,7 +3821,7 @@ label {
 .form--base input ::placeholder,
 .form--base select ::placeholder,
 .form--base textarea ::placeholder {
-  color: #66787F;
+  color: #30373A;
 }
 .form--base button.submit {
   border: 0 none !important;
@@ -4467,7 +4467,7 @@ ul.list--link-arrow li::before {
   font-family: "Paquin Sans Text", sans-serif;
 }
 .globo-form-app .block-container .globo-form-control ::placeholder {
-  color: #66787F;
+  color: #30373A;
 }
 .globo-form-app .block-container .globo-form-control button.submit {
   box-shadow: none !important;

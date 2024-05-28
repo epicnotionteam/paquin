@@ -37,8 +37,9 @@
                 box-shadow: none !important;
             }
             // Alert
-            small.messages {
+            small.messages p {
                 color: color( 'rust', '2' );
+                margin: 0;
             }
         }
     }

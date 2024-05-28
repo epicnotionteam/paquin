@@ -2631,6 +2631,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 8px 0 48px !important;
   padding: 0.8rem 0 4.8rem !important;
 }
+.section--blog-header > .wrap--max > .section__grid > .wrap--container .breadcrumbs-container {
+  margin: 8px auto 0;
+  margin: 0.8rem auto 0;
+}
 .section--blog-header .container--content .section__heading {
   font-size: 38px;
   font-size: 3.8rem;

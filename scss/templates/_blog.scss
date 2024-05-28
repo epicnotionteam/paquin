@@ -15,6 +15,10 @@
     // Container [Breadcrumbs]
     & > .wrap--max > .section__grid > .wrap--container {
         @include rem( padding, spacing(2) 0 spacing(7) !important );
+        // Breadcrumbs
+        .breadcrumbs-container {
+            @include rem( margin, spacing(2) auto 0 );
+        }
     }
     // Container [Content]
     .container--content {

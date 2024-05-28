@@ -4495,10 +4495,10 @@ ul.list--link-arrow li::before {
   display: inline-block;
   font-size: 120%;
 }
-.globo-form-app .block-container button.submit {
+.globo-form-app button.submit {
   box-shadow: none !important;
 }
-.globo-form-app .block-container button.submit:before {
+.globo-form-app button.submit:before {
   content: "\e5c8";
   font-family: "Material Symbols Outlined";
   font-style: normal;

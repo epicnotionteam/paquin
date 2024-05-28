@@ -49,14 +49,14 @@
                 }
             }
         }
-        // Submit button
-        button.submit {
-            box-shadow: none !important;
-            @include icon( before, 'arrow_forward' ) {
-                @include rem( margin, 1px 12px 0 0 );
-                font-size: 128%;
-                line-height: 1;
-            }
+    }
+    // Submit button
+    button.submit {
+        box-shadow: none !important;
+        @include icon( before, 'arrow_forward' ) {
+            @include rem( margin, 1px 12px 0 0 );
+            font-size: 128%;
+            line-height: 1;
         }
     }
     // Message container

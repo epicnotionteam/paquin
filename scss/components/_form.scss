@@ -22,7 +22,7 @@ label {
 .form--base {
     // Submit button
     button.submit {
-        background-color: red !important;
+        @extend %button--base;
     }
 }
 

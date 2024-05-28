@@ -4441,6 +4441,11 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control input,
 .globo-form-app .block-container .globo-form-control select,
 .globo-form-app .block-container .globo-form-control textarea {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
   box-shadow: none !important;
 }
 .globo-form-app .block-container .globo-form-control button.submit {

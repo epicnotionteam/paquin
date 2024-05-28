@@ -3400,10 +3400,9 @@ hr,
 .feed--post .item {
   row-gap: 12px;
   row-gap: 1.2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
-.feed--post .item > :not(.item__link) {
+.feed--post .item > * {
   align-self: flex-start;
 }
 .feed--post .item .item__wrap--image {
@@ -3441,7 +3440,7 @@ hr,
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  margin: auto 0 0;
+  margin: 0;
 }
 
 @media (min-width: 48em) {

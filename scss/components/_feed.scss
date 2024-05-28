@@ -232,10 +232,9 @@
     // Item container
     .item {
         @include rem( row-gap, 12px );
-        display: flex;
-        flex-direction: column;
-        // Set aligment on child elements
-        & > :not(.item__link) {
+        display: grid;
+        // Set alignment on child elements
+        & > * {
             align-self: flex-start;
         }
         // Wrap [Image]
@@ -271,7 +270,7 @@
         // Link
         .item__link {
             @include font-size( 'small' );
-            margin: auto 0 0;
+            margin: 0;
         }
     }
 }

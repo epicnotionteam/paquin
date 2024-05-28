@@ -2626,6 +2626,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   color: #66787F;
   margin: 0;
 }
+.article__author .container--information .article__tags a {
+  color: #66787F !important;
+  font-weight: 400 !important;
+}
 
 .section--blog-header > .wrap--max > .section__grid > .wrap--container {
   padding: 8px 0 48px !important;
@@ -2680,10 +2684,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   color: #66787F;
-}
-.section--blog-header .container--tags p a {
-  color: #66787F !important;
-  font-weight: 400 !important;
 }
 
 @media (min-width: 64em) {

@@ -180,6 +180,11 @@
             @include font-size( 'xsmall' );
             color: color( 'steel', '4' );
             margin: 0;
+            // Link
+            a {
+                color: color( 'steel', '4' ) !important;
+                font-weight: font-weight( 'base' ) !important;
+            }
         }
     }
 }

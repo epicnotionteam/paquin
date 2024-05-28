@@ -25,8 +25,10 @@ label {
     label {
         font-size: 0;
     }
-    // Input
-    input {
+    // Input [All]
+    input,
+    select,
+    textarea {
         background-color: color( 'steel', '5' );
         border: 0 none !important;
         box-shadow: none !important;

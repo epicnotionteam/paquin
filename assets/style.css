@@ -3794,7 +3794,9 @@ label {
 .form--base label {
   font-size: 0;
 }
-.form--base input {
+.form--base input,
+.form--base select,
+.form--base textarea {
   background-color: #D6DBDD;
   border: 0 none !important;
   box-shadow: none !important;

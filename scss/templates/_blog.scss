@@ -18,6 +18,7 @@
         // Breadcrumbs
         .breadcrumbs-container {
             @include rem( margin, spacing(2) auto 0 );
+            max-width: none;
         }
     }
     // Container [Content]

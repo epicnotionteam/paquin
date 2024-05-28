@@ -233,6 +233,9 @@
     .item {
         @include rem( row-gap, 12px );
         display: grid;
+        & > :not(.item__link) {
+            align-self: flex-start;
+        }
         // Wrap [Image]
         .item__wrap--image {
             @include rem( margin-bottom, spacing(2) );
@@ -266,7 +269,7 @@
         // Link
         .item__link {
             @include font-size( 'small' );
-            margin: 0;
+            margin: auto 0 0;
         }
     }
 }

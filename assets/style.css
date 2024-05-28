@@ -3402,6 +3402,9 @@ hr,
   row-gap: 1.2rem;
   display: grid;
 }
+.feed--post .item > :not(.item__link) {
+  align-self: flex-start;
+}
 .feed--post .item .item__wrap--image {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
@@ -3437,7 +3440,7 @@ hr,
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  margin: 0;
+  margin: auto 0 0;
 }
 
 @media (min-width: 48em) {

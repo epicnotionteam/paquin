@@ -24,6 +24,7 @@
             select,
             textarea {
                 @include font-size( 'small' );
+                background-color: color( 'background', 'input' );
                 box-shadow: none !important;  
                 font-family: font-family( 'base' );
             }

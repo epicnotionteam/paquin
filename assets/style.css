@@ -934,6 +934,14 @@ textarea {
   color: #212224;
 }
 
+.bg-color__background--input {
+  background-color: #F2F4F6;
+}
+
+.text-color__background--input {
+  color: #F2F4F6;
+}
+
 .bg-color__state--error {
   background-color: #000000;
 }
@@ -3804,7 +3812,7 @@ label {
   letter-spacing: -0.008rem;
   min-height: 54px;
   min-height: 5.4rem;
-  background-color: #D6DBDD;
+  background-color: #F2F4F6;
   border: 0 none !important;
   font-family: "Paquin Sans Text", sans-serif;
 }
@@ -4452,6 +4460,7 @@ ul.list--link-arrow li::before {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  background-color: #F2F4F6;
   box-shadow: none !important;
   font-family: "Paquin Sans Text", sans-serif;
 }

@@ -31,7 +31,7 @@ label {
     textarea {
         @include font-size( 'small' );
         @include rem( min-height, 54px );
-        background-color: color( 'steel', '5' );
+        background-color: color( 'background', 'input' );
         border: 0 none !important;
         font-family: font-family( 'base' );
         // Placeholder

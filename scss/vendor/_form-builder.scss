@@ -41,12 +41,12 @@
             // Alert
             small.messages p {
                 @include font-size( 'xsmall' );
-                @include rem( margin, spacing(1) 0 0 );
+                @include rem( margin, spacing(2) 0 0 );
                 color: color( 'rust', '2' );
                 font-family: font-family( 'base' );
                 &.help-block.error {
                     @include icon( before, 'error' ) {
-                        @include rem( margin, -2px spacing(1) 0 0 );
+                        @include rem( margin, -3px spacing(1) 0 0 );
                         display: inline-block;
                         font-size: 120%;
                     }
@@ -90,7 +90,7 @@
         // Fieldset 
         .globo-form-control {
             // Input state [:Error]
-            .has-error {
+            &.has-error {
                 // Apply border to input container
                 input,
                 select,

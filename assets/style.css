@@ -4479,8 +4479,8 @@ ul.list--link-arrow li::before {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
-  margin: 4px 0 0;
-  margin: 0.4rem 0 0;
+  margin: 8px 0 0;
+  margin: 0.8rem 0 0;
   color: #7D4448;
   font-family: "Paquin Sans Text", sans-serif;
 }
@@ -4493,8 +4493,8 @@ ul.list--link-arrow li::before {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: -2px 4px 0 0;
-  margin: -0.2rem 0.4rem 0 0;
+  margin: -3px 4px 0 0;
+  margin: -0.3rem 0.4rem 0 0;
   display: inline-block;
   font-size: 120%;
 }
@@ -4528,9 +4528,9 @@ ul.list--link-arrow li::before {
 .globo-form-app {
   margin: 0 !important;
 }
-.globo-form-app .block-container .globo-form-control .has-error input,
-.globo-form-app .block-container .globo-form-control .has-error select,
-.globo-form-app .block-container .globo-form-control .has-error textarea {
+.globo-form-app .block-container .globo-form-control.has-error input,
+.globo-form-app .block-container .globo-form-control.has-error select,
+.globo-form-app .block-container .globo-form-control.has-error textarea {
   border-bottom: 1px solid #7D4448 !important;
 }
 .globo-form-app .block-container .globo-form-control button.submit:hover {

@@ -15,7 +15,7 @@
 {% if tag_count > 0 %}
     {% assign tag_string = "Posted in " %}
     {% for tag in article.tags %}
-        {% capture tag_link %}<a href="/blogs/blog/tagged/{{ tag | handleize }}">{{ tag }}</a>{% endcapture %}
+        {% capture tag_link %}<a href="/blogs/news/tagged/{{ tag | handleize }}">{{ tag }}</a>{% endcapture %}
         {% if forloop.last and tag_count > 1 %}
             {% assign tag_string = tag_string | append: " and " | append: tag_link %}
         {% elsif forloop.first %}

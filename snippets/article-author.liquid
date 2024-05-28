@@ -11,27 +11,27 @@
 {% assign authors = "Graeme Bryson:graeme-bryson.jpg|Rob Kinkopf:rob-kinkopf.jpg" %}
 
 {% comment %} Process tags {% endcomment %}
-{% assign _tag_count_ = _article_._tags_._size_ %}
-{% if _tag_count_ > 0 %}
-    {% assign _tag_string_ = "Posted in " | append: _article_._tags_[0] %}
-    {% for _tag_ in _article_._tags_ offset:1 limit:_tag_count_-2 %}
-        {% assign _tag_string_ = _tag_string_ | append: ", " | append: _tag_ %}
+{% assign tag_count = article.tags.size %}
+{% if tag_count > 0 %}
+    {% assign tag_string = "Posted in " | append: article.tags[0] %}
+    {% for tag in article.tags offset:1 limit:tag_count-2 %}
+        {% assign tag_string = tag_string | append: ", " | append: tag %}
     {% endfor %}
-    {% if _tag_count_ > 2 %}
-        {% assign _tag_string_ = _tag_string_ | append: ", and " | append: _article_._tags_[_tag_count_-1] %}
-    {% elsif _tag_count_ == 2 %}
-        {% assign _tag_string_ = _tag_string_ | append: " and " | append: _article_._tags_[1] %}
+    {% if tag_count > 2 %}
+        {% assign tag_string = tag_string | append: ", and " | append: article.tags[tag_count-1] %}
+    {% elsif tag_count == 2 %}
+        {% assign tag_string = tag_string | append: " and " | append: article.tags[1] %}
     {% endif %}
 {% endif %}
 
 {% comment %} Output component {% endcomment %}
 <div class="article__author">
     {% assign author_found = false %}
-    {% assign author_list  = authors | split: "|" %}
+    {% assign author_list = authors | split: "|" %}
     {% for author in author_list %}
         {% assign author_details = author | split: ":" %}
-        {% assign author_name    = author_details[0] %}
-        {% assign author_image   = author_details[1] %}
+        {% assign author_name = author_details[0] %}
+        {% assign author_image = author_details[1] %}
         {% if article_author == author_name %}
             {% assign author_found = true %}
             {% comment %} Image {% endcomment %}
@@ -41,13 +41,14 @@
             <div class="container--information">
                 {% comment %} Name {% endcomment %}
                 <p class="author__name">Written by <span>{{ author_name }}</span></p>
-                {% if _show_tags_ and _tag_count_ > 0 %}
-                    <p class="article__tags">{{ _tag_string_ }}</p>
+                {% if show_tags and tag_count > 0 %}
+                    <p class="article__tags">{{ tag_string }}</p>
                 {% endif %}
             </div>
             {% break %}
         {% endif %}
     {% endfor %}
+
     {% comment %} Fallback author block {% endcomment %}
     {% if author_found == false %}
         {% comment %} Fallback (if unset/invalid) {% endcomment %}

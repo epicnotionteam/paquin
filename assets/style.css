@@ -3792,7 +3792,7 @@ label {
 }
 
 .form--base button.submit {
-  border: 0 none;
+  border: 0 none !important;
   box-shadow: none !important;
 }
 

@@ -23,7 +23,7 @@ label {
     // Submit button
     button.submit {
         @extend %button--base;
-        border: 0 none;
+        border: 0 none !important;
         box-shadow: none !important;
     }
 }

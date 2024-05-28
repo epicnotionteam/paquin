@@ -4430,14 +4430,19 @@ ul.list--link-arrow li::before {
 .globo-form-app {
   margin: 0 !important;
 }
-.globo-form-app .globo-formbuilder-wizard .globo-form-control {
+.globo-form-app .block-container {
+  gap: 12px;
+  gap: 1.2rem;
+  display: grid;
+}
+.globo-form-app .block-container .globo-form-control {
   margin: 0 !important;
 }
-.globo-form-app .globo-formbuilder-wizard .globo-form-control input,
-.globo-form-app .globo-formbuilder-wizard .globo-form-control select,
-.globo-form-app .globo-formbuilder-wizard .globo-form-control textarea {
+.globo-form-app .block-container .globo-form-control input,
+.globo-form-app .block-container .globo-form-control select,
+.globo-form-app .block-container .globo-form-control textarea {
   box-shadow: none !important;
 }
-.globo-form-app .globo-formbuilder-wizard .globo-form-control button.submit {
+.globo-form-app .block-container .globo-form-control button.submit {
   box-shadow: none !important;
 }

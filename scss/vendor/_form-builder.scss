@@ -12,7 +12,10 @@
 // Component container
 .globo-form-app {
     margin: 0 !important;
-    .globo-formbuilder-wizard {
+    // Field container
+    .block-container {
+        @include rem( gap, 12px );
+        display: grid;
         // Fieldset
         .globo-form-control {
             margin: 0 !important;

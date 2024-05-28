@@ -30,6 +30,7 @@
     }
     // Container [Tags]
     .container--tags {
+        @include rem( margin-top, spacing(4) );
         p {
             @include font-size( 'xsmall' );
             @include rem( margin-bottom, spacing(2) );

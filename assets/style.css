@@ -2659,6 +2659,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--blog-header .container--content .section__content p:last-child {
   margin: 0;
 }
+.section--blog-header .container--tags {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
 .section--blog-header .container--tags p {
   font-size: 13px;
   font-size: 1.3rem;

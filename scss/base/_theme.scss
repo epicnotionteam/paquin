@@ -60,10 +60,15 @@
 	}
 	// Component [Form]
 	.form--base {
+		// Input [General]
 		input,
 		select,
 		textarea {
-			background-color: white;
+			background-color: white !important;
+		}
+		// Input [Upload]
+		.gfb__dropzone {
+			background-color: transparent;
 		}
 	}
 	// Component [Link, Base]

@@ -39,6 +39,14 @@
 			select {
 				@include rem( min-height, 128px );
 			}
+			// Input [Upload]
+			.gfb__dropzone {
+				background-color: transparent;
+				// Button
+				.gfb__dropzone--placeholder--button {
+					@extend %button--outline;
+				}
+			}
             // Placeholder
             ::placeholder {
                 color: color( 'steel', '3' );

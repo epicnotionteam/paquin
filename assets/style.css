@@ -1123,7 +1123,10 @@ body {
 .theme--dark .form--base input,
 .theme--dark .form--base select,
 .theme--dark .form--base textarea {
-  background-color: white;
+  background-color: white !important;
+}
+.theme--dark .form--base .gfb__dropzone {
+  background-color: transparent;
 }
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
@@ -4486,6 +4489,9 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control select {
   min-height: 128px;
   min-height: 12.8rem;
+}
+.globo-form-app .block-container .globo-form-control .gfb__dropzone {
+  background-color: transparent;
 }
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #30373A;

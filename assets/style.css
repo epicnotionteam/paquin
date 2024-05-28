@@ -4493,6 +4493,19 @@ ul.list--link-arrow li::before {
   display: inline-block;
   font-size: 120%;
 }
+.globo-form-app .block-container .message .success {
+  padding: 0 32px 0 0;
+  padding: 0 3.2rem 0 0;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+.globo-form-app .block-container .message .dismiss {
+  left: 0;
+  top: 0;
+}
+.globo-form-app .block-container .message .dismiss svg {
+  fill: #66787F;
+}
 .globo-form-app .gfb__footer {
   margin-top: 24px;
   margin-top: 2.4rem;
@@ -4504,8 +4517,11 @@ ul.list--link-arrow li::before {
 .globo-form-app {
   margin: 0 !important;
 }
-.globo-form-app .block-container .globo-form-control.has-error input,
-.globo-form-app .block-container .globo-form-control.has-error select,
-.globo-form-app .block-container .globo-form-control.has-error textarea {
+.globo-form-app .block-container .globo-form-control .has-error input,
+.globo-form-app .block-container .globo-form-control .has-error select,
+.globo-form-app .block-container .globo-form-control .has-error textarea {
   border-bottom: 1px solid #7D4448 !important;
+}
+.globo-form-app .block-container .globo-form-control button.submit:hover {
+  box-shadow: none !important;
 }

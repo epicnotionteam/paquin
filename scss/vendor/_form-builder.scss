@@ -50,6 +50,24 @@
                 }
             }
         }
+        // Message container
+        .message {
+            // Message [Success]
+            .success {
+                @include rem( padding, 0 spacing(5) 0 0 );
+                box-shadow: none !important;
+                text-align: left !important;
+            }
+            // Close message
+            .dismiss {
+                left: 0;
+                top: 0;
+                // Icon
+                svg {
+                    fill: color( 'steel', '4' );
+                }
+            }
+        }
     }
     .gfb__footer {
         @include rem( margin-top, spacing(4) );
@@ -64,13 +82,20 @@
     margin: 0 !important;
     // Field container
     .block-container {
-        // Fieldset [:Error]
-        .globo-form-control.has-error {
-            // Apply border to input container
-            input,
-            select,
-            textarea {
-                border-bottom: 1px solid color( 'rust', '2' ) !important;
+        // Fieldset 
+        .globo-form-control {
+            // Input state [:Error]
+            .has-error {
+                // Apply border to input container
+                input,
+                select,
+                textarea {
+                    border-bottom: 1px solid color( 'rust', '2' ) !important;
+                }
+            }
+            // Submit button [:Hover]
+            button.submit:hover {
+                box-shadow: none !important;
             }
         }
     }

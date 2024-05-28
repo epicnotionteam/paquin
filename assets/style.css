@@ -4453,9 +4453,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.008rem;
   box-shadow: none !important;
 }
-.globo-form-app .block-container .globo-form-control input ::placeholder,
-.globo-form-app .block-container .globo-form-control select ::placeholder,
-.globo-form-app .block-container .globo-form-control textarea ::placeholder {
+.globo-form-app .block-container .globo-form-control ::placeholder {
   color: #66787F;
 }
 .globo-form-app .block-container .globo-form-control button.submit {

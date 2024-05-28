@@ -22,7 +22,7 @@
         {% for tag in article.tags offset:1 limit:tag_count-2 %}
             {% assign tag_string = tag_string | append: ", " | append: tag %}
         {% endfor %}
-        {% assign tag_string = tag_string | append: ", and " | append: article.tags[tag_count-1] %}
+        {% assign tag_string = tag_string | append: ", and " | append: article.tags[_tag_count_-1] %}
     {% endif %}
 {% endif %}
 

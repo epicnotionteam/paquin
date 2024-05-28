@@ -4427,14 +4427,17 @@ ul.list--link-arrow li::before {
   text-decoration: none !important;
 }
 
-.globo-formbuilder-wizard .globo-form-control {
+.globo-form-app {
   margin: 0 !important;
 }
-.globo-formbuilder-wizard .globo-form-control input,
-.globo-formbuilder-wizard .globo-form-control select,
-.globo-formbuilder-wizard .globo-form-control textarea {
+.globo-form-app .globo-formbuilder-wizard .globo-form-control {
+  margin: 0 !important;
+}
+.globo-form-app .globo-formbuilder-wizard .globo-form-control input,
+.globo-form-app .globo-formbuilder-wizard .globo-form-control select,
+.globo-form-app .globo-formbuilder-wizard .globo-form-control textarea {
   box-shadow: none !important;
 }
-.globo-formbuilder-wizard .globo-form-control button.submit {
+.globo-form-app .globo-formbuilder-wizard .globo-form-control button.submit {
   box-shadow: none !important;
 }

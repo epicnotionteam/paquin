@@ -1414,6 +1414,7 @@ h5,
 }
 
 .wrap--container {
+  overflow: hidden;
   padding-left: 4vw !important;
   padding-right: 4vw !important;
 }

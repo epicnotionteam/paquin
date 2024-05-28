@@ -3791,6 +3791,14 @@ label {
   font-weight: 600;
 }
 
+.form--base label {
+  font-size: 0;
+}
+.form--base input {
+  background-color: #D6DBDD;
+  border: 0 none !important;
+  box-shadow: none !important;
+}
 .form--base button.submit {
   border: 0 none !important;
   box-shadow: none !important;

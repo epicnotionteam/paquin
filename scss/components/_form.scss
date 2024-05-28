@@ -16,10 +16,21 @@ label {
 
 
 // Form [Base]
+// Stylespartially override those inherited via form app
 // --------------------------------------------------
 
 // Component container
 .form--base {
+    // Label
+    label {
+        font-size: 0;
+    }
+    // Input
+    input {
+        background-color: color( 'steel', '5' );
+        border: 0 none !important;
+        box-shadow: none !important;
+    }
     // Submit button
     button.submit {
         @extend %button--base;

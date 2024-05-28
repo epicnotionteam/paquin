@@ -4476,9 +4476,13 @@ ul.list--link-arrow li::before {
   box-shadow: none !important;
 }
 .globo-form-app .block-container .globo-form-control small.messages p {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
   margin: 4px 0 0;
   margin: 0.4rem 0 0;
   color: #7D4448;
+  font-family: "Paquin Sans Text", sans-serif;
 }
 .globo-form-app .block-container .globo-form-control small.messages p.help-block.error:before {
   content: "\e000";

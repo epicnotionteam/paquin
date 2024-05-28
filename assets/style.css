@@ -3786,6 +3786,10 @@ label {
   font-weight: 600;
 }
 
+.form--base button.submit {
+  background-color: red !important;
+}
+
 .product-form--regular .product-form--atc {
   margin: 0;
 }

@@ -15,7 +15,19 @@ label {
 }
 
 
-// Form [Product]
+// Form [Base]
+// --------------------------------------------------
+
+// Component container
+.form--base {
+    // Submit button
+    button.submit {
+        background-color: red !important;
+    }
+}
+
+
+// Form [Product, Actions]
 // --------------------------------------------------
 
 // Container
@@ -193,3 +205,31 @@ label {
         }
     }
 }
+
+
+// Form [General Inquiry]
+// --------------------------------------------------
+
+// Component container
+.form--general-inquiry {}
+
+
+// Form [Product Inquiry]
+// --------------------------------------------------
+
+// Component container
+.form--product-inquiry {}
+
+
+// Form [Newsletter Subscription]
+// --------------------------------------------------
+
+// Component container
+.form--newsletter-subscription {}
+
+
+// Form [Resume Submission]
+// --------------------------------------------------
+
+// Component container
+.form--resume-submission {}

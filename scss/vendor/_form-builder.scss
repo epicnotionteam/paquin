@@ -12,6 +12,10 @@
 // Component container
 .globo-form-app {
     margin: 0 !important;
+    // Panel container
+    .panel {
+        width: 100% !important;
+    }
     // Field container
     .block-container {
         @include rem( gap, 12px );

@@ -4447,6 +4447,9 @@ ul.list--link-arrow li::before {
 .globo-form-app {
   margin: 0 !important;
 }
+.globo-form-app .panel {
+  width: 100% !important;
+}
 .globo-form-app .block-container {
   gap: 12px;
   gap: 1.2rem;

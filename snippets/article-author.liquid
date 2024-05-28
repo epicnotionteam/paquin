@@ -11,18 +11,16 @@
 {% assign authors = "Graeme Bryson:graeme-bryson.jpg|Rob Kinkopf:rob-kinkopf.jpg" %}
 
 {% comment %} Process tags {% endcomment %}
-{% assign tag_count = article.tags.size %}
-{% if tag_count > 0 %}
-    {% if tag_count == 1 %}
-        {% assign tag_string = "Posted in " | append: article.tags[0] %}
-    {% elsif tag_count == 2 %}
-        {% assign tag_string = "Posted in " | append: article.tags[0] | append: " and " | append: article.tags[1] %}
-    {% else %}
-        {% assign tag_string = "Posted in " | append: article.tags[0] %}
-        {% for tag in article.tags offset:1 limit:tag_count-2 %}
-            {% assign tag_string = tag_string | append: ", " | append: tag %}
-        {% endfor %}
-        {% assign tag_string = tag_string | append: ", and " | append: article.tags[_tag_count_-1] %}
+{% assign _tag_count_ = _article_._tags_._size_ %}
+{% if _tag_count_ > 0 %}
+    {% assign _tag_string_ = "Posted in " | append: _article_._tags_[0] %}
+    {% for _tag_ in _article_._tags_ offset:1 limit:_tag_count_-2 %}
+        {% assign _tag_string_ = _tag_string_ | append: ", " | append: _tag_ %}
+    {% endfor %}
+    {% if _tag_count_ > 2 %}
+        {% assign _tag_string_ = _tag_string_ | append: ", and " | append: _article_._tags_[_tag_count_-1] %}
+    {% elsif _tag_count_ == 2 %}
+        {% assign _tag_string_ = _tag_string_ | append: " and " | append: _article_._tags_[1] %}
     {% endif %}
 {% endif %}
 
@@ -43,8 +41,8 @@
             <div class="container--information">
                 {% comment %} Name {% endcomment %}
                 <p class="author__name">Written by <span>{{ author_name }}</span></p>
-                {% if show_tags and tag_count > 0 %}
-                    <p class="article__tags">{{ tag_string }}</p>
+                {% if _show_tags_ and _tag_count_ > 0 %}
+                    <p class="article__tags">{{ _tag_string_ }}</p>
                 {% endif %}
             </div>
             {% break %}

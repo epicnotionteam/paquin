@@ -3400,7 +3400,8 @@ hr,
 .feed--post .item {
   row-gap: 12px;
   row-gap: 1.2rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .feed--post .item > :not(.item__link) {
   align-self: flex-start;

@@ -232,7 +232,9 @@
     // Item container
     .item {
         @include rem( row-gap, 12px );
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        // Set aligment on child elements
         & > :not(.item__link) {
             align-self: flex-start;
         }

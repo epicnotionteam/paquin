@@ -4533,8 +4533,8 @@ ul.list--link-arrow li::before {
   text-align: left !important;
 }
 .globo-form-app .message .dismiss {
-  top: 4px;
-  top: 0.4rem;
+  top: 4px !important;
+  top: 0.4rem !important;
   right: 0 !important;
 }
 .globo-form-app .message .dismiss svg {

@@ -76,7 +76,7 @@
         }
         // Close message
         .dismiss {
-            @include rem( top, spacing(1) );
+            @include rem( top, spacing(1) !important );
             right: 0 !important;
             // Icon
             svg {

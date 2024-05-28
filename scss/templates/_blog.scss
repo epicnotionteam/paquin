@@ -14,7 +14,11 @@
 .section--blog-header {
     // Container [Breadcrumbs]
     & > .wrap--max > .section__grid > .wrap--container {
-        @include rem( padding, 0 0 spacing(7) !important );
+        padding: 0 !important;
+        // Breadcrumbs
+        .breadcrumbs-container {
+            @include rem( padding-bottom, spacing(7) !important );
+        }
     }
     // Container [Content]
     .container--content {
@@ -34,7 +38,7 @@
     }
     // Container [Tags]
     .container--tags {
-        @include rem( margin, spacing(4) 0 spacing(3) );
+        @include rem( margin, spacing(4) 0 spacing(2) );
         p {
             @include font-size( 'xsmall' );
             @include rem( margin-bottom, spacing(2) );
@@ -47,13 +51,9 @@
 @include mq( $from: medium ) {
     // Section container
     .section--blog-header {
-        // Container [Breadcrumbs]
-        & > .wrap--max > .section__grid > .wrap--container {
-            @include rem( padding, 0 0 72px !important );
-        }
-        // Heading
-        .container--content .section__heading {
-            // @include rem( margin, 0 0 spacing(3) );
+        // Breadcrumbs
+        & > .wrap--max > .section__grid > .wrap--container .breadcrumbs-container {
+            @include rem( padding-bottom, 72px !important );
         }
     }
     // Container [Tags]

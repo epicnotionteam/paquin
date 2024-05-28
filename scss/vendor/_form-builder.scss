@@ -42,7 +42,9 @@
                 color: color( 'rust', '2' );
                 &.help-block.error {
                     @include icon( before, 'error' ) {
-                        @include rem( margin-right, 2px );
+                        @include rem( margin, -2px spacing(1) 0 0 );
+                        display: inline-block;
+                        font-size: 120%;
                     }
                 }
             }
@@ -52,6 +54,18 @@
         @include rem( margin-top, spacing(4) );
         .description {
             margin: 0;
+        }
+    }
+}
+
+// State management
+.globo-form-app {
+    margin: 0 !important;
+    // Field container
+    .block-container {
+        // Fieldset [:Error]
+        .globo-form-control.has-error {
+            border-bottom: 1px solid color( 'rust', '2' ) !important;
         }
     }
 }

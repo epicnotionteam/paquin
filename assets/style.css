@@ -3816,6 +3816,7 @@ label {
   padding: 1.2rem;
   background-color: #F2F4F6;
   border: 0 none !important;
+  border-radius: 0 !important;
   font-family: "Paquin Sans Text", sans-serif;
 }
 .form--base input ::placeholder,
@@ -4486,8 +4487,10 @@ ul.list--link-arrow li::before {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-right: 2px;
-  margin-right: 0.2rem;
+  margin: -2px 4px 0 0;
+  margin: -0.2rem 0.4rem 0 0;
+  display: inline-block;
+  font-size: 120%;
 }
 .globo-form-app .gfb__footer {
   margin-top: 24px;
@@ -4495,4 +4498,11 @@ ul.list--link-arrow li::before {
 }
 .globo-form-app .gfb__footer .description {
   margin: 0;
+}
+
+.globo-form-app {
+  margin: 0 !important;
+}
+.globo-form-app .block-container .globo-form-control.has-error {
+  border-bottom: 1px solid #7D4448 !important;
 }

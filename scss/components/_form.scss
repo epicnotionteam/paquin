@@ -16,7 +16,7 @@ label {
 
 
 // Form [Base]
-// Stylespartially override those inherited via form app
+// Styles partially override those inherited via form app
 // --------------------------------------------------
 
 // Component container
@@ -36,6 +36,7 @@ label {
         ));
         background-color: color( 'background', 'input' );
         border: 0 none !important;
+        border-radius: 0 !important;
         font-family: font-family( 'base' );
         // Placeholder
         ::placeholder {

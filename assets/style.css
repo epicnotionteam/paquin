@@ -2632,7 +2632,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 46px;
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
-  margin: 0;
+  margin: 72px 0 0;
+  margin: 7.2rem 0 0;
 }
 @media screen and (min-width: 1024px) {
   .section--blog-header .container--content .section__heading {
@@ -2655,6 +2656,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   color: #66787F;
 }
 
+@media (min-width: 64em) {
+  .section--blog-header .container--content .section__heading {
+    margin: 96px 0 0;
+    margin: 9.6rem 0 0;
+  }
+}
 .section--feed-blog {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

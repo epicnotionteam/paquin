@@ -17,7 +17,7 @@
         // Heading
         .section__heading {
             @include font-size( 'headline' );
-            margin: 0;
+            @include rem( margin, $gap--section-small 0 0 );
         }
         // Content
         .section__content {
@@ -33,6 +33,17 @@
             @include font-size( 'xsmall' );
             @include rem( margin-bottom, spacing(2) );
             color: color( 'steel', '4' );
+        }
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--blog-header {
+        // Heading
+        .container--content .section__heading {
+            @include rem( margin, $gap--section-large 0 0 );
         }
     }
 }

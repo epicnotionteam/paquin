@@ -4454,6 +4454,7 @@ ul.list--link-arrow li::before {
 }
 .globo-form-app .block-container .globo-form-control {
   margin: 0 !important;
+  padding: 0 !important;
 }
 .globo-form-app .block-container .globo-form-control input,
 .globo-form-app .block-container .globo-form-control select,
@@ -4493,6 +4494,10 @@ ul.list--link-arrow li::before {
   display: inline-block;
   font-size: 120%;
 }
+.globo-form-app .message {
+  margin-top: 16px !important;
+  margin-top: 1.6rem !important;
+}
 .globo-form-app .message.success {
   padding: 0 32px 0 0;
   padding: 0 3.2rem 0 0;
@@ -4501,8 +4506,9 @@ ul.list--link-arrow li::before {
   text-align: left !important;
 }
 .globo-form-app .message .dismiss {
-  right: 0;
-  top: 0;
+  top: 4px;
+  top: 0.4rem;
+  right: 0 !important;
 }
 .globo-form-app .message .dismiss svg {
   fill: #66787F;

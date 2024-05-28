@@ -19,6 +19,7 @@
         // Fieldset
         .globo-form-control {
             margin: 0 !important;
+            padding: 0 !important;
             // Input [All]
             input,
             select,
@@ -53,6 +54,7 @@
     }
     // Message container
     .message {
+        @include rem( margin-top, spacing(3) !important );
         // Message [Success]
         &.success {
             @include rem( padding, 0 spacing(5) 0 0 );
@@ -62,8 +64,8 @@
         }
         // Close message
         .dismiss {
-            right: 0;
-            top: 0;
+            @include rem( top, spacing(1) );
+            right: 0 !important;
             // Icon
             svg {
                 fill: color( 'steel', '4' );

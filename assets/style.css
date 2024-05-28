@@ -4501,7 +4501,7 @@ ul.list--link-arrow li::before {
   text-align: left !important;
 }
 .globo-form-app .block-container .message .dismiss {
-  left: 0;
+  right: 0;
   top: 0;
 }
 .globo-form-app .block-container .message .dismiss svg {

@@ -33,6 +33,7 @@ label {
         @include rem( min-height, 54px );
         background-color: color( 'steel', '5' );
         border: 0 none !important;
+        font-family: font-family( 'base' );
         // Placeholder
         ::placeholder {
             color: color( 'steel', '4' );

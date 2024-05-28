@@ -24,7 +24,8 @@
             select,
             textarea {
                 @include font-size( 'small' );
-                box-shadow: none !important;           
+                box-shadow: none !important;  
+                font-family: font-family( 'base' );
             }
             // Placeholder
             ::placeholder {

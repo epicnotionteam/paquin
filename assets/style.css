@@ -3806,6 +3806,7 @@ label {
   min-height: 5.4rem;
   background-color: #D6DBDD;
   border: 0 none !important;
+  font-family: "Paquin Sans Text", sans-serif;
 }
 .form--base input ::placeholder,
 .form--base select ::placeholder,
@@ -4452,6 +4453,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   box-shadow: none !important;
+  font-family: "Paquin Sans Text", sans-serif;
 }
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #66787F;

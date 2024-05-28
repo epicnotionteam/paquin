@@ -3400,10 +3400,8 @@ hr,
 .feed--post .item {
   row-gap: 12px;
   row-gap: 1.2rem;
+  align-content: flex-start;
   display: grid;
-}
-.feed--post .item > * {
-  align-self: flex-start;
 }
 .feed--post .item .item__wrap--image {
   margin-bottom: 8px;

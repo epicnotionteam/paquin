@@ -232,11 +232,8 @@
     // Item container
     .item {
         @include rem( row-gap, 12px );
+        align-content: flex-start;
         display: grid;
-        // Set alignment on child elements
-        & > * {
-            align-self: flex-start;
-        }
         // Wrap [Image]
         .item__wrap--image {
             @include rem( margin-bottom, spacing(2) );

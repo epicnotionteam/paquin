@@ -30,7 +30,10 @@ label {
     select,
     textarea {
         @include font-size( 'small' );
-        @include rem( min-height, 54px );
+        @include rem((
+            min-height: 54px,
+            padding: 12px
+        ));
         background-color: color( 'background', 'input' );
         border: 0 none !important;
         font-family: font-family( 'base' );

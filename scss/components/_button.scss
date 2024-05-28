@@ -64,7 +64,8 @@
 // Button [Outline]
 // --------------------------------------------------
 
-.button--outline {
+.button--outline,
+%button--outline {
     @extend %h5;
     @include rem((
         min-height: 54px,

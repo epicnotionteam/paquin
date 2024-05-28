@@ -1101,7 +1101,9 @@ body {
 .theme--dark h2,
 .theme--dark h3,
 .theme--dark h4, .theme--dark .mobile-nav-content .navmenu.navmenu-depth-1 > li.navmenu-item > a, .mobile-nav-content .theme--dark .navmenu.navmenu-depth-1 > li.navmenu-item > a, .theme--dark .feed--team .item .item__name, .feed--team .item .theme--dark .item__name, .theme--dark .feed--post .item .item__title, .feed--post .item .theme--dark .item__title,
-.theme--dark h5, .theme--dark .nav--tag a, .nav--tag .theme--dark a, .theme--dark .live-search-form .search-flydown--results .search-flydown__group-title, .live-search-form .search-flydown--results .theme--dark .search-flydown__group-title, .theme--dark .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title, .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .theme--dark .collection-filters__filter-title, .theme--dark .feed--block .item .item__number, .feed--block .item .theme--dark .item__number, .theme--dark .button--outline, .theme--dark .button--base,
+.theme--dark h5, .theme--dark .nav--tag a, .nav--tag .theme--dark a, .theme--dark .live-search-form .search-flydown--results .search-flydown__group-title, .live-search-form .search-flydown--results .theme--dark .search-flydown__group-title, .theme--dark .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title, .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .theme--dark .collection-filters__filter-title, .theme--dark .feed--block .item .item__number, .feed--block .item .theme--dark .item__number, .theme--dark .button--outline,
+.theme--dark .globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--placeholder--button,
+.globo-form-app .block-container .globo-form-control .gfb__dropzone .theme--dark .gfb__dropzone--placeholder--button, .theme--dark .button--base,
 .theme--dark .form--base button.submit,
 .form--base .theme--dark button.submit,
 .theme--dark .product-form--atc-button, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
@@ -1407,6 +1409,7 @@ h5,
 .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title,
 .feed--block .item .item__number,
 .button--outline,
+.globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--placeholder--button,
 .button--base,
 .form--base button.submit,
 .product-form--atc-button,
@@ -3005,7 +3008,8 @@ blockquote {
   border: 0 none !important;
 }
 
-.button--outline {
+.button--outline,
+.globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--placeholder--button {
   min-height: 54px;
   min-height: 5.4rem;
   padding: 16px 32px;

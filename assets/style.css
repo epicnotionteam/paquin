@@ -3807,6 +3807,11 @@ label {
   background-color: #D6DBDD;
   border: 0 none !important;
 }
+.form--base input ::placeholder,
+.form--base select ::placeholder,
+.form--base textarea ::placeholder {
+  color: #66787F;
+}
 .form--base button.submit {
   border: 0 none !important;
 }

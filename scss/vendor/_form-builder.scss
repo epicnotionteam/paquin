@@ -25,6 +25,10 @@
             textarea {
                 @include font-size( 'small' );
                 box-shadow: none !important;
+                // Placeholder
+                ::placeholder {
+                    color: color( 'steel', '4' );
+                }                
             }
             // Submit button
             button.submit {

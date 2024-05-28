@@ -33,13 +33,11 @@ label {
         @include rem( min-height, 54px );
         background-color: color( 'steel', '5' );
         border: 0 none !important;
-        box-shadow: none !important;
     }
     // Submit button
     button.submit {
         @extend %button--base;
         border: 0 none !important;
-        box-shadow: none !important;
     }
 }
 

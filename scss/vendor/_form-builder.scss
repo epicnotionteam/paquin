@@ -1,0 +1,28 @@
+// ====================================================================================================
+// Vendor / Powerful Form Builder
+// https://apps.shopify.com/form-builder-contact-form
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Form [General]
+// --------------------------------------------------
+
+// Component container
+.globo-formbuilder-wizard {
+    // Fieldset
+    .globo-form-control {
+        margin: 0 !important;
+        // Input [All]
+        input,
+        select,
+        textarea {
+            box-shadow: none !important;
+        }
+        // Submit button
+        button.submit {
+            box-shadow: none !important;
+        }
+    }
+}

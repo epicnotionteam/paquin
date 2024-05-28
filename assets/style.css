@@ -3806,11 +3806,9 @@ label {
   min-height: 5.4rem;
   background-color: #D6DBDD;
   border: 0 none !important;
-  box-shadow: none !important;
 }
 .form--base button.submit {
   border: 0 none !important;
-  box-shadow: none !important;
 }
 
 .product-form--regular .product-form--atc {
@@ -4427,4 +4425,16 @@ ul.list--link-arrow li::before {
   border: 1px solid #30373A;
   color: white !important;
   text-decoration: none !important;
+}
+
+.globo-formbuilder-wizard .globo-form-control {
+  margin: 0 !important;
+}
+.globo-formbuilder-wizard .globo-form-control input,
+.globo-formbuilder-wizard .globo-form-control select,
+.globo-formbuilder-wizard .globo-form-control textarea {
+  box-shadow: none !important;
+}
+.globo-formbuilder-wizard .globo-form-control button.submit {
+  box-shadow: none !important;
 }

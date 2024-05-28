@@ -4464,6 +4464,7 @@ ul.list--link-arrow li::before {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   background-color: #F2F4F6;
+  border-radius: 0 !important;
   box-shadow: none !important;
   font-family: "Paquin Sans Text", sans-serif;
 }
@@ -4503,6 +4504,8 @@ ul.list--link-arrow li::before {
 .globo-form-app {
   margin: 0 !important;
 }
-.globo-form-app .block-container .globo-form-control.has-error {
+.globo-form-app .block-container .globo-form-control.has-error input,
+.globo-form-app .block-container .globo-form-control.has-error select,
+.globo-form-app .block-container .globo-form-control.has-error textarea {
   border-bottom: 1px solid #7D4448 !important;
 }

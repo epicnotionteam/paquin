@@ -12,12 +12,16 @@
 // --------------------------------------------------
 
 .section--blog-header {
+    // Container [Breadcrumbs]
+    & > .wrap--max > .section__grid > .wrap--container {
+        @include rem( padding, 0 0 spacing(7) !important );
+    }
     // Container [Content]
     .container--content {
         // Heading
         .section__heading {
             @include font-size( 'headline' );
-            @include rem( margin, $gap--section-small 0 spacing(3) );
+            @include rem( margin, 0 0 spacing(3) );
         }
         // Content
         .section__content {
@@ -30,7 +34,7 @@
     }
     // Container [Tags]
     .container--tags {
-        @include rem( margin, spacing(4) 0 spacing(4) );
+        @include rem( margin, spacing(4) 0 spacing(3) );
         p {
             @include font-size( 'xsmall' );
             @include rem( margin-bottom, spacing(2) );
@@ -43,10 +47,18 @@
 @include mq( $from: medium ) {
     // Section container
     .section--blog-header {
+        // Container [Breadcrumbs]
+        & > .wrap--max > .section__grid > .wrap--container {
+            @include rem( padding, 0 0 72px !important );
+        }
         // Heading
         .container--content .section__heading {
-            @include rem( margin, $gap--section-large 0 spacing(3) );
+            // @include rem( margin, 0 0 spacing(3) );
         }
+    }
+    // Container [Tags]
+    .container--tags {
+        @include rem( margin, spacing(4) 0 spacing(4) );
     }
 }
 

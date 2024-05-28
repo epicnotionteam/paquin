@@ -23,12 +23,13 @@ label {
 .form--base {
     // Label
     label {
-        font-size: 0;
+        display: none;
     }
     // Input [All]
     input,
     select,
     textarea {
+        @include rem( min-height, 54px );
         background-color: color( 'steel', '5' );
         border: 0 none !important;
         box-shadow: none !important;

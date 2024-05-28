@@ -3792,11 +3792,13 @@ label {
 }
 
 .form--base label {
-  font-size: 0;
+  display: none;
 }
 .form--base input,
 .form--base select,
 .form--base textarea {
+  min-height: 54px;
+  min-height: 5.4rem;
   background-color: #D6DBDD;
   border: 0 none !important;
   box-shadow: none !important;

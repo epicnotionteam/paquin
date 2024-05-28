@@ -4369,6 +4369,7 @@ ul.list--link-arrow li::before {
   border-radius: 6px;
   border: 1px solid #D6DBDD;
   color: #212224 !important;
+  margin: 0;
   transition: all 0.16s ease-out;
 }
 

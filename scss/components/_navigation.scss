@@ -301,6 +301,7 @@
         border-radius: $border-radius--base;
         border: $border--base;
         color: color( 'steel', '1' ) !important;
+        margin: 0;
         transition: all 0.16s ease-out;
     }
 }

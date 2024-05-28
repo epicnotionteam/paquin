@@ -2681,6 +2681,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 0.8rem;
   color: #66787F;
 }
+.section--blog-header .container--tags a {
+  color: #66787F !important;
+  font-weight: 400 !important;
+}
 
 @media (min-width: 64em) {
   .section--blog-header > .wrap--max > .section__grid > .wrap--container {

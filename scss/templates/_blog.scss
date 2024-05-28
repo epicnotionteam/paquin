@@ -45,6 +45,11 @@
             @include rem( margin-bottom, spacing(2) );
             color: color( 'steel', '4' );
         }
+        // Link
+        a {
+            color: color( 'steel', '4' ) !important;
+            font-weight: font-weight( 'base' ) !important;
+        }
     }
 }
 

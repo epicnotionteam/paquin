@@ -4472,9 +4472,6 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #30373A;
 }
-.globo-form-app .block-container .globo-form-control button.submit {
-  box-shadow: none !important;
-}
 .globo-form-app .block-container .globo-form-control small.messages p {
   font-size: 13px;
   font-size: 1.3rem;
@@ -4497,6 +4494,23 @@ ul.list--link-arrow li::before {
   margin: -0.3rem 0.4rem 0 0;
   display: inline-block;
   font-size: 120%;
+}
+.globo-form-app .block-container button.submit {
+  box-shadow: none !important;
+}
+.globo-form-app .block-container button.submit:before {
+  content: "\e5c8";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 1px 12px 0 0;
+  margin: 0.1rem 1.2rem 0 0;
+  font-size: 128%;
+  line-height: 1;
 }
 .globo-form-app .message {
   margin-top: 16px !important;

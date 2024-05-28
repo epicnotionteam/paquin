@@ -3791,6 +3791,11 @@ label {
   font-weight: 600;
 }
 
+.form--base button.submit {
+  border: 0 none;
+  box-shadow: none !important;
+}
+
 .product-form--regular .product-form--atc {
   margin: 0;
 }

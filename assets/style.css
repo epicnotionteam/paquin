@@ -4472,7 +4472,10 @@ ul.list--link-arrow li::before {
 .globo-form-app .block-container .globo-form-control button.submit {
   box-shadow: none !important;
 }
-.globo-form-app .gfb__footer .description,
-.globo-form-app .globo-form-app .footer .description {
+.globo-form-app .gfb__footer {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+.globo-form-app .gfb__footer .description {
   margin: 0;
 }

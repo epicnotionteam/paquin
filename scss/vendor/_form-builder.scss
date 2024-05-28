@@ -38,8 +38,10 @@
             }
         }
     }
-    .gfb__footer .description, 
-    .globo-form-app .footer .description {
-        margin: 0;
+    .gfb__footer {
+        @include rem( margin-top, spacing(4) );
+        .description {
+            margin: 0;
+        }
     }
 }

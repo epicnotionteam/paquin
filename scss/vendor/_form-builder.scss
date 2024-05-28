@@ -50,23 +50,23 @@
                 }
             }
         }
-        // Message container
-        .message {
-            // Message [Success]
-            &.success {
-                @include rem( padding, 0 spacing(5) 0 0 );
-                background-color: transparent !important;
-                box-shadow: none !important;
-                text-align: left !important;
-            }
-            // Close message
-            .dismiss {
-                right: 0;
-                top: 0;
-                // Icon
-                svg {
-                    fill: color( 'steel', '4' );
-                }
+    }
+    // Message container
+    .message {
+        // Message [Success]
+        &.success {
+            @include rem( padding, 0 spacing(5) 0 0 );
+            background-color: transparent !important;
+            box-shadow: none !important;
+            text-align: left !important;
+        }
+        // Close message
+        .dismiss {
+            right: 0;
+            top: 0;
+            // Icon
+            svg {
+                fill: color( 'steel', '4' );
             }
         }
     }

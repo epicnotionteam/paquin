@@ -4493,18 +4493,18 @@ ul.list--link-arrow li::before {
   display: inline-block;
   font-size: 120%;
 }
-.globo-form-app .block-container .message.success {
+.globo-form-app .message.success {
   padding: 0 32px 0 0;
   padding: 0 3.2rem 0 0;
   background-color: transparent !important;
   box-shadow: none !important;
   text-align: left !important;
 }
-.globo-form-app .block-container .message .dismiss {
+.globo-form-app .message .dismiss {
   right: 0;
   top: 0;
 }
-.globo-form-app .block-container .message .dismiss svg {
+.globo-form-app .message .dismiss svg {
   fill: #66787F;
 }
 .globo-form-app .gfb__footer {

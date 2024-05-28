@@ -53,8 +53,9 @@
         // Message container
         .message {
             // Message [Success]
-            .success {
+            &.success {
                 @include rem( padding, 0 spacing(5) 0 0 );
+                background-color: transparent !important;
                 box-shadow: none !important;
                 text-align: left !important;
             }

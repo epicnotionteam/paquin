@@ -4493,9 +4493,10 @@ ul.list--link-arrow li::before {
   display: inline-block;
   font-size: 120%;
 }
-.globo-form-app .block-container .message .success {
+.globo-form-app .block-container .message.success {
   padding: 0 32px 0 0;
   padding: 0 3.2rem 0 0;
+  background-color: transparent !important;
   box-shadow: none !important;
   text-align: left !important;
 }

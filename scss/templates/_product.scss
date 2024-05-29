@@ -10,8 +10,8 @@
 
 // Product data grid container
 .grid--product {
-
-    // Section [Header]
+	@include rem( padding-bottom, $gap--section-small );
+    // Container [Header]
     #product__header {
 		@include rem( row-gap, 12px );
 		display: flex;
@@ -50,8 +50,7 @@
 			margin: 0;
 		}
     }
-
-    // Section [Media]
+    // Container [Media]
     #product__media {
         .product-gallery {
             width: 100%;
@@ -61,8 +60,7 @@
             }
         }
     }
-
-    // Section [Data]
+    // Container [Data]
     #product__data {
         // Individual data blocks
         & > * {
@@ -78,17 +76,18 @@
                 }
             }
         }
-		// Block [Key Specifications]
-
     }
-
 }
 
 // Adjust for medium breakpoint
 @include mq($from: medium) {
-    
+    // Grid structure
     .grid--product {
-        @include rem( ( gap: spacing(6), max-width: 1064px ) );
+        @include rem(( 
+			gap: spacing(6), 
+			max-width: 1064px,
+			padding-bottom: $gap--section-large
+		));
         display: grid;
 		grid-auto-rows: minmax(8x, auto); /* Set a minimum row height */
         grid-template-columns: repeat( 2, 1fr );
@@ -97,22 +96,17 @@
 		grid-template-areas:
 		'media header'
 		'data core';
-      }
-      
-      #product__media {
+    }
+    #product__media {
         grid-area: media;
-      }
-      
-      #product__header {
+    }  
+    #product__header {
         grid-area: header;
-      }
-      
-      #product__data {
+    }  
+    #product__data {
         grid-area: data;
-      }
-      
-      #product__core {
+	} 
+    #product__core {
         grid-area: core;
-      }
-
+    }
 }

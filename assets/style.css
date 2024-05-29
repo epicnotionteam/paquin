@@ -2860,6 +2860,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
+.grid--product {
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+}
 .grid--product #product__header {
   row-gap: 12px;
   row-gap: 1.2rem;
@@ -2938,6 +2942,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     gap: 4rem;
     max-width: 1064px;
     max-width: 106.4rem;
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
     display: grid;
     grid-auto-rows: minmax(8x, auto); /* Set a minimum row height */
     grid-template-columns: repeat(2, 1fr);

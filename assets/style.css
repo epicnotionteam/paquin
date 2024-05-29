@@ -1131,7 +1131,7 @@ body {
   background-color: transparent;
 }
 .theme--dark .form--base .gfb__dropzone .globo-form-control .gfb__dropzone--preview--item-thumb {
-  border-color: 1px solid rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,

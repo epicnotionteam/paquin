@@ -4007,29 +4007,31 @@ label {
   margin-bottom: 1.6rem !important;
 }
 
-.form--resume-submission .wizard__content > .panels > .block-container {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "upload upload" "first-name last-name" "phone phone" "email email" "comments comments";
+@media (min-width: 64em) {
+  .form--resume-submission .wizard__content > .panels > .block-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "upload upload" "first-name last-name" "phone phone" "email email" "comments comments";
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(1) {
+    grid-area: upload;
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(2) {
+    grid-area: first-name;
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(3) {
+    grid-area: last-name;
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(4) {
+    grid-area: phone;
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(5) {
+    grid-area: email;
+  }
+  .form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(6) {
+    grid-area: comments;
+  }
 }
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(1) {
-  grid-area: upload;
-}
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(2) {
-  grid-area: first-name;
-}
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(3) {
-  grid-area: last-name;
-}
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(4) {
-  grid-area: phone;
-}
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(5) {
-  grid-area: email;
-}
-.form--resume-submission .wizard__content > .panels > .block-container .globo-form-control:nth-child(6) {
-  grid-area: comments;
-}
-
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
 #site-main li a,

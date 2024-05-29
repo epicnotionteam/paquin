@@ -85,8 +85,10 @@
 		}
 		// Message container
 		.message {
-			// Message item(s) [Error]
-			&.error .err-item {
+			// Message [Error]
+			// Message [Success]
+			&.error .err-item,
+			&.success {
 				color: white;
 			}
 		}

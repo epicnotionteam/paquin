@@ -2,7 +2,7 @@
 // Output instruction feed for the current product
 {% endcomment %}
 
-{% if product.metafields.custom.instructions %}
+{% if product.metafields.instructions != blank %}
 	{% assign data_source = product.metafields.custom.instructions.value %}
 	<div id="product__instructions">
 		<h2 class="h5">Instructions</h2>

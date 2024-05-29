@@ -3657,7 +3657,7 @@ hr,
   }
 }
 .template-collection .productgrid--items .productgrid--item:hover .productitem {
-  box-shadow: 0 2px 24px 0 red !important;
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
 }
 
 .feed--role .item {

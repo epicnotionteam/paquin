@@ -80,7 +80,7 @@
 		}
 		// Notification [Error]
 		.help-block.error p {
-			color: color( 'steel', '4' );
+			color: color( 'steel', '4' ) !important;
 		}
 	}
 	// Component [Link, Base]

@@ -1138,7 +1138,7 @@ body {
   border-top: 0 none;
 }
 .theme--dark .form--base .help-block.error p {
-  color: #66787F;
+  color: #66787F !important;
 }
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,

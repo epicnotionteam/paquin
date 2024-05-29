@@ -70,15 +70,15 @@
         endif
 
         if section.settings.default_view == 'grid-view'
-            echo 'productgrid-gridview'
+            echo 'productgrid-gridview '
         else
-            echo 'productgrid-listview'
+            echo 'productgrid-listview '
         endif
 
 		if collection.products.size == 0
-			echo 'collection--zero-items'
+			echo 'collection--zero-items '
 		else
-			echo 'collection--has-items'
+			echo 'collection--has-items '
 		endif
     endcapture
 -%}

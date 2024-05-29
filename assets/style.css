@@ -1137,7 +1137,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-top: 0 none;
 }
-.theme--dark .form--base .help-block.error {
+.theme--dark .form--base .help-block.error p {
   color: #66787F;
 }
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),

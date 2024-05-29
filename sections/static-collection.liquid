@@ -74,6 +74,12 @@
         else
             echo 'productgrid-listview'
         endif
+
+		if collection.products.size == 0
+			echo 'collection--zero-items'
+		else
+			echo 'collection--has-items'
+		endif
     endcapture
 -%}
 

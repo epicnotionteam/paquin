@@ -73,6 +73,10 @@
 			.gfb__dropzone--preview--item-thumb {
 				border: $border--dark;
 			}
+			.gfb__dropzone--preview--item-title {
+				border: $border--dark;
+				border-top: 0 none;
+			}
 		}
 	}
 	// Component [Link, Base]

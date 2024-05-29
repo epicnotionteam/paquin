@@ -132,8 +132,9 @@
             }
         }
     }
+	// Form footer
     .gfb__footer {
-        @include rem( margin-top, spacing(3) );
+        @include rem( margin-top, 12px );
         .description {
             margin: 0;
         }

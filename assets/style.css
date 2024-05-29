@@ -4645,8 +4645,8 @@ ul.list--link-arrow li::before {
   fill: #66787F;
 }
 .globo-form-app .gfb__footer {
-  margin-top: 16px;
-  margin-top: 1.6rem;
+  margin-top: 12px;
+  margin-top: 1.2rem;
 }
 .globo-form-app .gfb__footer .description {
   margin: 0;

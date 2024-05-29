@@ -104,6 +104,13 @@
     // Message container
     .message {
         @include rem( margin-top, spacing(3) !important );
+		// Message [Error]
+        &.error {
+			@include rem( padding, 0 spacing(5) 0 0 );
+            background-color: transparent !important;
+            box-shadow: none !important;
+            text-align: left !important;
+		}
         // Message [Success]
         &.success {
             @include rem( padding, 0 spacing(5) 0 0 );

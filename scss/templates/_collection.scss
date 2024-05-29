@@ -14,21 +14,6 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    // Container [Header]
-    .productgrid--masthead {
-        // Container [Empty Collection Notice]
-        .container--empty-collection {
-            @include rem((
-                margin: spacing(3) auto 0,
-                max-width: 800px
-            ));
-            text-align: center;
-            // Content
-            p {
-                @include rem( margin-bottom, 20px );
-            }
-        }
-    }
 }
 
 // Adjust @medium breakpoint
@@ -65,8 +50,6 @@
 
 // Section container
 .template-collection .productgrid--masthead {
-    @include rem( padding, spacing(4) 0 spacing(8) );
-    border-bottom: $border--base;
     // Title
     .collection--title {
         @include rem( max-width, 800px );
@@ -90,6 +73,30 @@
         .link--icon-before {
             @include rem( margin-top, 12px );
             display: inline-block;
+        }
+    }
+}
+
+// Variant [Has Items]
+.template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
+    @include rem( padding, spacing(4) 0 spacing(8) );
+    border-bottom: $border--base;
+}
+
+// Variant [Zero Items]
+.template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
+    @include rem( padding, spacing(4) 0 spacing(8) );
+    border-bottom: $border--base;
+    // Container [Empty Collection Notice]
+    .container--empty-collection {
+        @include rem((
+            margin: spacing(3) auto 0,
+            max-width: 800px
+        ));
+        text-align: center;
+        // Content
+        p {
+            @include rem( margin-bottom, 20px );
         }
     }
 }

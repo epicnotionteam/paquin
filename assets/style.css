@@ -3999,9 +3999,9 @@ label {
   margin-top: 1.6rem;
 }
 
-.form--resume-submission .fieldset--upload {
-  margin-bottom: 16px;
-  margin-bottom: 1.6rem;
+.form--resume-submission .globo-form-app .block-container .globo-form-control.fieldset--upload {
+  margin-bottom: 16px !important;
+  margin-bottom: 1.6rem !important;
 }
 
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),

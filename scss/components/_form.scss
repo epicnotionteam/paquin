@@ -260,7 +260,7 @@ label {
 // Component container
 .form--resume-submission {
     // Fieldset [Upload]
-    .fieldset--upload {
-        @include rem( margin-bottom, spacing(3) );
+    .globo-form-app .block-container .globo-form-control.fieldset--upload {
+        @include rem( margin-bottom, spacing(3) !important );
     }
 }

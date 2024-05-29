@@ -76,42 +76,43 @@
 		{% comment %} Title {% endcomment %}
 		<h1 id="product__title">{{  product.title }}</h1>
 		{% comment %} Price {% endcomment %}
-		<div
-			id="product__price"
-			aria-live="polite"
-			data-product-pricing
-		>
-			{%
-				render 'product-price',
-				product: product,
-				class_root: 'product',
-				price: price,
-				price_varies: false,
-				compare_at_price: compare_at_price,
-				compare_at_price_varies: false,
-				on_sale: on_sale,
-				emphasize_price: false,
-				show_original: true,
-				show_range: false,
-				include_unit_price: true,
-				include_tax_line: true,
-				include_hidden_price: true
-			%}
-			{%
-				render 'product-badge',
-				product: product,
-				class_root: 'product',
-				product_available: product_available,
-				price: price,
-				price_varies: false,
-				compare_at_price: compare_at_price,
-				compare_at_price_varies: false,
-				on_sale: on_sale,
-				show_saved: true,
-				include_range: false,
-				selected_variant: selected_variant,
-			%}
-		</div>
+		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+		{% if product.price > 0 %}
+			<div id="product__price" aria-live="polite" data-product-pricing >
+				{%
+					render 'product-price',
+					product: product,
+					class_root: 'product',
+					price: price,
+					price_varies: false,
+					compare_at_price: compare_at_price,
+					compare_at_price_varies: false,
+					on_sale: on_sale,
+					emphasize_price: false,
+					show_original: true,
+					show_range: false,
+					include_unit_price: true,
+					include_tax_line: true,
+					include_hidden_price: true
+				%}
+				{%
+					render 'product-badge',
+					product: product,
+					class_root: 'product',
+					product_available: product_available,
+					price: price,
+					price_varies: false,
+					compare_at_price: compare_at_price,
+					compare_at_price_varies: false,
+					on_sale: on_sale,
+					show_saved: true,
+					include_range: false,
+					selected_variant: selected_variant,
+				%}
+			</div>
+		{% else %}
+			<p>Price dependent upon specification — inquire below</p>
+		{% endif %}
 		{% comment %} SKU {% endcomment %}
 		{% render 'product-sku', sku: sku %}
 		{% comment %} Data Sheet {% endcomment %}

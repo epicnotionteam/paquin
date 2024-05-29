@@ -1104,6 +1104,8 @@ body {
 .theme--dark h5, .theme--dark .nav--tag a, .nav--tag .theme--dark a, .theme--dark .live-search-form .search-flydown--results .search-flydown__group-title, .live-search-form .search-flydown--results .theme--dark .search-flydown__group-title, .theme--dark .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .collection-filters__filter-title, .productgrid--sidebar .collection-filters__filter-group .collection-filters__filter-group-heading.productgrid--sidebar-button .theme--dark .collection-filters__filter-title, .theme--dark .feed--block .item .item__number, .feed--block .item .theme--dark .item__number, .theme--dark .button--outline,
 .theme--dark .globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--content .gfb__dropzone--placeholder .gfb__dropzone--placeholder--button,
 .globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--content .gfb__dropzone--placeholder .theme--dark .gfb__dropzone--placeholder--button, .theme--dark .button--base,
+.theme--dark .form--newsletter-subscription .gfb__footer button.submit,
+.form--newsletter-subscription .gfb__footer .theme--dark button.submit,
 .theme--dark .form--base button.submit,
 .form--base .theme--dark button.submit,
 .theme--dark .product-form--atc-button, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
@@ -1425,6 +1427,7 @@ h5,
 .button--outline,
 .globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--content .gfb__dropzone--placeholder .gfb__dropzone--placeholder--button,
 .button--base,
+.form--newsletter-subscription .gfb__footer button.submit,
 .form--base button.submit,
 .product-form--atc-button,
 .section--feed-blog .section__grid .container--heading-small .section__heading--small,
@@ -2975,6 +2978,7 @@ blockquote {
 }
 
 .button--base,
+.form--newsletter-subscription .gfb__footer button.submit,
 .form--base button.submit,
 .product-form--atc-button {
   min-height: 54px;
@@ -2995,6 +2999,7 @@ blockquote {
 }
 
 .button--base:hover,
+.form--newsletter-subscription .gfb__footer button.submit:hover,
 .form--base button.submit:hover,
 .product-form--atc-button:hover {
   filter: brightness(1.12);

@@ -276,6 +276,7 @@ label {
         top: 0;
         // Button
         button.submit {
+            @extend %button--base;
             @include rem((
                 height: 54px
             ));

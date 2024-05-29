@@ -257,12 +257,30 @@ label {
         position: relative;
     }
     // Container [Fieldset]
-    .panels {}
+    .panels {
+        // Input container
+        .globo-form-input {
+            // Input [Email]
+            input {
+                @include rem((
+                    height: 54px
+                ));
+            }
+        }
+    }
     // Container [Form Footer]
     .gfb__footer {
+        margin: 0 !important;
         position: absolute;
         right: 0;
         top: 0;
+        // Button
+        button.submit {
+            @include rem((
+                height: 54px
+            ));
+            border-radius: 0;
+        }
     }
     // Remove inherited elements
     .wizard__header,

@@ -4005,10 +4005,20 @@ label {
 .form--newsletter-subscription .wizard__content {
   position: relative;
 }
+.form--newsletter-subscription .panels .globo-form-input input {
+  height: 54px;
+  height: 5.4rem;
+}
 .form--newsletter-subscription .gfb__footer {
+  margin: 0 !important;
   position: absolute;
   right: 0;
   top: 0;
+}
+.form--newsletter-subscription .gfb__footer button.submit {
+  height: 54px;
+  height: 5.4rem;
+  border-radius: 0;
 }
 .form--newsletter-subscription .wizard__header,
 .form--newsletter-subscription label {

@@ -35,8 +35,8 @@
                 box-shadow: none !important;  
                 font-family: font-family( 'base' );
             }
-			// Select
-			select {
+			// Textarea
+			textarea {
 				@include rem( min-height, 128px );
 			}
 			// Input [Upload]

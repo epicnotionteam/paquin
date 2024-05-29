@@ -4534,7 +4534,7 @@ ul.list--link-arrow li::before {
   box-shadow: none !important;
   font-family: "Paquin Sans Text", sans-serif;
 }
-.globo-form-app .block-container .globo-form-control select {
+.globo-form-app .block-container .globo-form-control textarea {
   min-height: 128px;
   min-height: 12.8rem;
 }

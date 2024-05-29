@@ -2776,8 +2776,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .collection--section .productgrid--outer .productgrid--masthead .container--empty-collection {
   margin: 16px auto 0;
   margin: 1.6rem auto 0;
-  max-width: 640px;
-  max-width: 64rem;
+  max-width: 800px;
+  max-width: 80rem;
+  text-align: center;
 }
 
 @media (min-width: 53.75em) {

@@ -4508,6 +4508,7 @@ ul.list--link-arrow li::before {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  width: 100%;
 }
 .globo-form-app .block-container .globo-form-control .gfb__dropzone .gfb__dropzone--content .gfb__dropzone--placeholder .gfb__dropzone--placeholder--button:before {
   content: "\f09b";

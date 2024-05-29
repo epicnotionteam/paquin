@@ -54,6 +54,7 @@
 						flex-direction: column;
 						align-items: flex-start;
 						gap: 12px;
+						width: 100%;
 						// Button
 						.gfb__dropzone--placeholder--button {
 							@extend %button--outline;

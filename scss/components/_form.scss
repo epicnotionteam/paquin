@@ -251,7 +251,13 @@ label {
 // --------------------------------------------------
 
 // Component container
-.form--newsletter-subscription {}
+.form--newsletter-subscription {
+    // Remove inherited elements
+    .wizard__header,
+    label {
+        display: none !important;
+    }
+}
 
 
 // Form [Resume Submission]

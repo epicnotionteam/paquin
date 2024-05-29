@@ -1129,7 +1129,7 @@ body {
 }
 .theme--dark .form--base .gfb__dropzone {
   background-color: transparent;
-  min-height: none !important;
+  min-height: 0 !important;
 }
 .theme--dark .form--base .gfb__dropzone .gfb__dropzone--preview--item-thumb {
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -3997,6 +3997,11 @@ label {
 .form--general-inquiry {
   margin-top: 16px;
   margin-top: 1.6rem;
+}
+
+.form--resume-submission .fieldset--upload {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),

@@ -258,4 +258,9 @@ label {
 // --------------------------------------------------
 
 // Component container
-.form--resume-submission {}
+.form--resume-submission {
+    // Fieldset [Upload]
+    .fieldset--upload {
+        @include rem( margin-bottom, spacing(3) );
+    }
+}

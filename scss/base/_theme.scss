@@ -69,7 +69,7 @@
 		// Input [Upload]
 		.gfb__dropzone {
 			background-color: transparent;
-			min-height: none !important;
+			min-height: 0 !important;
 			// Upload
 			.gfb__dropzone--preview--item-thumb {
 				border: $border--dark;

@@ -4023,6 +4023,7 @@ label {
 .form--newsletter-subscription .gfb__footer button.submit {
   height: 54px;
   height: 5.4rem;
+  border: 0 none;
   border-radius: 0;
 }
 .form--newsletter-subscription .wizard__header,

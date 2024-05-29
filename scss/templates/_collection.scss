@@ -5,7 +5,7 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
-// Template structure
+// Collection Feed
 // --------------------------------------------------
 
 // Grid container
@@ -14,9 +14,17 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
+    // Container [Header]
+    .productgrid--masthead {
+        // Container [Empty Collection Notice]
+        .container--empty-collection {
+            @include rem((
+                margin: spacing(3) auto 0,
+                max-width: 640px
+            ));
+        }
+    }
 }
-
-
 
 // Adjust @medium breakpoint
 @include mq( $from: 860px ) {

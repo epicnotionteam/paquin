@@ -86,7 +86,6 @@
 // Variant [Zero Items]
 .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
     @include rem( padding, spacing(4) 0 spacing(8) );
-    border-bottom: $border--base;
     // Container [Empty Collection Notice]
     .container--empty-collection {
         @include rem((

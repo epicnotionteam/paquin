@@ -69,6 +69,10 @@
 		// Input [Upload]
 		.gfb__dropzone {
 			background-color: transparent;
+			// Upload
+			.globo-form-control .gfb__dropzone--preview--item-thumb {
+				border-color: $border--dark;
+			}
 		}
 	}
 	// Component [Link, Base]

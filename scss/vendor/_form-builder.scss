@@ -66,6 +66,10 @@
 						}
 					}
 				}
+				// Upload
+				.globo-form-control .gfb__dropzone--preview--item-thumb {
+					border-color: $border--base;
+				}
 			}
             // Placeholder
             ::placeholder {

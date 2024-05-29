@@ -1130,6 +1130,9 @@ body {
 .theme--dark .form--base .gfb__dropzone {
   background-color: transparent;
 }
+.theme--dark .form--base .gfb__dropzone .globo-form-control .gfb__dropzone--preview--item-thumb {
+  border-color: 1px solid rgba(255, 255, 255, 0.16);
+}
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
 .theme--dark li a {
@@ -4523,6 +4526,9 @@ ul.list--link-arrow li::before {
   margin: 0.1rem 1.2rem 0 0;
   font-size: 128%;
   line-height: 1;
+}
+.globo-form-app .block-container .globo-form-control .gfb__dropzone .globo-form-control .gfb__dropzone--preview--item-thumb {
+  border-color: 1px solid #D6DBDD;
 }
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #30373A;

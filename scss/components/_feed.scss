@@ -380,11 +380,7 @@
 .template-collection .productgrid--items {
     // Item:hover
     .productgrid--item:hover {
-        background-color: red;
         box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 );
-        .productitem {
-            box-shadow: none;
-        }
     }
 }
 

@@ -166,7 +166,7 @@
 		{% render 'product-related-products' %}
 		{% comment %} Inquiry Form {% endcomment %}
 		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
-		{% if product.price > 0 %}
+		{% if product.price <= 0.01 %}
 			{% render 'product-inquiry-form' %}
 		{% endif %}
 	</div>

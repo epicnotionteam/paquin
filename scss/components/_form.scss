@@ -252,6 +252,18 @@ label {
 
 // Component container
 .form--newsletter-subscription {
+    // Form wrap
+    .wizard__content {
+        position: relative;
+    }
+    // Container [Fieldset]
+    .panels {}
+    // Container [Form Footer]
+    .gfb__footer {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
     // Remove inherited elements
     .wizard__header,
     label {

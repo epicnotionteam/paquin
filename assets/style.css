@@ -4002,6 +4002,14 @@ label {
   margin-top: 1.6rem;
 }
 
+.form--newsletter-subscription .wizard__content {
+  position: relative;
+}
+.form--newsletter-subscription .gfb__footer {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .form--newsletter-subscription .wizard__header,
 .form--newsletter-subscription label {
   display: none !important;

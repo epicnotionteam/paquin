@@ -264,3 +264,41 @@ label {
         @include rem( margin-bottom, spacing(3) !important );
     }
 }
+
+// Component container
+.form--resume-submission {
+    // Grid structure
+    .wizard__content > .panels > .block-container {
+        grid-template-columns: repeat( 2, 1fr );
+        grid-template-areas: 
+        'upload upload'
+        'first-name last-name'
+        'phone phone'
+        'email email'
+        'comments comments';
+        // Fieldset [Upload]
+        .globo-form-control:nth-child(1) {
+            grid-area: upload;
+        }
+        // Fieldset [First Name]
+        .globo-form-control:nth-child(2) {
+            grid-area: first-name;
+        }
+        // Fieldset [Upload]
+        .globo-form-control:nth-child(3) {
+            grid-area: last-name;
+        }
+        // Fieldset [Upload]
+        .globo-form-control:nth-child(4) {
+            grid-area: phone;
+        }
+        // Fieldset [Upload]
+        .globo-form-control:nth-child(5) {
+            grid-area: email;
+        }
+        // Fieldset [Upload]
+        .globo-form-control:nth-child(6) {
+            grid-area: comments;
+        }
+    }
+}

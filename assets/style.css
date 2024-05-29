@@ -1141,6 +1141,9 @@ body {
 .theme--dark .form--base small.messages p {
   color: #D6DBDD !important;
 }
+.theme--dark .form--base .message.error .err-item {
+  color: white;
+}
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,
 .theme--dark li a {
@@ -4597,6 +4600,9 @@ ul.list--link-arrow li::before {
   background-color: transparent !important;
   box-shadow: none !important;
   text-align: left !important;
+}
+.globo-form-app .message.error .err-item {
+  color: #7D4448;
 }
 .globo-form-app .message.success {
   padding: 0 32px 0 0;

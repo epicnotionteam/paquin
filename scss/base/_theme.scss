@@ -79,9 +79,16 @@
 				border-top: 0 none;
 			}
 		}
-		// Notification [Error]
+		// Notification [Error, Inline]
 		small.messages p {
 			color: color( 'steel', '5' ) !important;
+		}
+		// Message container
+		.message {
+			// Message item(s) [Error]
+			&.error .err-item {
+				color: white;
+			}
 		}
 	}
 	// Component [Link, Base]

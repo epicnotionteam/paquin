@@ -110,6 +110,10 @@
             background-color: transparent !important;
             box-shadow: none !important;
             text-align: left !important;
+			// Item(s)
+			.err-item {
+				color: color( 'rust', '2' );
+			}
 		}
         // Message [Success]
         &.success {

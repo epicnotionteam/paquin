@@ -2766,34 +2766,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
-.collection--section .productgrid--outer {
-  max-width: 1590px;
-  max-width: 159rem;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-}
-
-@media (min-width: 53.75em) {
-  .collection--section .productgrid--outer {
-    column-gap: 24px;
-    column-gap: 2.4rem;
-    row-gap: 24px;
-    row-gap: 2.4rem;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .collection--section .productgrid--outer .productgrid--masthead {
-    grid-column: 1/span 12;
-  }
-  .collection--section .productgrid--outer .productgrid--sidebar {
-    grid-column: 1/span 2;
-  }
-  .collection--section .productgrid--outer .productgrid--wrapper {
-    grid-column: 3/span 10;
-  }
-}
 .template-collection .productgrid--masthead .collection--title {
   max-width: 800px;
   max-width: 80rem;
@@ -2844,6 +2816,42 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
     padding: 24px 0 96px;
     padding: 2.4rem 0 9.6rem;
+  }
+}
+.template-collection .collection--section .productgrid--outer {
+  max-width: 1590px;
+  max-width: 159rem;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.template-collection .productgrid--outer.collection--has-items {
+  background-color: orange;
+}
+
+.template-collection .productgrid--outer.collection--zero-items {
+  background-color: red;
+}
+
+@media (min-width: 53.75em) {
+  .template-collection .collection--section .productgrid--outer {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    row-gap: 24px;
+    row-gap: 2.4rem;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .template-collection .collection--section .productgrid--outer .productgrid--masthead {
+    grid-column: 1/span 12;
+  }
+  .template-collection .collection--section .productgrid--outer .productgrid--sidebar {
+    grid-column: 1/span 2;
+  }
+  .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
+    grid-column: 3/span 10;
   }
 }
 .template-collection .breadcrumbs-container {

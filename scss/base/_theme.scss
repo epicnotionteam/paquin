@@ -78,6 +78,10 @@
 				border-top: 0 none;
 			}
 		}
+		// Notification [Error]
+		.help-block.error {
+			color: color( 'steel', '4' );
+		}
 	}
 	// Component [Link, Base]
 	a:not([class*='button']):not(.breadcrumbs-container a),

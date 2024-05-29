@@ -2827,11 +2827,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .template-collection .productgrid--outer.collection--has-items {
-  background-color: orange;
-}
-
-.template-collection .productgrid--outer.collection--zero-items {
-  background-color: red;
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
 }
 
 @media (min-width: 53.75em) {
@@ -2852,6 +2849,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
     grid-column: 3/span 10;
+  }
+  .template-collection .productgrid--outer.collection--has-items {
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
   }
 }
 .template-collection .breadcrumbs-container {

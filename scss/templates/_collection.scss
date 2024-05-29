@@ -83,12 +83,7 @@
 
 // Variant [Has Items]
 .template-collection .productgrid--outer.collection--has-items {
-    background-color: orange;
-}
-
-// Variant [Zero Items]
-.template-collection .productgrid--outer.collection--zero-items {
-    background-color: red;
+    @include rem( padding-bottom, $gap--section-small );
 }
 
 // Adjust @custom breakpoint
@@ -114,6 +109,10 @@
         .productgrid--wrapper {
             grid-column: 3 / span 10;
         }
+    }
+    // Variant [Has Items]
+    .template-collection .productgrid--outer.collection--has-items {
+        @include rem( padding-bottom, $gap--section-large );
     }
 }
 

@@ -71,12 +71,11 @@
 
 
 <article class="grid--product">
-
-	{% comment %} Product Header {% endcomment %}
+	{% comment %} Container [Product Header] {% endcomment %}
 	<div id="product__header" class="grid__item">
-		<!-- Title -->
+		{% comment %} Title {% endcomment %}
 		<h1 id="product__title">{{  product.title }}</h1>
-		<!-- Price -->
+		{% comment %} Price {% endcomment %}
 		<div
 			id="product__price"
 			aria-live="polite"
@@ -113,14 +112,12 @@
 				selected_variant: selected_variant,
 			%}
 		</div>
-		<!-- SKU -->
+		{% comment %} SKU {% endcomment %}
 		{% render 'product-sku', sku: sku %}
-		<!-- Data Sheet -->
+		{% comment %} Data Sheet {% endcomment %}
 		{% render 'product-data-sheet' %}
 	</div>
-
-
-	{% comment %} Product Media {% endcomment %}
+	{% comment %} Container [Product Media] {% endcomment %}
 	<div id="product__media" class="grid__item">
 		{%
 			render 'product-gallery',
@@ -133,132 +130,56 @@
 			gallery_hover_zoom: gallery_hover_zoom
 		%}
 	</div>
-
-
-	{% comment %} Product Core {% endcomment %}
+	{% comment %} Container [Product Core] {% endcomment %}
 	<div id="product__core" class="grid__item">
-		<!-- Form -->
-		<div
-			class="product-form--regular"
-			data-product-form-regular
-		>
-			<div data-product-form-area>
-				{% if is_product_modal %}
-					<div data-product-quickshop-message class="product-message--container"></div>
-				{% endif %}
-				{% liquid
-					if product.template_suffix contains 'pre-order'
-						assign show_dynamic_checkout_button = false
-					endif
-					if product.template_suffix contains 'pre-order' and is_product_modal
-						assign enable_local_pickup = false
-					else
-						assign enable_local_pickup = block.settings.enable_local_pickup
-					endif
-				%}
-				{%
-					render 'product-form',
-					product: product,
-					enable_local_pickup: enable_local_pickup,
-					show_recipient_form: show_recipient_form,
-					show_dynamic_checkout_button: show_dynamic_checkout_button,
-					selected_variant: selected_variant,
-					is_product_modal: is_product_modal,
-				%}
+		{% comment %} Form {% endcomment %}
+		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+		{% if product.price > 0 %}
+			<div class="product-form--regular" data-product-form-regular>
+				<div data-product-form-area>
+					{% liquid
+						if product.template_suffix contains 'pre-order'
+							assign show_dynamic_checkout_button = false
+						endif
+						if product.template_suffix contains 'pre-order' and is_product_modal
+							assign enable_local_pickup = false
+						else
+							assign enable_local_pickup = block.settings.enable_local_pickup
+						endif
+					%}
+					{%
+						render 'product-form',
+						product: product,
+						enable_local_pickup: enable_local_pickup,
+						show_recipient_form: show_recipient_form,
+						show_dynamic_checkout_button: show_dynamic_checkout_button,
+						selected_variant: selected_variant,
+						is_product_modal: is_product_modal,
+					%}
+				</div>
 			</div>
-		</div>
-		<!-- Highlights -->
+		{% endif %}
+		{% comment %} Highlights {% endcomment %}
 		{% render 'product-highlights' %}
-		<!-- Related Products -->
+		{% comment %} Related Products {% endcomment %}
 		{% render 'product-related-products' %}
-		<!-- Inquiry Form -->
-		{%
-			render 'product-request-form',
-			product: product,
-			heading: block.settings.title,
-			show_quantity: block.settings.show_quantity,
-			show_message: block.settings.show_message,
-			selected_variant: selected_variant,
-			sku: sku,
-		%}
+		{% comment %} Inquiry Form {% endcomment %}
+		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+		{% if product.price > 0 %}
+			{% comment %} {% render 'product-inquiry-form' %} {% endcomment %}
+		{% endif %}
 	</div>
-
-
-	{% comment %} Product Data {% endcomment %}
+	{% comment %} Container [Product Data] {% endcomment %}
 	<div id="product__data" class="grid__item">
-		<!-- Description -->
+		{% comment %} Description {% endcomment %}
 		{% render 'product-description' %}
-		<!-- Key Specifications -->
+		{% comment %} Key Specifications {% endcomment %}
 		{% render 'product-key-specifications' %}
-		<!-- Related Press -->
+		{% comment %} Related Press {% endcomment %}
 		{% render 'product-related-press' %}
-		<!-- Whitepapers -->
+		{% comment %} Whitepapers {% endcomment %}
 		{% render 'product-whitepapers' %}
-		<!-- Instructions -->
+		{% comment %} Instructions {% endcomment %}
 		{% render 'product-instructions' %}
 	</div>
-
 </article>
-
-
-
-<div class="product-main">
-	<div class="product-details" data-product-details>
-		  {% for block in section.blocks %}
-	<div
-	  class="
-		product-block
-		product-block--{{ block.type }}
-		{% if forloop.first == true -%}
-		  product-block--first
-		{% endif %}
-	  "
-	  {{ block.shopify_attributes }}
-	>
-	  {% case block.type %}
-		{% when 'complementary_products' %}
-		  {%
-			render 'complementary-products',
-			product: product,
-			block: block,
-		  %}
-
-
-		{% comment %} {% when 'vendor' %}
-		  {% if product.vendor != blank or onboarding %}
-			<div class="product-vendor">
-			  {% unless onboarding %}
-				{%- capture vendor_link -%}
-				  {{ product.vendor | link_to_vendor }}
-				{%- endcapture -%}
-				{{ 'product.general.by_vendor_html' | t: vendor_link: vendor_link }}
-			  {% else %}
-				{{ 'onboarding.product.by_vendor' | t }}
-			  {% endunless %}
-			</div>
-		  {% endif %} {% endcomment %}
-
-		{% comment %} {% when 'inventory_status' %}
-		  {% for variant in product.variants %}
-			{% capture stock_attributes %}
-			  data-stock-level
-			  data-stock-variant-id="{{ variant.id }}"
-			  data-stock-variant-selected="{% if variant == selected_variant %}true{% else %}false{% endif %}"
-			{% endcapture %}
-
-			{%
-			  render 'product-stock-level',
-			  attr: stock_attributes,
-			  inventory_display: block.settings.inventory_display,
-			  inventory_transfer: block.settings.inventory_transfer_notice,
-			  variant: variant,
-			  verbose: true,
-			%}
-		  {% endfor %} {% endcomment %}
-
-		  
-	  {% endcase %}
-	</div>
-  {% endfor %}
-</div>
-</div>

@@ -45,15 +45,24 @@
 				border: 0 none !important;
 				min-height: none !important;
 				padding: 0 !important;
-				// Container [Placeholder]
-				.gfb__dropzone--placeholder {
-					justify-content: flex-start;
-					flex-direction: column;
-					align-items: flex-start;
-					gap: 12px;
-					// Button
-					.gfb__dropzone--placeholder--button {
-						@extend %button--outline;
+				// Container [Content]
+				.gfb__dropzone--content {
+					width: 100%;
+					// Container [Placeholder]
+					.gfb__dropzone--placeholder {
+						justify-content: flex-start;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 12px;
+						// Button
+						.gfb__dropzone--placeholder--button {
+							@extend %button--outline;
+							@include icon( before, 'upload' ) {
+								@include rem( margin, 1px 12px 0 0 );
+            					font-size: 128%;
+            					line-height: 1;
+							}
+						}
 					}
 				}
 			}

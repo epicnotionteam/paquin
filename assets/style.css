@@ -1130,8 +1130,8 @@ body {
 .theme--dark .form--base .gfb__dropzone {
   background-color: transparent;
 }
-.theme--dark .form--base .gfb__dropzone .globo-form-control .gfb__dropzone--preview--item-thumb {
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+.theme--dark .form--base .gfb__dropzone .gfb__dropzone--preview--item-thumb {
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 .theme--dark a:not([class*=button]):not(.breadcrumbs-container a),
 .theme--dark p a,

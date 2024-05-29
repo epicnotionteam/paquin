@@ -70,8 +70,8 @@
 		.gfb__dropzone {
 			background-color: transparent;
 			// Upload
-			.globo-form-control .gfb__dropzone--preview--item-thumb {
-				border: $border--dark !important;
+			.gfb__dropzone--preview--item-thumb {
+				border: $border--dark;
 			}
 		}
 	}

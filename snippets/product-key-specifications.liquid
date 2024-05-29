@@ -4,7 +4,7 @@
 
 {% assign key_specs = product.metafields.custom.key_specifications %}
 
-{% if key_specs %}
+{% if key_specs != blank %}
 	<div id="product__key-specifications">
     	<h2 class="h5">Key Product Specifications</h2>
     	<div class="feed--table-specification">

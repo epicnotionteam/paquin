@@ -149,6 +149,14 @@
         </div>
       {% endif %}
 
+	  {% comment %} Container [Empty Collection] {% endcomment %}
+	  {% if collection.products.size == 0 %}
+		<div class="container--empty-collection">
+			<h2>This product category is empty</h2>
+			<a class="button--base button--icon-before button--icon-arrow-forward" href="/collections/all/">View all products</a>
+		</div>
+	  {% endif %}
+
       {% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
         {%
           render 'subcollections-collection',
@@ -334,7 +342,7 @@
           </div>
         {% endif %}
       {% endif %}
-
+      
       {% if collection.products.size > 0 %}
         <div
           class="
@@ -353,20 +361,6 @@
               products_per_row: products_per_row,
             %}
           {% endfor %}
-        </div>
-      {% else %}
-        <div class="productgrid--no-results">
-          <h2 class="productgrid--no-results-title">
-            {%- if collection.all_products_count == 0 -%}
-              {{ 'product_grid.no_results.empty' | t }}
-            {%- else -%}
-              {{ 'product_grid.no_results.tags_empty' | t }}
-            {%- endif -%}
-          </h2>
-
-          <a class="productgrid--no-results-button" href="{{ routes.all_products_collection_url }}">
-            {{ 'search.general.view_all_products' | t }}
-          </a>
         </div>
       {% endif %}
 

@@ -3656,7 +3656,7 @@ hr,
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.template-collection .productgrid--items .productgrid--item:hover {
+.template-collection .productgrid--items .productgrid--item:hover .productitem {
   box-shadow: 0 2px 24px 0 red !important;
 }
 

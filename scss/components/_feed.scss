@@ -379,7 +379,7 @@
 // State management
 .template-collection .productgrid--items {
     // Item:hover
-    .productgrid--item:hover {
+    .productgrid--item:hover .productitem {
         // box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 ) !important;
         box-shadow: 0 2px 24px 0 red !important;
     }

@@ -42,6 +42,9 @@
 			// Input [Upload]
 			.gfb__dropzone {
 				background-color: transparent;
+				border: 0 none !important;
+				min-height: none !important;
+				padding: 0 !important;
 				// Button
 				.gfb__dropzone--placeholder--button {
 					@extend %button--outline;

@@ -4496,6 +4496,9 @@ ul.list--link-arrow li::before {
 }
 .globo-form-app .block-container .globo-form-control .gfb__dropzone {
   background-color: transparent;
+  border: 0 none !important;
+  min-height: none !important;
+  padding: 0 !important;
 }
 .globo-form-app .block-container .globo-form-control ::placeholder {
   color: #30373A;

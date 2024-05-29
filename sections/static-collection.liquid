@@ -304,7 +304,9 @@
 {% endpaginate %}
 
 {% comment %} Container [Additional Details] {% endcomment %}
-{% render 'collection-content-offset-details', collection: collection %}
+{% if collection.metafields.custom.collection_information.value != blank %}
+	{% render 'collection-content-offset-details', collection: collection %}
+{% endif %}
 
 {%- if section.settings.sort_by -%}
     {%- render 'product-grid-sortby', type: 'modal', -%}

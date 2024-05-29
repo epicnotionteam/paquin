@@ -2,7 +2,7 @@
 // Output whitepaper feed for the current product
 {% endcomment %}
 
-{% if product.metafields.whitepapers != blank %}
+{% if product.metafields.custom.whitepapers != blank %}
 	{% assign data_source = product.metafields.custom.whitepapers.value %}
 	<div id="product__whitepapers">
 		<h2 class="h5">Whitepapers</h2>

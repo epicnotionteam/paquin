@@ -68,42 +68,6 @@
           "settings": {
             "collection": "gas-detection"
           }
-        },
-        "collection_LRNdRf": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_WkTPfk": {
-          "type": "collection",
-          "settings": {
-            "collection": "ruggedized-cabllng-solutions"
-          }
-        },
-        "collection_MKw7d3": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_yXBkDD": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_c6GfpM": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_X4LfRw": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
         }
       },
       "block_order": [
@@ -112,13 +76,7 @@
         "collection_MnPLHw",
         "collection_TtcqBR",
         "collection_TnbtRk",
-        "collection_kqCrAU",
-        "collection_LRNdRf",
-        "collection_WkTPfk",
-        "collection_MKw7d3",
-        "collection_yXBkDD",
-        "collection_c6GfpM",
-        "collection_X4LfRw"
+        "collection_kqCrAU"
       ],
       "settings": {
         "heading_small": "Related Part Types",
@@ -163,42 +121,6 @@
           "settings": {
             "collection": "gas-detection"
           }
-        },
-        "collection_LRNdRf": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_WkTPfk": {
-          "type": "collection",
-          "settings": {
-            "collection": "ruggedized-cabllng-solutions"
-          }
-        },
-        "collection_MKw7d3": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_yXBkDD": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_c6GfpM": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_X4LfRw": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
         }
       },
       "block_order": [
@@ -207,13 +129,7 @@
         "collection_MnPLHw",
         "collection_TtcqBR",
         "collection_TnbtRk",
-        "collection_kqCrAU",
-        "collection_LRNdRf",
-        "collection_WkTPfk",
-        "collection_MKw7d3",
-        "collection_yXBkDD",
-        "collection_c6GfpM",
-        "collection_X4LfRw"
+        "collection_kqCrAU"
       ],
       "settings": {
         "heading_small": "Related Industries",

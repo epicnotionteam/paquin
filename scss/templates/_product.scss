@@ -97,7 +97,7 @@
 			padding-bottom: $gap--section-large
 		));
         display: grid;
-		grid-auto-rows: minmax(8px, auto); /* Set a minimum row height */
+		grid-auto-rows: minmax( 8px, auto );
         grid-template-columns: repeat( 2, 1fr );
         grid-gap: spacing(6);
         margin: 0 auto;

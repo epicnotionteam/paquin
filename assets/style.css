@@ -2949,7 +2949,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 96px;
     padding-bottom: 9.6rem;
     display: grid;
-    grid-auto-rows: minmax(8px, auto); /* Set a minimum row height */
+    grid-auto-rows: minmax(8px, auto);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     margin: 0 auto;

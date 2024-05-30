@@ -2880,6 +2880,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .grid--product #product__media .product-gallery .product-gallery--viewer {
   border: 1px solid #D6DBDD;
 }
+.grid--product #product__content {
+  row-gap: 32px;
+  row-gap: 3.2rem;
+  display: grid;
+}
 .grid--product #product__content #product__core {
   row-gap: 12px;
   row-gap: 1.2rem;
@@ -2976,10 +2981,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .grid--product #product__content #product__secondary > * p:last-child,
 .grid--product #product__content #product__secondary > * li:last-child {
   margin: 0;
-}
-.grid--product #product__content #product__secondary > *:nth-child(1) {
-  margin-top: 32px 0;
-  margin-top: 3.2rem 0;
 }
 .grid--product #product__data > * {
   padding: 32px 0;

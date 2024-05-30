@@ -34,6 +34,8 @@
     }
 	// Container [Content]
 	#product__content {
+		@include rem( row-gap, spacing(5) );
+		display: grid;
 		// Container [Core]
 		#product__core {
 			@include rem( row-gap, 12px );
@@ -102,9 +104,6 @@
 					&:last-child {
 						margin: 0;
 					}
-				}
-				&:nth-child(1) {
-					@include rem( margin-top, spacing(5) 0 );
 				}
 			}
 		}

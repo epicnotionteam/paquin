@@ -79,13 +79,15 @@ label {
             }
             input {
                 @include font-size( 'base' );
-                border-left: 0 none;
-                border-right: 0 none;
+                background-color: color( 'background', 'input' );
+                border: 0 none;
                 font-family: font-family( 'base' );
             }
             // Increment buttons
             .quantity-selector__button {
                 @include rem( padding, spacing(4) );
+                background-color: color( 'background', 'input' );
+                border: 0 none;
             }
         }
     }

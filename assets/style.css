@@ -3924,13 +3924,15 @@ label {
   line-height: 25px;
   letter-spacing: -0.12px;
   letter-spacing: -0.012rem;
-  border-left: 0 none;
-  border-right: 0 none;
+  background-color: #F2F4F6;
+  border: 0 none;
   font-family: "Paquin Sans Text", sans-serif;
 }
 .product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__button {
   padding: 24px;
   padding: 2.4rem;
+  background-color: #F2F4F6;
+  border: 0 none;
 }
 
 .product-form--regular .quantity-selector__button:focus {

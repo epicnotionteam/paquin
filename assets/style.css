@@ -3673,6 +3673,7 @@ hr,
 .productgrid--items .productgrid--item {
   padding: 0;
   transition: box-shadow 0.16s ease-out;
+  margin: 0;
   width: 100% !important;
 }
 .productgrid--items .productgrid--item .productitem {

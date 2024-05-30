@@ -2862,7 +2862,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .product__container {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .shopify-section.product--section > .wrap--container {

@@ -2942,8 +2942,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   color: #66787F;
-  margin: 0;
 }
 .grid--product #product__content #product__core .indicator--price:before {
   content: "\e000";

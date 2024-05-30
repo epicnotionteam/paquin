@@ -1577,14 +1577,6 @@
       "oAP" : "\/sections\/feed-team.liquid",
       "oF" : 0
     },
-    "\/sections\/footer-block.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/footer-block.liquid",
-      "oF" : 0
-    },
     "\/sections\/footer-group.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -2119,6 +2111,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/feed-subcollections.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/footer-block.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/footer-block.liquid",
       "oF" : 0
     },
     "\/snippets\/free-shipping-bar.liquid" : {

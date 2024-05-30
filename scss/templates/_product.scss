@@ -35,6 +35,7 @@
 	// Container [Content]
 	#product__content {
 		@include rem( row-gap, spacing(5) );
+		align-content: flex-start;
 		display: grid;
 		// Container [Core]
 		#product__core {

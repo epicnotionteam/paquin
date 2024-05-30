@@ -350,6 +350,18 @@
                 display: flex;
                 margin: 0;
             }
+            // Indicator [Price, Complex Product]
+			.indicator--price {
+				@include font-size( 'small' );
+				@include rem( margin-bottom, spacing(2) );
+				color: color( 'steel', '4' );
+				// Place icon
+				@include icon( before, 'error' ) {
+					@include rem( margin, -3px spacing(1) 0 0 );
+					display: inline-block;
+					font-size: 112%;
+				}
+			} 
             // Container [Actions]
             .productitem--actions {
                 @include rem(( 

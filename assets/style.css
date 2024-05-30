@@ -2880,6 +2880,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .grid--product #product__media .product-gallery .product-gallery--viewer {
   border: 1px solid #D6DBDD;
 }
+.grid--product #product__content #product__core {
+  row-gap: 12px;
+  row-gap: 1.2rem;
+  display: grid;
+}
 .grid--product #product__content #product__core #product__title {
   font-size: 28px;
   font-size: 2.8rem;

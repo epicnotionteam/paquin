@@ -36,6 +36,8 @@
 	#product__content {
 		// Container [Core]
 		#product__core {
+			@include rem( row-gap, 12px );
+			display: grid;
 			// Title
 			#product__title {
 				@include font-size( 'h2' );

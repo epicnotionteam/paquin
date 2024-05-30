@@ -2105,6 +2105,14 @@
       "oAP" : "\/snippets\/featured-collection.liquid",
       "oF" : 0
     },
+    "\/snippets\/feed-subcollections.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/feed-subcollections.liquid",
+      "oF" : 0
+    },
     "\/snippets\/footer-block.liquid" : {
       "cB" : 0,
       "ft" : 8192,

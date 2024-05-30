@@ -150,6 +150,8 @@
 						<a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>
 					</div>
 				{% endif %}
+				{% comment %} Subcollections {% endcomment %}
+				{% render 'feed-subcollections', collection: collection %}
 				{% comment %} Subcollections Grid {% endcomment %}
 				{% comment %}
 					{% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}

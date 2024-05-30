@@ -1,0 +1,48 @@
+{% comment %}
+// Output Subcollection Feed component
+{% endcomment %}
+
+{% comment %} Output component {% endcomment %}
+<div class="collection-feed">
+    {% for block in section.blocks %}
+        {% if block.type == 'collection' %}
+            {% assign collection_handle = block.settings.collection %}
+            {% assign collection = collections[collection_handle] %}
+            {% if collection %}
+                <div class="collection-item">
+                    <h2>{{ collection.title }}</h2>
+                    <div class="collection-products">
+                        {% for product in collection.products %}
+                            <div class="product-item">
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                                    <h3>{{ product.title }}</h3>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "Feed [Subcollection]",
+    "settings": [],
+    "blocks": [
+        {
+        "type": "subcollection",
+        "name": "Subcollection",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Select collection"
+            }
+        ]
+        }
+    ]
+}
+{% endschema %}

@@ -61,9 +61,13 @@
 				}
 			}
 		}
-		// SKU
-		#product__sku {}
-		// Data Sheet » Link Container
+		// Indicator [Price, Complex Product]
+		.indicator--price {
+			@include font-size( 'small' );
+			color: color( 'steel', '4' );
+			margin: 0;
+		} 
+		// Data Sheet
 		#product__data-sheet {
 			margin: 0;
 			// Button

@@ -394,13 +394,60 @@
         },
         {
             "type": "header",
-            "content": "Subcollection settings"
+            "content": "t:sections.collection_pages.header_2.content"
         },
         {
             "type": "checkbox",
             "id": "enable_subcollection",
-            "label": "Enable subcollections",
+            "label": "t:sections.collection_pages.enable_subcollection.label",
+            "default": false,
+            "info": "t:sections.collection_pages.enable_subcollection.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_product_count",
+            "label": "t:sections.collection_pages.show_product_count.label",
             "default": false
+        },
+        {
+            "type": "select",
+            "id": "thumbnail_image",
+            "label": "t:sections.collection_pages.thumbnail_image.label",
+            "options": [
+                {
+                    "value": "product-image",
+                    "label": "t:sections.collection_pages.thumbnail_image.option_1"
+                },
+                {
+                    "value": "collection-image",
+                    "label": "t:sections.collection_pages.thumbnail_image.option_2"
+                }
+            ],
+            "default": "product-image"
+        },
+        {
+            "type": "select",
+            "id": "image_crop",
+            "label": "t:sections.collection_pages.image_crop.label",
+            "options": [
+                {
+                    "label": "t:sections.collection_pages.image_crop.option_1",
+                    "value": "original"
+                },
+                {
+                    "label": "t:sections.collection_pages.image_crop.option_2",
+                    "value": "square"
+                },
+                {
+                    "label": "t:sections.collection_pages.image_crop.option_3",
+                    "value": "circle"
+                },
+                {
+                    "label": "t:sections.collection_pages.image_crop.option_4",
+                    "value": "round"
+                }
+            ],
+            "default": "original"
         }
     ],
     "blocks": [
@@ -569,18 +616,7 @@
                 }
             ],
             "limit": 1
-        },
-        {
-            "type": "collection",
-            "name": "Subcollection",
-            "settings": [
-                {
-                    "type": "collection",
-                    "id": "collection",
-                    "label": "Collection"
-                }
-            ]
         }
     ]
 }
-{% endschema %} 
+{% endschema %}

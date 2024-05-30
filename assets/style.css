@@ -2863,7 +2863,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .shopify-section.product--section > .wrap--container {
   max-width: 1064px;
   max-width: 106.4rem;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 !important;
 }
 
 .container--grid {

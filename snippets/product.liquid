@@ -73,6 +73,22 @@
 <article class="grid--product">
 	{% comment %} Container [Product Header] {% endcomment %}
 	<div id="product__header" class="grid__item">
+	</div>
+	{% comment %} Container [Product Media] {% endcomment %}
+	<div id="product__media" class="grid__item">
+		{%
+			render 'product-gallery',
+			product: product,
+			select_first_available_variant: select_first_available_variant,
+			aspect_ratio: gallery_aspect_ratio,
+			thumbnail_position: gallery_thumbnail_position,
+			image_crop: gallery_image_crop,
+			gallery_click_to_zoom: gallery_click_to_zoom,
+			gallery_hover_zoom: gallery_hover_zoom
+		%}
+	</div>
+	{% comment %} Container [Product Core] {% endcomment %}
+	<div id="product__core" class="grid__item">
 		{% comment %} Title {% endcomment %}
 		<h1 id="product__title">{{  product.title }}</h1>
 		{% comment %} Price {% endcomment %}
@@ -117,22 +133,6 @@
 		{% comment %} {% render 'product-sku', sku: sku %} {% endcomment %}
 		{% comment %} Data Sheet {% endcomment %}
 		{% render 'product-data-sheet' %}
-	</div>
-	{% comment %} Container [Product Media] {% endcomment %}
-	<div id="product__media" class="grid__item">
-		{%
-			render 'product-gallery',
-			product: product,
-			select_first_available_variant: select_first_available_variant,
-			aspect_ratio: gallery_aspect_ratio,
-			thumbnail_position: gallery_thumbnail_position,
-			image_crop: gallery_image_crop,
-			gallery_click_to_zoom: gallery_click_to_zoom,
-			gallery_hover_zoom: gallery_hover_zoom
-		%}
-	</div>
-	{% comment %} Container [Product Core] {% endcomment %}
-	<div id="product__core" class="grid__item">
 		{% comment %} Form {% endcomment %}
 		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 		{% if product.price > 0 %}

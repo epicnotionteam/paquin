@@ -32,76 +32,79 @@
             }
         }
     }
-	// Container [Core]
-	#product__core {
-		// Title
-        #product__title {
-			@include font-size( 'h2' );
-		  	margin: 0;
-		}
-		// Price container
-		#product__price {
-			@include rem( column-gap, spacing(2) );
-			align-items: center;
-			display: grid;
-			grid-template-columns: max-content max-content;
-			// Price
-			.price {
+	// Container [Content]
+	#product__content {
+		// Container [Core]
+		#product__core {
+			// Title
+			#product__title {
+				@include font-size( 'h2' );
+				margin: 0;
+			}
+			// Price container
+			#product__price {
 				@include rem( column-gap, spacing(2) );
 				align-items: center;
 				display: grid;
 				grid-template-columns: max-content max-content;
-				& > * {
-					@include font-size( 'base' );
-					margin: 0;
+				// Price
+				.price {
+					@include rem( column-gap, spacing(2) );
+					align-items: center;
+					display: grid;
+					grid-template-columns: max-content max-content;
+					& > * {
+						@include font-size( 'base' );
+						margin: 0;
+					}
+					// Sale price display
+					.price__current.price__current--on-sale span.money {
+						color: color( 'type', '1' );
+					}
 				}
-				// Sale price display
-				.price__current.price__current--on-sale span.money {
-					color: color( 'type', '1' );
-				}
 			}
-		}
-		// Indicator [Price, Complex Product]
-		.indicator--price {
-			@include font-size( 'small' );
-			color: color( 'steel', '4' );
-			margin: 0;
-			// Place icon
-			@include icon( before, 'error' ) {
-				@include rem( margin, -3px spacing(1) 0 0 );
-                display: inline-block;
-                font-size: 112%;
-			}
-		} 
-		// Data Sheet
-		#product__data-sheet {
-			margin: 0;
-			// Button
-			a {
-				width: 100%;
-			}
-			p {
+			// Indicator [Price, Complex Product]
+			.indicator--price {
 				@include font-size( 'small' );
+				color: color( 'steel', '4' );
+				margin: 0;
+				// Place icon
+				@include icon( before, 'error' ) {
+					@include rem( margin, -3px spacing(1) 0 0 );
+					display: inline-block;
+					font-size: 112%;
+				}
+			} 
+			// Data Sheet
+			#product__data-sheet {
+				margin: 0;
+				// Button
+				a {
+					width: 100%;
+				}
+				p {
+					@include font-size( 'small' );
+				}
 			}
 		}
 	}
-    // Container [Data]
-    #product__data {
-        // Individual data blocks
-        & > * {
-            @include rem( padding, spacing(5) 0 );
-            border-top: $border--base;
-            // Content
-            p, 
-            li {
-                @include font-size( 'small' );
-                // Strip margin from final <p> tag
-                &:last-child {
-                    margin: 0;
-                }
-            }
-        }
-    }
+	// Container [Data]
+	#product__data {
+		// Individual data blocks
+		& > * {
+			@include rem( padding, spacing(5) 0 );
+			border-top: $border--base;
+			// Content
+			p, 
+			li {
+				@include font-size( 'small' );
+				// Strip margin from final <p> tag
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
 }
 
 // Adjust for medium breakpoint
@@ -119,8 +122,8 @@
         grid-gap: spacing(6);
         margin: 0 auto;
 		grid-template-areas:
-		'media core'
-		'data core';
+		'media content'
+		'data content';
     }
     #product__media {
         grid-area: media;
@@ -128,7 +131,7 @@
     #product__data {
         grid-area: data;
 	} 
-    #product__core {
-        grid-area: core;
+    #product__content {
+        grid-area: content;
     }
 }

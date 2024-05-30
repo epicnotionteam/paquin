@@ -396,29 +396,6 @@
           </figure>
         </a>
       </div>
-      
-      {% if product.price > 0 %}
-      
-      {%- capture product_item_price -%}
-        {%
-          render 'product-price',
-          product: product,
-          class_root: 'productitem',
-          price: price,
-          price_varies: price_varies,
-          compare_at_price: compare_at_price,
-          compare_at_price_varies: compare_at_price_varies,
-          on_sale: on_sale,
-          emphasize_price: emphasize_price,
-          show_original: true,
-          show_range: true,
-          include_unit_price: true,
-          include_hidden_price: false,
-        %}
-      {%- endcapture -%}
-    {% else %}
-      <p class="indicator--price">Price dependent upon specification</p>
-    {% endif %}
 
       <div class="productitem--info">
         {% unless countdown_timer %}
@@ -434,6 +411,29 @@
             {{ product_title }}
           </a>
         </h2>
+
+        {% if product.price > 0 %}
+      
+          {%- capture product_item_price -%}
+            {%
+              render 'product-price',
+              product: product,
+              class_root: 'productitem',
+              price: price,
+              price_varies: price_varies,
+              compare_at_price: compare_at_price,
+              compare_at_price_varies: compare_at_price_varies,
+              on_sale: on_sale,
+              emphasize_price: emphasize_price,
+              show_original: true,
+              show_range: true,
+              include_unit_price: true,
+              include_hidden_price: false,
+            %}
+          {%- endcapture -%}
+        {% else %}
+          <p class="indicator--price">Price dependent upon specification</p>
+        {% endif %}
 
         {% unless product_compare %}
           {% if settings.product_show_vendor and product.vendor != blank %}

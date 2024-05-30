@@ -2766,6 +2766,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
+.template-collection .container--grid {
+  overflow: visible;
+}
+
 .template-collection .productgrid--masthead .collection--title {
   max-width: 800px;
   max-width: 80rem;
@@ -2860,20 +2864,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
-.product__container {
+.template-products .product__container {
   padding: 0;
   margin: 0 auto;
 }
 
-.shopify-section.product--section > .wrap--container:first-of-type {
+.template-products .container--breadcrumbs {
   max-width: 1064px;
   max-width: 106.4rem;
   margin: 0 auto;
   padding: 0 !important;
-}
-
-.container--grid {
-  overflow: visible;
 }
 
 .grid--product {

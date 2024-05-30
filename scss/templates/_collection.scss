@@ -5,6 +5,12 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
+// Allow product cards to overflow grid container
+.template-collection .container--grid {
+	overflow: visible;
+}
+
+
 // Section [Page Header]
 // Contains collection title & description
 // --------------------------------------------------

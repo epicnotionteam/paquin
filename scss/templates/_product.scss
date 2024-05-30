@@ -5,21 +5,16 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
-.product__container {
+.template-products .product__container {
 	padding: 0;
 	margin: 0 auto;
 }
 
 // Modify breadcrumb container
-.shopify-section.product--section > .wrap--container:first-of-type {
+.template-products .container--breadcrumbs {
 	@include rem( max-width, 1064px );
 	margin: 0 auto;
 	padding: 0 !important;
-}
-
-// Allow product cards to overflow grid container
-.container--grid {
-	overflow: visible;
 }
 
 

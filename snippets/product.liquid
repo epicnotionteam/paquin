@@ -159,13 +159,15 @@
 			{% comment %} Data Sheet {% endcomment %}
 			{% render 'product-data-sheet' %}
 		</div>
-		{% comment %} Highlights {% endcomment %}
-		{% render 'product-highlights' %}
-		{% comment %} Inquiry Form {% endcomment %}
-		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
-		{% if product.price <= 0.01 %}
-			{% render 'product-inquiry-form' %}
-		{% endif %}
+		<div id="product__secondary">
+			{% comment %} Highlights {% endcomment %}
+			{% render 'product-highlights' %}
+			{% comment %} Inquiry Form {% endcomment %}
+			{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+			{% if product.price <= 0.01 %}
+				{% render 'product-inquiry-form' %}
+			{% endif %}
+		</div>
 	</div>
 	{% comment %} Container [Product Data] {% endcomment %}
 	<div id="product__data" class="grid__item">

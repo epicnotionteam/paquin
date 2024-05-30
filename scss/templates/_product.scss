@@ -89,6 +89,22 @@
 				}
 			}
 		}
+		// Container [Secondary]
+		#product__secondary {
+			& > * {
+				@include rem( padding, spacing(5) 0 );
+				border-top: $border--base;
+				// Content
+				p, 
+				li {
+					@include font-size( 'small' );
+					// Strip margin from final <p> tag
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+		}
 	}
 	// Container [Data]
 	#product__data {

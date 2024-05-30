@@ -2960,6 +2960,23 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
 }
+.grid--product #product__content #product__secondary > * {
+  padding: 32px 0;
+  padding: 3.2rem 0;
+  border-top: 1px solid #D6DBDD;
+}
+.grid--product #product__content #product__secondary > * p,
+.grid--product #product__content #product__secondary > * li {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
+.grid--product #product__content #product__secondary > * p:last-child,
+.grid--product #product__content #product__secondary > * li:last-child {
+  margin: 0;
+}
 .grid--product #product__data > * {
   padding: 32px 0;
   padding: 3.2rem 0;

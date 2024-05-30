@@ -9,12 +9,13 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Contact Paquin",
+        "heading": "Paquin Sensors",
         "heading_size": "text--headline",
         "content": "<p>Short, single line description summarizing page content<\/p>",
-        "link_text": "",
-        "link_url": "#test",
-        "show_jump_links": false
+        "link_text": "Explore Paquin Sensors",
+        "link_url": "#link",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "show_jump_links": true
       }
     },
     "division-sensors-about": {
@@ -67,42 +68,6 @@
           "settings": {
             "collection": "gas-detection"
           }
-        },
-        "collection_LRNdRf": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_WkTPfk": {
-          "type": "collection",
-          "settings": {
-            "collection": "ruggedized-cabllng-solutions"
-          }
-        },
-        "collection_MKw7d3": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_yXBkDD": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_c6GfpM": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_X4LfRw": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
         }
       },
       "block_order": [
@@ -111,13 +76,7 @@
         "collection_MnPLHw",
         "collection_TtcqBR",
         "collection_TnbtRk",
-        "collection_kqCrAU",
-        "collection_LRNdRf",
-        "collection_WkTPfk",
-        "collection_MKw7d3",
-        "collection_yXBkDD",
-        "collection_c6GfpM",
-        "collection_X4LfRw"
+        "collection_kqCrAU"
       ],
       "settings": {
         "heading_small": "Related Part Types",
@@ -127,92 +86,50 @@
     "division-sensors-markets": {
       "type": "feed-collection",
       "blocks": {
-        "collection_NPceRF": {
+        "collection_TMAND6": {
           "type": "collection",
           "settings": {
-            "collection": "pressure"
+            "collection": "automation-controls"
           }
         },
-        "collection_bFJhze": {
+        "collection_XRkn94": {
           "type": "collection",
           "settings": {
-            "collection": "temperature"
+            "collection": "compactors"
           }
         },
-        "collection_MnPLHw": {
+        "collection_TyRFGP": {
           "type": "collection",
           "settings": {
-            "collection": "level"
+            "collection": "compressors"
           }
         },
-        "collection_TtcqBR": {
+        "collection_XT7BRx": {
           "type": "collection",
           "settings": {
-            "collection": "optical-laser"
+            "collection": "gas-oil"
           }
         },
-        "collection_TnbtRk": {
+        "collection_NcBkKQ": {
           "type": "collection",
           "settings": {
-            "collection": "flow"
+            "collection": "hvac-refrigeration"
           }
         },
-        "collection_kqCrAU": {
+        "collection_UdDV68": {
           "type": "collection",
           "settings": {
-            "collection": "gas-detection"
-          }
-        },
-        "collection_LRNdRf": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_WkTPfk": {
-          "type": "collection",
-          "settings": {
-            "collection": "ruggedized-cabllng-solutions"
-          }
-        },
-        "collection_MKw7d3": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_yXBkDD": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_c6GfpM": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_X4LfRw": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
+            "collection": "hydrogen"
           }
         }
       },
       "block_order": [
-        "collection_NPceRF",
-        "collection_bFJhze",
-        "collection_MnPLHw",
-        "collection_TtcqBR",
-        "collection_TnbtRk",
-        "collection_kqCrAU",
-        "collection_LRNdRf",
-        "collection_WkTPfk",
-        "collection_MKw7d3",
-        "collection_yXBkDD",
-        "collection_c6GfpM",
-        "collection_X4LfRw"
+        "collection_TMAND6",
+        "collection_XRkn94",
+        "collection_TyRFGP",
+        "collection_XT7BRx",
+        "collection_NcBkKQ",
+        "collection_UdDV68"
       ],
       "settings": {
         "heading_small": "Related Industries",

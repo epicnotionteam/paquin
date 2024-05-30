@@ -3720,6 +3720,7 @@ hr,
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   color: #66787F;
+  margin: 0;
 }
 .productgrid--items .productgrid--item .productitem .indicator--price:before {
   content: "\e000";

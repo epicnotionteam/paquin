@@ -347,7 +347,7 @@
                 @include font-size( 'small' );
                 @include rem(( 
                     column-gap: spacing(1),
-                    margin: spacing(1) 0 0
+                    margin: 6px 0 0
                 ));
                 align-items: center;
                 display: flex;

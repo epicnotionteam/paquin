@@ -2969,6 +2969,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/page.division-sensors.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/page.division-sensors-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/page.faq.json" : {
       "ft" : 524288,
       "oA" : 1,

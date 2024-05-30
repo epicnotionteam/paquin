@@ -3714,11 +3714,9 @@ hr,
   margin: 0;
 }
 .productgrid--items .productgrid--item .productitem .indicator--price {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   color: #66787F;

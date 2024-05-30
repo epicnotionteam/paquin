@@ -2880,6 +2880,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   flex-direction: column;
 }
 .grid--product #product__media .product-gallery {
+  padding: 0;
   width: 100%;
 }
 .grid--product #product__media .product-gallery .product-gallery--viewer {

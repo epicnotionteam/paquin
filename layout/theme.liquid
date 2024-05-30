@@ -107,16 +107,16 @@
     {% comment %}Inject theme-object end{% endcomment %}
 
     {% comment %} Carousel [Glide] {% endcomment %}
-	{% comment %} Output on custom pages only {% endcomment %}
-	{% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article,account,login,register,activate_account,reset_password,order,addresses" | split: "," %}
-	{% assign current_template = template.name %}
-	{% unless current_template == blank or excluded_templates contains current_template %}
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
-	{% endunless %}
-	{% comment %} Component-specific functionality {% endcomment %}
-	{% comment %} <script src="{{ 'components-min.js' | asset_url }}" defer></script> {% endcomment %}
+    {% comment %} Output on custom pages only {% endcomment %}
+    {% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article,account,login,register,activate_account,reset_password,order,addresses" | split: "," %}
+    {% assign current_template = template.name %}
+    {% unless current_template == blank or excluded_templates contains current_template %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
+    {% endunless %}
+    {% comment %} Component-specific functionality {% endcomment %}
+    <script src="{{ 'components-min.js' | asset_url }}" defer></script>
     {% comment %} Typography [Typekit] {% endcomment %}
     <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
     {% comment %} Icons [Google Material Symbols] {% endcomment %}

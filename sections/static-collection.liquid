@@ -151,7 +151,7 @@
 					</div>
 				{% endif %}
 				{% comment %} Subcollections {% endcomment %}
-				{% section 'feed-subcollections', collection: collection %}
+				{% render 'feed-subcollections', collection: collection %}
 				{% comment %} Subcollections Grid {% endcomment %}
 				{% comment %}
 					{% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
@@ -394,60 +394,13 @@
         },
         {
             "type": "header",
-            "content": "t:sections.collection_pages.header_2.content"
+            "content": "Subcollection settings"
         },
         {
             "type": "checkbox",
             "id": "enable_subcollection",
-            "label": "t:sections.collection_pages.enable_subcollection.label",
-            "default": false,
-            "info": "t:sections.collection_pages.enable_subcollection.info"
-        },
-        {
-            "type": "checkbox",
-            "id": "show_product_count",
-            "label": "t:sections.collection_pages.show_product_count.label",
+            "label": "Enable subcollections",
             "default": false
-        },
-        {
-            "type": "select",
-            "id": "thumbnail_image",
-            "label": "t:sections.collection_pages.thumbnail_image.label",
-            "options": [
-                {
-                    "value": "product-image",
-                    "label": "t:sections.collection_pages.thumbnail_image.option_1"
-                },
-                {
-                    "value": "collection-image",
-                    "label": "t:sections.collection_pages.thumbnail_image.option_2"
-                }
-            ],
-            "default": "product-image"
-        },
-        {
-            "type": "select",
-            "id": "image_crop",
-            "label": "t:sections.collection_pages.image_crop.label",
-            "options": [
-                {
-                    "label": "t:sections.collection_pages.image_crop.option_1",
-                    "value": "original"
-                },
-                {
-                    "label": "t:sections.collection_pages.image_crop.option_2",
-                    "value": "square"
-                },
-                {
-                    "label": "t:sections.collection_pages.image_crop.option_3",
-                    "value": "circle"
-                },
-                {
-                    "label": "t:sections.collection_pages.image_crop.option_4",
-                    "value": "round"
-                }
-            ],
-            "default": "original"
         }
     ],
     "blocks": [
@@ -616,7 +569,18 @@
                 }
             ],
             "limit": 1
+        },
+        {
+            "type": "collection",
+            "name": "Subcollection",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                }
+            ]
         }
     ]
 }
-{% endschema %}
+{% endschema %} 

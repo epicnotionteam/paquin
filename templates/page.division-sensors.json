@@ -86,50 +86,50 @@
     "division-sensors-markets": {
       "type": "feed-collection",
       "blocks": {
-        "collection_NPceRF": {
+        "collection_TMAND6": {
           "type": "collection",
           "settings": {
-            "collection": "pressure"
+            "collection": "automation-controls"
           }
         },
-        "collection_bFJhze": {
+        "collection_XRkn94": {
           "type": "collection",
           "settings": {
-            "collection": "temperature"
+            "collection": "compactors"
           }
         },
-        "collection_MnPLHw": {
+        "collection_TyRFGP": {
           "type": "collection",
           "settings": {
-            "collection": "level"
+            "collection": "compressors"
           }
         },
-        "collection_TtcqBR": {
+        "collection_XT7BRx": {
           "type": "collection",
           "settings": {
-            "collection": "optical-laser"
+            "collection": "gas-oil"
           }
         },
-        "collection_TnbtRk": {
+        "collection_NcBkKQ": {
           "type": "collection",
           "settings": {
-            "collection": "flow"
+            "collection": "hvac-refrigeration"
           }
         },
-        "collection_kqCrAU": {
+        "collection_UdDV68": {
           "type": "collection",
           "settings": {
-            "collection": "gas-detection"
+            "collection": "hydrogen"
           }
         }
       },
       "block_order": [
-        "collection_NPceRF",
-        "collection_bFJhze",
-        "collection_MnPLHw",
-        "collection_TtcqBR",
-        "collection_TnbtRk",
-        "collection_kqCrAU"
+        "collection_TMAND6",
+        "collection_XRkn94",
+        "collection_TyRFGP",
+        "collection_XT7BRx",
+        "collection_NcBkKQ",
+        "collection_UdDV68"
       ],
       "settings": {
         "heading_small": "Related Industries",

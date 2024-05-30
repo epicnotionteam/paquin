@@ -11,7 +11,7 @@
 }
 
 // Modify breadcrumb container
-.shopify-section.product--section > .wrap--container:first-child {
+.shopify-section.product--section > .wrap--container:first-of-type {
 	@include rem( max-width, 1064px );
 	margin: 0 auto;
 	padding: 0 !important;

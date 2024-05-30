@@ -5,13 +5,13 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
-.template-products .product__container {
+.template-product .product__container {
 	padding: 0;
 	margin: 0 auto;
 }
 
 // Modify breadcrumb container
-.template-products .container--breadcrumbs {
+.template-product .container--breadcrumbs {
 	@include rem( max-width, 1064px );
 	margin: 0 auto;
 	padding: 0 !important;

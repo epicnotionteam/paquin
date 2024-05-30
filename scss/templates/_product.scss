@@ -10,6 +10,11 @@
 	margin: 0 auto;
 }
 
+.template-product .container--breadcrumbs {
+	@include rem( max-width, 1064px );
+	margin: 0 auto;
+}
+
 
 // Template Layout
 // --------------------------------------------------

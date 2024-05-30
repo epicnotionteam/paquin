@@ -5,6 +5,11 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
+.product__container {
+	padding: 0;
+	margin: 0;
+}
+
 // Modify breadcrumb container
 .shopify-section.product--section > .wrap--container {
 	@include rem( max-width, 1064px );

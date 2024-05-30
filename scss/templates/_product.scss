@@ -103,6 +103,9 @@
 						margin: 0;
 					}
 				}
+				&:first-child {
+					@include rem( margin-top, spacing(5) 0 );
+				}
 			}
 		}
 	}

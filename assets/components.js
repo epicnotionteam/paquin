@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
+            const buffer = window.innerWidth <= 719 ? 56 : 72;
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: targetElement.offsetTop - buffer,
                 behavior: 'smooth'
             });
         }
     }
-
-    // Attach the smoothScroll function to all anchor links
+    // Attach smoothScroll function to all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', smoothScroll);
     });

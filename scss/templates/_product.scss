@@ -5,6 +5,12 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
+// Modify breadcrumb container
+.product--section > .wrap--container:nth-child(1) {
+	@include rem( max-width, 1064px );
+	padding: 0;
+}
+
 .container--grid {
 	overflow: visible;
 }

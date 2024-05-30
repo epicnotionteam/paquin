@@ -2860,6 +2860,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
+.product--section > .wrap--container:nth-child(1) {
+  max-width: 1064px;
+  max-width: 106.4rem;
+  padding: 0;
+}
+
 .container--grid {
   overflow: visible;
 }

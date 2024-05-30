@@ -3,63 +3,39 @@
 {% endcomment %}
 
 {% comment %} Assign section data to vars {% endcomment %}
-{% assign article_author = article.author %}
-
-{% comment %} Define author data array using string variables {% endcomment %}
-{% comment %} Requires staff account with same name to create match and output data {% endcomment %}
-{% comment %} Add additional authors with '|Full Name:full-name.jpg' {% endcomment %}
-{% assign authors = "Graeme Bryson:graeme-bryson.jpg|Rob Kinkopf:rob-kinkopf.jpg" %}
-
-{% comment %} Process tags {% endcomment %}
-{% assign tag_count = article.tags.size %}
-{% if tag_count > 0 %}
-    {% assign tag_string = "Posted in " %}
-    {% for tag in article.tags %}
-        {% capture tag_link %}<a href="/blogs/news/tagged/{{ tag | handleize }}">{{ tag }}</a>{% endcapture %}
-        {% if forloop.last and tag_count > 1 %}
-            {% assign tag_string = tag_string | append: " and " | append: tag_link %}
-        {% elsif forloop.first %}
-            {% assign tag_string = tag_string | append: tag_link %}
-        {% else %}
-            {% assign tag_string = tag_string | append: ", " | append: tag_link %}
-        {% endif %}
-    {% endfor %}
-{% endif %}
+{% assign article_author = article.user %}
 
 {% comment %} Output component {% endcomment %}
 <div class="article__author">
-    {% assign author_found = false %}
-    {% assign author_list = authors | split: "|" %}
-    {% for author in author_list %}
-        {% assign author_details = author | split: ":" %}
-        {% assign author_name = author_details[0] %}
-        {% assign author_image = author_details[1] %}
-        {% if article_author == author_name %}
-            {% assign author_found = true %}
-            {% comment %} Image {% endcomment %}
-            <div class="container--image">
-                <img src="{{ author_image | asset_url }}" alt="{{ author_name }}">
-            </div>
-            <div class="container--information">
-                {% comment %} Name {% endcomment %}
-                <p class="author__name">Written by <span>{{ author_name }}</span></p>
-                {% if show_tags and tag_count > 0 %}
-                    <p class="article__tags">{{ tag_string }}</p>
-                {% endif %}
-            </div>
-            {% break %}
-        {% endif %}
-    {% endfor %}
-
-    {% comment %} Fallback author block {% endcomment %}
-    {% if author_found == false %}
-        {% comment %} Fallback (if unset/invalid) {% endcomment %}
+    {% if article_author %}
         <div class="container--image">
-            <img src="{{ 'default-author.jpg' | asset_url }}" alt="Default Author">
+            <img src="{{ article_author.image | img_url: '200x200' }}" alt="{{ article_author.name }}">
+        </div>
+        <div class="container--information">
+            <p class="author__name">Written by <span>{{ article_author.name }}</span></p>
+            {% if show_tags and article.tags.size > 0 %}
+                {% assign tag_string = "Posted in " %}
+                {% for tag in article.tags %}
+                    {% capture tag_link %}<a href="/blogs/news/tagged/{{ tag | handleize }}">{{ tag }}</a>{% endcapture %}
+                    {% if forloop.last and article.tags.size > 1 %}
+                        {% assign tag_string = tag_string | append: " and " | append: tag_link %}
+                    {% elsif forloop.first %}
+                        {% assign tag_string = tag_string | append: tag_link %}
+                    {% else %}
+                        {% assign tag_string = tag_string | append: ", " | append: tag_link %}
+                    {% endif %}
+                {% endfor %}
+                <p class="article__tags">{{ tag_string }}</p>
+            {% endif %}
+        </div>
+    {% else %}
+        {% comment %} Fallback author block {% endcomment %}
+        <div class="container--image">
+            <img src="{{ 'default-author.jpg' | asset_url }}" alt="The Paquin Team">
         </div>
         <div class="container--information">
             <p class="author__name">Written by <span>The Paquin Team</span></p>
-            {% if show_tags and tag_count > 0 %}
+            {% if show_tags and article.tags.size > 0 %}
                 <p class="article__tags">{{ tag_string }}</p>
             {% endif %}
         </div>

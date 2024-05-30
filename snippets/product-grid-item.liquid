@@ -416,6 +416,8 @@
           include_hidden_price: false,
         %}
       {%- endcapture -%}
+    {% else %}
+      <p class="indicator--price">Price dependent upon specification</p>
     {% endif %}
 
       <div class="productitem--info">

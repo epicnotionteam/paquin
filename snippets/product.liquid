@@ -128,8 +128,6 @@
 		{% endif %}
 		{% comment %} SKU {% endcomment %}
 		{% comment %} {% render 'product-sku', sku: sku %} {% endcomment %}
-		{% comment %} Data Sheet {% endcomment %}
-		{% render 'product-data-sheet' %}
 		{% comment %} Form {% endcomment %}
 		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 		{% if product.price > 0 %}
@@ -157,6 +155,8 @@
 				</div>
 			</div>
 		{% endif %}
+		{% comment %} Data Sheet {% endcomment %}
+		{% render 'product-data-sheet' %}
 		{% comment %} Highlights {% endcomment %}
 		{% render 'product-highlights' %}
 		{% comment %} Related Products {% endcomment %}

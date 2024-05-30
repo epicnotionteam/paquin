@@ -38,146 +38,148 @@
 
 
 {% liquid
-  	assign onboarding = onboarding | default: false
-  	assign layout = layout | default: nil
-  	assign is_featured_product = is_featured_product | default: false
-  	assign selected_variant = product.selected_variant
-	if product.variants.size == 1 or select_first_available_variant == false
-		assign selected_variant = product.selected_or_first_available_variant
-	endif
-  	assign compare_at_price = selected_variant.compare_at_price
-  	assign price = selected_variant.price
-  	assign sku = selected_variant.sku
-  	assign product_available = product.available
+	assign onboarding = onboarding | default: false
+	assign layout = layout | default: nil
+	assign is_featured_product = is_featured_product | default: false
+	assign selected_variant = product.selected_variant
+  if product.variants.size == 1 or select_first_available_variant == false
+	  assign selected_variant = product.selected_or_first_available_variant
+  endif
+	assign compare_at_price = selected_variant.compare_at_price
+	assign price = selected_variant.price
+	assign sku = selected_variant.sku
+	assign product_available = product.available
 %}
 
 {% assign on_sale = false %}
 {% if compare_at_price > price %}
-	{% assign on_sale = true %}
+  {% assign on_sale = true %}
 {% endif %}
 
 {% assign consistent_saved = false %}
 {% capture consistent_savings %}
-	{%
-    	render 'consistent-savings',
-    	variants: product.variants,
-    	on_sale: on_sale
-  	%}
+  {%
+	  render 'consistent-savings',
+	  variants: product.variants,
+	  on_sale: on_sale
+	%}
 {% endcapture %}
 
 {% if consistent_savings contains 'true' %}
-	{% assign consistent_saved = true %}
+  {% assign consistent_saved = true %}
 {% endif %}
 
 
 <article class="grid--product">
-	{% comment %} Container [Product Media] {% endcomment %}
-	<div id="product__media" class="grid__item">
-		{%
-			render 'product-gallery',
-			product: product,
-			select_first_available_variant: select_first_available_variant,
-			aspect_ratio: gallery_aspect_ratio,
-			thumbnail_position: gallery_thumbnail_position,
-			image_crop: gallery_image_crop,
-			gallery_click_to_zoom: gallery_click_to_zoom,
-			gallery_hover_zoom: gallery_hover_zoom
-		%}
-	</div>
-	{% comment %} Container [Product Core] {% endcomment %}
-	<div id="product__core" class="grid__item">
-		{% comment %} Title {% endcomment %}
-		<h1 id="product__title">{{  product.title }}</h1>
-		{% comment %} Price {% endcomment %}
-		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
-		{% if product.price > 0 %}
-			<div id="product__price" aria-live="polite" data-product-pricing >
-				{%
-					render 'product-price',
-					product: product,
-					class_root: 'product',
-					price: price,
-					price_varies: false,
-					compare_at_price: compare_at_price,
-					compare_at_price_varies: false,
-					on_sale: on_sale,
-					emphasize_price: false,
-					show_original: true,
-					show_range: false,
-					include_unit_price: true,
-					include_tax_line: true,
-					include_hidden_price: true
-				%}
-				{%
-					render 'product-badge',
-					product: product,
-					class_root: 'product',
-					product_available: product_available,
-					price: price,
-					price_varies: false,
-					compare_at_price: compare_at_price,
-					compare_at_price_varies: false,
-					on_sale: on_sale,
-					show_saved: true,
-					include_range: false,
-					selected_variant: selected_variant,
-				%}
-			</div>
-		{% else %}
-			<p class="indicator--price">Price dependent upon specification — <a href="#product__inquiry-form">inquire below</a></p>
-		{% endif %}
-		{% comment %} SKU {% endcomment %}
-		{% comment %} {% render 'product-sku', sku: sku %} {% endcomment %}
-		{% comment %} Data Sheet {% endcomment %}
-		{% render 'product-data-sheet' %}
-		{% comment %} Form {% endcomment %}
-		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
-		{% if product.price > 0 %}
-			<div class="product-form--regular" data-product-form-regular>
-				<div data-product-form-area>
-					{% liquid
-						if product.template_suffix contains 'pre-order'
-							assign show_dynamic_checkout_button = false
-						endif
-						if product.template_suffix contains 'pre-order' and is_product_modal
-							assign enable_local_pickup = false
-						else
-							assign enable_local_pickup = block.settings.enable_local_pickup
-						endif
-					%}
-					{%
-						render 'product-form',
-						product: product,
-						enable_local_pickup: enable_local_pickup,
-						show_recipient_form: show_recipient_form,
-						show_dynamic_checkout_button: show_dynamic_checkout_button,
-						selected_variant: selected_variant,
-						is_product_modal: is_product_modal,
-					%}
-				</div>
-			</div>
-		{% endif %}
-		{% comment %} Highlights {% endcomment %}
-		{% render 'product-highlights' %}
-		{% comment %} Related Products {% endcomment %}
-		{% render 'product-related-products' %}
-		{% comment %} Inquiry Form {% endcomment %}
-		{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
-		{% if product.price <= 0.01 %}
-			{% render 'product-inquiry-form' %}
-		{% endif %}
-	</div>
-	{% comment %} Container [Product Data] {% endcomment %}
-	<div id="product__data" class="grid__item">
-		{% comment %} Description {% endcomment %}
-		{% render 'product-description' %}
-		{% comment %} Key Specifications {% endcomment %}
-		{% render 'product-key-specifications' %}
-		{% comment %} Related Press {% endcomment %}
-		{% render 'product-related-press' %}
-		{% comment %} Whitepapers {% endcomment %}
-		{% render 'product-whitepapers' %}
-		{% comment %} Instructions {% endcomment %}
-		{% render 'product-instructions' %}
-	</div>
+  {% comment %} Container [Product Header] {% endcomment %}
+  <div id="product__header" class="grid__item">
+	  {% comment %} Title {% endcomment %}
+	  <h1 id="product__title">{{  product.title }}</h1>
+	  {% comment %} Price {% endcomment %}
+	  <div
+		  id="product__price"
+		  aria-live="polite"
+		  data-product-pricing
+	  >
+		  {%
+			  render 'product-price',
+			  product: product,
+			  class_root: 'product',
+			  price: price,
+			  price_varies: false,
+			  compare_at_price: compare_at_price,
+			  compare_at_price_varies: false,
+			  on_sale: on_sale,
+			  emphasize_price: false,
+			  show_original: true,
+			  show_range: false,
+			  include_unit_price: true,
+			  include_tax_line: true,
+			  include_hidden_price: true
+		  %}
+		  {%
+			  render 'product-badge',
+			  product: product,
+			  class_root: 'product',
+			  product_available: product_available,
+			  price: price,
+			  price_varies: false,
+			  compare_at_price: compare_at_price,
+			  compare_at_price_varies: false,
+			  on_sale: on_sale,
+			  show_saved: true,
+			  include_range: false,
+			  selected_variant: selected_variant,
+		  %}
+	  </div>
+	  {% comment %} SKU {% endcomment %}
+	  {% render 'product-sku', sku: sku %}
+	  {% comment %} Data Sheet {% endcomment %}
+	  {% render 'product-data-sheet' %}
+  </div>
+  {% comment %} Container [Product Media] {% endcomment %}
+  <div id="product__media" class="grid__item">
+	  {%
+		  render 'product-gallery',
+		  product: product,
+		  select_first_available_variant: select_first_available_variant,
+		  aspect_ratio: gallery_aspect_ratio,
+		  thumbnail_position: gallery_thumbnail_position,
+		  image_crop: gallery_image_crop,
+		  gallery_click_to_zoom: gallery_click_to_zoom,
+		  gallery_hover_zoom: gallery_hover_zoom
+	  %}
+  </div>
+  {% comment %} Container [Product Core] {% endcomment %}
+  <div id="product__core" class="grid__item">
+	  {% comment %} Form {% endcomment %}
+	  {% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+	  {% if product.price > 0 %}
+		  <div class="product-form--regular" data-product-form-regular>
+			  <div data-product-form-area>
+				  {% liquid
+					  if product.template_suffix contains 'pre-order'
+						  assign show_dynamic_checkout_button = false
+					  endif
+					  if product.template_suffix contains 'pre-order' and is_product_modal
+						  assign enable_local_pickup = false
+					  else
+						  assign enable_local_pickup = block.settings.enable_local_pickup
+					  endif
+				  %}
+				  {%
+					  render 'product-form',
+					  product: product,
+					  enable_local_pickup: enable_local_pickup,
+					  show_recipient_form: show_recipient_form,
+					  show_dynamic_checkout_button: show_dynamic_checkout_button,
+					  selected_variant: selected_variant,
+					  is_product_modal: is_product_modal,
+				  %}
+			  </div>
+		  </div>
+	  {% endif %}
+	  {% comment %} Highlights {% endcomment %}
+	  {% render 'product-highlights' %}
+	  {% comment %} Related Products {% endcomment %}
+	  {% render 'product-related-products' %}
+	  {% comment %} Inquiry Form {% endcomment %}
+	  {% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
+	  {% if product.price > 0 %}
+		  {% comment %} {% render 'product-inquiry-form' %} {% endcomment %}
+	  {% endif %}
+  </div>
+  {% comment %} Container [Product Data] {% endcomment %}
+  <div id="product__data" class="grid__item">
+	  {% comment %} Description {% endcomment %}
+	  {% render 'product-description' %}
+	  {% comment %} Key Specifications {% endcomment %}
+	  {% render 'product-key-specifications' %}
+	  {% comment %} Related Press {% endcomment %}
+	  {% render 'product-related-press' %}
+	  {% comment %} Whitepapers {% endcomment %}
+	  {% render 'product-whitepapers' %}
+	  {% comment %} Instructions {% endcomment %}
+	  {% render 'product-instructions' %}
+  </div>
 </article>

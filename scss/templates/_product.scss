@@ -70,6 +70,7 @@
 			@include icon( before, 'error' ) {
 				@include rem( margin, -3px spacing(1) 0 0 );
                 display: inline-block;
+                font-size: 112%;
 			}
 		} 
 		// Data Sheet

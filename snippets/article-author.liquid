@@ -9,7 +9,7 @@
 <div class="article__author">
     {% if article_author %}
         <div class="container--image">
-            <img src="{{ article_author.image | img_url: '200x200' }}" alt="{{ article_author.name }}">
+            <img class="author__image" src="{{ article_author.image | img_url: '200x200' }}" alt="{{ article_author.name }}">
         </div>
         <div class="container--information">
             <p class="author__name">Written by <span>{{ article_author.name }}</span></p>
@@ -31,7 +31,7 @@
     {% else %}
         {% comment %} Fallback author block {% endcomment %}
         <div class="container--image">
-            <img src="{{ 'default-author.jpg' | asset_url }}" alt="The Paquin Team">
+            <img class="author__image" src="{{ 'default-author.jpg' | asset_url }}" alt="The Paquin Team">
         </div>
         <div class="container--information">
             <p class="author__name">Written by <span>The Paquin Team</span></p>

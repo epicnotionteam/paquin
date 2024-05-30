@@ -6,7 +6,7 @@
 // ----------------------------------------------------------------------------------------------------
 
 // Modify breadcrumb container
-.product--section > .wrap--container:nth-child(1) {
+.shopify-section.product--section > .wrap--container {
 	@include rem( max-width, 1064px );
 	padding: 0;
 }

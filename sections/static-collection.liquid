@@ -151,7 +151,7 @@
 					</div>
 				{% endif %}
 				{% comment %} Subcollections {% endcomment %}
-				{% render 'feed-subcollections', collection: collection %}
+				{% section 'feed-subcollections', collection: collection %}
 				{% comment %} Subcollections Grid {% endcomment %}
 				{% comment %}
 					{% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}

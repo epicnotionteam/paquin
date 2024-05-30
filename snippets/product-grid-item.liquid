@@ -528,25 +528,27 @@
           {% endunless %}
 
           <div class="productitem--actions" data-product-actions>
-            <div class="productitem--listview-price">
-              {{ product_item_price }}
-            </div>
+            {% if product.price > 0 %}
+              <div class="productitem--listview-price">
+                {{ product_item_price }}
+              </div>
 
-            <div class="productitem--listview-badge">
-              {%
-                render 'product-badge',
-                product: product,
-                class_root: 'productitem',
-                product_available: product_available,
-                price: price,
-                price_varies: price_varies,
-                compare_at_price: compare_at_price,
-                compare_at_price_varies: compare_at_price_varies,
-                on_sale: on_sale,
-                show_saved: consistent_saved,
-                include_range: true,
-              %}
-            </div>
+              <div class="productitem--listview-badge">
+                {%
+                  render 'product-badge',
+                  product: product,
+                  class_root: 'productitem',
+                  product_available: product_available,
+                  price: price,
+                  price_varies: price_varies,
+                  compare_at_price: compare_at_price,
+                  compare_at_price_varies: compare_at_price_varies,
+                  on_sale: on_sale,
+                  show_saved: consistent_saved,
+                  include_range: true,
+                %}
+              </div>
+            {% endif %}
 
             {% comment %} {% if enable_quickshop %}
               <div

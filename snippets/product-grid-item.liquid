@@ -396,7 +396,9 @@
           </figure>
         </a>
       </div>
-
+      
+      {% if product.price > 0 %}
+      
       {%- capture product_item_price -%}
         {%
           render 'product-price',
@@ -414,6 +416,7 @@
           include_hidden_price: false,
         %}
       {%- endcapture -%}
+    {% endif %}
 
       <div class="productitem--info">
         {% unless countdown_timer %}
@@ -527,10 +530,7 @@
             {% assign quick_buy_classes = quick_buy_classes | append: ' disabled' %}
           {% endunless %}
 
-          Test 
-          
           <div class="productitem--actions" data-product-actions>
-            {% if product.price > 0 %}
               <div class="productitem--listview-price">
                 {{ product_item_price }}
               </div>
@@ -550,7 +550,7 @@
                   include_range: true,
                 %}
               </div>
-            {% endif %}
+            
 
             {% comment %} {% if enable_quickshop %}
               <div

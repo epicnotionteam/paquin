@@ -345,10 +345,12 @@
             // Price
             .price.productitem__price {
                 @include font-size( 'small' );
-                @include rem( column-gap, spacing(1) );
+                @include rem(( 
+                    column-gap: spacing(1),
+                    margin: spacing(1) 0 0
+                ));
                 align-items: center;
                 display: flex;
-                margin: 0;
             }
             // Indicator [Price, Complex Product]
 			.indicator--price {

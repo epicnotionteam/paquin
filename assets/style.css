@@ -3709,9 +3709,10 @@ hr,
   letter-spacing: -0.008rem;
   column-gap: 4px;
   column-gap: 0.4rem;
+  margin: 4px 0 0;
+  margin: 0.4rem 0 0;
   align-items: center;
   display: flex;
-  margin: 0;
 }
 .productgrid--items .productgrid--item .productitem .indicator--price {
   font-size: 13px;

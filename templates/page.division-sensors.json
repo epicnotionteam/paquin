@@ -9,12 +9,13 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Contact Paquin",
+        "heading": "Paquin Sensors",
         "heading_size": "text--headline",
         "content": "<p>Short, single line description summarizing page content<\/p>",
-        "link_text": "",
-        "link_url": "#test",
-        "show_jump_links": false
+        "link_text": "Explore Paquin Sensors",
+        "link_url": "#link",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "show_jump_links": true
       }
     },
     "division-sensors-about": {

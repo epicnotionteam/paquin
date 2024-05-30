@@ -66,6 +66,12 @@
 			@include font-size( 'small' );
 			color: color( 'steel', '4' );
 			margin: 0;
+			// Place icon
+			@include icon( before, 'error' ) {
+				@include rem( margin, -3px spacing(1) 0 0 );
+                display: inline-block;
+                font-size: 120%;
+			}
 		} 
 		// Data Sheet
 		#product__data-sheet {

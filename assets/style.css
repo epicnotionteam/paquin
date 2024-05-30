@@ -2865,7 +2865,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 auto;
 }
 
-.shopify-section.product--section > .wrap--container {
+.shopify-section.product--section > .wrap--container:first-child {
   max-width: 1064px;
   max-width: 106.4rem;
   margin: 0 auto;

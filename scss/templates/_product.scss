@@ -13,6 +13,7 @@
 .template-product .container--breadcrumbs {
 	@include rem( max-width, 1064px );
 	margin: 0 auto;
+	padding: 0 !important
 }
 
 

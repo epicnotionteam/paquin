@@ -64,8 +64,15 @@
 		// SKU
 		#product__sku {}
 		// Data Sheet » Link Container
-		#product__data-sheet .product__data-sheet-link {
+		#product__data-sheet {
 			margin: 0;
+			// Button
+			a {
+				width: 100%;
+			}
+			p {
+				@include font-size( 'small' );
+			}
 		}
 	}
     // Container [Data]

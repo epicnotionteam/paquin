@@ -2919,8 +2919,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: -0.012rem;
   margin: 0;
 }
-.grid--product #product__core #product__data-sheet .product__data-sheet-link {
+.grid--product #product__core #product__data-sheet {
   margin: 0;
+}
+.grid--product #product__core #product__data-sheet a {
+  width: 100%;
+}
+.grid--product #product__core #product__data-sheet p {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }
 .grid--product #product__data > * {
   padding: 32px 0;

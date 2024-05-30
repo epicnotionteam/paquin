@@ -3973,6 +3973,9 @@ label {
   border: 0 none !important;
 }
 
+.product-form--regular {
+  margin: 0;
+}
 .product-form--regular .product-form--atc {
   margin: 0;
 }

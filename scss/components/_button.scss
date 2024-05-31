@@ -137,6 +137,22 @@
 }
 
 
+// Button [Icon, Arrow, Back]
+// --------------------------------------------------
+
+.button--icon-arrow-back {
+    @include icon( before, 'arrow_back' );
+    @include icon( after, 'arrow_back' );
+    // Icon-specific adjustments
+    &::before,
+    &::after {
+        @include rem( margin-top, 1px );
+        font-size: 128%;
+        line-height: 1;
+    }
+}
+
+
 // Button [Icon, Arrow, Forward]
 // --------------------------------------------------
 

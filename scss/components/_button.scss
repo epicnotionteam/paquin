@@ -153,6 +153,22 @@
 }
 
 
+// Button [Icon, Cart]
+// --------------------------------------------------
+
+.button--icon-cart {
+    @include icon( before, 'cart' );
+    @include icon( after, 'cart' );
+    // Icon-specific adjustments
+    // &::before,
+    // &::after {
+    //     @include rem( margin-top, 2px );
+    //     font-size: 128%;
+    //     line-height: 1;
+    // }
+}
+
+
 // Button [Icon, Data Sheet]
 // --------------------------------------------------
 

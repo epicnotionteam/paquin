@@ -3380,6 +3380,27 @@ blockquote {
   line-height: 1;
 }
 
+.button--icon-cart:before {
+  content: "\e8cc";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-cart:after {
+  content: "\e8cc";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .button--icon-data-sheet:before {
   content: "\e032";
   font-family: "Material Symbols Outlined";

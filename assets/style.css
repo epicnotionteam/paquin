@@ -2835,6 +2835,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info {
   row-gap: 6px;
   row-gap: 0.6rem;
+  align-items: center;
   display: grid;
   grid-template-areas: "quantity quantity" "total remove";
   grid-template-columns: 1fr max-content;
@@ -2870,8 +2871,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove {
   grid-area: remove;
+  line-height: 1;
+  position: relative;
+  width: auto;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove .cart-item__remove-link {
+  padding: 6px;
+  padding: 0.6rem;
   height: auto;
   width: auto;
 }

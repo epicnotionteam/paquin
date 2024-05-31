@@ -78,6 +78,7 @@
                     // Product-Specific Form
                     .cart-item__info {
                         @include rem( row-gap, 6px );
+                        align-items: center;
                         display: grid;
                         grid-template-areas: 
                         'quantity quantity'
@@ -118,7 +119,11 @@
                         // Item removal container
                         .cart-item__remove {
                             grid-area: remove;
+                            line-height: 1;
+                            position: relative;
+                            width: auto;
                             .cart-item__remove-link {
+                                @include rem( padding, 6px );
                                 height: auto;
                                 width: auto;
                                 path {

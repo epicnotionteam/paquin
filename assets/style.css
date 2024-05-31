@@ -2773,17 +2773,17 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
-.template-cart form {
+.template-cart .cart--section > form {
   padding: 40px 4vw 72px;
   padding: 4rem 4vw 7.2rem;
 }
-.template-cart form .cart-title {
+.template-cart .cart--section > form .cart-title {
   max-width: 960px;
   max-width: 96rem;
   margin: 0 auto;
   width: 100%;
 }
-.template-cart form .cartitems--container {
+.template-cart .cart--section > form .cartitems--container {
   max-width: 960px;
   max-width: 96rem;
   margin: 0 auto;
@@ -2791,7 +2791,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
-  .template-cart form {
+  .template-cart .cart--section > form {
     padding: 40px 4vw 96px;
     padding: 4rem 4vw 9.6rem;
   }

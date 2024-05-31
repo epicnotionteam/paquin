@@ -97,9 +97,11 @@
                                     @include rem( height, 54px );
                                     // Button(s)
                                     .quantity-selector__button {
+                                        @include rem( width, 54px );
                                         background-color: color( 'background', 'input' );
                                         border: 0 none;
                                         border-radius: 0;
+                                        justify-content: center;
                                     }
                                     // Input
                                     .quantity-selector__input {

@@ -2855,9 +2855,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   height: 5.4rem;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector .quantity-selector__wrapper .quantity-selector__button {
+  width: 54px;
+  width: 5.4rem;
   background-color: #F2F4F6;
   border: 0 none;
   border-radius: 0;
+  justify-content: center;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector .quantity-selector__wrapper .quantity-selector__input {
   background-color: #F2F4F6;

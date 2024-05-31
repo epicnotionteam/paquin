@@ -2939,12 +2939,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-template-columns: 1fr max-content;
   }
   .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner {
-    column-gap: 32px;
-    column-gap: 3.2rem;
+    column-gap: 24px;
+    column-gap: 2.4rem;
     grid-template-columns: 320px 1fr;
     grid-template-columns: 32rem 1fr;
   }
   .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    align-items: center;
     grid-template-areas: "quantity total remove";
     grid-template-columns: 1fr max-content max-content;
   }

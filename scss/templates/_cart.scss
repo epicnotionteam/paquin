@@ -193,11 +193,13 @@
                     // Details
                     .cart-item--inner {
                         @include rem((
-                            column-gap: spacing(5),
+                            column-gap: spacing(4),
                             grid-template-columns: 320px 1fr 
                         ));
                         // Product-Specific Form
                         .cart-item__info {
+                            @include rem( column-gap, spacing(4) );
+                            align-items: center;
                             grid-template-areas: 'quantity total remove';
                             grid-template-columns: 1fr max-content max-content;
                         }

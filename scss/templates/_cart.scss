@@ -69,6 +69,10 @@
                                 font-weight: font-weight( 'base' ) !important;
                             }
                         }
+                        // Price
+                        .cart-item--content-price {
+                            color: color( 'steel', '4' );
+                        }
                     }
                     // Product-Specific Form
                     .cart-item__info {

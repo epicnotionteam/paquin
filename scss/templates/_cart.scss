@@ -35,6 +35,7 @@
         width: 100%;
         // Feed container
         .cartitems--list {
+            background-color: red !important;
             // Item container
             .cart-item {
                 @include rem((

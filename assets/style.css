@@ -2791,6 +2791,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 auto;
   width: 100%;
 }
+.template-cart .cart--section > form .cartitems--container .cartitems--list {
+  row-gap: 16px;
+  row-gap: 1.6rem;
+  display: grid;
+}
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item {
   column-gap: 12px;
   column-gap: 1.2rem;
@@ -2801,6 +2806,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border: 1px solid #D6DBDD;
   box-shadow: none;
   display: grid;
+  margin: 0;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--image-wrapper {
   width: 100%;

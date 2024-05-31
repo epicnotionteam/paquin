@@ -35,6 +35,8 @@
         width: 100%;
         // Feed container
         .cartitems--list {
+            @include rem( row-gap, spacing(3) );
+            display: grid;
             // Item container
             .cart-item {
                 @include rem((
@@ -45,6 +47,7 @@
                 border: $border--base;
                 box-shadow: none;
                 display: grid;
+                margin: 0;
                 // Image
                 .cart-item--image-wrapper {
                     width: 100%;

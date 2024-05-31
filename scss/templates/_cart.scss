@@ -43,7 +43,12 @@
                 ));
                 display: grid;
                 // Image
-                .cart-item--image-wrapper {}
+                .cart-item--image-wrapper {
+                    width: 100%;
+                    img {
+                        display: block;
+                    }
+                }
                 // Details
                 .cart-item--inner {
                     padding: 0;
@@ -51,6 +56,10 @@
                     // Product Information
                     .cart-item--content {
                         padding: 0;
+                        // Title
+                        .cart-item--content-title {
+                            @extend %h3;
+                        }
                     }
                     // Product-Specific Form
                     .cart-item__info {

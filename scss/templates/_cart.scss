@@ -35,6 +35,7 @@
             display: grid;
             // Subtotal Indicator
             .cart-title-total {
+                @include font-size( 'small' );
                 text-align: left;
             }
         }

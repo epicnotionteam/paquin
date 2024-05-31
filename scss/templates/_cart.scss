@@ -17,7 +17,7 @@
 
 // Component container
 .template-cart form {
-    padding: 0 4vw;
+    @include rem( padding, spacing(6) 4vw $gap--section-small );
     // Container [Header]
     .cart-title {
         @include rem( max-width, 960px );
@@ -38,5 +38,7 @@
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
-    .template-cart form {}
+    .template-cart form {
+        @include rem( padding, spacing(6) 4vw $gap--section-large );
+    }
 }

@@ -2862,6 +2862,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border-radius: 0;
   justify-content: center;
 }
+.template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector .quantity-selector__wrapper .quantity-selector__button:active, .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector .quantity-selector__wrapper .quantity-selector__button:focus {
+  border: 0 none;
+  outline: none;
+}
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector .quantity-selector__wrapper .quantity-selector__input {
   background-color: #F2F4F6;
   border: 0 none;

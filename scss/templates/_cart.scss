@@ -102,6 +102,11 @@
                                         border: 0 none;
                                         border-radius: 0;
                                         justify-content: center;
+                                        &:active,
+                                        &:focus {
+                                            border: 0 none;
+                                            outline: none;
+                                        }
                                     }
                                     // Input
                                     .quantity-selector__input {

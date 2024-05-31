@@ -2780,14 +2780,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 4rem 4vw 7.2rem;
 }
 .template-cart .cart--section > form .cart-title {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin: 0 auto 24px;
+  margin: 0 auto 2.4rem;
   max-width: 960px;
   max-width: 96rem;
   row-gap: 12px;
   row-gap: 1.2rem;
   display: grid;
-  margin: 0 auto;
   width: 100%;
 }
 .template-cart .cart--section > form .cartitems--container {

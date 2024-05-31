@@ -47,6 +47,15 @@
                 // Details
                 .cart-item--inner {
                     padding: 0;
+                    // Product Information
+                    .cart-item--content {
+                        padding: 0;
+                    }
+                    // Product-Specific Form
+                    .cart-item__info {
+                        margin: 0;
+                        padding: 0;
+                    }
                 }
             }
         }

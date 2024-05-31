@@ -119,7 +119,8 @@
                         // Item removal container
                         .cart-item__remove {
                             grid-area: remove;
-                            line-height: 1;
+                            line-height: 0;
+                            margin: 0;
                             position: relative;
                             width: auto;
                             .cart-item__remove-link {

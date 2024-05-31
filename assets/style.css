@@ -2938,13 +2938,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal span.money {
   font-weight: 600;
 }
-.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-message {
+.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-shipping p {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   color: #66787F;
+  margin: 0;
 }
 
 @media (min-width: 64em) {

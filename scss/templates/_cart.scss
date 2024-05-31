@@ -26,6 +26,7 @@
             row-gap: 12px
         ));
         display: grid;
+        justify-content: unset;
         width: 100%;
         // Container [Heading]
         .cart-title-left {}

@@ -170,18 +170,20 @@
             }
         }
         // Container [Total]
-        .cart-final-total {
-            border: 0 none;
-            margin: 0;
-            padding: 0;
-            // Subtotal Heading
-            .cart-subtotal span.heading {
-                @extend %h5;
+        .cart-total {
+            .cart-final-total {
+                border: 0 none;
                 margin: 0;
-            }
-            // Price
-            .cart-subtotal span.money {
-                font-weight: font-weight( 'bold' );
+                padding: 0;
+                // Subtotal Heading
+                .cart-subtotal span.heading {
+                    @extend %h5;
+                    margin: 0;
+                }
+                // Price
+                .cart-subtotal span.money {
+                    font-weight: font-weight( 'bold' );
+                }
             }
             .cart-shipping p {
                 @include font-size( 'small' );

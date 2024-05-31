@@ -51,6 +51,8 @@
                 }
                 // Details
                 .cart-item--inner {
+                    @include rem( row-gap, spacing(2) );
+                    display: grid;
                     padding: 0;
                     width: 100%;
                     // Product Information
@@ -58,8 +60,8 @@
                         padding: 0;
                         // Title
                         .cart-item--content-title {
+                            @include rem( margin, 0 0 2px );
                             @extend %h3;
-                            margin: 0;
                             // Link
                             a {
                                 color: color( 'steel', '1' );

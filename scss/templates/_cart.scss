@@ -32,11 +32,16 @@
         .cart-title-left {}
         // Container [Right]
         .cart-title-right {
+            @include rem( column-gap, spacing(4) );
             display: grid;
             // Subtotal Indicator
             .cart-title-total {
                 @include font-size( 'small' );
                 text-align: left;
+                margin: 0;
+                span {
+                    margin: 0;
+                }
             }
         }
     }

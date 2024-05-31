@@ -183,6 +183,10 @@
             .cart-subtotal span.money {
                 font-weight: font-weight( 'bold' );
             }
+            .cart-message {
+                @include font-size( 'small' );
+                color: color( 'steel', '4' );
+            }
         }
     }
 }

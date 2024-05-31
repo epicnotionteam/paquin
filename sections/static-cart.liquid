@@ -70,7 +70,7 @@
       {% endif %}
     </div>
 
-    {% if has_items or show_continue_link %}
+    {% comment %} {% if has_items or show_continue_link %}
       <div class="cart-title-right">
         {% if has_items %}
           <div class="cart-title-total--large">
@@ -95,7 +95,7 @@
           {{ continue_link_html }}
         {% endif %}
       </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
   </header>
 
   <section class="cartitems--container {% if has_sidebar %}has-sidebar{% endif %}">

@@ -249,6 +249,7 @@
             // Container [Total]
             .cart-checkout {
                 grid-template-columns: max-content max-content;
+                justify-content: space-between;
             }
         }
     }

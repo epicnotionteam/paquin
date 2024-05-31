@@ -60,8 +60,10 @@
                         .cart-item--content-title {
                             @extend %h3;
                             margin: 0;
+                            // Link
                             a {
-                                font-weight: font-weight( 'base' );
+                                color: color( 'steel', '1' );
+                                font-weight: font-weight( 'base' ) !important;
                             }
                         }
                     }

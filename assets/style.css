@@ -2815,7 +2815,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item--content .cart-item--content-title a {
-  font-weight: 400;
+  color: #212224;
+  font-weight: 400 !important;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info {
   margin: 0;

@@ -2798,6 +2798,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner {
   padding: 0;
+  width: 100%;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item--content {
   padding: 0;
@@ -2808,7 +2809,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .quantity-selector {
   margin: 0;
+  max-width: none;
   width: 100%;
+}
+.template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .quantity-selector .quantity-selector__input {
+  width: 100% !important;
 }
 
 @media (min-width: 64em) {

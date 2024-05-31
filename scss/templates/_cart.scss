@@ -118,6 +118,17 @@
                         // Item removal container
                         .cart-item__remove {
                             grid-area: remove;
+                            .cart-item__remove-link {
+                                height: auto;
+                                width: auto;
+                                path {
+                                    fill: color( 'steel', '4' );
+                                }
+                                // Remove inherited pseudo element
+                                &::before {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }

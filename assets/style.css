@@ -2871,6 +2871,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove {
   grid-area: remove;
 }
+.template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove .cart-item__remove-link {
+  height: auto;
+  width: auto;
+}
+.template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove .cart-item__remove-link path {
+  fill: #66787F;
+}
+.template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove .cart-item__remove-link::before {
+  display: none;
+}
 
 @media (min-width: 64em) {
   .template-cart .cart--section > form {

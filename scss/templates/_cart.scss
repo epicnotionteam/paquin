@@ -199,6 +199,16 @@
                 border-top: $border--base;
             }
         }
+        // Container [Total]
+        .cart-checkout {
+            display: grid;
+            grid-template-columns: 1fr max-content;
+            // 'Continue Shopping' Link
+            .cart-continue {
+                margin: 0;
+                text-align: left;
+            }
+        }
     }
 }
 

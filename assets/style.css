@@ -2958,6 +2958,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-top: 3.2rem;
   border-top: 1px solid #D6DBDD;
 }
+.template-cart .cart--section > form .cartitems--container .cart-checkout {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.template-cart .cart--section > form .cartitems--container .cart-checkout .cart-continue {
+  margin: 0;
+  text-align: left;
+}
 
 @media (min-width: 64em) {
   .template-cart .cart--section > form {

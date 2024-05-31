@@ -30,7 +30,13 @@
         // Container [Heading]
         .cart-title-left {}
         // Container [Right]
-        .cart-title-right {}
+        .cart-title-right {
+            display: grid;
+            // Subtotal Indicator
+            .cart-title-total {
+                text-align: left;
+            }
+        }
     }
     // Container [Cart Contents]
     .cartitems--container  {

@@ -2789,6 +2789,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
   width: 100%;
 }
+.template-cart .cart--section > form .cart-title .cart-title-right {
+  display: grid;
+}
+.template-cart .cart--section > form .cart-title .cart-title-right .cart-title-total {
+  text-align: left;
+}
 .template-cart .cart--section > form .cartitems--container {
   max-width: 960px;
   max-width: 96rem;

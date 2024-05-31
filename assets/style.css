@@ -3400,6 +3400,9 @@ blockquote {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.button--icon-cart::before, .button--icon-cart::after {
+  font-size: 128%;
+}
 
 .button--icon-data-sheet:before {
   content: "\e032";

@@ -62,7 +62,7 @@
                         // Title
                         .cart-item--content-title {
                             @include rem( margin, 0 0 2px );
-                            @extend %h3;
+                            @extend %h4;
                             // Link
                             a {
                                 color: color( 'steel', '1' );

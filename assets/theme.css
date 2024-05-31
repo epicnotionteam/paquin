@@ -2775,33 +2775,6 @@ rgb(18, 18, 18)
   margin-right: 10px;
 }
 
-.cart-title-total {
-  
-  margin-top: 0.234375rem;
-  color: #949494;
-}
-.cart-title-total span {
-  display: inline-block;
-  margin-left: 0.234375rem;
-  color: #121212;
-}
-
-.cart-title-total--small {
-  width: 100%;
-}
-
-.cart-title-total--large .cart-title-total {
-  margin-top: 0;
-  margin-right: 1.171875rem;
-  text-align: right;
-}
-.cart-title-total--large span {
-  
-  display: block;
-  margin-top: 0.234375rem;
-  margin-left: 0;
-}
-
 @media screen and (min-width: 860px) {
   .cartitems--container.has-sidebar {
     display: flex;

@@ -184,5 +184,22 @@
                 grid-template-columns: 1fr max-content;
             }
         }
+        // Container [Cart Contents]
+        .cartitems--container  {
+             // Feed container
+            .cartitems--list {
+                // Item container
+                .cart-item {
+                    // Details
+                    .cart-item--inner {
+                        // Product-Specific Form
+                        .cart-item__info {
+                            grid-template-areas: 'quantity total remove';
+                            grid-template-columns: 1fr max-content max-content;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

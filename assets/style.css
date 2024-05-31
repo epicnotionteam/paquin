@@ -2938,6 +2938,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-cart .cart--section > form .cart-title .cart-title-right {
     grid-template-columns: 1fr max-content;
   }
+  .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info {
+    grid-template-areas: "quantity total remove";
+    grid-template-columns: 1fr max-content max-content;
+  }
 }
 .template-collection .container--grid {
   overflow: visible;

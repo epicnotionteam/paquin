@@ -77,30 +77,47 @@
                     }
                     // Product-Specific Form
                     .cart-item__info {
+                        @include rem( row-gap, spacing(2) );
+                        display: grid;
+                        grid-template-areas: 
+                        'quantity quantity'
+                        'total remove';
+                        grid-template-columns: 1fr max-content;
                         margin: 0;
                         padding: 0;
                         // Input container
-                        quantity-selector {
-                            @include rem( height, 54px );
-                            margin: 0;
-                            max-width: none;
-                            width: 100%;
-                            .quantity-selector__wrapper {
+                        .cart-item__quantity {
+                            grid-area: quantity;
+                            quantity-selector {
                                 @include rem( height, 54px );
-                                // Button(s)
-                                .quantity-selector__button {
-                                    background-color: color( 'background', 'input' );
-                                    border: 0 none;
-                                    border-radius: 0;
-                                }
-                                // Input
-                                .quantity-selector__input {
-                                    background-color: color( 'background', 'input' );
-                                    border: 0 none;
-                                    border-radius: 0;
-                                    width: 100% !important;
+                                margin: 0;
+                                max-width: none;
+                                width: 100%;
+                                .quantity-selector__wrapper {
+                                    @include rem( height, 54px );
+                                    // Button(s)
+                                    .quantity-selector__button {
+                                        background-color: color( 'background', 'input' );
+                                        border: 0 none;
+                                        border-radius: 0;
+                                    }
+                                    // Input
+                                    .quantity-selector__input {
+                                        background-color: color( 'background', 'input' );
+                                        border: 0 none;
+                                        border-radius: 0;
+                                        width: 100% !important;
+                                    }
                                 }
                             }
+                        }
+                        // Item total container
+                        .cart-item__total {
+                            grid-area: total;
+                        }
+                        // Item removal container
+                        .cart-item__remove {
+                            grid-area: remove;
                         }
                     }
                 }

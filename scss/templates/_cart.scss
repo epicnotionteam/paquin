@@ -80,23 +80,26 @@
                         margin: 0;
                         padding: 0;
                         // Input container
-                        .quantity-selector {
+                        quantity-selector {
                             @include rem( height, 54px );
                             margin: 0;
                             max-width: none;
                             width: 100%;
-                            // Button(s)
-                            .quantity-selector__button {
-                                background-color: color( 'background', 'input' );
-                                border: 0 none;
-                                border-radius: 0;
-                            }
-                            // Input
-                            .quantity-selector__input {
-                                background-color: color( 'background', 'input' );
-                                border: 0 none;
-                                border-radius: 0;
-                                width: 100% !important;
+                            .quantity-selector__wrapper {
+                                @include rem( height, 54px );
+                                // Button(s)
+                                .quantity-selector__button {
+                                    background-color: color( 'background', 'input' );
+                                    border: 0 none;
+                                    border-radius: 0;
+                                }
+                                // Input
+                                .quantity-selector__input {
+                                    background-color: color( 'background', 'input' );
+                                    border: 0 none;
+                                    border-radius: 0;
+                                    width: 100% !important;
+                                }
                             }
                         }
                     }

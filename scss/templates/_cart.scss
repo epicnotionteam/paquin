@@ -29,13 +29,12 @@
         .cart-title-left {}
     }
     // Container [Cart Contents]
-    .cartitems--container {
+    .cartitems--container  {
         @include rem( max-width, 960px );
         margin: 0 auto;
         width: 100%;
         // Feed container
         .cartitems--list {
-            background-color: red !important;
             // Item container
             .cart-item {
                 @include rem((
@@ -69,7 +68,3 @@
         @include rem( padding, spacing(6) 4vw $gap--section-large );
     }
 }
-
-
-Host *.7e1e06c2-6be8-4eff-b227-4b0790b70a11.drush.in
-ControlPath ~/.ssh/control-%r

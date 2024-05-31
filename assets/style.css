@@ -2845,8 +2845,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-area: quantity;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__quantity quantity-selector {
-  height: 54px;
-  height: 5.4rem;
   margin: 0;
   max-width: none;
   width: 100%;

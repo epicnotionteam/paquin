@@ -89,7 +89,6 @@
                         .cart-item__quantity {
                             grid-area: quantity;
                             quantity-selector {
-                                @include rem( height, 54px );
                                 margin: 0;
                                 max-width: none;
                                 width: 100%;

@@ -9,7 +9,21 @@
 // --------------------------------------------------
 
 // Component container
-.template-cart form {}
+.template-cart form {
+    // Container [Title]
+    .cart-title {
+        margin: 0;
+        // Heading
+        .cart-title-left {}
+        // 'Continue Shopping' Link
+        .cart-title-left {}
+    }
+    // Container [Cart Contents]
+    .cartitems--container {
+        @include rem( max-width, 960px );
+        width: 100%;
+    }
+}
 
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {

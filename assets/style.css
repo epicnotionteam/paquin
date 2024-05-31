@@ -2766,6 +2766,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
+.template-cart form .cart-title {
+  margin: 0;
+}
+.template-cart form .cartitems--container {
+  max-width: 960px;
+  max-width: 96rem;
+  width: 100%;
+}
+
 .template-collection .container--grid {
   overflow: visible;
 }

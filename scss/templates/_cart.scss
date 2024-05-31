@@ -190,6 +190,13 @@
                 color: color( 'steel', '4' );
                 margin: 0;
             }
+            .cart-checkout {
+                @include rem((
+                    margin-top: spacing(5),
+                    padding-top: spacing(5)
+                ));
+                border-top: $border--base;
+            }
         }
     }
 }

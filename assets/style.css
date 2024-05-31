@@ -2947,6 +2947,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   color: #66787F;
   margin: 0;
 }
+.template-cart .cart--section > form .cartitems--container .cart-total .cart-checkout {
+  margin-top: 32px;
+  margin-top: 3.2rem;
+  padding-top: 32px;
+  padding-top: 3.2rem;
+  border-top: 1px solid #D6DBDD;
+}
 
 @media (min-width: 64em) {
   .template-cart .cart--section > form {

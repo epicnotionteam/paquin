@@ -20,7 +20,12 @@
     @include rem( padding, spacing(6) 4vw $gap--section-small );
     // Container [Header]
     .cart-title {
-        @include rem( max-width, 960px );
+        @include rem((
+            margin-bottom: spacing(4),
+            max-width: 960px,
+            row-gap: 12px
+        ));
+        display: grid;
         margin: 0 auto;
         width: 100%;
         // Heading

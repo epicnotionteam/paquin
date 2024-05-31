@@ -50,7 +50,7 @@
         @include rem( max-width, 960px );
         margin: 0 auto;
         width: 100%;
-        // Feed container
+        // Container [Feed]
         .cartitems--list {
             @include rem( row-gap, spacing(3) );
             display: grid;
@@ -168,6 +168,12 @@
                     }
                 }
             }
+        }
+        // Container [Total]
+        .cart-final-total {
+            border: 0 none;
+            margin: 0;
+            padding: 0;
         }
     }
 }

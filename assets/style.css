@@ -2796,6 +2796,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-template-columns: 7.2rem 1fr;
   padding: 16px;
   padding: 1.6rem;
+  row-gap: 12px;
+  row-gap: 1.2rem;
   display: grid;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--image-wrapper {

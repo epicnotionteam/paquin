@@ -140,6 +140,7 @@
                         }
                         // Item total container
                         .cart-item__total {
+                            @include font-size( 'small' );
                             grid-area: total;
                             line-height: 1;
                             margin-top: 0;

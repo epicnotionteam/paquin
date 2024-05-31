@@ -175,12 +175,12 @@
             margin: 0;
             padding: 0;
             // Subtotal Heading
-            .cart-subtotal .span.heading {
+            .cart-subtotal span.heading {
                 @extend %h5;
                 margin: 0;
             }
             // Price
-            .cart-subtotal .money {
+            .cart-subtotal span.money {
                 font-weight: font-weight( 'bold' );
             }
         }

@@ -1108,7 +1108,7 @@ body {
 .form--newsletter-subscription .gfb__footer .theme--dark button.submit,
 .theme--dark .form--base button.submit,
 .form--base .theme--dark button.submit,
-.theme--dark .product-form--atc-button, .theme--dark .template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .span.heading, .template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .theme--dark .span.heading, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
+.theme--dark .product-form--atc-button, .theme--dark .template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal span.heading, .template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .theme--dark span.heading, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
   color: white;
 }
 .theme--dark .breadcrumbs-container a {
@@ -1432,7 +1432,7 @@ h5,
 .form--newsletter-subscription .gfb__footer button.submit,
 .form--base button.submit,
 .product-form--atc-button,
-.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .span.heading,
+.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal span.heading,
 .section--feed-blog .section__grid .container--heading-small .section__heading--small,
 .section--feed-team .section__grid .container--heading-small .section__heading--small,
 .section--feed-post .section__grid .container--heading-small .section__heading--small,
@@ -2932,10 +2932,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
   padding: 0;
 }
-.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .span.heading {
+.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal span.heading {
   margin: 0;
 }
-.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal .money {
+.template-cart .cart--section > form .cartitems--container .cart-final-total .cart-subtotal span.money {
   font-weight: 600;
 }
 

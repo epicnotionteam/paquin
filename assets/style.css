@@ -2917,6 +2917,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-cart .cart--section > form .cart-title {
     grid-template-columns: 1fr max-content;
   }
+  .template-cart .cart--section > form .cart-title .cart-title-right {
+    grid-template-columns: 1fr max-content;
+  }
 }
 .template-collection .container--grid {
   overflow: visible;

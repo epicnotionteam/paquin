@@ -27,10 +27,10 @@
         ));
         display: grid;
         width: 100%;
-        // Heading
+        // Container [Heading]
         .cart-title-left {}
-        // 'Continue Shopping' Link
-        .cart-title-left {}
+        // Container [Right]
+        .cart-title-right {}
     }
     // Container [Cart Contents]
     .cartitems--container  {
@@ -166,6 +166,10 @@
         // Container [Header]
         .cart-title {
             grid-template-columns: 1fr max-content;
+            // Container [Right]
+            .cart-title-right {
+                grid-template-columns: 1fr max-content;
+            }
         }
     }
 }

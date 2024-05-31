@@ -3444,6 +3444,33 @@ blockquote {
   line-height: 1;
 }
 
+.button--icon-arrow-back:before {
+  content: "\e5c4";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-arrow-back:after {
+  content: "\e5c4";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button--icon-arrow-back::before, .button--icon-arrow-back::after {
+  margin-top: 1px;
+  margin-top: 0.1rem;
+  font-size: 128%;
+  line-height: 1;
+}
+
 .button--icon-arrow-forward:before {
   content: "\e5c8";
   font-family: "Material Symbols Outlined";

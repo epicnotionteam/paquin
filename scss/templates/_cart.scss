@@ -59,7 +59,10 @@
                         // Title
                         .cart-item--content-title {
                             @extend %h3;
-                            font-weight: font-weight( 'base' );
+                            margin: 0;
+                            a {
+                                font-weight: font-weight( 'base' );
+                            }
                         }
                     }
                     // Product-Specific Form

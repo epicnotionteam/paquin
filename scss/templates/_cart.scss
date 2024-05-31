@@ -77,7 +77,7 @@
                     }
                     // Product-Specific Form
                     .cart-item__info {
-                        @include rem( row-gap, spacing(2) );
+                        @include rem( row-gap, 6px );
                         display: grid;
                         grid-template-areas: 
                         'quantity quantity'
@@ -113,6 +113,7 @@
                         // Item total container
                         .cart-item__total {
                             grid-area: total;
+                            text-align: left;
                         }
                         // Item removal container
                         .cart-item__remove {

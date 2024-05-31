@@ -201,8 +201,8 @@
         }
         // Container [Total]
         .cart-checkout {
+            @include rem( row-gap, 6px );
             display: grid;
-            grid-template-columns: 1fr max-content;
             // 'Continue Shopping' Link
             .cart-continue {
                 margin: 0;
@@ -245,6 +245,10 @@
                         }
                     }
                 }
+            }
+            // Container [Total]
+            .cart-checkout {
+                grid-template-columns: max-content max-content;
             }
         }
     }

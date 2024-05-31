@@ -2959,8 +2959,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   border-top: 1px solid #D6DBDD;
 }
 .template-cart .cart--section > form .cartitems--container .cart-checkout {
+  row-gap: 6px;
+  row-gap: 0.6rem;
   display: grid;
-  grid-template-columns: 1fr max-content;
 }
 .template-cart .cart--section > form .cartitems--container .cart-checkout .cart-continue {
   margin: 0;
@@ -2990,6 +2991,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     align-items: center;
     grid-template-areas: "quantity total remove";
     grid-template-columns: 1fr max-content max-content;
+  }
+  .template-cart .cart--section > form .cartitems--container .cart-checkout {
+    grid-template-columns: max-content max-content;
   }
 }
 .template-collection .container--grid {

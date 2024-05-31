@@ -19,7 +19,7 @@
   data-cartitem-key="{{ item.key }}"
   data-cartitem-price="{{ item.price }}">
   <figure class="cart-item--image-wrapper">
-    <a href="{{ item.url }}">
+    <a class="item__image" href="{{ item.url }}">
       {% if item.image %}
         {%
           render 'rimg',

@@ -2835,6 +2835,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--image-wrapper img {
+  border: 1px solid #D6DBDD;
   display: block;
 }
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner {

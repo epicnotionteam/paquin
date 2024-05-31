@@ -2914,6 +2914,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding: 40px 4vw 96px;
     padding: 4rem 4vw 9.6rem;
   }
+  .template-cart .cart--section > form .cart-title {
+    grid-template-columns: 1fr max-content;
+  }
 }
 .template-collection .container--grid {
   overflow: visible;

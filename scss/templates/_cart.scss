@@ -163,5 +163,9 @@
 @include mq( $from: medium ) {
     .template-cart .cart--section > form {
         @include rem( padding, spacing(6) 4vw $gap--section-large );
+        // Container [Header]
+        .cart-title {
+            grid-template-columns: 1fr max-content;
+        }
     }
 }

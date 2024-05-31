@@ -25,9 +25,8 @@
 {% if settings.continue_url_cart %}
   {% assign show_continue_link = true %}
   {%- capture continue_link_html -%}
-    <a class="cart-continue" href="{{ continue_url }}">
+    <a class="button--outline button--icon-before button--icon-cart" href="{{ continue_url }}">
       {{ 'cart.general.continue_shopping' | t }}
-      {% render 'icon-library', id: 'icon-signpost-arrow' %}
     </a>
   {%- endcapture -%}
 {% endif %}

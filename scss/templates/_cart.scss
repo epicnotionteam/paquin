@@ -71,6 +71,7 @@
                         }
                         // Price
                         .cart-item--content-price {
+                            @include font-size( 'small' );
                             color: color( 'steel', '4' );
                         }
                     }

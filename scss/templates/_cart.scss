@@ -39,8 +39,8 @@
             .cart-item {
                 @include rem((
                     column-gap: 12px,
-                    grid-template-columns: 72px 1fr,
-                    padding: spacing(3)
+                    grid-template-columns: 80px 1fr,
+                    padding: spacing(4) spacing(3)
                 ));
                 display: grid;
                 // Image

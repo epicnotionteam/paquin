@@ -2927,6 +2927,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-cart .cart--section > form .cartitems--container .cartitems--list .cart-item .cart-item--inner .cart-item__info .cart-item__remove .cart-item__remove-link::before {
   display: none;
 }
+.template-cart .cart--section > form .cartitems--container .cart-total {
+  margin-top: 32px;
+  margin-top: 3.2rem;
+}
 .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total {
   border: 0 none;
   margin: 0;

@@ -171,6 +171,7 @@
         }
         // Container [Total]
         .cart-total {
+            @include rem( margin-top, spacing(5) );
             .cart-final-total {
                 border: 0 none;
                 margin: 0;

@@ -90,11 +90,6 @@
             type="submit"
             aria-label="{{ 'cart.general.checkout' | t }}"
           >
-            {% if settings.enable_checkout_lock_icon %}
-              {% render 'icon-checkout-lock' %}
-            {% else %}
-              {% render 'icon-library', id: 'icon-cart' %}
-            {% endif %}
             {{ 'cart.general.checkout' | t }}
           </button>
         {% elsif show_continue_link %}
@@ -185,11 +180,6 @@
               name="checkout"
               aria-label="{{ 'cart.general.checkout' | t }}"
             >
-              {% if settings.enable_checkout_lock_icon %}
-                {% render 'icon-checkout-lock' %}
-              {% else %}
-                {% render 'icon-library', id: 'icon-cart' %}
-              {% endif %}
               {{ 'cart.general.checkout' | t }}
             </button>
 

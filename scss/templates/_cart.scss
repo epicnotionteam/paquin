@@ -175,7 +175,7 @@
             margin: 0;
             padding: 0;
             // Subtotal Heading
-            .cart-subtotal .span:first-child {
+            .cart-subtotal .span:first-of-type {
                 @extend %h5;
                 margin: 0;
             }

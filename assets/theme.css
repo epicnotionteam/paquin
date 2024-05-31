@@ -11914,13 +11914,12 @@ rgb(255, 255, 255)
   .cartitems--container:not(.has-sidebar) .cart-item--inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 120px);
+    width: 100%;
   }
 }
 @media screen and (max-width: 479px) {
   .cartitems--container:not(.has-sidebar) .cart-item--inner {
-    width: calc(100% - 75px);
+    width: 100%;
   }
 }
 @media screen and (max-width: 479px) {

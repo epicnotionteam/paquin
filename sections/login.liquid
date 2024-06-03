@@ -8,66 +8,69 @@
 
 	<article class="account-page-content">
 		<div class="account-login visible" data-account-login-main>
-			{% form 'customer_login' %}
+			<div class="form--base">
+				{% form 'customer_login' %}
+				
 
-			{% if form.errors != blank %}
-				<div class="account-message message--error">
-					{{ form.errors | default_errors }}
-				</div>
-			{% endif %}
+				{% if form.errors != blank %}
+					<div class="account-message message--error">
+						{{ form.errors | default_errors }}
+					</div>
+				{% endif %}
 
-			<div class="form-field">
-				<input
-					class="form-field-input form-field-text"
-					id="customer_email"
-					name="customer[email]"
-					type="text"
-					autocorrect="off"
-					autocapitalize="off">
-				<label
-					class="form-field-title"
-					for="customer_email">
-					{{ 'customers.forms.email' | t }}
-				</label>
-			</div>
-
-			{% if form.password_needed %}
-				<div class="form-field form-field--account-password">
+				<div class="form-field">
 					<input
 						class="form-field-input form-field-text"
-						id="customer_password"
-						name="customer[password]"
-						type="password">
+						id="customer_email"
+						name="customer[email]"
+						type="text"
+						autocorrect="off"
+						autocapitalize="off">
 					<label
 						class="form-field-title"
-						for="customer_password">
-						{{ 'customers.forms.password' | t }}
+						for="customer_email">
+						{{ 'customers.forms.email' | t }}
 					</label>
 				</div>
-			{% endif %}
 
-			<div class="form-action-row">
-				<button class="button-primary form-action--submit" type="submit">
-					{{ 'customers.login.sign_in' | t }}
-				</button>
+				{% if form.password_needed %}
+					<div class="form-field form-field--account-password">
+						<input
+							class="form-field-input form-field-text"
+							id="customer_password"
+							name="customer[password]"
+							type="password">
+						<label
+							class="form-field-title"
+							for="customer_password">
+							{{ 'customers.forms.password' | t }}
+						</label>
+					</div>
+				{% endif %}
 
-				<div class="form-action-row--helper">
-					<span class="form-action-row--helper-item">
-						{{ 'customers.new_customer.title' | t }}
-						{{ 'customers.register.title' | t | customer_register_link }}
-					</span>
+				<div class="form-action-row">
+					<button class="button-primary form-action--submit" type="submit">
+						{{ 'customers.login.sign_in' | t }}
+					</button>
 
-					{% if form.password_needed %}
+					<div class="form-action-row--helper">
 						<span class="form-action-row--helper-item">
-							<a href="#customer_recovery" data-login-toggle>
-								{{ 'customers.login.forgot_password' | t }}
-							</a>
+							{{ 'customers.new_customer.title' | t }}
+							{{ 'customers.register.title' | t | customer_register_link }}
 						</span>
-					{% endif %}
-				</div>
-			</div>
 
-			{% endform %}
+						{% if form.password_needed %}
+							<span class="form-action-row--helper-item">
+								<a href="#customer_recovery" data-login-toggle>
+									{{ 'customers.login.forgot_password' | t }}
+								</a>
+							</span>
+						{% endif %}
+					</div>
+				</div>
+
+				{% endform %}
+			</div>
 		</div>
 
 		<div

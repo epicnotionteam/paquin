@@ -24,8 +24,7 @@
 						name="customer[email]"
 						type="text"
 						autocorrect="off"
-						autocapitalize="off"
-						placeholder="Your email address">
+						autocapitalize="off">
 					<label
 						class="form-field-title"
 						for="customer_email">
@@ -39,8 +38,7 @@
 							class="form-field-input form-field-text"
 							id="customer_password"
 							name="customer[password]"
-							type="password"
-							placeholder="Your password">
+							type="password">
 						<label
 							class="form-field-title"
 							for="customer_password">
@@ -50,7 +48,7 @@
 				{% endif %}
 
 				<div class="form-action-row">
-					<button class="button-primary form-action--submit" type="submit">
+					<button class="button--primary button--icon-before button--icon-arrow-forward form-action--submit" type="submit">
 						{{ 'customers.login.sign_in' | t }}
 					</button>
 

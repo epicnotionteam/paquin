@@ -2523,6 +2523,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   grid-template-rows: 1fr;
 }
 
+.form-action-row--helper {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  text-align: center;
+}
+
 .article--container {
   display: grid !important;
   margin: 0;

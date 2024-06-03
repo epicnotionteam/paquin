@@ -8,10 +8,17 @@
 // Container [Actions]
 // --------------------------------------------------
 
+// Grid structure
 .form-action-row {
     @include rem( row-gap, spacing(2) );
     display: grid;
     grid-template-rows: 1fr;
+}
+
+// Account creation & password reset
+.form-action-row--helper {
+    @include font-size( 'small' );
+    text-align: center;
 }
 
 // Adjust @medium breakpoint

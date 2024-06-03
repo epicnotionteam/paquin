@@ -2516,6 +2516,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     aspect-ratio: unset;
   }
 }
+.form-action-row {
+  row-gap: 8px;
+  row-gap: 0.8rem;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
 .article--container {
   display: grid !important;
   margin: 0;

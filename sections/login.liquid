@@ -11,7 +11,6 @@
 			<div class="form--base">
 				{% form 'customer_login' %}
 				
-
 				{% if form.errors != blank %}
 					<div class="account-message message--error">
 						{{ form.errors | default_errors }}
@@ -25,7 +24,8 @@
 						name="customer[email]"
 						type="text"
 						autocorrect="off"
-						autocapitalize="off">
+						autocapitalize="off"
+						placeholder="Your email address">
 					<label
 						class="form-field-title"
 						for="customer_email">
@@ -39,7 +39,8 @@
 							class="form-field-input form-field-text"
 							id="customer_password"
 							name="customer[password]"
-							type="password">
+							type="password"
+							placeholder="Your password">
 						<label
 							class="form-field-title"
 							for="customer_password">

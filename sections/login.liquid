@@ -8,7 +8,7 @@
 
 	<article class="account-page-content">
 		<div class="account-login visible" data-account-login-main>
-			<div class="form--base">
+			<div class="form--base form--login">
 				{% form 'customer_login' %}
 				
 				{% if form.errors != blank %}
@@ -24,12 +24,14 @@
 						name="customer[email]"
 						type="text"
 						autocorrect="off"
-						autocapitalize="off">
-					<label
+						autocapitalize="off"
+						placeholder="Your email address"
+					>
+					{% comment %} <label
 						class="form-field-title"
 						for="customer_email">
 						{{ 'customers.forms.email' | t }}
-					</label>
+					</label> {% endcomment %}
 				</div>
 
 				{% if form.password_needed %}
@@ -38,12 +40,14 @@
 							class="form-field-input form-field-text"
 							id="customer_password"
 							name="customer[password]"
-							type="password">
-						<label
+							type="password"
+							placeholder="Your password"
+						>
+						{% comment %} <label
 							class="form-field-title"
 							for="customer_password">
 							{{ 'customers.forms.password' | t }}
-						</label>
+						</label> {% endcomment %}
 					</div>
 				{% endif %}
 

@@ -3973,7 +3973,7 @@ hr,
   filter: none !important;
 }
 .feed--post .item .item__wrap--image:hover .item__image {
-  transform: scale(1.12);
+  transform: scale(1.04);
 }
 
 .productgrid--items {

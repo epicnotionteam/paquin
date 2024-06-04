@@ -144,15 +144,6 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--cliff-martin.jpg"
           }
         },
-        "team_block_iJBTzG": {
-          "type": "team-block",
-          "settings": {
-            "name": "Denysse Myers",
-            "role": "Global Intex Production Supervisor",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
-        },
         "team_block_dWcAQa": {
           "type": "team-block",
           "settings": {
@@ -191,7 +182,6 @@
         "team_block_iNbQHr",
         "team_block_83FGGw",
         "team_block_RgQbmV",
-        "team_block_iJBTzG",
         "team_block_dWcAQa",
         "team_block_ewAeCV",
         "team_block_yWNiie"

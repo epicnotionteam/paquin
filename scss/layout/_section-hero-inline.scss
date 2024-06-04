@@ -54,16 +54,16 @@
             }
         }
     }
-     // Overlay [Darken]
-     &::before {
-        background: linear-gradient( 0deg, rgba( 48, 55, 58, 1 ) 0%, rgba( 48, 55, 58, 0 ) 100% );
+    // Overlay [Darken]
+    &::before {
+        background: linear-gradient( 0deg, rgba( 32, 36, 36, 1 ) 0%, rgba( 48, 55, 58, 0.4 ) 100% );
         bottom: 0;
         content: '';
         height: 100%;
         left: 0;
         position: absolute;
         width: 100%;
-        z-index: 1;
+        z-index: 0;
     }
     // Overlay [Blend]
     &::after {

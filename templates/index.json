@@ -144,8 +144,8 @@
             "image_type": "logo",
             "heading": "Paquin Sensors",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "",
-            "link_url": "#test"
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/paquin-sensors"
           }
         },
         "content_block_LVEVAK": {
@@ -175,7 +175,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
             "image_type": "logo",
-            "heading": "Paquin Global",
+            "heading": "Paquin Distribution",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
             "link_text": "Link text",
             "link_url": ""
@@ -203,57 +203,64 @@
         "certification_f6qNcG": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--iso-9001.svg",
+            "title": "ISO 9001"
           }
         },
         "certification_CtLi8D": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ex-atex.svg",
+            "title": "ATEX"
           }
         },
         "certification_eqza7A": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--nsf.svg",
+            "title": "NSF"
           }
         },
         "certification_9UQeRX": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ansi.svg",
+            "title": "American National Standards Institute"
           }
         },
         "certification_tb7pUe": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ukca.svg",
+            "title": "UK Conformity Assessed"
           }
         },
         "certification_eCHL6W": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--iecex.svg",
+            "title": "International Electrotechnical Commission System for Certification to Standards Relating to Equipment for Use in Explosive Atmospheres (IECEx System)"
           }
         },
         "certification_9LVLR7": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ul.svg",
+            "title": "UL"
           }
         },
         "certification_36ihUa": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--csa.svg",
+            "title": "CSA"
+          }
+        },
+        "certification_C3GeDM": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__certification--ce.svg",
+            "title": "Conformité Européenne"
           }
         }
       },
@@ -265,7 +272,8 @@
         "certification_tb7pUe",
         "certification_eCHL6W",
         "certification_9LVLR7",
-        "certification_36ihUa"
+        "certification_36ihUa",
+        "certification_C3GeDM"
       ],
       "settings": {
         "heading": "Certified Excellence",

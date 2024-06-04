@@ -2327,7 +2327,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .section--hero-inline .container--content .section__heading {
   font-size: 38px;
@@ -2362,11 +2362,21 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background: linear-gradient(0deg, rgb(48, 55, 58) 0%, rgba(48, 55, 58, 0) 100%);
   bottom: 0;
   content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.section--hero-inline::after {
+  background: linear-gradient(0deg, rgb(48, 55, 58) 0%, rgba(48, 55, 58, 0) 100%);
+  bottom: 0;
+  content: "";
   height: 50%;
   left: 0;
   position: absolute;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
 @media (min-width: 48em) {

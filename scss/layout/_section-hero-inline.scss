@@ -30,7 +30,7 @@
         display: grid;
         text-align: center;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         // Heading
         .section__heading {
             @include font-size( 'headline' );
@@ -54,7 +54,19 @@
             }
         }
     }
-    &::before {
+     // Overlay [Darken]
+     &::before {
+        background: linear-gradient( 0deg, rgba( 48, 55, 58, 1 ) 0%, rgba( 48, 55, 58, 0 ) 100% );
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    // Overlay [Blend]
+    &::after {
         background: linear-gradient( 0deg, rgba( 48, 55, 58, 1 ) 0%, rgba( 48, 55, 58, 0 ) 100% );
         bottom: 0;
         content: '';
@@ -62,7 +74,7 @@
         left: 0;
         position: absolute;
         width: 100%;
-        z-index: 0;
+        z-index: 1;
     }
 }
    

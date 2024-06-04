@@ -203,29 +203,28 @@
         "certification_f6qNcG": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "title": "ISO 9001"
           }
         },
         "certification_CtLi8D": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ex-atex.svg",
+            "title": "ATEX"
           }
         },
         "certification_eqza7A": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--nsf.svg",
+            "title": "NSF"
           }
         },
         "certification_9UQeRX": {
           "type": "certification",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
-            "title": "Certification Title"
+            "image": "shopify:\/\/shop_images\/asset__certification--ansi.svg",
+            "title": "ANSI"
           }
         },
         "certification_tb7pUe": {

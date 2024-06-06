@@ -243,6 +243,33 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_4jrjJb": {
+          "type": "team-block",
+          "settings": {
+            "name": "Stan Childs",
+            "role": "Engineering",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_aYQWne": {
+          "type": "team-block",
+          "settings": {
+            "name": "Crystal Jones",
+            "role": "Production Supervisor",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_rHdpAm": {
+          "type": "team-block",
+          "settings": {
+            "name": "William Fisher",
+            "role": "Quality Control",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
@@ -262,7 +289,10 @@
         "team_block_TEJECm",
         "team_block_mBNkiF",
         "team_block_P6bzxL",
-        "team_block_ydPhwd"
+        "team_block_ydPhwd",
+        "team_block_4jrjJb",
+        "team_block_aYQWne",
+        "team_block_rHdpAm"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

@@ -40,7 +40,33 @@
         "carousel_block_aNeN4P": {
           "type": "carousel-block",
           "settings": {
-            "subheading": "",
+            "subheading": "Global Intex",
+            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
+            "heading_size": "h2",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "cta": "<p>Call-to-action<\/p>",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+          }
+        },
+        "carousel_block_bUtLUi": {
+          "type": "carousel-block",
+          "settings": {
+            "subheading": "Excell Manufacturing",
+            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
+            "heading_size": "h2",
+            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "cta": "<p>Call-to-action<\/p>",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+          }
+        },
+        "carousel_block_yRqdhQ": {
+          "type": "carousel-block",
+          "settings": {
+            "subheading": "Paquin Distribution",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "heading_size": "h2",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
@@ -53,7 +79,9 @@
       },
       "block_order": [
         "carousel_block_XfzB8a",
-        "carousel_block_aNeN4P"
+        "carousel_block_aNeN4P",
+        "carousel_block_bUtLUi",
+        "carousel_block_yRqdhQ"
       ],
       "settings": {
         "heading_small": "Our Specialized Divisions",

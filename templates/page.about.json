@@ -30,7 +30,7 @@
             "subheading": "Paquin Sensors",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "heading_size": "h2",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
+            "content": "<p>At our core, we are your trusted source for high quality sensors as well as a multitude of related components. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
             "link_text": "Learn more",
             "link_url": "shopify:\/\/pages\/paquin-sensors",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
@@ -40,20 +40,48 @@
         "carousel_block_aNeN4P": {
           "type": "carousel-block",
           "settings": {
-            "subheading": "",
-            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
+            "subheading": "Global Intex",
+            "heading": "Innovative Electrical Connectors & Cable Assemblies",
             "heading_size": "h2",
-            "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
+            "content": "<p>Global Intex specializes in manufacturing custom ruggedized electrical connectors and cable harnesses.  The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.<\/p>",
             "link_text": "",
             "link_url": "",
-            "cta": "<p>Call-to-action<\/p>",
+            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+          }
+        },
+        "carousel_block_bUtLUi": {
+          "type": "carousel-block",
+          "settings": {
+            "subheading": "Excell Manufacturing",
+            "heading": "Precision, Quality, and Innovation",
+            "heading_size": "h2",
+            "content": "<p>An ISO 9001 certified division, specializing in producing high-precision valve actuators and other custom instruments. With engineering, testing, production, and validation all done in-house, every part undergoes rigorous quality control.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
+          }
+        },
+        "carousel_block_yRqdhQ": {
+          "type": "carousel-block",
+          "settings": {
+            "subheading": "Paquin Distribution",
+            "heading": "Excellence in Service and Logistics",
+            "heading_size": "h2",
+            "content": "<p>This division specializes in distributing a wide array of hydraulic, pneumatic, and linear motion control components. It emphasizes excellent customer service, efficient logistics, and maintaining a comprehensive inventory.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
             "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png"
           }
         }
       },
       "block_order": [
         "carousel_block_XfzB8a",
-        "carousel_block_aNeN4P"
+        "carousel_block_aNeN4P",
+        "carousel_block_bUtLUi",
+        "carousel_block_yRqdhQ"
       ],
       "settings": {
         "heading_small": "Our Specialized Divisions",
@@ -63,20 +91,11 @@
     "about-team": {
       "type": "feed-team",
       "blocks": {
-        "team_block_6GiA4R": {
-          "type": "team-block",
-          "settings": {
-            "name": "Michael Graf",
-            "role": "President",
-            "social": "#test",
-            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
-          }
-        },
         "team_block_iF8RzN": {
           "type": "team-block",
           "settings": {
             "name": "Robert Williams",
-            "role": "Chairman & CEO",
+            "role": "Chief Executive Officer",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--robert-williams.jpg"
           }
@@ -90,31 +109,22 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--phil-marcantonio.jpg"
           }
         },
-        "team_block_qcaiPR": {
+        "team_block_6GiA4R": {
           "type": "team-block",
           "settings": {
-            "name": "Trudy Thompson",
-            "role": "Senior Buyer",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
+            "name": "Michael Graf",
+            "role": "President",
+            "social": "#test",
+            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
-        "team_block_7BciN8": {
+        "team_block_DkgWrB": {
           "type": "team-block",
           "settings": {
-            "name": "Tom Colbert",
-            "role": "Operations Manager",
+            "name": "Rob Kinkopf",
+            "role": "Vice President",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--tom-colbert.jpg"
-          }
-        },
-        "team_block_mBNkiF": {
-          "type": "team-block",
-          "settings": {
-            "name": "Steve Woytek",
-            "role": "Sr. Warehouse Technician",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_iNbQHr": {
@@ -126,13 +136,13 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--steve-thompson.jpg"
           }
         },
-        "team_block_83FGGw": {
+        "team_block_VVkxqW": {
           "type": "team-block",
           "settings": {
-            "name": "John Storey Jr.",
-            "role": "Territory Manager",
+            "name": "Bill Taylor",
+            "role": "Head of Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_RgQbmV": {
@@ -148,16 +158,25 @@
           "type": "team-block",
           "settings": {
             "name": "Emil Hufgard",
-            "role": "Customer Service",
+            "role": "Inside Sales & Technical Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--emil-hufgard.jpg"
+          }
+        },
+        "team_block_83FGGw": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Storey Jr.",
+            "role": "Outside Sales",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
           }
         },
         "team_block_ewAeCV": {
           "type": "team-block",
           "settings": {
             "name": "Marijane Randazzo",
-            "role": "Role",
+            "role": "Accounting Manager",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--marijane-randazzo.jpg"
           }
@@ -166,25 +185,194 @@
           "type": "team-block",
           "settings": {
             "name": "Mike Lamenta",
-            "role": "Role",
+            "role": "Inside Sales & Technical Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
+          }
+        },
+        "team_block_7BciN8": {
+          "type": "team-block",
+          "settings": {
+            "name": "Tom Colbert",
+            "role": "Operations Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--tom-colbert.jpg"
+          }
+        },
+        "team_block_qcaiPR": {
+          "type": "team-block",
+          "settings": {
+            "name": "Trudy Thompson",
+            "role": "Purchasing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
+          }
+        },
+        "team_block_TEJECm": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Frey",
+            "role": "Outside Sales Engineer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_mBNkiF": {
+          "type": "team-block",
+          "settings": {
+            "name": "Steve Woytek",
+            "role": "Sr. Warehouse Technician",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
+          }
+        },
+        "team_block_P6bzxL": {
+          "type": "team-block",
+          "settings": {
+            "name": "Lisa Reece-Burdette",
+            "role": "Director of Operations",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_ydPhwd": {
+          "type": "team-block",
+          "settings": {
+            "name": "Mark Berger",
+            "role": "Sales Supervision",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_4jrjJb": {
+          "type": "team-block",
+          "settings": {
+            "name": "Stan Childs",
+            "role": "Engineering",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_aYQWne": {
+          "type": "team-block",
+          "settings": {
+            "name": "Crystal Jones",
+            "role": "Production Supervisor",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_rHdpAm": {
+          "type": "team-block",
+          "settings": {
+            "name": "William Fisher",
+            "role": "Quality Control",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_XHqkhX": {
+          "type": "team-block",
+          "settings": {
+            "name": "Phyliss Neal-Adams",
+            "role": "Metrology\/Testing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_PbBPLq": {
+          "type": "team-block",
+          "settings": {
+            "name": "Brett Matheson",
+            "role": "Inventory Control",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_z3YgAN": {
+          "type": "team-block",
+          "settings": {
+            "name": "Breanna Bomback",
+            "role": "Marketing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_QXYTMf": {
+          "type": "team-block",
+          "settings": {
+            "name": "Jamie Crawford",
+            "role": "Buyer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_bwxHqq": {
+          "type": "team-block",
+          "settings": {
+            "name": "Irene Buna",
+            "role": "Accounting Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_MMdbKa": {
+          "type": "team-block",
+          "settings": {
+            "name": "Jimmy [LASTNAME]",
+            "role": "Shipping & Receiving",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_gNpQyc": {
+          "type": "team-block",
+          "settings": {
+            "name": "Denise Tennant",
+            "role": "Administration",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_rFaGqx": {
+          "type": "team-block",
+          "settings": {
+            "name": "Michael Schemel",
+            "role": "Engineering",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         }
       },
       "block_order": [
-        "team_block_6GiA4R",
         "team_block_iF8RzN",
         "team_block_AzXKfX",
-        "team_block_qcaiPR",
-        "team_block_7BciN8",
-        "team_block_mBNkiF",
+        "team_block_6GiA4R",
+        "team_block_DkgWrB",
         "team_block_iNbQHr",
-        "team_block_83FGGw",
+        "team_block_VVkxqW",
         "team_block_RgQbmV",
         "team_block_dWcAQa",
+        "team_block_83FGGw",
         "team_block_ewAeCV",
-        "team_block_yWNiie"
+        "team_block_yWNiie",
+        "team_block_7BciN8",
+        "team_block_qcaiPR",
+        "team_block_TEJECm",
+        "team_block_mBNkiF",
+        "team_block_P6bzxL",
+        "team_block_ydPhwd",
+        "team_block_4jrjJb",
+        "team_block_aYQWne",
+        "team_block_rHdpAm",
+        "team_block_XHqkhX",
+        "team_block_PbBPLq",
+        "team_block_z3YgAN",
+        "team_block_QXYTMf",
+        "team_block_bwxHqq",
+        "team_block_MMdbKa",
+        "team_block_gNpQyc",
+        "team_block_rFaGqx"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",
@@ -199,7 +387,7 @@
         "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
         "heading_size": "h1",
         "subheading": "Our Founding",
-        "content": "<p>Founded in 1949, the success of The Paquin Company is best reflected by the quality of the products that we represent and our hard earned reputation for integrity and good customer service, both of which are a testament to the quality of our team. We have maintained a leadership position by attracting, and retaining only the most talented and qualified individuals with the technical know-how, education, and personal skills necessary to support our customers.<\/p><p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics, and electrical control systems.  We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.  However, we are much more than your typical distributor. <\/p><p>Paquin associates are highly valued contributors to this process, and our organization.  Our work environment encourages creativity and communication.  Internally, we are always moving toward continuous improvement in customer service, products, and processes.  This improves Paquin’s ability to respond to our customers changing needs.<\/p><p>Paquin’s mission is to maintain and expand our reputation for integrity, innovation, quality, and superior customer service.<\/p>",
+        "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.<\/p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.<\/p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.<\/p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production sectors, Global Intex and Excell Manufacturing Solutions. These divisions allowed Paquin to engineer, produce, and deliver proprietary components and integrated controls, as well as fully packaged process systems.<\/p><p>In 2021, Robert Williams became the sole owner of The Paquin Company.  Over the next two years, Robert and his management team prepared for the next phase of Paquin’s evolution. In 2023, they announced the creation of a fourth division, <a href=\"\/pages\/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors<\/a>, marking a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.<\/p>",
         "image": "shopify:\/\/shop_images\/asset__about--history.jpg",
         "theme": "alt"
       }
@@ -208,7 +396,7 @@
       "type": "hero-inline",
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
-        "content": "<p>From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
         "cta_primary_text": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary_text": "Shop For Parts",
@@ -244,7 +432,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Manufacturing Innovation",
-            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy, and innovative techniques to produce high-quality, industry-leading results.<\/p>",
+            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -254,7 +442,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Testing and Quality Control",
-            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>",
+            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -281,7 +469,7 @@
         "heading_small": "Careers at The Paquin Company",
         "subheading": "Where Engineering Talent Thrives",
         "heading_large": "Join Our Team and Help Shape the Future of Engineering",
-        "content": "<p>Join our team and be part of an innovative engineering journey. At Paquin, we value creativity, precision, and a passion for problem-solving, offering roles that challenge and advance your career in a dynamic environment.<\/p>",
+        "content": "<p>At Paquin, we prioritize creativity, precision, and a passion for solving problems. Become part of our team and experience an exciting engineering journey. Our roles are designed to challenge you and propel your career forward in a dynamic environment.<\/p>",
         "link_text": "Explore career opportunities",
         "link_url": "shopify:\/\/pages\/careers",
         "image": "shopify:\/\/shop_images\/asset__careers.jpg",

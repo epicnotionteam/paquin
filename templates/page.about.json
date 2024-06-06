@@ -297,6 +297,33 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_QXYTMf": {
+          "type": "team-block",
+          "settings": {
+            "name": "Jamie Crawford",
+            "role": "Buyer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_bwxHqq": {
+          "type": "team-block",
+          "settings": {
+            "name": "Irene Buna",
+            "role": "Accounting Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_MMdbKa": {
+          "type": "team-block",
+          "settings": {
+            "name": "Jimmy [LASTNAME]",
+            "role": "Shipping & Receiving",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
@@ -322,7 +349,10 @@
         "team_block_rHdpAm",
         "team_block_XHqkhX",
         "team_block_PbBPLq",
-        "team_block_z3YgAN"
+        "team_block_z3YgAN",
+        "team_block_QXYTMf",
+        "team_block_bwxHqq",
+        "team_block_MMdbKa"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

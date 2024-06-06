@@ -288,6 +288,15 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_z3YgAN": {
+          "type": "team-block",
+          "settings": {
+            "name": "Breanna Bomback",
+            "role": "Marketing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
@@ -312,7 +321,8 @@
         "team_block_aYQWne",
         "team_block_rHdpAm",
         "team_block_XHqkhX",
-        "team_block_PbBPLq"
+        "team_block_PbBPLq",
+        "team_block_z3YgAN"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

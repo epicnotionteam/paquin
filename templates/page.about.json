@@ -91,20 +91,11 @@
     "about-team": {
       "type": "feed-team",
       "blocks": {
-        "team_block_6GiA4R": {
-          "type": "team-block",
-          "settings": {
-            "name": "Michael Graf",
-            "role": "President",
-            "social": "#test",
-            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
-          }
-        },
         "team_block_iF8RzN": {
           "type": "team-block",
           "settings": {
             "name": "Robert Williams",
-            "role": "Chairman & CEO",
+            "role": "Chief Executive Officer",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--robert-williams.jpg"
           }
@@ -116,6 +107,15 @@
             "role": "Chief Financial Officer",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--phil-marcantonio.jpg"
+          }
+        },
+        "team_block_6GiA4R": {
+          "type": "team-block",
+          "settings": {
+            "name": "Michael Graf",
+            "role": "President",
+            "social": "#test",
+            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
         "team_block_qcaiPR": {
@@ -201,9 +201,9 @@
         }
       },
       "block_order": [
-        "team_block_6GiA4R",
         "team_block_iF8RzN",
         "team_block_AzXKfX",
+        "team_block_6GiA4R",
         "team_block_qcaiPR",
         "team_block_7BciN8",
         "team_block_mBNkiF",

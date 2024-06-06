@@ -396,7 +396,7 @@
       "type": "hero-inline",
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
-        "content": "<p>From simple mechancial to sophistacted solid state designs, Paquin has you covered.<\/p>",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
         "cta_primary_text": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary_text": "Shop For Parts",
@@ -432,7 +432,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Manufacturing Innovation",
-            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy, and innovative techniques to produce high-quality, industry-leading results.<\/p>",
+            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -442,7 +442,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Testing and Quality Control",
-            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>",
+            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, surpassing customer expectations.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }

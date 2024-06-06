@@ -270,6 +270,24 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_XHqkhX": {
+          "type": "team-block",
+          "settings": {
+            "name": "Phyliss Neal-Adams",
+            "role": "Metrology\/Testing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_PbBPLq": {
+          "type": "team-block",
+          "settings": {
+            "name": "Brett Matheson",
+            "role": "Inventory Control",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
@@ -292,7 +310,9 @@
         "team_block_ydPhwd",
         "team_block_4jrjJb",
         "team_block_aYQWne",
-        "team_block_rHdpAm"
+        "team_block_rHdpAm",
+        "team_block_XHqkhX",
+        "team_block_PbBPLq"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

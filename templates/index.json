@@ -151,12 +151,12 @@
         "content_block_LVEVAK": {
           "type": "content-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
+            "image": "shopify:\/\/shop_images\/asset__logo--excel-manufacturing.svg",
             "image_type": "logo",
             "heading": "Global Intex",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "",
-            "link_url": "#test"
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/global-intex"
           }
         },
         "content_block_p9Ei6p": {
@@ -164,10 +164,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/asset__logo--excel-manufacturing.svg",
             "image_type": "logo",
-            "heading": "Excell Manufacturing",
+            "heading": "Excel Manufacturing",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/excel-manufacturing"
           }
         },
         "content_block_LtUemM": {
@@ -177,8 +177,8 @@
             "image_type": "logo",
             "heading": "Paquin Distribution",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/paquin-distribution"
           }
         }
       },

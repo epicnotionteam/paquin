@@ -173,6 +173,7 @@
         "content_block_LtUemM": {
           "type": "content-block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/asset__logo--paquin-distribution.svg",
             "image_type": "logo",
             "heading": "Paquin Distribution",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",

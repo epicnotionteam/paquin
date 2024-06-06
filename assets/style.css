@@ -3737,6 +3737,7 @@ hr,
   max-height: 5.6rem;
   max-width: 128px;
   max-width: 12.8rem;
+  height: 100%;
 }
 .feed--block .item .item__heading {
   margin: 0;

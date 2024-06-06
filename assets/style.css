@@ -2492,6 +2492,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-bottom: 0.4rem;
   }
 }
+.section--hero-internal.variant--base .section__wrap--content-internal {
+  max-width: 800px;
+  max-width: 80rem;
+}
+
 .section--hero-internal.variant--has-image {
   min-height: 512px;
   min-height: 51.2rem;

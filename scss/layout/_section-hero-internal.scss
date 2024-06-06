@@ -109,6 +109,19 @@
     }
 }
 
+
+// Section [Base]
+// --------------------------------------------------
+
+// Section container
+.section--hero-internal.variant--base {
+    // Adjust content wrap
+    .section__wrap--content-internal {
+        @include rem( max-width, 800px );
+    }
+}
+
+
 // Section [Has Image]
 // --------------------------------------------------
 

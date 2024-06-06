@@ -118,31 +118,13 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
-        "team_block_qcaiPR": {
+        "team_block_DkgWrB": {
           "type": "team-block",
           "settings": {
-            "name": "Trudy Thompson",
-            "role": "Senior Buyer",
+            "name": "Rob Kinkopf",
+            "role": "Vice President",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
-          }
-        },
-        "team_block_7BciN8": {
-          "type": "team-block",
-          "settings": {
-            "name": "Tom Colbert",
-            "role": "Operations Manager",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--tom-colbert.jpg"
-          }
-        },
-        "team_block_mBNkiF": {
-          "type": "team-block",
-          "settings": {
-            "name": "Steve Woytek",
-            "role": "Sr. Warehouse Technician",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_iNbQHr": {
@@ -154,13 +136,13 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--steve-thompson.jpg"
           }
         },
-        "team_block_83FGGw": {
+        "team_block_VVkxqW": {
           "type": "team-block",
           "settings": {
-            "name": "John Storey Jr.",
-            "role": "Territory Manager",
+            "name": "Bill Taylor",
+            "role": "Head of Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_RgQbmV": {
@@ -176,16 +158,25 @@
           "type": "team-block",
           "settings": {
             "name": "Emil Hufgard",
-            "role": "Customer Service",
+            "role": "Inside Sales & Technical Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--emil-hufgard.jpg"
+          }
+        },
+        "team_block_83FGGw": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Storey Jr.",
+            "role": "Outside Sales",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
           }
         },
         "team_block_ewAeCV": {
           "type": "team-block",
           "settings": {
             "name": "Marijane Randazzo",
-            "role": "Role",
+            "role": "Accounting Manager",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--marijane-randazzo.jpg"
           }
@@ -194,9 +185,63 @@
           "type": "team-block",
           "settings": {
             "name": "Mike Lamenta",
-            "role": "Role",
+            "role": "Inside Sales & Technical Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
+          }
+        },
+        "team_block_7BciN8": {
+          "type": "team-block",
+          "settings": {
+            "name": "Tom Colbert",
+            "role": "Operations Manager",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--tom-colbert.jpg"
+          }
+        },
+        "team_block_qcaiPR": {
+          "type": "team-block",
+          "settings": {
+            "name": "Trudy Thompson",
+            "role": "Purchasing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
+          }
+        },
+        "team_block_TEJECm": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Frey",
+            "role": "Outside Sales Engineer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_mBNkiF": {
+          "type": "team-block",
+          "settings": {
+            "name": "Steve Woytek",
+            "role": "Sr. Warehouse Technician",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
+          }
+        },
+        "team_block_P6bzxL": {
+          "type": "team-block",
+          "settings": {
+            "name": "Lisa Reece-Burdette",
+            "role": "Director of Operations",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_ydPhwd": {
+          "type": "team-block",
+          "settings": {
+            "name": "Mark Berger",
+            "role": "Sales Supervision",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         }
       },
@@ -204,15 +249,20 @@
         "team_block_iF8RzN",
         "team_block_AzXKfX",
         "team_block_6GiA4R",
-        "team_block_qcaiPR",
-        "team_block_7BciN8",
-        "team_block_mBNkiF",
+        "team_block_DkgWrB",
         "team_block_iNbQHr",
-        "team_block_83FGGw",
+        "team_block_VVkxqW",
         "team_block_RgQbmV",
         "team_block_dWcAQa",
+        "team_block_83FGGw",
         "team_block_ewAeCV",
-        "team_block_yWNiie"
+        "team_block_yWNiie",
+        "team_block_7BciN8",
+        "team_block_qcaiPR",
+        "team_block_TEJECm",
+        "team_block_mBNkiF",
+        "team_block_P6bzxL",
+        "team_block_ydPhwd"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

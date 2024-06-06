@@ -15,7 +15,7 @@
         "content": "<p>If so, then take a look at what Paquin has to offer below.<\/p>",
         "link_text": "Explore open roles",
         "link_url": "#test",
-        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "image": "shopify:\/\/shop_images\/asset__careers.jpg",
         "show_jump_links": true
       }
     },
@@ -166,7 +166,6 @@
         "heading_size": "h1",
         "subheading": "Take The First Step",
         "content": "<p>We are a close-knit team. Many say it feels like a family. We work hard, but we also play hard, making time to enjoy life, share laughs around the water cooler, and build team culture.<br\/><br\/>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.<\/p>",
-        "form": "<p>&lt;div class=\"globo-formbuilder\" data-id=\"NDIyNjg=\"&gt;&lt;\/div&gt;<\/p>",
         "theme": "dark"
       }
     }

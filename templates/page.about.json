@@ -324,6 +324,15 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_gNpQyc": {
+          "type": "team-block",
+          "settings": {
+            "name": "Denise Tennant",
+            "role": "Administration",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
@@ -352,7 +361,8 @@
         "team_block_z3YgAN",
         "team_block_QXYTMf",
         "team_block_bwxHqq",
-        "team_block_MMdbKa"
+        "team_block_MMdbKa",
+        "team_block_gNpQyc"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

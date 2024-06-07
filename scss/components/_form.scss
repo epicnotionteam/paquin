@@ -360,3 +360,11 @@ label {
     color: color( 'steel', '4' ) !important;
     opacity: 1 !important;
 }
+
+.spr-form .spr-form-input-text:not(.live-search-form-field):focus, 
+.spr-form .spr-form-input-email:not(.live-search-form-field):focus, 
+.spr-form .spr-form-input-textarea:not(.live-search-form-field):focus, 
+.form-field-input:not(.live-search-form-field):focus {
+    border: 0 none !important;
+    box-shadow: none !important;
+}

@@ -379,6 +379,7 @@ label {
     .form-fields-columns {
         @include rem( row-gap, 12px );
         display: grid;
+        margin: 0;
         // Fieldset
         .form-field {
             margin: 0;

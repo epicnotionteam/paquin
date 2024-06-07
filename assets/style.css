@@ -2619,6 +2619,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .form-action-row {
+  margin-top: 12px;
+  margin-top: 1.2rem;
   row-gap: 12px;
   row-gap: 1.2rem;
   display: grid;
@@ -4668,6 +4670,7 @@ label {
   row-gap: 12px;
   row-gap: 1.2rem;
   display: grid;
+  margin: 0;
 }
 #create_customer .form-fields-columns .form-field {
   margin: 0;

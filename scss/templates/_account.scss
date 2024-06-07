@@ -94,7 +94,10 @@
 
 // Grid structure
 .form-action-row {
-    @include rem( row-gap, 12px );
+    @include rem(( 
+        margin-top: 12px,
+        row-gap: 12px 
+    ));
     display: grid;
     grid-template-rows: 1fr;
 }

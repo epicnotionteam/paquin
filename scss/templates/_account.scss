@@ -51,8 +51,14 @@
         // Messaging
         .account-message {
             @include font-size( 'small' );
-            @include rem( margin-bottom, spacing(4) );
+            @include rem((
+                column-gap: 6px,
+                margin-bottom: spacing(4) 
+            ));
+            background-color: transparent;
             color: color( 'steel', '4' );
+            display: grid;
+            grid-template-columns: max-content 1fr;
             padding: 0;
             &.message--success {
                 @include icon( before, 'check' ) {

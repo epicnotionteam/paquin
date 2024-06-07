@@ -31,13 +31,14 @@
                 <div class="errors">
                   <ul class="errors-list{% if form.errors.size == 1 %} errors-list--single{% endif %}">
                     {% for field in form.errors %}
+                      {% assign error_message = form.errors.messages[field] %}
                       <li>
-                        {% if field == 'form' %}
-                          {{ form.errors.messages[field] }}
+                        {% if error_message contains 'is invalid' %}
+                          {{ error_message | replace: 'is invalid', 'is not valid' }}
+                        {% elsif error_message contains 'can not be blank' %}
+                          {{ error_message | replace: 'can not be blank', 'cannot be blank' }}
                         {% else %}
-                          <a href="#register_{{ field }}">
-                            {{ form.errors.translated_fields[field] }} - {{ form.errors.messages[field] }}
-                          </a>
+                          {{ error_message }}
                         {% endif %}
                       </li>
                     {% endfor %}

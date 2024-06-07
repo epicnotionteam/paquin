@@ -78,7 +78,7 @@
 		</div>
 
 		<div
-			class="account-recovery"
+			class="account-recovery form--base"
 			id="customer_recovery"
 			data-account-login-recovery>
 			{% form 'recover_customer_password' %}
@@ -130,12 +130,12 @@
 			</div>
 
 			<div class="form-action-row">
-				<button class="button-primary" type="submit">
+				<button class="button--base button--icon-before button--icon-arrow-forward" type="submit">
 					{{ 'customers.forms.submit' | t }}
 				</button>
 
 				<button
-					class="button-secondary"
+					class="button--outline button--icon-before button--icon-arrow-back"
 					type="button"
 					data-login-toggle
 				>

@@ -2682,7 +2682,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
 }
 .account-message.message--error .errors ul li:before {
-  content: "\e000";
+  content: "";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;

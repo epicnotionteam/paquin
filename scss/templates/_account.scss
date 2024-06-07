@@ -117,6 +117,20 @@
         padding-bottom: $gap--section-small 
     ));
     margin: 0;
+    // Container [Masthead]
+    .account-page-masthead {
+        @include rem(( 
+            margin-bottom: spacing(6),
+            max-width: 640px
+        ));
+        margin-top: 0;
+        padding: 0;
+        text-align: left;
+        // Heading
+        h1 {
+            @include rem( margin-bottom, 12px );
+        }
+    }
 }
 
 // Adjust @medium breakpoint

@@ -2643,6 +2643,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-bottom: 7.2rem;
   margin: 0;
 }
+.account-page-register .account-page-masthead {
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  max-width: 640px;
+  max-width: 64rem;
+  margin-top: 0;
+  padding: 0;
+  text-align: left;
+}
+.account-page-register .account-page-masthead h1 {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
 
 @media (min-width: 64em) {
   .account-page-register {

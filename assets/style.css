@@ -2679,6 +2679,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .account-message.message--error .errors ul li {
   color: #66787F;
+  padding: 0;
 }
 .account-message.message--error .errors ul li:before {
   content: "\e000";
@@ -2689,7 +2690,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #412729;
+  color: #7D4448;
 }
 
 .article--container {

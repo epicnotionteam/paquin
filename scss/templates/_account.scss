@@ -12,6 +12,11 @@
         padding-bottom: $gap--section-small 
     ));
     margin: 0;
+    // Container [Masthead]
+    .account-page-masthead {
+        @include rem( margin-bottom, spacing(5) );
+        margin-top: 0;
+    }
 }
 
 // Adjust @medium breakpoint
@@ -22,6 +27,10 @@
             padding-top: spacing(9),
             padding-bottom: $gap--section-large 
         ));
+        // Container [Masthead]
+        .account-page-masthead {
+            @include rem( margin-bottom, spacing(6) );
+        }
     }
 }
 

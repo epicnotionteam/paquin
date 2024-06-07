@@ -2538,6 +2538,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-bottom: 7.2rem;
   margin: 0;
 }
+.account-page-login .account-page-masthead {
+  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
+  margin-top: 0;
+}
 
 @media (min-width: 64em) {
   .account-page-login {
@@ -2545,6 +2550,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-top: 6.4rem;
     padding-bottom: 96px;
     padding-bottom: 9.6rem;
+  }
+  .account-page-login .account-page-masthead {
+    margin-bottom: 40px;
+    margin-bottom: 4rem;
   }
 }
 .form-action-row {

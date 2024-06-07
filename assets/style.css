@@ -4664,6 +4664,16 @@ label {
   box-shadow: none !important;
 }
 
+#create_customer .form-fields-columns {
+  row-gap: 12px;
+  row-gap: 1.2rem;
+  display: grid;
+}
+#create_customer .form-fields-columns .form-field {
+  margin: 0;
+  width: 100%;
+}
+
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
 #site-main li a,

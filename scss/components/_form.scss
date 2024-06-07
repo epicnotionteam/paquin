@@ -350,7 +350,7 @@ label {
 }
 
 
-// Form [Account]
+// Form [Account, General]
 // --------------------------------------------------
 
 .spr-form .spr-form-input-text::placeholder, 
@@ -367,4 +367,22 @@ label {
 .form-field-input:not(.live-search-form-field):focus {
     border: 0 none !important;
     box-shadow: none !important;
+}
+
+
+// Form [Account, Signup]
+// --------------------------------------------------
+
+// Component container
+#create_customer {
+    // Fieldset grid structure
+    .form-fields-columns {
+        @include rem( row-gap, 12px );
+        display: grid;
+        // Fieldset
+        .form-field {
+            margin: 0;
+            width: 100%;
+        }
+    }
 }

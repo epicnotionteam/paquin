@@ -160,7 +160,7 @@
     }
      // Message [Error]
      &.message--error {
-        li {
+        .errors ul li {
             @include icon( before, 'error' ) {
                 color: color( 'rust', '1' );
             }

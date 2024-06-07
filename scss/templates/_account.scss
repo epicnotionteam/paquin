@@ -5,6 +5,27 @@
 // Template Structure
 // ----------------------------------------------------------------------------------------------------
 
+// Section container
+.account-page-login {
+    @include rem((
+        padding-top: spacing(6),
+        padding-bottom: $gap--section-small 
+    ));
+    margin: 0;
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Adjust section container
+    .account-page-login {
+        @include rem((
+            padding-top: spacing(9),
+            padding-bottom: $gap--section-large 
+        ));
+    }
+}
+
+
 // Container [Actions]
 // --------------------------------------------------
 
@@ -21,6 +42,3 @@
     @include rem( margin, spacing(3) 0 0 !important );
     text-align: center;
 }
-
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {}

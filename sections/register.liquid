@@ -33,7 +33,7 @@
                     {% for field in form.errors %}
                       {% capture field_name %}{{ form.errors.translated_fields[field] }}{% endcapture %}
                       <li>
-                        Please check your input for {{ field_name | downcase }}
+                        Please check your input for the '{{ field_name | downcase }}' field
                       </li>
                     {% endfor %}
                   </ul>

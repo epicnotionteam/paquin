@@ -2586,8 +2586,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .form-action-row {
-  row-gap: 8px;
-  row-gap: 0.8rem;
+  row-gap: 12px;
+  row-gap: 1.2rem;
   display: grid;
   grid-template-rows: 1fr;
 }

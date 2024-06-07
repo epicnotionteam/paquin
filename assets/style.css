@@ -2545,6 +2545,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 640px;
   max-width: 64rem;
   margin-top: 0;
+  padding: 0;
   text-align: left;
 }
 .account-page-login .account-page-masthead h1 {

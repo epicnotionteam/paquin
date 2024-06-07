@@ -18,6 +18,7 @@
 // Account creation & password reset
 .form-action-row--helper {
     @include font-size( 'small' );
+    @include rem( margin, spacing(3) 0 0 );
     text-align: center;
 }
 

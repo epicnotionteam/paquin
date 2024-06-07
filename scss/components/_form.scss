@@ -347,3 +347,15 @@ label {
         }
     }
 }
+
+
+// Form [Account]
+// --------------------------------------------------
+
+.spr-form .spr-form-input-text::placeholder, 
+.spr-form .spr-form-input-email::placeholder, 
+.spr-form .spr-form-input-textarea::placeholder, 
+.form-field-input::placeholder {
+    color: color( 'steel', '3' ) !important;
+    opacity: 1 !important;
+}

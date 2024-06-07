@@ -2228,8 +2228,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   z-index: 1;
 }
 .section--hero-home .container--content .section__wrap--content {
-  padding: 96px 0 64px;
-  padding: 9.6rem 0 6.4rem;
+  padding: 96px 0 48px;
+  padding: 9.6rem 0 4.8rem;
   row-gap: 24px;
   row-gap: 2.4rem;
   display: grid;
@@ -2544,6 +2544,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  margin: 16px 0 0;
+  margin: 1.6rem 0 0;
   text-align: center;
 }
 
@@ -4523,6 +4525,14 @@ label {
     grid-area: comments;
   }
 }
+.spr-form .spr-form-input-text::placeholder,
+.spr-form .spr-form-input-email::placeholder,
+.spr-form .spr-form-input-textarea::placeholder,
+.form-field-input::placeholder {
+  color: #30373A !important;
+  opacity: 1 !important;
+}
+
 #site-main a:not([class]):not([class*=button]):not(.breadcrumbs-container a),
 #site-main p a,
 #site-main li a,

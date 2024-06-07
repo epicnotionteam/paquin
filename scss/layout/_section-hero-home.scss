@@ -20,9 +20,9 @@
         // Wrap [Content]
         .section__wrap--content {
             @include rem(( 
-                    padding: 96px 0 64px,
-                    row-gap: spacing(4)
-                ));
+                padding: 96px 0 48px,
+                row-gap: spacing(4)
+            ));
             display: grid;
             // Heading
             .section__heading {

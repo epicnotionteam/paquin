@@ -2636,6 +2636,22 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   text-align: center;
 }
 
+.account-page-register {
+  padding-top: 40px;
+  padding-top: 4rem;
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .account-page-register {
+    padding-top: 64px;
+    padding-top: 6.4rem;
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
+}
 .article--container {
   display: grid !important;
   margin: 0;

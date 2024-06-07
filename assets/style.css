@@ -2542,7 +2542,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .account-page-login .account-page-masthead {
   margin-bottom: 40px;
   margin-bottom: 4rem;
+  max-width: 640px;
+  max-width: 64rem;
   margin-top: 0;
+  text-align: left;
 }
 .account-page-login .account-page-masthead h1 {
   margin-bottom: 12px;
@@ -2552,13 +2555,14 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .account-page-login .account-page-content {
-  margin: 0 auto auto !important;
   max-width: 640px;
+  max-width: 64rem;
+  margin: 0 auto !important;
   padding: 0;
 }
 .account-page-login .account-page-content #customer_recovery > form > h2 {
-  margin: 0 0 8px !important;
-  margin: 0 0 0.8rem !important;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
 }
 .account-page-login .account-page-content #customer_recovery > form > p {
   font-size: 15px;
@@ -2566,7 +2570,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  margin: 0 !important;
+  margin: 0 0 16px;
+  margin: 0 0 1.6rem;
 }
 
 @media (min-width: 64em) {

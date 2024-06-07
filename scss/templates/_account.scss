@@ -14,8 +14,12 @@
     margin: 0;
     // Container [Masthead]
     .account-page-masthead {
-        @include rem( margin-bottom, spacing(6) );
+        @include rem(( 
+            margin-bottom: spacing(6),
+            max-width: 640px
+        ));
         margin-top: 0;
+        text-align: left;
         // Heading
         h1 {
             @include rem( margin-bottom, 12px );
@@ -27,20 +31,20 @@
     }
     // Container [Content]
     .account-page-content {
-        margin: 0 auto auto !important;
-        max-width: 640px;
+        @include rem( max-width, 640px );
+        margin: 0 auto !important;
         padding: 0;
         // Container [Forgot Password]
         #customer_recovery > form {
             // Heading
             & > h2 {
                 @extend %h5;
-                @include rem( margin, 0 0 spacing(2) !important );
+                @include rem( margin, 0 0 spacing(2) );
             }
             // Content
             & > p {
                 @include font-size( 'small' );
-                margin: 0 !important;
+                @include rem( margin, 0 0 spacing(3) );
             } 
         }
     }

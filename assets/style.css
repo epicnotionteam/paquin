@@ -3463,6 +3463,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 640px;
   max-width: 64rem;
 }
+.section--content-404 .container--content .button--base {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+}
 
 @media (min-width: 64em) {
   .section--content-404 {

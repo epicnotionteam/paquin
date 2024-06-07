@@ -14,6 +14,10 @@
     // Container [Content]
     .container--content {
         @include rem( max-width, 640px );
+        // Button
+        .button--base {
+            @include rem( margin-top, spacing(3) );
+        }
     }
 }
 

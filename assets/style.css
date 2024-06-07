@@ -2674,6 +2674,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   -moz-osx-font-smoothing: grayscale;
   color: #0F7F92;
 }
+.account-message.message--error {
+  background-color: transparent;
+}
+.account-message.message--error .errors ul li {
+  color: #66787F;
+}
 .account-message.message--error .errors ul li:before {
   content: "\e000";
   font-family: "Material Symbols Outlined";

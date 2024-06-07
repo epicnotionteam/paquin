@@ -160,7 +160,10 @@
     }
      // Message [Error]
      &.message--error {
+        background-color: transparent;
         .errors ul li {
+            color: color( 'steel', '4' );
+            // Place icon as pseudo element
             @include icon( before, 'error' ) {
                 color: color( 'rust', '1' );
             }

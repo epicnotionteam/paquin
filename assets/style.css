@@ -2682,7 +2682,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
 }
 .account-message.message--error .errors ul li:before {
-  content: "";
+  content: "\e000";
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: normal;
@@ -4865,6 +4865,7 @@ label {
 }
 
 main#site-main ul:not([class]) li,
+main#site-main *:not(.errors) ul li li,
 ul.list--base li {
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
@@ -4873,6 +4874,7 @@ ul.list--base li {
   position: relative;
 }
 main#site-main ul:not([class]) li::before,
+main#site-main *:not(.errors) ul li li::before,
 ul.list--base li::before {
   color: #0F7F92;
   content: "•";

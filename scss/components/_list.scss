@@ -9,6 +9,7 @@
 // --------------------------------------------------
 
 main#site-main ul:not([class]),
+main#site-main *:not(.errors) ul li,
 ul.list--base {
     // List item
     li {

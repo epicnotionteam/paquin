@@ -165,7 +165,7 @@
             color: color( 'steel', '4' );
             padding: 0;
             // Place icon as pseudo element
-            @include icon( before, 'error' !important ) {
+            @include icon( before, 'error' ) {
                 color: color( 'rust', '2' );
             }
         }

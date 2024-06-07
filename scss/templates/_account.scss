@@ -25,11 +25,24 @@
             margin: 0;
         }
     }
-    // Container [Form]
+    // Container [Content]
     .account-page-content {
         margin: 0 auto auto !important;
         max-width: 640px;
         padding: 0;
+        // Container [Forgot Password]
+        .account-recovery & > form {
+            // Heading
+            & > h2 {
+                @extend %h5;
+                margin: 0;
+            }
+            // Content
+            & > p {
+                @include font-size( 'small' );
+                margin: 0;
+            } 
+        }
     }
 }
 

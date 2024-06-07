@@ -35,12 +35,12 @@
             // Heading
             & > h2 {
                 @extend %h5;
-                margin: 0;
+                @include rem( margin, 0 0 spacing(2) !important );
             }
             // Content
             & > p {
                 @include font-size( 'small' );
-                margin: 0;
+                margin: 0 !important;
             } 
         }
     }

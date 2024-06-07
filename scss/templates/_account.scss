@@ -31,7 +31,7 @@
         max-width: 640px;
         padding: 0;
         // Container [Forgot Password]
-        .account-recovery & > form {
+        #customer_recovery > form {
             // Heading
             & > h2 {
                 @extend %h5;

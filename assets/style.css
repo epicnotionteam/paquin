@@ -3453,6 +3453,21 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-area: content;
   }
 }
+.section--content-404 {
+  padding-top: 64px;
+  padding-top: 6.4rem;
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+}
+
+@media (min-width: 64em) {
+  .section--content-404 {
+    padding-top: 64px;
+    padding-top: 6.4rem;
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
+}
 blockquote {
   margin: 24px 0 24px 16px;
   margin: 2.4rem 0 2.4rem 1.6rem;

@@ -1,0 +1,25 @@
+// ====================================================================================================
+// Templates / 404
+// ====================================================================================================
+
+// Template Structure
+// ----------------------------------------------------------------------------------------------------
+
+// Section container
+.section--content-404 {
+    @include rem((
+        padding-top: spacing(9),
+        padding-bottom: $gap--section-small 
+    ));
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Section container
+    .section--content-404 {
+        @include rem((
+            padding-top: spacing(9),
+            padding-bottom: $gap--section-large 
+        ));
+    }
+}

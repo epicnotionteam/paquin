@@ -920,6 +920,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/templates\/_404.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_404.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/templates\/_account.scss" : {
       "aP" : 0,
       "bl" : 0,

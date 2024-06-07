@@ -2546,7 +2546,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 64rem;
   margin-top: 0;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 .account-page-login .account-page-masthead h1 {
   margin-bottom: 12px;
@@ -2612,6 +2612,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .account-page-login .account-page-masthead {
     margin-bottom: 40px;
     margin-bottom: 4rem;
+    text-align: center;
   }
   .account-page-login .account-page-masthead h1 {
     margin-bottom: 20px;
@@ -2652,7 +2653,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 64rem;
   margin-top: 0;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 .account-page-register .account-page-masthead h1 {
   margin-bottom: 12px;

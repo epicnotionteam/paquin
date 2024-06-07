@@ -2228,8 +2228,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   z-index: 1;
 }
 .section--hero-home .container--content .section__wrap--content {
-  padding: 64px 0;
-  padding: 6.4rem 0;
+  padding: 96px 0 64px;
+  padding: 9.6rem 0 6.4rem;
   row-gap: 24px;
   row-gap: 2.4rem;
   display: grid;
@@ -2295,8 +2295,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--hero-home .container--content .section__wrap--content {
     min-height: 512px;
     min-height: 51.2rem;
-    padding: 128px 0 96px;
-    padding: 12.8rem 0 9.6rem;
+    padding: 160px 0 96px;
+    padding: 16rem 0 9.6rem;
     align-content: flex-end;
     grid-auto-rows: max-content;
   }

@@ -20,7 +20,7 @@
         // Wrap [Content]
         .section__wrap--content {
             @include rem(( 
-                    padding: 64px 0,
+                    padding: 96px 0 64px,
                     row-gap: spacing(4)
                 ));
             display: grid;
@@ -88,7 +88,7 @@
             .section__wrap--content {
                 @include rem(( 
                     min-height: 512px,
-                    padding: 128px 0 96px
+                    padding: 160px 0 96px
                 ));
                 align-content: flex-end;
                 grid-auto-rows: max-content;

@@ -2544,8 +2544,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  margin: 16px 0 0;
-  margin: 1.6rem 0 0;
+  margin: 16px 0 0 !important;
+  margin: 1.6rem 0 0 !important;
   text-align: center;
 }
 

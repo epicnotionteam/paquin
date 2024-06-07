@@ -4312,7 +4312,8 @@ label {
 .form--base input ::placeholder,
 .form--base select ::placeholder,
 .form--base textarea ::placeholder {
-  color: #30373A;
+  color: #66787F;
+  opacity: 1;
 }
 .form--base button.submit {
   border: 0 none !important;
@@ -4529,7 +4530,7 @@ label {
 .spr-form .spr-form-input-email::placeholder,
 .spr-form .spr-form-input-textarea::placeholder,
 .form-field-input::placeholder {
-  color: #30373A !important;
+  color: #66787F !important;
   opacity: 1 !important;
 }
 

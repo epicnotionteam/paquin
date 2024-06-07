@@ -40,7 +40,8 @@ label {
         font-family: font-family( 'base' );
         // Placeholder
         ::placeholder {
-            color: color( 'steel', '3' );
+            color: color( 'steel', '4' );
+            opacity: 1;
         }
     }
     // Submit button
@@ -356,6 +357,6 @@ label {
 .spr-form .spr-form-input-email::placeholder, 
 .spr-form .spr-form-input-textarea::placeholder, 
 .form-field-input::placeholder {
-    color: color( 'steel', '3' ) !important;
+    color: color( 'steel', '4' ) !important;
     opacity: 1 !important;
 }

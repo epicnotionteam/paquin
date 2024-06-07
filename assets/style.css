@@ -2551,7 +2551,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .account-page-login .account-page-content {
-  margin: 0 auto;
+  margin: 0 auto auto !important;
+  max-width: 640px;
+  padding: 0;
 }
 
 @media (min-width: 64em) {
@@ -2566,8 +2568,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-bottom: 4rem;
   }
   .account-page-login .account-page-masthead h1 {
-    margin-bottom: 16px;
-    margin-bottom: 1.6rem;
+    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 }
 .form-action-row {

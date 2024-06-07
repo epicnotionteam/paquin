@@ -27,7 +27,9 @@
     }
     // Container [Form]
     .account-page-content {
-        margin: 0 auto;
+        margin: 0 auto auto !important;
+        max-width: 640px;
+        padding: 0;
     }
 }
 
@@ -44,7 +46,7 @@
             @include rem( margin-bottom, spacing(6) );
             // Heading
             h1 {
-                @include rem( margin-bottom, spacing(3) );
+                @include rem( margin-bottom, 20px );
             }
         }
     }

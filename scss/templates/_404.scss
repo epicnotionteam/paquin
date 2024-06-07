@@ -11,6 +11,10 @@
         padding-top: spacing(9),
         padding-bottom: $gap--section-small 
     ));
+    // Container [Content]
+    .container--content {
+        @include rem( max-width, 640px );
+    }
 }
 
 // Adjust @medium breakpoint

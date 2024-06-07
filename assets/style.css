@@ -3459,6 +3459,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;
 }
+.section--content-404 .container--content {
+  max-width: 640px;
+  max-width: 64rem;
+}
 
 @media (min-width: 64em) {
   .section--content-404 {

@@ -48,24 +48,6 @@
                 @include rem( margin, 0 0 spacing(3) );
             } 
         }
-        // Messaging
-        .account-message {
-            @include font-size( 'small' );
-            @include rem((
-                column-gap: 6px,
-                margin-bottom: spacing(4) 
-            ));
-            background-color: transparent;
-            color: color( 'steel', '4' );
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            padding: 0;
-            &.message--success {
-                @include icon( before, 'check' ) {
-                    color: color( 'action', '1' );
-                }
-            }
-        }
     }
 }
 
@@ -87,27 +69,6 @@
             }
         }
     }
-}
-
-
-// Container [Actions]
-// --------------------------------------------------
-
-// Grid structure
-.form-action-row {
-    @include rem(( 
-        margin-top: 12px,
-        row-gap: 12px 
-    ));
-    display: grid;
-    grid-template-rows: 1fr;
-}
-
-// Account creation & password reset
-.form-action-row--helper {
-    @include font-size( 'small' );
-    @include rem( margin, spacing(3) 0 0 !important );
-    text-align: center;
 }
 
 
@@ -151,5 +112,58 @@
             padding-top: spacing(9),
             padding-bottom: $gap--section-large 
         ));
+    }
+}
+
+
+// Container [Actions]
+// --------------------------------------------------
+
+// Grid structure
+.form-action-row {
+    @include rem(( 
+        margin-top: 12px,
+        row-gap: 12px 
+    ));
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+// Account creation & password reset
+.form-action-row--helper {
+    @include font-size( 'small' );
+    @include rem( margin, spacing(3) 0 0 !important );
+    text-align: center;
+}
+
+
+// Container [Message]
+// --------------------------------------------------
+
+// Messaging
+.account-message {
+    @include font-size( 'small' );
+    @include rem((
+        column-gap: 6px,
+        margin-bottom: spacing(4) 
+    ));
+    background-color: transparent;
+    color: color( 'steel', '4' );
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    padding: 0;
+    // Message [Success]
+    &.message--success {
+        @include icon( before, 'check' ) {
+            color: color( 'action', '1' );
+        }
+    }
+     // Message [Error]
+     &.message--error {
+        li {
+            @include icon( before, 'error' ) {
+                color: color( 'rust', '1' );
+            }
+        }
     }
 }

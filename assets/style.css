@@ -2574,33 +2574,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
 }
-.account-page-login .account-page-content .account-message {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
-  column-gap: 6px;
-  column-gap: 0.6rem;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-  background-color: transparent;
-  color: #66787F;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  padding: 0;
-}
-.account-page-login .account-page-content .account-message.message--success:before {
-  content: "\e5ca";
-  font-family: "Material Symbols Outlined";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  vertical-align: middle;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #0F7F92;
-}
 
 @media (min-width: 64em) {
   .account-page-login {
@@ -2619,26 +2592,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     margin-bottom: 2rem;
   }
 }
-.form-action-row {
-  margin-top: 12px;
-  margin-top: 1.2rem;
-  row-gap: 12px;
-  row-gap: 1.2rem;
-  display: grid;
-  grid-template-rows: 1fr;
-}
-
-.form-action-row--helper {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
-  margin: 16px 0 0 !important;
-  margin: 1.6rem 0 0 !important;
-  text-align: center;
-}
-
 .account-page-register {
   padding-top: 40px;
   padding-top: 4rem;
@@ -2674,6 +2627,65 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 9.6rem;
   }
 }
+.form-action-row {
+  margin-top: 12px;
+  margin-top: 1.2rem;
+  row-gap: 12px;
+  row-gap: 1.2rem;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.form-action-row--helper {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  margin: 16px 0 0 !important;
+  margin: 1.6rem 0 0 !important;
+  text-align: center;
+}
+
+.account-message {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  column-gap: 6px;
+  column-gap: 0.6rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  background-color: transparent;
+  color: #66787F;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 0;
+}
+.account-message.message--success:before {
+  content: "\e5ca";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0F7F92;
+}
+.account-message.message--error li:before {
+  content: "\e000";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #412729;
+}
+
 .article--container {
   display: grid !important;
   margin: 0;

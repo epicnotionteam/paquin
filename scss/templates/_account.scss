@@ -14,7 +14,7 @@
     margin: 0;
     // Container [Masthead]
     .account-page-masthead {
-        @include rem( margin-bottom, spacing(5) );
+        @include rem( margin-bottom, spacing(6) );
         margin-top: 0;
         // Heading
         h1 {
@@ -24,6 +24,10 @@
         p {
             margin: 0;
         }
+    }
+    // Container [Form]
+    .account-page-content {
+        margin: 0;
     }
 }
 

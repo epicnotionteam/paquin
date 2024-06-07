@@ -2539,8 +2539,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0;
 }
 .account-page-login .account-page-masthead {
-  margin-bottom: 32px;
-  margin-bottom: 3.2rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
   margin-top: 0;
 }
 .account-page-login .account-page-masthead h1 {
@@ -2548,6 +2548,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 1.2rem;
 }
 .account-page-login .account-page-masthead p {
+  margin: 0;
+}
+.account-page-login .account-page-content {
   margin: 0;
 }
 

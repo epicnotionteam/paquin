@@ -2574,6 +2574,28 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 0 0 16px;
   margin: 0 0 1.6rem;
 }
+.account-page-login .account-page-content .account-message {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  color: #66787F;
+  padding: 0;
+}
+.account-page-login .account-page-content .account-message.message--success:before {
+  content: "\e5ca";
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0F7F92;
+}
 
 @media (min-width: 64em) {
   .account-page-login {

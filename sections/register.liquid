@@ -32,19 +32,12 @@
                   <ul class="errors-list{% if form.errors.size == 1 %} errors-list--single{% endif %}">
                     {% for field in form.errors %}
                       {% capture field_name %}{{ form.errors.translated_fields[field] }}{% endcapture %}
-                      {% assign error_message = form.errors.messages[field] %}
                       <li>
-                        {% if error_message contains 'is invalid' %}
-                          {{ field_name }} {{ error_message | replace: 'is invalid', 'is not valid' }}
-                        {% elsif error_message contains 'can not be blank' %}
-                          {{ field_name }} {{ error_message | replace: 'can not be blank', 'cannot be blank' }}
-                        {% else %}
-                          {{ field_name }} - {{ error_message }}
-                        {% endif %}
+                        Please check your input for {{ field_name | downcase }}
                       </li>
                     {% endfor %}
                   </ul>
-                </div>
+                </div> 
           {% endcase %}
         </div>
       {% endif %}

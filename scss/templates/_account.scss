@@ -131,6 +131,12 @@
             @include rem( margin-bottom, 12px );
         }
     }
+    // Container [Content]
+    .account-page-content {
+        @include rem( max-width, 640px );
+        margin: 0 auto !important;
+        padding: 0;
+    }
 }
 
 // Adjust @medium breakpoint

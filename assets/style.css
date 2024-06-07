@@ -2656,6 +2656,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
 }
+.account-page-register .account-page-content {
+  max-width: 640px;
+  max-width: 64rem;
+  margin: 0 auto !important;
+  padding: 0;
+}
 
 @media (min-width: 64em) {
   .account-page-register {

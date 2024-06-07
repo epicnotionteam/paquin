@@ -16,6 +16,14 @@
     .account-page-masthead {
         @include rem( margin-bottom, spacing(5) );
         margin-top: 0;
+        // Heading
+        h1 {
+            @include rem( margin-bottom, 12px );
+        }
+        // Content
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -30,6 +38,10 @@
         // Container [Masthead]
         .account-page-masthead {
             @include rem( margin-bottom, spacing(6) );
+            // Heading
+            h1 {
+                @include rem( margin-bottom, spacing(3) );
+            }
         }
     }
 }

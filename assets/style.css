@@ -2543,6 +2543,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 3.2rem;
   margin-top: 0;
 }
+.account-page-login .account-page-masthead h1 {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
+.account-page-login .account-page-masthead p {
+  margin: 0;
+}
 
 @media (min-width: 64em) {
   .account-page-login {
@@ -2554,6 +2561,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .account-page-login .account-page-masthead {
     margin-bottom: 40px;
     margin-bottom: 4rem;
+  }
+  .account-page-login .account-page-masthead h1 {
+    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
   }
 }
 .form-action-row {

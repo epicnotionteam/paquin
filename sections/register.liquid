@@ -1,7 +1,7 @@
 <section class="account-page account-page-register" data-template-account>
   <header class="account-page-masthead">
     <h1 class="account-page-title">
-      {{ 'customers.register.title' | t}}
+      Create your Paquin account
     </h1>
   </header>
 
@@ -42,8 +42,9 @@
             name="customer[first_name]"
             autocapitalize="words"
             autofocus
-            {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
-
+            {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+            placeholder="Your first name"
+          >
           <label
             class="form-field-title"
             for="register_first_name">
@@ -58,8 +59,9 @@
             id="register_last_name"
             name="customer[last_name]"
             autocapitalize="words"
-            {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
-
+            {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+            placeholder="Your last name"
+          >
           <label
             class="form-field-title"
             for="register_last_name">
@@ -75,8 +77,9 @@
             name="customer[email]"
             autocorrect="off"
             autocapitalize="off"
-            {% if form.email %}value="{{ form.email }}"{% endif %}>
-
+            {% if form.email %}value="{{ form.email }}"{% endif %}
+            placeholder="Your email address"
+          >
           <label
             class="form-field-title"
             for="register_email">
@@ -89,8 +92,9 @@
             type="password"
             class="form-field-input form-field-text {% if form.errors contains 'password' %}form-field-error{% endif %}"
             id="register_password"
-            name="customer[password]">
-
+            name="customer[password]"
+            placeholder="Your password"
+          >
           <label
             class="form-field-title"
             for="register_password">

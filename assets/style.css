@@ -4672,6 +4672,9 @@ label {
   display: grid;
   margin: 0;
 }
+#create_customer .form-fields-columns::before, #create_customer .form-fields-columns::after {
+  display: none;
+}
 #create_customer .form-fields-columns .form-field {
   margin: 0;
   width: 100%;

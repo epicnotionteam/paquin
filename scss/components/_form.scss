@@ -380,6 +380,11 @@ label {
         @include rem( row-gap, 12px );
         display: grid;
         margin: 0;
+        // Remove inherited pseudo elements
+        &::before,
+        &::after {
+            display: none;
+        }
         // Fieldset
         .form-field {
             margin: 0;

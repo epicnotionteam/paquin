@@ -64,30 +64,6 @@
                 <a class="item__phone--primary" href="tel:2162615700 ">(216) 261-5700 </a>
                 <a class="item__phone--secondary" href="tel:18002605664">1-800-260-5664</a>
             </div>
-
-            <!--
-            <h3 class="h5">Contact Our Sales Team</h3>
-            {% comment %} Container [Phone] {% endcomment %}
-            <div class="container--phone">
-                {% comment %} Phone {% endcomment %}
-                {% if section_method_phone != blank %}
-                    {% assign formatted_phone = section_method_phone | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                    <a href="tel:{{ formatted_phone }}" class="method--phone link--icon-after link--icon-arrow-outgoing">{{ section_method_phone }}</a>
-                {% endif %}
-                {% comment %} Phone [Alt] {% endcomment %}
-                {% if section_method_phone_alt != blank %}
-                    {% assign formatted_phone_alt = section_method_phone_alt | replace: ' ', '' | replace: '-', '' | replace: '(', '' | replace: ')', '' | replace: '.', '' %}
-                    <a href="tel:{{ formatted_phone_alt }}" class="method--phone-alt link--icon-after link--icon-arrow-outgoing">{{ section_method_phone_alt }}</a>
-                {% endif %}
-            </div>
-            {% comment %} Address {% endcomment %}
-            {% if section_method_address != blank %}
-                <hr class="divider--base">
-                <h3 class="h5">Visit or write to us</h3>
-                <p class="method--address">{{ section_method_address }}</p>
-            {% endif %}
-            -->
-
         </div>
     </div>
 </section>
@@ -138,24 +114,6 @@
             "id": "form",
             "label": "Form Embed",
             "default": "<p>Form embed code</p>"
-        },
-        {
-            "type": "text",
-            "id": "method_phone",
-            "label": "Phone [Local]",
-            "default": "Phone number"
-        },
-        {
-            "type": "text",
-            "id": "method_phone_alt",
-            "label": "Phone [Alternative]",
-            "default": "Alternative phone number"
-        },
-        {
-            "type": "text",
-            "id": "method_address",
-            "label": "Address",
-            "default": "Address"
         },
         {
             "type": "select",

@@ -155,7 +155,7 @@
             "image_type": "logo",
             "heading": "Global Intex",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "Learn more",
+            "link_text": "",
             "link_url": "shopify:\/\/pages\/global-intex"
           }
         },
@@ -166,7 +166,7 @@
             "image_type": "logo",
             "heading": "Excel Manufacturing",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "Learn more",
+            "link_text": "",
             "link_url": "shopify:\/\/pages\/excel-manufacturing"
           }
         },
@@ -177,7 +177,7 @@
             "image_type": "logo",
             "heading": "Paquin Distribution",
             "content": "<p>At our core, we are a hybrid distribution organization, focusing on hydraulics, pneumatics & control systems.<\/p>",
-            "link_text": "Learn more",
+            "link_text": "",
             "link_url": "shopify:\/\/pages\/paquin-distribution"
           }
         }
@@ -262,6 +262,13 @@
             "image": "shopify:\/\/shop_images\/asset__certification--ce.svg",
             "title": "Conformité Européenne"
           }
+        },
+        "certification_Fa4Fw8": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__certification--nfpa.svg",
+            "title": "National Fluid Power Association"
+          }
         }
       },
       "block_order": [
@@ -273,7 +280,8 @@
         "certification_eCHL6W",
         "certification_9LVLR7",
         "certification_36ihUa",
-        "certification_C3GeDM"
+        "certification_C3GeDM",
+        "certification_Fa4Fw8"
       ],
       "settings": {
         "heading": "Certified Excellence",

@@ -3902,8 +3902,8 @@ hr,
   display: block;
 }
 .feed--block .item .item__image.variant--logo {
-  max-height: 56px;
-  max-height: 5.6rem;
+  max-height: 48px;
+  max-height: 4.8rem;
   max-width: 128px;
   max-width: 12.8rem;
   height: 100%;

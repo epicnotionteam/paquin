@@ -31,7 +31,7 @@
             // Variant [Logo]
             &.variant--logo {
                 @include rem((
-                    max-height: 56px,
+                    max-height: 48px,
                     max-width: 128px
                 ));
                 height: 100%;

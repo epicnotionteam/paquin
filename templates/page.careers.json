@@ -119,7 +119,7 @@
         "role_block_9c4HLG": {
           "type": "role-block",
           "settings": {
-            "title": "Technical Support Engineer",
+            "title": "Metrology Lab Engineer\/Technician",
             "division": "Paquin Sensors",
             "location": "West Union, SC",
             "link": "https:\/\/www.linkedin.com\/"
@@ -128,7 +128,7 @@
         "role_block_HnCGaK": {
           "type": "role-block",
           "settings": {
-            "title": "Technical Support Engineer",
+            "title": "Design Engineer",
             "division": "Paquin Sensors",
             "location": "West Union, SC",
             "link": "https:\/\/www.linkedin.com\/"
@@ -137,17 +137,37 @@
         "role_block_nMYg6r": {
           "type": "role-block",
           "settings": {
-            "title": "Technical Support Engineer",
+            "title": "Administrative Assistant",
             "division": "Paquin Sensors",
             "location": "West Union, SC",
             "link": "https:\/\/www.linkedin.com\/"
+          }
+        },
+        "role_block_q69pjm": {
+          "type": "role-block",
+          "settings": {
+            "title": "Mechanical Engineer",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": ""
+          }
+        },
+        "role_block_VJEE4A": {
+          "type": "role-block",
+          "settings": {
+            "title": "Inside Sales",
+            "division": "Paquin Sensors",
+            "location": "West Union, SC",
+            "link": ""
           }
         }
       },
       "block_order": [
         "role_block_9c4HLG",
         "role_block_HnCGaK",
-        "role_block_nMYg6r"
+        "role_block_nMYg6r",
+        "role_block_q69pjm",
+        "role_block_VJEE4A"
       ],
       "settings": {
         "heading_small": "Current Openings",

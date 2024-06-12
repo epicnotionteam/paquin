@@ -614,10 +614,11 @@
 
 // Component container
 .feed--method {
+    // item container
     .item {
         @include rem( padding, spacing(5) 0 );
         border-top: $border--base;
-        &:not(:first-child) {
+        &:first-child {
             border-top: 0 none;
             padding-top: 0;
         }

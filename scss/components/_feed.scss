@@ -632,7 +632,11 @@
         // Phone [All]
         [class*=item__phone--] {
             @include font-size( 'small' );
+            @include rem( margin-bottom, spacing(1) );
+            color: color( 'action', '1' );
             display: block;
+            font-weight: font-weight( 'bold' );
+            text-decoration: none;
         }
     }
 }

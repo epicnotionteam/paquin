@@ -4437,7 +4437,12 @@ hr,
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+  color: #0F7F92;
   display: block;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .productgrid--sidebar {

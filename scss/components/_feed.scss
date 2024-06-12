@@ -618,9 +618,20 @@
     .item {
         @include rem( padding, spacing(5) 0 );
         border-top: $border--base;
+        // Adjust first item
         &:first-child {
             border-top: 0 none;
             padding-top: 0;
+        }
+        // Address
+        .item__address {
+            @include font-size( 'small' );
+            display: block;
+        }
+        // Phone [All]
+        [class*=item__phone--] {
+            @include font-size( 'small' );
+            display: block;
         }
     }
 }

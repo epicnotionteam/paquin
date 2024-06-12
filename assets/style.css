@@ -4421,6 +4421,22 @@ hr,
   border-top: 0 none;
   padding-top: 0;
 }
+.feed--method .item .item__address {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  display: block;
+}
+.feed--method .item [class*=item__phone--] {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  display: block;
+}
 
 .productgrid--sidebar {
   width: 100%;

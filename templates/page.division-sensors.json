@@ -116,10 +116,10 @@
             "collection": "hvac-refrigeration"
           }
         },
-        "collection_UdDV68": {
+        "collection_BXR8KM": {
           "type": "collection",
           "settings": {
-            "collection": "hydrogen"
+            "collection": "food-beverage"
           }
         }
       },
@@ -129,7 +129,7 @@
         "collection_TyRFGP",
         "collection_XT7BRx",
         "collection_NcBkKQ",
-        "collection_UdDV68"
+        "collection_BXR8KM"
       ],
       "settings": {
         "heading_small": "Related Industries",

@@ -626,6 +626,7 @@
         // Address
         .item__address {
             @include font-size( 'small' );
+            @include rem( margin-bottom, spacing(2) );
             display: block;
         }
         // Phone [All]

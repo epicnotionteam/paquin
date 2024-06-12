@@ -4427,6 +4427,8 @@ hr,
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   display: block;
 }
 .feed--method .item [class*=item__phone--] {

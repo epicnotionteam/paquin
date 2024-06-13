@@ -127,7 +127,7 @@
 
 // Section container
 .section--hero-internal.variant--has-image {
-    @include rem( min-height, 512px );
+    @include rem( min-height, 544px );
     padding: 0;
     // Container [Content]
     .container--content {

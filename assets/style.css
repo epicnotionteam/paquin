@@ -2499,8 +2499,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .section--hero-internal.variant--has-image {
-  min-height: 512px;
-  min-height: 51.2rem;
+  min-height: 544px;
+  min-height: 54.4rem;
   padding: 0;
 }
 .section--hero-internal.variant--has-image .container--content {

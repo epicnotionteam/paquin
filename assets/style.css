@@ -2000,9 +2000,16 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--content-media-split .section__grid .container--content .section__wrap--content .section__content p:last-child {
   margin: 0;
 }
+.section--content-media-split .section__grid .container--media {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
 .section--content-media-split .section__grid .container--media img {
   display: block;
-  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 64em) {
@@ -2030,6 +2037,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     max-width: 51.2rem;
   }
   .section--content-media-split .section__grid .container--media {
+    aspect-ratio: unset;
     grid-column: 7/span 6;
   }
 }

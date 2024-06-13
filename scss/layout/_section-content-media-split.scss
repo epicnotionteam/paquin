@@ -46,9 +46,16 @@
             }
         }
         // Container [Media] » Image
-        .container--media img {
-            display: block;
-            max-width: 100%;
+        .container--media {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            img {
+                display: block;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 }
@@ -81,6 +88,7 @@
             }
             // Container [Media]
             .container--media {
+                aspect-ratio: unset;
                 grid-column: 7 / span 6;
             }
         }

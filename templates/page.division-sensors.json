@@ -86,28 +86,28 @@
     "division-sensors-markets": {
       "type": "feed-collection",
       "blocks": {
-        "collection_TMAND6": {
+        "collection_Kk63zK": {
           "type": "collection",
           "settings": {
-            "collection": "automation-controls"
+            "collection": "ag-equipment"
           }
         },
-        "collection_XRkn94": {
+        "collection_e4cixi": {
           "type": "collection",
           "settings": {
-            "collection": "compactors"
+            "collection": "breweries-wineries"
           }
         },
-        "collection_TyRFGP": {
+        "collection_GPt3be": {
           "type": "collection",
           "settings": {
-            "collection": "compressors"
+            "collection": "factory-floor-safety"
           }
         },
-        "collection_XT7BRx": {
+        "collection_BXR8KM": {
           "type": "collection",
           "settings": {
-            "collection": "gas-oil"
+            "collection": "food-beverage"
           }
         },
         "collection_NcBkKQ": {
@@ -116,20 +116,20 @@
             "collection": "hvac-refrigeration"
           }
         },
-        "collection_BXR8KM": {
+        "collection_wPFKrF": {
           "type": "collection",
           "settings": {
-            "collection": "food-beverage"
+            "collection": "manufacturing-equipment"
           }
         }
       },
       "block_order": [
-        "collection_TMAND6",
-        "collection_XRkn94",
-        "collection_TyRFGP",
-        "collection_XT7BRx",
+        "collection_Kk63zK",
+        "collection_e4cixi",
+        "collection_GPt3be",
+        "collection_BXR8KM",
         "collection_NcBkKQ",
-        "collection_BXR8KM"
+        "collection_wPFKrF"
       ],
       "settings": {
         "heading_small": "Related Industries",

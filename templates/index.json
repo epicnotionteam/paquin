@@ -113,6 +113,7 @@
         "carousel_block_jLTDzz": {
           "type": "carousel-block",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/asset__partnership--home.jpg",
             "subheading": "Your Success is Our Priority",
             "heading": "Partnerships Built on Expertise and Commitment",
             "heading_size": "h2",

@@ -100,6 +100,7 @@
         "carousel_block_Xx43p6": {
           "type": "carousel-block",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/istockphoto-483784268-2048x2048.webp",
             "subheading": "Quality You Can Trust",
             "heading": "Rigorous Testing for Truly Unmatched Reliability",
             "heading_size": "h2",

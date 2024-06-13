@@ -3837,8 +3837,15 @@ blockquote {
   color: #66787F;
   transition: color 0.16s ease-out;
 }
+.carousel--content-media .item .item__grid .container--media {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
 .carousel--content-media .item .item__grid .container--media img {
   display: block;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
   width: 100%;
 }
 
@@ -3861,6 +3868,9 @@ blockquote {
   }
   .carousel--content-media .item .item__grid .container--content .item__wrap--actions {
     margin-top: auto;
+  }
+  .carousel--content-media .item .item__grid .container--media {
+    aspect-ratio: unset;
   }
 }
 .carousel--content-media .item .item__grid .container--content .item__wrap--actions .item__navigation .trigger--next:hover {

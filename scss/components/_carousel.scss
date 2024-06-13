@@ -91,9 +91,14 @@
             }
             // Container [Media]
             .container--media {
+                aspect-ratio: 4/3;
+                overflow: hidden;
                 // Image
                 img {
                     display: block;
+                    object-fit: cover;
+                    object-position: center;
+                    height: 100%;
                     width: 100%;
                 }
             }
@@ -127,6 +132,10 @@
                     .item__wrap--actions {
                         margin-top: auto;
                     }
+                }
+                // Container [Media]
+                .container--media {
+                    aspect-ratio: unset;
                 }
             }
         }

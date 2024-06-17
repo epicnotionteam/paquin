@@ -53,6 +53,11 @@
 			box-shadow: 0 0 0 1px white inset;
 		}
 	}
+	// Component [Feed, Collection]
+	// Adjust item border
+	.feed--collection .item .item__wrap--image {
+		border: $border--dark;
+	}
 	// Component [Feed, Role]
 	// Adjust item border
 	.feed--role .item {

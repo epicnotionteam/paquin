@@ -278,6 +278,7 @@ label {
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 128;
         // Button
         button.submit {
             @extend %button--base;

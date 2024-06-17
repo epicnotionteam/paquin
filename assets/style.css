@@ -4714,6 +4714,7 @@ label {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 128;
 }
 .form--newsletter-subscription .gfb__footer button.submit {
   height: 54px;

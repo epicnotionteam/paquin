@@ -64,7 +64,7 @@
         "cta_primary": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary": "Shop For Parts",
-        "cta_secondary_url": "#test",
+        "cta_secondary_url": "\/collections\/all\/",
         "image": "shopify:\/\/shop_images\/asset__hero--home.jpg"
       }
     },

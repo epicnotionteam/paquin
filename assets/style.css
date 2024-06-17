@@ -4266,6 +4266,9 @@ hr,
   .template-collection .productgrid--items {
     grid-template-columns: repeat(4, 1fr);
   }
+  .template-collection .productgrid--items .productitem .productitem--actions {
+    display: block;
+  }
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
   }

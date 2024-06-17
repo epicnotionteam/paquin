@@ -391,6 +391,13 @@
     // Adjust grid structure
     .template-collection .productgrid--items {
         grid-template-columns: repeat( 4, 1fr );
+        // Item wrap
+        .productitem {
+            // Container [Actions]
+            .productitem--actions {
+                display: block;
+            }
+        }
     }
 
     // State management

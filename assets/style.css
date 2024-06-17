@@ -4178,6 +4178,7 @@ hr,
   row-gap: 32px;
   row-gap: 3.2rem;
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .productgrid--items .productgrid--item {
   padding: 0;
@@ -4250,6 +4251,7 @@ hr,
   bottom: 1.2rem;
   margin: 0 12px;
   margin: 0 1.2rem;
+  display: none;
 }
 .productgrid--items .productgrid--item .productitem .productitem--actions .container--actions {
   margin-top: 12px;
@@ -4264,11 +4266,10 @@ hr,
   .template-collection .productgrid--items {
     grid-template-columns: repeat(4, 1fr);
   }
+  .template-collection .productgrid--items .productgrid--item:hover .productitem {
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
+  }
 }
-.template-collection .productgrid--items .productgrid--item:hover .productitem {
-  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
-}
-
 .feed--role .item {
   padding: 24px 0;
   padding: 2.4rem 0;

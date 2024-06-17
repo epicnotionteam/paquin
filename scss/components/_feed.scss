@@ -316,6 +316,7 @@
         row-gap: spacing(5) 
     ));
     display: grid;
+    grid-template-columns: 1fr 1fr;
     // Item container
     .productgrid--item {
         padding: 0;
@@ -371,6 +372,7 @@
                     bottom: 12px,
                     margin: 0 12px 
                 ));
+                display: none;
                 .container--actions {
                     @include rem(( 
                         margin-top: 12px,
@@ -390,14 +392,15 @@
     .template-collection .productgrid--items {
         grid-template-columns: repeat( 4, 1fr );
     }
-}
 
-// State management
-.template-collection .productgrid--items {
-    // Item:hover
-    .productgrid--item:hover .productitem {
-        box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 ) !important;
+    // State management
+    .template-collection .productgrid--items {
+        // Item:hover
+        .productgrid--item:hover .productitem {
+            box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 ) !important;
+        }
     }
+
 }
 
 

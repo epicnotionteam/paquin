@@ -3,6 +3,7 @@
     "division-sensors-hero",
     "division-sensors-about",
     "division-sensors-product-types",
+    "hero_inline_yqmAAy",
     "division-sensors-markets"
   ],
   "sections": {
@@ -83,6 +84,18 @@
         "theme": "alt"
       }
     },
+    "hero_inline_yqmAAy": {
+      "type": "hero-inline",
+      "settings": {
+        "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
+        "cta_primary_text": "Contact our team",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_secondary_text": "",
+        "cta_secondary_url": "",
+        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
+      }
+    },
     "division-sensors-markets": {
       "type": "feed-collection",
       "blocks": {
@@ -133,7 +146,7 @@
       ],
       "settings": {
         "heading_small": "Related Industries",
-        "theme": "base"
+        "theme": "dark"
       }
     }
   }

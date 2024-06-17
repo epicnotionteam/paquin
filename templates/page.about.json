@@ -401,7 +401,7 @@
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary_text": "Shop For Parts",
         "cta_secondary_url": "shopify:\/\/collections",
-        "image": "shopify:\/\/shop_images\/asset__cta--inline.jpg"
+        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
       }
     },
     "about-process": {

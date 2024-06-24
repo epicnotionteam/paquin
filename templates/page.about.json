@@ -351,15 +351,6 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
-        },
-        "team_block_rFaGqx": {
-          "type": "team-block",
-          "settings": {
-            "name": "Michael Schemel",
-            "role": "Engineering",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
         }
       },
       "block_order": [
@@ -390,8 +381,7 @@
         "team_block_QXYTMf",
         "team_block_bwxHqq",
         "team_block_MMdbKa",
-        "team_block_gNpQyc",
-        "team_block_rFaGqx"
+        "team_block_gNpQyc"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

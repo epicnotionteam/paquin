@@ -160,7 +160,7 @@
         "content_block_LVEVAK": {
           "type": "content-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo__global-intex--mono.svg",
+            "image": "shopify:\/\/shop_images\/logo__global-intex--mono_f849e039-2185-4396-8a33-2743c8ce2546.svg",
             "image_type": "logo",
             "heading": "Global Intex",
             "content": "<p>Specializing in ruggedized connectivity solutions including cable harnesses and electrical connectors for hazardous and non-hazardous environments.<\/p>",
@@ -171,7 +171,7 @@
         "content_block_p9Ei6p": {
           "type": "content-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo__excel--mono.svg",
+            "image": "shopify:\/\/shop_images\/logo__excel--mono_dc126f41-1230-4391-9b2f-ec2e209b297c.svg",
             "image_type": "logo",
             "heading": "Excel Manufacturing",
             "content": "<p>Provides high-precision valves, actuators and more, with optional globally approved explosion proof certifications.<\/p>",

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "order": [
     "about-hero",
@@ -177,12 +186,12 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--phil-marcantonio.jpg"
           }
         },
-        "team_block_6GiA4R": {
+        "team_block_wMtKQF": {
           "type": "team-block",
           "settings": {
             "name": "Michael Graf",
             "role": "President",
-            "social": "#test",
+            "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
@@ -256,6 +265,15 @@
             "role": "Inside Sales & Technical Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
+          }
+        },
+        "team_block_6ncgNr": {
+          "type": "team-block",
+          "settings": {
+            "name": "Michael Graf",
+            "role": "President",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
         "team_block_7BciN8": {
@@ -387,7 +405,7 @@
         "team_block_MMdbKa": {
           "type": "team-block",
           "settings": {
-            "name": "Jimmy [LASTNAME]",
+            "name": "Jimmy Havel",
             "role": "Shipping & Receiving",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
@@ -401,21 +419,12 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
-        },
-        "team_block_rFaGqx": {
-          "type": "team-block",
-          "settings": {
-            "name": "Michael Schemel",
-            "role": "Engineering",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
         }
       },
       "block_order": [
         "team_block_iF8RzN",
         "team_block_AzXKfX",
-        "team_block_6GiA4R",
+        "team_block_wMtKQF",
         "team_block_DkgWrB",
         "team_block_iNbQHr",
         "team_block_VVkxqW",
@@ -424,6 +433,7 @@
         "team_block_83FGGw",
         "team_block_ewAeCV",
         "team_block_yWNiie",
+        "team_block_6ncgNr",
         "team_block_7BciN8",
         "team_block_qcaiPR",
         "team_block_TEJECm",
@@ -439,8 +449,7 @@
         "team_block_QXYTMf",
         "team_block_bwxHqq",
         "team_block_MMdbKa",
-        "team_block_gNpQyc",
-        "team_block_rFaGqx"
+        "team_block_gNpQyc"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

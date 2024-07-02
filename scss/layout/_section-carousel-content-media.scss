@@ -60,25 +60,34 @@
 // Section [Divisions]
 // --------------------------------------------------
 
-// 'Tab' Navigation container
-.container--navigation .container--tabs {
-    @include rem( column-gap, spacing(3) );
-    display: inline-flex;
-    // Item button
-    .button--carousel-tab {
-        align-items: center;
-        background-color: transparent;
-        border: none;
-        display: inline-flex;
-        justify-content: center;
-        padding: 0;
-        white-space: nowrap;
-        width: auto;
+.section--carousel-content-media.variant--division {
+    // Adjust grid structure
+    .section__grid {
+        @include rem( row-gap, spacing(2) );
+        // 'Tab' Navigation container
+        .container--navigation {
+            grid-column: 1 / span 12;
+            .container--tabs {
+                @include rem( column-gap, spacing(3) );
+                display: inline-flex;
+                // Item button
+                .button--carousel-tab {
+                    align-items: center;
+                    background-color: transparent;
+                    border: none;
+                    display: inline-flex;
+                    justify-content: center;
+                    padding: 0;
+                    white-space: nowrap;
+                    width: auto;
+                }
+            }
+        }
     }
 }
 
 // State management
 // Item button [:Active]
-.container--navigation .container--tabs .button--carousel-tab.state--active {
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active {
     color: color( 'action', '1' );
 }

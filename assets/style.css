@@ -1810,12 +1810,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
-.container--navigation .container--tabs {
+.section--carousel-content-media.variant--division .section__grid {
+  row-gap: 8px;
+  row-gap: 0.8rem;
+}
+.section--carousel-content-media.variant--division .section__grid .container--navigation {
+  grid-column: 1/span 12;
+}
+.section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs {
   column-gap: 16px;
   column-gap: 1.6rem;
   display: inline-flex;
 }
-.container--navigation .container--tabs .button--carousel-tab {
+.section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs .button--carousel-tab {
   align-items: center;
   background-color: transparent;
   border: none;
@@ -1826,7 +1833,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: auto;
 }
 
-.container--navigation .container--tabs .button--carousel-tab.state--active {
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active {
   color: #0F7F92;
 }
 

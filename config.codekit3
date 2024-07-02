@@ -1303,6 +1303,14 @@
       "oAP" : "\/sections\/404.liquid",
       "oF" : 0
     },
+    "\/sections\/about-carousel-content-media.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/about-carousel-content-media.liquid",
+      "oF" : 0
+    },
     "\/sections\/account.liquid" : {
       "cB" : 0,
       "ft" : 8192,

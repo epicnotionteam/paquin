@@ -15,8 +15,7 @@
     "about-history",
     "about-hero-cta",
     "about-process",
-    "about-careers",
-    "about-divisions"
+    "about-careers"
   ],
   "sections": {
     "about-hero": {
@@ -488,73 +487,6 @@
         "link_url": "shopify:\/\/pages\/careers",
         "image": "shopify:\/\/shop_images\/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
         "theme": "dark"
-      }
-    },
-    "about-divisions": {
-      "type": "carousel-content-media",
-      "blocks": {
-        "carousel_block_XfzB8a": {
-          "type": "carousel-block",
-          "settings": {
-            "subheading": "Paquin Sensors",
-            "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
-            "heading_size": "h2",
-            "content": "<p>At our core, we are your trusted source for high quality sensors as well as a multitude of related components. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
-            "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/paquin-sensors",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__about--sensors.jpg"
-          }
-        },
-        "carousel_block_aNeN4P": {
-          "type": "carousel-block",
-          "settings": {
-            "subheading": "Global Intex",
-            "heading": "Innovative Electrical Connectors & Cable Assemblies",
-            "heading_size": "h2",
-            "content": "<p>Global Intex specializes in manufacturing custom ruggedized electrical connectors and cable harnesses. The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.<\/p>",
-            "link_text": "",
-            "link_url": "",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__global-intex.jpg"
-          }
-        },
-        "carousel_block_bUtLUi": {
-          "type": "carousel-block",
-          "settings": {
-            "subheading": "Excel Manufacturing",
-            "heading": "Precision, Quality, and Innovation",
-            "heading_size": "h2",
-            "content": "<p>An ISO 9001 certified division, specializing in producing high-precision valve actuators and other custom instruments. With engineering, testing, production, and validation all done in-house, every part undergoes rigorous quality control.<\/p>",
-            "link_text": "",
-            "link_url": "",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__about--excel.jpg"
-          }
-        },
-        "carousel_block_yRqdhQ": {
-          "type": "carousel-block",
-          "settings": {
-            "subheading": "Paquin Distribution",
-            "heading": "Excellence in Service and Logistics",
-            "heading_size": "h2",
-            "content": "<p>This division specializes in distributing a wide array of hydraulic, pneumatic, and linear motion control components. It emphasizes excellent customer service, efficient logistics, and maintaining a comprehensive inventory.<\/p>",
-            "link_text": "",
-            "link_url": "",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__excel-manufacturing.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "carousel_block_XfzB8a",
-        "carousel_block_aNeN4P",
-        "carousel_block_bUtLUi",
-        "carousel_block_yRqdhQ"
-      ],
-      "settings": {
-        "heading_small": "Our Specialized Divisions",
-        "theme": "base"
       }
     }
   }

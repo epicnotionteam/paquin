@@ -1811,10 +1811,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--carousel-content-media.variant--division .section__grid {
-  row-gap: 8px;
-  row-gap: 0.8rem;
+  row-gap: 16px;
+  row-gap: 1.6rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   grid-column: 1/span 12;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs {
@@ -1823,11 +1825,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: inline-flex;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs .button--carousel-tab {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
   align-items: center;
   background-color: transparent;
   border: none;

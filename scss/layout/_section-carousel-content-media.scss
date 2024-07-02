@@ -63,7 +63,8 @@
 // 'Tab' Navigation container
 .container--navigation .container--tabs {
     @include rem( column-gap, spacing(3) );
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, max-content );
     // Item button
     .button--carousel-tab {
         background-color: transparent;
@@ -75,6 +76,6 @@
 
 // State management
 // Item button [:Active]
-.container--tab-navigation .button--carousel-tab.state--active {
+.container--navigation .container--tabs .button--carousel-tab.state--active {
     color: color( 'action', '1' );
 }

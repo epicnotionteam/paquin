@@ -1813,7 +1813,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .container--navigation .container--tabs {
   column-gap: 16px;
   column-gap: 1.6rem;
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, max-content);
 }
 .container--navigation .container--tabs .button--carousel-tab {
   background-color: transparent;
@@ -1822,7 +1823,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: auto;
 }
 
-.container--tab-navigation .button--carousel-tab.state--active {
+.container--navigation .container--tabs .button--carousel-tab.state--active {
   color: #0F7F92;
 }
 

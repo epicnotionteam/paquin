@@ -113,20 +113,35 @@
     document.addEventListener('DOMContentLoaded', function () {
         // Get all carousel containers on current page
         const carouselContainers = document.querySelectorAll('.section--carousel-content-media [data-carousel]');
+        
         // Initialize each carousel
         carouselContainers.forEach(function (container) {
             const carouselId = container.dataset.carousel;
-            const glide = new Glide(`[data-carousel="${carouselId}"]`, {
+            const glideElement = container.querySelector('.glide');
+            const tabItems = container.querySelectorAll('.tab-navigation__item');
+            
+            const glide = new Glide(glideElement, {
                 type: 'carousel',
                 perView: 1,
                 animationDuration: 800,
                 gap: 40,
-            }).mount();
-
-            // Add active class to current tab
+            });
+    
+            // Update active tab on slide change
             glide.on('move', function() {
+                updateActiveTab();
+            });
+    
+            // Handle tab click
+            tabItems.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    glide.go(`=${index}`);
+                });
+            });
+    
+            // Update active tab
+            function updateActiveTab() {
                 const activeIndex = glide.index;
-                const tabItems = container.querySelectorAll('.tab-navigation__item');
                 tabItems.forEach((item, index) => {
                     if (index === activeIndex) {
                         item.classList.add('active');
@@ -134,7 +149,13 @@
                         item.classList.remove('active');
                     }
                 });
-            });
+            }
+    
+            // Mount Glide
+            glide.mount();
+    
+            // Initial active tab update
+            updateActiveTab();
         });
     });
 </script>

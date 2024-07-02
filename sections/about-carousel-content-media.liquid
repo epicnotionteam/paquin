@@ -111,46 +111,18 @@
 {% comment %} Carousel initialization {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        console.log('DOM fully loaded and parsed');
-    
-        if (typeof Glide === 'undefined') {
-            console.error('Glide.js is not loaded. Please make sure it is included before this script.');
-            return;
-        }
-    
-        console.log('Glide.js is available');
-    
+        if (typeof Glide === 'undefined') return;
         const carouselContainers = document.querySelectorAll('.section--carousel-content-media');
-        console.log('Found', carouselContainers.length, 'carousel containers');
-    
-        carouselContainers.forEach(function (container, containerIndex) {
-            console.log('Initializing carousel', containerIndex);
-    
+        carouselContainers.forEach(function (container) {
             const glideElement = container.querySelector('.glide');
-            if (!glideElement) {
-                console.error(`Glide element not found in container ${containerIndex}`);
-                return;
-            }
-    
-            const glideTrack = glideElement.querySelector('.glide__track');
+            if (!glideElement) return;
             const glideSlides = glideElement.querySelector('.glide__slides');
             const slides = glideSlides ? glideSlides.children : [];
-    
-            if (!glideTrack || !glideSlides || slides.length === 0) {
-                console.error(`Invalid Glide structure in container ${containerIndex}`);
-                return;
-            }
-    
-            console.log(`Found ${slides.length} slides in container ${containerIndex}`);
-    
+            if (!glideSlides || slides.length === 0) return;
             const tabItems = container.querySelectorAll('.tab-navigation__item');
-            console.log('Found', tabItems.length, 'tab items');
-    
             const nextButton = container.querySelector('.trigger--next');
-            console.log(nextButton ? 'Next button found' : 'Next button not found');
-    
             try {
-                console.log('Attempting to create Glide instance');
+                // Initialize Glide carousel
                 const glide = new Glide(glideElement, {
                     type: 'carousel',
                     perView: 1,
@@ -158,71 +130,47 @@
                     gap: 40,
                     startAt: 0
                 });
-    
+                // Function to reset carousel to first slide
                 function resetToFirstSlide() {
                     glide.go('=0');
                     updateActiveTab();
                     updateSlideCount();
-                    console.log('Carousel reset to first slide');
                 }
-    
-                glide.on('mount.after', function () {
-                    console.log('Glide mounted successfully');
-                    resetToFirstSlide();
-                });
-    
+                // Event listeners for Glide
+                glide.on('mount.after', resetToFirstSlide);
                 glide.on('run.after', function () {
-                    console.log('Slide changed to index:', glide.index);
                     updateActiveTab();
                     updateSlideCount();
                 });
-    
+                // Set up tab navigation
                 tabItems.forEach((tab, index) => {
-                    tab.addEventListener('click', () => {
-                        console.log(`Tab ${index} clicked`);
-                        glide.go(`=${index}`);
-                    });
+                    tab.addEventListener('click', () => glide.go(`=${index}`));
                 });
-    
+                // Set up next button
                 if (nextButton) {
-                    nextButton.addEventListener('click', () => {
-                        console.log('Next button clicked');
-                        glide.go('>');
-                    });
+                    nextButton.addEventListener('click', () => glide.go('>'));
                 }
-    
+                // Update active tab indicator
                 function updateActiveTab() {
                     const activeIndex = glide.index;
                     tabItems.forEach((item, index) => {
-                        if (index === activeIndex) {
-                            item.classList.add('active');
-                        } else {
-                            item.classList.remove('active');
-                        }
+                        item.classList.toggle('active', index === activeIndex);
                     });
-                    console.log(`Active tab updated to index: ${activeIndex}`);
                 }
-    
+                // Update slide count display
                 function updateSlideCount() {
                     const countElement = container.querySelector('.item__count');
                     if (countElement) {
                         const currentIndex = glide.index + 1;
                         const totalSlides = slides.length;
                         countElement.textContent = `${currentIndex} / ${totalSlides}`;
-                        console.log(`Slide count updated: ${currentIndex} / ${totalSlides}`);
-                    } else {
-                        console.warn('Slide count element not found');
                     }
                 }
-    
-                console.log('Mounting Glide');
+                // Mount Glide and ensure it starts on the first slide
                 glide.mount();
-    
-                // Force reset to first slide after a short delay
                 setTimeout(resetToFirstSlide, 100);
-    
             } catch (error) {
-                console.error(`Error initializing Glide for container ${containerIndex}:`, error);
+                // Silently fail if there's an error
             }
         });
     });

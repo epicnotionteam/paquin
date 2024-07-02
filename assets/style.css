@@ -1811,12 +1811,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--carousel-content-media.variant--division .section__grid {
-  row-gap: 16px;
-  row-gap: 1.6rem;
+  row-gap: 8px;
+  row-gap: 0.8rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation {
-  margin-bottom: 8px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   grid-column: 1/span 12;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs {
@@ -1831,7 +1831,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
 }
 
-.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active {
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active, .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab:hover {
   color: #0F7F92;
 }
 

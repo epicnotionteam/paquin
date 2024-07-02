@@ -63,10 +63,10 @@
 .section--carousel-content-media.variant--division {
     // Adjust grid structure
     .section__grid {
-        @include rem( row-gap, spacing(3) );
+        @include rem( row-gap, spacing(2) );
         // 'Tab' Navigation container
         .container--navigation {
-            @include rem( margin-bottom, spacing(2) );
+            @include rem( margin-bottom, spacing(4) );
             grid-column: 1 / span 12;
             .container--tabs {
                 @include rem( column-gap, spacing(3) );
@@ -84,7 +84,10 @@
 }
 
 // State management
-// Item button [:Active]
-.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active {
-    color: color( 'action', '1' );
+// Item button [:Active, :Hover]
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab {
+    &.state--active,
+    &:hover {
+        color: color( 'action', '1' );
+    }
 }

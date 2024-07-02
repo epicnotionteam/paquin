@@ -1815,8 +1815,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   row-gap: 1.6rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation {
-  margin-bottom: 32px;
-  margin-bottom: 3.2rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs {
   column-gap: 16px;
@@ -1838,8 +1838,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     row-gap: 0.8rem;
   }
   .section--carousel-content-media.variant--division .section__grid .container--navigation {
-    margin-bottom: 40px;
-    margin-bottom: 4rem;
     grid-column: 1/span 12;
   }
 }
@@ -1849,6 +1847,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab:hover {
   color: #0F7F92;
   text-decoration: underline;
+  transition: color 0s;
 }
 
 .section--content-blocks {

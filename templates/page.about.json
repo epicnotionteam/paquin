@@ -203,15 +203,6 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
           }
         },
-        "team_block_6ncgNr": {
-          "type": "team-block",
-          "settings": {
-            "name": "Michael Graf",
-            "role": "President",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
-          }
-        },
         "team_block_7BciN8": {
           "type": "team-block",
           "settings": {
@@ -369,7 +360,6 @@
         "team_block_83FGGw",
         "team_block_ewAeCV",
         "team_block_yWNiie",
-        "team_block_6ncgNr",
         "team_block_7BciN8",
         "team_block_qcaiPR",
         "team_block_TEJECm",

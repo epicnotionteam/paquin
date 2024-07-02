@@ -1810,6 +1810,17 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
+.container--tab-navigation ul {
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  display: inline-flex;
+}
+.container--tab-navigation ul button {
+  background-color: transparent;
+  border: 0 none;
+  width: auto;
+}
+
 .section--content-blocks {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

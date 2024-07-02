@@ -55,3 +55,19 @@
         }
     }
 }
+
+
+// Section [Divisions]
+// --------------------------------------------------
+
+// 'Tab' Navigation container
+.container--tab-navigation ul {
+    @include rem( column-gap, spacing(3) );
+    display: inline-flex;
+    // Item link
+    button {
+        background-color: transparent;
+        border: 0 none;
+        width: auto;
+    }
+}

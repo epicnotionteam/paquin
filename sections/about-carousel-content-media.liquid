@@ -140,16 +140,19 @@
                 console.warn(`No tab items found in container ${containerIndex}`);
             }
     
+            console.log(`Initializing Glide for container ${containerIndex}`);
+    
             const glide = new Glide(glideElement, {
                 type: 'carousel',
                 perView: 1,
                 animationDuration: 800,
                 gap: 40,
-                startAt: 0  // Start at the first slide
+                startAt: 0
             });
     
             // Update active tab and slide count on move
             glide.on('move', function() {
+                console.log(`Slide moved to index: ${glide.index}`);
                 updateActiveTab();
                 updateSlideCount();
             });
@@ -157,6 +160,7 @@
             // Handle tab click
             tabItems.forEach((tab, index) => {
                 tab.addEventListener('click', () => {
+                    console.log(`Tab ${index} clicked`);
                     glide.go(`=${index}`);
                 });
             });
@@ -164,8 +168,11 @@
             // Handle next button click
             if (nextButton) {
                 nextButton.addEventListener('click', () => {
+                    console.log('Next button clicked');
                     glide.go('>');
                 });
+            } else {
+                console.warn('Next button not found');
             }
     
             // Update active tab
@@ -178,6 +185,7 @@
                         item.classList.remove('active');
                     }
                 });
+                console.log(`Active tab updated to index: ${activeIndex}`);
             }
     
             // Update slide count
@@ -187,6 +195,9 @@
                     const currentIndex = glide.index + 1;
                     const totalSlides = glide.slides.length;
                     countElement.textContent = `${currentIndex} / ${totalSlides}`;
+                    console.log(`Slide count updated: ${currentIndex} / ${totalSlides}`);
+                } else {
+                    console.warn('Slide count element not found');
                 }
             }
     
@@ -200,7 +211,7 @@
             console.log(`Carousel ${containerIndex} initialized successfully`);
         });
     });
-</script>
+    </script>
 
 {% schema %}
 {

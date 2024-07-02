@@ -63,6 +63,7 @@
 .section--carousel-content-media.variant--division {
     // Adjust grid structure
     .section__grid {
+        @include rem( row-gap, spacing(2) );
         // 'Tab' Navigation container
         .container--navigation {
             @include rem( margin-bottom, spacing(5) );
@@ -88,12 +89,6 @@
     .section--carousel-content-media.variant--division {
         // Adjust grid structure
         .section__grid {
-            @include rem(( 
-                column-gap: spacing(4),
-                row-gap: spacing(2) 
-            ));
-            grid-auto-rows: auto;
-            grid-template-columns: repeat( 12, 1fr );
              // Container ['Tab' Navigation]
             .container--navigation {
                 @include rem( margin-bottom, spacing(6) );
@@ -102,7 +97,6 @@
         }
     }
 }
-
 
 // State management
 // Item button [:Active, :Hover]

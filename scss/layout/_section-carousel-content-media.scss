@@ -89,8 +89,10 @@
     .section--carousel-content-media.variant--division {
         // Adjust grid structure
         .section__grid {
+            @include rem( row-gap, spacing(2) );
              // Container ['Tab' Navigation]
             .container--navigation {
+                @include rem( margin-bottom, spacing(6) );
                 grid-column: 1 / span 12;
             }
         }

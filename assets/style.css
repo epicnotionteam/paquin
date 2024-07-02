@@ -1818,7 +1818,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .container--tab-navigation ul button {
   background-color: transparent;
   border: 0 none;
+  padding: 0;
   width: auto;
+}
+
+.container--tab-navigation ul button.state--active {
+  color: #0F7F92;
 }
 
 .section--content-blocks {

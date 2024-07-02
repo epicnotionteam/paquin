@@ -68,6 +68,13 @@
     button {
         background-color: transparent;
         border: 0 none;
+        padding: 0;
         width: auto;
     }
+}
+
+// State management
+// Item [:Active]
+.container--tab-navigation ul button.state--active {
+    color: color( 'action', '1' );
 }

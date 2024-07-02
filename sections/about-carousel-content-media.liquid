@@ -24,7 +24,7 @@
             <ul class="tab-navigation" data-glide-el="controls[nav]">
                 {% for block in section_blocks %}
                     <li>
-                        <button data-glide-dir="={{ forloop.index0 }}" class="tab-navigation__item{% if forloop.first %} active{% endif %}">
+                        <button data-glide-dir="={{ forloop.index0 }}" class="tab-navigation__item{% if forloop.first %} state--active{% endif %}">
                             {{ block.settings.heading_small }}
                         </button>
                     </li>
@@ -154,7 +154,7 @@
                 function updateActiveTab() {
                     const activeIndex = glide.index;
                     tabItems.forEach((item, index) => {
-                        item.classList.toggle('active', index === activeIndex);
+                        item.classList.toggle('state--active', index === activeIndex);
                     });
                 }
                 // Update slide count display

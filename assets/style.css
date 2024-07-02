@@ -1815,8 +1815,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   row-gap: 0.8rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
   grid-column: 1/span 12;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation .container--tabs {
@@ -1833,6 +1833,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active, .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab:hover {
   color: #0F7F92;
+  cursor: pointer;
 }
 
 .section--content-blocks {

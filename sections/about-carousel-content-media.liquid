@@ -111,15 +111,34 @@
 {% comment %} Carousel initialization {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        // Check if Glide is available
+        if (typeof Glide === 'undefined') {
+            console.error('Glide.js is not loaded. Please make sure it is included before this script.');
+            return;
+        }
+    
         // Get all carousel containers on current page
-        const carouselContainers = document.querySelectorAll('.section--carousel-content-media [data-carousel]');
+        const carouselContainers = document.querySelectorAll('.section--carousel-content-media');
         
+        if (carouselContainers.length === 0) {
+            console.warn('No carousel containers found on the page.');
+            return;
+        }
+    
         // Initialize each carousel
-        carouselContainers.forEach(function (container) {
-            const carouselId = container.dataset.carousel;
+        carouselContainers.forEach(function (container, containerIndex) {
             const glideElement = container.querySelector('.glide');
             const tabItems = container.querySelectorAll('.tab-navigation__item');
             
+            if (!glideElement) {
+                console.error(`Glide element not found in container ${containerIndex}`);
+                return;
+            }
+    
+            if (tabItems.length === 0) {
+                console.warn(`No tab items found in container ${containerIndex}`);
+            }
+    
             const glide = new Glide(glideElement, {
                 type: 'carousel',
                 perView: 1,
@@ -156,6 +175,8 @@
     
             // Initial active tab update
             updateActiveTab();
+    
+            console.log(`Carousel ${containerIndex} initialized successfully`);
         });
     });
 </script>

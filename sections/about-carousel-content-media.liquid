@@ -20,15 +20,13 @@
         {% endif %}
         {% comment %} 'Tab' Navigation {% endcomment %}
         <div class="container--tab-navigation">
-            <ul class="tab-navigation" data-glide-el="controls[nav]">
+            <div class="tab-navigation" data-glide-el="controls[nav]">
                 {% for block in section_blocks %}
-                    <li>
-                        <button data-glide-dir="={{ forloop.index0 }}" class="tab-navigation__item{% if forloop.first %} state--active{% endif %}">
-                            {{ block.settings.heading_small }}
-                        </button>
-                    </li>
+                    <button data-glide-dir="={{ forloop.index0 }}" class="tab-navigation__item{% if forloop.first %} state--active{% endif %}">
+                        {{ block.settings.heading_small }}
+                    </button>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
         {% comment %} Carousel {% endcomment %}
         <div class="container--carousel">

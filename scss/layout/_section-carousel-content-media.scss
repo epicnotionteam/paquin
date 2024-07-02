@@ -75,6 +75,7 @@
                     align-items: center;
                     background-color: transparent;
                     border: none;
+                    cursor: pointer;
                     padding: 0;
                     text-align: left;
                 }
@@ -100,11 +101,14 @@
 }
 
 // State management
-// Item button [:Active, :Hover]
 .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab {
-    &.state--active,
+    // Item button [:Active]
+    &.state--active {
+        color: color( 'action', '1' );
+    }
+    // Item button [:Hover]
     &:hover {
         color: color( 'action', '1' );
-        cursor: pointer;
+        text-decoration: underline;
     }
 }

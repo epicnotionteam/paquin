@@ -1827,6 +1827,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   align-items: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 0;
   text-align: left;
 }
@@ -1842,9 +1843,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
-.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active, .section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab:hover {
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab.state--active {
   color: #0F7F92;
-  cursor: pointer;
+}
+.section--carousel-content-media.variant--division .container--navigation .container--tabs .button--carousel-tab:hover {
+  color: #0F7F92;
+  text-decoration: underline;
 }
 
 .section--content-blocks {

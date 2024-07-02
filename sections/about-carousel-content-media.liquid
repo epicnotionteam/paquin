@@ -129,6 +129,7 @@
         carouselContainers.forEach(function (container, containerIndex) {
             const glideElement = container.querySelector('.glide');
             const tabItems = container.querySelectorAll('.tab-navigation__item');
+            const nextButton = container.querySelector('.trigger--next');
             
             if (!glideElement) {
                 console.error(`Glide element not found in container ${containerIndex}`);
@@ -144,11 +145,13 @@
                 perView: 1,
                 animationDuration: 800,
                 gap: 40,
+                startAt: 0  // Start at the first slide
             });
     
-            // Update active tab on slide change
+            // Update active tab and slide count on move
             glide.on('move', function() {
                 updateActiveTab();
+                updateSlideCount();
             });
     
             // Handle tab click
@@ -157,6 +160,13 @@
                     glide.go(`=${index}`);
                 });
             });
+    
+            // Handle next button click
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    glide.go('>');
+                });
+            }
     
             // Update active tab
             function updateActiveTab() {
@@ -170,11 +180,22 @@
                 });
             }
     
+            // Update slide count
+            function updateSlideCount() {
+                const countElement = container.querySelector('.item__count');
+                if (countElement) {
+                    const currentIndex = glide.index + 1;
+                    const totalSlides = glide.slides.length;
+                    countElement.textContent = `${currentIndex} / ${totalSlides}`;
+                }
+            }
+    
             // Mount Glide
             glide.mount();
     
-            // Initial active tab update
+            // Initial updates
             updateActiveTab();
+            updateSlideCount();
     
             console.log(`Carousel ${containerIndex} initialized successfully`);
         });

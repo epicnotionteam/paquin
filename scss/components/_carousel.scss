@@ -39,8 +39,6 @@
                             margin: 0;
                         }
                     }
-                    // Link
-                    .item__link {}
                 }
                 // Wrap [Actions]
                 .item__wrap--actions {
@@ -150,5 +148,21 @@
         &::before {
             color: color( 'steel', '3' );
         }
+    }
+}
+
+
+// Variant [Division]
+// --------------------------------------------------
+
+// Component container
+.carousel--division {
+    // Logo
+    .item .item__grid .container--content .item__subheading {
+        @include rem((
+            margin-bottom: spacing(4),
+            max-height: 48px,
+            max-width: 128px
+        ));
     }
 }

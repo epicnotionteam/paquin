@@ -1811,8 +1811,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--carousel-content-media.variant--division .section__grid {
-  row-gap: 8px;
-  row-gap: 0.8rem;
+  row-gap: 16px;
+  row-gap: 1.6rem;
 }
 .section--carousel-content-media.variant--division .section__grid .container--navigation {
   margin-bottom: 32px;
@@ -1833,8 +1833,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 64em) {
   .section--carousel-content-media.variant--division .section__grid .container--navigation {
-    margin-bottom: 40px;
-    margin-bottom: 4rem;
     grid-column: 1/span 12;
   }
 }

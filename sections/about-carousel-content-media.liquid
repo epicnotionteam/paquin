@@ -111,107 +111,77 @@
 {% comment %} Carousel initialization {% endcomment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Check if Glide is available
-        if (typeof Glide === 'undefined') {
-            console.error('Glide.js is not loaded. Please make sure it is included before this script.');
-            return;
-        }
-    
-        // Get all carousel containers on current page
-        const carouselContainers = document.querySelectorAll('.section--carousel-content-media');
-        
-        if (carouselContainers.length === 0) {
-            console.warn('No carousel containers found on the page.');
+        // Check if jQuery and Glide are available
+        if (typeof jQuery === 'undefined' || typeof jQuery.fn.glide === 'undefined') {
+            console.error('jQuery or Glide.js is not loaded. Please make sure both are included before this script.');
             return;
         }
     
         // Initialize each carousel
-        carouselContainers.forEach(function (container, containerIndex) {
-            const glideElement = container.querySelector('.glide');
-            const tabItems = container.querySelectorAll('.tab-navigation__item');
-            const nextButton = container.querySelector('.trigger--next');
-            
-            if (!glideElement) {
-                console.error(`Glide element not found in container ${containerIndex}`);
-                return;
-            }
+        $('.section--carousel-content-media').each(function(index) {
+            var $container = $(this);
+            var $glideElement = $container.find('.glide');
     
-            if (tabItems.length === 0) {
-                console.warn(`No tab items found in container ${containerIndex}`);
-            }
-    
-            console.log(`Initializing Glide for container ${containerIndex}`);
-    
-            const glide = new Glide(glideElement, {
+            // Initialize the slider
+            $glideElement.glide({
                 type: 'carousel',
                 perView: 1,
                 animationDuration: 800,
                 gap: 40,
-                startAt: 0
+                startAt: 0,
+                autoplay: false,
+                arrows: 'none',
+                navigation: 'none'
             });
     
-            // Update active tab and slide count on move
+            // Get an instance of the Glide API
+            var glide = $glideElement.glide().data('api_glide');
+    
+            // Handle tab navigation
+            $container.find('.tab-navigation__item').each(function(tabIndex) {
+                $(this).on('click', function() {
+                    console.log(`Tab ${tabIndex} Clicked`);
+                    glide.go(`=${tabIndex}`);
+                });
+            });
+    
+            // Handle next button
+            $container.find('.trigger--next').on('click', function() {
+                console.log('Next Button Clicked');
+                glide.go('>');
+            });
+    
+            // Update active tab and slide count
             glide.on('move', function() {
-                console.log(`Slide moved to index: ${glide.index}`);
                 updateActiveTab();
                 updateSlideCount();
             });
     
-            // Handle tab click
-            tabItems.forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    console.log(`Tab ${index} clicked`);
-                    glide.go(`=${index}`);
-                });
-            });
-    
-            // Handle next button click
-            if (nextButton) {
-                nextButton.addEventListener('click', () => {
-                    console.log('Next button clicked');
-                    glide.go('>');
-                });
-            } else {
-                console.warn('Next button not found');
-            }
-    
-            // Update active tab
             function updateActiveTab() {
-                const activeIndex = glide.index;
-                tabItems.forEach((item, index) => {
-                    if (index === activeIndex) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
+                var activeIndex = glide.index;
+                $container.find('.tab-navigation__item').removeClass('active')
+                    .eq(activeIndex).addClass('active');
                 console.log(`Active tab updated to index: ${activeIndex}`);
             }
     
-            // Update slide count
             function updateSlideCount() {
-                const countElement = container.querySelector('.item__count');
-                if (countElement) {
-                    const currentIndex = glide.index + 1;
-                    const totalSlides = glide.slides.length;
-                    countElement.textContent = `${currentIndex} / ${totalSlides}`;
+                var $countElement = $container.find('.item__count');
+                if ($countElement.length) {
+                    var currentIndex = glide.index + 1;
+                    var totalSlides = glide.settings.slides.length;
+                    $countElement.text(`${currentIndex} / ${totalSlides}`);
                     console.log(`Slide count updated: ${currentIndex} / ${totalSlides}`);
-                } else {
-                    console.warn('Slide count element not found');
                 }
             }
-    
-            // Mount Glide
-            glide.mount();
     
             // Initial updates
             updateActiveTab();
             updateSlideCount();
     
-            console.log(`Carousel ${containerIndex} initialized successfully`);
+            console.log(`Carousel ${index} initialized successfully`);
         });
     });
-    </script>
+</script>
 
 {% schema %}
 {

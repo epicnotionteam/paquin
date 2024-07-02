@@ -72,14 +72,11 @@
                 display: inline-flex;
                 // Item button
                 .button--carousel-tab {
+                    @include font-size( 'base' );
                     align-items: center;
                     background-color: transparent;
                     border: none;
-                    display: inline-flex;
-                    justify-content: center;
                     padding: 0;
-                    white-space: nowrap;
-                    width: auto;
                 }
             }
         }

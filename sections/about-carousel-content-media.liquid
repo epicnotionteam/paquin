@@ -19,10 +19,10 @@
             </div>
         {% endif %}
         {% comment %} 'Tab' Navigation {% endcomment %}
-        <div class="container--tab-navigation">
-            <div class="tab-navigation" data-glide-el="controls[nav]">
+        <div class="container--navigation">
+            <div class="container--tabs" data-glide-el="controls[nav]">
                 {% for block in section_blocks %}
-                    <button data-glide-dir="={{ forloop.index0 }}" class="tab-navigation__item{% if forloop.first %} state--active{% endif %}">
+                    <button data-glide-dir="={{ forloop.index0 }}" class="button--carousel-tab{% if forloop.first %} state--active{% endif %}">
                         {{ block.settings.heading_small }}
                     </button>
                 {% endfor %}
@@ -110,7 +110,7 @@
             const glideSlides = glideElement.querySelector('.glide__slides');
             const slides = glideSlides ? glideSlides.children : [];
             if (!glideSlides || slides.length === 0) return;
-            const tabItems = container.querySelectorAll('.tab-navigation__item');
+            const tabItems = container.querySelectorAll('.button--carousel-tab');
             const nextButton = container.querySelector('.trigger--next');
             try {
                 // Initialize Glide carousel

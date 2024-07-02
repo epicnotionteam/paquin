@@ -1810,19 +1810,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
   }
 }
-.container--tab-navigation ul {
+.container--navigation .container--tabs {
   column-gap: 16px;
   column-gap: 1.6rem;
   display: inline-flex;
 }
-.container--tab-navigation ul button {
+.container--navigation .container--tabs .button--carousel-tab {
   background-color: transparent;
   border: 0 none;
   padding: 0;
   width: auto;
 }
 
-.container--tab-navigation ul button.state--active {
+.container--tab-navigation .button--carousel-tab.state--active {
   color: #0F7F92;
 }
 

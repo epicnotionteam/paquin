@@ -61,11 +61,11 @@
 // --------------------------------------------------
 
 // 'Tab' Navigation container
-.container--tab-navigation ul {
+.container--navigation .container--tabs {
     @include rem( column-gap, spacing(3) );
     display: inline-flex;
-    // Item link
-    button {
+    // Item button
+    .button--carousel-tab {
         background-color: transparent;
         border: 0 none;
         padding: 0;
@@ -74,7 +74,7 @@
 }
 
 // State management
-// Item [:Active]
-.container--tab-navigation ul button.state--active {
+// Item button [:Active]
+.container--tab-navigation .button--carousel-tab.state--active {
     color: color( 'action', '1' );
 }

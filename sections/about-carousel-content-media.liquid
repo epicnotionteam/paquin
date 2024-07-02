@@ -159,18 +159,16 @@
                     startAt: 0
                 });
     
-                // Ensure the starting index is valid
-                glide.on('mount.before', function () {
-                    if (glide.index >= slides.length) {
-                        glide.index = 0;
-                    }
-                });
+                function resetToFirstSlide() {
+                    glide.go('=0');
+                    updateActiveTab();
+                    updateSlideCount();
+                    console.log('Carousel reset to first slide');
+                }
     
                 glide.on('mount.after', function () {
                     console.log('Glide mounted successfully');
-                    console.log('Starting slide index:', glide.index);
-                    updateActiveTab();
-                    updateSlideCount();
+                    resetToFirstSlide();
                 });
     
                 glide.on('run.after', function () {
@@ -219,6 +217,9 @@
     
                 console.log('Mounting Glide');
                 glide.mount();
+    
+                // Force reset to first slide after a short delay
+                setTimeout(resetToFirstSlide, 100);
     
             } catch (error) {
                 console.error(`Error initializing Glide for container ${containerIndex}:`, error);

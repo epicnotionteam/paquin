@@ -113,7 +113,6 @@
     document.addEventListener('DOMContentLoaded', function () {
         console.log('DOM fully loaded and parsed');
     
-        // Check if Glide is available
         if (typeof Glide === 'undefined') {
             console.error('Glide.js is not loaded. Please make sure it is included before this script.');
             return;
@@ -121,16 +120,9 @@
     
         console.log('Glide.js is available');
     
-        // Get all carousel containers on current page
         const carouselContainers = document.querySelectorAll('.section--carousel-content-media');
         console.log('Found', carouselContainers.length, 'carousel containers');
     
-        if (carouselContainers.length === 0) {
-            console.warn('No carousel containers found on the page.');
-            return;
-        }
-    
-        // Initialize each carousel
         carouselContainers.forEach(function (container, containerIndex) {
             console.log('Initializing carousel', containerIndex);
     
@@ -140,15 +132,22 @@
                 return;
             }
     
+            const glideTrack = glideElement.querySelector('.glide__track');
+            const glideSlides = glideElement.querySelector('.glide__slides');
+            const slides = glideSlides ? glideSlides.children : [];
+    
+            if (!glideTrack || !glideSlides || slides.length === 0) {
+                console.error(`Invalid Glide structure in container ${containerIndex}`);
+                return;
+            }
+    
+            console.log(`Found ${slides.length} slides in container ${containerIndex}`);
+    
             const tabItems = container.querySelectorAll('.tab-navigation__item');
             console.log('Found', tabItems.length, 'tab items');
     
             const nextButton = container.querySelector('.trigger--next');
-            if (nextButton) {
-                console.log('Next button found');
-            } else {
-                console.warn('Next button not found');
-            }
+            console.log(nextButton ? 'Next button found' : 'Next button not found');
     
             try {
                 console.log('Attempting to create Glide instance');
@@ -172,7 +171,6 @@
                     updateSlideCount();
                 });
     
-                // Handle tab click
                 tabItems.forEach((tab, index) => {
                     tab.addEventListener('click', () => {
                         console.log(`Tab ${index} clicked`);
@@ -180,7 +178,6 @@
                     });
                 });
     
-                // Handle next button click
                 if (nextButton) {
                     nextButton.addEventListener('click', () => {
                         console.log('Next button clicked');
@@ -204,7 +201,7 @@
                     const countElement = container.querySelector('.item__count');
                     if (countElement) {
                         const currentIndex = glide.index + 1;
-                        const totalSlides = glide.slides.length;
+                        const totalSlides = slides.length;
                         countElement.textContent = `${currentIndex} / ${totalSlides}`;
                         console.log(`Slide count updated: ${currentIndex} / ${totalSlides}`);
                     } else {

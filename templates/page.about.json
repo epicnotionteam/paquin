@@ -38,7 +38,6 @@
           "settings": {
             "heading_small": "Paquin Sensors",
             "logo": "shopify:\/\/shop_images\/logo__paqiun-sensors--mono.svg",
-            "subheading": "",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "heading_size": "h2",
             "content": "<p>At our core, we are your trusted source for high quality sensors as well as a multitude of related components. We carry an extensive inventory for the lines we represent, with special focus on existing customer requirements.<\/p>",
@@ -53,7 +52,6 @@
           "settings": {
             "heading_small": "Global Intex",
             "logo": "shopify:\/\/shop_images\/logo__global-intex--mono.svg",
-            "subheading": "",
             "heading": "Innovative Electrical Connectors & Cable Assemblies",
             "heading_size": "h2",
             "content": "<p>Global Intex specializes in manufacturing custom ruggedized electrical connectors and cable harnesses. The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.<\/p>",
@@ -68,7 +66,6 @@
           "settings": {
             "heading_small": "Excel Manufacturing",
             "logo": "shopify:\/\/shop_images\/logo__excel--mono.svg",
-            "subheading": "",
             "heading": "Precision, Quality, and Innovation",
             "heading_size": "h2",
             "content": "<p>An ISO 9001 certified division, specializing in producing high-precision valve actuators and other custom instruments. With engineering, testing, production, and validation all done in-house, every part undergoes rigorous quality control.<\/p>",
@@ -83,7 +80,6 @@
           "settings": {
             "heading_small": "Paquin Distribution",
             "logo": "shopify:\/\/shop_images\/logo__paquin-distribution--mono.svg",
-            "subheading": "",
             "heading": "Excellence in Service and Logistics",
             "heading_size": "h2",
             "content": "<p>This division specializes in distributing a wide array of hydraulic, pneumatic, and linear motion control components. It emphasizes excellent customer service, efficient logistics, and maintaining a comprehensive inventory.<\/p>",
@@ -101,7 +97,7 @@
         "carousel_block_yRqdhQ"
       ],
       "settings": {
-        "heading_small": "Our Specialized Divisions",
+        "heading_small": "Explore Our Specialized Divisions:",
         "theme": "base"
       }
     },

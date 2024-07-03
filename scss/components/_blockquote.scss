@@ -16,4 +16,9 @@ blockquote {
     ));
     border-left: 3px solid color( 'steel', '1' );
     color: color( 'steel', '4' );
+    // Citation
+    cite {
+        @include font-size( 'small' );
+        display: block;
+    }
 }

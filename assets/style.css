@@ -3540,6 +3540,14 @@ blockquote {
   border-left: 3px solid #212224;
   color: #66787F;
 }
+blockquote cite {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  display: block;
+}
 
 .accordion {
   overflow: hidden;

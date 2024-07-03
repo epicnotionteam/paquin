@@ -3813,6 +3813,23 @@ blockquote cite {
   line-height: 1;
 }
 
+.callout--document {
+  margin: 24px 0 24px 16px;
+  margin: 2.4rem 0 2.4rem 1.6rem;
+  padding-left: 16px;
+  padding-left: 1.6rem;
+  border-left: 3px solid #212224;
+}
+.callout--document .callout__heading {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 .carousel--content-media .item .item__grid {
   row-gap: 40px;
   row-gap: 4rem;

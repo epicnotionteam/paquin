@@ -1,0 +1,24 @@
+// ====================================================================================================
+// Components / Callout
+// ====================================================================================================
+
+// Component Instances
+// ----------------------------------------------------------------------------------------------------
+
+// Callout [Document]
+// --------------------------------------------------
+
+// Component container
+.callout--document {
+	@include rem((
+        margin: spacing(4) 0 spacing(4) spacing(3),
+        padding-left: spacing(3)
+    ));
+    border-left: 3px solid color( 'steel', '1' );
+	// Heading
+	.callout__heading {
+		@include font-size( 'base' );
+		font-weight: font-weight( 'bold' );
+		margin: 0;
+	}
+}

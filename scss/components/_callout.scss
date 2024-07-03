@@ -21,4 +21,8 @@
 		font-weight: font-weight( 'bold' );
 		margin: 0;
 	}
+	// Link
+	.callout__link {
+		@include font-size( 'small' );
+	}
 }

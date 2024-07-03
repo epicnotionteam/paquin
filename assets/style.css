@@ -3829,6 +3829,13 @@ blockquote cite {
   font-weight: 600;
   margin: 0;
 }
+.callout--document .callout__link {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+}
 
 .carousel--content-media .item .item__grid {
   row-gap: 40px;

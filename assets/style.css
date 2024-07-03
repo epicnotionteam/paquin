@@ -3954,6 +3954,23 @@ hr,
     margin: 4.8rem 0;
   }
 }
+.embed--responsive {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.embed--responsive iframe,
+.embed--responsive object,
+.embed--responsive embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .feed--block {
   row-gap: 32px;
   row-gap: 3.2rem;

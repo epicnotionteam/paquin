@@ -123,6 +123,14 @@
 }
 
 
+// Empty Collection Notice
+// --------------------------------------------------
+
+.container--empty-collection {
+    @include rem( margin-top, spacing(4) );
+}
+
+
 // Component Adjustments
 // ----------------------------------------------------------------------------------------------------
 

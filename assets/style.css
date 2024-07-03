@@ -3323,6 +3323,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 9.6rem;
   }
 }
+.container--empty-collection {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

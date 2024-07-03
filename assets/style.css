@@ -3541,11 +3541,11 @@ blockquote {
   color: #66787F;
 }
 blockquote cite {
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 21px;
+  margin-top: 12px;
+  margin-top: 1.2rem;
   display: block;
 }
 

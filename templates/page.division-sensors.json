@@ -121,22 +121,22 @@
             "collection": "level"
           }
         },
-        "collection_TtcqBR": {
-          "type": "collection",
-          "settings": {
-            "collection": "optical-laser"
-          }
-        },
         "collection_TnbtRk": {
           "type": "collection",
           "settings": {
             "collection": "flow"
           }
         },
-        "collection_kqCrAU": {
+        "collection_wP3nh8": {
           "type": "collection",
           "settings": {
-            "collection": "gas-detection"
+            "collection": "humidity"
+          }
+        },
+        "collection_keQgLK": {
+          "type": "collection",
+          "settings": {
+            "collection": "pumps"
           }
         }
       },
@@ -144,9 +144,9 @@
         "collection_NPceRF",
         "collection_bFJhze",
         "collection_MnPLHw",
-        "collection_TtcqBR",
         "collection_TnbtRk",
-        "collection_kqCrAU"
+        "collection_wP3nh8",
+        "collection_keQgLK"
       ],
       "settings": {
         "heading_small": "Related Part Types",

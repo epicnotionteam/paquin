@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "order": [
     "division-sensors-hero",
@@ -10,9 +19,9 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Paquin Sensors",
-        "heading_size": "text--headline",
-        "content": "<p>Paquin's sensor-based product portfolio offers our clients innovative solutions beyond the conventional.<\/p>",
+        "heading": "Precision & Efficiency in Industrial, Commercial & Residential Applications",
+        "heading_size": "h1",
+        "content": "<p>Paquin's sensor-based product portfolio offers innovative solutions beyond the conventional.<\/p>",
         "link_text": "Explore Paquin Sensors",
         "link_url": "#paquin-sensors",
         "image": "shopify:\/\/shop_images\/asset__parts--home.jpg",
@@ -26,7 +35,7 @@
         "heading_large": "Enhancing Precision & Efficiency in Industrial Applications",
         "heading_size": "h1",
         "subheading": "Our Capabilities",
-        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><h3>Our Capabilities<\/h3><ul><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to create bespoke solutions.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><\/ul>",
+        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial, commercial and residential applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><ul><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to createyour solution.<\/li><\/ul>",
         "image": "shopify:\/\/shop_images\/asset__sensors--testing.jpg",
         "theme": "base"
       }

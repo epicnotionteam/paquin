@@ -257,22 +257,13 @@
             "image": "shopify:\/\/shop_images\/asset__will-fisher.jpg"
           }
         },
-        "team_block_VVkxqW": {
+        "team_block_bwxHqq": {
           "type": "team-block",
           "settings": {
-            "name": "Bill Taylor",
-            "role": "Head of Engineering",
+            "name": "Irene Buna",
+            "role": "Accounting Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
-        },
-        "team_block_TEJECm": {
-          "type": "team-block",
-          "settings": {
-            "name": "John Frey",
-            "role": "Outside Sales Engineer",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__irene-buna.jpg"
           }
         },
         "team_block_XHqkhX": {
@@ -284,11 +275,29 @@
             "image": "shopify:\/\/shop_images\/asset__phyliss-neal-adams.jpg"
           }
         },
-        "team_block_PbBPLq": {
+        "team_block_QXYTMf": {
           "type": "team-block",
           "settings": {
-            "name": "Brett Matheson",
-            "role": "Inventory Control",
+            "name": "Jamie Crawford",
+            "role": "Buyer",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__jamie-crawford.jpg"
+          }
+        },
+        "team_block_MMdbKa": {
+          "type": "team-block",
+          "settings": {
+            "name": "Jimmy Havel",
+            "role": "Assembly & Testing",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_DkgWrB": {
+          "type": "team-block",
+          "settings": {
+            "name": "Rob Kinkopf",
+            "role": "Vice President",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
@@ -302,31 +311,28 @@
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
-        "team_block_QXYTMf": {
+        "team_block_VVkxqW": {
           "type": "team-block",
           "settings": {
-            "name": "Jamie Crawford",
-            "role": "Buyer",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__jamie-crawford.jpg"
+            "name": "Bill Taylor",
+            "role": "Head of Engineering",
+            "social": ""
           }
         },
-        "team_block_bwxHqq": {
+        "team_block_TEJECm": {
           "type": "team-block",
           "settings": {
-            "name": "Irene Buna",
-            "role": "Accounting Manager",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__irene-buna.jpg"
+            "name": "John Frey",
+            "role": "Outside Sales Engineer",
+            "social": ""
           }
         },
-        "team_block_MMdbKa": {
+        "team_block_PbBPLq": {
           "type": "team-block",
           "settings": {
-            "name": "Jimmy Havel",
-            "role": "Shipping & Receiving",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "name": "Brett Matheson",
+            "role": "Inventory Control",
+            "social": ""
           }
         },
         "team_block_gNpQyc": {
@@ -334,17 +340,7 @@
           "settings": {
             "name": "Denise Tennant",
             "role": "Administration",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
-        },
-        "team_block_DkgWrB": {
-          "type": "team-block",
-          "settings": {
-            "name": "Rob Kinkopf",
-            "role": "Vice President",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "social": ""
           }
         }
       },
@@ -366,16 +362,16 @@
         "team_block_4jrjJb",
         "team_block_aYQWne",
         "team_block_rHdpAm",
+        "team_block_bwxHqq",
+        "team_block_XHqkhX",
+        "team_block_QXYTMf",
+        "team_block_MMdbKa",
+        "team_block_DkgWrB",
+        "team_block_z3YgAN",
         "team_block_VVkxqW",
         "team_block_TEJECm",
-        "team_block_XHqkhX",
         "team_block_PbBPLq",
-        "team_block_z3YgAN",
-        "team_block_QXYTMf",
-        "team_block_bwxHqq",
-        "team_block_MMdbKa",
-        "team_block_gNpQyc",
-        "team_block_DkgWrB"
+        "team_block_gNpQyc"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

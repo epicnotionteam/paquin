@@ -316,7 +316,8 @@
           "settings": {
             "name": "Bill Taylor",
             "role": "Head of Engineering",
-            "social": ""
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_TEJECm": {
@@ -324,7 +325,8 @@
           "settings": {
             "name": "John Frey",
             "role": "Outside Sales Engineer",
-            "social": ""
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_PbBPLq": {
@@ -332,7 +334,8 @@
           "settings": {
             "name": "Brett Matheson",
             "role": "Inventory Control",
-            "social": ""
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_gNpQyc": {
@@ -340,7 +343,8 @@
           "settings": {
             "name": "Denise Tennant",
             "role": "Administration",
-            "social": ""
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         }
       },

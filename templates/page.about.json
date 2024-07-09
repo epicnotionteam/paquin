@@ -125,19 +125,10 @@
         "team_block_wMtKQF": {
           "type": "team-block",
           "settings": {
-            "name": "Michael Graf",
+            "name": "Mike Graf",
             "role": "President",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
-          }
-        },
-        "team_block_DkgWrB": {
-          "type": "team-block",
-          "settings": {
-            "name": "Rob Kinkopf",
-            "role": "Vice President",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
         },
         "team_block_iNbQHr": {
@@ -149,20 +140,11 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--steve-thompson.jpg"
           }
         },
-        "team_block_VVkxqW": {
-          "type": "team-block",
-          "settings": {
-            "name": "Bill Taylor",
-            "role": "Head of Engineering",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
-        },
         "team_block_RgQbmV": {
           "type": "team-block",
           "settings": {
             "name": "Cliff Martin",
-            "role": "Quality Control ISO Manager",
+            "role": "Quality Control Manager",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--cliff-martin.jpg"
           }
@@ -171,7 +153,7 @@
           "type": "team-block",
           "settings": {
             "name": "Emil Hufgard",
-            "role": "Inside Sales & Technical Support",
+            "role": "Sales",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--emil-hufgard.jpg"
           }
@@ -180,7 +162,7 @@
           "type": "team-block",
           "settings": {
             "name": "John Storey Jr.",
-            "role": "Outside Sales",
+            "role": "Sales",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
           }
@@ -198,7 +180,7 @@
           "type": "team-block",
           "settings": {
             "name": "Mike Lamenta",
-            "role": "Inside Sales & Technical Support",
+            "role": "Sales",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
           }
@@ -221,20 +203,11 @@
             "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
           }
         },
-        "team_block_TEJECm": {
-          "type": "team-block",
-          "settings": {
-            "name": "John Frey",
-            "role": "Outside Sales Engineer",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
-          }
-        },
         "team_block_mBNkiF": {
           "type": "team-block",
           "settings": {
             "name": "Steve Woytek",
-            "role": "Sr. Warehouse Technician",
+            "role": "Sr. Tech & Design Support",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
           }
@@ -244,8 +217,7 @@
           "settings": {
             "name": "Lisa Reece-Burdette",
             "role": "Director of Operations",
-            "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "social": ""
           }
         },
         "team_block_ydPhwd": {
@@ -280,6 +252,24 @@
           "settings": {
             "name": "William Fisher",
             "role": "Quality Control",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_VVkxqW": {
+          "type": "team-block",
+          "settings": {
+            "name": "Bill Taylor",
+            "role": "Head of Engineering",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
+        },
+        "team_block_TEJECm": {
+          "type": "team-block",
+          "settings": {
+            "name": "John Frey",
+            "role": "Outside Sales Engineer",
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
@@ -346,15 +336,22 @@
             "social": "",
             "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
           }
+        },
+        "team_block_DkgWrB": {
+          "type": "team-block",
+          "settings": {
+            "name": "Rob Kinkopf",
+            "role": "Vice President",
+            "social": "",
+            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+          }
         }
       },
       "block_order": [
         "team_block_iF8RzN",
         "team_block_AzXKfX",
         "team_block_wMtKQF",
-        "team_block_DkgWrB",
         "team_block_iNbQHr",
-        "team_block_VVkxqW",
         "team_block_RgQbmV",
         "team_block_dWcAQa",
         "team_block_83FGGw",
@@ -362,20 +359,22 @@
         "team_block_yWNiie",
         "team_block_7BciN8",
         "team_block_qcaiPR",
-        "team_block_TEJECm",
         "team_block_mBNkiF",
         "team_block_P6bzxL",
         "team_block_ydPhwd",
         "team_block_4jrjJb",
         "team_block_aYQWne",
         "team_block_rHdpAm",
+        "team_block_VVkxqW",
+        "team_block_TEJECm",
         "team_block_XHqkhX",
         "team_block_PbBPLq",
         "team_block_z3YgAN",
         "team_block_QXYTMf",
         "team_block_bwxHqq",
         "team_block_MMdbKa",
-        "team_block_gNpQyc"
+        "team_block_gNpQyc",
+        "team_block_DkgWrB"
       ],
       "settings": {
         "heading_small": "Our Leadership Team",

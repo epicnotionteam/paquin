@@ -69,7 +69,7 @@
       ],
       "settings": {
         "heading": "Parts for the World's Most Important Projects",
-        "content": "<p>Paquin offers the best of both worlds. We are large enough to handle any size request and flexible enough to customize to meet your specific needs.<\/p>",
+        "content": "<p>From high-volume standard to one-off custom designs, Paquin is ready to exceed customer expectations.<\/p>",
         "cta_primary": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary": "Shop For Parts",
@@ -99,7 +99,7 @@
             "subheading": "Get The Right Part For Your Project",
             "heading": "We Scale With You, Providing Both Custom and Stock Parts",
             "heading_size": "h2",
-            "content": "<p>Paquin’s sensor-based product portfolio is designed to provide solutions that are outside of the norm. We do this by matching the right product technology to each application requirement. This can only be achieved by putting the goals of our customers first and avoiding a 'one-size-fits-all' business model. <\/p><p>From fresh water to hazardous chemicals and from controlled climates to the harshest on Earth, Paquin produces a wide selection within all our product categories.<\/p>",
+            "content": "<p>Paquin’s sensors-based product portfolio is designed to provide solutions that are outside of the norm.  We do this by matching the right product technology to each application requirement.<\/p><p>This can only be achieved by putting the goals of our customers first and by not selling a “one size fits all” business model. From fresh water to hazardous chemicals and from controlled climates to the harshest on Earth, Paquin produces a wide selection within all our product categories.<\/p>",
             "link_text": "Learn more",
             "link_url": "shopify:\/\/pages\/about",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
@@ -112,7 +112,7 @@
             "subheading": "Quality You Can Trust",
             "heading": "Rigorous Testing for Truly Unmatched Reliability",
             "heading_size": "h2",
-            "content": "<p>At Paquin, we prioritize excellence by subjecting our products to rigorous testing processes. Our dedicated testing facility is equipped with advanced technology to simulate real-world conditions, ensuring that each product meets our stringent standards for performance and durability. <\/p><p>From initial design to final production, our commitment to quality control guarantees reliable outcomes which exceed many industry benchmarks.<\/p>",
+            "content": "<p>At Paquin, we prioritize excellence by subjecting our products to rigorous testing processes. Our dedicated testing facilities are equipped with advanced technology to simulate real-world conditions, ensuring that each product meets our stringent standards for performance and durability. <\/p><p>From initial design to final production, our commitment to quality control guarantees reliable outcomes which exceed many industry benchmarks.<\/p>",
             "link_text": "Learn more",
             "link_url": "shopify:\/\/pages\/about",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
@@ -125,7 +125,7 @@
             "subheading": "Your Success is Our Priority",
             "heading": "Partnerships Built on Expertise and Commitment",
             "heading_size": "h2",
-            "content": "<p>Paquin is more than just a supplier; we are committed to the success of your project. We offer a collaborative approach, leveraging our extensive experience to ensure the best fit and functionality of each part we provide. <\/p><p>Trust Paquin to be your partner in excellence, offering expert engineering, useful guidance and dedicated support throughout your project’s lifecycle.<\/p>",
+            "content": "<p>Paquin is more than just a manufacturing supplier; we are committed to the success of your project. We offer a collaborative approach, leveraging our extensive experience to ensure the best fit and functionality of each part we provide. <\/p><p>Trust Paquin to be your partner in excellence, offering expert engineering, useful guidance and dedicated support throughout your project’s lifecycle.<\/p>",
             "link_text": "Learn more",
             "link_url": "shopify:\/\/pages\/about",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
@@ -152,7 +152,7 @@
             "image": "shopify:\/\/shop_images\/logo__paqiun-sensors--mono.svg",
             "image_type": "logo",
             "heading": "Paquin Sensors",
-            "content": "<p>Your trusted source for high quality sensors and related components, carrying an extensive inventory while specializing in unique customer requirements.<\/p>",
+            "content": "<p>Your trusted source for high quality sensors and related components, carrying an extensive inventory as well as accommodating unique customer requirements.<\/p>",
             "link_text": "Learn more",
             "link_url": "shopify:\/\/pages\/paquin-sensors"
           }
@@ -185,7 +185,7 @@
             "image": "shopify:\/\/shop_images\/logo__paquin-distribution--mono.svg",
             "image_type": "logo",
             "heading": "Paquin Distribution",
-            "content": "<p>Focusing on hydraulic, pneumatic, and linear motion control components, with a commitment to customer service, efficient logistics, and a comprehensive inventory.<\/p>",
+            "content": "<p>Ensures that Paquin’s high-quality parts and systems are readily available to meet the needs of our customers across  a vast array of industries.<\/p>",
             "link_text": "",
             "link_url": "shopify:\/\/pages\/paquin-distribution"
           }
@@ -294,7 +294,7 @@
       ],
       "settings": {
         "heading": "Certified Excellence",
-        "content": "<p>We are dedicated to providing the highest quality, and our commitment to excellence ensures the success of your projects. With the most innovative facilities and experienced staff in the industry, our certifications help attest to our reputation and quality.<\/p>"
+        "content": "<p>We are dedicated to providing the highest quality, and our commitment to excellence ensures the success of your projects. With innovative facilities and experienced staff, our certifications attest to our diligence and reputation.<\/p>"
       }
     },
     "home-collections": {
@@ -348,12 +348,6 @@
             "collection": "ruggedized-cabllng-solutions"
           }
         },
-        "collection_MKw7d3": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
         "collection_yXBkDD": {
           "type": "collection",
           "settings": {
@@ -382,7 +376,6 @@
         "collection_kqCrAU",
         "collection_LRNdRf",
         "collection_WkTPfk",
-        "collection_MKw7d3",
         "collection_yXBkDD",
         "collection_c6GfpM",
         "collection_X4LfRw"
@@ -396,7 +389,7 @@
       "type": "hero-inline",
       "settings": {
         "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
-        "content": "<p>The design, construction and delivery of industry-unique control equipment is our passion.<\/p>",
+        "content": "<p>The design, construction & delivery of industry unique control instrumentation is our passion.<\/p>",
         "cta_primary_text": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
         "cta_secondary_text": "",
@@ -413,6 +406,7 @@
     },
     "home-careers": {
       "type": "content-media-split",
+      "disabled": true,
       "settings": {
         "heading_small": "Careers at The Paquin Company",
         "subheading": "Where Engineering Talent Thrives",

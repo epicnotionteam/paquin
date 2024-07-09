@@ -320,6 +320,7 @@
         },
         "collection_TtcqBR": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "optical-laser"
           }
@@ -332,6 +333,7 @@
         },
         "collection_kqCrAU": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "gas-detection"
           }
@@ -344,12 +346,14 @@
         },
         "collection_WkTPfk": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "ruggedized-cabllng-solutions"
           }
         },
         "collection_yXBkDD": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "valves"
           }
@@ -362,6 +366,7 @@
         },
         "collection_X4LfRw": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "load-force"
           }

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "order": [
     "careers-hero",
@@ -12,7 +21,7 @@
       "settings": {
         "heading": "Want To Be a Part of Something Special?",
         "heading_size": "h1",
-        "content": "<p>If so, then take a look at what Paquin has to offer below.<\/p>",
+        "content": "<p>If so, then take a look at what Paquin has to offer.<\/p>",
         "link_text": "Explore open roles",
         "link_url": "#current-openings",
         "image": "shopify:\/\/shop_images\/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
@@ -24,7 +33,7 @@
       "settings": {
         "heading": "Why Join The Paquin Company",
         "heading_size": "h1",
-        "content": "<p>At Paquin we all feel right at home and work like a family,  our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
+        "content": "<p>At Paquin we all feel right at home and work like a family, our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
         "link_text": "Learn more about our benefits package",
         "link_url": "#perks-and-benefits",
         "link_type": "link",
@@ -40,17 +49,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Competitive Salary Packages",
-            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standsards, clearly underscoring our deep commitment to team value and satisfaction.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        },
-        "content_block_YQmByb": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Bonus and Commission Structures",
-            "content": "<p>We reward hard work and success with meaningful bonuses and commissions, recognizing and celebrating each contribution to our growth.<\/p>",
+            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standards, clearly underscoring our deep commitment to team value and satisfaction.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -70,7 +69,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Continued Education",
-            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for all employees.<\/p>",
+            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for our employees.<\/p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -98,7 +97,6 @@
       },
       "block_order": [
         "content_block_3yed8L",
-        "content_block_YQmByb",
         "content_block_HHiYJR",
         "content_block_eNiDXJ",
         "content_block_rTRdG7",
@@ -128,16 +126,7 @@
         "role_block_HnCGaK": {
           "type": "role-block",
           "settings": {
-            "title": "Design Engineer",
-            "division": "Paquin Sensors",
-            "location": "West Union, SC",
-            "link": "https:\/\/www.linkedin.com\/"
-          }
-        },
-        "role_block_nMYg6r": {
-          "type": "role-block",
-          "settings": {
-            "title": "Administrative Assistant",
+            "title": "Mechanical Engineer",
             "division": "Paquin Sensors",
             "location": "West Union, SC",
             "link": "https:\/\/www.linkedin.com\/"
@@ -147,8 +136,8 @@
           "type": "role-block",
           "settings": {
             "title": "Mechanical Engineer",
-            "division": "Paquin Sensors",
-            "location": "West Union, SC",
+            "division": "The Paquin Company",
+            "location": "Mentor, OH",
             "link": "https:\/\/www.linkedin.com\/"
           }
         },
@@ -165,7 +154,6 @@
       "block_order": [
         "role_block_9c4HLG",
         "role_block_HnCGaK",
-        "role_block_nMYg6r",
         "role_block_q69pjm",
         "role_block_VJEE4A"
       ],
@@ -174,7 +162,7 @@
         "heading_large": "Available Roles at Paquin",
         "heading_size": "h1",
         "subheading": "Browse Positions",
-        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for engineering excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
+        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
         "theme": "alt"
       }
     },
@@ -185,7 +173,7 @@
         "heading_large": "Start Your Journey With Paquin — Upload Your Resume Today",
         "heading_size": "h1",
         "subheading": "Take The First Step",
-        "content": "<p>We are a close-knit team. Many say it feels like a family. We work hard, but we also play hard, making time to enjoy life, share laughs around the water cooler, and build team culture.<br\/><br\/>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.<\/p>",
+        "content": "<p>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.<\/p>",
         "theme": "dark"
       }
     }

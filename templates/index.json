@@ -277,6 +277,13 @@
             "image": "shopify:\/\/shop_images\/asset__certification--nfpa.svg",
             "title": "National Fluid Power Association"
           }
+        },
+        "certification_NbYbQe": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__logo--3a-mono.svg",
+            "title": "3A"
+          }
         }
       },
       "block_order": [
@@ -289,7 +296,8 @@
         "certification_9LVLR7",
         "certification_36ihUa",
         "certification_C3GeDM",
-        "certification_Fa4Fw8"
+        "certification_Fa4Fw8",
+        "certification_NbYbQe"
       ],
       "settings": {
         "heading": "Certified Excellence",

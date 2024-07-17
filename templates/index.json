@@ -284,6 +284,13 @@
             "image": "shopify:\/\/shop_images\/asset__logo--3a-mono.svg",
             "title": "3A"
           }
+        },
+        "certification_ieirp6": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/asset__logo--sil-2-mono.svg",
+            "title": "SIL 2"
+          }
         }
       },
       "block_order": [
@@ -297,7 +304,8 @@
         "certification_36ihUa",
         "certification_C3GeDM",
         "certification_Fa4Fw8",
-        "certification_NbYbQe"
+        "certification_NbYbQe",
+        "certification_ieirp6"
       ],
       "settings": {
         "heading": "Certified Excellence",

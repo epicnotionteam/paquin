@@ -5190,10 +5190,17 @@ ul.list--link-arrow li::before {
     top: -16px;
   }
 }
-.site-navigation .navmenu:hover li {
+.site-navigation .navmenu:hover,
+.site-navigation .navmenu-submenu:hover {
+  background-color: red !important;
+}
+.site-navigation .navmenu:hover li,
+.site-navigation .navmenu-submenu:hover li {
   opacity: 0.56;
 }
-.site-navigation .navmenu:hover li:hover {
+.site-navigation .navmenu:hover li:hover,
+.site-navigation .navmenu-submenu:hover li:hover {
+  background-color: blue !important;
   opacity: 1;
 }
 

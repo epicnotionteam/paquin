@@ -5162,9 +5162,9 @@ ul.list--link-arrow li::before {
   padding: 1.2rem 1.2rem 2.4rem;
   font-weight: 400;
 }
-.site-navigation li {
-  transition: opacity 0.24s ease-out;
+.site-navigation li > a, .site-navigation li > summary {
   opacity: 1;
+  transition: opacity 0.24s ease-out;
 }
 
 @media (min-width: 64em) {
@@ -5190,10 +5190,10 @@ ul.list--link-arrow li::before {
     top: -16px;
   }
 }
-.site-navigation .navmenu:hover > li {
+.site-navigation .navmenu:hover > li > a, .site-navigation .navmenu:hover > li > summary {
   opacity: 0.56 !important;
 }
-.site-navigation .navmenu:hover > li:hover {
+.site-navigation .navmenu:hover > li:hover > a, .site-navigation .navmenu:hover > li:hover > summary {
   opacity: 1 !important;
 }
 

@@ -5167,8 +5167,8 @@ ul.list--link-arrow li::before {
 
 @media (min-width: 64em) {
   .site-navigation > .navmenu .navmenu-depth-2 {
-    padding: 12px 0 16px;
-    padding: 1.2rem 0 1.6rem;
+    padding: 16px 0;
+    padding: 1.6rem 0;
   }
   .site-navigation > .navmenu .navmenu-depth-2 li {
     font-size: 15px;
@@ -5182,6 +5182,8 @@ ul.list--link-arrow li::before {
     padding: 0.2rem 2rem;
   }
   .site-navigation > .navmenu .navmenu-depth-3 {
+    padding: 16px 0;
+    padding: 1.6rem 0;
     top: -12px;
     top: -1.2rem;
   }

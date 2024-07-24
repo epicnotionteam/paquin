@@ -77,9 +77,9 @@
     // Navigation [:Hover]
     .navmenu:hover {
         & > li {
-            opacity: 0.56;
+            opacity: 0.56 !important;
             &:hover {
-                opacity: 1;
+                opacity: 1 !important;
             }
         }
     }

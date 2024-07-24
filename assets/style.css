@@ -5191,10 +5191,10 @@ ul.list--link-arrow li::before {
   }
 }
 .site-navigation .navmenu:hover > li {
-  opacity: 0.56;
+  opacity: 0.56 !important;
 }
 .site-navigation .navmenu:hover > li:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .site-navigation .site-navigation__secondary-menu li.navmenu-item {

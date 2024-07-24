@@ -86,22 +86,13 @@
 // State management
 .site-navigation {
     // Primary Navigation [:Hover]
-    & > .navmenu:hover {
+    .navmenu:hover {
         & > li > a,
         & > li > details {
             opacity: 0.56;
         }
         & > li:hover > a,
         & > li:hover > details {
-            opacity: 1;
-        }
-    }
-    // Child dropdown container [Level 2, :Hover]
-    .navmenu-depth-2:hover {
-        & > li > a {
-            opacity: 0.56;
-        }
-        & > li:hover > a {
             opacity: 1;
         }
     }

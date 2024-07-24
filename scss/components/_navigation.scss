@@ -63,8 +63,13 @@
 // Adjust @custom breakpoint
 @include mq( $from: 1024px ) {
     // Adjust child menu container
-    .site-navigation > .navmenu .navmenu-depth-2 {
-        @include rem( padding, 12px 0 spacing(3)  );
+    .site-navigation > .navmenu {
+        .navmenu-depth-2 {
+            @include rem( padding, 12px 0 spacing(3)  );
+        }
+        .navmenu-depth-3 {
+            @include rem( top, -12px );
+        }
     }
 }
 

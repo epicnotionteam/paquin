@@ -5170,6 +5170,10 @@ ul.list--link-arrow li::before {
     padding: 12px 0 16px;
     padding: 1.2rem 0 1.6rem;
   }
+  .site-navigation > .navmenu .navmenu-depth-3 {
+    top: -12px;
+    top: -1.2rem;
+  }
 }
 .site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {
   opacity: 0.56;

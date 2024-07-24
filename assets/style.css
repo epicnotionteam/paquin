@@ -5177,6 +5177,10 @@ ul.list--link-arrow li::before {
     letter-spacing: -0.08px;
     letter-spacing: -0.008rem;
   }
+  .site-navigation > .navmenu .navmenu-depth-2 .navmenu-link {
+    padding: 2px 20px;
+    padding: 0.2rem 2rem;
+  }
   .site-navigation > .navmenu .navmenu-depth-3 {
     top: -12px;
     top: -1.2rem;

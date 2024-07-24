@@ -70,6 +70,9 @@
             li {
                 @include font-size( 'small' );
             }
+            .navmenu-link {
+                @include rem( padding, 2px 20px );
+            }
         }
         .navmenu-depth-3 {
             @include rem( top, -12px );

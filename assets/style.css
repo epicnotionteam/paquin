@@ -5164,23 +5164,6 @@ ul.list--link-arrow li::before {
   font-weight: 400;
   transition: opacity 0.24s ease-out;
 }
-.site-navigation > .navmenu .navmenu-depth-2 {
-  margin-left: -16px;
-  margin-left: -1.6rem;
-  padding: 12px 0 24px;
-  padding: 1.2rem 0 2.4rem;
-}
-.site-navigation > .navmenu .navmenu-depth-2 > li {
-  padding: 2px 24px;
-  padding: 0.2rem 2.4rem;
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.08px;
-  letter-spacing: -0.008rem;
-  opacity: 1;
-  transition: opacity 0.24s ease-out;
-}
 
 @media (min-width: 64em) {
   .site-navigation > .navmenu .navmenu-depth-2 {

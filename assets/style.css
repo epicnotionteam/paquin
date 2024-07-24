@@ -5152,7 +5152,6 @@ ul.list--link-arrow li::before {
 .site-navigation > .navmenu > li details summary a {
   padding: 0;
   font-weight: 400;
-  opacity: 1;
 }
 .site-navigation > .navmenu > li > a {
   padding: 12px 12px 24px;

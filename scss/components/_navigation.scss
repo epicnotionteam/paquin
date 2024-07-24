@@ -90,13 +90,11 @@
     // Primary Navigation [:Hover]
     .navmenu:hover,
     .navmenu-submenu:hover {
-        background-color: red !important;
         li {
-            opacity: 0.56;
+            opacity: 0.56 !important;
         }
-        li:hover {
-            background-color: blue !important;
-            opacity: 1;
+        & > li:hover {
+            opacity: 1 !important;
         }
     }
 }

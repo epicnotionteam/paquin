@@ -57,11 +57,8 @@
         // }
     }
     li {
-        a,
-        details {
-            opacity: 1;
-            transition: opacity 0.24s ease-out;
-        }
+        transition: opacity 0.24s ease-out;
+        opacity: 1;
     }
 }
 
@@ -92,12 +89,10 @@
 .site-navigation {
     // Primary Navigation [:Hover]
     .navmenu:hover {
-        & > li > a,
-        & > li > details {
+        & > li {
             opacity: 0.56;
         }
-        & > li:hover > a,
-        & > li:hover > details {
+        & > li:hover {
             opacity: 1;
         }
     }

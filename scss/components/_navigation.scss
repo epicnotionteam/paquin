@@ -57,8 +57,11 @@
         // }
     }
     li {
-        opacity: 1;
-        transition: opacity 0.24s ease-out;
+        a,
+        details {
+            opacity: 1;
+            transition: opacity 0.24s ease-out;
+        }
     }
 }
 

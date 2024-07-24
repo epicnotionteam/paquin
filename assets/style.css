@@ -5162,7 +5162,8 @@ ul.list--link-arrow li::before {
   padding: 1.2rem 1.2rem 2.4rem;
   font-weight: 400;
 }
-.site-navigation li {
+.site-navigation li a,
+.site-navigation li details {
   opacity: 1;
   transition: opacity 0.24s ease-out;
 }

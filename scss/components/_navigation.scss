@@ -50,7 +50,7 @@
                 padding: 12px 0 24px 
             ));
             // Link
-            & > li > a {
+            & > li {
                 @include rem( padding, 2px spacing(4) );
                 @include font-size( 'small' );
                 opacity: 1;

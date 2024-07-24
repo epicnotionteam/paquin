@@ -66,6 +66,10 @@
     .site-navigation > .navmenu {
         .navmenu-depth-2 {
             @include rem( padding, 12px 0 spacing(3)  );
+            // Item
+            li {
+                @include font-size( 'small' );
+            }
         }
         .navmenu-depth-3 {
             @include rem( top, -12px );

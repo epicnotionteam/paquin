@@ -77,7 +77,7 @@
         .navmenu-depth-3 {
             @include rem((
                 padding: spacing(3) 0,
-                top: -12px 
+                top: -#{spacing(3)} 
             ));
         }
     }

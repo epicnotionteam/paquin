@@ -5184,8 +5184,8 @@ ul.list--link-arrow li::before {
   .site-navigation > .navmenu .navmenu-depth-3 {
     padding: 16px 0;
     padding: 1.6rem 0;
-    top: -12px;
-    top: -1.2rem;
+    top: -16px;
+    top: -16px;
   }
 }
 .site-navigation > .navmenu:hover > li > a, .site-navigation > .navmenu:hover > li > details {

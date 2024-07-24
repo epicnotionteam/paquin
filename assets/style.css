@@ -5162,7 +5162,7 @@ ul.list--link-arrow li::before {
   padding: 1.2rem 1.2rem 2.4rem;
   font-weight: 400;
 }
-.site-navigation li {
+.site-navigation li > summary, .site-navigation li > a {
   transition: opacity 0.24s ease-out;
   opacity: 1;
 }
@@ -5190,13 +5190,11 @@ ul.list--link-arrow li::before {
     top: -16px;
   }
 }
-.site-navigation .navmenu:hover li,
-.site-navigation .navmenu-submenu:hover li {
-  opacity: 0.56 !important;
+.site-navigation .navmenu:hover > li > summary, .site-navigation .navmenu:hover > li > a {
+  opacity: 0.56;
 }
-.site-navigation .navmenu:hover > li:hover,
-.site-navigation .navmenu-submenu:hover > li:hover {
-  opacity: 1 !important;
+.site-navigation .navmenu:hover > li:hover > summary, .site-navigation .navmenu:hover > li:hover > a {
+  opacity: 1;
 }
 
 .site-navigation .site-navigation__secondary-menu li.navmenu-item {

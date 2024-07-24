@@ -41,24 +41,14 @@
             @include rem( padding, 12px 12px spacing(4) );
             font-weight: font-weight( 'base' );
         }
-        // // Child dropdown container [Level 2]
-        // .navmenu-depth-2 {
-        //     @include rem(( 
-        //         margin-left: -16px,
-        //         padding: 12px 0 24px 
-        //     ));
-        //     // Link
-        //     & > li {
-        //         @include rem( padding, 2px spacing(4) );
-        //         @include font-size( 'small' );
-        //         opacity: 1;
-        //         transition: opacity 0.24s ease-out;
-        //     }
-        // }
     }
+    // Menu item [All Tiers]
     li {
-        transition: opacity 0.24s ease-out;
-        opacity: 1;
+        & > summary,
+        & > a {
+            transition: opacity 0.24s ease-out;
+            opacity: 1;
+        }
     }
 }
 
@@ -87,14 +77,19 @@
 
 // State management
 .site-navigation {
-    // Primary Navigation [:Hover]
-    .navmenu:hover,
-    .navmenu-submenu:hover {
-        li {
-            opacity: 0.56 !important;
-        }
-        & > li:hover {
-            opacity: 1 !important;
+    // Navigation [:Hover]
+    .navmenu:hover {
+        & > li {
+            & > summary,
+            & > a {
+                opacity: 0.56;
+            }
+            &:hover {
+                & > summary,
+                & > a {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

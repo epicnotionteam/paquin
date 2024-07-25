@@ -128,45 +128,51 @@
 {% paginate collection.products by paginate_by %}
 	<div class="wrap--container container--grid">
 		<div class="productgrid--outer {{ collection_classes | strip_newlines }}" data-productgrid-outer>
-			{% comment %} Container [Masthead] {% endcomment %}
-			<div class="productgrid--masthead">
-				{% comment %} Heading {% endcomment %}
-				<h1 class="collection--title">
-					{{ collection.title }}
-				</h1>
-				{% comment %} Description {% endcomment %}
-				{% if collection.description != blank %}
-					<div class="collection--description rte" data-collection-description>
-						{{ collection.description }}
-						{% if collection.metafields.custom.collection_information %}
-							<a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
-						{% endif %}
-					</div>
-				{% endif %}
-				{% comment %} Container [Empty Collection] {% endcomment %}
-				{% if collection.products.size == 0 %}
-					<div class="container--empty-collection">
-						{% comment %} <p>This product category is empty — <a href="/collections/all/">view all products</a>, or <a href="/pages/contact/">get in touch with our specialists</a> who will assist you in choosing the right configuration for your unique application.</p> {% endcomment %}
-                        <h5>Coming Soon</h5>
-                        <p>We are excited to present our {{ collection.title }} product portfolio — we will begin to post our datasheets, press releases and new product announcements soon. Until then, we can support your {{ collection.title }} requirements - please <a href="/pages/contact/">get in touch</a> with our specialists who are ready to assist you.</p>
-						<a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>
-					</div>
-				{% endif %}
-				{% comment %} Subcollections {% endcomment %}
-				{% render 'feed-subcollections', collection: collection %}
-				{% comment %} Subcollections Grid {% endcomment %}
-				{% comment %}
-					{% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
-						{%
-						render 'subcollections-collection',
-						type: 'block',
-						block: section,
-						layout_type: 'slideshow',
-						%}
-						<div class="subcollections-collection__border"></div>
-					{% endif %}
-				{% endcomment %}
-			</div>
+			
+            {% comment %} Container [Masthead] {% endcomment %}
+            <div class="productgrid--masthead">
+                {% if collection.url == '/collections/all' %}
+                    {% comment %} Custom content for '/collections/all/' page {% endcomment %}
+                    <h1 class="collection--title custom-all-collections-title">
+                        Custom Heading for All Collections
+                    </h1>
+                    <div class="collection--description rte" data-collection-description>
+                        <p>This is a custom paragraph for the All Collections page. You can add any content you want here.</p>
+                    </div>
+                    {% comment %} Add other custom components here {% endcomment %}
+                    {% comment %} For example:
+                    <div class="custom-component">
+                        <!-- Your custom component code -->
+                    </div>
+                    {% endcomment %}
+                {% else %}
+                    {% comment %} Original content for other collection pages {% endcomment %}
+                    {% comment %} Heading {% endcomment %}
+                    <h1 class="collection--title">
+                        {{ collection.title }}
+                    </h1>
+                    {% comment %} Description {% endcomment %}
+                    {% if collection.description != blank %}
+                        <div class="collection--description rte" data-collection-description>
+                            {{ collection.description }}
+                            {% if collection.metafields.custom.collection_information %}
+                                <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    {% comment %} Container [Empty Collection] {% endcomment %}
+                    {% if collection.products.size == 0 %}
+                        <div class="container--empty-collection">
+                            <h5>Coming Soon</h5>
+                            <p>We are excited to present our {{ collection.title }} product portfolio — we will begin to post our datasheets, press releases and new product announcements soon. Until then, we can support your {{ collection.title }} requirements - please <a href="/pages/contact/">get in touch</a> with our specialists who are ready to assist you.</p>
+                            <a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>
+                        </div>
+                    {% endif %}
+                    {% comment %} Subcollections {% endcomment %}
+                    {% render 'feed-subcollections', collection: collection %}
+                {% endif %}
+            </div>
+
 			{% if collection.products.size > 0 %}
 				{% comment %} Container [Sidebar] {% endcomment %}
 				{% if show_sidebar %}

@@ -3280,6 +3280,21 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 2rem;
 }
 
+.template-collection .productgrid--masthead .container--header-ready-made .container--cta {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .container--cta p {
+  margin: 0 0 12px;
+  margin: 0 0 1.2rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  color: colorr("type", "2");
+}
+
 @media (min-width: 53.75em) {
   .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
     padding: 24px 0 96px;

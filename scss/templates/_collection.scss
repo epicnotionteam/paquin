@@ -67,6 +67,19 @@
     }
 }
 
+// Variant [Collections — All]
+.template-collection .productgrid--masthead .container--header-ready-made {
+    // Container [CTA]
+    .container--cta {
+        @include rem( margin-top, spacing(4) );
+        p {
+            @include rem( margin, 0 0 12px );
+            @include font-size( 'small' );
+            color: colorr( 'type', '2' );
+        }
+    }
+}
+
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
     // Variant [Zero Items]

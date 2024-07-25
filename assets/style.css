@@ -3266,8 +3266,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 3.2rem;
 }
 .template-collection .productgrid--masthead .container--grid.variant--has-image .container--image img {
-  max-width: 128px;
-  max-width: 12.8rem;
+  max-width: 160px;
+  max-width: 16rem;
+  margin: 0 auto;
   display: block;
 }
 

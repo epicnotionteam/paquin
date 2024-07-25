@@ -55,7 +55,8 @@
             ));
             // Image
             img {
-                @include rem( max-width, 128px );
+                @include rem( max-width, 160px );
+                margin: 0 auto;
                 display: block;
             }
         }

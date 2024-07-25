@@ -48,15 +48,14 @@
     
     // Variant [Has Products, Has Image]
     .container--grid.variant--has-image {
-        background-color: red;
         display: grid;
         .container--image {
             @include rem((
-                margin-bottom: spacing(5),
-                max-width: 256px
+                margin-bottom: spacing(5)
             ));
             // Image
             img {
+                @include rem( max-width, 256px );
                 display: block;
             }
         }

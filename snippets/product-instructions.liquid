@@ -15,10 +15,13 @@
             {% for item in instructions %}
                 <li>
                     <p>Item: {{ item }}</p> <!-- Display the raw item -->
-                    {% if item.url and item.title %}
-                        <a href="{{ item.url }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
+                    {% assign item_url = item.url or item.value or item | json %} <!-- Attempt to find URL -->
+                    {% if item_url != blank %}
+                        <a href="{{ item_url }}" title="{{ item.title | escape | default: 'View instruction' }}" target="_blank">
+                            {{ item.title | escape | default: 'View instruction' }}
+                        </a>
                     {% else %}
-                        <p>Invalid item data. URL: {{ item.url }}, Title: {{ item.title }}</p>
+                        <p>Invalid item data.</p>
                     {% endif %}
                 </li>
             {% endfor %}

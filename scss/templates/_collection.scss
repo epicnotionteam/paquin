@@ -76,7 +76,7 @@
         p {
             @include rem( margin, 0 0 12px );
             @include font-size( 'small' );
-            color: color( 'type', '2' );
+            color: color( 'steel', '4' );
         }
     }
 }

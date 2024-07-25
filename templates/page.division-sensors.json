@@ -203,6 +203,48 @@
           "settings": {
             "collection": "manufacturing-equipment"
           }
+        },
+        "collection_qbGEpk": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydraulics-mobile-hydraulics"
+          }
+        },
+        "collection_3b9gJK": {
+          "type": "collection",
+          "settings": {
+            "collection": "heavy-duty-process"
+          }
+        },
+        "collection_dCAKb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        },
+        "collection_EQGE6h": {
+          "type": "collection",
+          "settings": {
+            "collection": "gas-oil"
+          }
+        },
+        "collection_6cqjNX": {
+          "type": "collection",
+          "settings": {
+            "collection": "test-measurement"
+          }
+        },
+        "collection_nnXhDG": {
+          "type": "collection",
+          "settings": {
+            "collection": "ruggedized-cabllng-solutions"
+          }
+        },
+        "collection_CMnzVr": {
+          "type": "collection",
+          "settings": {
+            "collection": "automation-controls"
+          }
         }
       },
       "block_order": [
@@ -211,7 +253,14 @@
         "collection_GPt3be",
         "collection_BXR8KM",
         "collection_NcBkKQ",
-        "collection_wPFKrF"
+        "collection_wPFKrF",
+        "collection_qbGEpk",
+        "collection_3b9gJK",
+        "collection_dCAKb8",
+        "collection_EQGE6h",
+        "collection_6cqjNX",
+        "collection_nnXhDG",
+        "collection_CMnzVr"
       ],
       "settings": {
         "heading_small": "Related Industries",

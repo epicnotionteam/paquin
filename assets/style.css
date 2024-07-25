@@ -5160,7 +5160,7 @@ ul.list--link-arrow li::before {
 }
 .site-navigation li > a, .site-navigation li > details {
   opacity: 1;
-  transition: opacity 0.24s ease-out;
+  transition: opacity 0.24s ease-out !important;
 }
 
 @media (min-width: 64em) {

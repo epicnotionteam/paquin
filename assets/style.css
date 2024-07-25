@@ -3280,6 +3280,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 2rem;
 }
 
+.template-collection .productgrid--masthead .container--header-ready-made {
+  text-align: center;
+}
 .template-collection .productgrid--masthead .container--header-ready-made .container--cta {
   margin-top: 24px;
   margin-top: 2.4rem;
@@ -3292,7 +3295,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
-  color: colorr("type", "2");
 }
 
 @media (min-width: 53.75em) {

@@ -48,6 +48,7 @@
     
     // Variant [Has Products, Has Image]
     .container--grid.variant--has-image {
+        background-color: red;
         display: grid;
         .container--image {
             @include rem((

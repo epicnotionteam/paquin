@@ -1,18 +1,24 @@
 {% comment %}
-// Output instruction feed for the current product
+  // Output instruction feed for the current product
 {% endcomment %}
 
 {% if product.metafields.custom.instructions != blank %}
-    {% assign instructions = product.metafields.custom.instructions.value | parse_json %}
+    {% assign instructions_json = product.metafields.custom.instructions.value %}
+    <p>Instructions JSON: {{ instructions_json }}</p> <!-- Display the raw JSON data -->
+
+    {% assign instructions = instructions_json | parse_json %}
+    <p>Parsed Instructions: {{ instructions }}</p> <!-- Display the parsed instructions -->
+
     <div id="product__instructions">
         <h2 class="h5">Instructions</h2>
         <ul class="list--link-arrow">
             {% for item in instructions %}
                 <li>
+                    <p>Item: {{ item }}</p> <!-- Display the raw item -->
                     {% if item.url and item.title %}
                         <a href="{{ item.url }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
                     {% else %}
-                        <p>Invalid item data.</p>
+                        <p>Invalid item data. URL: {{ item.url }}, Title: {{ item.title }}</p>
                     {% endif %}
                 </li>
             {% endfor %}

@@ -3,11 +3,11 @@
 {% endcomment %}
 
 {% if product.metafields.custom.instructions != blank %}
-    {% assign instructions = product.metafields.custom.instructions.value | parse_json %}
+    {% assign data_source = product.metafields.custom.instructions.value | parse_json %}
     <div id="product__instructions">
         <h2 class="h5">Instructions</h2>
         <ul class="list--link-arrow">
-            {% for item in instructions %}
+            {% for item in data_source %}
 				{% comment %} Assign item data to vars {% endcomment %}
                 {% assign item_url = item.url %}
                 {% assign item_title = item.title %}

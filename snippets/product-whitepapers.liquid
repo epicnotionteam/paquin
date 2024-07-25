@@ -3,15 +3,29 @@
 {% endcomment %}
 
 {% if product.metafields.custom.whitepapers != blank %}
-	{% assign data_source = product.metafields.custom.whitepapers.value %}
-	<div id="product__whitepapers">
-		<h2 class="h5">Whitepapers</h2>
-		<ul class="list--link-arrow">
-			{% for item in data_source %}
-		  		<li>
-					<a href="{{ item.url.value }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
-				</li>
-			{% endfor %}
-	  	</ul>
-	</div>
+    {% assign data_source = product.metafields.custom.whitepapers.value | parse_json %}
+    <div id="product__whitepapers">
+        <h2 class="h5">Whitepapers</h2>
+        <ul class="list--link-arrow">
+            {% for item in data_source %}
+				{% comment %} Assign item data to vars {% endcomment %}
+                {% assign item_url = item.url %}
+                {% assign item_title = item.title %}
+                {% if item_url == blank %}
+                    {% assign item_url = item.value %}
+                {% endif %}
+                {% if item_url == blank %}
+                    {% assign item_url = item %}
+                {% endif %}
+                {% comment %} Output item {% endcomment %}
+                {% if item_url != blank %}
+                    <li>
+                        <a href="{{ item_url | escape }}" title="{{ item_title | escape | default: 'View whitepaper' }}" target="_blank">
+                            {{ item_title | escape | default: 'View whitepaper' }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 {% endif %}

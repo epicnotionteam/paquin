@@ -44,6 +44,20 @@
     }
 }
 
+.template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
+    
+    .container--grid.variant--has-image {
+        display: grid;
+        .container--image {
+            @include rem((
+                margin-bottom: spacing(5),
+                max-width: 256px
+            ));
+        }
+    }
+
+}
+
 // Variant [Has Items]
 .template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
     @include rem( padding, spacing(4) 0 spacing(8) );

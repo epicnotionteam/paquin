@@ -3,41 +3,31 @@
 {% endcomment %}
 
 {% if product.metafields.custom.instructions != blank %}
-    {% assign instructions_json = product.metafields.custom.instructions.value %}
-    <p>Instructions JSON: {{ instructions_json }}</p> <!-- Display the raw JSON data -->
-
-    {% assign instructions = instructions_json | parse_json %}
-    <p>Parsed Instructions: {{ instructions }}</p> <!-- Display the parsed instructions -->
+    {% assign instructions = product.metafields.custom.instructions.value | parse_json %}
 
     <div id="product__instructions">
         <h2 class="h5">Instructions</h2>
         <ul class="list--link-arrow">
             {% for item in instructions %}
-                <li>
-                    <p>Item: {{ item }}</p> <!-- Display the raw item -->
-
-                    {% assign item_url = item.url %}
-                    {% assign item_title = item.title %}
-                    
-                    {% if item_url == blank %}
-                        {% assign item_url = item.value %}
-                    {% endif %}
-                    
-                    {% if item_url == blank %}
-                        {% assign item_url = item %}
-                    {% endif %}
-                    
-                    {% if item_url != blank %}
+                {% assign item_url = item.url %}
+                {% assign item_title = item.title %}
+                
+                {% if item_url == blank %}
+                    {% assign item_url = item.value %}
+                {% endif %}
+                
+                {% if item_url == blank %}
+                    {% assign item_url = item %}
+                {% endif %}
+                
+                {% if item_url != blank %}
+                    <li>
                         <a href="{{ item_url | escape }}" title="{{ item_title | escape | default: 'View instruction' }}" target="_blank">
                             {{ item_title | escape | default: 'View instruction' }}
                         </a>
-                    {% else %}
-                        <p>Invalid item data.</p>
-                    {% endif %}
-                </li>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>
-{% else %}
-    <p>No instructions available.</p>
 {% endif %}

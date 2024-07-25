@@ -44,8 +44,9 @@
     }
 }
 
-.template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
+.template-collection .productgrid--masthead {
     
+    // Variant [Has Products, Has Image]
     .container--grid.variant--has-image {
         display: grid;
         .container--image {
@@ -53,6 +54,10 @@
                 margin-bottom: spacing(5),
                 max-width: 256px
             ));
+            // Image
+            img {
+                display: block;
+            }
         }
     }
 

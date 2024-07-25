@@ -1,24 +1,13 @@
 {% comment %}
 // Output data sheet link (or fallback) for the current product
-{% endcomment %} 
+{% endcomment %}
 
 <div id="product__data-sheet">
-    {% if product.metafields.custom.data_sheet %}
-        {% assign data_sheet = product.metafields.custom.data_sheet %}
-        <p>Debug: Metafield exists</p>
-        <p>Metafield type: {{ data_sheet.type }}</p>
-        <p>Metafield value: {{ data_sheet | json }}</p>
-        
-        {% if data_sheet.url != blank %}
-            <a class="button--outline button--icon-before button--icon-data-sheet" href="{{ data_sheet.url }}" target="_blank">
-                View data sheet ({{ data_sheet.filename }})
-            </a>
-        {% else %}
-            <p>Data sheet file URL is blank. Debug info:</p>
-            <p>URL: {{ data_sheet.url }}</p>
-            <p>Filename: {{ data_sheet.filename }}</p>
-        {% endif %}
-    {% else %}
-        <p>No data sheet metafield found for this product — <a href="/contact">contact our team</a> to learn more.</p>
-    {% endif %}
+	{% if product.metafields.custom.data_sheet != blank %}
+		<a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet.value.url }}" target="_blank">
+			View data sheet
+	  	</a>
+		{% else %}
+	  		<p>No data sheet available for this product — <a href="/contact">contact our team</a> to learn more.</p>
+	{% endif %}
 </div>

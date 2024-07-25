@@ -1,13 +1,18 @@
 {% comment %}
 // Output data sheet link (or fallback) for the current product
 {% endcomment %}
-
+ 
 <div id="product__data-sheet">
-	{% if product.metafields.custom.data_sheet != blank %}
-		<a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet.url }}" target="_blank">
-			View data sheet
-	  	</a>
-		{% else %}
-	  		<p>No data sheet available for this product — <a href="/contact">contact our team</a> to learn more.</p>
-	{% endif %}
+    {% if product.metafields.custom.data_sheet %}
+        {% assign data_sheet = product.metafields.custom.data_sheet %}
+        {% if data_sheet.url != blank %}
+            <a class="button--outline button--icon-before button--icon-data-sheet" href="{{ data_sheet.url }}" target="_blank">
+                View data sheet ({{ data_sheet.filename }})
+            </a>
+        {% else %}
+            <p>Data sheet file is not accessible. Please contact our team for assistance.</p>
+        {% endif %}
+    {% else %}
+        <p>No data sheet available for this product — <a href="/contact">contact our team</a> to learn more.</p>
+    {% endif %}
 </div>

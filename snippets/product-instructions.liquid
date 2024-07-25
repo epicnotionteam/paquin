@@ -3,15 +3,15 @@
 {% endcomment %}
 
 {% if product.metafields.custom.instructions != blank %}
-	{% assign data_source = product.metafields.custom.instructions.value %}
-	<div id="product__instructions">
-		<h2 class="h5">Instructions</h2>
-		<ul class="list--link-arrow">
-			{% for item in data_source %}
-		  		<li>
-					<a href="{{ item.url.value }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
-				</li>
-			{% endfor %}
-	  	</ul>
-	</div>
+    {% assign data_source = product.metafields.custom.instructions.value %}
+    <div id="product__instructions">
+        <h2 class="h5">Instructions</h2>
+        <ul class="list--link-arrow">
+            {% for item in data_source %}
+                <li>
+                    <a href="{{ item.url.value }}" title="{{ item.title | escape }}" target="_blank">{{ item.title | escape }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endif %}

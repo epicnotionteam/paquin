@@ -4,26 +4,24 @@
 
 {% if product.metafields.custom.instructions != blank %}
     {% assign instructions = product.metafields.custom.instructions.value | parse_json %}
-
     <div id="product__instructions">
         <h2 class="h5">Instructions</h2>
         <ul class="list--link-arrow">
             {% for item in instructions %}
+				{% comment %} Assign item data to vars {% endcomment %}
                 {% assign item_url = item.url %}
                 {% assign item_title = item.title %}
-                
                 {% if item_url == blank %}
                     {% assign item_url = item.value %}
                 {% endif %}
-                
                 {% if item_url == blank %}
                     {% assign item_url = item %}
                 {% endif %}
-                
+                {% comment %} Output item {% endcomment %}
                 {% if item_url != blank %}
                     <li>
-                        <a href="{{ item_url | escape }}" title="{{ item_title | escape | default: 'View instruction' }}" target="_blank">
-                            {{ item_title | escape | default: 'View instruction' }}
+                        <a href="{{ item_url | escape }}" title="{{ item_title | escape | default: 'View instructions' }}" target="_blank">
+                            {{ item_title | escape | default: 'View instructions' }}
                         </a>
                     </li>
                 {% endif %}

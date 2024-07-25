@@ -15,10 +15,21 @@
             {% for item in instructions %}
                 <li>
                     <p>Item: {{ item }}</p> <!-- Display the raw item -->
-                    {% assign item_url = item.url or item.value or item | json %} <!-- Attempt to find URL -->
+
+                    {% assign item_url = item.url %}
+                    {% assign item_title = item.title %}
+                    
+                    {% if item_url == blank %}
+                        {% assign item_url = item.value %}
+                    {% endif %}
+                    
+                    {% if item_url == blank %}
+                        {% assign item_url = item %}
+                    {% endif %}
+                    
                     {% if item_url != blank %}
-                        <a href="{{ item_url }}" title="{{ item.title | escape | default: 'View instruction' }}" target="_blank">
-                            {{ item.title | escape | default: 'View instruction' }}
+                        <a href="{{ item_url | escape }}" title="{{ item_title | escape | default: 'View instruction' }}" target="_blank">
+                            {{ item_title | escape | default: 'View instruction' }}
                         </a>
                     {% else %}
                         <p>Invalid item data.</p>

@@ -174,6 +174,12 @@
             "collection": "ag-equipment"
           }
         },
+        "collection_CMnzVr": {
+          "type": "collection",
+          "settings": {
+            "collection": "automation-controls"
+          }
+        },
         "collection_e4cixi": {
           "type": "collection",
           "settings": {
@@ -186,10 +192,16 @@
             "collection": "factory-floor-safety"
           }
         },
-        "collection_BXR8KM": {
+        "collection_QAqNiA": {
           "type": "collection",
           "settings": {
-            "collection": "food-beverage"
+            "collection": "food-beverage-pharmaceutical"
+          }
+        },
+        "collection_3b9gJK": {
+          "type": "collection",
+          "settings": {
+            "collection": "heavy-duty-process"
           }
         },
         "collection_NcBkKQ": {
@@ -198,22 +210,10 @@
             "collection": "hvac-refrigeration"
           }
         },
-        "collection_wPFKrF": {
-          "type": "collection",
-          "settings": {
-            "collection": "manufacturing-equipment"
-          }
-        },
         "collection_qbGEpk": {
           "type": "collection",
           "settings": {
             "collection": "hydraulics-mobile-hydraulics"
-          }
-        },
-        "collection_3b9gJK": {
-          "type": "collection",
-          "settings": {
-            "collection": "heavy-duty-process"
           }
         },
         "collection_dCAKb8": {
@@ -228,10 +228,10 @@
             "collection": "gas-oil"
           }
         },
-        "collection_6cqjNX": {
+        "collection_wPFKrF": {
           "type": "collection",
           "settings": {
-            "collection": "test-measurement"
+            "collection": "manufacturing-equipment"
           }
         },
         "collection_nnXhDG": {
@@ -240,27 +240,27 @@
             "collection": "ruggedized-cabllng-solutions"
           }
         },
-        "collection_CMnzVr": {
+        "collection_6cqjNX": {
           "type": "collection",
           "settings": {
-            "collection": "automation-controls"
+            "collection": "test-measurement"
           }
         }
       },
       "block_order": [
         "collection_Kk63zK",
+        "collection_CMnzVr",
         "collection_e4cixi",
         "collection_GPt3be",
-        "collection_BXR8KM",
-        "collection_NcBkKQ",
-        "collection_wPFKrF",
-        "collection_qbGEpk",
+        "collection_QAqNiA",
         "collection_3b9gJK",
+        "collection_NcBkKQ",
+        "collection_qbGEpk",
         "collection_dCAKb8",
         "collection_EQGE6h",
-        "collection_6cqjNX",
+        "collection_wPFKrF",
         "collection_nnXhDG",
-        "collection_CMnzVr"
+        "collection_6cqjNX"
       ],
       "settings": {
         "heading_small": "Related Industries",

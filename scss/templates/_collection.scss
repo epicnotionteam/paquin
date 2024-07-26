@@ -88,15 +88,6 @@
 // Variant [Collections — All]
 .template-collection .productgrid--masthead .container--header-ready-made {
     display: grid;
-    // Container [CTA]
-    .container--cta {
-        @include rem( margin-top, spacing(4) );
-        p {
-            @include rem( margin, 0 0 12px );
-            @include font-size( 'small' );
-            color: color( 'steel', '4' );
-        }
-    }
 }
 
 // Adjust @custom breakpoint
@@ -152,11 +143,18 @@
         // Block [Sensors]
         .block--sensors {
             grid-column: 10/span 3;
+            // CTA
+            .block__cta {
+                @include rem( margin-top, spacing(4) );
+                p {
+                    @include rem( margin, 0 0 12px );
+                    @include font-size( 'small' );
+                    color: color( 'steel', '4' );
+                }
+            }
         }
 
     }
-
-
 
 }
 

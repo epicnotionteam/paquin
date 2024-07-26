@@ -3295,7 +3295,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .template-collection .productgrid--masthead .container--header-ready-made {
-  text-align: center;
+  display: grid;
 }
 .template-collection .productgrid--masthead .container--header-ready-made .container--cta {
   margin-top: 24px;
@@ -3316,6 +3316,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
     padding: 24px 0 96px;
     padding: 2.4rem 0 9.6rem;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made {
+    grid-template-columns: 2fr 1fr 1fr;
   }
 }
 .template-collection .collection--section .productgrid--outer {

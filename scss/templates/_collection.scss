@@ -89,7 +89,7 @@
 
 // Variant [Collections — All]
 .template-collection .productgrid--masthead .container--header-ready-made {
-    text-align: center;
+    display: grid;
     // Container [CTA]
     .container--cta {
         @include rem( margin-top, spacing(4) );
@@ -107,6 +107,12 @@
     .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
         @include rem( padding, spacing(4) 0 $gap--section-large );
     }
+
+    // Variant [Collections — All]
+    .template-collection .productgrid--masthead .container--header-ready-made {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
 }
 
 

@@ -68,13 +68,12 @@
 // }
 
 
-// Variant [Has Products, Has Image]
-.template-collection .productgrid--masthead .container--grid.variant--has-image {
+// Variant [Base]
+.template-collection .productgrid--masthead .container--grid.variant--base {
     display: grid;
+    text-align: center;
     .container--image {
-        @include rem((
-            margin-bottom: spacing(5)
-        ));
+        @include rem( margin-bottom, spacing(5) );
         // Image
         img {
             @include rem( max-width, 160px );

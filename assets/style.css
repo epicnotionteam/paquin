@@ -3261,14 +3261,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: inline-block;
 }
 
-.template-collection .productgrid--masthead .container--grid.variant--has-image {
+.template-collection .productgrid--masthead .container--grid.variant--base {
   display: grid;
+  text-align: center;
 }
-.template-collection .productgrid--masthead .container--grid.variant--has-image .container--image {
+.template-collection .productgrid--masthead .container--grid.variant--base .container--image {
   margin-bottom: 32px;
   margin-bottom: 3.2rem;
 }
-.template-collection .productgrid--masthead .container--grid.variant--has-image .container--image img {
+.template-collection .productgrid--masthead .container--grid.variant--base .container--image img {
   max-width: 160px;
   max-width: 16rem;
   margin: 0 auto;

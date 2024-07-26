@@ -139,7 +139,7 @@
     
     // Primary container
     .template-collection .productgrid--masthead {
-        @include rem( padding, spacing(4) 0  $gap--section-large );
+        @include rem( padding, spacing(5) 0  $gap--section-large );
     }
 
     // Variant [Collections — All]

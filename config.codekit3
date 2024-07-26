@@ -2173,12 +2173,12 @@
       "oAP" : "\/snippets\/featured-collection.liquid",
       "oF" : 0
     },
-    "\/snippets\/feed-subcollections.liquid" : {
+    "\/snippets\/feed-subcollection.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/feed-subcollections.liquid",
+      "oAP" : "\/snippets\/feed-subcollection.liquid",
       "oF" : 0
     },
     "\/snippets\/footer-block.liquid" : {

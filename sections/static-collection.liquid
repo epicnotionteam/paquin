@@ -203,8 +203,9 @@
                         </div>
                     {% endif %}
 
-                    {% comment %} Subcollections {% endcomment %}
-                    {% comment %} {% render 'feed-subcollections', collection: collection %} {% endcomment %}
+                    {% comment %} Feed [Subcollection] {% endcomment %}
+                    {% assign section_blocks = section.blocks | where: "type", "collection" %}
+                    {% render 'feed-subcollection', section_blocks: section_blocks %}
 
                 {% endif %}
             </div>
@@ -366,7 +367,7 @@
     {%- render 'product-grid-sortby', type: 'modal', -%}
 {%- endif -%}
 
-{% render 'quick-shop' %}
+{% comment %} {% render 'quick-shop' %} {% endcomment %}
 
 {% schema %}
 {
@@ -660,6 +661,17 @@
                 }
             ],
             "limit": 1
+        },
+        {
+            "type": "collection",
+            "name": "Subcollection",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                }
+            ]
         }
     ]
 }

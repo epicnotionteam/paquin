@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -17,10 +26,38 @@
             "excluded_tags": "",
             "excluded_groups": ""
           }
+        },
+        "collection_BP6Fzj": {
+          "type": "collection",
+          "settings": {
+            "collection": "pressure-transmitters"
+          }
+        },
+        "collection_MY8ktV": {
+          "type": "collection",
+          "settings": {
+            "collection": "pressure-switches"
+          }
+        },
+        "collection_LA6GxF": {
+          "type": "collection",
+          "settings": {
+            "collection": "pressure-gauges"
+          }
+        },
+        "collection_h74YkB": {
+          "type": "collection",
+          "settings": {
+            "collection": "pressure-vessels-accumulators"
+          }
         }
       },
       "block_order": [
-        "filter-1"
+        "filter-1",
+        "collection_BP6Fzj",
+        "collection_MY8ktV",
+        "collection_LA6GxF",
+        "collection_h74YkB"
       ],
       "settings": {
         "show_collection_image": false,

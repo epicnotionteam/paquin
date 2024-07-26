@@ -133,6 +133,7 @@
 
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
+    
     // Variant [Zero Items]
     .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
         @include rem( padding, spacing(4) 0 $gap--section-large );
@@ -140,13 +141,10 @@
 
     // Variant [Collections — All]
     .template-collection .productgrid--masthead .container--header-ready-made {
-        @include rem( column-gap, spacing(4) );
-
-        // Block [Barksdale]
-        .block--content {
-            grid-column: 1/span 6;
-        }
-
+        @include rem(( 
+            column-gap: spacing(4),
+            padding: spacing(4) 0 $gap--section-large 
+        ));
         // Block [Barksdale]
         // Block [Sensors]
         .block--barksdale,
@@ -158,26 +156,38 @@
                 @include rem( max-width, 320px );
             }
         }
-
         // Block [Barksdale]
         .block--barksdale {
-            grid-column: 7/span 3;
+            grid-column: 1/span 6;
         }
-        
         // Block [Sensors]
         .block--sensors {
-            grid-column: 10/span 3;
+            grid-column: 7/span 6;
         }
-
     }
 
 }
 
-// Adjust @medium breakpoint
-@include mq( $from: medium ) {}
-
 // Adjust @large breakpoint
-@include mq( $from: large ) {}
+@include mq( $from: large ) {
+
+     // Variant [Collections — All]
+     .template-collection .productgrid--masthead .container--header-ready-made {
+        // Block [Barksdale]
+        .block--content {
+            grid-column: 1/span 6;
+        }
+        // Block [Barksdale]
+        .block--barksdale {
+            grid-column: 7/span 3;
+        }
+        // Block [Sensors]
+        .block--sensors {
+            grid-column: 10/span 3;
+        }
+    }
+
+}
 
 
 // Collection Feed

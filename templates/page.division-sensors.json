@@ -10,11 +10,11 @@
 {
   "order": [
     "division-sensors-hero",
-    "division-sensors-about",
-    "content_blocks_HCAWDb",
     "division-sensors-product-types",
+    "division-sensors-markets",
+    "content_blocks_HCAWDb",
     "hero_inline_yqmAAy",
-    "division-sensors-markets"
+    "division-sensors-about"
   ],
   "sections": {
     "division-sensors-hero": {
@@ -27,77 +27,6 @@
         "link_url": "#paquin-sensors",
         "image": "shopify:\/\/shop_images\/asset__parts--sensors.jpg",
         "show_jump_links": true
-      }
-    },
-    "division-sensors-about": {
-      "type": "content-offset",
-      "settings": {
-        "heading_small": "Paquin Sensors",
-        "heading_large": "Pioneering Sensor Technology for Every Industry",
-        "heading_size": "h1",
-        "subheading": "Our Capabilities",
-        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial, commercial and residential applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><ul><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to createyour solution.<\/li><\/ul>",
-        "image": "shopify:\/\/shop_images\/asset__sensors--testing.jpg",
-        "theme": "base"
-      }
-    },
-    "content_blocks_HCAWDb": {
-      "type": "content-blocks",
-      "blocks": {
-        "content_block_6eQheC": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Precision",
-            "content": "<p>Our sensors are designed to provide accurate and reliable data, essential for critical industrial applications.<\/p>",
-            "link_text": "",
-            "link_url": ""
-          }
-        },
-        "content_block_t9Vb7z": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Innovation",
-            "content": "<p>We continuously invest in research and development to bring the latest advancements in sensor technology to our clients.<\/p>",
-            "link_text": "",
-            "link_url": ""
-          }
-        },
-        "content_block_aQdtmm": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Quality",
-            "content": "<p>With rigorous quality control protocols, we ensure that every product meets our stringent standards of excellence.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        },
-        "content_block_TThA4r": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Support",
-            "content": "<p>Our dedicated team is here to provide expert guidance and support, ensuring you get the most out of our sensor solutions.<\/p>",
-            "link_text": "",
-            "link_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_block_6eQheC",
-        "content_block_t9Vb7z",
-        "content_block_aQdtmm",
-        "content_block_TThA4r"
-      ],
-      "settings": {
-        "heading_small": "What Sets Us Apart",
-        "heading_large": "Why Choose Paquin Sensors?",
-        "heading_size": "h1",
-        "show_numbering": true,
-        "columns": "4",
-        "theme": "base"
       }
     },
     "division-sensors-product-types": {
@@ -149,20 +78,8 @@
         "collection_keQgLK"
       ],
       "settings": {
-        "heading_small": "Related Part Types",
-        "theme": "alt"
-      }
-    },
-    "hero_inline_yqmAAy": {
-      "type": "hero-inline",
-      "settings": {
-        "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
-        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
-        "cta_primary_text": "Contact our team",
-        "cta_primary_url": "shopify:\/\/pages\/contact",
-        "cta_secondary_text": "",
-        "cta_secondary_url": "",
-        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
+        "heading_small": "By Product Type",
+        "theme": "base"
       }
     },
     "division-sensors-markets": {
@@ -263,7 +180,90 @@
         "collection_6cqjNX"
       ],
       "settings": {
-        "heading_small": "Related Industries",
+        "heading_small": "Products by Industry",
+        "theme": "alt"
+      }
+    },
+    "content_blocks_HCAWDb": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_6eQheC": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Precision",
+            "content": "<p>Our sensors are designed to provide accurate and reliable data, essential for critical industrial applications.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_t9Vb7z": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Innovation",
+            "content": "<p>We continuously invest in research and development to bring the latest advancements in sensor technology to our clients.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_aQdtmm": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Quality",
+            "content": "<p>With rigorous quality control protocols, we ensure that every product meets our stringent standards of excellence.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_TThA4r": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Support",
+            "content": "<p>Our dedicated team is here to provide expert guidance and support, ensuring you get the most out of our sensor solutions.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_6eQheC",
+        "content_block_t9Vb7z",
+        "content_block_aQdtmm",
+        "content_block_TThA4r"
+      ],
+      "settings": {
+        "heading_small": "What Sets Us Apart",
+        "heading_large": "Why Choose Paquin Sensors?",
+        "heading_size": "h1",
+        "show_numbering": true,
+        "columns": "4",
+        "theme": "base"
+      }
+    },
+    "hero_inline_yqmAAy": {
+      "type": "hero-inline",
+      "settings": {
+        "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
+        "cta_primary_text": "Contact our team",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_secondary_text": "",
+        "cta_secondary_url": "",
+        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
+      }
+    },
+    "division-sensors-about": {
+      "type": "content-offset",
+      "settings": {
+        "heading_small": "Paquin Sensors",
+        "heading_large": "Pioneering Sensor Technology for Every Industry",
+        "heading_size": "h1",
+        "subheading": "Our Capabilities",
+        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial, commercial and residential applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><ul><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to createyour solution.<\/li><\/ul>",
+        "image": "shopify:\/\/shop_images\/asset__sensors--testing.jpg",
         "theme": "dark"
       }
     }

@@ -20,7 +20,6 @@
     // Title
     .collection--title {
         @include rem( max-width, 800px );
-        text-align: center;
         margin: 0 auto;
         width: 100%;
     }
@@ -30,7 +29,6 @@
             margin: 12px auto 0, 
             max-width: 800px 
         ));
-        text-align: center;
         width: 100%;
         // Content
         p {
@@ -120,6 +118,21 @@
             // Cap item widths
             & > * {
                 @include rem( max-width, 512px );
+            }
+        }
+
+        // Block [Barksdale]
+        // Block [Sensors]
+        .block--barksdale,
+        .block--sensors {
+            @include rem( padding-left, spacing(4) );
+            border-left: $border--base;
+            // Content
+            p {
+                @include font-size( 'small' );
+                &:last-child {
+                    margin: 0;
+                }
             }
         }
 

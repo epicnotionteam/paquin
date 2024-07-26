@@ -88,6 +88,7 @@
 // Variant [Collections — All]
 .template-collection .productgrid--masthead .container--header-ready-made {
     display: grid;
+    grid-template-columns: repeat( 12, 1fr );
 
     // Block [Barksdale]
     .block--content {
@@ -110,6 +111,7 @@
     .block--sensors {
         @include rem( padding-top, spacing(4) );
         border-top: $border--base;
+        grid-column: 1/span 12;
         // Content
         p {
             @include font-size( 'small' );
@@ -120,14 +122,8 @@
         }
     }
 
-    // Block [Barksdale]
-    .block--barksdale {
-        grid-column: 1/span 6;
-    }
-    
     // Block [Sensors]
     .block--sensors {
-        grid-column: 7/span 6;
         // CTA
         .block__cta {
             @include rem( margin-top, spacing(3) );
@@ -151,7 +147,6 @@
     // Variant [Collections — All]
     .template-collection .productgrid--masthead .container--header-ready-made {
         @include rem( column-gap, spacing(4) );
-        grid-template-columns: repeat( 12, 1fr );
 
         // Block [Barksdale]
         .block--content {
@@ -183,6 +178,12 @@
     }
 
 }
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {}
+
+// Adjust @large breakpoint
+@include mq( $from: large ) {}
 
 
 // Collection Feed

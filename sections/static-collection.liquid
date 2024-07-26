@@ -144,7 +144,7 @@
                         {% comment %} Block [Barksdale] {% endcomment %}
                         <div class="block--barksdale">
                             <h3>Shop Barksdale Parts</h3>
-                            <p>As a long-time partner of Barksdale, we stock and support an extensive selection of their products. We offer pricing, availability and purchasing through our online store.</p>
+                            <p>As a long-time partner of Barksdale, we stock and support an extensive selection of their products. We offer pricing, availability and purchasing through our <a href="#section--feed">online store</a>.</p>
                         </div>
                         {% comment %} Block [Sensors] {% endcomment %}
                         <div class="block--sensors">
@@ -224,7 +224,7 @@
 					%}
 				{% endif %}
 				{% comment %} Container [Product Feed] {% endcomment %}
-				<div class="productgrid--wrapper">
+				<div id="section--feed" class="productgrid--wrapper">
 					{% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
 						{% capture utility_class %}
 							productgrid--utils

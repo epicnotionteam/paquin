@@ -3293,6 +3293,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .template-collection .productgrid--masthead .container--header-ready-made {
+  row-gap: 32px;
+  row-gap: 3.2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -3323,11 +3325,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
   margin: 0;
-}
-.template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
-.template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
-  max-width: 320px;
-  max-width: 32rem;
 }
 .template-collection .productgrid--masthead .container--header-ready-made .block--sensors .block__cta {
   margin-top: 16px;

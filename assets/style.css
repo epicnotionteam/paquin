@@ -3285,6 +3285,41 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
+.template-collection .productgrid--masthead .container--grid.variant--empty {
+  display: grid;
+  text-align: center;
+}
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--image {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--image .wrap--image {
+  max-width: 160px;
+  max-width: 16rem;
+  aspect-ratio: 1/1;
+  border: 1px solid #D6DBDD;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--image .wrap--image img {
+  display: block;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--content {
+  margin: 16px auto 0;
+  margin: 1.6rem auto 0;
+  max-width: 800px;
+  max-width: 80rem;
+  text-align: center;
+}
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--content p {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+
 .template-collection .productgrid--masthead .container--header-ready-made {
   row-gap: 32px;
   row-gap: 3.2rem;

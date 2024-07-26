@@ -3315,6 +3315,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 80rem;
   text-align: center;
 }
+.template-collection .productgrid--masthead .container--grid.variant--empty .container--content .collection--title {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
 .template-collection .productgrid--masthead .container--grid.variant--empty .container--content p {
   margin-bottom: 20px;
   margin-bottom: 2rem;

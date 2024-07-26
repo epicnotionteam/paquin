@@ -3350,8 +3350,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors p:last-child {
     margin: 0;
   }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale p > *,
-  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors p > * {
+  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
+  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
     max-width: 256px;
     max-width: 25.6rem;
   }

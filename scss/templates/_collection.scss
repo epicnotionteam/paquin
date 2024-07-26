@@ -138,9 +138,9 @@
                 &:last-child {
                     margin: 0;
                 }
-                & > * {
-                    @include rem( max-width, 256px );
-                }
+            }
+            & > * {
+                @include rem( max-width, 256px );
             }
         }
 

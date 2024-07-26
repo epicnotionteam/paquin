@@ -3354,10 +3354,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
-    padding: 0 0 0 24px;
-    padding: 0 0 0 2.4rem;
+    padding: 24px 0 0 24px;
+    padding: 2.4rem 0 0 2.4rem;
     border-left: 1px solid #D6DBDD;
-    border-top: 0 none;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
@@ -3374,6 +3373,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 @media (min-width: 77.5em) {
   .template-collection .productgrid--masthead .container--header-ready-made .block--content {
     grid-column: 1/span 6;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale,
+  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
+    padding: 0 0 0 24px;
+    padding: 0 0 0 2.4rem;
+    border-left: 1px solid #D6DBDD;
+    border-top: 0 none;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
     grid-column: 7/span 3;

@@ -149,9 +149,8 @@
         // Block [Sensors]
         .block--barksdale,
         .block--sensors {
-            @include rem( padding, 0 0 0 spacing(4) );
+            @include rem( padding, spacing(4) 0 0 spacing(4) );
             border-left: $border--base;
-            border-top: 0 none;
             & > * {
                 @include rem( max-width, 320px );
             }
@@ -176,6 +175,14 @@
         // Block [Barksdale]
         .block--content {
             grid-column: 1/span 6;
+        }
+        // Block [Barksdale]
+        // Block [Sensors]
+        .block--barksdale,
+        .block--sensors {
+            @include rem( padding, 0 0 0 spacing(4) );
+            border-left: $border--base;
+            border-top: 0 none;
         }
         // Block [Barksdale]
         .block--barksdale {

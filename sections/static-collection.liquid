@@ -131,18 +131,32 @@
 			
             {% comment %} Container [Masthead] {% endcomment %}
             <div class="productgrid--masthead">
+                {% comment %} Container [Collection — All] {% endcomment %}
                 {% if collection.url == '/collections/all' %}
                     <div class="container--header-ready-made">
-                        {% comment %} Heading {% endcomment %}
-                        <h1 class="collection--title custom-all-collections-title">Shop Ready-Made Parts</h1>
-                        {% comment %} Content {% endcomment %}
-                        <div class="collection--description rte" data-collection-description>
-                            <p>Paquin is your one-stop shop for both custom and ready-made parts. We specialize in custom-engineered components that are <a href="/pages/contact/">made to order</a>, providing flexibility in design to suit your unique requirements. In addition to our bespoke offerings, we stock a wide range of ready-made parts from top-tier suppliers, all available for purchase directly through our online store for your convenience.</p>
+                        {% comment %} Block [Content] {% endcomment %}
+                        <div class="block--content">
+                            <h1 class="collection--title custom-all-collections-title">Block Heading</h1>
+                            <div class="collection--description rte" data-collection-description>
+                                <p>Paquin is your one-stop shop for sensor-based instrumentation, process control equipment and accessories. Our 3 manufacturing divisions produce a wide variety of sensors, ruggedized cable harnesses & power connectors, actuators, valves and more.</p>
+                            </div>
                         </div>
-                        <div class="container--cta">
-                            <p class="text--small">Looking for custom-engineered parts?</p>
+                        {% comment %} Block [Barksdale] {% endcomment %}
+                        <div class="block--barksdale">
+                            <h3>Shop Barksdale Parts</h3>
+                            <p>As a long-time partner of Barksdale, we stock and support an extensive selection of their products. We offer pricing, availability and purchasing through our online store.</p>
+                        </div>
+                        {% comment %} Block [Sensors] {% endcomment %}
+                        <div class="block--sensors">
+                            <h3>Shop Paquin Sensors Parts</h3>
+                            <p>For a complete view of all that Paquin Sensors has to offer, click here.</p>
                             <a href="/pages/contact" class="button--base button--icon-before button--icon-arrow-forward">Contact Our Team</a>
                         </div>
+                       
+                        {% comment %} <div class="container--cta">
+                            <p class="text--small">Looking for custom-engineered parts?</p>
+                            <a href="/pages/contact" class="button--base button--icon-before button--icon-arrow-forward">Contact Our Team</a>
+                        </div> {% endcomment %}
                     </div>
                 {% else %}
                     

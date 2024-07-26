@@ -131,7 +131,8 @@
 			
             {% comment %} Container [Masthead] {% endcomment %}
             <div class="productgrid--masthead">
-                {% comment %} Container [Collection — All] {% endcomment %}
+                
+                {% comment %}Variant [Collection — All] {% endcomment %}
                 {% if collection.url == '/collections/all' %}
                     <div class="container--header-ready-made">
                         {% comment %} Block [Content] {% endcomment %}
@@ -155,50 +156,33 @@
                             </div>
                         </div>
                     </div>
+
                 {% else %}
-                    
+                    {% comment %} Variant [Base] {% endcomment %}
                     {% if collection.products.size > 0 %}
-                        {% comment %} Container [Has Image, Has Products] {% endcomment %}
-                        {% if collection.image %}
-                            <div class="container--grid variant--has-image">
+                        <div class="container--grid variant--base">
+                            {% comment %} Image {% endcomment %}
+                            {% if collection.image %}
                                 <div class="container--image">
-                                    {% comment %} Image {% endcomment %}
                                     {{ collection.image | img_url: 'master' | img_tag: collection.title }}
                                 </div>
-                                <div class="container--content">
-                                    {% comment %} Title {% endcomment %}
-                                    <h1 class="collection--title">{{ collection.title }}</h1>
-                                    {% comment %} Description {% endcomment %}
-                                    {% if collection.description != blank %}
-                                        <div class="collection--description rte" data-collection-description>
-                                            {{ collection.description }}
-                                            {% if collection.metafields.custom.collection_information %}
-                                                <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                </div>
+                            {% endif %}
+                            <div class="container--content">
+                                {% comment %} Title {% endcomment %}
+                                <h1 class="collection--title">{{ collection.title }}</h1>
+                                {% comment %} Description {% endcomment %}
+                                {% if collection.description != blank %}
+                                    <div class="collection--description rte" data-collection-description>
+                                        {{ collection.description }}
+                                        {% if collection.metafields.custom.collection_information %}
+                                            <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
                             </div>
-                        {% else %}
-                            {% comment %} Container [No Image, Has Products] {% endcomment %}
-                            <div class="container--grid variant--base">
-                                <div class="container--content">
-                                    {% comment %} Title {% endcomment %}
-                                    <h1 class="collection--title">{{ collection.title }}</h1>
-                                    {% comment %} Description {% endcomment %}
-                                    {% if collection.description != blank %}
-                                        <div class="collection--description rte" data-collection-description>
-                                            {{ collection.description }}
-                                            {% if collection.metafields.custom.collection_information %}
-                                                <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        {% endif %}
+                        </div>
                     {% else %}
-                        {% comment %} Container [No Products] {% endcomment %}
+                        {% comment %} Variant [Empty] {% endcomment %}
                         <div class="container--grid variant--empty">
                             <div class="container--content">
                                 <h5>Coming Soon</h5>
@@ -209,7 +193,8 @@
                     {% endif %}
 
                     {% comment %} Subcollections {% endcomment %}
-                    {% render 'feed-subcollections', collection: collection %}
+                    {% comment %} {% render 'feed-subcollections', collection: collection %} {% endcomment %}
+
                 {% endif %}
             </div>
 

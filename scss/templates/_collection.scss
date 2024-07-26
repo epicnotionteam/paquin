@@ -68,24 +68,20 @@
 // }
 
 
-.template-collection .productgrid--masthead {
-    
-    // Variant [Has Products, Has Image]
-    .container--grid.variant--has-image {
-        display: grid;
-        .container--image {
-            @include rem((
-                margin-bottom: spacing(5)
-            ));
-            // Image
-            img {
-                @include rem( max-width, 160px );
-                margin: 0 auto;
-                display: block;
-            }
+// Variant [Has Products, Has Image]
+.template-collection .productgrid--masthead .container--grid.variant--has-image {
+    display: grid;
+    .container--image {
+        @include rem((
+            margin-bottom: spacing(5)
+        ));
+        // Image
+        img {
+            @include rem( max-width, 160px );
+            margin: 0 auto;
+            display: block;
         }
     }
-
 }
 
 // Variant [Collections — All]

@@ -149,11 +149,7 @@
         // Block [Sensors]
         .block--barksdale,
         .block--sensors {
-            @include rem( padding, spacing(4) 0 0 spacing(4) );
-            border-left: $border--base;
-            & > * {
-                @include rem( max-width, 320px );
-            }
+            @include rem( padding, spacing(4) 0 0 0 );
         }
         // Block [Barksdale]
         .block--barksdale {
@@ -183,6 +179,10 @@
             @include rem( padding, 0 0 0 spacing(4) );
             border-left: $border--base;
             border-top: 0 none;
+            // Cap element widths
+            & > * {
+                @include rem( max-width, 320px );
+            }
         }
         // Block [Barksdale]
         .block--barksdale {

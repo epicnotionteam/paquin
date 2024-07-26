@@ -3354,14 +3354,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
-    padding: 24px 0 0 24px;
-    padding: 2.4rem 0 0 2.4rem;
-    border-left: 1px solid #D6DBDD;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
-  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
-    max-width: 320px;
-    max-width: 32rem;
+    padding: 24px 0 0 0;
+    padding: 2.4rem 0 0 0;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
     grid-column: 1/span 6;
@@ -3380,6 +3374,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding: 0 0 0 2.4rem;
     border-left: 1px solid #D6DBDD;
     border-top: 0 none;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
+  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
+    max-width: 320px;
+    max-width: 32rem;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
     grid-column: 7/span 3;

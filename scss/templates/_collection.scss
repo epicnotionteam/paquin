@@ -110,8 +110,32 @@
 
     // Variant [Collections — All]
     .template-collection .productgrid--masthead .container--header-ready-made {
-        grid-template-columns: 2fr 1fr 1fr;
+        @include rem( column-gap, spacing(4) );
+        grid-template-columns: repeat( 12, 1fr );
+
+        // Block [Barksdale]
+        .block--content {
+            grid-column: 1/span 6;
+            text-align: left;
+            // Cap item widths
+            & > * {
+                @include rem( max-width, 512px );
+            }
+        }
+
+        // Block [Barksdale]
+        .block--barksdale {
+            grid-column: 7/span 3;
+        }
+        
+        // Block [Sensors]
+        .block--sensors {
+            grid-column: 10/span 3;
+        }
+
     }
+
+
 
 }
 

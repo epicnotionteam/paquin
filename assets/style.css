@@ -3318,7 +3318,23 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding: 2.4rem 0 9.6rem;
   }
   .template-collection .productgrid--masthead .container--header-ready-made {
-    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--content {
+    grid-column: 1/span 6;
+    text-align: left;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--content > * {
+    max-width: 512px;
+    max-width: 51.2rem;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
+    grid-column: 7/span 3;
+  }
+  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
+    grid-column: 10/span 3;
   }
 }
 .template-collection .collection--section .productgrid--outer {

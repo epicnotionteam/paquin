@@ -202,14 +202,13 @@
                             </div>
                         </div>
                     {% endif %}
-
-                    {% comment %} Feed [Subcollection] {% endcomment %}
-                    {% assign section_blocks = section.blocks | where: "type", "collection" %}
-                    {% render 'feed-subcollection', section_blocks: section_blocks %}
-
                 {% endif %}
             </div>
 
+            {% comment %} Feed [Subcollection] {% endcomment %}
+            {% assign section_blocks = section.blocks | where: "type", "collection" %}
+            {% render 'feed-subcollection', section_blocks: section_blocks %}
+            
 			{% if collection.products.size > 0 %}
 				{% comment %} Container [Sidebar] {% endcomment %}
 				{% if show_sidebar %}

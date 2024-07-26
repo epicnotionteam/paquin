@@ -3325,7 +3325,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 53.75em) {
-  .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
+  .template-collection .productgrid--masthead {
     padding: 24px 0 96px;
     padding: 2.4rem 0 9.6rem;
   }

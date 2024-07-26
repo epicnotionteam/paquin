@@ -137,9 +137,9 @@
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
     
-    // Variant [Zero Items]
-    .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
-        @include rem( padding, spacing(4) 0 $gap--section-large );
+    // Primary container
+    .template-collection .productgrid--masthead {
+        @include rem( padding, spacing(4) 0  $gap--section-large );
     }
 
     // Variant [Collections — All]

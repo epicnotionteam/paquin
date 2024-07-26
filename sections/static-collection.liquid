@@ -186,7 +186,16 @@
                     {% else %}
                         {% comment %} Variant [Empty] {% endcomment %}
                         <div class="container--grid variant--empty">
+                             {% comment %} Image {% endcomment %}
+                             {% if collection.image %}
+                                <div class="container--image">
+                                    <div class="wrap--image">
+                                        {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                    </div>
+                                </div>
+                            {% endif %}
                             <div class="container--content">
+                                <h1 class="collection--title">{{ collection.title }}</h1>
                                 <h5>Coming Soon</h5>
                                 <p>We are excited to present our {{ collection.title }} product portfolio — we will post datasheets, press releases and new product announcements soon. Until then, we can support your {{ collection.title }} requirements - please <a href="/pages/contact/">get in touch</a> with our specialists who are ready to assist you.</p>
                                 <a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>

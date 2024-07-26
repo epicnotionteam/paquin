@@ -88,6 +88,57 @@
 // Variant [Collections — All]
 .template-collection .productgrid--masthead .container--header-ready-made {
     display: grid;
+
+    // Block [Barksdale]
+    .block--content {
+        grid-column: 1/span 12;
+        text-align: left;
+        // Cap item widths
+        & > * {
+            @include rem( max-width, 512px );
+        }
+        // Title & Description
+        .collection--title,
+        .collection--description {
+            margin-left: 0
+        }
+    }
+
+    // Block [Barksdale]
+    // Block [Sensors]
+    .block--barksdale,
+    .block--sensors {
+        @include rem( padding-top, spacing(4) );
+        border-top: $border--base;
+        // Content
+        p {
+            @include font-size( 'small' );
+            margin: 0;
+        }
+        & > * {
+            @include rem( max-width, 320px );
+        }
+    }
+
+    // Block [Barksdale]
+    .block--barksdale {
+        grid-column: 1/span 6;
+    }
+    
+    // Block [Sensors]
+    .block--sensors {
+        grid-column: 7/span 6;
+        // CTA
+        .block__cta {
+            @include rem( margin-top, spacing(3) );
+            p {
+                @include rem( margin, 0 0 12px );
+                @include font-size( 'small' );
+                color: color( 'steel', '4' );
+            }
+        }
+    }
+
 }
 
 // Adjust @custom breakpoint
@@ -105,29 +156,15 @@
         // Block [Barksdale]
         .block--content {
             grid-column: 1/span 6;
-            text-align: left;
-            // Cap item widths
-            & > * {
-                @include rem( max-width, 512px );
-            }
-            // Title & Description
-            .collection--title,
-            .collection--description {
-                margin-left: 0
-            }
         }
 
         // Block [Barksdale]
         // Block [Sensors]
         .block--barksdale,
         .block--sensors {
-            @include rem( padding-left, spacing(4) );
+            @include rem( padding, 0 0 0 spacing(4) );
             border-left: $border--base;
-            // Content
-            p {
-                @include font-size( 'small' );
-                margin: 0;
-            }
+            border-top: 0 none;
             & > * {
                 @include rem( max-width, 320px );
             }
@@ -141,15 +178,6 @@
         // Block [Sensors]
         .block--sensors {
             grid-column: 10/span 3;
-            // CTA
-            .block__cta {
-                @include rem( margin-top, spacing(3) );
-                p {
-                    @include rem( margin, 0 0 12px );
-                    @include font-size( 'small' );
-                    color: color( 'steel', '4' );
-                }
-            }
         }
 
     }

@@ -3295,6 +3295,58 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-collection .productgrid--masthead .container--header-ready-made {
   display: grid;
 }
+.template-collection .productgrid--masthead .container--header-ready-made .block--content {
+  grid-column: 1/span 12;
+  text-align: left;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--content > * {
+  max-width: 512px;
+  max-width: 51.2rem;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--content .collection--title,
+.template-collection .productgrid--masthead .container--header-ready-made .block--content .collection--description {
+  margin-left: 0;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--barksdale,
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  border-top: 1px solid #D6DBDD;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--barksdale p,
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors p {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  margin: 0;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
+  max-width: 320px;
+  max-width: 32rem;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
+  grid-column: 1/span 6;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
+  grid-column: 7/span 6;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors .block__cta {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+}
+.template-collection .productgrid--masthead .container--header-ready-made .block--sensors .block__cta p {
+  margin: 0 0 12px;
+  margin: 0 0 1.2rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  color: #66787F;
+}
 
 @media (min-width: 53.75em) {
   .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
@@ -3308,30 +3360,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--content {
     grid-column: 1/span 6;
-    text-align: left;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--content > * {
-    max-width: 512px;
-    max-width: 51.2rem;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--content .collection--title,
-  .template-collection .productgrid--masthead .container--header-ready-made .block--content .collection--description {
-    margin-left: 0;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
-    padding-left: 24px;
-    padding-left: 2.4rem;
+    padding: 0 0 0 24px;
+    padding: 0 0 0 2.4rem;
     border-left: 1px solid #D6DBDD;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale p,
-  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors p {
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 23px;
-    letter-spacing: -0.08px;
-    letter-spacing: -0.008rem;
-    margin: 0;
+    border-top: 0 none;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
@@ -3343,20 +3378,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors {
     grid-column: 10/span 3;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors .block__cta {
-    margin-top: 16px;
-    margin-top: 1.6rem;
-  }
-  .template-collection .productgrid--masthead .container--header-ready-made .block--sensors .block__cta p {
-    margin: 0 0 12px;
-    margin: 0 0 1.2rem;
-    font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 23px;
-    letter-spacing: -0.08px;
-    letter-spacing: -0.008rem;
-    color: #66787F;
   }
 }
 .template-collection .collection--section .productgrid--outer {

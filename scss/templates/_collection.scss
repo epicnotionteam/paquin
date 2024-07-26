@@ -75,7 +75,7 @@
     text-align: center;
     // Container [Image]
     .container--image {
-        @include rem( margin-bottom, spacing(2) );
+        @include rem( margin-bottom, spacing(4) );
         // Wrap [Image]
         .wrap--image {
             @include rem( max-width, 160px );
@@ -95,10 +95,8 @@
     }
     // Container [Content]
     .container--content {
-        @include rem((
-            margin: spacing(3) auto 0,
-            max-width: 800px
-        ));
+        @include rem( max-width, 800px );
+        margin: 0 auto;
         text-align: center;
         // Title 
         .collection--title {

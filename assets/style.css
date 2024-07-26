@@ -3269,11 +3269,20 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 32px;
   margin-bottom: 3.2rem;
 }
-.template-collection .productgrid--masthead .container--grid.variant--base .container--image img {
+.template-collection .productgrid--masthead .container--grid.variant--base .container--image .wrap--image {
   max-width: 160px;
   max-width: 16rem;
+  aspect-ratio: 1/1;
+  border: 1px solid #D6DBDD;
   margin: 0 auto;
+  overflow: hidden;
+}
+.template-collection .productgrid--masthead .container--grid.variant--base .container--image .wrap--image img {
   display: block;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
 }
 
 .template-collection .productgrid--masthead .container--header-ready-made {

@@ -164,7 +164,9 @@
                             {% comment %} Image {% endcomment %}
                             {% if collection.image %}
                                 <div class="container--image">
-                                    {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                    <div class="wrap--image">
+                                        {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                    </div>
                                 </div>
                             {% endif %}
                             <div class="container--content">

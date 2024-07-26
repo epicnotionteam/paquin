@@ -74,11 +74,21 @@
     text-align: center;
     .container--image {
         @include rem( margin-bottom, spacing(5) );
-        // Image
-        img {
+        // Wrap [Image]
+        .wrap--image {
             @include rem( max-width, 160px );
+            aspect-ratio: 1/1;
+            border: $border--base;
             margin: 0 auto;
-            display: block;
+            overflow: hidden;
+            // Image
+            img {
+                display: block;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+                width: 100%;
+            }
         }
     }
 }

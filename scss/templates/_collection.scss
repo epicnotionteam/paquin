@@ -73,7 +73,7 @@
     display: grid;
     text-align: center;
     .container--image {
-        @include rem( margin-bottom, spacing(5) );
+        @include rem( margin-bottom, spacing(4) );
         // Wrap [Image]
         .wrap--image {
             @include rem( max-width, 160px );

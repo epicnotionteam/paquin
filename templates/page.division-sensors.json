@@ -78,7 +78,7 @@
         "collection_keQgLK"
       ],
       "settings": {
-        "heading_small": "Related Part Types",
+        "heading_small": "By Product Type",
         "theme": "base"
       }
     },
@@ -180,7 +180,7 @@
         "collection_6cqjNX"
       ],
       "settings": {
-        "heading_small": "Related Industries",
+        "heading_small": "Products by Industry",
         "theme": "alt"
       }
     },

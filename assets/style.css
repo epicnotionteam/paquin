@@ -3290,8 +3290,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   text-align: center;
 }
 .template-collection .productgrid--masthead .container--grid.variant--empty .container--image {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 .template-collection .productgrid--masthead .container--grid.variant--empty .container--image .wrap--image {
   max-width: 160px;

@@ -75,7 +75,7 @@
     text-align: center;
     // Container [Image]
     .container--image {
-        @include rem( margin-bottom, spacing(4) );
+        @include rem( margin-bottom, spacing(2) );
         // Wrap [Image]
         .wrap--image {
             @include rem( max-width, 160px );

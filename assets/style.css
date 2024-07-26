@@ -3352,8 +3352,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale > *,
   .template-collection .productgrid--masthead .container--header-ready-made .block--sensors > * {
-    max-width: 256px;
-    max-width: 25.6rem;
+    max-width: 320px;
+    max-width: 32rem;
   }
   .template-collection .productgrid--masthead .container--header-ready-made .block--barksdale {
     grid-column: 7/span 3;

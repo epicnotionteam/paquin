@@ -140,7 +140,7 @@
                 }
             }
             & > * {
-                @include rem( max-width, 256px );
+                @include rem( max-width, 320px );
             }
         }
 

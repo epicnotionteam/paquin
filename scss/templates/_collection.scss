@@ -42,6 +42,30 @@
     }
 }
 
+// // Variant [Has Items]
+// .template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
+//     @include rem( padding, spacing(4) 0 spacing(8) );
+//     border-bottom: $border--base;
+// }
+
+// // Variant [Zero Items]
+// .template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
+//     @include rem( padding, spacing(4) 0 $gap--section-small );
+//     // Container [Empty Collection Notice]
+//     .container--empty-collection {
+//         @include rem((
+//             margin: spacing(3) auto 0,
+//             max-width: 800px
+//         ));
+//         text-align: center;
+//         // Content
+//         p {
+//             @include rem( margin-bottom, 20px );
+//         }
+//     }
+// }
+
+
 .template-collection .productgrid--masthead {
     
     // Variant [Has Products, Has Image]
@@ -60,29 +84,6 @@
         }
     }
 
-}
-
-// Variant [Has Items]
-.template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
-    @include rem( padding, spacing(4) 0 spacing(8) );
-    border-bottom: $border--base;
-}
-
-// Variant [Zero Items]
-.template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
-    @include rem( padding, spacing(4) 0 $gap--section-small );
-    // Container [Empty Collection Notice]
-    .container--empty-collection {
-        @include rem((
-            margin: spacing(3) auto 0,
-            max-width: 800px
-        ));
-        text-align: center;
-        // Content
-        p {
-            @include rem( margin-bottom, 20px );
-        }
-    }
 }
 
 // Variant [Collections — All]

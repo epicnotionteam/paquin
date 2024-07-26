@@ -3270,28 +3270,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: block;
 }
 
-.template-collection .productgrid--outer.collection--has-items .productgrid--masthead {
-  padding: 24px 0 56px;
-  padding: 2.4rem 0 5.6rem;
-  border-bottom: 1px solid #D6DBDD;
-}
-
-.template-collection .productgrid--outer.collection--zero-items .productgrid--masthead {
-  padding: 24px 0 72px;
-  padding: 2.4rem 0 7.2rem;
-}
-.template-collection .productgrid--outer.collection--zero-items .productgrid--masthead .container--empty-collection {
-  margin: 16px auto 0;
-  margin: 1.6rem auto 0;
-  max-width: 800px;
-  max-width: 80rem;
-  text-align: center;
-}
-.template-collection .productgrid--outer.collection--zero-items .productgrid--masthead .container--empty-collection p {
-  margin-bottom: 20px;
-  margin-bottom: 2rem;
-}
-
 .template-collection .productgrid--masthead .container--header-ready-made {
   row-gap: 32px;
   row-gap: 3.2rem;

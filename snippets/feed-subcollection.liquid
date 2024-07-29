@@ -4,8 +4,8 @@
 
 {% comment %} Output component {% endcomment %}
 <div class="feed--collection variant--subcollection">
-    {% for subcollection_reference in subcollection_references %}
-        {% assign subcollection = subcollection_reference.resource %}
+    {% for subcollection_id in subcollection_ids %}
+        {% assign subcollection = collections[subcollection_id] %}
         {% if subcollection != blank %}
             <div class="item">
                 {% if subcollection.image %}

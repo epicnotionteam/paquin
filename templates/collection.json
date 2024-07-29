@@ -30,25 +30,29 @@
         "collection_BP6Fzj": {
           "type": "collection",
           "settings": {
-            "collection": "pressure-transmitters"
+            "collection": "pressure-transmitters",
+            "parent_collection": "pressure"
           }
         },
         "collection_MY8ktV": {
           "type": "collection",
           "settings": {
-            "collection": "pressure-switches"
+            "collection": "pressure-switches",
+            "parent_collection": "pressure"
           }
         },
         "collection_LA6GxF": {
           "type": "collection",
           "settings": {
-            "collection": "pressure-gauges"
+            "collection": "pressure-gauges",
+            "parent_collection": "pressure"
           }
         },
         "collection_h74YkB": {
           "type": "collection",
           "settings": {
-            "collection": "pressure-vessels-accumulators"
+            "collection": "pressure-vessels-accumulators",
+            "parent_collection": "pressure"
           }
         }
       },

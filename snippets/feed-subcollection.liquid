@@ -4,14 +4,17 @@
 
 {% comment %} Output component {% endcomment %}
 <div class="feed--collection variant--subcollection">
-    {% for subcollection in subcollections %}
-        <div class="item">
-            {% if subcollection.image %}
-                <a class="item__wrap--image" href="{{ subcollection.url }}">
-                    <img class="item__image" src="{{ subcollection.image | img_url: '512x' }}" alt="{{ subcollection.title }}">
-                </a>
-            {% endif %}
-            <h3 class="item__title"><a href="{{ subcollection.url }}">{{ subcollection.title }}</a></h3>
-        </div>
+    {% for subcollection_reference in subcollection_references %}
+        {% assign subcollection = subcollection_reference.resource %}
+        {% if subcollection != blank %}
+            <div class="item">
+                {% if subcollection.image %}
+                    <a class="item__wrap--image" href="{{ subcollection.url }}">
+                        <img class="item__image" src="{{ subcollection.image | img_url: '512x' }}" alt="{{ subcollection.title }}">
+                    </a>
+                {% endif %}
+                <h3 class="item__title"><a href="{{ subcollection.url }}">{{ subcollection.title }}</a></h3>
+            </div>
+        {% endif %}
     {% endfor %}
   </div>

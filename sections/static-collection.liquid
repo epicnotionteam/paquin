@@ -207,10 +207,10 @@
 
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% if collection.metafields.custom.subcollections %}
-                {% assign subcollections = collection.metafields.custom.subcollections.value %}
-                {% if subcollections.size > 0 %}
+                {% assign subcollection_references = collection.metafields.custom.subcollections.value %}
+                {% if subcollection_references.size > 0 %}
                     <section class="section--subcollections">
-                        {% render 'feed-subcollection', subcollections: subcollections %}
+                        {% render 'feed-subcollection', subcollection_references: subcollection_references %}
                     </section>
                 {% endif %}
             {% endif %}

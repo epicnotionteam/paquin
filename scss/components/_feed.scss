@@ -233,7 +233,7 @@
         // Title
         .item__title {
             @include font-size( 'base' );
-            @include rem( letter-spacing, -0.12px );
+            @include rem( letter-spacing, -0.4px );
         }
     }
 }

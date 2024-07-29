@@ -223,6 +223,21 @@
 }
 
 
+// Feed [Collection, Subcollection] 
+// --------------------------------------------------
+
+// Component container
+.feed--collection.variant--subcollection {
+    // Item container
+    .item {
+        // Title
+        .item__title {
+            @include font-size( 'h4' );
+        }
+    }
+}
+
+
 // Feed [Post]
 // --------------------------------------------------
 

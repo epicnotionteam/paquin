@@ -4,7 +4,7 @@
 
 {% comment %} Output component {% endcomment %}
 {% if section.settings.enable_subcollection %}
-    <div class="feed--collection">
+    <div class="feed--collection variant--subcollection">
         {% for block in section_blocks %}
             {% if block.type == 'collection' %}
                 {% comment %} Assign block data to vars {% endcomment %}

@@ -4346,6 +4346,8 @@ hr,
   line-height: 25px;
   letter-spacing: -0.12px;
   letter-spacing: -0.012rem;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
 }
 
 .feed--post {

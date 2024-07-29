@@ -206,14 +206,15 @@
             </div>
 
             {% comment %} Feed [Subcollection] {% endcomment %}
-            {% assign section_blocks = section.blocks | where: "type", "collection" %}
-            {% assign current_collection_handle = collection.handle %}
-            {% if section_blocks != blank and section.settings.enable_subcollection %}
-                <section class="section--subcollections">
-                    {% render 'feed-subcollection', section_blocks: section_blocks, current_collection_handle: current_collection_handle %}
-                </section>
+            {% if collection.metafields.custom.subcollections %}
+                {% assign subcollections = collection.metafields.custom.subcollections.value %}
+                {% if subcollections.size > 0 %}
+                    <section class="section--subcollections">
+                        {% render 'feed-subcollection', subcollections: subcollections %}
+                    </section>
+                {% endif %}
             {% endif %}
-            
+                        
 			{% if collection.products.size > 0 %}
 				{% comment %} Container [Sidebar] {% endcomment %}
 				{% if show_sidebar %}
@@ -665,23 +666,6 @@
                 }
             ],
             "limit": 1
-        },
-        {
-            "type": "collection",
-            "name": "Subcollection",
-            "settings": [
-                {
-                    "type": "collection",
-                    "id": "collection",
-                    "label": "Collection"
-                },
-                {
-                    "type": "text",
-                    "id": "parent_collection",
-                    "label": "Parent Collection Handle",
-                    "info": "Enter the handle of the parent collection (e.g., 'pressure' for the Pressure collection)"
-                }
-            ]
         }
     ]
 }

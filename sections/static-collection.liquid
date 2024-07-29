@@ -206,10 +206,10 @@
             </div>
 
             {% comment %} Feed [Subcollection] {% endcomment %}
-            {% assign section_blocks = section.blocks | where: "type", "collection" %}
-            {% if section_blocks != blank %}
+            {% assign data_subcollections = section.blocks | where: "type", "collection" %}
+            {% if data_subcollections != blank %}
                 <section class="section--subcollections">
-                    {% render 'feed-subcollection', section_blocks: section_blocks %}
+                    {% render 'feed-subcollection', section_blocks: data_subcollections %}
                 </section>
             {% endif %}
             

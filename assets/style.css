@@ -3441,15 +3441,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
   .template-collection .collection--section .productgrid--outer .productgrid--masthead {
     grid-column: 1/span 12;
+    grid-row: 0;
   }
   .template-collection .collection--section .productgrid--outer .section--subcollections {
     grid-column: 1/span 12;
+    grid-row: 1;
   }
   .template-collection .collection--section .productgrid--outer .productgrid--sidebar {
     grid-column: 1/span 2;
+    grid-row: 2;
   }
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
     grid-column: 3/span 10;
+    grid-row: 2;
   }
   .template-collection .productgrid--outer.collection--has-items {
     padding-bottom: 96px;

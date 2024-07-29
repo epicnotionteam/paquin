@@ -207,15 +207,10 @@
 
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% if collection.metafields.custom.subcollections != blank %}
-                {% assign data_subcollections = collection.metafields.custom.subcollections %}
                 <section class="section--subcollections">
-                    {% render 'feed-subcollection', data_subcollections: data_subcollections %}
+                    {% render 'feed-subcollection', data_subcollections: collection.metafields.custom.subcollections %}
                 </section>
             {% endif %}
-
-            Debug: Subcollections metafield exists
-            Debug: Subcollections data type: {{ collection.metafields.custom.subcollections.type }}
-            Debug: Subcollections value: {{ collection.metafields.custom.subcollections.value | json }}
                         
 			{% if collection.products.size > 0 %}
 				{% comment %} Container [Sidebar] {% endcomment %}

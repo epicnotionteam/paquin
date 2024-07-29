@@ -4,31 +4,20 @@
 
 {% comment %} Output component {% endcomment %}
 <div class="feed--collection variant--subcollection">
-    {% for subcollection in data_subcollections %}
+    {% assign child_collections = data_subcollections.value %}
+    {% for subcollection in child_collections %}
+        {% assign full_collection = collections[subcollection.handle] %}
         <div class="item">
-            IMAGE: {{ subcollection.image }}
-            <h3 class="item__title">
-                <a href="/collections/{{ subcollection.handle }}">{{ subcollection.title }}</a>
-            </h3>
-        </div>
-    {% endfor %}
-</div>
-
-<div class="feed--collection variant--subcollection">
-    {% for subcollection_reference in data_subcollections %}
-        {% assign subcollection = collections[subcollection_reference.handle] %}
-        <div class="item">
-            {% if subcollection.image %}
-                <a class="item__wrap--image" href="{{ subcollection.url }}">
-                    <img class="item__image" src="{{ subcollection.image | img_url: '512x' }}" alt="{{ subcollection.title }}">
-                </a>
+            {% if full_collection.image %}
+            <a class="item__wrap--image" href="{{ full_collection.url }}">
+                <img class="item__image" src="{{ full_collection.image | img_url: '512x' }}" alt="{{ full_collection.title }}">
+            </a>
             {% endif %}
             <h3 class="item__title">
-                <a href="{{ subcollection.url }}">{{ subcollection.title }}</a>
+                <a href="{{ full_collection.url }}">{{ full_collection.title }}</a>
             </h3>
         </div>
     {% endfor %}
-</div>
-
+  </div>
 
   

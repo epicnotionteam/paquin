@@ -4341,20 +4341,11 @@ hr,
   }
 }
 .feed--collection.variant--subcollection .item .item__title {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 24px;
-  letter-spacing: 0.16px;
-  letter-spacing: 0.016rem;
-}
-@media screen and (min-width: 1024px) {
-  .feed--collection.variant--subcollection .item .item__title {
-    font-size: 20px;
-    font-size: 2rem;
-    line-height: 26px;
-    letter-spacing: 0.24px;
-    letter-spacing: 0.024rem;
-  }
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+  letter-spacing: 0.032rem;
 }
 
 .feed--post {

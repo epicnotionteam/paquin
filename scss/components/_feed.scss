@@ -232,7 +232,7 @@
     .item {
         // Title
         .item__title {
-
+            @include font-size( 'base' );
         }
     }
 }

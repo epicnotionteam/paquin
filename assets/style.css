@@ -4340,6 +4340,14 @@ hr,
     grid-template-columns: repeat(6, 1fr);
   }
 }
+.feed--collection.variant--subcollection .item .item__title {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  letter-spacing: -0.012rem;
+}
+
 .feed--post {
   row-gap: 32px;
   row-gap: 3.2rem;

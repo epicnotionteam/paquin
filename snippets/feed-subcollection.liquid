@@ -10,7 +10,7 @@
         <div class="item">
             {% if full_collection.image %}
             <a class="item__wrap--image" href="{{ full_collection.url }}">
-                <img class="item__image" src="{{ full_collection.image | img_url: '512x' }}" alt="{{ full_collection.title }}">
+                <img class="item__image" src="{{ full_collection.image | img_url: '300x300', crop: 'center' }}" alt="{{ full_collection.title }}">
             </a>
             {% endif %}
             <h3 class="item__title">

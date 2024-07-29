@@ -208,6 +208,7 @@
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% if collection.metafields.custom.subcollections != blank %}
                 <section class="section--subcollections">
+                    <h2 class="h5">Related collections</h2>
                     {% render 'feed-subcollection', data_subcollections: collection.metafields.custom.subcollections %}
                 </section>
               {% endif %}

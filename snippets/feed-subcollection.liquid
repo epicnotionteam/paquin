@@ -6,18 +6,19 @@
 <div class="feed--collection variant--subcollection">
     {% assign child_collections = data_subcollections.value %}
     {% for subcollection in child_collections %}
-        {% assign full_collection = collections[subcollection.handle] %}
+        {% assign collection = collections[subcollection.handle] %}
+        {% assign collection_url = collection.url %}
+        {% assign collection_image = collection.image | img_url: '512x' %}
+        {% assign collection_title = collection.title %}
         <div class="item">
-            {% if full_collection.image %}
-            <a class="item__wrap--image" href="{{ full_collection.url }}">
-                <img class="item__image" src="{{ full_collection.image | img_url: '300x300', crop: 'center' }}" alt="{{ full_collection.title }}">
-            </a>
+            {% comment %} Image {% endcomment %}
+            {% if collection_image %}
+                <a class="item__wrap--image" href="{{ collection_url }}">
+                    <img class="item__image" src="{{ collection_image }}" alt="{{ collection_title }}">
+                </a>
             {% endif %}
-            <h3 class="item__title">
-                <a href="{{ full_collection.url }}">{{ full_collection.title }}</a>
-            </h3>
+            {% comment %} Title {% endcomment %}
+            <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
         </div>
     {% endfor %}
-  </div>
-
-  
+</div>

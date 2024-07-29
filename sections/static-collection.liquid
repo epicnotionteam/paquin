@@ -206,13 +206,11 @@
             </div>
 
             {% comment %} Feed [Subcollection] {% endcomment %}
-            {% if collection.metafields.custom.collection_list %}
-                {% assign subcollection_ids = collection.metafields.custom.collection_list | parse_json %}
-                {% if subcollection_ids.size > 0 %}
+            {% if collection.metafields.custom.subcollections != blank %}
+                {% assign data_subcollections = collection.metafields.custom.subcollections | parse_json %}
                 <section class="section--subcollections">
-                    {% render 'feed-subcollection', subcollection_ids: subcollection_ids %}
+                    {% render 'feed-subcollection', data_subcollections: data_subcollections %}
                 </section>
-                {% endif %}
             {% endif %}
                         
 			{% if collection.products.size > 0 %}

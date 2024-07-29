@@ -207,7 +207,11 @@
 
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% assign section_blocks = section.blocks | where: "type", "collection" %}
-            {% render 'feed-subcollection', section_blocks: section_blocks %}
+            {% if section_blocks != blank %}
+                <section class="section--subcollections">
+                    {% render 'feed-subcollection', section_blocks: section_blocks %}
+                </section>
+            {% endif %}
             
 			{% if collection.products.size > 0 %}
 				{% comment %} Container [Sidebar] {% endcomment %}

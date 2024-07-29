@@ -4350,6 +4350,11 @@ hr,
   letter-spacing: -0.04rem;
 }
 
+@media (min-width: 64em) {
+  .feed--collection.variant--subcollection {
+    grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+  }
+}
 .feed--post {
   row-gap: 32px;
   row-gap: 3.2rem;

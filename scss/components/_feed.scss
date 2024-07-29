@@ -238,6 +238,14 @@
     }
 }
 
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Component container
+    .feed--collection.variant--subcollection {
+        grid-template-columns: repeat( auto-fill, minmax( min( 160px, 100% ), 1fr ) );
+    }
+}
+
 
 // Feed [Post]
 // --------------------------------------------------

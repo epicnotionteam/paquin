@@ -3,19 +3,24 @@
 {% endcomment %}
 
 {% comment %} Output component {% endcomment %}
+Debug: Inside feed-subcollection snippet
+Debug: data_subcollections: {{ data_subcollections | json }}
+
 <div class="feed--collection variant--subcollection">
-    {% for collection in data_subcollections %}
-        {% assign data_collection = collections[collection_id] %}
-        <div class="item">
-            {% if subcollection.image %}
-                <a class="item__wrap--image" href="{{ subcollection.url }}">
-                    <img class="item__image" src="{{ subcollection.image | img_url: '512x' }}" alt="{{ subcollection.title }}">
-                </a>
-            {% endif %}
-            <h3 class="item__title"><a href="{{ subcollection.url }}">{{ subcollection.title }}</a></h3>
-        </div>
-      {% endfor %}
-  </div>
+    {% for collection_id in data_subcollections %}
+        {% assign subcollection = collections[collection_id] %}
+        {% if subcollection != blank %}
+            <div class="item">
+                {% if subcollection.image %}
+                    <a class="item__wrap--image" href="{{ subcollection.url }}">
+                        <img class="item__image" src="{{ subcollection.image | img_url: '512x' }}" alt="{{ subcollection.title }}">
+                    </a>
+                {% endif %}
+                <h3 class="item__title"><a href="{{ subcollection.url }}">{{ subcollection.title }}</a></h3>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
 
 
 

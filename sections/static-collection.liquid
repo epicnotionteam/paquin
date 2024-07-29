@@ -208,9 +208,18 @@
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% if collection.metafields.custom.subcollections != blank %}
                 {% assign data_subcollections = collection.metafields.custom.subcollections | parse_json %}
+                <div style="display: none;">
+                    Debug: Subcollections metafield exists
+                    Debug: Subcollections data: {{ collection.metafields.custom.subcollections }}
+                    Debug: Parsed subcollections: {{ data_subcollections | json }}
+                </div>
                 <section class="section--subcollections">
                     {% render 'feed-subcollection', data_subcollections: data_subcollections %}
                 </section>
+            {% else %}
+                <div style="display: none;">
+                    Debug: No subcollections metafield found
+                </div>
             {% endif %}
                         
 			{% if collection.products.size > 0 %}

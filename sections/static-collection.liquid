@@ -206,10 +206,11 @@
             </div>
 
             {% comment %} Feed [Subcollection] {% endcomment %}
-            {% assign data_subcollections = section.blocks | where: "type", "collection" %}
-            {% if data_subcollections != blank %}
+            {% assign section_blocks = section.blocks | where: "type", "collection" %}
+            {% assign current_collection_handle = collection.handle %}
+            {% if section_blocks != blank and section.settings.enable_subcollection %}
                 <section class="section--subcollections">
-                    {% render 'feed-subcollection', section_blocks: data_subcollections %}
+                    {% render 'feed-subcollection', section_blocks: section_blocks, current_collection_handle: current_collection_handle %}
                 </section>
             {% endif %}
             
@@ -673,6 +674,12 @@
                     "type": "collection",
                     "id": "collection",
                     "label": "Collection"
+                },
+                {
+                    "type": "text",
+                    "id": "parent_collection",
+                    "label": "Parent Collection Handle",
+                    "info": "Enter the handle of the parent collection (e.g., 'pressure' for the Pressure collection)"
                 }
             ]
         }

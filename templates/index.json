@@ -335,7 +335,6 @@
         },
         "collection_TtcqBR": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "optical-laser"
           }
@@ -348,7 +347,6 @@
         },
         "collection_kqCrAU": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "gas-detection"
           }
@@ -359,16 +357,14 @@
             "collection": "humidity"
           }
         },
-        "collection_WkTPfk": {
+        "collection_F47zDm": {
           "type": "collection",
-          "disabled": true,
           "settings": {
-            "collection": "ruggedized-cabllng-solutions"
+            "collection": "electrical-connectivity"
           }
         },
         "collection_yXBkDD": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "valves"
           }
@@ -381,7 +377,6 @@
         },
         "collection_X4LfRw": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "load-force"
           }
@@ -395,7 +390,7 @@
         "collection_TnbtRk",
         "collection_kqCrAU",
         "collection_LRNdRf",
-        "collection_WkTPfk",
+        "collection_F47zDm",
         "collection_yXBkDD",
         "collection_c6GfpM",
         "collection_X4LfRw"

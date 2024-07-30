@@ -3375,8 +3375,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 53.75em) {
   .template-collection .productgrid--masthead {
-    padding: 32px 0 96px;
-    padding: 3.2rem 0 9.6rem;
+    padding: 32px 0 72px;
+    padding: 3.2rem 0 7.2rem;
   }
   .template-collection .productgrid--masthead .container--header-ready-made {
     column-gap: 24px;

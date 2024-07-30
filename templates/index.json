@@ -363,6 +363,12 @@
             "collection": "electrical-connectivity"
           }
         },
+        "collection_VtkJGT": {
+          "type": "collection",
+          "settings": {
+            "collection": "proximity"
+          }
+        },
         "collection_yXBkDD": {
           "type": "collection",
           "settings": {
@@ -391,6 +397,7 @@
         "collection_kqCrAU",
         "collection_LRNdRf",
         "collection_F47zDm",
+        "collection_VtkJGT",
         "collection_yXBkDD",
         "collection_c6GfpM",
         "collection_X4LfRw"

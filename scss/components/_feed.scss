@@ -234,6 +234,7 @@
         .item__title {
             @include font-size( 'small' );
             @include rem( letter-spacing, -0.24px );
+            line-height: 1.4;
         }
     }
 }

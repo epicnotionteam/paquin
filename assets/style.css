@@ -4378,6 +4378,7 @@ hr,
   letter-spacing: -0.008rem;
   letter-spacing: -0.24px;
   letter-spacing: -0.024rem;
+  line-height: 1.4;
 }
 
 @media (min-width: 48em) {

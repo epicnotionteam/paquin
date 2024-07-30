@@ -226,7 +226,7 @@
 
 // Section container
 .section--subcollections {
-    @include rem( padding-bottom, $gap--section-small );
+    @include rem( padding-bottom, spacing(7) );
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );
@@ -246,7 +246,6 @@
 @include mq( $from: medium ) {
     // Section container
     .section--subcollections {
-        @include rem( padding-bottom, $gap--section-large );
         // Adjust grid structure
         .section__grid {
             @include rem( row-gap, spacing(6) );

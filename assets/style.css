@@ -3418,8 +3418,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--subcollections {
-  padding-bottom: 72px;
-  padding-bottom: 7.2rem;
+  padding-bottom: 48px;
+  padding-bottom: 4.8rem;
 }
 .section--subcollections .section__grid {
   row-gap: 32px;
@@ -3431,10 +3431,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 @media (min-width: 64em) {
-  .section--subcollections {
-    padding-bottom: 96px;
-    padding-bottom: 9.6rem;
-  }
   .section--subcollections .section__grid {
     row-gap: 40px;
     row-gap: 4rem;
@@ -4375,18 +4371,18 @@ hr,
   }
 }
 .feed--collection.variant--subcollection .item .item__title {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
-  letter-spacing: -0.4px;
-  letter-spacing: -0.04rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
+  letter-spacing: -0.24px;
+  letter-spacing: -0.024rem;
 }
 
 @media (min-width: 48em) {
   .feed--collection.variant--subcollection {
-    grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(136px, 100%), 1fr));
   }
 }
 .feed--post {

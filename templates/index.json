@@ -72,7 +72,7 @@
         "content": "<p>From high-volume standard to one-off custom designs, Paquin is ready to exceed customer expectations.<\/p>",
         "cta_primary": "Contact Our Team",
         "cta_primary_url": "shopify:\/\/pages\/contact",
-        "cta_secondary": "Shop For Parts",
+        "cta_secondary": "",
         "cta_secondary_url": "\/collections\/all\/",
         "image": "shopify:\/\/shop_images\/asset__hero--home.jpg"
       }
@@ -335,7 +335,6 @@
         },
         "collection_TtcqBR": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "optical-laser"
           }
@@ -348,7 +347,6 @@
         },
         "collection_kqCrAU": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "gas-detection"
           }
@@ -359,16 +357,20 @@
             "collection": "humidity"
           }
         },
-        "collection_WkTPfk": {
+        "collection_F47zDm": {
           "type": "collection",
-          "disabled": true,
           "settings": {
-            "collection": "ruggedized-cabllng-solutions"
+            "collection": "electrical-connectivity"
+          }
+        },
+        "collection_VtkJGT": {
+          "type": "collection",
+          "settings": {
+            "collection": "proximity"
           }
         },
         "collection_yXBkDD": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "valves"
           }
@@ -381,7 +383,6 @@
         },
         "collection_X4LfRw": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "load-force"
           }
@@ -395,7 +396,8 @@
         "collection_TnbtRk",
         "collection_kqCrAU",
         "collection_LRNdRf",
-        "collection_WkTPfk",
+        "collection_F47zDm",
+        "collection_VtkJGT",
         "collection_yXBkDD",
         "collection_c6GfpM",
         "collection_X4LfRw"

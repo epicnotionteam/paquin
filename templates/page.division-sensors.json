@@ -80,6 +80,12 @@
             "collection": "electrical-connectivity"
           }
         },
+        "collection_rthmk9": {
+          "type": "collection",
+          "settings": {
+            "collection": "proximity"
+          }
+        },
         "collection_BAzey9": {
           "type": "collection",
           "settings": {
@@ -108,6 +114,7 @@
         "collection_iVbkY6",
         "collection_wP3nh8",
         "collection_qTDAyH",
+        "collection_rthmk9",
         "collection_BAzey9",
         "collection_keQgLK",
         "collection_AUfYHm"

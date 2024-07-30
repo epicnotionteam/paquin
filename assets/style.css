@@ -3441,7 +3441,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
   }
-  .section--subcollections .section__grid .container--heading-small {
+  .section--subcollections .section__grid .container--heading {
     grid-column: 1/span 12;
     grid-row: 1;
   }

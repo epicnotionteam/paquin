@@ -253,7 +253,7 @@
             grid-auto-rows: auto;
             grid-template-columns: repeat( 12, 1fr );
             // Container [Heading, Small]
-            .container--heading-small {
+            .container--heading {
                 grid-column: 1 / span 12;
                 grid-row: 1;
             }

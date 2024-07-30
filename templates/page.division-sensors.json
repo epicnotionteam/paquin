@@ -50,10 +50,22 @@
             "collection": "level"
           }
         },
+        "collection_KxVxR6": {
+          "type": "collection",
+          "settings": {
+            "collection": "optical-laser"
+          }
+        },
         "collection_TnbtRk": {
           "type": "collection",
           "settings": {
             "collection": "flow"
+          }
+        },
+        "collection_iVbkY6": {
+          "type": "collection",
+          "settings": {
+            "collection": "gas-detection"
           }
         },
         "collection_wP3nh8": {
@@ -62,10 +74,28 @@
             "collection": "humidity"
           }
         },
+        "collection_qTDAyH": {
+          "type": "collection",
+          "settings": {
+            "collection": "electrical-connectivity"
+          }
+        },
+        "collection_BAzey9": {
+          "type": "collection",
+          "settings": {
+            "collection": "valves"
+          }
+        },
         "collection_keQgLK": {
           "type": "collection",
           "settings": {
             "collection": "pumps"
+          }
+        },
+        "collection_AUfYHm": {
+          "type": "collection",
+          "settings": {
+            "collection": "load-force"
           }
         }
       },
@@ -73,9 +103,14 @@
         "collection_NPceRF",
         "collection_bFJhze",
         "collection_MnPLHw",
+        "collection_KxVxR6",
         "collection_TnbtRk",
+        "collection_iVbkY6",
         "collection_wP3nh8",
-        "collection_keQgLK"
+        "collection_qTDAyH",
+        "collection_BAzey9",
+        "collection_keQgLK",
+        "collection_AUfYHm"
       ],
       "settings": {
         "heading_small": "By Product Type",

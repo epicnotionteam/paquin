@@ -10,7 +10,6 @@
 {
   "order": [
     "division-sensors-hero",
-    "division-sensors-product-types",
     "division-sensors-markets",
     "content_blocks_HCAWDb",
     "hero_inline_yqmAAy",
@@ -27,101 +26,6 @@
         "link_url": "#paquin-sensors",
         "image": "shopify:\/\/shop_images\/asset__parts--sensors.jpg",
         "show_jump_links": true
-      }
-    },
-    "division-sensors-product-types": {
-      "type": "feed-collection",
-      "blocks": {
-        "collection_NPceRF": {
-          "type": "collection",
-          "settings": {
-            "collection": "pressure"
-          }
-        },
-        "collection_bFJhze": {
-          "type": "collection",
-          "settings": {
-            "collection": "temperature"
-          }
-        },
-        "collection_MnPLHw": {
-          "type": "collection",
-          "settings": {
-            "collection": "level"
-          }
-        },
-        "collection_KxVxR6": {
-          "type": "collection",
-          "settings": {
-            "collection": "optical-laser"
-          }
-        },
-        "collection_TnbtRk": {
-          "type": "collection",
-          "settings": {
-            "collection": "flow"
-          }
-        },
-        "collection_iVbkY6": {
-          "type": "collection",
-          "settings": {
-            "collection": "gas-detection"
-          }
-        },
-        "collection_wP3nh8": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_qTDAyH": {
-          "type": "collection",
-          "settings": {
-            "collection": "electrical-connectivity"
-          }
-        },
-        "collection_rthmk9": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_BAzey9": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_keQgLK": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_AUfYHm": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
-        }
-      },
-      "block_order": [
-        "collection_NPceRF",
-        "collection_bFJhze",
-        "collection_MnPLHw",
-        "collection_KxVxR6",
-        "collection_TnbtRk",
-        "collection_iVbkY6",
-        "collection_wP3nh8",
-        "collection_qTDAyH",
-        "collection_rthmk9",
-        "collection_BAzey9",
-        "collection_keQgLK",
-        "collection_AUfYHm"
-      ],
-      "settings": {
-        "heading_small": "By Product Type",
-        "theme": "base"
       }
     },
     "division-sensors-markets": {

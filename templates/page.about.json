@@ -11,10 +11,10 @@
   "order": [
     "about-hero",
     "about-divisions-2",
-    "about-team",
-    "about-history",
-    "about-hero-cta",
     "about-process",
+    "about-history",
+    "about-team",
+    "about-hero-cta",
     "about-careers"
   ],
   "sections": {
@@ -24,7 +24,7 @@
         "heading": "Providing Superior Quality, Innovation and Customer Service Since 1949",
         "heading_size": "h1",
         "content": "<p>The Paquin Company is an engineering-focused corporation consisting of multiple synergistic production facilities.<\/p>",
-        "link_text": "Meet The Paquin Company",
+        "link_text": "",
         "link_url": "#our-specialized-divisions",
         "image": "shopify:\/\/shop_images\/asset__partnership--home.jpg",
         "show_jump_links": true
@@ -55,8 +55,8 @@
             "heading": "Innovative Electrical Connectors & Cable Assemblies",
             "heading_size": "h2",
             "content": "<p>Experts in manufacturing custom ruggedized electrical connectors and cable harnesses. The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.<\/p>",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/global-intex",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
             "image": "shopify:\/\/shop_images\/asset__about--excel_fe981f95-cf46-45f0-9fe6-789111b960ce.jpg"
           }
@@ -69,8 +69,8 @@
             "heading": "Precision, Quality and Innovation",
             "heading_size": "h2",
             "content": "<p>This division specializes in producing high-precision actuators, valves and related control devices.  Offering globally-accepted EX certifications, these products can meet the requirements of many industries and applications.<\/p>",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "Learn more",
+            "link_url": "shopify:\/\/pages\/excel-manufacturing",
             "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
             "image": "shopify:\/\/shop_images\/asset__about--excel_53126c04-ef82-469a-904b-fe366c5c96f4.jpg"
           }
@@ -98,6 +98,77 @@
       "settings": {
         "heading_small": "Explore Our Specialized Divisions:",
         "theme": "base"
+      }
+    },
+    "about-process": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_RKK6JJ": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Designing with Precision",
+            "content": "<p>Our initial phase involves our engineering teams transforming client ideas into detailed designs, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_CmpMHh": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Materials Matter",
+            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_hwEqpe": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Manufacturing Innovation",
+            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_M9W7y7": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Testing and Quality Control",
+            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, meeting all requirements and surpassing customer expectations.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_RKK6JJ",
+        "content_block_CmpMHh",
+        "content_block_hwEqpe",
+        "content_block_M9W7y7"
+      ],
+      "settings": {
+        "heading_small": "Our Manufacturing Process",
+        "heading_large": "A Manufacturing Process Which Sets the Standard for Excellence",
+        "heading_size": "h2",
+        "show_numbering": true,
+        "columns": "4",
+        "theme": "alt"
+      }
+    },
+    "about-history": {
+      "type": "content-offset",
+      "settings": {
+        "heading_small": "Company History",
+        "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
+        "heading_size": "h1",
+        "subheading": "Our Founding",
+        "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.<\/p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.<\/p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.<\/p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production facilities, Global Intex and Excel Manufacturing Solutions. Having these three divisions allowed Paquin to engineer, produce, and deliver both standard and proprietary components, as well as process controls and fully packaged solutions.<\/p><p>In 2021, Robert Williams became the sole owner of The Paquin Company. Over the next two years, Robert and his management team continued the company’s strategic evolution, and in 2023 announced Paquin’s third manufacturing facility, <a href=\"\/pages\/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors<\/a>. The addition of this fourth division marks a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.<\/p>",
+        "image": "shopify:\/\/shop_images\/asset__about--history.jpg",
+        "theme": "dark"
       }
     },
     "about-team": {
@@ -145,7 +216,7 @@
             "name": "Gary Frey",
             "role": "Member — Board of Directors",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_kQijHU": {
@@ -154,7 +225,7 @@
             "name": "Jenna Williams",
             "role": "Member — Board of Directors",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-female.jpg"
           }
         },
         "team_block_ydPhwd": {
@@ -172,7 +243,7 @@
             "name": "John Frey",
             "role": "Outside Sales Engineer",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_83FGGw": {
@@ -217,7 +288,7 @@
             "name": "Bill Taylor",
             "role": "Head of Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_QrEg9M": {
@@ -316,7 +387,7 @@
             "name": "Denise Tennant",
             "role": "Administration",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-female.jpg"
           }
         },
         "team_block_aYQWne": {
@@ -361,7 +432,7 @@
             "name": "Brett Matheson",
             "role": "Inventory Control",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png"
+            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_MMdbKa": {
@@ -412,20 +483,9 @@
         "theme": "base"
       }
     },
-    "about-history": {
-      "type": "content-offset",
-      "settings": {
-        "heading_small": "Company History",
-        "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
-        "heading_size": "h1",
-        "subheading": "Our Founding",
-        "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.<\/p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.<\/p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.<\/p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production facilities, Global Intex and Excel Manufacturing Solutions. Having these three divisions allowed Paquin to engineer, produce, and deliver both standard and proprietary components, as well as process controls and fully packaged solutions.<\/p><p>In 2021, Robert Williams became the sole owner of The Paquin Company. Over the next two years, Robert and his management team continued the company’s strategic evolution, and in 2023 announced Paquin’s third manufacturing facility, <a href=\"\/pages\/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors<\/a>. The addition of this fourth division marks a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.<\/p>",
-        "image": "shopify:\/\/shop_images\/asset__about--history.jpg",
-        "theme": "alt"
-      }
-    },
     "about-hero-cta": {
       "type": "hero-inline",
+      "disabled": true,
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
@@ -434,65 +494,6 @@
         "cta_secondary_text": "Shop For Parts",
         "cta_secondary_url": "shopify:\/\/collections",
         "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
-      }
-    },
-    "about-process": {
-      "type": "content-blocks",
-      "blocks": {
-        "content_block_RKK6JJ": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Designing with Precision",
-            "content": "<p>Our initial phase involves our engineering teams transforming client ideas into detailed designs, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        },
-        "content_block_CmpMHh": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Materials Matter",
-            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        },
-        "content_block_hwEqpe": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Manufacturing Innovation",
-            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        },
-        "content_block_M9W7y7": {
-          "type": "content-block",
-          "settings": {
-            "image_type": "logo",
-            "heading": "Testing and Quality Control",
-            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, meeting all requirements and surpassing customer expectations.<\/p>",
-            "link_text": "Link text",
-            "link_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_block_RKK6JJ",
-        "content_block_CmpMHh",
-        "content_block_hwEqpe",
-        "content_block_M9W7y7"
-      ],
-      "settings": {
-        "heading_small": "Our Manufacturing Process",
-        "heading_large": "A Manufacturing Process Which Sets the Standard for Excellence",
-        "heading_size": "h2",
-        "show_numbering": true,
-        "columns": "4",
-        "theme": "dark"
       }
     },
     "about-careers": {

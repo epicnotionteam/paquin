@@ -3037,6 +3037,22 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/page.division-excel.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/page.division-excel-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/templates\/page.division-global-intex.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/templates\/page.division-global-intex-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/page.division-sensors.json" : {
       "ft" : 524288,
       "oA" : 1,

@@ -1,0 +1,313 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "order": [
+    "division-sensors-hero",
+    "division-sensors-product-types",
+    "division-sensors-markets",
+    "content_blocks_HCAWDb",
+    "hero_inline_yqmAAy",
+    "division-sensors-about"
+  ],
+  "sections": {
+    "division-sensors-hero": {
+      "type": "hero-internal",
+      "settings": {
+        "heading": "Precision & Efficiency in Industrial, Commercial & Residential Applications",
+        "heading_size": "h1",
+        "content": "<p>Paquin's sensor-based product portfolio offers innovative solutions beyond the conventional.<\/p>",
+        "link_text": "Explore Paquin Sensors",
+        "link_url": "#paquin-sensors",
+        "image": "shopify:\/\/shop_images\/asset__parts--sensors.jpg",
+        "show_jump_links": true
+      }
+    },
+    "division-sensors-product-types": {
+      "type": "feed-collection",
+      "blocks": {
+        "collection_NPceRF": {
+          "type": "collection",
+          "settings": {
+            "collection": "pressure"
+          }
+        },
+        "collection_bFJhze": {
+          "type": "collection",
+          "settings": {
+            "collection": "temperature"
+          }
+        },
+        "collection_MnPLHw": {
+          "type": "collection",
+          "settings": {
+            "collection": "level"
+          }
+        },
+        "collection_KxVxR6": {
+          "type": "collection",
+          "settings": {
+            "collection": "optical-laser"
+          }
+        },
+        "collection_TnbtRk": {
+          "type": "collection",
+          "settings": {
+            "collection": "flow"
+          }
+        },
+        "collection_iVbkY6": {
+          "type": "collection",
+          "settings": {
+            "collection": "gas-detection"
+          }
+        },
+        "collection_wP3nh8": {
+          "type": "collection",
+          "settings": {
+            "collection": "humidity"
+          }
+        },
+        "collection_qTDAyH": {
+          "type": "collection",
+          "settings": {
+            "collection": "electrical-connectivity"
+          }
+        },
+        "collection_rthmk9": {
+          "type": "collection",
+          "settings": {
+            "collection": "proximity"
+          }
+        },
+        "collection_BAzey9": {
+          "type": "collection",
+          "settings": {
+            "collection": "valves"
+          }
+        },
+        "collection_keQgLK": {
+          "type": "collection",
+          "settings": {
+            "collection": "pumps"
+          }
+        },
+        "collection_AUfYHm": {
+          "type": "collection",
+          "settings": {
+            "collection": "load-force"
+          }
+        }
+      },
+      "block_order": [
+        "collection_NPceRF",
+        "collection_bFJhze",
+        "collection_MnPLHw",
+        "collection_KxVxR6",
+        "collection_TnbtRk",
+        "collection_iVbkY6",
+        "collection_wP3nh8",
+        "collection_qTDAyH",
+        "collection_rthmk9",
+        "collection_BAzey9",
+        "collection_keQgLK",
+        "collection_AUfYHm"
+      ],
+      "settings": {
+        "heading_small": "By Product Type",
+        "theme": "base"
+      }
+    },
+    "division-sensors-markets": {
+      "type": "feed-collection",
+      "blocks": {
+        "collection_Kk63zK": {
+          "type": "collection",
+          "settings": {
+            "collection": "ag-equipment"
+          }
+        },
+        "collection_CMnzVr": {
+          "type": "collection",
+          "settings": {
+            "collection": "automation-controls"
+          }
+        },
+        "collection_e4cixi": {
+          "type": "collection",
+          "settings": {
+            "collection": "breweries-wineries"
+          }
+        },
+        "collection_GPt3be": {
+          "type": "collection",
+          "settings": {
+            "collection": "factory-floor-safety"
+          }
+        },
+        "collection_QAqNiA": {
+          "type": "collection",
+          "settings": {
+            "collection": "food-beverage-pharmaceutical"
+          }
+        },
+        "collection_3b9gJK": {
+          "type": "collection",
+          "settings": {
+            "collection": "heavy-duty-process"
+          }
+        },
+        "collection_NcBkKQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "hvac-refrigeration"
+          }
+        },
+        "collection_qbGEpk": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydraulics-mobile-hydraulics"
+          }
+        },
+        "collection_dCAKb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        },
+        "collection_EQGE6h": {
+          "type": "collection",
+          "settings": {
+            "collection": "gas-oil"
+          }
+        },
+        "collection_wPFKrF": {
+          "type": "collection",
+          "settings": {
+            "collection": "manufacturing-equipment"
+          }
+        },
+        "collection_nnXhDG": {
+          "type": "collection",
+          "settings": {
+            "collection": "ruggedized-cabllng-solutions"
+          }
+        },
+        "collection_6cqjNX": {
+          "type": "collection",
+          "settings": {
+            "collection": "test-measurement"
+          }
+        }
+      },
+      "block_order": [
+        "collection_Kk63zK",
+        "collection_CMnzVr",
+        "collection_e4cixi",
+        "collection_GPt3be",
+        "collection_QAqNiA",
+        "collection_3b9gJK",
+        "collection_NcBkKQ",
+        "collection_qbGEpk",
+        "collection_dCAKb8",
+        "collection_EQGE6h",
+        "collection_wPFKrF",
+        "collection_nnXhDG",
+        "collection_6cqjNX"
+      ],
+      "settings": {
+        "heading_small": "Products by Industry",
+        "theme": "alt"
+      }
+    },
+    "content_blocks_HCAWDb": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_6eQheC": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Precision",
+            "content": "<p>Our sensors are designed to provide accurate and reliable data, essential for critical industrial applications.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_t9Vb7z": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Innovation",
+            "content": "<p>We continuously invest in research and development to bring the latest advancements in sensor technology to our clients.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_aQdtmm": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Quality",
+            "content": "<p>With rigorous quality control protocols, we ensure that every product meets our stringent standards of excellence.<\/p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_TThA4r": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Support",
+            "content": "<p>Our dedicated team is here to provide expert guidance and support, ensuring you get the most out of our sensor solutions.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_6eQheC",
+        "content_block_t9Vb7z",
+        "content_block_aQdtmm",
+        "content_block_TThA4r"
+      ],
+      "settings": {
+        "heading_small": "What Sets Us Apart",
+        "heading_large": "Why Choose Paquin Sensors?",
+        "heading_size": "h1",
+        "show_numbering": true,
+        "columns": "4",
+        "theme": "base"
+      }
+    },
+    "hero_inline_yqmAAy": {
+      "type": "hero-inline",
+      "settings": {
+        "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
+        "cta_primary_text": "Contact our team",
+        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_secondary_text": "",
+        "cta_secondary_url": "",
+        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
+      }
+    },
+    "division-sensors-about": {
+      "type": "content-offset",
+      "settings": {
+        "heading_small": "Paquin Sensors",
+        "heading_large": "Pioneering Sensor Technology for Every Industry",
+        "heading_size": "h1",
+        "subheading": "Our Capabilities",
+        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial, commercial and residential applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><ul><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to createyour solution.<\/li><\/ul>",
+        "image": "shopify:\/\/shop_images\/asset__sensors--about.jpg",
+        "theme": "dark"
+      }
+    }
+  }
+}

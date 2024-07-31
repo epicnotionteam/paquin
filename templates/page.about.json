@@ -485,7 +485,6 @@
     },
     "about-hero-cta": {
       "type": "hero-inline",
-      "disabled": true,
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",

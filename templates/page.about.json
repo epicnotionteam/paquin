@@ -156,7 +156,7 @@
         "heading_size": "h2",
         "show_numbering": true,
         "columns": "4",
-        "theme": "dark"
+        "theme": "alt"
       }
     },
     "about-history": {
@@ -168,7 +168,7 @@
         "subheading": "Our Founding",
         "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.<\/p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.<\/p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.<\/p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production facilities, Global Intex and Excel Manufacturing Solutions. Having these three divisions allowed Paquin to engineer, produce, and deliver both standard and proprietary components, as well as process controls and fully packaged solutions.<\/p><p>In 2021, Robert Williams became the sole owner of The Paquin Company. Over the next two years, Robert and his management team continued the company’s strategic evolution, and in 2023 announced Paquin’s third manufacturing facility, <a href=\"\/pages\/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors<\/a>. The addition of this fourth division marks a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.<\/p>",
         "image": "shopify:\/\/shop_images\/asset__about--history.jpg",
-        "theme": "alt"
+        "theme": "dark"
       }
     },
     "about-team": {
@@ -485,6 +485,7 @@
     },
     "about-hero-cta": {
       "type": "hero-inline",
+      "disabled": true,
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
         "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",

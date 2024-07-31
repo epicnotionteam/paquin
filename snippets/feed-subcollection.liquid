@@ -16,9 +16,10 @@
                 <a class="item__wrap--image" href="{{ collection_url }}">
                     <img class="item__image" src="{{ collection_image }}" alt="{{ collection_title }}">
                 </a>
+                
             {% endif %}
             {% comment %} Title {% endcomment %}
-            <p class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></p>
+            <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
         </div>
     {% endfor %}
 </div>

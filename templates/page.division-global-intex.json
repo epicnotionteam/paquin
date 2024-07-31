@@ -16,24 +16,24 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Precision & Efficiency in Industrial, Commercial & Residential Applications",
+        "heading": "Heading",
         "heading_size": "h1",
-        "content": "<p>Paquin's sensor-based product portfolio offers innovative solutions beyond the conventional.<\/p>",
-        "link_text": "Explore Paquin Sensors",
+        "content": "<p>Content<\/p>",
+        "link_text": "",
         "link_url": "#paquin-sensors",
-        "image": "shopify:\/\/shop_images\/asset__parts--sensors.jpg",
-        "show_jump_links": true
+        "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
+        "show_jump_links": false
       }
     },
     "division-sensors-about": {
       "type": "content-offset",
       "settings": {
-        "heading_small": "Paquin Sensors",
-        "heading_large": "Pioneering Sensor Technology for Every Industry",
+        "heading_small": "Global Intex",
+        "heading_large": "Heading",
         "heading_size": "h1",
         "subheading": "Our Capabilities",
-        "content": "<p>Paquin Sensors is dedicated to advancing sensor-based technology for a wide range of industrial, commercial and residential applications. Our mission is to enhance the accuracy, efficiency, and reliability of our clients' operations through cutting-edge sensor solutions.<\/p><p>Our sensor portfolio is designed to deliver precise measurements and data across various industries, from food and pharmaceuticals to heavy equipment and harsh environment processes. Each sensor is engineered to meet the highest standards of performance and durability, ensuring optimal functionality even in the most demanding conditions.<\/p><ul><li><strong>In-House Production:<\/strong> Our sensors are produced in our state-of-the-art facility in South Carolina, with multi-product package completion in Ohio.<\/li><li><strong>Advanced Technology:<\/strong> We integrate the latest sensor technologies into our products, offering advanced solutions that improve control and automation.<\/li><li><strong>Custom Solutions:<\/strong> Our team of skilled engineers and sales staff is dedicated to meeting your unique requirements. We encourage you to present your product design wish lists and challenge us to createyour solution.<\/li><\/ul>",
-        "image": "shopify:\/\/shop_images\/asset__sensors--about.jpg",
+        "content": "<p>Global Intex is at home with the design and construction of heavy-duty ruggedized cable harnesses, low and high-voltage power connectivity solutions and more.  <\/p><p>After years of experience in the mining and AG sectors, Global Intex is equipped with a specialized engineering staff, dedicated production team and comprehensive manufacturing center. <\/p><p>The strategic investments from The Paquin Company help this production division thrive by delivering ultra-high-quality products that withstand some of the harshest environments known to man. <\/p><p>We encourage our customers to challenge us with custom build requirements — <a href=\"\/pages\/contact\" title=\"Contact\">contact us<\/a> today to get started.<\/p>",
+        "image": "shopify:\/\/shop_images\/asset__placeholder--1-1.png",
         "theme": "base"
       }
     }

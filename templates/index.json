@@ -410,12 +410,12 @@
     "home-hero-inline": {
       "type": "hero-inline",
       "settings": {
-        "heading": "Engineering Your Vision: Our Team Is Ready to Build Your Custom Solution",
-        "content": "<p>The design, construction & delivery of industry unique control instrumentation is our passion.<\/p>",
-        "cta_primary_text": "Contact Our Team",
-        "cta_primary_url": "shopify:\/\/pages\/contact",
-        "cta_secondary_text": "",
-        "cta_secondary_url": "",
+        "heading": "The Right Part For Every Engineering Project",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
+        "cta_primary_text": "Shop by Industry",
+        "cta_primary_url": "\/collections\/all\/",
+        "cta_secondary_text": "Contact our team",
+        "cta_secondary_url": "\/pages\/contact\/",
         "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
       }
     },

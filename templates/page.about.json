@@ -154,7 +154,7 @@
         "heading_small": "Our Manufacturing Process",
         "heading_large": "A Manufacturing Process Which Sets the Standard for Excellence",
         "heading_size": "h2",
-        "show_numbering": true,
+        "show_numbering": false,
         "columns": "4",
         "theme": "alt"
       }

@@ -280,7 +280,7 @@
         "heading_small": "What Sets Us Apart",
         "heading_large": "Why Choose Paquin Sensors?",
         "heading_size": "h1",
-        "show_numbering": true,
+        "show_numbering": false,
         "columns": "4",
         "theme": "base"
       }

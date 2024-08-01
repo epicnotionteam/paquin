@@ -3699,7 +3699,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     padding-bottom: 9.6rem;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   #shopify-section-template--22450722505007__home-divisions .feed--block .item:nth-child(4) {
     padding-top: 64px;
     padding-top: 6.4rem;

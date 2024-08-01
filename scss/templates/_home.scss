@@ -6,8 +6,8 @@
 // --------------------------------------------------
 
 // TEMPORARY: Adjust Distribution block to account for missing logo
-// Adjust for medium breakpoint
-@include mq($from: medium) {
+// Adjust from @small breakpoint
+@include mq( $from: small ) {
 	#shopify-section-template--22450722505007__home-divisions {
 		.feed--block .item:nth-child(4) {
 			@include rem( padding-top, spacing(9) );

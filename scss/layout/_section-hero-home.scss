@@ -55,12 +55,12 @@
     }
     // Overlay [Darken]
     .section__overlay {
-        background-color: rgba( 16, 16, 16, 0.32 );
+        background: linear-gradient( 180deg, rgba(48, 57, 58, 0.0), rgba(32, 36, 38, 1.0) );
+        bottom: 0;
         content: '';
-        height: 100%;
+        height: 80%;
         left: 0;
         position: absolute;
-        top: 0;
         width: 100%;
         z-index: 0;
     }

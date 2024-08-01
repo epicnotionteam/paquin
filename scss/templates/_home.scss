@@ -1,0 +1,16 @@
+// ====================================================================================================
+// Templates / Home
+// ====================================================================================================
+
+// Template Adjustments
+// --------------------------------------------------
+
+// TEMPORARY: Adjust Distribution block to account for missing logo
+// Adjust for medium breakpoint
+@include mq($from: medium) {
+	#shopify-section-template--22450722505007__home-divisions {
+		.feed--block .item:nth-child(4) {
+			@include rem( margin-top, spacing(7) );
+		}
+	}
+}

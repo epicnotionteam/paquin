@@ -16,11 +16,11 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Heading",
+        "heading": "Rugged Connectivity Solutions for Extreme Conditions",
         "heading_size": "h1",
-        "content": "<p>Content<\/p>",
-        "link_text": "",
-        "link_url": "#paquin-sensors",
+        "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable harnesses and electrical connectors, tailored for the most challenging industrial environments.<\/p>",
+        "link_text": "Contact our team",
+        "link_url": "shopify:\/\/pages\/contact",
         "image": "shopify:\/\/shop_images\/asset__placeholder--4-3.png",
         "show_jump_links": false
       }
@@ -29,7 +29,7 @@
       "type": "content-offset",
       "settings": {
         "heading_small": "Global Intex",
-        "heading_large": "Heading",
+        "heading_large": "Leading the Way in Ruggedized Connectivity and Power Solutions",
         "heading_size": "h1",
         "subheading": "Our Capabilities",
         "content": "<p>Global Intex is at home with the design and construction of heavy-duty ruggedized cable harnesses, low and high-voltage power connectivity solutions and more.  <\/p><p>After years of experience in the mining and AG sectors, Global Intex is equipped with a specialized engineering staff, dedicated production team and comprehensive manufacturing center. <\/p><p>The strategic investments from The Paquin Company help this production division thrive by delivering ultra-high-quality products that withstand some of the harshest environments known to man. <\/p><p>We encourage our customers to challenge us with custom build requirements — <a href=\"\/pages\/contact\" title=\"Contact\">contact us<\/a> today to get started.<\/p>",

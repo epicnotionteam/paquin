@@ -3767,7 +3767,8 @@ blockquote cite {
   opacity: 1;
 }
 
-.productitem__badge--soldout {
+.productitem__badge--soldout,
+.product__badge.product__badge--soldout {
   display: none;
 }
 

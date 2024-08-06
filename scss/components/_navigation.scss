@@ -265,10 +265,11 @@
             @include rem( padding-left, calc( spacing(3) + 4vw ) !important );
         }
     }
-}
 
-.mobile-nav-content__secondary-menu a {
-    @include font-size( 'small' );
+    .mobile-nav-content__secondary-menu li > a {
+        @include font-size( 'small' );
+    }
+    
 }
 
 

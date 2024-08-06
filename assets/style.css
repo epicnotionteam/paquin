@@ -5512,8 +5512,7 @@ ul.list--link-arrow li::before {
   padding-left: calc(16px + 4vw) !important;
   padding-left: calc(16px + 4vw) !important;
 }
-
-.mobile-nav-content__secondary-menu a {
+.mobile-nav-content .mobile-nav-content__secondary-menu li > a {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;

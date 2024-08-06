@@ -192,9 +192,10 @@
 .mobile-nav-content {
     // Item [All]
     li {
+        // Link
         a {
             @extend %h4;
-            @include rem( padding, 12px 4vw !important );
+            @include rem( padding, 14px 4vw !important );
             font-family: font-family( 'heading' );
             margin: 0;
         }

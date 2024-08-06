@@ -5447,8 +5447,8 @@ ul.list--link-arrow li::before {
 }
 
 .mobile-nav-content li a {
-  padding: 12px 4vw !important;
-  padding: 1.2rem 4vw !important;
+  padding: 14px 4vw !important;
+  padding: 1.4rem 4vw !important;
   font-family: "Paquin Sans Display", sans-serif;
   margin: 0;
 }

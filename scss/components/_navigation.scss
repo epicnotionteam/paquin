@@ -160,7 +160,7 @@
 
 // Component container
 .breadcrumbs-container {
-    @include font-size('xsmall');
+    @include font-size('small');
     @include rem(margin, spacing(3) auto);
     color: color('type', '3');
     line-height: 1.5;

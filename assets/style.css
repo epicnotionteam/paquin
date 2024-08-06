@@ -5426,9 +5426,11 @@ ul.list--link-arrow li::before {
 }
 
 .breadcrumbs-container {
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 21px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
   margin: 16px auto;
   margin: 1.6rem auto;
   line-height: 1.5;

@@ -192,7 +192,6 @@
 .mobile-nav-content {
     // Item [All]
     li {
-        @include rem( height, 48px );
         a {
             @extend %h4;
             @include rem( padding, spacing(1) 4vw !important );

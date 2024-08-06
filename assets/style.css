@@ -5492,9 +5492,17 @@ ul.list--link-arrow li::before {
 .mobile-nav-content li.navmenu-item-parent > ul {
   grid-area: submenu;
 }
+.mobile-nav-content .navmenu.navmenu-depth-2 {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
 .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
   padding-left: calc(8px + 4vw) !important;
   padding-left: calc(8px + 4vw) !important;
+}
+.mobile-nav-content .navmenu.navmenu-depth-3 {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 .mobile-nav-content .navmenu.navmenu-depth-3 > li > a {
   padding-left: calc(16px + 4vw) !important;

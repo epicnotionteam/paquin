@@ -247,6 +247,7 @@
     }
     // List, Submenu [Level 2]
     .navmenu.navmenu-depth-2 {
+        @include rem( margin-bottom, 12px );
         // Item [Level 2]
         & > li > a {
             @include rem( padding-left, calc( spacing(2) + 4vw ) !important );
@@ -254,6 +255,7 @@
     }
     // List, Submenu [Level 3]
     .navmenu.navmenu-depth-3 {
+        @include rem( margin-bottom, 12px );
         // Item [Level 3]
         & > li > a {
             @include rem( padding-left, calc( spacing(3) + 4vw ) !important );

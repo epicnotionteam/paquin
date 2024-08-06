@@ -3767,6 +3767,10 @@ blockquote cite {
   opacity: 1;
 }
 
+.productitem__badge--soldout {
+  display: none;
+}
+
 .button--base,
 .form--newsletter-subscription .gfb__footer button.submit,
 .form--base button.submit,

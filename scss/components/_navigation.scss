@@ -190,86 +190,124 @@
 
 // Component container
 .mobile-nav-content {
-    // Parent item container
-    .navmenu.navmenu-depth-1 {
-        // Parent link
-        & > li.navmenu-item {
-            &.navmenu-item-parent {
-                @include rem( column-gap, spacing(2) );
-                align-items: center;
-                display: grid;
-                grid-template-columns: 1fr max-content;
-                .navmenu-button {
+    // Item [All]
+    li {
+        a {
+            @extend %h4;
+            @include rem( padding, spacing(1) 4vw );
+            font-family: font-family( 'heading' );
+            margin: 0;
+        }
+    }
+    // Item [Parent, All Levels]
+    li.navmenu-item-parent {
+        @include rem( column-gap, spacing(2) );
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        // Indicator [Dropdown]
+        .navmenu-button {
+            @include rem((
+                height: 40px,
+                width: 48px
+            ));
+            border-radius: 0;
+            margin-right: 0;
+            padding: 0;
+            position: relative;
+            right: 0;
+            top: 0;
+            // Icon container
+            .navmenu-button-wrapper {
+                background-color: white;
+                // Dropdown indicator icon
+                .navmenu-icon svg {
                     @include rem((
-                        height: 40px,
-                        width: 48px
+                        height: 8px,
+                        width: 12px
                     ));
-                    border-radius: 0;
-                    margin-right: 0;
-                    padding: 0;
-                    position: relative;
-                    right: 0;
-                    top: 0;
-                    // Icon container
-                    .navmenu-button-wrapper {
-                        background-color: white;
-                        // Dropdown indicator icon
-                        .navmenu-icon svg {
-                            @include rem((
-                                height: 8px,
-                                width: 12px
-                            ));
-                            color: color( 'steel', '4' );
-                        }
-                    }
+                    color: color( 'steel', '4' );
                 }
-            }
-            & > a {
-                @extend %h4;
-                @include rem( padding, spacing(1) 4vw );
-                font-family: font-family( 'heading' );
-                margin: 0;
             }
         }
     }
-    // Child item container
+    // List, Submenu [Level 2]
     .navmenu.navmenu-depth-2 {
-        @include rem( margin, spacing(1) 0 12px );
-        background-color: white;
-        & > li {
-            &.navmenu-item-parent {
-                @include rem( column-gap, spacing(2) );
-                align-items: center;
-                display: grid;
-                grid-template-columns: 1fr max-content;
-            }
-            & > a {
-                @include rem( padding, spacing(1) 4vw );
-                font-weight: font-weight( 'base' );
-                line-height: 1.4;
-            }
-        } 
+        // Item [Level 2]
+        & > li {}
     }
-    // Navigation [Secondary] » Link
-    .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
-        @extend %p;
-        @include font-size( 'small' );
+    // List, Submenu [Level 3]
+    .navmenu.navmenu-depth-3 {
+        // Item [Level 3]
+        & > li {}
     }
 }
 
-// Adjust @custom breakpoint
-@include mq( $from: 719px ) {
-    .mobile-nav-content {
-        // Adjust child link padding
-        .navmenu.navmenu-depth-1 > li.navmenu-item > a {
-            @include rem( padding, spacing(1) spacing(4) );
-        }
-        // Adjust child link padding
-        .navmenu.navmenu-depth-2 > li.navmenu-item > a {
-            @include rem( padding, spacing(1) spacing(4) );
-        }
-    }
-}
+
+
+
+
+
+
+// // Component container
+// .mobile-nav-content {
+//     // Parent item container
+//     .navmenu.navmenu-depth-1 {
+//         // Parent link
+//         & > li.navmenu-item {
+//             &.navmenu-item-parent {
+               
+               
+//             }
+//             & > a {
+//                 @extend %h4;
+//                 @include rem( padding, spacing(1) 4vw );
+//                 font-family: font-family( 'heading' );
+//                 margin: 0;
+//             }
+//         }
+//     }
+//     // Child item container
+//     .navmenu.navmenu-depth-2 {
+//         @include rem( margin, spacing(1) 0 12px );
+//         background-color: white;
+//         & > li {
+//             &.navmenu-item-parent {
+//                 @include rem( column-gap, spacing(2) );
+//                 align-items: center;
+//                 display: grid;
+//                 grid-template-columns: 1fr max-content;
+//             }
+//             & > a {
+//                 @include rem( padding, spacing(1) 4vw );
+//                 font-weight: font-weight( 'base' );
+//                 line-height: 1.4;
+//             }
+//         } 
+//     }
+//     // Navigation [Secondary] » Link
+//     .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
+//         @extend %p;
+//         @include font-size( 'small' );
+//     }
+// }
+
+// // Adjust @custom breakpoint
+// @include mq( $from: 719px ) {
+//     .mobile-nav-content {
+//         // Adjust child link padding
+//         .navmenu.navmenu-depth-1 > li.navmenu-item > a {
+//             @include rem( padding, spacing(1) spacing(4) );
+//         }
+//         // Adjust child link padding
+//         .navmenu.navmenu-depth-2 > li.navmenu-item > a {
+//             @include rem( padding, spacing(1) spacing(4) );
+//         }
+//     }
+// }
+
+
+
 
 
 // Navigation [Social Sharing]

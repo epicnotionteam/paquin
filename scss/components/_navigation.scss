@@ -204,14 +204,21 @@
         @include rem( column-gap, spacing(2) );
         align-items: center;
         display: grid;
+        grid-template-areas: 
+            "link button"
+            "submenu submenu";
         grid-template-columns: 1fr max-content;
+        & > a {
+            grid-area: link;
+        }
         // Indicator [Dropdown]
-        .navmenu-button {
+        & > .navmenu-button {
             @include rem((
                 height: 40px,
                 width: 48px
             ));
             border-radius: 0;
+            grid-area: button;
             margin-right: 0;
             padding: 0;
             position: relative;
@@ -229,6 +236,9 @@
                     color: color( 'steel', '4' );
                 }
             }
+        }
+        & > ul {
+            grid-area: submenu;
         }
     }
     // List, Submenu [Level 2]

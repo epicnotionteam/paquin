@@ -5457,29 +5457,37 @@ ul.list--link-arrow li::before {
   column-gap: 0.8rem;
   align-items: center;
   display: grid;
+  grid-template-areas: "link button" "submenu submenu";
   grid-template-columns: 1fr max-content;
 }
-.mobile-nav-content li.navmenu-item-parent .navmenu-button {
+.mobile-nav-content li.navmenu-item-parent > a {
+  grid-area: link;
+}
+.mobile-nav-content li.navmenu-item-parent > .navmenu-button {
   height: 40px;
   height: 4rem;
   width: 48px;
   width: 4.8rem;
   border-radius: 0;
+  grid-area: button;
   margin-right: 0;
   padding: 0;
   position: relative;
   right: 0;
   top: 0;
 }
-.mobile-nav-content li.navmenu-item-parent .navmenu-button .navmenu-button-wrapper {
+.mobile-nav-content li.navmenu-item-parent > .navmenu-button .navmenu-button-wrapper {
   background-color: white;
 }
-.mobile-nav-content li.navmenu-item-parent .navmenu-button .navmenu-button-wrapper .navmenu-icon svg {
+.mobile-nav-content li.navmenu-item-parent > .navmenu-button .navmenu-button-wrapper .navmenu-icon svg {
   height: 8px;
   height: 0.8rem;
   width: 12px;
   width: 1.2rem;
   color: #66787F;
+}
+.mobile-nav-content li.navmenu-item-parent > ul {
+  grid-area: submenu;
 }
 .nav--social-sharing a {
   font-size: 13px;

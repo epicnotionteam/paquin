@@ -17,7 +17,7 @@
             aria-label="{{ 'general.accessibility.nav_breadcrumbs' | t }}"
         >
             {% if template contains 'collection' or template contains 'product' %}
-                <a href="/pages/paquin-sensors#by-product-type">{{ 'general.breadcrumbs.all_collections' | t }}</a>
+                <a href="/pages/paquin-sensors#by-product-type">All Collections</a>
             {% else %}
                 <a href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
             {% endif %}

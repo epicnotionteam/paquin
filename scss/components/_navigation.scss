@@ -265,68 +265,6 @@
 
 
 
-
-// // Component container
-// .mobile-nav-content {
-//     // Parent item container
-//     .navmenu.navmenu-depth-1 {
-//         // Parent link
-//         & > li.navmenu-item {
-//             &.navmenu-item-parent {
-               
-               
-//             }
-//             & > a {
-//                 @extend %h4;
-//                 @include rem( padding, spacing(1) 4vw );
-//                 font-family: font-family( 'heading' );
-//                 margin: 0;
-//             }
-//         }
-//     }
-//     // Child item container
-//     .navmenu.navmenu-depth-2 {
-//         @include rem( margin, spacing(1) 0 12px );
-//         background-color: white;
-//         & > li {
-//             &.navmenu-item-parent {
-//                 @include rem( column-gap, spacing(2) );
-//                 align-items: center;
-//                 display: grid;
-//                 grid-template-columns: 1fr max-content;
-//             }
-//             & > a {
-//                 @include rem( padding, spacing(1) 4vw );
-//                 font-weight: font-weight( 'base' );
-//                 line-height: 1.4;
-//             }
-//         } 
-//     }
-//     // Navigation [Secondary] » Link
-//     .mobile-nav-content__secondary-menu .navmenu.navmenu-depth-1 > li.navmenu-item > a {
-//         @extend %p;
-//         @include font-size( 'small' );
-//     }
-// }
-
-// // Adjust @custom breakpoint
-// @include mq( $from: 719px ) {
-//     .mobile-nav-content {
-//         // Adjust child link padding
-//         .navmenu.navmenu-depth-1 > li.navmenu-item > a {
-//             @include rem( padding, spacing(1) spacing(4) );
-//         }
-//         // Adjust child link padding
-//         .navmenu.navmenu-depth-2 > li.navmenu-item > a {
-//             @include rem( padding, spacing(1) spacing(4) );
-//         }
-//     }
-// }
-
-
-
-
-
 // Navigation [Social Sharing]
 // --------------------------------------------------
 

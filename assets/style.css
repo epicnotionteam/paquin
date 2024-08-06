@@ -5487,6 +5487,13 @@ ul.list--link-arrow li::before {
   margin: 0.4rem 0 1.2rem;
   background-color: white;
 }
+.mobile-nav-content .navmenu.navmenu-depth-2 > li.navmenu-item-parent {
+  column-gap: 8px;
+  column-gap: 0.8rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
 .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
   padding: 4px 4vw;
   padding: 0.4rem 4vw;

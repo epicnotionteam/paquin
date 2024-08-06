@@ -21,6 +21,7 @@
         "content": "<p>Excel Manufacturing, a division of The Paquin Company, offers high-precision valves and actuators, ensuring safe and reliable operation in critical applications like underground mining, gas & oil, and subsea systems.<\/p>",
         "link_text": "Contact our team",
         "link_url": "shopify:\/\/pages\/contact",
+        "image": "shopify:\/\/shop_images\/asset__about--excel-2.jpg",
         "show_jump_links": false
       }
     },
@@ -32,6 +33,7 @@
         "heading_size": "h1",
         "subheading": "Our Capabilities",
         "content": "<p>For applications within underground mining, gas & oil and subsea, process systems often run 24\/7 and must do so without complications. It’s vital that the equipment be designed, manufactured, and installed in a way that exceeds critical fail-safe industry protocols.<\/p><p>When it comes to highly engineered and meticulously produced heavy-duty actuators, valves and related process flow components, Excell Manufacturing leads the pack.<\/p><p>This self-contained division within The Paquin Company has the technical expertise and sophisticated production processes in place to accomplish what few others can. After all, not every supplier can produce process control devices that carry globally accepted approvals such as IECEx, UL, CSA, MSHA, ATEX, ATEX (SIRA), CE, UKCA, MASC, and more. <\/p><p>Want to learn more? <a href=\"\/pages\/contact\" title=\"\/pages\/contact\">Contact us<\/a> today to speak with an Excel Manufacturing technical expert.<\/p>",
+        "image": "shopify:\/\/shop_images\/asset__excel--about-2.jpg",
         "theme": "base"
       }
     }

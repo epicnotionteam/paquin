@@ -192,11 +192,12 @@
 .mobile-nav-content {
     // Item [All]
     li {
-        background-color: white;
+        background-color: white !important;
         // Link
         a {
             @extend %h4;
             @include rem( padding, 12px 4vw !important );
+            background-color: white !important;
             font-family: font-family( 'heading' );
             margin: 0;
         }

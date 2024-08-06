@@ -194,7 +194,7 @@
     li {
         a {
             @extend %h4;
-            @include rem( padding, spacing(1) 4vw !important );
+            @include rem( padding, 12px 4vw !important );
             font-family: font-family( 'heading' );
             margin: 0;
         }
@@ -247,14 +247,14 @@
     .navmenu.navmenu-depth-2 {
         // Item [Level 2]
         & > li > a {
-            @include rem( padding, spacing(1) 4vw spacing(1) calc( spacing(2) + 4vw ) !important );
+            @include rem( padding-left, calc( spacing(2) + 4vw ) !important );
         }
     }
     // List, Submenu [Level 3]
     .navmenu.navmenu-depth-3 {
         // Item [Level 3]
         & > li > a {
-            @include rem( padding, spacing(1) 4vw spacing(1) calc( spacing(3) + 4vw ) !important);
+            @include rem( padding-left, calc( spacing(3) + 4vw ) !important );
         }
     }
 }

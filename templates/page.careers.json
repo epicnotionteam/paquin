@@ -106,7 +106,7 @@
         "heading_small": "Perks and Benefits",
         "heading_large": "Where Talent Thrives: Comprehensive Benefits and Growth Opportunities",
         "heading_size": "h2",
-        "show_numbering": true,
+        "show_numbering": false,
         "columns": "3",
         "theme": "base"
       }

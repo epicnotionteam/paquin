@@ -5518,6 +5518,8 @@ ul.list--link-arrow li::before {
   line-height: 23px;
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
+  letter-spacing: 0.4px;
+  letter-spacing: 0.04rem;
 }
 
 .nav--social-sharing a {

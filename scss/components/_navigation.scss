@@ -268,8 +268,9 @@
 
     .mobile-nav-content__secondary-menu li > a {
         @include font-size( 'small' );
+        @include rem( letter-spacing, 0.4px )
     }
-    
+
 }
 
 

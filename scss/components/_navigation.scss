@@ -247,14 +247,14 @@
     .navmenu.navmenu-depth-2 {
         // Item [Level 2]
         & > li > a {
-            @include rem( padding, spacing(1) 4vw spacing(1) spacing(2) !important );
+            @include rem( padding, spacing(1) 4vw spacing(1) calc( spacing(2) + 4vw ) !important );
         }
     }
     // List, Submenu [Level 3]
     .navmenu.navmenu-depth-3 {
         // Item [Level 3]
         & > li > a {
-            @include rem( padding, spacing(1) 4vw spacing(1) 12px !important);
+            @include rem( padding, spacing(1) 4vw spacing(1) calc( spacing(3) + 4vw ) !important);
         }
     }
 }

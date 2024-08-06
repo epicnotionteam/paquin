@@ -5490,12 +5490,12 @@ ul.list--link-arrow li::before {
   grid-area: submenu;
 }
 .mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
-  padding: 4px 4vw 4px 8px !important;
-  padding: 0.4rem 4vw 0.4rem 0.8rem !important;
+  padding: 4px 4vw 4px calc(8px + 4vw) !important;
+  padding: 0.4rem 4vw 0.4rem calc(8px + 4vw) !important;
 }
 .mobile-nav-content .navmenu.navmenu-depth-3 > li > a {
-  padding: 4px 4vw 4px 12px !important;
-  padding: 0.4rem 4vw 0.4rem 1.2rem !important;
+  padding: 4px 4vw 4px calc(16px + 4vw) !important;
+  padding: 0.4rem 4vw 0.4rem calc(16px + 4vw) !important;
 }
 
 .nav--social-sharing a {

@@ -5489,6 +5489,15 @@ ul.list--link-arrow li::before {
 .mobile-nav-content li.navmenu-item-parent > ul {
   grid-area: submenu;
 }
+.mobile-nav-content .navmenu.navmenu-depth-2 > li > a {
+  padding: 4px 4vw 4px 8px;
+  padding: 0.4rem 4vw 0.4rem 0.8rem;
+}
+.mobile-nav-content .navmenu.navmenu-depth-3 > li > a {
+  padding: 4px 4vw 4px 12px;
+  padding: 0.4rem 4vw 0.4rem 1.2rem;
+}
+
 .nav--social-sharing a {
   font-size: 13px;
   font-size: 1.3rem;

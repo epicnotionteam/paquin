@@ -208,6 +208,7 @@
             "link button"
             "submenu submenu";
         grid-template-columns: 1fr max-content;
+        // Link
         & > a {
             grid-area: link;
         }
@@ -237,6 +238,7 @@
                 }
             }
         }
+        // Submenu
         & > ul {
             grid-area: submenu;
         }
@@ -244,12 +246,16 @@
     // List, Submenu [Level 2]
     .navmenu.navmenu-depth-2 {
         // Item [Level 2]
-        & > li {}
+        & > li > a {
+            @include rem( padding, spacing(1) 4vw spacing(1) spacing(2) );
+        }
     }
     // List, Submenu [Level 3]
     .navmenu.navmenu-depth-3 {
         // Item [Level 3]
-        & > li {}
+        & > li > a {
+            @include rem( padding, spacing(1) 4vw spacing(1) 12px );
+        }
     }
 }
 

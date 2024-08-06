@@ -221,6 +221,7 @@
                 height: 40px,
                 width: 48px
             ));
+            background-color: white !important;
             border-radius: 0;
             grid-area: button;
             margin-right: 0;
@@ -230,7 +231,7 @@
             top: 0;
             // Icon container
             .navmenu-button-wrapper {
-                background-color: white;
+                background-color: white !important;
                 // Dropdown indicator icon
                 .navmenu-icon svg {
                     @include rem((
@@ -249,6 +250,7 @@
     // List, Submenu [Level 2]
     .navmenu.navmenu-depth-2 {
         @include rem( margin-bottom, 12px );
+        background-color: white !important;
         // Item [Level 2]
         & > li > a {
             @include rem( padding-left, calc( spacing(2) + 4vw ) !important );
@@ -257,6 +259,7 @@
     // List, Submenu [Level 3]
     .navmenu.navmenu-depth-3 {
         @include rem( margin-bottom, 12px );
+        background-color: white !important;
         // Item [Level 3]
         & > li > a {
             @include rem( padding-left, calc( spacing(3) + 4vw ) !important );

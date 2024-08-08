@@ -226,26 +226,86 @@
 // Feed [Collection, Subcollection] 
 // --------------------------------------------------
 
+// // Component container
+// .feed--collection.variant--subcollection {
+//     // Item container
+//     .item {
+//         // Title
+//         .item__title {
+//             @include font-size( 'small' );
+//             @include rem( letter-spacing, -0.24px );
+//             line-height: 1.4;
+//         }
+//     }
+// }
+
+// // Adjust @msmall breakpoint
+// @include mq( $from: small ) {
+//     // Component container
+//     .feed--collection.variant--subcollection {
+//         grid-template-columns: repeat( auto-fill, minmax( min( 136px, 100% ), 1fr ) );
+//     }
+// }
+
+// Feed [Collection, Subcollection]
+// --------------------------------------------------
 // Component container
 .feed--collection.variant--subcollection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Center items
+  
     // Item container
     .item {
-        // Title
-        .item__title {
-            @include font-size( 'small' );
-            @include rem( letter-spacing, -0.24px );
-            line-height: 1.4;
-        }
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 100%; // Full width on mobile
+      max-width: 100%;
+      
+      // Title
+      .item__title {
+        @include font-size('small');
+        @include rem(letter-spacing, -0.24px);
+        line-height: 1.4;
+      }
     }
-}
-
-// Adjust @msmall breakpoint
-@include mq( $from: small ) {
+  }
+  
+  // Adjust @small breakpoint
+  @include mq($from: small) {
     // Component container
     .feed--collection.variant--subcollection {
-        grid-template-columns: repeat( auto-fill, minmax( min( 136px, 100% ), 1fr ) );
+      margin: -#{spacing(2)}; // Negative margin to offset item padding
+  
+      .item {
+        flex-basis: 136px; // Minimum width
+        max-width: calc(100% - #{spacing(4)}); // Maximum width (accounting for margin)
+        margin: spacing(2); // Margin around items
+      }
     }
-}
+  }
+  
+  // Ensure consistent spacing with the original grid layout
+  @include mq($from: medium) {
+    .feed--collection.variant--subcollection {
+      margin: -#{spacing(2)};
+      
+      .item {
+        margin: spacing(2);
+      }
+    }
+  }
+  
+  // Additional breakpoint adjustments if needed
+  @include mq($from: large) {
+    .feed--collection.variant--subcollection {
+      margin: -#{spacing(2)};
+      
+      .item {
+        margin: spacing(2);
+      }
+    }
+  }
 
 
 // Feed [Post]

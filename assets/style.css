@@ -3008,6 +3008,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
+.cartitems-empty {
+  height: 256px;
+  height: 25.6rem;
+  padding: 32px;
+  padding: 3.2rem;
+  border: 1px solid #D6DBDD;
+  box-shadow: none;
+}
+
 .template-cart .cart--section > form {
   padding: 40px 4vw 72px;
   padding: 4rem 4vw 7.2rem;

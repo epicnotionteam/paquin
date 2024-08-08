@@ -12,6 +12,16 @@
     width: 100%;
 }
 
+.cartitems-empty {
+    @include rem((
+        height: 256px,
+        padding: spacing(5)
+    ));
+    border: $border--base;
+    box-shadow: none;
+}
+
+
 // Section [Form]
 // --------------------------------------------------
 

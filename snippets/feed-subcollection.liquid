@@ -3,7 +3,7 @@
 {% endcomment %}
 
 {% comment %} Output component {% endcomment %}
-<div class="feed--collection">
+<div class="feed--collection variant--subcollection">
     {% assign child_collections = data_subcollections.value %}
     {% for subcollection in child_collections %}
         {% assign collection = collections[subcollection.handle] %}

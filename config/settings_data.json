@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "enable_age_gate_site_wide": false,
@@ -45,6 +54,7 @@
     "product_sales_badge_style": "percent",
     "inventory_status": false,
     "product_option_style": "select",
+    "show_dynamic_checkout_button": false,
     "enable_cart_redirection": false,
     "swatches_enable": false,
     "swatches_product_card_size": 32,

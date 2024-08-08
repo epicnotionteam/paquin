@@ -66,32 +66,32 @@ label {
     .product-form__action-wrapper {
         @include rem( gap, 12px );
         display: grid;
-        // Input [Quantity]
-        quantity-selector {
-            border-radius: 0;
-            max-width: none;
-            width: 100%;
-            // Remove label
-            label {
-                display: none;
-            }
-            // Wrapper
-            .quantity-selector__wrapper {
-                @include rem( height, 56px );
-            }
-            input {
-                @include font-size( 'base' );
-                background-color: color( 'background', 'input' );
-                border: 0 none;
-                font-family: font-family( 'base' );
-            }
-            // Increment buttons
-            .quantity-selector__button {
-                @include rem( padding, spacing(4) );
-                background-color: color( 'background', 'input' );
-                border: 0 none;
-            }
-        }
+        // // Input [Quantity]
+        // quantity-selector {
+        //     border-radius: 0;
+        //     max-width: none;
+        //     width: 100%;
+        //     // Remove label
+        //     label {
+        //         display: none;
+        //     }
+        //     // Wrapper
+        //     .quantity-selector__wrapper {
+        //         @include rem( height, 56px );
+        //     }
+        //     input {
+        //         @include font-size( 'base' );
+        //         background-color: color( 'background', 'input' );
+        //         border: 0 none;
+        //         font-family: font-family( 'base' );
+        //     }
+        //     // Increment buttons
+        //     .quantity-selector__button {
+        //         @include rem( padding, spacing(4) );
+        //         background-color: color( 'background', 'input' );
+        //         border: 0 none;
+        //     }
+        // }
     }
 }
 

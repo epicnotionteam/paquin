@@ -4860,34 +4860,6 @@ label {
   gap: 1.2rem;
   display: grid;
 }
-.product-form--regular .product-form__action-wrapper quantity-selector {
-  border-radius: 0;
-  max-width: none;
-  width: 100%;
-}
-.product-form--regular .product-form__action-wrapper quantity-selector label {
-  display: none;
-}
-.product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__wrapper {
-  height: 56px;
-  height: 5.6rem;
-}
-.product-form--regular .product-form__action-wrapper quantity-selector input {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
-  background-color: #F2F4F6;
-  border: 0 none;
-  font-family: "Paquin Sans Text", sans-serif;
-}
-.product-form--regular .product-form__action-wrapper quantity-selector .quantity-selector__button {
-  padding: 24px;
-  padding: 2.4rem;
-  background-color: #F2F4F6;
-  border: 0 none;
-}
 
 .product-form--regular .quantity-selector__button:focus {
   border: 1px solid #D6DBDD;

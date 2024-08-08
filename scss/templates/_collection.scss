@@ -235,8 +235,8 @@
         .container--heading {
             // Heading [Small]
             .section__heading {
+                @include rem( margin, spacing(4) 0 0 );
                 @extend %h5;
-                margin: 0;
             }
         }
     }
@@ -255,6 +255,11 @@
             .container--heading {
                 grid-column: 1 / span 12;
                 grid-row: 1;
+                // Heading [Small]
+                .section__heading {
+                    @extend %h5;
+                    margin: 0;
+                }
             }
             // Container [Feed]
             .container--feed {

@@ -3439,7 +3439,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .section--subcollections .section__grid .container--heading .section__heading {
-  margin: 0;
+  margin: 24px 0 0;
+  margin: 2.4rem 0 0;
 }
 
 @media (min-width: 64em) {
@@ -3452,6 +3453,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--subcollections .section__grid .container--heading {
     grid-column: 1/span 12;
     grid-row: 1;
+  }
+  .section--subcollections .section__grid .container--heading .section__heading {
+    margin: 0;
   }
   .section--subcollections .section__grid .container--feed {
     grid-column: 1/span 12;

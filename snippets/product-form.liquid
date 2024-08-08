@@ -600,9 +600,10 @@
         </span>
       </button>
 
-      {% comment %} {% if show_dynamic_checkout_button %}
+      {% if show_dynamic_checkout_button %}
         {{ form | payment_button }}
-      {% endif %} {% endcomment %}
+      {% endif %}
+      
     </div>
   </div>
 

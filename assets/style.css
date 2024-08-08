@@ -3439,8 +3439,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .section--subcollections .section__grid .container--heading .section__heading {
-  margin: 24px 0 0;
-  margin: 2.4rem 0 0;
+  margin: 24px 0 8px;
+  margin: 2.4rem 0 0.8rem;
 }
 
 @media (min-width: 64em) {

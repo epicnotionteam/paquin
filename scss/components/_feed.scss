@@ -231,48 +231,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: -#{spacing(2)}; // Negative margin to offset item padding
-  
+    margin: -12px; // Half of the desired gap to create 24px gap between items
+
     // Item container
     .item {
-      flex-grow: 1;
-      flex-shrink: 0;
-      flex-basis: 100%; // Full width on mobile
-      max-width: 100%;
-      margin: spacing(2); // Margin around items
-      
-      // Title
-      .item__title {
-        @include font-size('base');
-        @include rem(letter-spacing, -0.24px);
-        line-height: 1.4;
-      }
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(50% - 24px); // 2 columns with 24px gap
+        margin: 12px; // Half of the desired gap
+        
+        // Title
+        .item__title {
+            @include font-size('base');
+            @include rem(letter-spacing, -0.24px);
+            line-height: 1.4;
+        }
     }
-  }
-  
-  // Adjust @small breakpoint
-  @include mq($from: small) {
-    // Item container
+}
+
+// Adjust @medium breakpoint
+@include mq($from: medium) {
     .feed--collection.variant--subcollection .item {
-      flex-basis: 136px;
-      max-width: calc(50% - #{spacing(4)}); // Allow 2 items per row
+        flex-basis: calc(25% - 24px); // 4 columns with 24px gap
     }
-  }
-  
-  // Adjust @medium breakpoint
-  @include mq($from: medium) {
+}
+
+// Adjust @large breakpoint
+@include mq($from: large) {
     .feed--collection.variant--subcollection .item {
-      max-width: calc(33.333% - #{spacing(4)}); // Allow 3 items per row
+        flex-basis: calc(16.666% - 24px); // 6 columns with 24px gap
     }
-  }
-  
-  // Adjust @large breakpoint
-  @include mq($from: large) {
-    .feed--collection.variant--subcollection .item {
-      flex-basis: calc(16.666% - #{spacing(4)}); // 1/6 of container width
-      max-width: calc(16.666% - #{spacing(4)}); // Ensure items don't grow beyond 1/6 width
-    }
-  }
+}
 
 
 // Feed [Post]

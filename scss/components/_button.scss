@@ -35,6 +35,11 @@
     &:hover {
         filter: brightness( 1.12 );
     }
+    // Disabled
+    &:disabled,
+    &[disabled] {
+        background-color: color( 'steel', '4' );
+    }
 }
 
 

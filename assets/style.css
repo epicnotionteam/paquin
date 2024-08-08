@@ -3799,6 +3799,15 @@ blockquote cite {
 .product-form--atc-button:hover {
   filter: brightness(1.12);
 }
+.button--base:disabled, .button--base[disabled],
+.form--newsletter-subscription .gfb__footer button.submit:disabled,
+.form--base button.submit:disabled,
+.product-form--atc-button:disabled,
+.form--newsletter-subscription .gfb__footer button[disabled].submit,
+.form--base button[disabled].submit,
+[disabled].product-form--atc-button {
+  background-color: #66787F;
+}
 
 .product-form--atc-button {
   height: auto;

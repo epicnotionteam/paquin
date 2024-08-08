@@ -3443,7 +3443,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin: 2.4rem 0 0.8rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 53.75em) {
   .section--subcollections .section__grid .container--heading .section__heading {
     margin: 0;
   }

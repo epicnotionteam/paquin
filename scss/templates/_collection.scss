@@ -242,8 +242,8 @@
     }
 }
 
-// Adjust @small breakpoint
-@include mq( $from: small ) {
+// Adjust @custom breakpoint
+@include mq( $from: 860px ) {
     // Section container
     .section--subcollections {
         // Adjust grid structure

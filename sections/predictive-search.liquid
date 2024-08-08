@@ -75,70 +75,72 @@
               {%- for product in predictive_search.resources.products -%}
                 <li>
                   <a
-                    class="search-flydown--product"
-                    href="{{ product.url }}"
-                    aria-label="{{ product.title }}"
+                      class="search-flydown--product"
+                      href="{{ product.url }}"
+                      aria-label="{{ product.title }}"
                   >
-                    <figure class="search-flydown--product-image">
-                      {%- if product.featured_media != blank -%}
-                        {%
-                          render 'rimg'
-                          img: product.featured_media.preview_image,
-                          alt: product.featured_media.preview_image.alt,
-                          size: '70x',
-                          lazy: true,
-                        %}
-                      {%- else -%}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
-                      {%- endif -%}
-                    </figure>
-                    <div class="search-flydown--product-text">
-                      <span class="search-flydown--product-title">{{ product.title }}</span>
-                      {%- liquid
-                        assign on_sale = false
-                        for variant in product.variants
-                          if variant.compare_at_price > variant.price
-                          assign on_sale = true
-                            break
-                          endif
-                        endfor
-                      -%}
-                      {%
-                        render 'product-price',
-                        product: product,
-                        class_root: 'search-flydown--product',
-                        price: product.price,
-                        price_varies: product.price_varies,
-                        compare_at_price: product.compare_at_price,
-                        compare_at_price_varies: product.compare_at_price_varies,
-                        on_sale: on_sale,
-                      %}
-                      {%- if settings.inventory_status -%}
-                        <div class="search-flydown--product-stock-level">
-                          {%
-                            render 'product-stock-level',
-                            inventory_display: settings.inventory_display,
-                            inventory_transfer: settings.inventory_transfer_notice,
-                            variant: product.selected_or_first_available_variant,
-                            verbose: false,
-                          %}
-                        </div>
-                      {%- endif -%}
-                      {%- liquid
-                        assign swatch_count = nil
-                        if settings.swatches_enable
-                          assign swatch_trigger = settings.swatches_swatch_trigger | strip | downcase
-                          for option in product.options_with_values
-                            assign option_name = option.name | downcase
-                            if option_name == swatch_trigger
-                              assign swatch_count = 'product.color_swatches.swatches_count' | t: count: option.values.size
-                              break
-                            endif
-                          endfor
-                        endif
-                      -%}
-                      <span class="search-flydown--product-swatch-count">{{ swatch_count }}</span>
-                    </div>
+                      <figure class="search-flydown--product-image">
+                          {%- if product.featured_media != blank -%}
+                              {%
+                                  render 'rimg'
+                                  img: product.featured_media.preview_image,
+                                  alt: product.featured_media.preview_image.alt,
+                                  size: '70x',
+                                  lazy: true,
+                              %}
+                          {%- else -%}
+                              {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
+                          {%- endif -%}
+                      </figure>
+                      <div class="search-flydown--product-text">
+                          <span class="search-flydown--product-title">{{ product.title }}</span>
+                          {%- liquid
+                              assign on_sale = false
+                              for variant in product.variants
+                                  if variant.compare_at_price > variant.price
+                                      assign on_sale = true
+                                      break
+                                  endif
+                              endfor
+                          -%}
+                          {%- if product.price > 0 -%}
+                              {%
+                                  render 'product-price',
+                                  product: product,
+                                  class_root: 'search-flydown--product',
+                                  price: product.price,
+                                  price_varies: product.price_varies,
+                                  compare_at_price: product.compare_at_price,
+                                  compare_at_price_varies: product.compare_at_price_varies,
+                                  on_sale: on_sale,
+                              %}
+                          {%- endif -%}
+                          {%- if settings.inventory_status -%}
+                              <div class="search-flydown--product-stock-level">
+                                  {%
+                                      render 'product-stock-level',
+                                      inventory_display: settings.inventory_display,
+                                      inventory_transfer: settings.inventory_transfer_notice,
+                                      variant: product.selected_or_first_available_variant,
+                                      verbose: false,
+                                  %}
+                              </div>
+                          {%- endif -%}
+                          {%- liquid
+                              assign swatch_count = nil
+                              if settings.swatches_enable
+                                  assign swatch_trigger = settings.swatches_swatch_trigger | strip | downcase
+                                  for option in product.options_with_values
+                                      assign option_name = option.name | downcase
+                                      if option_name == swatch_trigger
+                                          assign swatch_count = 'product.color_swatches.swatches_count' | t: count: option.values.size
+                                          break
+                                      endif
+                                  endfor
+                              endif
+                          -%}
+                          <span class="search-flydown--product-swatch-count">{{ swatch_count }}</span>
+                      </div>
                   </a>
                 </li>
               {%- endfor -%}

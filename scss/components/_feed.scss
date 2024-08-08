@@ -231,34 +231,26 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: -12px; // Half of the desired gap to create 24px gap between items
-
+    margin: -12px;
     // Item container
     .item {
         flex-grow: 0;
         flex-shrink: 0;
-        flex-basis: calc(50% - 24px); // 2 columns with 24px gap
-        
-        // Title
-        .item__title {
-            @include font-size('base');
-            @include rem(letter-spacing, -0.24px);
-            line-height: 1.4;
-        }
+        flex-basis: calc(50% - 24px);
     }
 }
 
 // Adjust @medium breakpoint
 @include mq($from: medium) {
     .feed--collection.variant--subcollection .item {
-        flex-basis: calc(25% - 24px); // 4 columns with 24px gap
+        flex-basis: calc(25% - 24px);
     }
 }
 
 // Adjust @large breakpoint
 @include mq($from: large) {
     .feed--collection.variant--subcollection .item {
-        flex-basis: calc(16.666% - 24px); // 6 columns with 24px gap
+        flex-basis: calc(16.666% - 24px);
     }
 }
 

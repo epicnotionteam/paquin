@@ -4413,16 +4413,6 @@ hr,
   flex-shrink: 0;
   flex-basis: calc(50% - 24px);
 }
-.feed--collection.variant--subcollection .item .item__title {
-  font-size: 17px;
-  font-size: 1.7rem;
-  line-height: 25px;
-  letter-spacing: -0.12px;
-  letter-spacing: -0.012rem;
-  letter-spacing: -0.24px;
-  letter-spacing: -0.024rem;
-  line-height: 1.4;
-}
 
 @media (min-width: 64em) {
   .feed--collection.variant--subcollection .item {

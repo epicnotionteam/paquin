@@ -223,7 +223,7 @@
 }
 
 
-// Feed [Collection, Subcollection] 
+// Feed [Collection, Subcollection]
 // --------------------------------------------------
 
 // Component container
@@ -231,27 +231,48 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: -#{spacing(2)}; // Negative margin to offset item padding
+  
     // Item container
     .item {
-        // Title
-        .item__title {
-            @include font-size( 'base' );
-            @include rem( letter-spacing, -0.24px );
-            line-height: 1.4;
-        }
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 100%; // Full width on mobile
+      max-width: 100%;
+      margin: spacing(2); // Margin around items
+      
+      // Title
+      .item__title {
+        @include font-size('base');
+        @include rem(letter-spacing, -0.24px);
+        line-height: 1.4;
+      }
     }
-}
-
-// Adjust @msmall breakpoint
-@include mq( $from: small ) {
+  }
+  
+  // Adjust @small breakpoint
+  @include mq($from: small) {
     // Item container
     .feed--collection.variant--subcollection .item {
-        flex-basis: 136px;
-        flex-grow: 1;
-        flex-shrink: 0;
-        max-width: 100%;
+      flex-basis: 136px;
+      max-width: calc(50% - #{spacing(4)}); // Allow 2 items per row
     }
-}
+  }
+  
+  // Adjust @medium breakpoint
+  @include mq($from: medium) {
+    .feed--collection.variant--subcollection .item {
+      max-width: calc(33.333% - #{spacing(4)}); // Allow 3 items per row
+    }
+  }
+  
+  // Adjust @large breakpoint
+  @include mq($from: large) {
+    .feed--collection.variant--subcollection .item {
+      flex-basis: calc(16.666% - #{spacing(4)}); // 1/6 of container width
+      max-width: calc(16.666% - #{spacing(4)}); // Ensure items don't grow beyond 1/6 width
+    }
+  }
 
 
 // Feed [Post]

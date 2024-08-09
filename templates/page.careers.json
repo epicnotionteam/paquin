@@ -114,31 +114,13 @@
     "careers-roles": {
       "type": "careers-content-offset-roles",
       "blocks": {
-        "role_block_9c4HLG": {
-          "type": "role-block",
-          "settings": {
-            "title": "Metrology Lab Engineer\/Technician",
-            "division": "Paquin Sensors",
-            "location": "West Union, SC",
-            "link": "https:\/\/www.linkedin.com\/"
-          }
-        },
-        "role_block_HnCGaK": {
-          "type": "role-block",
-          "settings": {
-            "title": "Mechanical Engineer",
-            "division": "Paquin Sensors",
-            "location": "West Union, SC",
-            "link": "https:\/\/www.linkedin.com\/"
-          }
-        },
         "role_block_q69pjm": {
           "type": "role-block",
           "settings": {
             "title": "Mechanical Engineer",
             "division": "The Paquin Company",
             "location": "Mentor, OH",
-            "link": "https:\/\/www.linkedin.com\/"
+            "link": ""
           }
         },
         "role_block_VJEE4A": {
@@ -147,13 +129,11 @@
             "title": "Inside Sales",
             "division": "Paquin Sensors",
             "location": "West Union, SC",
-            "link": "https:\/\/www.linkedin.com\/"
+            "link": ""
           }
         }
       },
       "block_order": [
-        "role_block_9c4HLG",
-        "role_block_HnCGaK",
         "role_block_q69pjm",
         "role_block_VJEE4A"
       ],

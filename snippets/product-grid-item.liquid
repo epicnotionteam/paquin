@@ -616,7 +616,7 @@
               <a class="button--base button--icon-before button--icon-arrow-forward" href="{{ product.url }}">View details</a>
               {% comment %} Button [View Data Sheet] {% endcomment %}
               {% if product.metafields.custom.data_sheet != blank %}
-                <a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet }}" target="_blank">View data sheet</a>
+                <a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet.value.url }}" target="_blank">View data sheet</a>
               {% endif %}
             </div>
                 

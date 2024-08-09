@@ -43,9 +43,6 @@
         {{- 'general.title.page' | t: page: current_page -}}
       {%- endif -%}
 
-      {%- unless page_title contains shop.name -%}
-        {{- 'general.title.shop' | t: shop: shop.name -}}
-      {%- endunless -%}
     </title>
 
     {% if page_description != blank %}

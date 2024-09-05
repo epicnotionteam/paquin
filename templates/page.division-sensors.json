@@ -204,6 +204,12 @@
           "settings": {
             "collection": "test-measurement"
           }
+        },
+        "collection_FbznEi": {
+          "type": "collection",
+          "settings": {
+            "collection": "water-waste-water"
+          }
         }
       },
       "block_order": [
@@ -219,7 +225,8 @@
         "collection_EQGE6h",
         "collection_wPFKrF",
         "collection_nnXhDG",
-        "collection_6cqjNX"
+        "collection_6cqjNX",
+        "collection_FbznEi"
       ],
       "settings": {
         "heading_small": "Products by Industry",

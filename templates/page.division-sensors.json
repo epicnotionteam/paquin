@@ -145,6 +145,12 @@
             "collection": "breweries-wineries"
           }
         },
+        "collection_Gm8K74": {
+          "type": "collection",
+          "settings": {
+            "collection": "ex-proof-intrinsically-safe"
+          }
+        },
         "collection_GPt3be": {
           "type": "collection",
           "settings": {
@@ -222,6 +228,7 @@
         "collection_Kk63zK",
         "collection_CMnzVr",
         "collection_e4cixi",
+        "collection_Gm8K74",
         "collection_GPt3be",
         "collection_QAqNiA",
         "collection_3b9gJK",

@@ -205,6 +205,12 @@
             "collection": "test-measurement"
           }
         },
+        "collection_JTTgtA": {
+          "type": "collection",
+          "settings": {
+            "collection": "underground-mining-mining"
+          }
+        },
         "collection_FbznEi": {
           "type": "collection",
           "settings": {
@@ -226,6 +232,7 @@
         "collection_wPFKrF",
         "collection_nnXhDG",
         "collection_6cqjNX",
+        "collection_JTTgtA",
         "collection_FbznEi"
       ],
       "settings": {

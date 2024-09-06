@@ -121,7 +121,7 @@
       ],
       "settings": {
         "heading_small": "By Product Type",
-        "theme": "base"
+        "theme": "alt"
       }
     },
     "division-sensors-markets": {
@@ -244,7 +244,7 @@
       ],
       "settings": {
         "heading_small": "Products by Industry",
-        "theme": "alt"
+        "theme": "base"
       }
     },
     "content_blocks_HCAWDb": {

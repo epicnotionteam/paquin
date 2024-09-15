@@ -10,7 +10,7 @@
 {
   "current": {
     "enable_age_gate_site_wide": false,
-    "color_background": "#ffffff",
+    "color_background": "#dddddd",
     "color_headings": "#121212",
     "color_text": "#121212",
     "color_text_light": "#949494",

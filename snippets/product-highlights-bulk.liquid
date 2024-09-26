@@ -1,0 +1,15 @@
+{% comment %}
+// Output bulk highlight content for the current product
+// Alterative to individual highlight entry, preserves legacy approach
+{% endcomment %}
+
+
+{% if product.metafields.custom.highlights_bulk %}
+	<div id="product__highlights--bulk">
+		<h2 class="h5">Product Highlights</h2>
+		<div class="highlight__content">
+			{% assign highlights_bulk = product.metafields.custom.highlights_bulk %}
+			{{ highlights_bulk }}
+	  	</div>
+	</div>
+{% endif %}

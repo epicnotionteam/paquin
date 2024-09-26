@@ -9,7 +9,7 @@
 		<h2 class="h5">Product Highlights</h2>
 		<div class="highlight__content">
 			{% assign highlights_bulk = product.metafields.custom.highlights_bulk %}
-			{{ highlights_bulk }}
+			{{ highlights_bulk | metafield_tag }}
 	  	</div>
 	</div>
 {% endif %}

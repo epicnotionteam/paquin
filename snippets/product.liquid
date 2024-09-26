@@ -162,6 +162,8 @@
 		<div id="product__secondary">
 			{% comment %} Highlights {% endcomment %}
 			{% render 'product-highlights' %}
+			<!-- Highlights [Bulk] -->
+            {% render 'product-highlights-bulk' %}
 			{% comment %} Inquiry Form {% endcomment %}
 			{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 			{% if product.price <= 0.01 %}

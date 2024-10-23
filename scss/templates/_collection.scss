@@ -17,8 +17,12 @@
 
 // Section container
 .template-collection .productgrid--masthead {
-    @include rem( padding, spacing(4) 0 spacing(8) );
-    border-bottom: $border--base;
+    @include rem( padding, spacing(4) 4vw spacing(8) );
+    margin: -4vw;
+    // Container [Image]
+    .container--image {
+        background-color: white;
+    }
     // Title
     .collection--title {
         @include rem( max-width, 800px );
@@ -216,7 +220,6 @@
     }
 
 }
-
 
 // Section [Subcollections]
 // --------------------------------------------------

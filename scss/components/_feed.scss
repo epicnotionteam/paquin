@@ -362,6 +362,7 @@
             // Image
             .productitem--image {
                 @include rem( margin-bottom, 12px );
+                background-color: white;
                 border: $border--base;
             }
             // Container [Information]

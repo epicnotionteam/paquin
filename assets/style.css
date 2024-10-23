@@ -5499,8 +5499,8 @@ ul.list--link-arrow li::before {
   background-color: white !important;
 }
 .mobile-nav-content li a {
-  padding: 12px 4vw !important;
-  padding: 1.2rem 4vw !important;
+  padding: 8px 4vw !important;
+  padding: 0.8rem 4vw !important;
   background-color: white !important;
   font-family: "Paquin Sans Display", sans-serif;
   line-height: 1.3 !important;

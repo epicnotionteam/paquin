@@ -445,6 +445,14 @@
 
 }
 
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Component container
+    .template-collection .productgrid--items {
+        grid-template-columns: repeat( 6, 1fr );
+    }
+}
+
 
 // Feed [Role]
 // --------------------------------------------------

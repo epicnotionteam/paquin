@@ -3482,9 +3482,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
   background-color: #ECEBEA;
-  margin: 0 -4vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
 }
 
 @media (min-width: 53.75em) {
@@ -4611,6 +4608,11 @@ hr,
   }
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
+  }
+}
+@media (min-width: 77.5em) {
+  .template-collection .productgrid--items {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 .feed--role .item {

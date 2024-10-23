@@ -307,7 +307,7 @@
         background-color: color( 'background', 'alt' );
         // Adjust internal container to allow overflow over footer on item hover
         &.wrap--container {
-            overflow: visible
+            overflow: visible;
         }
     }
 }

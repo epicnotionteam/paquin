@@ -3480,6 +3480,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-collection .collection--section .productgrid--outer::before, .template-collection .collection--section .productgrid--outer::after {
   display: none;
 }
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper {
+  background-color: #ECEBEA;
+  margin: 0 -4vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
 
 @media (min-width: 53.75em) {
   .template-collection .collection--section .productgrid--outer {

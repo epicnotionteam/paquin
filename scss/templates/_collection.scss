@@ -302,6 +302,13 @@
     &::after {
         display: none;
     }
+    // Container [Feed]
+    .productgrid--wrapper {
+        background-color: color( 'background', 'alt' );
+        margin: 0 -4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
 }
 
 // Variant [Has Items]

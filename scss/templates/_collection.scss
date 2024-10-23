@@ -225,7 +225,7 @@
 // Section container
 .section--subcollections {
     @include rem(( 
-        padding: spacing(4) 4vw spacing(7)
+        padding: spacing(4) 4vw $gap--section-small
     ));
     background-color: color( 'background', 'alt' );
     margin: 0 -4vw;
@@ -266,6 +266,7 @@
 @include mq( $from: medium ) {
     // Section container
     .section--subcollections {
+        @include rem( padding-bottom, $gap--section-large );
         // Adjust grid structure
         .section__grid {
             @include rem( row-gap, spacing(6) );
@@ -335,7 +336,7 @@
     }
     // Variant [Has Items]
     .template-collection .productgrid--outer.collection--has-items {
-        @include rem( padding-bottom, $gap--section-large );
+        // @include rem( padding-bottom, $gap--section-large );
     }
 }
 

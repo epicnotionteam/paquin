@@ -3429,8 +3429,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--subcollections {
-  padding: 24px 4vw 48px;
-  padding: 2.4rem 4vw 4.8rem;
+  padding: 24px 4vw 72px;
+  padding: 2.4rem 4vw 7.2rem;
   background-color: #ECEBEA;
   margin: 0 -4vw;
 }
@@ -3450,6 +3450,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 @media (min-width: 64em) {
+  .section--subcollections {
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
   .section--subcollections .section__grid {
     row-gap: 40px;
     row-gap: 4rem;
@@ -3503,10 +3507,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
     grid-column: 3/span 10;
     grid-row: 3;
-  }
-  .template-collection .productgrid--outer.collection--has-items {
-    padding-bottom: 96px;
-    padding-bottom: 9.6rem;
   }
 }
 .container--empty-collection {

@@ -225,10 +225,10 @@
 // Section container
 .section--subcollections {
     @include rem(( 
-        padding-bottom: spacing(7),
-        padding-top: spacing(4)
+        padding: spacing(4) 4vw spacing(7)
     ));
     background-color: color( 'background', 'alt' );
+    margin: 0 -4vw;
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );

@@ -5417,6 +5417,16 @@ ul.list--link-arrow li::before {
     top: -16px;
   }
 }
+@media (min-width: 64em) and (max-width: 90em) {
+  .navmenu-id-paquin-sensors .navmenu-depth-3 {
+    column-gap: 24px;
+    column-gap: 2.4rem;
+    width: 640px;
+    width: 64rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .site-navigation .navmenu:hover > li > a, .site-navigation .navmenu:hover > li > details {
   opacity: 0.56 !important;
 }

@@ -4513,7 +4513,7 @@ hr,
 }
 .productgrid--items .productgrid--item {
   padding: 0;
-  transition: box-shadow 0.16s ease-out;
+  transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
   margin: 0 !important;
   width: 100% !important;
 }

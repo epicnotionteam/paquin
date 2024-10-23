@@ -355,6 +355,7 @@
         width: 100% !important;
         // Item wrap
         .productitem {
+            background-color: transparent;
             border: 0 none;
             box-shadow: none;
             padding: 0;
@@ -363,38 +364,42 @@
                 @include rem( margin-bottom, 12px );
                 border: $border--base;
             }
-            // Title
-            .productitem--title {
-                @include rem( margin-bottom, 2px );
-                @include font-size( 'base' );
-                font-family: font-family( 'base' );
-                font-weight: font-weight( 'bold' );
-                // Link
-                a {
-                    color: color( 'steel', '1' ) !important;
+            // Container [Information]
+            .productitem--info {
+                background-color: transparent;
+                // Title
+                .productitem--title {
+                    @include rem( margin-bottom, 2px );
+                    @include font-size( 'base' );
+                    font-family: font-family( 'base' );
+                    font-weight: font-weight( 'bold' );
+                    // Link
+                    a {
+                        color: color( 'steel', '1' ) !important;
+                    }
                 }
-            }
-            // Price
-            .price.productitem__price {
-                @include font-size( 'small' );
-                @include rem(( 
-                    column-gap: spacing(1),
-                    margin: 6px 0 0
-                ));
-                align-items: center;
-                display: flex;
-            }
-            // Indicator [Price, Complex Product]
-			.indicator--price {
-				@include font-size( 'xsmall' );
-				@include rem( margin-bottom, spacing(2) );
-				color: color( 'steel', '4' );
-                margin: 0;
-				// Place icon
-				@include icon( before, 'error' ) {
-					@include rem( margin, -3px spacing(1) 0 0 );
-					display: inline-block;
-				}
+                // Price
+                .price.productitem__price {
+                    @include font-size( 'small' );
+                    @include rem(( 
+                        column-gap: spacing(1),
+                        margin: 6px 0 0
+                    ));
+                    align-items: center;
+                    display: flex;
+                }
+                // Indicator [Price, Complex Product]
+                .indicator--price {
+                    @include font-size( 'xsmall' );
+                    @include rem( margin-bottom, spacing(2) );
+                    color: color( 'steel', '4' );
+                    margin: 0;
+                    // Place icon
+                    @include icon( before, 'error' ) {
+                        @include rem( margin, -3px spacing(1) 0 0 );
+                        display: inline-block;
+                    }
+                }
 			} 
             // Container [Actions]
             .productitem--actions {
@@ -439,6 +444,7 @@
     .template-collection .productgrid--items {
         // Item:hover
         .productgrid--item:hover .productitem {
+            background-color: white;
             box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 ) !important;
         }
     }

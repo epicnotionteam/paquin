@@ -5418,9 +5418,6 @@ ul.list--link-arrow li::before {
   }
 }
 @media (min-width: 64em) and (max-width: 90em) {
-  .site-navigation > .navmenu {
-    background-color: red;
-  }
   .site-navigation > .navmenu .navmenu-id-paquin-sensors .navmenu-depth-3 {
     column-gap: 24px;
     column-gap: 2.4rem;
@@ -5506,6 +5503,7 @@ ul.list--link-arrow li::before {
   padding: 1.2rem 4vw !important;
   background-color: white !important;
   font-family: "Paquin Sans Display", sans-serif;
+  line-height: 1.3;
   margin: 0;
 }
 .mobile-nav-content li.navmenu-item-parent {

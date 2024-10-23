@@ -292,7 +292,6 @@
 
 // Grid container
 .template-collection .collection--section .productgrid--outer {
-    @include rem( max-width, wrap( 'max' ) );
     margin: 0 auto;
     padding: 0;
     row-gap: 0;

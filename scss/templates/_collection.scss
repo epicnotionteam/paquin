@@ -19,8 +19,8 @@
 .template-collection .productgrid--masthead {
     @include rem( padding, spacing(4) 4vw spacing(8) );
     margin: 0 -4vw;
-    // Container [Image]
-    .container--image {
+    // Wrap [Collection Image]
+    .container--image .wrap--image {
         background-color: white;
     }
     // Title

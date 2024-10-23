@@ -224,7 +224,11 @@
 
 // Section container
 .section--subcollections {
-    @include rem( padding-bottom, spacing(7) );
+    @include rem(( 
+        padding: spacing(4) 4vw $gap--section-small
+    ));
+    background-color: color( 'background', 'alt' );
+    margin: 0 -4vw;
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );
@@ -233,7 +237,7 @@
         .container--heading {
             // Heading [Small]
             .section__heading {
-                @include rem( margin, spacing(4) 0 spacing(2) );
+                @include rem( margin, 0 0 spacing(2) );
                 @extend %h5;
             }
         }
@@ -262,6 +266,7 @@
 @include mq( $from: medium ) {
     // Section container
     .section--subcollections {
+        @include rem( padding-bottom, $gap--section-large );
         // Adjust grid structure
         .section__grid {
             @include rem( row-gap, spacing(6) );
@@ -291,21 +296,22 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
+    // Remove inherited pseudo elements
+    &::before,
+    &::after {
+        display: none;
+    }
 }
 
 // Variant [Has Items]
 .template-collection .productgrid--outer.collection--has-items {
-    @include rem( padding-bottom, $gap--section-small );
+    // @include rem( padding-bottom, $gap--section-small );
 }
 
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
     // Adjust template grid structure
     .template-collection .collection--section .productgrid--outer {
-        @include rem((
-            column-gap: spacing(4),
-            row-gap: spacing(4)
-        ));
         display: grid;
         grid-auto-rows: auto;
         grid-template-columns: repeat( 12, 1fr );
@@ -331,7 +337,7 @@
     }
     // Variant [Has Items]
     .template-collection .productgrid--outer.collection--has-items {
-        @include rem( padding-bottom, $gap--section-large );
+        // @include rem( padding-bottom, $gap--section-large );
     }
 }
 

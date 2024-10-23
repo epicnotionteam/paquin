@@ -3429,8 +3429,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .section--subcollections {
-  padding-bottom: 48px;
-  padding-bottom: 4.8rem;
+  padding: 24px 4vw 72px;
+  padding: 2.4rem 4vw 7.2rem;
+  background-color: #ECEBEA;
+  margin: 0 -4vw;
 }
 .section--subcollections .section__grid {
   row-gap: 32px;
@@ -3438,8 +3440,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .section--subcollections .section__grid .container--heading .section__heading {
-  margin: 24px 0 8px;
-  margin: 2.4rem 0 0.8rem;
+  margin: 0 0 8px;
+  margin: 0 0 0.8rem;
 }
 
 @media (min-width: 53.75em) {
@@ -3448,6 +3450,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 @media (min-width: 64em) {
+  .section--subcollections {
+    padding-bottom: 96px;
+    padding-bottom: 9.6rem;
+  }
   .section--subcollections .section__grid {
     row-gap: 40px;
     row-gap: 4rem;
@@ -3470,18 +3476,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
   width: 100%;
 }
-
-.template-collection .productgrid--outer.collection--has-items {
-  padding-bottom: 72px;
-  padding-bottom: 7.2rem;
+.template-collection .collection--section .productgrid--outer::before, .template-collection .collection--section .productgrid--outer::after {
+  display: none;
 }
 
 @media (min-width: 53.75em) {
   .template-collection .collection--section .productgrid--outer {
-    column-gap: 24px;
-    column-gap: 2.4rem;
-    row-gap: 24px;
-    row-gap: 2.4rem;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
@@ -3501,10 +3501,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
     grid-column: 3/span 10;
     grid-row: 3;
-  }
-  .template-collection .productgrid--outer.collection--has-items {
-    padding-bottom: 96px;
-    padding-bottom: 9.6rem;
   }
 }
 .container--empty-collection {
@@ -4338,6 +4334,7 @@ hr,
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
   aspect-ratio: 1/1;
+  background-color: white;
   border: 1px solid #D6DBDD;
   overflow: hidden;
 }

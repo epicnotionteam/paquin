@@ -159,6 +159,7 @@
         .item__wrap--image {
             @include rem( margin-bottom, 12px );
             aspect-ratio: 1/1;
+            background-color: white;
             border: $border--base;
             overflow: hidden;
             // Image

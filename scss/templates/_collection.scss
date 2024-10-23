@@ -296,8 +296,9 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    // Remove inherited pseudo element
-    &::before {
+    // Remove inherited pseudo elements
+    &::before,
+    &::after {
         display: none;
     }
 }

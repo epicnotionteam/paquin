@@ -3476,7 +3476,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
   width: 100%;
 }
-.template-collection .collection--section .productgrid--outer::before {
+.template-collection .collection--section .productgrid--outer::before, .template-collection .collection--section .productgrid--outer::after {
   display: none;
 }
 

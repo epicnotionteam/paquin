@@ -3484,8 +3484,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-color: #ECEBEA;
 }
 .template-collection .collection--section .productgrid--outer .productgrid--wrapper .section__heading {
-  margin: 24px 0;
-  margin: 2.4rem 0;
+  margin: 24px 0 32px;
+  margin: 2.4rem 0 3.2rem;
   text-align: center;
 }
 .template-collection .collection--section .productgrid--outer .productgrid--wrapper.wrap--container {

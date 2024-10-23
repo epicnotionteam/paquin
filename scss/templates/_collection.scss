@@ -307,7 +307,7 @@
         // Heading [Small]
         .section__heading {
             @extend %h5;
-            @include rem( margin, spacing(4) 0 );
+            @include rem( margin, spacing(4) 0 spacing(5) );
             text-align: center;
         }
         background-color: color( 'background', 'alt' );

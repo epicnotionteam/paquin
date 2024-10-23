@@ -3283,8 +3283,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   margin-bottom: 2.4rem;
 }
 .template-collection .productgrid--masthead .container--grid.variant--base .container--image .wrap--image {
-  max-width: 160px;
-  max-width: 16rem;
+  max-width: 256px;
+  max-width: 25.6rem;
   aspect-ratio: 1/1;
   border: 1px solid #D6DBDD;
   margin: 0 auto;

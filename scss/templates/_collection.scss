@@ -51,7 +51,7 @@
         @include rem( margin-bottom, spacing(4) );
         // Wrap [Image]
         .wrap--image {
-            @include rem( max-width, 160px );
+            @include rem( max-width, 256px );
             aspect-ratio: 1/1;
             border: $border--base;
             margin: 0 auto;

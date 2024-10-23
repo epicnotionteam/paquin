@@ -216,7 +216,7 @@
             @include rem( padding, 12px 4vw !important );
             background-color: white !important;
             font-family: font-family( 'heading' );
-            line-height: 1.3;
+            line-height: 1.3 !important;
             margin: 0;
         }
     }

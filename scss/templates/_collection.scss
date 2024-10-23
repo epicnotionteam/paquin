@@ -228,7 +228,6 @@
         padding: spacing(4) 4vw $gap--section-small
     ));
     background-color: color( 'background', 'alt' );
-    margin: 0 -4vw;
     // Grid structure
     .section__grid {
         @include rem( row-gap, spacing(5) );

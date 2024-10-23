@@ -237,7 +237,7 @@
         .container--heading {
             // Heading [Small]
             .section__heading {
-                @include rem( margin, spacing(4) 0 spacing(2) );
+                @include rem( margin, 0 0 spacing(2) );
                 @extend %h5;
             }
         }

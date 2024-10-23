@@ -304,6 +304,11 @@
     }
     // Container [Feed]
     .productgrid--wrapper {
+        // Heading [Small]
+        .section__heading {
+            @include rem( margin, 0 0 spacing(2) );
+            @extend %h5;
+        }
         background-color: color( 'background', 'alt' );
         // Adjust internal container to allow overflow over footer on item hover
         &.wrap--container {

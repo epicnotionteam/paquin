@@ -221,6 +221,7 @@
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
+                {% comment %} 
                 {% if show_sidebar %}
                     {%
                         render 'product-grid-sidebar',
@@ -228,6 +229,7 @@
                         context: collection
                     %}
                 {% endif %}
+                {% endcomment %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper">
                     {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}

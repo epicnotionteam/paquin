@@ -4960,6 +4960,7 @@ label {
   padding: 16px;
   padding: 1.6rem;
   border: 0 none;
+  border-radius: 0;
   font-family: "Paquin Sans Text", sans-serif;
 }
 .live-search-form > .form-field .live-search-button {

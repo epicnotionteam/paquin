@@ -306,8 +306,9 @@
     .productgrid--wrapper {
         // Heading [Small]
         .section__heading {
-            @include rem( margin, 0 0 spacing(2) );
             @extend %h5;
+            @include rem( margin, spacing(4) 0 );
+            text-align: center;
         }
         background-color: color( 'background', 'alt' );
         // Adjust internal container to allow overflow over footer on item hover

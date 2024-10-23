@@ -235,6 +235,7 @@
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">
+                        {% comment %}
                         {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
                             {% capture utility_class %}
                                 productgrid--utils
@@ -352,6 +353,7 @@
                                 </div>
                             {% endif %}
                         {% endif %}
+                        {% endcomment %}
                         {% if collection.products.size > 0 %}
                             <div class="section__heading">
                                 <h2 class="section__heading">Browse Products</h2>

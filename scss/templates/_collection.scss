@@ -309,8 +309,8 @@
 }
 
 // Variant [Has Items]
-.template-collection .productgrid--outer.collection--has-items {
-    // @include rem( padding-bottom, $gap--section-small );
+.template-collection .productgrid--outer {
+    @include rem( padding-bottom, $gap--section-small );
 }
 
 // Adjust @custom breakpoint
@@ -336,6 +336,7 @@
         // }
         // Container [Feed]
         .productgrid--wrapper {
+            @include rem( padding, spacing(4) 0 $gap--section-large );
             // grid-column: 3 / span 10;
             grid-column: 1 / span 12;
             grid-row: 3;

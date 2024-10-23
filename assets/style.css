@@ -3483,6 +3483,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   background-color: #ECEBEA;
 }
 
+.template-collection .productgrid--outer {
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
+}
+
 @media (min-width: 53.75em) {
   .template-collection .collection--section .productgrid--outer {
     display: grid;
@@ -3498,6 +3503,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-row: 2;
   }
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
+    padding: 24px 0 96px;
+    padding: 2.4rem 0 9.6rem;
     grid-column: 1/span 12;
     grid-row: 3;
   }
@@ -4508,8 +4515,6 @@ hr,
   column-gap: 1.6rem;
   row-gap: 4px;
   row-gap: 0.4rem;
-  padding-top: 24px;
-  padding-top: 2.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

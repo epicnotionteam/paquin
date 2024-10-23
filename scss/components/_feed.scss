@@ -344,57 +344,66 @@
 
 // Section container
 .productgrid--items {
-    @include rem( gap, spacing(3) );
+    @include rem(( 
+        column-gap: spacing(3),
+        row-gap: spacing(4)
+    ));
     display: grid;
     grid-template-columns: 1fr 1fr;
     // Item container
     .productgrid--item {
         padding: 0;
-        transition: box-shadow 0.16s ease-out;
+        transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
         margin: 0 !important;
         width: 100% !important;
         // Item wrap
         .productitem {
+            background-color: transparent;
             border: 0 none;
             box-shadow: none;
             padding: 0;
             // Image
             .productitem--image {
                 @include rem( margin-bottom, 12px );
+                background-color: white;
                 border: $border--base;
             }
-            // Title
-            .productitem--title {
-                @include rem( margin-bottom, 2px );
-                @include font-size( 'base' );
-                font-family: font-family( 'base' );
-                font-weight: font-weight( 'bold' );
-                // Link
-                a {
-                    color: color( 'steel', '1' ) !important;
+            // Container [Information]
+            .productitem--info {
+                background-color: transparent;
+                // Title
+                .productitem--title {
+                    @include rem( margin-bottom, 2px );
+                    @include font-size( 'base' );
+                    font-family: font-family( 'base' );
+                    font-weight: font-weight( 'bold' );
+                    // Link
+                    a {
+                        color: color( 'steel', '1' ) !important;
+                    }
                 }
-            }
-            // Price
-            .price.productitem__price {
-                @include font-size( 'small' );
-                @include rem(( 
-                    column-gap: spacing(1),
-                    margin: 6px 0 0
-                ));
-                align-items: center;
-                display: flex;
-            }
-            // Indicator [Price, Complex Product]
-			.indicator--price {
-				@include font-size( 'xsmall' );
-				@include rem( margin-bottom, spacing(2) );
-				color: color( 'steel', '4' );
-                margin: 0;
-				// Place icon
-				@include icon( before, 'error' ) {
-					@include rem( margin, -3px spacing(1) 0 0 );
-					display: inline-block;
-				}
+                // Price
+                .price.productitem__price {
+                    @include font-size( 'small' );
+                    @include rem(( 
+                        column-gap: spacing(1),
+                        margin: 6px 0 0
+                    ));
+                    align-items: center;
+                    display: flex;
+                }
+                // Indicator [Price, Complex Product]
+                .indicator--price {
+                    @include font-size( 'xsmall' );
+                    @include rem( margin-bottom, spacing(2) );
+                    color: color( 'steel', '4' );
+                    margin: 0;
+                    // Place icon
+                    @include icon( before, 'error' ) {
+                        @include rem( margin, -3px spacing(1) 0 0 );
+                        display: inline-block;
+                    }
+                }
 			} 
             // Container [Actions]
             .productitem--actions {
@@ -422,7 +431,7 @@
     .template-collection .productgrid--items {
         @include rem(( 
             margin-top: -12px,
-            row-gap: spacing(5) 
+            row-gap: spacing(2) 
         ));
         grid-template-columns: repeat( 4, 1fr );
         // Item wrap
@@ -439,10 +448,19 @@
     .template-collection .productgrid--items {
         // Item:hover
         .productgrid--item:hover .productitem {
+            background-color: white;
             box-shadow: 0 2px 24px 0 rgba( 0, 0, 0, 0.24 ) !important;
         }
     }
 
+}
+
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Component container
+    .template-collection .productgrid--items {
+        grid-template-columns: repeat( 6, 1fr );
+    }
 }
 
 

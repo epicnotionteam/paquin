@@ -1108,7 +1108,7 @@ body {
 .form--newsletter-subscription .gfb__footer .theme--dark button.submit,
 .theme--dark .form--base button.submit,
 .form--base .theme--dark button.submit,
-.theme--dark .product-form--atc-button, .theme--dark .section--subcollections .section__grid .container--heading .section__heading, .section--subcollections .section__grid .container--heading .theme--dark .section__heading, .theme--dark .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total .cart-subtotal span.heading, .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total .cart-subtotal .theme--dark span.heading, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .account-page-login .account-page-content #customer_recovery > form > h2, .account-page-login .account-page-content .theme--dark #customer_recovery > form > h2, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
+.theme--dark .product-form--atc-button, .theme--dark .template-collection .collection--section .productgrid--outer .productgrid--wrapper .section__heading, .template-collection .collection--section .productgrid--outer .productgrid--wrapper .theme--dark .section__heading, .theme--dark .section--subcollections .section__grid .container--heading .section__heading, .section--subcollections .section__grid .container--heading .theme--dark .section__heading, .theme--dark .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total .cart-subtotal span.heading, .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total .cart-subtotal .theme--dark span.heading, .theme--dark .section--feed-blog .section__grid .container--heading-small .section__heading--small, .section--feed-blog .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .account-page-login .account-page-content #customer_recovery > form > h2, .account-page-login .account-page-content .theme--dark #customer_recovery > form > h2, .theme--dark .section--feed-team .section__grid .container--heading-small .section__heading--small, .section--feed-team .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-post .section__grid .container--heading-small .section__heading--small, .section--feed-post .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--feed-collection .section__grid .container--heading-small .section__heading--small, .section--feed-collection .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-offset .section__grid .container--heading-small .section__heading--small, .section--content-offset .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-media-split .section__grid .container--heading-small .section__heading--small, .section--content-media-split .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--content-blocks .section__grid .container--heading-small .section__heading--small, .section--content-blocks .section__grid .container--heading-small .theme--dark .section__heading--small, .theme--dark .section--carousel-content-media .section__grid .container--heading-small .section__heading--small, .section--carousel-content-media .section__grid .container--heading-small .theme--dark .section__heading--small {
   color: white;
 }
 .theme--dark .breadcrumbs-container a {
@@ -1434,6 +1434,7 @@ h5,
 .form--newsletter-subscription .gfb__footer button.submit,
 .form--base button.submit,
 .product-form--atc-button,
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper .section__heading,
 .section--subcollections .section__grid .container--heading .section__heading,
 .template-cart .cart--section > form .cartitems--container .cart-total .cart-final-total .cart-subtotal span.heading,
 .section--feed-blog .section__grid .container--heading-small .section__heading--small,
@@ -3470,15 +3471,30 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .template-collection .collection--section .productgrid--outer {
-  max-width: 1590px;
-  max-width: 159rem;
   margin: 0 auto;
+  max-width: none;
   padding: 0;
   row-gap: 0;
   width: 100%;
 }
 .template-collection .collection--section .productgrid--outer::before, .template-collection .collection--section .productgrid--outer::after {
   display: none;
+}
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper {
+  background-color: #ECEBEA;
+}
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper .section__heading {
+  margin: 24px 0;
+  margin: 2.4rem 0;
+  text-align: center;
+}
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper.wrap--container {
+  overflow: visible;
+}
+
+.template-collection .productgrid--outer {
+  padding-bottom: 72px;
+  padding-bottom: 7.2rem;
 }
 
 @media (min-width: 53.75em) {
@@ -3495,12 +3511,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
     grid-row: 2;
   }
-  .template-collection .collection--section .productgrid--outer .productgrid--sidebar {
-    grid-column: 1/span 2;
-    grid-row: 3;
-  }
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
-    grid-column: 3/span 10;
+    padding: 0 0 96px;
+    padding: 0 0 9.6rem;
+    grid-column: 1/span 12;
     grid-row: 3;
   }
 }
@@ -4506,18 +4520,21 @@ hr,
 }
 
 .productgrid--items {
-  gap: 16px;
-  gap: 1.6rem;
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  row-gap: 24px;
+  row-gap: 2.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .productgrid--items .productgrid--item {
   padding: 0;
-  transition: box-shadow 0.16s ease-out;
+  transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
   margin: 0 !important;
   width: 100% !important;
 }
 .productgrid--items .productgrid--item .productitem {
+  background-color: transparent;
   border: 0 none;
   box-shadow: none;
   padding: 0;
@@ -4525,9 +4542,13 @@ hr,
 .productgrid--items .productgrid--item .productitem .productitem--image {
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
+  background-color: white;
   border: 1px solid #D6DBDD;
 }
-.productgrid--items .productgrid--item .productitem .productitem--title {
+.productgrid--items .productgrid--item .productitem .productitem--info {
+  background-color: transparent;
+}
+.productgrid--items .productgrid--item .productitem .productitem--info .productitem--title {
   margin-bottom: 2px;
   margin-bottom: 0.2rem;
   font-size: 17px;
@@ -4538,10 +4559,10 @@ hr,
   font-family: "Paquin Sans Text", sans-serif;
   font-weight: 600;
 }
-.productgrid--items .productgrid--item .productitem .productitem--title a {
+.productgrid--items .productgrid--item .productitem .productitem--info .productitem--title a {
   color: #212224 !important;
 }
-.productgrid--items .productgrid--item .productitem .price.productitem__price {
+.productgrid--items .productgrid--item .productitem .productitem--info .price.productitem__price {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 23px;
@@ -4554,7 +4575,7 @@ hr,
   align-items: center;
   display: flex;
 }
-.productgrid--items .productgrid--item .productitem .indicator--price {
+.productgrid--items .productgrid--item .productitem .productitem--info .indicator--price {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 21px;
@@ -4563,7 +4584,7 @@ hr,
   color: #66787F;
   margin: 0;
 }
-.productgrid--items .productgrid--item .productitem .indicator--price:before {
+.productgrid--items .productgrid--item .productitem .productitem--info .indicator--price:before {
   content: "\e000";
   font-family: "Material Symbols Outlined";
   font-style: normal;
@@ -4596,8 +4617,8 @@ hr,
   .template-collection .productgrid--items {
     margin-top: -12px;
     margin-top: -1.2rem;
-    row-gap: 32px;
-    row-gap: 3.2rem;
+    row-gap: 8px;
+    row-gap: 0.8rem;
     grid-template-columns: repeat(4, 1fr);
   }
   .template-collection .productgrid--items .productitem {
@@ -4608,7 +4629,13 @@ hr,
     display: block;
   }
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
+    background-color: white;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
+  }
+}
+@media (min-width: 77.5em) {
+  .template-collection .productgrid--items {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 .feed--role .item {

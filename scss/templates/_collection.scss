@@ -292,8 +292,8 @@
 
 // Grid container
 .template-collection .collection--section .productgrid--outer {
-    @include rem( max-width, wrap( 'max' ) );
     margin: 0 auto;
+    max-width: none;
     padding: 0;
     row-gap: 0;
     width: 100%;
@@ -302,11 +302,25 @@
     &::after {
         display: none;
     }
+    // Container [Feed]
+    .productgrid--wrapper {
+        // Heading [Small]
+        .section__heading {
+            @extend %h5;
+            @include rem( margin, spacing(4) 0 );
+            text-align: center;
+        }
+        background-color: color( 'background', 'alt' );
+        // Adjust internal container to allow overflow over footer on item hover
+        &.wrap--container {
+            overflow: visible;
+        }
+    }
 }
 
 // Variant [Has Items]
-.template-collection .productgrid--outer.collection--has-items {
-    // @include rem( padding-bottom, $gap--section-small );
+.template-collection .productgrid--outer {
+    @include rem( padding-bottom, $gap--section-small );
 }
 
 // Adjust @custom breakpoint
@@ -326,13 +340,15 @@
             grid-row: 2;
         }        
         // Container [Sidebar]
-        .productgrid--sidebar {
-            grid-column: 1 / span 2;
-            grid-row: 3;
-        }
+        // .productgrid--sidebar {
+        //     grid-column: 1 / span 2;
+        //     grid-row: 3;
+        // }
         // Container [Feed]
         .productgrid--wrapper {
-            grid-column: 3 / span 10;
+            @include rem( padding, 0 0 $gap--section-large );
+            // grid-column: 3 / span 10;
+            grid-column: 1 / span 12;
             grid-row: 3;
         }
     }

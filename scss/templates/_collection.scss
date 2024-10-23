@@ -295,6 +295,7 @@
     @include rem( max-width, wrap( 'max' ) );
     margin: 0 auto;
     padding: 0;
+    row-gap: 0;
     width: 100%;
     // Remove inherited pseudo elements
     &::before,

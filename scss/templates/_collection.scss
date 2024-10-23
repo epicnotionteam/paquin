@@ -346,7 +346,7 @@
         // }
         // Container [Feed]
         .productgrid--wrapper {
-            @include rem( padding, spacing(4) 0 $gap--section-large );
+            @include rem( padding, 0 0 $gap--section-large );
             // grid-column: 3 / span 10;
             grid-column: 1 / span 12;
             grid-row: 3;

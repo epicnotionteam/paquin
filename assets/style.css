@@ -3247,6 +3247,10 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   overflow: visible;
 }
 
+.template-collection .breadcrumbs-container {
+  background-color: #ECEBEA;
+}
+
 .template-collection .productgrid--masthead {
   padding: 24px 4vw 56px;
   padding: 2.4rem 4vw 5.6rem;

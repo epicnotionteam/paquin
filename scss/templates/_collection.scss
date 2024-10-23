@@ -10,6 +10,11 @@
 	overflow: visible;
 }
 
+// Breadcrumb container
+.template-collection .breadcrumbs-container {
+    background-color: color( 'background', 'alt' );
+}
+
 
 // Section [Page Header]
 // Contains collection title & description

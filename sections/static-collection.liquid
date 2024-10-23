@@ -126,11 +126,11 @@
 {% render 'breadcrumbs' %}
 
 {% paginate collection.products by paginate_by %}
-    <div class="wrap--container container--grid">
+    <div class="container--grid">
         <div class="productgrid--outer {{ collection_classes | strip_newlines }}" data-productgrid-outer>
             
             {% comment %} Container [Masthead] {% endcomment %}
-            <div class="productgrid--masthead">
+            <div class="productgrid--masthead wrap--container">
                 
                 {% comment %}Variant [Collection — All] {% endcomment %}
                 {% if collection.url == '/collections/all' %}
@@ -207,7 +207,7 @@
 
             {% comment %} Feed [Subcollection] {% endcomment %}
             {% if collection.metafields.custom.subcollections != blank %}
-                <section class="section--subcollections">
+                <section class="section--subcollections wrap--container ">
                     <div class="section__grid">
                         <div class="container--heading">
                             <h2 class="section__heading align--center">Product Subcategories</h2>
@@ -231,7 +231,7 @@
                 {% endif %}
                 {% endcomment %}
                 {% comment %} Container [Product Feed] {% endcomment %}
-                <div id="section--feed" class="productgrid--wrapper">
+                <div id="section--feed" class="productgrid--wrapper wrap--container">
                     {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
                         {% capture utility_class %}
                             productgrid--utils

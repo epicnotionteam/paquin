@@ -296,11 +296,15 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
+    // Remove inherited pseudo element
+    &::before {
+        display: none;
+    }
 }
 
 // Variant [Has Items]
 .template-collection .productgrid--outer.collection--has-items {
-    @include rem( padding-bottom, $gap--section-small );
+    // @include rem( padding-bottom, $gap--section-small );
 }
 
 // Adjust @custom breakpoint

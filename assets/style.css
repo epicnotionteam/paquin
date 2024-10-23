@@ -3476,10 +3476,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0;
   width: 100%;
 }
-
-.template-collection .productgrid--outer.collection--has-items {
-  padding-bottom: 72px;
-  padding-bottom: 7.2rem;
+.template-collection .collection--section .productgrid--outer::before {
+  display: none;
 }
 
 @media (min-width: 53.75em) {

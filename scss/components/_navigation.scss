@@ -73,6 +73,23 @@
     }
 }
 
+// Adjust @custom breakpoint
+@include mq( $from: 1024px, $until: 1440px ) {
+    .site-navigation > .navmenu {
+        // Adjust child menu container
+        .navmenu-id-paquin-sensors {
+            .navmenu-depth-3 {
+                @include rem(( 
+                    column-gap: spacing(4),
+                    width: 640px 
+                ));
+                display: grid;
+                grid-template-columns: repeat( 2, 1fr );
+            }
+        }
+    }
+}
+
 // State management
 .site-navigation {
     // Navigation [:Hover]
@@ -196,9 +213,10 @@
         // Link
         a {
             @extend %h4;
-            @include rem( padding, 12px 4vw !important );
+            @include rem( padding, 8px 4vw !important );
             background-color: white !important;
             font-family: font-family( 'heading' );
+            line-height: 1.3 !important;
             margin: 0;
         }
     }
@@ -272,10 +290,6 @@
     }
 
 }
-
-
-
-
 
 
 // Navigation [Social Sharing]

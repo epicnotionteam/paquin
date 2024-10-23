@@ -3247,17 +3247,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   overflow: visible;
 }
 
-.template-collection .container--breadcrumbs {
-  background-color: #ECEBEA;
-}
-
 .template-collection .productgrid--masthead {
-  padding: 24px 4vw 56px;
-  padding: 2.4rem 4vw 5.6rem;
-  margin: 0 -4vw;
-}
-.template-collection .productgrid--masthead .container--image .wrap--image {
-  background-color: white;
+  padding: 24px 0 56px;
+  padding: 2.4rem 0 5.6rem;
 }
 .template-collection .productgrid--masthead .collection--title {
   max-width: 800px;

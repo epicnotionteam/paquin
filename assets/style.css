@@ -3431,6 +3431,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--subcollections {
   padding-bottom: 48px;
   padding-bottom: 4.8rem;
+  padding-top: 24px;
+  padding-top: 2.4rem;
+  background-color: #ECEBEA;
 }
 .section--subcollections .section__grid {
   row-gap: 32px;

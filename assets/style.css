@@ -3482,7 +3482,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
   background-color: #ECEBEA;
 }
-.template-collection .collection--section .productgrid--outer .productgrid--wrapper > .wrap--container {
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper.wrap--container {
   overflow: visible;
 }
 

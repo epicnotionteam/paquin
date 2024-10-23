@@ -306,7 +306,7 @@
     .productgrid--wrapper {
         background-color: color( 'background', 'alt' );
         // Adjust internal container to allow overflow over footer on item hover
-        & > .wrap--container {
+        &.wrap--container {
             overflow: visible
         }
     }

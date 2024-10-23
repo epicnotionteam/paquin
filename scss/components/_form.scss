@@ -147,6 +147,7 @@ label {
             @include font-size( 'small' );
             @include rem( padding, spacing(3) );
             border: 0 none;
+            border-radius: 0;
             font-family: font-family( 'base' );
         }
         // Search button

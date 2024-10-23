@@ -4504,8 +4504,10 @@ hr,
 }
 
 .productgrid--items {
-  gap: 16px;
-  gap: 1.6rem;
+  column-gap: 16px;
+  column-gap: 1.6rem;
+  row-gap: 4px;
+  row-gap: 0.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -4599,8 +4601,8 @@ hr,
   .template-collection .productgrid--items {
     margin-top: -12px;
     margin-top: -1.2rem;
-    row-gap: 32px;
-    row-gap: 3.2rem;
+    row-gap: 8px;
+    row-gap: 0.8rem;
     grid-template-columns: repeat(4, 1fr);
   }
   .template-collection .productgrid--items .productitem {

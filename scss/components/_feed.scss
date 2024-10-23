@@ -344,7 +344,10 @@
 
 // Section container
 .productgrid--items {
-    @include rem( gap, spacing(3) );
+    @include rem(( 
+        column-gap: spacing(3),
+        row-gap: spacing(1) 
+    ));
     display: grid;
     grid-template-columns: 1fr 1fr;
     // Item container
@@ -428,7 +431,7 @@
     .template-collection .productgrid--items {
         @include rem(( 
             margin-top: -12px,
-            row-gap: spacing(5) 
+            row-gap: spacing(2) 
         ));
         grid-template-columns: repeat( 4, 1fr );
         // Item wrap

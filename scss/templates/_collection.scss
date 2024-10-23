@@ -326,13 +326,14 @@
             grid-row: 2;
         }        
         // Container [Sidebar]
-        .productgrid--sidebar {
-            grid-column: 1 / span 2;
-            grid-row: 3;
-        }
+        // .productgrid--sidebar {
+        //     grid-column: 1 / span 2;
+        //     grid-row: 3;
+        // }
         // Container [Feed]
         .productgrid--wrapper {
-            grid-column: 3 / span 10;
+            // grid-column: 3 / span 10;
+            grid-column: 1 / span 12;
             grid-row: 3;
         }
     }

@@ -3495,12 +3495,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-column: 1/span 12;
     grid-row: 2;
   }
-  .template-collection .collection--section .productgrid--outer .productgrid--sidebar {
-    grid-column: 1/span 2;
-    grid-row: 3;
-  }
   .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
-    grid-column: 3/span 10;
+    grid-column: 1/span 12;
     grid-row: 3;
   }
 }

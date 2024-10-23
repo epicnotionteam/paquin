@@ -3526,6 +3526,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0 !important;
 }
 
+.template-product .productgrid--masthead {
+  margin: 0 -4vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
 .grid--product {
   padding-bottom: 72px;
   padding-bottom: 7.2rem;

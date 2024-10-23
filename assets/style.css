@@ -4508,6 +4508,8 @@ hr,
   column-gap: 1.6rem;
   row-gap: 4px;
   row-gap: 0.4rem;
+  padding-top: 24px;
+  padding-top: 2.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

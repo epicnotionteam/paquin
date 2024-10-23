@@ -346,7 +346,8 @@
 .productgrid--items {
     @include rem(( 
         column-gap: spacing(3),
-        row-gap: spacing(1) 
+        row-gap: spacing(1),
+        padding-top: spacing(4)
     ));
     display: grid;
     grid-template-columns: 1fr 1fr;

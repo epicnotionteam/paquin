@@ -75,15 +75,18 @@
 
 // Adjust @custom breakpoint
 @include mq( $from: 1024px, $until: 1440px ) {
-    // Adjust child menu container
-    .navmenu-id-paquin-sensors {
-        .navmenu-depth-3 {
-            @include rem(( 
-                column-gap: spacing(4),
-                width: 640px 
-            ));
-            display: grid;
-            grid-template-columns: repeat( 2, 1fr );
+    .site-navigation > .navmenu {
+        background-color: red;
+        // Adjust child menu container
+        .navmenu-id-paquin-sensors {
+            .navmenu-depth-3 {
+                @include rem(( 
+                    column-gap: spacing(4),
+                    width: 640px 
+                ));
+                display: grid;
+                grid-template-columns: repeat( 2, 1fr );
+            }
         }
     }
 }

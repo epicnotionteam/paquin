@@ -5418,7 +5418,10 @@ ul.list--link-arrow li::before {
   }
 }
 @media (min-width: 64em) and (max-width: 90em) {
-  .navmenu-id-paquin-sensors .navmenu-depth-3 {
+  .site-navigation > .navmenu {
+    background-color: red;
+  }
+  .site-navigation > .navmenu .navmenu-id-paquin-sensors .navmenu-depth-3 {
     column-gap: 24px;
     column-gap: 2.4rem;
     width: 640px;

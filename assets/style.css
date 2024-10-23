@@ -3482,6 +3482,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .template-collection .collection--section .productgrid--outer .productgrid--wrapper {
   background-color: #ECEBEA;
 }
+.template-collection .collection--section .productgrid--outer .productgrid--wrapper > .wrap--container {
+  overflow: visible;
+}
 
 .template-collection .productgrid--outer {
   padding-bottom: 72px;
@@ -4513,8 +4516,8 @@ hr,
 .productgrid--items {
   column-gap: 16px;
   column-gap: 1.6rem;
-  row-gap: 4px;
-  row-gap: 0.4rem;
+  row-gap: 24px;
+  row-gap: 2.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

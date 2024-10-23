@@ -312,10 +312,6 @@
 @include mq( $from: 860px ) {
     // Adjust template grid structure
     .template-collection .collection--section .productgrid--outer {
-        @include rem((
-            column-gap: spacing(4),
-            row-gap: spacing(4)
-        ));
         display: grid;
         grid-auto-rows: auto;
         grid-template-columns: repeat( 12, 1fr );

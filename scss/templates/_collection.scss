@@ -10,11 +10,6 @@
 	overflow: visible;
 }
 
-// Container [Breadcrumbs]
-.template-collection .container--breadcrumbs {
-    background-color: color( 'background', 'alt' );
-}
-
 
 // Section [Page Header]
 // Contains collection title & description
@@ -22,12 +17,7 @@
 
 // Section container
 .template-collection .productgrid--masthead {
-    @include rem( padding, spacing(4) 4vw spacing(8) );
-    margin: 0 -4vw;
-    // Wrap [Collection Image]
-    .container--image .wrap--image {
-        background-color: white;
-    }
+    @include rem( padding, spacing(4) 0 spacing(8) );
     // Title
     .collection--title {
         @include rem( max-width, 800px );

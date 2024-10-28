@@ -387,27 +387,3 @@
     text-align: center;
     width: 100%;
 }
-
-.productgrid--outer-container {
-    .productgrid--layout-grid {
-        display: grid;
-        gap: 2rem;
-        
-        @media (min-width: 860px) {
-            grid-template-columns: 280px 1fr;
-            
-            // Only show grid layout when sidebar is present
-            &:not(:has(.productgrid--sidebar)) {
-                grid-template-columns: 1fr;
-            }
-        }
-    }
-}
-
-.productgrid--wrapper {
-    width: 100%;
-    
-    .productgrid--items {
-        width: 100%;
-    }
-}

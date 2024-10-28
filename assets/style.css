@@ -3545,26 +3545,6 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   width: 100%;
 }
 
-.productgrid--outer-container .productgrid--layout-grid {
-  display: grid;
-  gap: 2rem;
-}
-@media (min-width: 860px) {
-  .productgrid--outer-container .productgrid--layout-grid {
-    grid-template-columns: 280px 1fr;
-  }
-  .productgrid--outer-container .productgrid--layout-grid:not(:has(.productgrid--sidebar)) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.productgrid--wrapper {
-  width: 100%;
-}
-.productgrid--wrapper .productgrid--items {
-  width: 100%;
-}
-
 .template-product .product__container {
   padding: 0;
   margin: 0 auto;

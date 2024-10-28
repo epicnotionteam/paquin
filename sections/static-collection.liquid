@@ -43,6 +43,15 @@
     assign show_filters = true
     assign show_filter_trigger = false
 
+    assign is_all_collection = false
+    if collection.url contains '/collections/all'
+        assign is_all_collection = true
+    endif
+
+    if filter_block == nil or filter_block.settings.filter_option == 'tag' and collection.all_tags.size == 0
+        assign show_filters = false
+    endif
+
     if filter_block == nil or filter_block.settings.filter_option == 'tag' and collection.all_tags.size == 0
         assign show_filters = false
     endif
@@ -54,8 +63,16 @@
         endif
 
         # Sidebar to show only if there are tags in the collection, or there are menus
-        if sidebar_blocks or show_filters
-            assign show_sidebar = true
+        if sidebar_blocks
+            # Sidebar toggle is used on mobile only, and will only show Filters
+            if show_filters or menu_block_count > 0
+                assign show_filter_trigger = true
+            endif
+
+            # Show sidebar only if this is the 'all' collection and there are tags/menus
+            if is_all_collection and (sidebar_blocks or show_filters)
+                assign show_sidebar = true
+            endif
         endif
     endif
 
@@ -227,15 +244,13 @@
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
-                {% comment %} 
-                {% if show_sidebar %}
+                {% if show_sidebar and is_all_collection %}
                     {%
                         render 'product-grid-sidebar',
                         menu_depth: section.settings.menu_depth_range,
                         context: collection
                     %}
                 {% endif %}
-                {% endcomment %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">

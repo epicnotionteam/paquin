@@ -380,13 +380,14 @@
         display: grid;
         // Container [Sidebar]
         .productgrid--sidebar {
-            grid-area: unset;
+            grid-area: unset !important;
         }
         // Container [Feed]
         .productgrid--wrapper {
-            grid-area: unset;
-            grid-column: unset;
-            grid-row: unset;
+            grid-area: unset !important;
+            grid-column: unset !important;
+            grid-row: unset !important;
+            padding: 0 !important;
             .section__heading {
                 display: none;
             }

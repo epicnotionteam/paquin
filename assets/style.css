@@ -3545,12 +3545,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   display: grid;
 }
 .container--sidebar-feed .container--grid .productgrid--sidebar {
-  grid-area: unset;
+  grid-area: unset !important;
 }
 .container--sidebar-feed .container--grid .productgrid--wrapper {
-  grid-area: unset;
-  grid-column: unset;
-  grid-row: unset;
+  grid-area: unset !important;
+  grid-column: unset !important;
+  grid-row: unset !important;
+  padding: 0 !important;
 }
 .container--sidebar-feed .container--grid .productgrid--wrapper .section__heading {
   display: none;

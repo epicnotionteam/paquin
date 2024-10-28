@@ -3536,11 +3536,22 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .container--sidebar-feed {
+  padding: 24px 0 0;
+  padding: 2.4rem 0 0;
   background-color: #ECEBEA;
   grid-column: 1/span 12;
 }
 .container--sidebar-feed .container--grid {
   display: grid;
+}
+.container--sidebar-feed .container--grid .productgrid--sidebar {
+  grid-area: unset;
+}
+.container--sidebar-feed .container--grid .productgrid--wrapper {
+  grid-area: unset;
+}
+.container--sidebar-feed .container--grid .productgrid--wrapper .section__heading {
+  display: none;
 }
 
 @media (min-width: 53.75em) {

@@ -23,6 +23,16 @@
         @include rem( max-width, 800px );
         margin: 0 auto;
         width: 100%;
+        // Title [Variable]
+        .title__variable {
+            @extend %p;
+            @include rem((
+                margin-top: spacing(2)
+            ));
+            display: block;
+            font-weight: normal;
+            color: color( 'steel', '4' );
+        }
     }
     // Description
     .collection--description {

@@ -2123,6 +2123,14 @@
       "oAP" : "\/snippets\/collection-list-item.liquid",
       "oF" : 0
     },
+    "\/snippets\/collection-title-formatted.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/collection-title-formatted.liquid",
+      "oF" : 0
+    },
     "\/snippets\/complementary-product.liquid" : {
       "cB" : 0,
       "ft" : 8192,

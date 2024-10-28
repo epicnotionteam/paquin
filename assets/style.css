@@ -1200,7 +1200,8 @@ body {
 }
 
 p,
-.accordion .item .item__heading {
+.accordion .item .item__heading,
+.template-collection .productgrid--masthead .collection--title .title__variable {
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
   font-family: "Paquin Sans Text", sans-serif;
@@ -3257,6 +3258,13 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   max-width: 80rem;
   margin: 0 auto;
   width: 100%;
+}
+.template-collection .productgrid--masthead .collection--title .title__variable {
+  margin-top: 8px;
+  margin-top: 0.8rem;
+  display: block;
+  font-weight: normal;
+  color: #66787F;
 }
 .template-collection .productgrid--masthead .collection--description {
   margin: 12px auto 0;

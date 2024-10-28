@@ -170,7 +170,9 @@
                                 {% endif %}
                                 <div class="container--content">
                                     {% comment %} Title {% endcomment %}
-                                    <h1 class="collection--title">{{ collection.title }}</h1>
+                                    <h1 class="collection--title">
+                                        {%- render 'collection-title-formatted', collection: collection -%}
+                                    </h1>
                                     {% comment %} Description {% endcomment %}
                                     {% if collection.description != blank %}
                                         <div class="collection--description rte" data-collection-description>

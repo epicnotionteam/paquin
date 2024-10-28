@@ -1,0 +1,16 @@
+{% comment %}
+Automatically format Collection titles with [variable]
+{% endcomment %}
+
+{%- liquid
+    assign title_parts = collection.title | split: '['
+    if title_parts.size > 1
+        assign base_title = title_parts | first
+        assign variable_part = title_parts | last
+        assign variable_part = variable_part | split: ']' | first
+        echo base_title
+        echo '<span class="title__variable">[' | append: variable_part | append: ']</span>'
+    else
+        echo collection.title
+    endif
+%}

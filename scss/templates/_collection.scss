@@ -373,10 +373,10 @@
 
 .container--sidebar-feed {
     background-color: color( 'background', 'alt' );
+    grid-column: 1/span 12;
     // Container [Grid]
     .container--grid {
         display: grid;
-        grid-column: 1/span 12;
     }
 }
 
@@ -384,15 +384,8 @@
 @include mq( $from: 860px ) {
     .container--sidebar-feed {
         .container--grid {
-        @include rem( column-gap, spacing(8) );
-        .productgrid--sidebar {
-            grid-column: 1/span 3 !important;
-                grid-row: 2 !important;
-            }
-            .productgrid--wrapper {
-                grid-column: 4/span 9 !important;
-                grid-row: 2 !important;
-            }
+            @include rem( column-gap, spacing(6) );
+            grid-template-columns: 256px 1fr;
         }
     }
 }

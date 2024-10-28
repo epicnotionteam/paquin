@@ -3547,10 +3547,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     column-gap: 5.6rem;
   }
   .container--sidebar-feed .productgrid--sidebar {
-    grid-column: 1/span 3;
+    grid-column: 1/span 3 !important;
+    grid-row: 2 !important;
   }
   .container--sidebar-feed .productgrid--wrapper {
-    grid-column: 4/span 9;
+    grid-column: 4/span 9 !important;
+    grid-row: 2 !important;
   }
 }
 .container--empty-collection {

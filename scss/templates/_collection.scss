@@ -382,10 +382,12 @@
     .container--sidebar-feed {
         @include rem( column-gap, spacing(8) );
         .productgrid--sidebar {
-            grid-column: 1/span 3;
+            grid-column: 1/span 3 !important;
+            grid-row: 2 !important;
         }
         .productgrid--wrapper {
-            grid-column: 4/span 9;
+            grid-column: 4/span 9 !important;
+            grid-row: 2 !important;
         }
     }
 }

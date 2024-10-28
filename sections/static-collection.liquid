@@ -237,7 +237,7 @@
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
                 {% if show_sidebar and is_all_collection %}
-                    <div class="container--sidebar-feed">
+                    <div class="container--sidebar-feed wrap--max push--center">
                     {%
                         render 'product-grid-sidebar',
                         menu_depth: section.settings.menu_depth_range,

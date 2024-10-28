@@ -3553,9 +3553,15 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .productgrid--outer-container .productgrid--layout-grid {
     grid-template-columns: 280px 1fr;
   }
+  .productgrid--outer-container .productgrid--layout-grid:not(:has(.productgrid--sidebar)) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .productgrid--wrapper {
+  width: 100%;
+}
+.productgrid--wrapper .productgrid--items {
   width: 100%;
 }
 

@@ -233,7 +233,7 @@
             {% endif %}
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
-                <div class="productgrid--outer-container wrap--container">
+                <div class="productgrid--outer-container">
                     <div class="wrap--max push--center">
                         <div class="productgrid--layout-grid">
                             {% comment %} Container [Sidebar] {% endcomment %}
@@ -247,25 +247,23 @@
 
                             {% comment %} Container [Product Feed] {% endcomment %}
                             <div id="section--feed" class="productgrid--wrapper">
-                                <div class="wrap--max push--center">
-                                    {% if collection.products.size > 0 %}
-                                        <div class="section__heading">
-                                            <h2 class="section__heading">Browse Products</h2>
-                                        </div>
-                                        <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
-                                            {% for product in collection.products %}
-                                                {%
-                                                    render 'product-grid-item',
-                                                    product: product,
-                                                    context: 'collection',
-                                                    index: forloop.index,
-                                                    products_per_row: products_per_row,
-                                                %}
-                                            {% endfor %}
-                                        </div>
-                                    {% endif %}
-                                    {% render 'pagination', paginate: paginate, grid_list: true %}
-                                </div>
+                                {% if collection.products.size > 0 %}
+                                    <div class="section__heading">
+                                        <h2 class="section__heading">Browse Products</h2>
+                                    </div>
+                                    <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
+                                        {% for product in collection.products %}
+                                            {%
+                                                render 'product-grid-item',
+                                                product: product,
+                                                context: 'collection',
+                                                index: forloop.index,
+                                                products_per_row: products_per_row,
+                                            %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                {% render 'pagination', paginate: paginate, grid_list: true %}
                             </div>
                         </div>
                     </div>
@@ -582,6 +580,7 @@
     ]
 }
 {% endschema %}
+
 
 
 

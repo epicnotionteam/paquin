@@ -242,6 +242,7 @@
                         menu_depth: section.settings.menu_depth_range,
                         context: collection
                     %}
+                    <div class="container--sidebar-feed">
                 {% endif %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
@@ -384,6 +385,9 @@
                         {% render 'pagination', paginate: paginate, grid_list: true %}
                     </div>
                 </div>
+                {% if show_sidebar and is_all_collection %}
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
     </div>

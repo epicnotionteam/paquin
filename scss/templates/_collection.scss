@@ -372,7 +372,7 @@
 // --------------------------------------------------
 
 .container--sidebar-feed {
-    @include rem( padding, spacing(5) 0 0 );
+    @include rem( padding, spacing(4) 0 0 );
     background-color: color( 'background', 'alt' );
     grid-column: 1/span 12;
     // Container [Grid]
@@ -398,6 +398,7 @@
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
     .container--sidebar-feed {
+        @include rem( padding, spacing(5) 0 0 );
         .container--grid {
             @include rem( column-gap, spacing(6) );
             grid-template-columns: 256px 1fr;

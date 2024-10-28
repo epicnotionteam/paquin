@@ -59,8 +59,10 @@
         endif
 
         # Show sidebar only if this is the 'all' collection and there are tags/menus
-        if is_all_collection and (sidebar_blocks or show_filters)
-            assign show_sidebar = true
+        if is_all_collection
+            if sidebar_blocks or show_filters
+                assign show_sidebar = true
+            endif
         endif
     endif
 
@@ -693,4 +695,5 @@
     ]
 }
 {% endschema %}
+
 

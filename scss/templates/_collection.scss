@@ -374,13 +374,19 @@
 .container--sidebar-feed {
     background-color: color( 'background', 'alt' );
     display: grid;
+    grid-column: 1/span 12;
 }
 
 // Adjust @custom breakpoint
 @include mq( $from: 860px ) {
     .container--sidebar-feed {
         @include rem( column-gap, spacing(8) );
-        grid-template-columns: 256 1fr;
+        .productgrid--sidebar {
+            grid-column: 1/span 3;
+        }
+        .productgrid--wrapper {
+            grid-column: 4/span 9;
+        }
     }
 }
 

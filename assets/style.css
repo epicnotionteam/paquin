@@ -3538,13 +3538,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .container--sidebar-feed {
   background-color: #ECEBEA;
   display: grid;
+  grid-column: 1/span 12;
 }
 
 @media (min-width: 53.75em) {
   .container--sidebar-feed {
     column-gap: 56px;
     column-gap: 5.6rem;
-    grid-template-columns: 256 1fr;
+  }
+  .container--sidebar-feed .productgrid--sidebar {
+    grid-column: 1/span 3;
+  }
+  .container--sidebar-feed .productgrid--wrapper {
+    grid-column: 4/span 9;
   }
 }
 .container--empty-collection {

@@ -3263,11 +3263,11 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 28px;
-  margin-top: 8px;
-  margin-top: 0.8rem;
+  color: #66787F;
   display: block;
   font-weight: normal;
-  color: #66787F;
+  letter-spacing: 0;
+  margin: 0;
 }
 @media screen and (min-width: 1024px) {
   .template-collection .productgrid--masthead .collection--title .title__variable {

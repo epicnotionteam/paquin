@@ -27,12 +27,11 @@
         .title__variable {
             @extend %p;
             @include font-size( 'large' );
-            @include rem((
-                margin-top: spacing(2)
-            ));
+            color: color( 'steel', '4' );
             display: block;
             font-weight: normal;
-            color: color( 'steel', '4' );
+            letter-spacing: 0;
+            margin: 0;
         }
     }
     // Description

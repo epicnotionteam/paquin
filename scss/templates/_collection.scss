@@ -387,3 +387,18 @@
     text-align: center;
     width: 100%;
 }
+
+.productgrid--outer-container {
+    .productgrid--layout-grid {
+        display: grid;
+        gap: 2rem;
+        
+        @media (min-width: 860px) {
+            grid-template-columns: 280px 1fr;
+        }
+    }
+}
+
+.productgrid--wrapper {
+    width: 100%;
+}

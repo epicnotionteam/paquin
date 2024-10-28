@@ -237,12 +237,12 @@
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
                 {% if show_sidebar and is_all_collection %}
+                    <div class="container--sidebar-feed">
                     {%
                         render 'product-grid-sidebar',
                         menu_depth: section.settings.menu_depth_range,
                         context: collection
                     %}
-                    <div class="container--sidebar-feed">
                 {% endif %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">

@@ -3535,6 +3535,18 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-row: 3;
   }
 }
+.container--sidebar-feed {
+  background-color: #ECEBEA;
+  display: grid;
+}
+
+@media (min-width: 53.75em) {
+  .container--sidebar-feed {
+    column-gap: 56px;
+    column-gap: 5.6rem;
+    grid-template-columns: 256 1fr;
+  }
+}
 .container--empty-collection {
   margin-top: 24px;
   margin-top: 2.4rem;

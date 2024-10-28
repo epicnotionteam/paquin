@@ -368,6 +368,23 @@
 }
 
 
+// Container [Collection/Sidebar]
+// --------------------------------------------------
+
+.container--sidebar-feed {
+    background-color: color( 'background', 'alt' );
+    display: grid;
+}
+
+// Adjust @custom breakpoint
+@include mq( $from: 860px ) {
+    .container--sidebar-feed {
+        @include rem( column-gap, spacing(8) );
+        grid-template-columns: 256 1fr;
+    }
+}
+
+
 // Empty Collection Notice
 // --------------------------------------------------
 

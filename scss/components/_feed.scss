@@ -459,7 +459,8 @@
 @include mq( $from: large ) {
     // Component container
     .template-collection .productgrid--items {
-        grid-template-columns: repeat( 6, 1fr );
+        grid-template-columns: repeat( auto-fit, minmax( 256px, 1fr ) );
+        max-width: 100%;
     }
 }
 

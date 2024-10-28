@@ -4686,7 +4686,8 @@ hr,
 }
 @media (min-width: 77.5em) {
   .template-collection .productgrid--items {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    max-width: 100%;
   }
 }
 .feed--role .item {

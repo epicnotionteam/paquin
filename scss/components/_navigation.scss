@@ -347,3 +347,13 @@
         text-decoration: none !important;
     }
 }
+
+
+// Navigation [Collection Pagination]
+// --------------------------------------------------
+
+.pagination--container {
+    .pagination--inner {
+        @include font-size( 'small' );
+    }
+}

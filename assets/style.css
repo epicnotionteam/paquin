@@ -3536,8 +3536,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .container--sidebar-feed {
-  padding: 24px 0 0;
-  padding: 2.4rem 0 0;
+  padding: 24px 0 72px;
+  padding: 2.4rem 0 7.2rem;
   background-color: #ECEBEA;
   grid-column: 1/span 12;
 }
@@ -3560,8 +3560,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 
 @media (min-width: 53.75em) {
   .container--sidebar-feed {
-    padding: 32px 0 0;
-    padding: 3.2rem 0 0;
+    padding: 32px 0 96px;
+    padding: 3.2rem 0 9.6rem;
   }
   .container--sidebar-feed .container--grid {
     column-gap: 40px;
@@ -5684,6 +5684,14 @@ ul.list--link-arrow li::before {
   border: 1px solid #30373A;
   color: white !important;
   text-decoration: none !important;
+}
+
+.pagination--container .pagination--inner {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 23px;
+  letter-spacing: -0.08px;
+  letter-spacing: -0.008rem;
 }
 
 .globo-form-app {

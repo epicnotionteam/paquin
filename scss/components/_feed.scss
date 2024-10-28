@@ -433,7 +433,7 @@
             margin-top: -12px,
             row-gap: spacing(2) 
         ));
-        grid-template-columns: repeat( 4, 1fr );
+        grid-template-columns: repeat( auto-fit, minmax( 220px, 1fr ) );
         // Item wrap
         .productitem {
             @include rem( padding, 12px );
@@ -453,15 +453,6 @@
         }
     }
 
-}
-
-// Adjust @large breakpoint
-@include mq( $from: large ) {
-    // Component container
-    .template-collection .productgrid--items {
-        grid-template-columns: repeat( auto-fit, minmax( 256px, 1fr ) );
-        max-width: 100%;
-    }
 }
 
 

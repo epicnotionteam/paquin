@@ -62,17 +62,9 @@
             assign show_filter_trigger = true
         endif
 
-        # Sidebar to show only if there are tags in the collection, or there are menus
-        if sidebar_blocks
-            # Sidebar toggle is used on mobile only, and will only show Filters
-            if show_filters or menu_block_count > 0
-                assign show_filter_trigger = true
-            endif
-
-            # Show sidebar only if this is the 'all' collection and there are tags/menus
-            if is_all_collection and (sidebar_blocks or show_filters)
-                assign show_sidebar = true
-            endif
+        # Show sidebar only if this is the 'all' collection and there are tags/menus
+        if is_all_collection
+            assign show_sidebar = true
         endif
     endif
 

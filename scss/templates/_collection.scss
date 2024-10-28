@@ -372,7 +372,7 @@
 // --------------------------------------------------
 
 .container--sidebar-feed {
-    @include rem( padding, spacing(4) 0 0 );
+    @include rem( padding, spacing(5) 0 0 );
     background-color: color( 'background', 'alt' );
     grid-column: 1/span 12;
     // Container [Grid]
@@ -385,6 +385,8 @@
         // Container [Feed]
         .productgrid--wrapper {
             grid-area: unset;
+            grid-column: unset;
+            grid-row: unset;
             .section__heading {
                 display: none;
             }

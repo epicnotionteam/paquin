@@ -3536,8 +3536,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 .container--sidebar-feed {
-  padding: 24px 0 0;
-  padding: 2.4rem 0 0;
+  padding: 32px 0 0;
+  padding: 3.2rem 0 0;
   background-color: #ECEBEA;
   grid-column: 1/span 12;
 }
@@ -3549,6 +3549,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 .container--sidebar-feed .container--grid .productgrid--wrapper {
   grid-area: unset;
+  grid-column: unset;
+  grid-row: unset;
 }
 .container--sidebar-feed .container--grid .productgrid--wrapper .section__heading {
   display: none;

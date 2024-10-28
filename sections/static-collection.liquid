@@ -43,6 +43,15 @@
     assign show_filters = true
     assign show_filter_trigger = false
 
+    assign is_all_collection = false
+    if collection.url contains '/collections/all'
+        assign is_all_collection = true
+    endif
+
+    if filter_block == nil or filter_block.settings.filter_option == 'tag' and collection.all_tags.size == 0
+        assign show_filters = false
+    endif
+
     if filter_block == nil or filter_block.settings.filter_option == 'tag' and collection.all_tags.size == 0
         assign show_filters = false
     endif
@@ -53,8 +62,8 @@
             assign show_filter_trigger = true
         endif
 
-        # Sidebar to show only if there are tags in the collection, or there are menus
-        if sidebar_blocks or show_filters
+        # Show sidebar only if this is the 'all' collection and there are tags/menus
+        if is_all_collection
             assign show_sidebar = true
         endif
     endif
@@ -170,7 +179,9 @@
                                 {% endif %}
                                 <div class="container--content">
                                     {% comment %} Title {% endcomment %}
-                                    <h1 class="collection--title">{{ collection.title }}</h1>
+                                    <h1 class="collection--title">
+                                        {%- render 'collection-title-formatted', collection: collection -%}
+                                    </h1>
                                     {% comment %} Description {% endcomment %}
                                     {% if collection.description != blank %}
                                         <div class="collection--description rte" data-collection-description>
@@ -194,7 +205,9 @@
                                     </div>
                                 {% endif %}
                                 <div class="container--content">
-                                    <h1 class="collection--title">{{ collection.title }}</h1>
+                                    <h1 class="collection--title">
+                                        {%- render 'collection-title-formatted', collection: collection -%}
+                                    </h1>
                                     <h5>Coming Soon</h5>
                                     <p>We are excited to present our {{ collection.title }} product portfolio — we will post datasheets, press releases and new product announcements soon. Until then, we can support your {{ collection.title }} requirements - please <a href="/pages/contact/">get in touch</a> with our specialists who are ready to assist you.</p>
                                     <a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>
@@ -223,15 +236,15 @@
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
-                {% comment %} 
-                {% if show_sidebar %}
-                    {%
-                        render 'product-grid-sidebar',
-                        menu_depth: section.settings.menu_depth_range,
-                        context: collection
-                    %}
+                {% if show_sidebar and is_all_collection %}
+                    <div class="container--sidebar-feed wrap--container">
+                        <div class="container--grid wrap--max push--center">
+                            {%
+                                render 'product-grid-sidebar',
+                                menu_depth: section.settings.menu_depth_range,
+                                context: collection
+                            %}
                 {% endif %}
-                {% endcomment %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">
@@ -373,6 +386,10 @@
                         {% render 'pagination', paginate: paginate, grid_list: true %}
                     </div>
                 </div>
+                {% if show_sidebar and is_all_collection %}
+                        </div>
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
     </div>

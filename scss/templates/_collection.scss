@@ -23,6 +23,16 @@
         @include rem( max-width, 800px );
         margin: 0 auto;
         width: 100%;
+        // Title [Variable]
+        .title__variable {
+            @extend %p;
+            @include font-size( 'large' );
+            color: color( 'steel', '4' );
+            display: block;
+            font-weight: normal;
+            letter-spacing: 0;
+            margin: 0;
+        }
     }
     // Description
     .collection--description {
@@ -354,6 +364,46 @@
     // Variant [Has Items]
     .template-collection .productgrid--outer.collection--has-items {
         // @include rem( padding-bottom, $gap--section-large );
+    }
+}
+
+
+// Container [Collection/Sidebar]
+// --------------------------------------------------
+
+.container--sidebar-feed {
+    @include rem( padding, spacing(4) 0 0 );
+    background-color: color( 'background', 'alt' );
+    grid-column: 1/span 12;
+    // Container [Grid]
+    .container--grid {
+        display: grid;
+        // Container [Sidebar]
+        .productgrid--sidebar {
+            display: block;
+            grid-area: unset !important;
+        }
+        // Container [Feed]
+        .productgrid--wrapper {
+            grid-area: unset !important;
+            grid-column: unset !important;
+            grid-row: unset !important;
+            padding: 0 !important;
+            .section__heading {
+                display: none;
+            }
+        }
+    }
+}
+
+// Adjust @custom breakpoint
+@include mq( $from: 860px ) {
+    .container--sidebar-feed {
+        @include rem( padding, spacing(5) 0 0 );
+        .container--grid {
+            @include rem( column-gap, spacing(6) );
+            grid-template-columns: 256px 1fr;
+        }
     }
 }
 

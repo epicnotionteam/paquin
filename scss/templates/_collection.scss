@@ -380,7 +380,7 @@
         display: grid;
         // Container [Sidebar]
         .productgrid--sidebar {
-            display: none;
+            display: block;
             grid-area: unset !important;
         }
         // Container [Feed]

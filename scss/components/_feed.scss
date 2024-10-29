@@ -433,7 +433,7 @@
             margin-top: -12px,
             row-gap: spacing(2) 
         ));
-        grid-template-columns: repeat( auto-fit, minmax( 220px, 1fr ) );
+        grid-template-columns: repeat( auto-fit, minmax( 220px, 320px ) );
         // Item wrap
         .productitem {
             @include rem( padding, 12px );

@@ -405,7 +405,7 @@
             grid-template-columns: 256px 1fr;
             // Adjust feed structure
             .productgrid--items {
-                grid-template-columns: repeat( 2, 1fr );
+                grid-template-columns: repeat( 2, 1fr ) !important;
             }
         }
     }
@@ -415,7 +415,7 @@
 @include mq( $from: medium ) {
     // Adjust feed structure
     .container--sidebar-feed .template-collection .productgrid--items {
-        grid-template-columns: repeat( 4, 1fr );
+        grid-template-columns: repeat( 3, 1fr ) !important;
     }
 }
 
@@ -423,7 +423,7 @@
 @include mq( $from: large ) {
     // Adjust feed structure
     .container--sidebar-feed .template-collection .productgrid--items {
-        grid-template-columns: repeat( 4, 1fr );
+        grid-template-columns: repeat( 5, 1fr ) !important;
     }
 }
 

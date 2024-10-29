@@ -414,7 +414,7 @@
 // Adjust @medium breakpoint
 @include mq( $from: medium ) {
     // Adjust feed structure
-    .container--sidebar-feed .template-collection .productgrid--items {
+    .container--sidebar-feed .container--grid .productgrid--items {
         grid-template-columns: repeat( 3, 1fr ) !important;
     }
 }
@@ -422,7 +422,7 @@
 // Adjust @large breakpoint
 @include mq( $from: large ) {
     // Adjust feed structure
-    .container--sidebar-feed .template-collection .productgrid--items {
+    .container--sidebar-feed .container--grid .productgrid--items {
         grid-template-columns: repeat( 5, 1fr ) !important;
     }
 }

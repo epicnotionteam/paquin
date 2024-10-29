@@ -3573,12 +3573,12 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   }
 }
 @media (min-width: 64em) {
-  .container--sidebar-feed .template-collection .productgrid--items {
+  .container--sidebar-feed .container--grid .productgrid--items {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 @media (min-width: 77.5em) {
-  .container--sidebar-feed .template-collection .productgrid--items {
+  .container--sidebar-feed .container--grid .productgrid--items {
     grid-template-columns: repeat(5, 1fr) !important;
   }
 }

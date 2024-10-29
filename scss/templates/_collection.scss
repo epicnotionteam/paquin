@@ -403,7 +403,27 @@
         .container--grid {
             @include rem( column-gap, spacing(6) );
             grid-template-columns: 256px 1fr;
+            // Adjust feed structure
+            .productgrid--items {
+                grid-template-columns: repeat( 2, 1fr ) !important;
+            }
         }
+    }
+}
+
+// Adjust @medium breakpoint
+@include mq( $from: medium ) {
+    // Adjust feed structure
+    .container--sidebar-feed .template-collection .productgrid--items {
+        grid-template-columns: repeat( 3, 1fr ) !important;
+    }
+}
+
+// Adjust @large breakpoint
+@include mq( $from: large ) {
+    // Adjust feed structure
+    .container--sidebar-feed .template-collection .productgrid--items {
+        grid-template-columns: repeat( 5, 1fr ) !important;
     }
 }
 

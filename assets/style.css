@@ -3568,6 +3568,19 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     column-gap: 4rem;
     grid-template-columns: 256px 1fr;
   }
+  .container--sidebar-feed .container--grid .productgrid--items {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 64em) {
+  .container--sidebar-feed .template-collection .productgrid--items {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (min-width: 77.5em) {
+  .container--sidebar-feed .template-collection .productgrid--items {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
 }
 .container--empty-collection {
   margin-top: 24px;

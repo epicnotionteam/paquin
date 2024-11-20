@@ -50,12 +50,6 @@
             "collection": "optical-laser"
           }
         },
-        "collection_MnPLHw": {
-          "type": "collection",
-          "settings": {
-            "collection": "level"
-          }
-        },
         "collection_TnbtRk": {
           "type": "collection",
           "settings": {
@@ -115,13 +109,18 @@
           "settings": {
             "collection": "diaphragm-seals-process-port-adaptors"
           }
+        },
+        "collection_MnPLHw": {
+          "type": "collection",
+          "settings": {
+            "collection": "level"
+          }
         }
       },
       "block_order": [
         "collection_NPceRF",
         "collection_bFJhze",
         "collection_KxVxR6",
-        "collection_MnPLHw",
         "collection_TnbtRk",
         "collection_iVbkY6",
         "collection_M9FLmC",
@@ -131,7 +130,8 @@
         "collection_BAzey9",
         "collection_keQgLK",
         "collection_AUfYHm",
-        "collection_n79ByG"
+        "collection_n79ByG",
+        "collection_MnPLHw"
       ],
       "settings": {
         "heading_small": "By Product Type",

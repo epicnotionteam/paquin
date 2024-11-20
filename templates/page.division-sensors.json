@@ -44,16 +44,22 @@
             "collection": "temperature"
           }
         },
-        "collection_KxVxR6": {
-          "type": "collection",
-          "settings": {
-            "collection": "optical-laser"
-          }
-        },
         "collection_TnbtRk": {
           "type": "collection",
           "settings": {
             "collection": "flow"
+          }
+        },
+        "collection_MnPLHw": {
+          "type": "collection",
+          "settings": {
+            "collection": "level"
+          }
+        },
+        "collection_KxVxR6": {
+          "type": "collection",
+          "settings": {
+            "collection": "optical-laser"
           }
         },
         "collection_iVbkY6": {
@@ -62,22 +68,10 @@
             "collection": "gas-detection"
           }
         },
-        "collection_M9FLmC": {
-          "type": "collection",
-          "settings": {
-            "collection": "hart-i-o-link-can-modbus-more"
-          }
-        },
         "collection_wP3nh8": {
           "type": "collection",
           "settings": {
             "collection": "humidity"
-          }
-        },
-        "collection_qTDAyH": {
-          "type": "collection",
-          "settings": {
-            "collection": "electrical-connectivity"
           }
         },
         "collection_rthmk9": {
@@ -86,16 +80,16 @@
             "collection": "proximity"
           }
         },
-        "collection_BAzey9": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
         "collection_keQgLK": {
           "type": "collection",
           "settings": {
             "collection": "pumps"
+          }
+        },
+        "collection_BAzey9": {
+          "type": "collection",
+          "settings": {
+            "collection": "valves"
           }
         },
         "collection_AUfYHm": {
@@ -104,34 +98,40 @@
             "collection": "load-force"
           }
         },
+        "collection_qTDAyH": {
+          "type": "collection",
+          "settings": {
+            "collection": "electrical-connectivity"
+          }
+        },
         "collection_n79ByG": {
           "type": "collection",
           "settings": {
             "collection": "diaphragm-seals-process-port-adaptors"
           }
         },
-        "collection_MnPLHw": {
+        "collection_M9FLmC": {
           "type": "collection",
           "settings": {
-            "collection": "level"
+            "collection": "hart-i-o-link-can-modbus-more"
           }
         }
       },
       "block_order": [
         "collection_NPceRF",
         "collection_bFJhze",
-        "collection_KxVxR6",
         "collection_TnbtRk",
+        "collection_MnPLHw",
+        "collection_KxVxR6",
         "collection_iVbkY6",
-        "collection_M9FLmC",
         "collection_wP3nh8",
-        "collection_qTDAyH",
         "collection_rthmk9",
-        "collection_BAzey9",
         "collection_keQgLK",
+        "collection_BAzey9",
         "collection_AUfYHm",
+        "collection_qTDAyH",
         "collection_n79ByG",
-        "collection_MnPLHw"
+        "collection_M9FLmC"
       ],
       "settings": {
         "heading_small": "By Product Type",

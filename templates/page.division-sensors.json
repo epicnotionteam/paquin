@@ -109,6 +109,12 @@
           "settings": {
             "collection": "load-force"
           }
+        },
+        "collection_n79ByG": {
+          "type": "collection",
+          "settings": {
+            "collection": "diaphragm-seals-process-port-adaptors"
+          }
         }
       },
       "block_order": [
@@ -124,7 +130,8 @@
         "collection_rthmk9",
         "collection_BAzey9",
         "collection_keQgLK",
-        "collection_AUfYHm"
+        "collection_AUfYHm",
+        "collection_n79ByG"
       ],
       "settings": {
         "heading_small": "By Product Type",

@@ -53,9 +53,7 @@
         "form",
         "share"
       ],
-      "custom_css": [
-        "#product__media {display: block; height: auto; overflow: visible;}"
-      ],
+      "custom_css": [],
       "settings": {
         "gallery_aspect_ratio": "natural",
         "gallery_image_crop": false,

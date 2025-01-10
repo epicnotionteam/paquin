@@ -387,12 +387,6 @@
             "collection": "pumps"
           }
         },
-        "collection_X4LfRw": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
-        },
         "collection_TUfj7V": {
           "type": "collection",
           "settings": {
@@ -413,7 +407,6 @@
         "collection_VtkJGT",
         "collection_yXBkDD",
         "collection_c6GfpM",
-        "collection_X4LfRw",
         "collection_TUfj7V"
       ],
       "settings": {

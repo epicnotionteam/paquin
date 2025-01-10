@@ -92,12 +92,6 @@
             "collection": "valves"
           }
         },
-        "collection_AUfYHm": {
-          "type": "collection",
-          "settings": {
-            "collection": "load-force"
-          }
-        },
         "collection_qTDAyH": {
           "type": "collection",
           "settings": {
@@ -128,7 +122,6 @@
         "collection_rthmk9",
         "collection_keQgLK",
         "collection_BAzey9",
-        "collection_AUfYHm",
         "collection_qTDAyH",
         "collection_n79ByG",
         "collection_M9FLmC"

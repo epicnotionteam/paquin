@@ -219,7 +219,7 @@
             </div>
 
             {% comment %} Feed [Subcollection] {% endcomment %}
-            {% if collection.metafields.custom.subcollections != blank %}
+            {% comment %} {% if collection.metafields.custom.subcollections != blank %}
                 <section class="section--subcollections wrap--container">
                     <div class="wrap--max push--center">
                         <div class="section__grid">
@@ -232,7 +232,7 @@
                         </div>
                     </div>
                 </section>
-            {% endif %}
+            {% endif %} {% endcomment %}
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}

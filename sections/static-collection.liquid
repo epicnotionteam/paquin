@@ -381,11 +381,13 @@
                                         products_per_row: products_per_row,
                                     %}
                                 {% endfor %}
-                            </div> {% endcomment %}
+                            </div>
+                {% endcomment %}
+                          
                         {% endif %}
                         {% render 'pagination', paginate: paginate, grid_list: true %}
                     </div>
-                </div>
+                </div> 
                 {% if show_sidebar and is_all_collection %}
                         </div>
                     </div>

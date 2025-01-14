@@ -385,7 +385,7 @@
                 {% endcomment %}
                           
                         {% endif %}
-                        {% render 'pagination', paginate: paginate, grid_list: true %}
+                         {% comment %} {% render 'pagination', paginate: paginate, grid_list: true %} {% endcomment %}
                     </div>
                 </div> 
                 {% if show_sidebar and is_all_collection %}

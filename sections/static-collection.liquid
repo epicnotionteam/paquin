@@ -371,7 +371,7 @@
                             <div class="section__heading">
                                 <h2 class="section__heading">Browse Products</h2>
                             </div>
-                            {% comment %}<div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
+                            <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
                                 {% for product in collection.products %}
                                     {%
                                         render 'product-grid-item',
@@ -382,10 +382,10 @@
                                     %}
                                 {% endfor %}
                             </div>
-                {% endcomment %}
+               
                           
                         {% endif %}
-                         {% comment %} {% render 'pagination', paginate: paginate, grid_list: true %} {% endcomment %}
+                         {% render 'pagination', paginate: paginate, grid_list: true %}
                     </div>
                 </div> 
                 {% if show_sidebar and is_all_collection %}

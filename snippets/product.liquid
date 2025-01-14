@@ -83,6 +83,19 @@
 			gallery_click_to_zoom: gallery_click_to_zoom,
 			gallery_hover_zoom: gallery_hover_zoom
 		%}
+          {% comment %} Container [Product Data] {% endcomment %}
+    	<div id="product__data" class="grid__item">
+    		{% comment %} Description {% endcomment %}
+    		{% render 'product-description' %}
+    		{% comment %} Key Specifications {% endcomment %}
+    		{% render 'product-key-specifications' %}
+    		{% comment %} Related Press {% endcomment %}
+    		{% render 'product-related-press' %}
+    		{% comment %} Whitepapers {% endcomment %}
+    		{% render 'product-whitepapers' %}
+    		{% comment %} Instructions {% endcomment %}
+    		{% render 'product-instructions' %}
+    	</div>
 	</div>
 	{% comment %} Container [Product Core] {% endcomment %}
 	<div id="product__content" class="grid__item">

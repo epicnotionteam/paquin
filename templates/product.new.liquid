@@ -47,7 +47,7 @@
 
         <div id="product__media">
             <!-- Gallery -->
-            {%
+              {%
                 render 'product-gallery',
                 product: product,
                 select_first_available_variant: select_first_available_variant,
@@ -57,18 +57,19 @@
                 gallery_click_to_zoom: gallery_click_to_zoom,
                 gallery_hover_zoom: gallery_hover_zoom
               %}
-            <div id="product__data">
-              <!-- Description -->
-              {% render 'product-description' %}
-              <!-- Key Specifications -->
-              {% render 'product-key-specifications' %}
-              <!-- Related Press -->
-              {% render 'product-related-press' %}
-              <!-- Whitepapers -->
-              {% render 'product-whitepapers' %}
-              <!-- Instructions -->
-              {% render 'product-instructions' %}
-            </div>
+
+              <div id="product__data">
+                  <!-- Description -->
+                  {% render 'product-description' %}
+                  <!-- Key Specifications -->
+                  {% render 'product-key-specifications' %}
+                  <!-- Related Press -->
+                  {% render 'product-related-press' %}
+                  <!-- Whitepapers -->
+                  {% render 'product-whitepapers' %}
+                  <!-- Instructions -->
+                  {% render 'product-instructions' %}
+              </div>
         </div>
 
         <div id="product__core">
@@ -83,19 +84,5 @@
             <!-- Inquiry Form -->
             {% render 'product-inquiry-form' %}
         </div>
-
-        <div id="product__data">
-            <!-- Description -->
-            {% render 'product-description' %}
-            <!-- Key Specifications -->
-            {% render 'product-key-specifications' %}
-            <!-- Related Press -->
-            {% render 'product-related-press' %}
-            <!-- Whitepapers -->
-            {% render 'product-whitepapers' %}
-            <!-- Instructions -->
-            {% render 'product-instructions' %}
-        </div>
-
     </div>
 </div>

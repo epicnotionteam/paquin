@@ -327,6 +327,12 @@
             "collection": "temperature"
           }
         },
+        "collection_TnbtRk": {
+          "type": "collection",
+          "settings": {
+            "collection": "flow"
+          }
+        },
         "collection_MnPLHw": {
           "type": "collection",
           "settings": {
@@ -339,10 +345,46 @@
             "collection": "optical-laser"
           }
         },
-        "collection_TnbtRk": {
+        "collection_VtkJGT": {
           "type": "collection",
           "settings": {
-            "collection": "flow"
+            "collection": "proximity"
+          }
+        },
+        "collection_LRNdRf": {
+          "type": "collection",
+          "settings": {
+            "collection": "humidity"
+          }
+        },
+        "collection_nW9RUb": {
+          "type": "collection",
+          "settings": {
+            "collection": "gas-detection"
+          }
+        },
+        "collection_c6GfpM": {
+          "type": "collection",
+          "settings": {
+            "collection": "pumps"
+          }
+        },
+        "collection_yXBkDD": {
+          "type": "collection",
+          "settings": {
+            "collection": "valves"
+          }
+        },
+        "collection_jLqjcm": {
+          "type": "collection",
+          "settings": {
+            "collection": "oil-and-water-detection-for-engines-and-equipment"
+          }
+        },
+        "collection_F47zDm": {
+          "type": "collection",
+          "settings": {
+            "collection": "electrical-connectivity"
           }
         },
         "collection_kqCrAU": {
@@ -356,58 +398,23 @@
           "settings": {
             "collection": "hart-i-o-link-can-modbus-more"
           }
-        },
-        "collection_LRNdRf": {
-          "type": "collection",
-          "settings": {
-            "collection": "humidity"
-          }
-        },
-        "collection_F47zDm": {
-          "type": "collection",
-          "settings": {
-            "collection": "electrical-connectivity"
-          }
-        },
-        "collection_VtkJGT": {
-          "type": "collection",
-          "settings": {
-            "collection": "proximity"
-          }
-        },
-        "collection_yXBkDD": {
-          "type": "collection",
-          "settings": {
-            "collection": "valves"
-          }
-        },
-        "collection_c6GfpM": {
-          "type": "collection",
-          "settings": {
-            "collection": "pumps"
-          }
-        },
-        "collection_TUfj7V": {
-          "type": "collection",
-          "settings": {
-            "collection": "diaphragm-seals-process-port-adaptors"
-          }
         }
       },
       "block_order": [
         "collection_NPceRF",
         "collection_bFJhze",
+        "collection_TnbtRk",
         "collection_MnPLHw",
         "collection_TtcqBR",
-        "collection_TnbtRk",
-        "collection_kqCrAU",
-        "collection_hAfUBw",
-        "collection_LRNdRf",
-        "collection_F47zDm",
         "collection_VtkJGT",
-        "collection_yXBkDD",
+        "collection_LRNdRf",
+        "collection_nW9RUb",
         "collection_c6GfpM",
-        "collection_TUfj7V"
+        "collection_yXBkDD",
+        "collection_jLqjcm",
+        "collection_F47zDm",
+        "collection_kqCrAU",
+        "collection_hAfUBw"
       ],
       "settings": {
         "heading_small": "Browse parts by type",

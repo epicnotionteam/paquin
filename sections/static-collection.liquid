@@ -367,23 +367,26 @@
                             {% endif %}
                         {% endif %}
                         {% endcomment %}
-                        {% if collection.products.size > 0 %}
-                            <div class="section__heading">
-                                <h2 class="section__heading">Browse Products</h2>
-                            </div>
-                            <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
-                                {% for product in collection.products %}
-                                    {%
-                                        render 'product-grid-item',
-                                        product: product,
-                                        context: 'collection',
-                                        index: forloop.index,
-                                        products_per_row: products_per_row,
-                                    %}
-                                {% endfor %}
-                            </div>
-               
-                          
+                        {% if collection.url contains '/collections/all' %}
+                            <!-- Do not render product grid for the "all" collection -->
+                        {% else %}
+                            {% if collection.products.size > 0 %}
+                                <div class="section__heading">
+                                    <h2 class="section__heading">Browse Products</h2>
+                                </div>
+                                <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
+                                    {% for product in collection.products %}
+                                        {%
+                                            render 'product-grid-item',
+                                            product: product,
+                                            context: 'collection',
+                                            index: forloop.index,
+                                            products_per_row: products_per_row,
+                                        %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                            {% render 'pagination', paginate: paginate, grid_list: true %}
                         {% endif %}
                          {% render 'pagination', paginate: paginate, grid_list: true %}
                     </div>

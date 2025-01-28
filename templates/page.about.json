@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "order": [
     "about-hero",
@@ -23,10 +23,10 @@
       "settings": {
         "heading": "Providing Superior Quality, Innovation and Customer Service Since 1949",
         "heading_size": "h1",
-        "content": "<p>The Paquin Company is an engineering-focused corporation consisting of multiple synergistic production facilities.<\/p>",
+        "content": "<p>The Paquin Company is an engineering-focused corporation consisting of multiple synergistic production facilities.</p>",
         "link_text": "",
         "link_url": "#our-specialized-divisions",
-        "image": "shopify:\/\/shop_images\/asset__partnership--home.jpg",
+        "image": "shopify://shop_images/asset__partnership--home.jpg",
         "show_jump_links": true
       }
     },
@@ -37,42 +37,42 @@
           "type": "carousel-block",
           "settings": {
             "heading_small": "Paquin Sensors",
-            "logo": "shopify:\/\/shop_images\/logo__paqiun-sensors--mono.svg",
+            "logo": "shopify://shop_images/logo__paqiun-sensors--mono.svg",
             "heading": "Elevating Industries with Our Portfolio of Advanced Sensor Technologies",
             "heading_size": "h2",
-            "content": "<p>At our core we are your trusted source for high quality sensors as well as a multitude of related components.  We offer a broad selection of standard products as well as customized instrumentation solution possibilities. <\/p>",
+            "content": "<p>At our core we are your trusted source for high quality sensors as well as a multitude of related components.  We offer a broad selection of standard products as well as customized instrumentation solution possibilities. </p>",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/paquin-sensors",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__about--paquin-sensors.jpg"
+            "link_url": "shopify://pages/paquin-sensors",
+            "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
+            "image": "shopify://shop_images/asset__about--paquin-sensors.jpg"
           }
         },
         "carousel_block_aNeN4P": {
           "type": "carousel-block",
           "settings": {
             "heading_small": "Global Intex",
-            "logo": "shopify:\/\/shop_images\/logo__global-intex--mono.svg",
+            "logo": "shopify://shop_images/logo__global-intex--mono.svg",
             "heading": "Innovative Electrical Connectors & Cable Assemblies",
             "heading_size": "h2",
-            "content": "<p>Experts in manufacturing custom ruggedized electrical connectors and cable harnesses. The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.<\/p>",
+            "content": "<p>Experts in manufacturing custom ruggedized electrical connectors and cable harnesses. The designs are intended for hazardous and non-hazardous environments in support of heavy-duty equipment applications.</p>",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/global-intex",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__about--excel_fe981f95-cf46-45f0-9fe6-789111b960ce.jpg"
+            "link_url": "shopify://pages/global-intex",
+            "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
+            "image": "shopify://shop_images/asset__about--excel_fe981f95-cf46-45f0-9fe6-789111b960ce.jpg"
           }
         },
         "carousel_block_bUtLUi": {
           "type": "carousel-block",
           "settings": {
             "heading_small": "Excel Manufacturing",
-            "logo": "shopify:\/\/shop_images\/logo__excel--mono.svg",
+            "logo": "shopify://shop_images/logo__excel--mono.svg",
             "heading": "Precision, Quality and Innovation",
             "heading_size": "h2",
-            "content": "<p>This division specializes in producing high-precision actuators, valves and related control devices.  Offering globally-accepted EX certifications, these products can meet the requirements of many industries and applications.<\/p>",
+            "content": "<p>This division specializes in producing high-precision actuators, valves and related control devices.  Offering globally-accepted EX certifications, these products can meet the requirements of many industries and applications.</p>",
             "link_text": "Learn more",
-            "link_url": "shopify:\/\/pages\/excel-manufacturing",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__about--excel_53126c04-ef82-469a-904b-fe366c5c96f4.jpg"
+            "link_url": "shopify://pages/excel-manufacturing",
+            "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
+            "image": "shopify://shop_images/asset__about--excel_53126c04-ef82-469a-904b-fe366c5c96f4.jpg"
           }
         },
         "carousel_block_yRqdhQ": {
@@ -81,11 +81,11 @@
             "heading_small": "Paquin Distribution & Logistics",
             "heading": "Excellence in Service and Logistics",
             "heading_size": "h2",
-            "content": "<p>Immediate customer support including online ordering for readily available products from select manufacturing partners.   Most parts are in stock at Paquin and available for immediate delivery.<\/p>",
+            "content": "<p>Immediate customer support including online ordering for readily available products from select manufacturing partners.   Most parts are in stock at Paquin and available for immediate delivery.</p>",
             "link_text": "",
             "link_url": "",
-            "cta": "<p>Require a custom part for your project?<br\/><a href=\"\/pages\/contact\" title=\"Contact\">Contact our team today<\/a><\/p>",
-            "image": "shopify:\/\/shop_images\/asset__excel-manufacturing.jpg"
+            "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
+            "image": "shopify://shop_images/asset__excel-manufacturing.jpg"
           }
         }
       },
@@ -108,7 +108,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Designing with Precision",
-            "content": "<p>Our initial phase involves our engineering teams transforming client ideas into detailed designs, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.<\/p>",
+            "content": "<p>Our initial phase involves our engineering teams transforming client ideas into detailed designs, ensuring specifications and innovations are perfectly matched. This careful planning lays the groundwork for success.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -118,7 +118,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Materials Matter",
-            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.<\/p>",
+            "content": "<p>At this stage, we select optimal materials for durability, functionality, and sustainability. Our choices are informed by industry insights and research, aiming to meet project requirements and environmental goals effectively.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -128,7 +128,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Manufacturing Innovation",
-            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.<\/p>",
+            "content": "<p>Entering the manufacturing phase, our facilities and craftsmen use precision engineering to actualize designs. We blend efficiency, accuracy and innovative techniques to produce high quality, industry-leading results.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -138,7 +138,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Testing and Quality Control",
-            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, meeting all requirements and surpassing customer expectations.<\/p>",
+            "content": "<p>In our final step, every product undergoes extensive testing and quality control to meet our standards for functionality and durability. This ensures our products are ready for their intended use, meeting all requirements and surpassing customer expectations.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -166,8 +166,8 @@
         "heading_large": "Superior Quality, Innovation and Customer Service Since 1949",
         "heading_size": "h1",
         "subheading": "Our Founding",
-        "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.<\/p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.<\/p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.<\/p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production facilities, Global Intex and Excel Manufacturing Solutions. Having these three divisions allowed Paquin to engineer, produce, and deliver both standard and proprietary components, as well as process controls and fully packaged solutions.<\/p><p>In 2021, Robert Williams became the sole owner of The Paquin Company. Over the next two years, Robert and his management team continued the company’s strategic evolution, and in 2023 announced Paquin’s third manufacturing facility, <a href=\"\/pages\/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors<\/a>. The addition of this fourth division marks a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.<\/p>",
-        "image": "shopify:\/\/shop_images\/asset__about--history.jpg",
+        "content": "<p>In 1949, The Paquin Company was established in Wickliffe, OH as a local distributor of hydraulic parts. At that time, Cleveland, OH was thriving economically, earning the title \"best location in the nation\" and becoming an All-American City. By 1950, the city’s population had approached one million.</p><p>By the turn of the century, Paquin had evolved into an advanced hydraulics service distributor, also supplying pneumatic and linear motion controls. The company’s growing reputation expanded its customer base across Ohio, Pennsylvania, Indiana, Michigan, West Virginia, and Kentucky.</p><p>In 2007, Mr. Robert Williams joined the company, bringing years of leadership experience. He implemented a strategic vision for business development and growth, modernized machinery, and increased operating capacities. His investment in highly qualified personnel enabled Paquin to design and manufacture intricate hydraulic, pneumatic, and electrical systems in-house. The company also became known for solid-state derived control solutions.</p><p>Paquin continued to grow, creating additional departments for the design and construction of internally produced parts. By 2012, Paquin had become a distributor with two production facilities, Global Intex and Excel Manufacturing Solutions. Having these three divisions allowed Paquin to engineer, produce, and deliver both standard and proprietary components, as well as process controls and fully packaged solutions.</p><p>In 2021, Robert Williams became the sole owner of The Paquin Company. Over the next two years, Robert and his management team continued the company’s strategic evolution, and in 2023 announced Paquin’s third manufacturing facility, <a href=\"/pages/paquin-sensors\" title=\"Paquin Sensors\">Paquin Sensors</a>. The addition of this fourth division marks a significant milestone in the company’s journey from a local hydraulics distributor to an engineering-based manufacturer of industrial control solutions.</p>",
+        "image": "shopify://shop_images/asset__about--history.jpg",
         "theme": "dark"
       }
     },
@@ -180,16 +180,16 @@
             "name": "Robert Williams",
             "role": "Chief Executive Officer",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--robert-williams.jpg"
+            "image": "shopify://shop_images/asset__headshot--robert-williams.jpg"
           }
         },
         "team_block_AzXKfX": {
           "type": "team-block",
           "settings": {
             "name": "Phil Marcantonio",
-            "role": "Chief Financial Officer",
+            "role": "Executive Vice President, CFO & Treasurer",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--phil-marcantonio.jpg"
+            "image": "shopify://shop_images/asset__headshot--phil-marcantonio.jpg"
           }
         },
         "team_block_wMtKQF": {
@@ -198,7 +198,7 @@
             "name": "Mike Graf",
             "role": "President",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
+            "image": "shopify://shop_images/asset__headshot--mike-graf_adc6cf67-12f4-4b56-9a8c-e54804d2f533.jpg"
           }
         },
         "team_block_DkgWrB": {
@@ -207,7 +207,7 @@
             "name": "Rob Kinkopf",
             "role": "Vice President",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--rob-kinkopf_2698caf3-1fed-4536-a57e-0962ce7e0681.jpg"
+            "image": "shopify://shop_images/asset__headshot--rob-kinkopf_2698caf3-1fed-4536-a57e-0962ce7e0681.jpg"
           }
         },
         "team_block_HnBEft": {
@@ -216,7 +216,7 @@
             "name": "Gary Frey",
             "role": "Member — Board of Directors",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--gary-frey.jpg"
+            "image": "shopify://shop_images/asset__headshot--gary-frey.jpg"
           }
         },
         "team_block_kQijHU": {
@@ -225,7 +225,7 @@
             "name": "Jenna Williams",
             "role": "Member — Board of Directors",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--jenna-williams.jpg"
+            "image": "shopify://shop_images/asset__headshot--jenna-williams.jpg"
           }
         },
         "team_block_ydPhwd": {
@@ -234,7 +234,7 @@
             "name": "Mark Berger",
             "role": "Sales Supervision",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__mark-berger.jpg"
+            "image": "shopify://shop_images/asset__mark-berger.jpg"
           }
         },
         "team_block_TEJECm": {
@@ -243,7 +243,7 @@
             "name": "John Frey",
             "role": "Outside Sales Engineer",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
+            "image": "shopify://shop_images/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_83FGGw": {
@@ -252,7 +252,7 @@
             "name": "John Storey Jr.",
             "role": "Sales",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--john-storey.jpg"
+            "image": "shopify://shop_images/asset__headshot--john-storey.jpg"
           }
         },
         "team_block_dWcAQa": {
@@ -261,7 +261,7 @@
             "name": "Emil Hufgard",
             "role": "Sales",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--emil-hufgard.jpg"
+            "image": "shopify://shop_images/asset__headshot--emil-hufgard.jpg"
           }
         },
         "team_block_yWNiie": {
@@ -270,7 +270,7 @@
             "name": "Mike Lamenta",
             "role": "Sales",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--mike-lamenta.jpg"
+            "image": "shopify://shop_images/asset__headshot--mike-lamenta.jpg"
           }
         },
         "team_block_z3YgAN": {
@@ -279,7 +279,7 @@
             "name": "Breanna Bomback",
             "role": "Marketing",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--breanna-bomback_ae51276b-b79b-4750-8674-af7e428c0254.jpg"
+            "image": "shopify://shop_images/asset__headshot--breanna-bomback_ae51276b-b79b-4750-8674-af7e428c0254.jpg"
           }
         },
         "team_block_VVkxqW": {
@@ -288,7 +288,7 @@
             "name": "Bill Taylor",
             "role": "Head of Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
+            "image": "shopify://shop_images/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_QrEg9M": {
@@ -297,7 +297,7 @@
             "name": "John Menke",
             "role": "Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--john-menke.jpg"
+            "image": "shopify://shop_images/asset__headshot--john-menke.jpg"
           }
         },
         "team_block_4jrjJb": {
@@ -306,7 +306,7 @@
             "name": "Stan Childs",
             "role": "Engineering",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__stan-childs.jpg"
+            "image": "shopify://shop_images/asset__stan-childs.jpg"
           }
         },
         "team_block_mBNkiF": {
@@ -315,7 +315,7 @@
             "name": "Steve Woytek",
             "role": "Sr. Tech & Design Support",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--steve-woytec.jpg"
+            "image": "shopify://shop_images/asset__headshot--steve-woytec.jpg"
           }
         },
         "team_block_P6bzxL": {
@@ -324,7 +324,7 @@
             "name": "Lisa Reece-Burdette",
             "role": "Director of Operations",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__lisa-reece-burdette.jpg"
+            "image": "shopify://shop_images/asset__lisa-reece-burdette.jpg"
           }
         },
         "team_block_7BciN8": {
@@ -333,7 +333,7 @@
             "name": "Tom Colbert",
             "role": "Operations Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--tom-colbert.jpg"
+            "image": "shopify://shop_images/asset__headshot--tom-colbert.jpg"
           }
         },
         "team_block_iNbQHr": {
@@ -342,7 +342,7 @@
             "name": "Steve Thompson",
             "role": "Supply Chain Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--steve-thompson.jpg"
+            "image": "shopify://shop_images/asset__headshot--steve-thompson.jpg"
           }
         },
         "team_block_qcaiPR": {
@@ -351,7 +351,7 @@
             "name": "Trudy Thompson",
             "role": "Purchasing",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--trudy-thompson.jpg"
+            "image": "shopify://shop_images/asset__headshot--trudy-thompson.jpg"
           }
         },
         "team_block_QXYTMf": {
@@ -360,7 +360,7 @@
             "name": "Jamie Crawford",
             "role": "Buyer",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__jamie-crawford.jpg"
+            "image": "shopify://shop_images/asset__jamie-crawford.jpg"
           }
         },
         "team_block_ewAeCV": {
@@ -369,7 +369,7 @@
             "name": "Marijane Randazzo",
             "role": "Accounting Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--marijane-randazzo.jpg"
+            "image": "shopify://shop_images/asset__headshot--marijane-randazzo.jpg"
           }
         },
         "team_block_bwxHqq": {
@@ -378,7 +378,7 @@
             "name": "Irene Buna",
             "role": "Accounting Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__irene-buna.jpg"
+            "image": "shopify://shop_images/asset__irene-buna.jpg"
           }
         },
         "team_block_gNpQyc": {
@@ -387,7 +387,7 @@
             "name": "Denise Tennant",
             "role": "Administration",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-female.jpg"
+            "image": "shopify://shop_images/asset__headshot--placeholder-female.jpg"
           }
         },
         "team_block_aYQWne": {
@@ -396,7 +396,7 @@
             "name": "Crystal Jones",
             "role": "Production Supervisor",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__chrystall-jones.jpg"
+            "image": "shopify://shop_images/asset__chrystall-jones.jpg"
           }
         },
         "team_block_RgQbmV": {
@@ -405,7 +405,7 @@
             "name": "Cliff Martin",
             "role": "Quality Control Manager",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--cliff-martin.jpg"
+            "image": "shopify://shop_images/asset__headshot--cliff-martin.jpg"
           }
         },
         "team_block_rHdpAm": {
@@ -414,16 +414,16 @@
             "name": "William Fisher",
             "role": "Quality Control",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__will-fisher.jpg"
+            "image": "shopify://shop_images/asset__will-fisher.jpg"
           }
         },
         "team_block_XHqkhX": {
           "type": "team-block",
           "settings": {
             "name": "Phyliss Neal-Adams",
-            "role": "Metrology\/Testing",
+            "role": "Metrology/Testing",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__phyliss-neal-adams.jpg"
+            "image": "shopify://shop_images/asset__phyliss-neal-adams.jpg"
           }
         },
         "team_block_PbBPLq": {
@@ -432,7 +432,7 @@
             "name": "Brett Matheson",
             "role": "Inventory Control",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__headshot--placeholder-male.jpg"
+            "image": "shopify://shop_images/asset__headshot--placeholder-male.jpg"
           }
         },
         "team_block_MMdbKa": {
@@ -441,7 +441,7 @@
             "name": "Jimmy Havel",
             "role": "Assembly & Testing",
             "social": "",
-            "image": "shopify:\/\/shop_images\/asset__jimmy-havel.jpg"
+            "image": "shopify://shop_images/asset__jimmy-havel.jpg"
           }
         }
       },
@@ -488,12 +488,12 @@
       "disabled": true,
       "settings": {
         "heading": "The Right Part For Every Engineering Project",
-        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.<\/p>",
+        "content": "<p>From simple mechanical to sophisticated solid state designs, Paquin has you covered.</p>",
         "cta_primary_text": "Contact Our Team",
-        "cta_primary_url": "shopify:\/\/pages\/contact",
+        "cta_primary_url": "shopify://pages/contact",
         "cta_secondary_text": "Shop For Parts",
-        "cta_secondary_url": "shopify:\/\/collections",
-        "image": "shopify:\/\/shop_images\/asset__cta--inline-cropped.jpg"
+        "cta_secondary_url": "shopify://collections",
+        "image": "shopify://shop_images/asset__cta--inline-cropped.jpg"
       }
     },
     "about-careers": {
@@ -502,10 +502,10 @@
         "heading_small": "Careers at The Paquin Company",
         "subheading": "Where Talent Thrives",
         "heading_large": "Join Our Team and Help Shape the Future of Engineering",
-        "content": "<p>At Paquin, we value creativity, precision, and a passion for excellence. Our roles are designed to challenge you and propel your career forward in a dynamic environment.<\/p><p>Become part of our team and experience an exciting journey!<\/p>",
+        "content": "<p>At Paquin, we value creativity, precision, and a passion for excellence. Our roles are designed to challenge you and propel your career forward in a dynamic environment.</p><p>Become part of our team and experience an exciting journey!</p>",
         "link_text": "Explore career opportunities",
-        "link_url": "shopify:\/\/pages\/careers",
-        "image": "shopify:\/\/shop_images\/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
+        "link_url": "shopify://pages/careers",
+        "image": "shopify://shop_images/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
         "theme": "dark"
       }
     }

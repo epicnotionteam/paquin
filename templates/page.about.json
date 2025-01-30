@@ -273,6 +273,15 @@
             "image": "shopify://shop_images/asset__headshot--mike-lamenta.jpg"
           }
         },
+        "team_block_V9kRex": {
+          "type": "team-block",
+          "settings": {
+            "name": "Brendan Fisher",
+            "role": "Marketing Coordinator",
+            "social": "",
+            "image": "shopify://shop_images/IMG_4842_LR_2_800px_bg.webp"
+          }
+        },
         "team_block_z3YgAN": {
           "type": "team-block",
           "settings": {
@@ -457,6 +466,7 @@
         "team_block_83FGGw",
         "team_block_dWcAQa",
         "team_block_yWNiie",
+        "team_block_V9kRex",
         "team_block_z3YgAN",
         "team_block_VVkxqW",
         "team_block_QrEg9M",

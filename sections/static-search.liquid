@@ -148,7 +148,7 @@
           search_filter_string: search_filter_string,
           sanitized_terms: sanitized_terms,
         %}
- {%  comment %}
+{% if false %}
         {% if active_filters == true %}
           <div class="productgrid--filters">
             {%-
@@ -208,7 +208,6 @@
           </nav>
         {% endif %}
       </div>
-{% endcomment %}
       {% if show_sidebar and search.filters.size > 0 %}
         {%
           render 'product-grid-sidebar',
@@ -216,7 +215,7 @@
           context: search
         %}
       {% endif %}
-
+{% endif %}
       {% if product_count > 0 %}
         <h2 class="visually-hidden">{{ 'general.accessibility.search_products' | t }}</h2>
         <div class="productgrid--items products-per-row-{{- section.settings.products_per_row -}}">

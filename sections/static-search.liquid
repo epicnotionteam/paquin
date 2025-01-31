@@ -148,7 +148,7 @@
           search_filter_string: search_filter_string,
           sanitized_terms: sanitized_terms,
         %}
-{% comment %}
+ {%  comment %}
         {% if active_filters == true %}
           <div class="productgrid--filters">
             {%-
@@ -157,7 +157,7 @@
             %}
           </div>
         {% endif %}
-{% endcomment %}
+
         {% if show_filter_trigger %}
           {% capture utility_class %}
             productgrid--utils
@@ -208,7 +208,7 @@
           </nav>
         {% endif %}
       </div>
-
+{% endcomment %}
       {% if show_sidebar and search.filters.size > 0 %}
         {%
           render 'product-grid-sidebar',

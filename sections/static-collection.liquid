@@ -371,7 +371,9 @@
                         {% endcomment %}
                         {% if collection.url contains '/collections/all' %}
                             <!-- Do not render product grid for the "all" collection REMOVE THIS IF ELSE STATEMENT TO ALLOW SHOP PAGE TO POPULATE-->
+                          <div class="section__content">
                           <p>Our Shop for readily available configurations is coming soon!. Contact us for custom products. For a complete view of all that Paquin Sensors has to offer, <a href="/pages/paquin-sensors">click here</a>.</p>
+                          </div>
                         {% else %}
                             {% if collection.products.size > 0 %}
                                 <div class="section__heading">

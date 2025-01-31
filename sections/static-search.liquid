@@ -148,7 +148,7 @@
           search_filter_string: search_filter_string,
           sanitized_terms: sanitized_terms,
         %}
-
+{% comment %}
         {% if active_filters == true %}
           <div class="productgrid--filters">
             {%-
@@ -157,7 +157,7 @@
             %}
           </div>
         {% endif %}
-
+{% endcomment %}
         {% if show_filter_trigger %}
           {% capture utility_class %}
             productgrid--utils

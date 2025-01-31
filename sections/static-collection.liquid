@@ -236,7 +236,7 @@
 
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
-              {% comment %} {% if show_sidebar and is_all_collection %}
+              {% if show_sidebar and is_all_collection %}
                     <div class="container--sidebar-feed wrap--container">
                         <div class="container--grid wrap--max push--center">
                             {%
@@ -245,7 +245,7 @@
                                 context: collection
                             %}
                 {% endif %}
-{% endcomment %}
+
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">

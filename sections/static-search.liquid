@@ -148,7 +148,8 @@
           search_filter_string: search_filter_string,
           sanitized_terms: sanitized_terms,
         %}
-{% if false %}
+        
+{% if false %} {%  comment %} REMOVE IF FALSE TO REACTIVE FILTER COLUMN {% endcomment %}
         {% if active_filters == true %}
           <div class="productgrid--filters">
             {%-
@@ -215,7 +216,8 @@
           context: search
         %}
       {% endif %}
-{% endif %}
+{% endif %} {%  comment %} REMOVE ENDIF TO REACTIVE FILTER COLUMN {% endcomment %}
+      
       {% if product_count > 0 %}
         <h2 class="visually-hidden">{{ 'general.accessibility.search_products' | t }}</h2>
         <div class="productgrid--items products-per-row-{{- section.settings.products_per_row -}}">

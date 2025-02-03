@@ -15694,7 +15694,7 @@ rgb(255, 255, 255)
 }
 
 .productgrid--items.products-per-row-4 .productgrid--item {
-  min-height: 500px;
+  min-height: 750px;
   width: calc(50% - 5px);
   margin-top: 10px;
   margin-left: 10px;

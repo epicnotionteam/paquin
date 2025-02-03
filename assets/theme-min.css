@@ -15686,23 +15686,30 @@ rgb(255, 255, 255)
   border-color: rgba(128, 128, 128, 0.2);
 }
 @media screen and (min-width: 1024px) {
-  .productgrid--item[data-open], .productgrid--item:hover {
+  .productgrid--item[data-open],
+  .productgrid--item:hover {
     z-index: 300;
   }
 }
+
 .productgrid--items.products-per-row-4 .productgrid--item {
+  min-height: 250px;
   width: calc(50% - 5px);
   margin-top: 10px;
   margin-left: 10px;
 }
+
 .productgrid--items.products-per-row-4 .productgrid--item:nth-child(2n+1) {
   margin-left: 0;
 }
+
 .productgrid--items.products-per-row-4 .productgrid--item:nth-child(-n+2) {
   margin-top: 0;
 }
+
 @media screen and (max-width: 859px) and (min-width: 680px) {
   .productgrid--items.products-per-row-4 .productgrid--item {
+    min-height: 250px;
     width: calc(33.3333333333% - 6.6666666667px);
     margin-top: 10px;
     margin-left: 10px;
@@ -15717,8 +15724,10 @@ rgb(255, 255, 255)
     margin-top: 0;
   }
 }
+
 @media screen and (max-width: 1023px) and (min-width: 860px) {
   .layout--has-sidebar:not(.productgrid-listview) .productgrid--items.products-per-row-4 .productgrid--item {
+    min-height: 250px;
     width: calc(33.3333333333% - 13.3333333333px);
     margin-top: 20px;
     margin-left: 20px;
@@ -15730,8 +15739,10 @@ rgb(255, 255, 255)
     margin-top: 0;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .layout--has-sidebar:not(.productgrid-listview) .productgrid--items.products-per-row-4 .productgrid--item {
+    min-height: 250px;
     width: calc(25% - 15px);
     margin-top: 20px;
     margin-left: 20px;
@@ -15746,8 +15757,10 @@ rgb(255, 255, 255)
     margin-top: 0;
   }
 }
+
 @media screen and (min-width: 860px) {
   .layout--no-sidebar:not(.productgrid-listview) .productgrid--items.products-per-row-4 .productgrid--item {
+    min-height: 250px;
     width: calc(25% - 15px);
     margin-top: 20px;
     margin-left: 20px;
@@ -15759,6 +15772,7 @@ rgb(255, 255, 255)
     margin-top: 0;
   }
 }
+
 .productgrid--items.products-per-row-3 .productgrid--item {
   width: calc(50% - 5px);
   margin-top: 10px;

@@ -15710,7 +15710,7 @@ rgb(255, 255, 255)
 
 @media screen and (max-width: 859px) and (min-width: 680px) {
   .productgrid--items.products-per-row-4 .productgrid--item {
-    min-height: 750px;
+    min-height: 500px;
     width: calc(33.3333333333% - 6.6666666667px);
     margin-top: 10px;
     margin-left: 10px;

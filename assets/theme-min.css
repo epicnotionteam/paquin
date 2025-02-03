@@ -15728,7 +15728,7 @@ rgb(255, 255, 255)
 
 @media screen and (max-width: 1023px) and (min-width: 860px) {
   .layout--has-sidebar:not(.productgrid-listview) .productgrid--items.products-per-row-4 .productgrid--item {
-    min-height: 750px;
+    min-height: 500px;
     width: calc(33.3333333333% - 13.3333333333px);
     margin-top: 20px;
     margin-left: 20px;

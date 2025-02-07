@@ -4254,6 +4254,11 @@ blockquote cite {
   max-width: 12.8rem;
 }
 
+.classic-input::placeholder {
+    color: #30373a !important;
+    opacity: 1;
+}
+
 hr,
 .divider--base {
   height: 1px;

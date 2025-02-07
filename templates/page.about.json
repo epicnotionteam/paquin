@@ -273,6 +273,15 @@
             "image": "shopify://shop_images/asset__headshot--mike-lamenta.jpg"
           }
         },
+        "team_block_BdMPW9": {
+          "type": "team-block",
+          "settings": {
+            "name": "Randy Napora",
+            "role": "Sales (Electrical Connectivity Specialist)",
+            "social": "",
+            "image": "shopify://shop_images/asset__headshot--placeholder-male_800x_b46d583b-7b64-4073-9931-12c5a0006e34.webp"
+          }
+        },
         "team_block_V9kRex": {
           "type": "team-block",
           "settings": {
@@ -361,6 +370,14 @@
             "role": "Purchasing",
             "social": "",
             "image": "shopify://shop_images/asset__headshot--trudy-thompson.jpg"
+          }
+        },
+        "team_block_Nx8UHy": {
+          "type": "team-block",
+          "settings": {
+            "name": "Full Name",
+            "role": "Role",
+            "social": ""
           }
         },
         "team_block_QXYTMf": {
@@ -466,6 +483,7 @@
         "team_block_83FGGw",
         "team_block_dWcAQa",
         "team_block_yWNiie",
+        "team_block_BdMPW9",
         "team_block_V9kRex",
         "team_block_z3YgAN",
         "team_block_VVkxqW",
@@ -476,6 +494,7 @@
         "team_block_7BciN8",
         "team_block_iNbQHr",
         "team_block_qcaiPR",
+        "team_block_Nx8UHy",
         "team_block_QXYTMf",
         "team_block_ewAeCV",
         "team_block_bwxHqq",

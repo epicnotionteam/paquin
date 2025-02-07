@@ -372,14 +372,6 @@
             "image": "shopify://shop_images/asset__headshot--trudy-thompson.jpg"
           }
         },
-        "team_block_Nx8UHy": {
-          "type": "team-block",
-          "settings": {
-            "name": "Full Name",
-            "role": "Role",
-            "social": ""
-          }
-        },
         "team_block_QXYTMf": {
           "type": "team-block",
           "settings": {
@@ -494,7 +486,6 @@
         "team_block_7BciN8",
         "team_block_iNbQHr",
         "team_block_qcaiPR",
-        "team_block_Nx8UHy",
         "team_block_QXYTMf",
         "team_block_ewAeCV",
         "team_block_bwxHqq",

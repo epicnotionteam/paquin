@@ -18,10 +18,10 @@
       "settings": {
         "heading": "Precision-Engineered Hydraulic, Pneumatic, and Fluid Control Solutions for Demanding Applications",
         "heading_size": "h1",
-        "content": "<p>Paquin Distribution, a division of The Paquin Company, offers high-performance hydraulic, pneumatic, and fluid control solutions, ensuring safe and reliable operation in critical applications like aerospace, heavy duty construction equipment, agriculture, automotive, and energy.</p>",
+        "content": "<p>Paquin Distribution, a division of The Paquin Company, offers high-performance hydraulic, pneumatic, and fluid control solutions for safe and reliable operation in critical applications like aerospace, heavy duty construction, agriculture, automotive, and energy.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/asset__excel--large.jpg",
+        "image": "shopify://shop_images/67c1ec368ec7d70b08485e32_hydraulic.webp",
         "show_jump_links": false
       }
     },
@@ -29,11 +29,11 @@
       "type": "content-offset",
       "settings": {
         "heading_small": "Paquin Distribution",
-        "heading_large": "Comprehensive Product Offerings for Maximum Efficiency",
+        "heading_large": "Powering Industry with Precision",
         "heading_size": "h1",
         "subheading": "Our Capabilities",
         "content": "<p>Paquin Distribution is a leading provider of high-quality hydraulic, pneumatic, and fluid control components & instruments, serving a wide range of industries with precision-engineered solutions. With decades of experience and a strong partnership with top-tier manufacturers, we ensure our customers receive products that enhance efficiency, reliability, and performance.</p><p>Our extensive inventory includes directional control valves, hydraulic accumulators, industrial filtration systems, and custom pneumatic solutions. Whether you're managing complex industrial operations or optimizing fluid control in demanding environments, Paquin Distribution offers the expertise and products to meet your needs.</p><p>As a sales representative and stocking distributor, we pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions. Our partnerships with industry leaders like Danfoss Power Solutions, Barksdale, ITT Standard/Xylem, Hedland, Northman, and Turck allow us to provide innovative, cutting-edge technology tailored to your specific requirements.</p><p>Explore our complete range of fluid control solutions on our <a href=\"/collections/all\" title=\"All products\">shop page</a> and discover how Paquin Distribution can drive the success of your operations. Contact us today to discuss your hydraulic and pneumatic system needs.</p><p>Want to learn more? <a href=\"/pages/contact\" title=\"/pages/contact\">Contact us</a> today to speak with one of us at Paquin Distribution.</p>",
-        "image": "shopify://shop_images/asset__excel--small.jpg",
+        "image": "shopify://shop_images/67c1ec34e6b4427f928b88fa_pneumatic.webp",
         "theme": "base"
       }
     }

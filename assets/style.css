@@ -5875,7 +5875,3 @@ ul.list--link-arrow li::before {
   box-shadow: none !important;
   color: white !important;
   filter: brightness(1.12);
-}
-.globo-formbuilder {
-    margin: 0 auto;
-}

@@ -10,7 +10,10 @@
 {
   "order": [
     "division-sensors-hero",
-    "division-sensors-about"
+    "division-sensors-about",
+    "dynamic_logo_list_APPdeR",
+    "dynamic_logo_list_gKDyti",
+    "content_offset_C9RkMW"
   ],
   "sections": {
     "division-sensors-hero": {
@@ -34,6 +37,237 @@
         "subheading": "Our Capabilities",
         "content": "<p>At Paquin Distribution, we’re more than just a supplier—we’re your partner in keeping hydraulic, pneumatic, and fluid control systems running at peak performance. With decades of experience under our belt, we’ve built strong relationships with top manufacturers to bring you precision-engineered components that boost efficiency, reliability, and durability.<br/><br/>Our inventory is stocked with directional control valves, hydraulic accumulators, industrial filtration systems, and custom pneumatic solutions, all carefully selected to tackle the real-world challenges of industries like construction, manufacturing, energy, and more. Whether you’re fine-tuning a complex system or tackling a major overhaul, we have the expertise and high-performance products to help you get the job done right.</p><p>As a sales representative and stocking distributor, we pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions. Our partnerships with industry leaders like Danfoss Power Solutions, Barksdale, ITT Standard/Xylem, Hedland, Northman, and Turck allow us to provide innovative, cutting-edge technology tailored to your specific requirements.</p><p>Explore our complete range of fluid control solutions on our <a href=\"/collections/all\" title=\"All products\">shop page</a> and discover how Paquin Distribution can drive the success of your operations. <a href=\"/pages/contact\" title=\"Contact\">Contact us</a> today to discuss your hydraulic and pneumatic system needs.</p>",
         "image": "shopify://shop_images/67c226eaad408863be0691a8_Distribution_logos.webp",
+        "theme": "base"
+      }
+    },
+    "dynamic_logo_list_APPdeR": {
+      "type": "dynamic-logo-list",
+      "blocks": {
+        "logo_Jn7GbK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/kawasaki-logo.svg",
+            "link": ""
+          }
+        },
+        "logo_GEHT4r": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fabco-air-logo.png",
+            "link": ""
+          }
+        },
+        "logo_XGa6tU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.webp",
+            "link": ""
+          }
+        },
+        "logo_wngHjC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/LEESON-Logo-Electric-Blue-TM-260x130.png",
+            "link": ""
+          }
+        },
+        "logo_nWYnXE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ingersoll-rand-logo-145x45.png",
+            "link": ""
+          }
+        },
+        "logo_B6VbkE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/download.jpg",
+            "link": ""
+          }
+        },
+        "logo_QCfDF3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo_1.png",
+            "link": ""
+          }
+        },
+        "logo_xyzmNC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_7.png",
+            "link": ""
+          }
+        },
+        "logo_yLUK3z": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/default-logo.png",
+            "link": ""
+          }
+        },
+        "logo_jMMkNe": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_6.png",
+            "link": ""
+          }
+        },
+        "logo_zrxCdA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_5.png",
+            "link": ""
+          }
+        },
+        "logo_LB6GG7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_4.png",
+            "link": ""
+          }
+        },
+        "logo_wcGmrx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png",
+            "link": ""
+          }
+        },
+        "logo_NhXrqg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_2.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Jn7GbK",
+        "logo_GEHT4r",
+        "logo_XGa6tU",
+        "logo_wngHjC",
+        "logo_nWYnXE",
+        "logo_B6VbkE",
+        "logo_QCfDF3",
+        "logo_xyzmNC",
+        "logo_yLUK3z",
+        "logo_jMMkNe",
+        "logo_zrxCdA",
+        "logo_LB6GG7",
+        "logo_wcGmrx",
+        "logo_NhXrqg"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "dynamic_logo_list_gKDyti": {
+      "type": "dynamic-logo-list",
+      "blocks": {
+        "logo_EkGqeb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/HEDLAND-DRUPAL-LOGO-3.png",
+            "link": ""
+          }
+        },
+        "logo_hUHrNh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/DTI_Logo.png",
+            "link": ""
+          }
+        },
+        "logo_hF9dqf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-white.png",
+            "link": ""
+          }
+        },
+        "logo_TpGtwF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Del-Tron.png",
+            "link": ""
+          }
+        },
+        "logo_MHdTUG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image_1.png",
+            "link": ""
+          }
+        },
+        "logo_K4ahmn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Taylor1_1000x1000_d42cc980-7764-4a72-a52d-5ebadb15d7c3.webp",
+            "link": ""
+          }
+        },
+        "logo_JFrqjq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Logo-MC-no-sub.png",
+            "link": ""
+          }
+        },
+        "logo_WBB3zf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.png",
+            "link": ""
+          }
+        },
+        "logo_NeEKML": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/image.png",
+            "link": ""
+          }
+        },
+        "logo_mA8ipU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/turck_logo_download.jpg",
+            "link": ""
+          }
+        },
+        "logo_daUwhw": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo_1.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_EkGqeb",
+        "logo_hUHrNh",
+        "logo_hF9dqf",
+        "logo_TpGtwF",
+        "logo_MHdTUG",
+        "logo_K4ahmn",
+        "logo_JFrqjq",
+        "logo_WBB3zf",
+        "logo_NeEKML",
+        "logo_mA8ipU",
+        "logo_daUwhw"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "content_offset_C9RkMW": {
+      "type": "content-offset",
+      "settings": {
+        "heading_small": "Heading",
+        "heading_large": "Heading",
+        "heading_size": "h1",
+        "subheading": "Subheading",
+        "content": "<p>Content</p>",
         "theme": "base"
       }
     }

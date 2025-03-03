@@ -9,11 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "static-faq",
-      "disabled": true,
-      "settings": {}
-    },
     "content_introduction_dL7zjQ": {
       "type": "content-introduction",
       "settings": {
@@ -26,10 +21,23 @@
         "link_icon": "forward",
         "theme": "base"
       }
+    },
+    "main": {
+      "type": "static-faq",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_html_LwW9zX": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<div class=\"globo-formbuilder\" data-id=\"Nzg5ODM=\"></div>"
+      }
     }
   },
   "order": [
     "content_introduction_dL7zjQ",
-    "main"
+    "main",
+    "dynamic_html_LwW9zX"
   ]
 }

@@ -5876,3 +5876,7 @@ ul.list--link-arrow li::before {
   color: white !important;
   filter: brightness(1.12);
 }
+.contact-form {
+    width: 28%;
+    margin: 0 auto;
+}

@@ -5877,6 +5877,5 @@ ul.list--link-arrow li::before {
   filter: brightness(1.12);
 }
 .contact-form {
-    width: 28%;
     margin: 0 auto;
 }

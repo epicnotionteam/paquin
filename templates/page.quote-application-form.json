@@ -31,7 +31,7 @@
       "type": "dynamic-html",
       "settings": {
         "title": "",
-        "custom_html": "<div class=\"globo-formbuilder\" data-id=\"Nzg5ODM=\"></div>"
+        "custom_html": "<div style=\"text-align: center;\">\n  <div class=\"globo-formbuilder\" data-id=\"Nzg5ODM=\" style=\"display: inline-block;\"></div>\n</div>"
       }
     }
   },

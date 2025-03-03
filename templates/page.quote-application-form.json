@@ -11,7 +11,21 @@
   "sections": {
     "main": {
       "type": "static-faq",
+      "disabled": true,
       "settings": {}
+    },
+    "content_introduction_dL7zjQ": {
+      "type": "content-introduction",
+      "settings": {
+        "heading": "Quote Application Form",
+        "heading_size": "h1",
+        "content": "",
+        "link_text": "",
+        "link_url": "",
+        "link_type": "link",
+        "link_icon": "forward",
+        "theme": "base"
+      }
     },
     "174103675882ae66ae": {
       "type": "apps",
@@ -33,6 +47,7 @@
   },
   "order": [
     "main",
+    "content_introduction_dL7zjQ",
     "174103675882ae66ae"
   ]
 }

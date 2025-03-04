@@ -14,8 +14,7 @@
     "dynamic_html_j9ckq3",
     "17411012556d49f238",
     "dynamic_logo_list_APPdeR",
-    "dynamic_logo_list_gKDyti",
-    "content_offset_C9RkMW"
+    "dynamic_logo_list_gKDyti"
   ],
   "sections": {
     "division-sensors-hero": {
@@ -284,17 +283,6 @@
       ],
       "settings": {
         "title": ""
-      }
-    },
-    "content_offset_C9RkMW": {
-      "type": "content-offset",
-      "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Heading",
-        "heading_size": "h1",
-        "subheading": "Subheading",
-        "content": "<p>Content</p>",
-        "theme": "base"
       }
     }
   }

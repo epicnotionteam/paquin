@@ -48,7 +48,7 @@
       "type": "dynamic-html",
       "settings": {
         "title": "Contact Us",
-        "custom_html": "<div class=\"container\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\"></div>\n<div class=\"child\">Barksdale; Kawasaki; etc.</div>\n</div>\n\n<style>\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2%; /* 2% margin between the child divs */\n  }\n  .child {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n  }\n  .globo-formbuilder {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n</style>"
+        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%;\">Barksdale; Kawasaki; etc.</div>\n</div>"
       }
     },
     "17411012556d49f238": {

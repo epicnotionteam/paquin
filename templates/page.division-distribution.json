@@ -48,7 +48,7 @@
       "type": "dynamic-html",
       "settings": {
         "title": "Contact Us",
-        "custom_html": "<div class=\"container\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\"></div>\n<div class=\"child\">Div 1</div>\n</div>\n\n<style>\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2%; /* 2% margin between the child divs */\n  }\n  .child {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n  }\n  .globo-formbuilder {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n</style>"
+        "custom_html": "<div class=\"container\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\"></div>\n<div class=\"child\">Barksdale; Kawasaki; etc.</div>\n</div>\n\n<style>\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 2%; /* 2% margin between the child divs */\n  }\n  .child {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n  }\n  .globo-formbuilder {\n    flex: 0 0 49%; /* Each child takes up 49% of the container's width */\n  }\n</style>"
       }
     },
     "17411012556d49f238": {

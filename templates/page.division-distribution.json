@@ -12,7 +12,6 @@
     "division-sensors-hero",
     "division-sensors-about",
     "dynamic_html_j9ckq3",
-    "17411012556d49f238",
     "dynamic_logo_list_APPdeR",
     "dynamic_logo_list_gKDyti"
   ],
@@ -49,23 +48,6 @@
       "settings": {
         "title": "Contact Us",
         "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%;\">Barksdale; Kawasaki; etc.</div>\n</div>"
-      }
-    },
-    "17411012556d49f238": {
-      "type": "apps",
-      "blocks": {
-        "powerful_form_builder_app_block_9UMJrx": {
-          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
-          "settings": {
-            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "powerful_form_builder_app_block_9UMJrx"
-      ],
-      "settings": {
-        "include_padding": true
       }
     },
     "dynamic_logo_list_APPdeR": {

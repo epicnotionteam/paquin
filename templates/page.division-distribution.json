@@ -20,7 +20,7 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "custom_css": [
-        ".container--image {background-size: contain; background-repeat: no-repeat; background-position: center;}"
+        ".container--image {background-size: contain; background-repeat: no-repeat; background-position: right;}"
       ],
       "settings": {
         "heading": "Precision-Engineered Hydraulic, Pneumatic, and Fluid Control Solutions for Demanding Applications",
@@ -28,7 +28,7 @@
         "content": "<p>Paquin Distribution, a division of The Paquin Company, offers high-performance hydraulic, pneumatic, and fluid control solutions for safe and reliable operation in critical applications like aerospace, heavy duty construction, agriculture, automotive, and energy.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/Distribution_logos_v2.png",
+        "image": "shopify://shop_images/67c7793f4453c9cc1b5c9504_Distribution_logos_v3.webp",
         "show_jump_links": false
       }
     },

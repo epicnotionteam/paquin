@@ -19,6 +19,9 @@
   "sections": {
     "division-sensors-hero": {
       "type": "hero-internal",
+      "custom_css": [
+        ".container--image {object-fit: contain;}"
+      ],
       "settings": {
         "heading": "Precision-Engineered Hydraulic, Pneumatic, and Fluid Control Solutions for Demanding Applications",
         "heading_size": "h1",

@@ -204,13 +204,6 @@
             "link": ""
           }
         },
-        "logo_hF9dqf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-white.png",
-            "link": ""
-          }
-        },
         "logo_TpGtwF": {
           "type": "logo",
           "settings": {
@@ -271,7 +264,6 @@
       "block_order": [
         "logo_EkGqeb",
         "logo_hUHrNh",
-        "logo_hF9dqf",
         "logo_TpGtwF",
         "logo_MHdTUG",
         "logo_K4ahmn",

@@ -60,7 +60,7 @@
     "dynamic_html_tyPKyi": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: none; margin: 0 auto;}"
+        ".custom-html--container {max-width: 1590px; margin: 0 auto;}"
       ],
       "settings": {
         "title": "",

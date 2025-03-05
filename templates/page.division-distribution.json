@@ -61,8 +61,8 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-left: 60px; padding-right: 60px;}",
-        ".globo-formbuilder {flex: 0 0 40%; min-width: 370px; text-align: left;}",
-        "@media (max-width: 1024px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .globo-formbuilder {width: 100%; }}",
+        ".div#globo-formbuilder-39057 {flex: 0 0 40%; min-width: 370px; text-align: left;}",
+        "@media (max-width: 1024px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .div#globo-formbuilder-39057 {width: 100%; }}",
         "@media (max-width: 720px) {.custom-html--container {padding-left: 4vw; padding-right: 4vw; }}"
       ],
       "settings": {

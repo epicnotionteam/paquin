@@ -61,7 +61,8 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1590px; margin: 0 auto;}",
-        ".custom-html--container {padding: 0px; margin: 0 auto;}"
+        ".custom-html--container {padding: 0px; margin: 0 auto;}",
+        ".container {margin: 0 auto;}"
       ],
       "settings": {
         "title": "",

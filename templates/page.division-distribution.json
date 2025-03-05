@@ -10,7 +10,7 @@
 {
   "order": [
     "division-sensors-hero",
-    "dynamic_custom_liquid_qfztXd",
+    "dynamic_html_tBxnnA",
     "division-sensors-about",
     "dynamic_html_j9ckq3"
   ],
@@ -30,12 +30,6 @@
         "show_jump_links": false
       }
     },
-    "dynamic_custom_liquid_qfztXd": {
-      "type": "dynamic-custom-liquid",
-      "settings": {
-        "custom_liquid": "{% comment %}\n  Shopify Section Template for Paquin Distribution - Full Width Section\n{% endcomment %}\n<div class=\"section__grid wrap--max push--center\" style=\"width: 100%; max-width: 100%; margin: 0;\">\n  <div class=\"container--heading-small section__primary-heading\">\n    <h2 class=\"section__heading--small\">{{ 'Paquin Distribution' }}</h2>\n  </div>\n\n  <div class=\"container--heading-large\">\n    <h3 class=\"section__heading--large h1\">{{ 'Powering Industry with Precision' }}</h3>\n  </div>\n\n  <div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 5%;\">\n    <div class=\"Text Left\" style=\"flex: 0 0 49%; min-width: 370px;\">\n      {{ 'Barksdale; Kawasaki; etc.' }}\n    </div>\n    <div class=\"Image Right\" style=\"flex: 0 0 49%; min-width: 370px;\">\n      <img src=\"{{ 'https://jjunpyeyueshrgio-79709110575.shopifypreview.com/cdn/shop/files/67c1ec34e6b4427f928b88fa_pneumatic_800x.webp?v=1740762216' }}\" alt=\"Pneumatic Equipment\" style=\"width: 100%; height: auto;\">\n    </div>\n  </div>\n</div>"
-      }
-    },
     "division-sensors-about": {
       "type": "content-offset",
       "settings": {
@@ -53,6 +47,13 @@
       "settings": {
         "title": "Contact Us",
         "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%; min-width: 370px;\">Barksdale; Kawasaki; etc.</div>\n</div>"
+      }
+    },
+    "dynamic_html_tBxnnA": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "Custom HTML",
+        "custom_html": "<p>Write or paste your HTML code here</p>"
       }
     }
   }

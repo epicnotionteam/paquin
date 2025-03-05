@@ -10,10 +10,10 @@
 {
   "order": [
     "division-sensors-hero",
+    "content_blocks_qJAQpQ",
     "division-sensors-about",
     "dynamic_html_j9ckq3",
-    "dynamic_logo_list_APPdeR",
-    "dynamic_logo_list_gKDyti"
+    "dynamic_html_wiJHP8"
   ],
   "sections": {
     "division-sensors-hero": {
@@ -29,6 +29,17 @@
         "link_url": "shopify://pages/contact",
         "image": "shopify://shop_images/67c7793f4453c9cc1b5c9504_Distribution_logos_v3.webp",
         "show_jump_links": false
+      }
+    },
+    "content_blocks_qJAQpQ": {
+      "type": "content-blocks",
+      "settings": {
+        "heading_small": "Paquin Distribution",
+        "heading_large": "Powering Industry with Precision",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "3",
+        "theme": "base"
       }
     },
     "division-sensors-about": {
@@ -50,216 +61,11 @@
         "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%; min-width: 370px;\">Barksdale; Kawasaki; etc.</div>\n</div>"
       }
     },
-    "dynamic_logo_list_APPdeR": {
-      "type": "dynamic-logo-list",
-      "blocks": {
-        "logo_Jn7GbK": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/kawasaki-logo.svg",
-            "link": ""
-          }
-        },
-        "logo_GEHT4r": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/fabco-air-logo.png",
-            "link": ""
-          }
-        },
-        "logo_XGa6tU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.webp",
-            "link": ""
-          }
-        },
-        "logo_wngHjC": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/LEESON-Logo-Electric-Blue-TM-260x130.png",
-            "link": ""
-          }
-        },
-        "logo_nWYnXE": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ingersoll-rand-logo-145x45.png",
-            "link": ""
-          }
-        },
-        "logo_B6VbkE": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/download.jpg",
-            "link": ""
-          }
-        },
-        "logo_QCfDF3": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo_1.png",
-            "link": ""
-          }
-        },
-        "logo_xyzmNC": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_7.png",
-            "link": ""
-          }
-        },
-        "logo_yLUK3z": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/default-logo.png",
-            "link": ""
-          }
-        },
-        "logo_jMMkNe": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_6.png",
-            "link": ""
-          }
-        },
-        "logo_zrxCdA": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_5.png",
-            "link": ""
-          }
-        },
-        "logo_LB6GG7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_4.png",
-            "link": ""
-          }
-        },
-        "logo_wcGmrx": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_3.png",
-            "link": ""
-          }
-        },
-        "logo_NhXrqg": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_2.png",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Jn7GbK",
-        "logo_GEHT4r",
-        "logo_XGa6tU",
-        "logo_wngHjC",
-        "logo_nWYnXE",
-        "logo_B6VbkE",
-        "logo_QCfDF3",
-        "logo_xyzmNC",
-        "logo_yLUK3z",
-        "logo_jMMkNe",
-        "logo_zrxCdA",
-        "logo_LB6GG7",
-        "logo_wcGmrx",
-        "logo_NhXrqg"
-      ],
+    "dynamic_html_wiJHP8": {
+      "type": "dynamic-html",
       "settings": {
-        "title": ""
-      }
-    },
-    "dynamic_logo_list_gKDyti": {
-      "type": "dynamic-logo-list",
-      "blocks": {
-        "logo_EkGqeb": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/HEDLAND-DRUPAL-LOGO-3.png",
-            "link": ""
-          }
-        },
-        "logo_hUHrNh": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/DTI_Logo.png",
-            "link": ""
-          }
-        },
-        "logo_TpGtwF": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Del-Tron.png",
-            "link": ""
-          }
-        },
-        "logo_MHdTUG": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_1.png",
-            "link": ""
-          }
-        },
-        "logo_K4ahmn": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Taylor1_1000x1000_d42cc980-7764-4a72-a52d-5ebadb15d7c3.webp",
-            "link": ""
-          }
-        },
-        "logo_JFrqjq": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Logo-MC-no-sub.png",
-            "link": ""
-          }
-        },
-        "logo_WBB3zf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.png",
-            "link": ""
-          }
-        },
-        "logo_NeEKML": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image.png",
-            "link": ""
-          }
-        },
-        "logo_mA8ipU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/turck_logo_download.jpg",
-            "link": ""
-          }
-        },
-        "logo_daUwhw": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo_1.webp",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_EkGqeb",
-        "logo_hUHrNh",
-        "logo_TpGtwF",
-        "logo_MHdTUG",
-        "logo_K4ahmn",
-        "logo_JFrqjq",
-        "logo_WBB3zf",
-        "logo_NeEKML",
-        "logo_mA8ipU",
-        "logo_daUwhw"
-      ],
-      "settings": {
-        "title": ""
+        "title": "Custom HTML",
+        "custom_html": "<p>Write or paste your HTML code here</p>"
       }
     }
   }

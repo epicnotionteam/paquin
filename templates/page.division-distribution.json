@@ -11,7 +11,6 @@
   "order": [
     "division-sensors-hero",
     "division-sensors-about",
-    "dynamic_html_j9ckq3",
     "content_blocks_kVncaq",
     "dynamic_html_tyPKyi"
   ],
@@ -43,24 +42,17 @@
         "theme": "base"
       }
     },
-    "dynamic_html_j9ckq3": {
-      "type": "dynamic-html",
-      "settings": {
-        "title": "Contact Us",
-        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%; min-width: 370px;\">Barksdale; Kawasaki; etc.</div>\n</div>"
-      }
-    },
     "content_blocks_kVncaq": {
       "type": "content-blocks",
       "custom_css": [
         ".container--feed {display: none;}"
       ],
       "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Heading",
+        "heading_small": "",
+        "heading_large": "Need parts from our partners? Contact Us",
         "heading_size": "h1",
         "show_numbering": false,
-        "columns": "4",
+        "columns": "3",
         "theme": "base"
       }
     },

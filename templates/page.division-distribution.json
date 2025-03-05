@@ -13,6 +13,7 @@
     "division-sensors-about",
     "dynamic_html_j9ckq3",
     "content_blocks_kVncaq",
+    "dynamic_image_with_text_7fqrew",
     "dynamic_html_tyPKyi"
   ],
   "sections": {
@@ -61,8 +62,26 @@
         "theme": "base"
       }
     },
+    "dynamic_image_with_text_7fqrew": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "Image with text",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Image with text",
+        "subheading": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
     "dynamic_html_tyPKyi": {
       "type": "dynamic-html",
+      "custom_css": [
+        ".custom-html--container {max-width: 1590px; margin: 0 auto;}"
+      ],
       "settings": {
         "title": "Custom HTML",
         "custom_html": "<p>Write or paste your HTML code here</p>"

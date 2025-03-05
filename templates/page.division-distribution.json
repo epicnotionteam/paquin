@@ -48,8 +48,8 @@
         ".container--feed {display: none;}"
       ],
       "settings": {
-        "heading_small": "",
-        "heading_large": "Need parts from our partners? Contact Us",
+        "heading_small": "Need parts from our partners?",
+        "heading_large": "Contact Us",
         "heading_size": "h1",
         "show_numbering": false,
         "columns": "3",
@@ -63,7 +63,7 @@
       ],
       "settings": {
         "title": "",
-        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%; min-width: 370px;\">Barksdale; Kawasaki; etc.</div>\n</div>"
+        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"div-block\" style=\"flex: 0 0 49%; min-width: 370px;\">\n    <div class=\"div-block-2\">\n      <h3>Barksdale</h3>\n      <div>Directional Control Valves, etc.</div>\n    </div>\n    <div class=\"div-block-2\">\n      <h3>Kawasaki</h3>\n      <div>Staffa Radial Piston Motors, Axial Piston Motors, Axial Piston Pumps, Controls / Valves</div>\n    </div>\n    <div class=\"div-block-2\">\n      <h3>Comatrol</h3>\n      <div>Cartridge Valves, HICs, Bodies / Manifolds</div>\n    </div>\n  </div>\n</div>"
       }
     }
   }

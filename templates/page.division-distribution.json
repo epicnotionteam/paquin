@@ -45,7 +45,8 @@
     "content_blocks_kVncaq": {
       "type": "content-blocks",
       "custom_css": [
-        ".container--feed {display: none;}"
+        ".container--feed {display: none;}",
+        ".section--content-blocks.theme--base.wrap--container {padding-bottom: 4rem;}"
       ],
       "settings": {
         "heading_small": "Need parts from our partners?",

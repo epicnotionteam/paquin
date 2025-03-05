@@ -1,6 +1,6 @@
 .dynamic-video-wrapper, .navmenu-meganav-wrapper, .site-navigation, .product-section--container, .product-row--container, .productgrid--outer, .pagination--container, .page-content, .page-masthead, .message-banner--outer, .breadcrumbs-container, .atc-banner--outer, .contact-page-content, .account-page-content, .account-page-masthead, .pxs-image-with-text-section, .pxs-newsletter-section, .pxs-map-section, .testimonials-section, .slideshow--width-content, .shoppable-image, .rich-text, .promo-mosaic--container, .promo-grid--container, .page__container, .menulist-container, .logolist--container, .image-with-text, .custom-html--container,
 .custom-liquid--container, .highlights-banner__content, .highlights-banner__container.content-width, .featured-product__container, .featured-collection__container, .faq, .countdown-timer, .collection-list__container, .blogposts--container, .subcollections-banner__container, .subcollections__container, .subcollections-featured-collection__header, .utility-bar__content, .blog--container, .product-compare-container, .product__container, .password-page-footer, .password-page-content--inner, .cart--section, .article--container, .article-image--content-width, .announcement-bar-text-mobile, .announcement-bar-text, .fourohfour--container, .site-footer-item, .site-header-main {
-  --layout-container-max-width: 1590px;
+  --layout-container-max-width: 1400px;
   --layout-container-gutter: 10px;
   max-width: var(--layout-container-max-width);
   padding-right: 10px;

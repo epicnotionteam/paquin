@@ -30,6 +30,13 @@
         "show_jump_links": false
       }
     },
+    "dynamic_html_tBxnnA": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "Custom HTML",
+        "custom_html": "<div id=\"shopify-section-template--24202923475247__division-sensors-about\" class=\"shopify-section section-theme--base\">\n\n\n\n\n\n\n\n\n\n\n\n<section class=\"section--content-offset theme--base wrap--container\" id=\"paquin-distribution\">\n    <div class=\"section__grid wrap--max push--center\">\n        \n        \n            <div class=\"container--heading-small section__primary-heading\">\n                <h2 class=\"section__heading--small\">Paquin Distribution</h2>\n            </div>\n        \n        \n        \n            <div class=\"container--heading-large\">\n                <h3 class=\"section__heading--large h1\">Powering Industry with Precision</h3>\n            </div>\n        \n        \n        \n            <div class=\"container--subheading\">\n                <p class=\"section__subheading\">Our Capabilities</p>\n            </div>\n        \n        \n        \n            <div class=\"container--content\">\n                <div class=\"section__content\">\n<p>At Paquin Distribution, we’re more than just a supplier—we’re your partner in keeping hydraulic, pneumatic, and fluid control systems running at peak performance. With decades of experience under our belt, we’ve built strong relationships with top manufacturers to bring you precision-engineered components that boost efficiency, reliability, and durability.<br><br>Our inventory is stocked with hydraulics parts, accumulators, pumps, motors, valves of all types, coils, gauges, manifolds and more all carefully selected to tackle the real-world challenges of industries like construction, manufacturing, energy, and more. Whether you’re fine-tuning a complex system or tackling a major overhaul, we have the expertise and high-performance products to help you get the job done right.</p>\n<p>As a sales representative and stocking distributor, we pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions. Our partnerships with industry leaders like Danfoss Power Solutions, Barksdale, ITT Standard/Xylem, Hedland, Northman, and Turck allow us to provide innovative, cutting-edge technology tailored to your specific requirements.  Products &amp; support are just a call away!</p>\n</div>\n            </div>\n        \n        \n        \n            <div class=\"container--image\">\n                <img class=\"section__image\" src=\"//jjunpyeyueshrgio-79709110575.shopifypreview.com/cdn/shop/files/67c1ec34e6b4427f928b88fa_pneumatic_800x.webp?v=1740762216\" alt=\"Paquin Distribution\">\n            </div>\n        \n    </div>\n</section>\n\n</div>"
+      }
+    },
     "division-sensors-about": {
       "type": "content-offset",
       "settings": {
@@ -47,13 +54,6 @@
       "settings": {
         "title": "Contact Us",
         "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; margin-bottom: 8%;\">\n  <div class=\"globo-formbuilder\" data-id=\"MzkwNTc=\" style=\"flex: 0 0 49%; min-width: 370px;\"></div>\n  <div class=\"child\" style=\"flex: 0 0 49%; min-width: 370px;\">Barksdale; Kawasaki; etc.</div>\n</div>"
-      }
-    },
-    "dynamic_html_tBxnnA": {
-      "type": "dynamic-html",
-      "settings": {
-        "title": "Custom HTML",
-        "custom_html": "<p>Write or paste your HTML code here</p>"
       }
     }
   }

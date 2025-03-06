@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "order": [
     "contact-hero",
@@ -6,10 +15,13 @@
   "sections": {
     "contact-hero": {
       "type": "hero-internal",
+      "custom_css": [
+        ".container--content{max-width: 1590px}"
+      ],
       "settings": {
         "heading": "Contact Paquin",
         "heading_size": "text--headline",
-        "content": "<p>At Paquin, we're committed to delivering an exceptional customer experience. Whether you require product assistance or wish to provide feedback, our dedicated team is here to help.<\/p>",
+        "content": "<p>At Paquin, we're committed to delivering an exceptional customer experience. Whether you require product assistance or wish to provide feedback, our dedicated team is here to help.</p>",
         "link_text": "",
         "link_url": "#test",
         "show_jump_links": false
@@ -23,9 +35,6 @@
         "heading_size": "h1",
         "subheading": "Contact Options",
         "form": "",
-        "method_phone": "(216) 261-5700",
-        "method_phone_alt": "1-800-260-5664",
-        "method_address": "9286 Mercantile Dr. Mentor, OH 44060",
         "theme": "base"
       }
     }

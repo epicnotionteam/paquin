@@ -81,8 +81,8 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
-        ".partners-flex {display: flex; flex-wrap: wrap; gap: 1%;}",
-        ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); box-sizing: border-box;}",
+        ".partners-flex {display: flex; flex-wrap: wrap; gap: 1%; align-items: flex-start;}",
+        ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); box-sizing: border-box; height: auto;}",
         "@media (max-width: 1342px) {.custom-html--container {padding-left: 40px; padding-right: 40px; }}",
         "@media (max-width: 720px) {.custom-html--container {padding-left: 4vw; padding-right: 4vw; }}"
       ],

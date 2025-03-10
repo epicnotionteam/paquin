@@ -50,9 +50,9 @@
     "dynamic_html_WtRP49": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
+        ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-left: 3%;}",
         ".container {display: flex; flex-wrap: wrap; margin-bottom: 8%;}",
-        "@media (max-width: 1342px) {.custom-html--container {padding-left: 40px; padding-right: 40px; }}",
+        "@media (max-width: 1342px) {.custom-html--container {padding-left: 2%; padding-right: 40px; }}",
         "@media (max-width: 1050px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .gdiv-block-left {flex: none; width: 100%; }}",
         "@media (max-width: 720px) {.custom-html--container {padding-left: 4vw; padding-right: 4vw; }}"
       ],

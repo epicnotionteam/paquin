@@ -10,6 +10,8 @@
 {
   "order": [
     "division-sensors-hero",
+    "content_blocks_yik4dc",
+    "dynamic_html_WtRP49",
     "division-sensors-about",
     "content_blocks_kVncaq",
     "dynamic_html_tyPKyi"
@@ -30,8 +32,38 @@
         "show_jump_links": false
       }
     },
+    "content_blocks_yik4dc": {
+      "type": "content-blocks",
+      "custom_css": [
+        ".container--feed {display: none;}",
+        ".section--content-blocks.theme--base.wrap--container {padding-bottom: 4rem;}"
+      ],
+      "settings": {
+        "heading_small": "Paquin Distribution",
+        "heading_large": "Powering Industry with Precision",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "3",
+        "theme": "base"
+      }
+    },
+    "dynamic_html_WtRP49": {
+      "type": "dynamic-html",
+      "custom_css": [
+        ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
+        ".globo-formbuilder {flex: 0 0 40%; min-width: 370px; text-align: left;}",
+        ".container {display: flex; flex-wrap: wrap; gap: 2%; margin-bottom: 8%;}",
+        "@media (max-width: 1342px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .globo-formbuilder {flex: none; width: 100%; }}",
+        "@media (max-width: 720px) {.custom-html--container {padding-left: 4vw; padding-right: 4vw; }}"
+      ],
+      "settings": {
+        "title": "",
+        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 2%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\" style=\"flex: 0 0 58%; min-width: 350px;\">\n    <p>At Paquin Distribution, we’re more than just a supplier—we’re your partner in keeping hydraulic, pneumatic, and fluid control systems running at peak performance. With decades of experience under our belt, we’ve built strong relationships with top manufacturers to bring you precision-engineered components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with hydraulics parts, accumulators, pumps, motors, valves of all types, coils, gauges, manifolds and more, all carefully selected to tackle the real-world challenges of industries like construction, manufacturing, energy, and more. Whether you’re fine-tuning a complex system or tackling a major overhaul, we have the expertise and high-performance products to help you get the job done right. <br><br>\nAs a sales representative and stocking distributor, we pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions. Our partnerships with industry leaders like Danfoss Power Solutions, Barksdale, ITT Standard/Xylem, Hedland, Northman, and Turck allow us to provide innovative, cutting-edge technology tailored to your specific requirements.  Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\" style=\"flex: 0 0 40%; min-width: 350px;\">\n    <img src=\"https://via.placeholder.com/350\" alt=\"Descriptive alt text\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>"
+      }
+    },
     "division-sensors-about": {
       "type": "content-offset",
+      "disabled": true,
       "settings": {
         "heading_small": "Paquin Distribution",
         "heading_large": "Powering Industry with Precision",
@@ -60,7 +92,7 @@
     "dynamic_html_tyPKyi": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-left: 60px; padding-right: 60px;}",
+        ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
         ".globo-formbuilder {flex: 0 0 40%; min-width: 370px; text-align: left;}",
         ".container {display: flex; flex-wrap: wrap; gap: 2%; margin-bottom: 8%;}",
         "@media (max-width: 1342px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .globo-formbuilder {flex: none; width: 100%; }}",

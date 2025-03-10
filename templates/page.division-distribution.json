@@ -95,7 +95,7 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
-        ".globo-formbuilder {flex: 0 0 40%; min-width: 350px; text-align: left;}",
+        ".globo-formbuilder {flex: 0 0 40%; min-width: 345px; text-align: left;}",
         ".container {display: flex; flex-wrap: wrap; gap: 2%; margin-bottom: 8%;}",
         ".partners {flex: 0 0 58%; min-width: 350px;}",
         "@media (max-width: 1342px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .globo-formbuilder {flex: none; width: 100%; } .partners {flex: none; width: 100%; }}",

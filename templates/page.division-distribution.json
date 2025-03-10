@@ -53,7 +53,7 @@
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-left: 1.2%;}",
         ".container {display: flex; flex-wrap: wrap; margin-bottom: 8%;}",
         "@media (max-width: 1342px) {.custom-html--container {padding-left: 4%; }}",
-        "@media (max-width: 1050px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .div-block-left {flex: none; width: 100%; }}",
+        "@media (max-width: 1050px) {.custom-html--container {padding-left: 40px; padding-right: 40px; } .div-block-left {flex: none; width: 100%; } .div-block-right {flex: none; width: 100%; }}",
         "@media (max-width: 720px) {.custom-html--container {padding-left: 4vw; padding-right: 4vw; }}"
       ],
       "settings": {

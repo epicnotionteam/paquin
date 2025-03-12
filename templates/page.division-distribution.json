@@ -122,8 +122,8 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
-        ".partners-flex {display: flex; flex-wrap: wrap; gap: 1%; /* Adjust gap as needed */ justify-content: space-between;}",
-        ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); /* Approximately 4 columns per row */ box-sizing: border-box;}"
+        ".partners-flex {display: flex; flex-wrap: wrap; gap: 1%; justify-content: space-between;}",
+        ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); box-sizing: border-box;}"
       ],
       "settings": {
         "title": "",

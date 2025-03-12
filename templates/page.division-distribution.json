@@ -60,7 +60,7 @@
     "dynamic_html_WtRP49": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: 100%; background: #f1f1f1; padding: 1% 0;}",
+        ".custom-html--container {max-width: 100%; background: #f1f1f1; padding: 1% 0; margin-top: 0%}",
         ".wrap {max-width: 1650px; margin: 0 auto; padding: 1% 60px 0 0;}",
         ".container {display: flex; flex-wrap: wrap; margin-bottom: 4%;}",
         ".div-block-left {flex: 0 0 56%; min-width: 350px;}",

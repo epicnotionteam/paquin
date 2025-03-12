@@ -138,8 +138,8 @@
     "dynamic_html_TM6cRT": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: 100%; margin: 0 auto; background-color: #f1f1f1; padding-top: 2%; padding-bottom: 4%;}",
-        ".wrap {max-width: 1650px; margin: 0 auto; padding-right: 60px; padding-top: 2%;}",
+        ".custom-html--container {max-width: 100%; margin: 0 auto; background-color: #f1f1f1; padding-top: 1%; padding-bottom: 4%;}",
+        ".wrap {max-width: 1650px; margin: 0 auto; padding-right: 60px; padding-top: 1%;}",
         ".flex-col {flex: 0 0 24%; box-sizing: border-box;}",
         ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); box-sizing: border-box;}",
         "@media (max-width: 1342px) {.wrap {padding-left: 40px; padding-right: 40px; }}",

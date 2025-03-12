@@ -61,7 +61,7 @@
       "type": "dynamic-html",
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto;}",
-        ".container {display: flex; flex-wrap: wrap; margin-bottom: 8%;}",
+        ".container {display: flex; flex-wrap: wrap; margin-bottom: 4%;}",
         ".div-block-left {flex: 0 0 56%; min-width: 350px;}",
         ".div-block-right {flex: 0 0 40%; min-width: 350px;}",
         "@media (max-width: 1730px) {.custom-html--container {padding: 0 4%; }}",
@@ -138,7 +138,7 @@
     "dynamic_html_TM6cRT": {
       "type": "dynamic-html",
       "custom_css": [
-        ".custom-html--container {max-width: 100%; margin: 0 auto; background-color: #f1f1f1; padding-top: 4%; padding-bottom: 8%;}",
+        ".custom-html--container {max-width: 100%; margin: 0 auto; background-color: #f1f1f1; padding-top: 2%; padding-bottom: 4%;}",
         ".wrap {max-width: 1650px; margin: 0 auto; padding-right: 60px; padding-top: 2%;}",
         ".flex-col {flex: 0 0 24%; box-sizing: border-box;}",
         ".partners-flex .div-block-2 {flex: 0 0 calc(25% - 0.75%); box-sizing: border-box;}",

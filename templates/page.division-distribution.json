@@ -32,9 +32,9 @@
         ".container--image {background-size: contain; background-repeat: no-repeat; background-position: center; background-color: white;}"
       ],
       "settings": {
-        "heading": "Precision-Engineered Hydraulic, Pneumatic & Fluid Control Solutions for Demanding Applications",
+        "heading": "Hydraulic, Pneumatic & Fluid Control Solutions for Demanding Applications",
         "heading_size": "h1",
-        "content": "<p>Paquin Distribution, a division of The Paquin Company, offers high-performance products manufactured by our trusted partners for safe and reliable operation in critical applications like aerospace, heavy duty construction, agriculture, automotive, and energy.  </p>",
+        "content": "<p>Paquin Distribution, a division of The Paquin Company, offers high-performance products manufactured by our trusted partners for safe and reliable operation.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
         "image": "shopify://shop_images/67c7793f4453c9cc1b5c9504_Distribution_logos_v3.webp",
@@ -49,7 +49,7 @@
       ],
       "settings": {
         "heading_small": "Paquin Distribution",
-        "heading_large": "Powering Industry with Precision",
+        "heading_large": "Distribution with Precision",
         "heading_size": "h1",
         "show_numbering": false,
         "columns": "3",
@@ -69,11 +69,12 @@
       ],
       "settings": {
         "title": "",
-        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Distribution, we’re more than just a supplier—we’re your partner in keeping hydraulic, pneumatic, and fluid control systems running at peak performance. With decades of experience under our belt, we’ve built strong relationships with top manufacturers to bring you precision-engineered components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with hydraulics parts, accumulators, pumps, motors, valves of all types, coils, gauges, manifolds and more, all carefully selected to tackle the real-world challenges of industries like construction, manufacturing, energy, and more. Whether you’re fine-tuning a complex system or tackling a major overhaul, we have the expertise and high-performance products to help you get the job done right. <br><br>\nAs a sales representative and stocking distributor, we pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions. Our partnerships with industry leaders like Danfoss Power Solutions, Barksdale, ITT Standard/Xylem, Hedland, Northman, and Turck allow us to provide innovative, cutting-edge technology tailored to your specific requirements.  Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>"
+        "custom_html": "<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Distribution, we’re more than just a supplier—we’re your engineering partner here to assist in optimizing your systems.  With decades of experience, we’ve built strong relationships with top manufacturers to bring you components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with accumulators, pumps, motors, valves, coils, gauges, manifolds, hoses and more.  Our partners are carefully selected to help us support customers across a broad range of commercial &amp; industrial applications. We pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions.  Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>"
       }
     },
     "content_blocks_w3fyDd": {
       "type": "content-blocks",
+      "disabled": true,
       "custom_css": [
         ".container--feed {display: none;}",
         ".section--content-blocks.theme--base.wrap--container {padding-bottom: 4rem;}"
@@ -89,6 +90,7 @@
     },
     "dynamic_html_y6aeCx": {
       "type": "dynamic-html",
+      "disabled": true,
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto;}",
         ".container {display: flex; flex-wrap: wrap; margin-bottom: 8%;}",
@@ -130,6 +132,7 @@
     },
     "content_blocks_BU7NAa": {
       "type": "content-blocks",
+      "disabled": true,
       "settings": {
         "heading_small": "-----------------------------------------------",
         "heading_large": "This is just a separator for Rob and Breanna's Viewing Purposes",
@@ -141,6 +144,7 @@
     },
     "dynamic_html_yBfqMf": {
       "type": "dynamic-html",
+      "disabled": true,
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
         ".partners-flex {display: flex; flex-wrap: wrap; gap: 1%; align-items: flex-start;}",
@@ -155,6 +159,7 @@
     },
     "content_blocks_kVncaq": {
       "type": "content-blocks",
+      "disabled": true,
       "custom_css": [
         ".container--feed {display: none;}",
         ".section--content-blocks.theme--base.wrap--container {padding-bottom: 4rem;}"
@@ -170,6 +175,7 @@
     },
     "dynamic_html_tyPKyi": {
       "type": "dynamic-html",
+      "disabled": true,
       "custom_css": [
         ".custom-html--container {max-width: 1650px; margin: 0 auto; padding-right: 60px;}",
         ".globo-formbuilder {flex: 0 0 40%; min-width: 345px; text-align: left; margin: 0 0 8% 0;}",

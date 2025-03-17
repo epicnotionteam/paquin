@@ -83,8 +83,8 @@
             "heading": "Your Go-To Distributor for Products from A to Z",
             "heading_size": "h2",
             "content": "<p>We maintain an impressive variety of product stock from our long-term manufacturing partners.  Valves, pumps, accumulators, manifolds, gauges, switches & more, all ready for same day delivery.</p><p> </p>",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "Learn more",
+            "link_url": "shopify://pages/paquin-distribution",
             "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
             "image": "shopify://shop_images/67c1ec368ec7d70b08485e32_hydraulic.webp"
           }

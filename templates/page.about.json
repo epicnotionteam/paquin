@@ -310,15 +310,6 @@
             "image": "shopify://shop_images/asset__headshot--placeholder-male.jpg"
           }
         },
-        "team_block_QrEg9M": {
-          "type": "team-block",
-          "settings": {
-            "name": "John Menke",
-            "role": "Engineering",
-            "social": "",
-            "image": "shopify://shop_images/asset__headshot--john-menke.jpg"
-          }
-        },
         "team_block_4jrjJb": {
           "type": "team-block",
           "settings": {
@@ -436,24 +427,6 @@
             "image": "shopify://shop_images/asset__will-fisher.jpg"
           }
         },
-        "team_block_XHqkhX": {
-          "type": "team-block",
-          "settings": {
-            "name": "Phyliss Neal-Adams",
-            "role": "Metrology/Testing",
-            "social": "",
-            "image": "shopify://shop_images/asset__phyliss-neal-adams.jpg"
-          }
-        },
-        "team_block_PbBPLq": {
-          "type": "team-block",
-          "settings": {
-            "name": "Brett Matheson",
-            "role": "Inventory Control",
-            "social": "",
-            "image": "shopify://shop_images/asset__headshot--placeholder-male.jpg"
-          }
-        },
         "team_block_MMdbKa": {
           "type": "team-block",
           "settings": {
@@ -480,7 +453,6 @@
         "team_block_V9kRex",
         "team_block_z3YgAN",
         "team_block_VVkxqW",
-        "team_block_QrEg9M",
         "team_block_4jrjJb",
         "team_block_mBNkiF",
         "team_block_P6bzxL",
@@ -494,8 +466,6 @@
         "team_block_aYQWne",
         "team_block_RgQbmV",
         "team_block_rHdpAm",
-        "team_block_XHqkhX",
-        "team_block_PbBPLq",
         "team_block_MMdbKa"
       ],
       "settings": {

@@ -24,7 +24,7 @@
         "filter-1"
       ],
       "custom_css": [
-        ".product-grid-item {transform: none !important;}"
+        ".product-grid-item:hover {transform: none !important;}"
       ],
       "settings": {
         "results_per_page_range": 24,

@@ -24,7 +24,7 @@
         "filter-1"
       ],
       "custom_css": [
-        ".product-grid-item:hover {transform: none !important;}"
+        ".productgrid--item {min-height: 708px; /* Match the maximum --open-height value */ /* Other styles remain the same */}"
       ],
       "settings": {
         "results_per_page_range": 24,

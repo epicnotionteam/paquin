@@ -25,7 +25,7 @@
       ],
       "custom_css": [
         ".productgrid--item {min-height: 720px;}",
-        "@media screen and (max-width: 1250px) {.productgrid--item {min-height: 400px; }}"
+        "@media screen and (max-width: 1250px) {.productgrid--item {min-height: 400px; }@media screen and (max-width: 600px) {.productgrid--item {min-height: 250px; }}"
       ],
       "settings": {
         "results_per_page_range": 24,

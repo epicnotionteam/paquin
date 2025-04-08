@@ -24,7 +24,7 @@
         "filter-1"
       ],
       "custom_css": [
-        ".productitem-quickshop {transform: none !important;}"
+        ".product-grid-item {transform: none !important;}"
       ],
       "settings": {
         "results_per_page_range": 24,

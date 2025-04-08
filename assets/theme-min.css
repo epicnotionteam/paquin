@@ -16113,7 +16113,7 @@ rgb(255, 255, 255)
 }
 
 .productgrid--search {
-  position: relative;
+  position: static;
   z-index: 1;
   display: block;
 }

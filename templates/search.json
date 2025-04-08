@@ -24,7 +24,7 @@
         "filter-1"
       ],
       "custom_css": [
-        ".productgrid--item {min-height: 708px;"
+        ".productgrid--item {min-height: 600px;}"
       ],
       "settings": {
         "results_per_page_range": 24,

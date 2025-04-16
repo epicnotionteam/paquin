@@ -31,7 +31,11 @@
       "block_order": [
         "filter-1"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".productgrid {min-height: 720px;}",
+        "@media screen and (max-width: 1250px) {.productgrid--item {min-height: 400px; }}",
+        "@media screen and (max-width: 600px) {.productgrid--item {min-height: 250px; }}"
+      ],
       "settings": {
         "show_collection_image": false,
         "products_per_page_range": 24,

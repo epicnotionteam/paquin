@@ -16,7 +16,7 @@
     "contact-hero": {
       "type": "hero-internal",
       "custom_css": [
-        ".section__wrap--content-internal {max-width: 1500px; padding-left: 4vw; padding-right: 4vw; }"
+        ".section__wrap--content-internal {max-width: 1590px;}"
       ],
       "settings": {
         "heading": "Contact Paquin",

@@ -11,10 +11,20 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "dynamic_html_gRDiEH": {
+      "type": "dynamic-html",
+      "name": "t:sections.custom_html.presets.custom_html.name",
+      "settings": {
+        "title": "",
+        "custom_html": "<iframe width=\"100%\" height=\"2000px\" src=\"https://lookerstudio.google.com/embed/reporting/f67c7baf-423b-426a-bdfe-68e252cab8f4/page/iN9HF\" frameborder=\"0\" scrolling=\"no\" style=\"border:0; overflow:hidden;\" allowfullscreen=\"\" sandbox=\"allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox\">\n</iframe>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "dynamic_html_gRDiEH"
   ]
 }

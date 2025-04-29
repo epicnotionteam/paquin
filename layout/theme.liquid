@@ -66,6 +66,10 @@
       <link rel="canonical" href="{{ canonical_url }}" />
     {% endif %}
 
+    {% if handle contains ‘/pages/dashboard’ %}
+      <meta name=”robots” content=”noindex”>
+    {% endif %}
+    
     <meta name="viewport" content="width=device-width">
 
     {% assign x_handle = settings.social_x | split: 'x.com/' | last | split: 'twitter.com/' | last %}

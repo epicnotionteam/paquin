@@ -241,6 +241,15 @@
         "team_block_TEJECm": {
           "type": "team-block",
           "settings": {
+            "name": "Dave Scinto",
+            "role": "Sales Engineering Specialist",
+            "social": "",
+            "image": "shopify://shop_images/Dave_Scinto-website_faa612cc-17c2-4a28-bb18-541c960188b9.jpg"
+          }
+        },
+        "team_block_4BFGnn": {
+          "type": "team-block",
+          "settings": {
             "name": "John Frey",
             "role": "Outside Sales Engineer",
             "social": "",
@@ -446,6 +455,7 @@
         "team_block_kQijHU",
         "team_block_ydPhwd",
         "team_block_TEJECm",
+        "team_block_4BFGnn",
         "team_block_83FGGw",
         "team_block_dWcAQa",
         "team_block_yWNiie",

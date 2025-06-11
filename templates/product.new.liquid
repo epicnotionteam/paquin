@@ -84,38 +84,5 @@
             <!-- Inquiry Form -->
             {% render 'product-inquiry-form' %}
         </div>
-    </div>
-    <section
-    class="
-      product-faqs
-    "
-    data-product-wrapper
-  >
-    <div>
-      {% assign faqs = product.metafields.custom.product_faq_list.value %}
-
-      {% if faqs and faqs != blank %}
-        <div class="product-faqs">
-          <h2>Frequently Asked Questions</h2>
-          <ul>
-            {% for faq in faqs %}
-              <li class="faq-item">
-                <strong>{{ faq.question_1 }}</strong>
-                <div class="faq-answer">{{ faq.answer.value }}</div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
-    </div>
-  </section>
-  
-<div>
-  <h3>FAQ Debug</h3>
-  <p>Metafield: {{ product.metafields.custom.product_faq_list }}</p>
-  <p>Value: {{ product.metafields.custom.product_faq_list }}</p>
-  <p>Count: {{ product.metafields.custom.product_faq_list.size }}</p>
-</div>
-
-  
+    </div> 
 </div>

@@ -85,19 +85,28 @@
             {% render 'product-inquiry-form' %}
         </div>
     </div>
-  <div>
-    {% if product.metafields.custom.product_faq_list.value.size > 0 %}
-      <div class="product-faqs">
-        <h2>Frequently Asked Questions</h2>
-        <ul>
-          {% for faq in product.metafields.custom.product_faq_list.value %}
-            <li class="faq-item">
-              <strong>{{ faq.question_1 }}</strong>
-              <div class="faq-answer">{{ faq.answer }}</div>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  </div>
+    <div>
+      {% if product.metafields.custom.product_faq_list.value.size > 0 %}
+        <div class="product-faqs">
+          <h2>Frequently Asked Questions</h2>
+          <ul>
+            {% for faq in product.metafields.custom.product_faq_list.value %}
+              <li class="faq-item">
+                <strong>{{ faq.question_1 }}</strong>
+                <div class="faq-answer">{{ faq.answer }}</div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  
+<div>
+  <h3>FAQ Debug</h3>
+  <p>Metafield: {{ product.metafields.custom.product_faq_list }}</p>
+  <p>Value: {{ product.metafields.custom.product_faq_list.value }}</p>
+  <p>Count: {{ product.metafields.custom.product_faq_list.value.size }}</p>
+</div>
+
+  
 </div>

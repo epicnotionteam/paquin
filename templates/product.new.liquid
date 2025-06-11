@@ -92,8 +92,8 @@
         <ul>
           {% for faq in product.metafields.custom.product_faq_list.value %}
             <li class="faq-item">
-              <strong>{{ product_faq.question_1 }}</strong>
-              <div class="faq-answer">{{ product_faq.answer }}</div>
+              <strong>{{ faq.question_1 }}</strong>
+              <div class="faq-answer">{{ faq.answer }}</div>
             </li>
           {% endfor %}
         </ul>

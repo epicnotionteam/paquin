@@ -69,17 +69,21 @@
     "
     data-product-wrapper
   >
-    {%
-      render 'product',
-      is_product_modal: false,
-      show_dynamic_checkout_button: settings.show_dynamic_checkout_button,
-      select_first_available_variant: settings.select_first_available_variant,
-      gallery_aspect_ratio: section.settings.gallery_aspect_ratio,
-      gallery_thumbnail_position: section.settings.gallery_thumbnail_position,
-      gallery_image_crop: section.settings.gallery_image_crop,
-      gallery_click_to_zoom: section.settings.gallery_click_to_zoom,
-      gallery_hover_zoom: section.settings.gallery_hover_zoom
-    %}
+    <div>
+      {% if product.metafields.custom.product_faq_list.value.size > 0 %}
+        <div class="product-faqs">
+          <h2>Frequently Asked Questions</h2>
+          <ul>
+            {% for faq in product.metafields.custom.product_faq_list.value %}
+              <li class="faq-item">
+                <strong>{{ faq.question_1 }}</strong>
+                <div class="faq-answer">{{ faq.answer }}</div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
   </section>
 </div>
 

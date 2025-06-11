@@ -92,6 +92,23 @@
 <div class="wrap--container">
   <section class="product__container" data-product-wrapper>
     <div>
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var questions = document.querySelectorAll('.faq-question');
+  questions.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var answerId = btn.getAttribute('aria-controls');
+      var answer = document.getElementById(answerId);
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      // Toggle
+      btn.setAttribute('aria-expanded', !expanded);
+      answer.style.display = expanded ? 'none' : 'block';
+      answer.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+    });
+  });
+});
+</script>
+
       {% assign faqs = product.metafields.custom.product_faq_list.value %}
 
       {% if faqs and faqs != blank %}

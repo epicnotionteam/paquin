@@ -89,6 +89,43 @@
   </section>
 </div>
 
+<div class="wrap--container">
+  <section class="product__container" data-product-wrapper>
+    <div>
+      {% assign faqs = product.metafields.custom.product_faq_list.value %}
+
+      {% if faqs and faqs != blank %}
+        <div class="product__container">
+          <h2>Frequently Asked Questions</h2>
+          <ul class="faq-list">
+            {% for faq in faqs %}
+              <li class="faq-item">
+                <button 
+                  class="faq-question" 
+                  type="button" 
+                  aria-expanded="false" 
+                  aria-controls="faq-answer-{{ forloop.index0 }}"
+                >
+                  {{ faq.question_1 }}
+                </button>
+                <div 
+                  class="faq-answer" 
+                  id="faq-answer-{{ forloop.index0 }}" 
+                  style="display: none;"
+                  aria-hidden="true"
+                >
+                  {{ faq.answer.value }}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+</div>
+
+
 {% schema %}
 {
   "name": "t:sections.product_information.name",

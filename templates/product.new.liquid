@@ -85,21 +85,30 @@
             {% render 'product-inquiry-form' %}
         </div>
     </div>
+    <section
+    class="
+      product-faqs
+    "
+    data-product-wrapper
+  >
     <div>
-      {% if product.metafields.custom.product_faq_list.value.size > 0 %}
+      {% assign faqs = product.metafields.custom.product_faq_list.value %}
+
+      {% if faqs and faqs != blank %}
         <div class="product-faqs">
           <h2>Frequently Asked Questions</h2>
           <ul>
-            {% for faq in product.metafields.custom.product_faq_list.value %}
+            {% for faq in faqs %}
               <li class="faq-item">
                 <strong>{{ faq.question_1 }}</strong>
-                <div class="faq-answer">{{ faq.answer }}</div>
+                <div class="faq-answer">{{ faq.answer.value }}</div>
               </li>
             {% endfor %}
           </ul>
         </div>
       {% endif %}
     </div>
+  </section>
   
 <div>
   <h3>FAQ Debug</h3>

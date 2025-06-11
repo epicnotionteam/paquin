@@ -85,4 +85,19 @@
             {% render 'product-inquiry-form' %}
         </div>
     </div>
+  <div>
+    {% if product.metafields.custom.product_faq_list.value.size > 0 %}
+      <div class="product-faqs">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+          {% for faq in product.metafields.custom.product_faq_list.value %}
+            <li class="faq-item">
+              <strong>{{ product_faq.question_1 }}</strong>
+              <div class="faq-answer">{{ product_faq.answer }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
 </div>

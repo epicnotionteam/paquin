@@ -110,6 +110,12 @@
             "collection": "diaphragm-seals-process-port-adaptors"
           }
         },
+        "collection_M7FkTL": {
+          "type": "collection",
+          "settings": {
+            "collection": "accumulators"
+          }
+        },
         "collection_M9FLmC": {
           "type": "collection",
           "settings": {
@@ -131,6 +137,7 @@
         "collection_8zk9hU",
         "collection_qTDAyH",
         "collection_n79ByG",
+        "collection_M7FkTL",
         "collection_M9FLmC"
       ],
       "settings": {

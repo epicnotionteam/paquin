@@ -17762,7 +17762,6 @@ rgb(255, 255, 255)
 .no-js .variant-selection__variants.no-js-required {
   display: block;
   width: 100%;
-  margin-bottom: 25px;
 }
 .no-js .variant-selection__variants.js-required {
   display: none;

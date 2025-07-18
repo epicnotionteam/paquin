@@ -17754,7 +17754,7 @@ rgb(255, 255, 255)
 .variant-selection__variants {
   display: none !important;
   padding: 0;
-  margin-top: 20.9375rem;
+  margin-top: 0.9375rem;
   margin-right: 0;
   margin-left: 0;
   border: none;
@@ -17762,6 +17762,7 @@ rgb(255, 255, 255)
 .no-js .variant-selection__variants.no-js-required {
   display: block;
   width: 100%;
+  margin-bottom: 25px;
 }
 .no-js .variant-selection__variants.js-required {
   display: none;

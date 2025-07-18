@@ -394,6 +394,12 @@
             "collection": "diaphragm-seals-process-port-adaptors"
           }
         },
+        "collection_ic6MBt": {
+          "type": "collection",
+          "settings": {
+            "collection": "accumulators"
+          }
+        },
         "collection_hAfUBw": {
           "type": "collection",
           "settings": {
@@ -415,6 +421,7 @@
         "collection_jLqjcm",
         "collection_F47zDm",
         "collection_kqCrAU",
+        "collection_ic6MBt",
         "collection_hAfUBw"
       ],
       "settings": {

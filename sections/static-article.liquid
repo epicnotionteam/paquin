@@ -34,7 +34,18 @@
 				<div class="container--content">
 					{% comment %} Post Content {% endcomment %}
 					<div class="section__wrap--content">
-						{{ article.content | richtext }}
+					{% if article.image %}
+						<div class="article__image-container" style="margin-bottom: 2rem;">
+						<img 
+							src="{{ article.image | image_url: width: 1600 }}" 
+							alt="{{ article.image.alt | escape }}" 
+							class="article__image"
+							loading="lazy"
+							style="width:100%; height:auto; border-radius:8px;"
+						>
+						</div>
+					{% endif %}
+					{{ article.content | richtext }}
 					</div>
 				</div>
 				{% comment %} Container [Sidebar] {% endcomment %}

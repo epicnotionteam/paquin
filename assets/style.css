@@ -2796,8 +2796,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .section--article-header {
-    padding-bottom: 20px;
-    padding-bottom: 2rem;
+    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
   }
   .section--article-header .section__grid {
     grid-auto-rows: auto;

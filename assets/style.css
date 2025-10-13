@@ -2844,7 +2844,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     column-gap: 24px;
     column-gap: 2.4rem;
     padding: 40px 0 96px;
-    padding: 4rem 0 9.6rem;
+    padding: 2rem 0 9.6rem;
     row-gap: 40px;
     row-gap: 4rem;
     grid-template-columns: repeat(12, 1fr);
@@ -2854,7 +2854,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     order: 0;
   }
   .section--article-content .section__grid .container--content {
-    grid-column: 1/span 8;
+    grid-column: 1/span 12;
     order: 1;
   }
   .section--article-content .section__grid .container--content .article__author {

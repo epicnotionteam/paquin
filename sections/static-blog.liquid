@@ -57,7 +57,7 @@
             {% comment %} Container [Feed] {% endcomment %}
             <div class="container--feed">
                 {% paginate blog.articles by paginate_by %}
-                    <div class="feed--post--article">
+                    <div class="feed--post">
                         {% for article in blog.articles %}
                             {% comment %} Assign block data to vars {% endcomment %}
                             {% assign item_url     = article.url %}

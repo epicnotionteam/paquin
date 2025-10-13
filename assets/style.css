@@ -4528,6 +4528,12 @@ hr,
   aspect-ratio: 1/1;
   overflow: hidden;
 }
+.feed--post--article .item .item__wrap--image {
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
 .feed--post .item .item__wrap--image .item__image {
   display: block;
   height: 100%;

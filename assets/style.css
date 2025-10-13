@@ -2854,7 +2854,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     order: 0;
   }
   .section--article-content .section__grid .container--content {
-    grid-column: 4/span 8;
+    grid-column: 1/span 8;
     order: 1;
   }
   .section--article-content .section__grid .container--content .article__author {

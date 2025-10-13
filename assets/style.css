@@ -2759,8 +2759,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 
 .section--article-header {
-  padding-bottom: 20px;
-  padding-bottom: 2rem;
+  padding-bottom: 40px;
+  padding-bottom: 4rem;
 }
 .section--article-header .section__grid {
   row-gap: 24px;
@@ -2796,8 +2796,8 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 }
 @media (min-width: 64em) {
   .section--article-header {
-    padding-bottom: 56px;
-    padding-bottom: 5.6rem;
+    padding-bottom: 20px;
+    padding-bottom: 2rem;
   }
   .section--article-header .section__grid {
     grid-auto-rows: auto;

@@ -11,9 +11,9 @@
   "order": [
     "dynamic_search",
     "home-hero",
-    "home-introduction",
-    "home-why-paquin",
     "home-divisions",
+    "home-why-paquin",
+    "home-introduction",
     "home-certifications",
     "home-collections",
     "home-hero-inline",
@@ -68,7 +68,7 @@
         "trust_signal_KB8VLe"
       ],
       "settings": {
-        "heading": "Parts for the World's Most Important Projects",
+        "heading": "Sensors and Connectivity for the World's Most Important Projects",
         "content": "<p>From high-volume standard to one-off custom designs, Paquin is ready to exceed customer expectations.</p>",
         "cta_primary": "Contact Our Team",
         "cta_primary_url": "shopify://pages/contact",

@@ -4852,7 +4852,8 @@ hr,
   padding-bottom: 40px !important;
   padding-bottom: 4rem !important;
   max-width: 159rem
-  margin: auto
+  margin-left: auto
+  margin-right: auto
 }
 
 @media (min-width: 64em) {

@@ -4851,6 +4851,7 @@ hr,
 .feed--trust-signal.glide__slides {
   padding-bottom: 40px !important;
   padding-bottom: 4rem !important;
+  max-width: 159rem
 }
 
 @media (min-width: 64em) {

@@ -2766,6 +2766,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   row-gap: 24px;
   row-gap: 2.4rem;
   display: grid;
+  padding-bottom: 50px;
 }
 .section--article-header .section__grid > .wrap--container {
   padding: 0 !important;

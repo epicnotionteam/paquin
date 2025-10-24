@@ -14,12 +14,14 @@
 				{% comment %} Breadcrumbs {% endcomment %}
 				{% render 'breadcrumbs' %}
 				{% comment %} Heading {% endcomment %}
-				<div class="container--heading">
-					<h1 class="article__heading">{{ article.title }}</h1>
+				 <div>
+					<div class="container--heading">
+						<h1 class="article__heading">{{ article.title }}</h1>
+					</div>
+					{% comment %} Author {% endcomment %}
+					<div class="container--author">
+						{% render 'article-author', article: article, show_tags: true %}
 				</div>
-				{% comment %} Author {% endcomment %}
-				<div class="container--author">
-					{% render 'article-author', article: article, show_tags: true %}
 				</div>
 				{% if article.image %}
 				<img

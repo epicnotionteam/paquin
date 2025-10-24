@@ -2807,7 +2807,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
     grid-template-columns: repeat(12, 1fr);
   }
   .section--article-header .section__grid > .wrap--container {
-    grid-column: 12/span 12;
+    grid-column: span 12;
   }
   .section--article-header .section__grid .container--heading {
     margin-top: 32px;

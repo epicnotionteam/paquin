@@ -21,10 +21,6 @@
 						{% render 'article-author', article: article, show_tags: true %}
 					</div>
 				</div>
-				{% comment %} Author {% endcomment %}
-				<div class="container--author">
-					{% render 'article-author', article: article, show_tags: true %}
-				</div>
 				{% if article.image %}
 				<img
 					src="{{ article.image | image_url: width: 1600 }}"

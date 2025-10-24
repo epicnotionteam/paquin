@@ -2817,7 +2817,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .section--article-header .section__grid .container--author {
     grid-column: 1/span 12;
     grid-row: 3;
-    margin-top" 25px;
+    margin-top: 25px;
   }
 }
 .section--article-content .section__grid {

@@ -2777,6 +2777,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
 .section--article-header .section__grid .container--heading {
   margin-top: 16px;
   margin-top: 1.6rem;
+   grid-column: span 12;
 }
 .section--article-header .section__grid .container--heading .article__heading {
   font-size: 38px;

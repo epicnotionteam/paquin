@@ -49,8 +49,8 @@
         ".section--content-blocks.theme--alt.wrap--container {padding-bottom: 1rem;}"
       ],
       "settings": {
-        "heading_small": "Paquin Distribution",
-        "heading_large": "Distribution with Precision",
+        "heading_small": "Paquin Engineered Products",
+        "heading_large": "Products for Precision",
         "heading_size": "h1",
         "show_numbering": false,
         "columns": "3",
@@ -71,7 +71,7 @@
       ],
       "settings": {
         "title": "",
-        "custom_html": "<div class=\"wrap\">\n<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Distribution, we’re more than just a supplier—we’re your engineering partner here to assist in optimizing your systems.  With decades of experience, we’ve built strong relationships with top manufacturers to bring you components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with accumulators, pumps, motors, valves, coils, gauges, manifolds, hoses and more.  Our partners are carefully selected to help us support customers across a broad range of commercial &amp; industrial applications. We pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions.<br><br>Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>\n</div>"
+        "custom_html": "<div class=\"wrap\">\n<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Engineered Products, we’re more than just a supplier—we’re your engineering partner here to assist in optimizing your systems.  With decades of experience, we’ve built strong relationships with top manufacturers to bring you components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with accumulators, pumps, motors, valves, coils, gauges, manifolds, hoses and more.  Our partners are carefully selected to help us support customers across a broad range of commercial &amp; industrial applications. We pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions.<br><br>Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>\n</div>"
       }
     },
     "content_blocks_w3fyDd": {

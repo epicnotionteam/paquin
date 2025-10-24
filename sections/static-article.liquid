@@ -22,17 +22,15 @@
 					{% render 'article-author', article: article, show_tags: true %}
 				</div>
 				{% if article.image %}
-				<div style="display: grid; grid-template-columns: repeat(12, 1fr);">
-					<img
+				<img
 					src="{{ article.image | image_url: width: 1600 }}"
 					alt="{{ article.image.alt | escape }}"
 					class="article__image"
 					loading="lazy"
 					width="{{ article.image.width }}"
 					height="{{ article.image.height }}"
-					style="grid-column: span 4; width:100%; height:auto; border-radius:8px;"
-					>
-				</div>
+					style="grid-column: span 4; width:100%; height:auto; border-radius:8px; max-width:100%;"
+				>
 				{% endif %}
 			</div>
       	</div>

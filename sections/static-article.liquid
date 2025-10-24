@@ -16,6 +16,10 @@
 				{% comment %} Heading {% endcomment %}
 				<div class="container--heading">
 					<h1 class="article__heading">{{ article.title }}</h1>
+					{% comment %} Author {% endcomment %}
+					<div class="container--author">
+						{% render 'article-author', article: article, show_tags: true %}
+					</div>
 				</div>
 				{% comment %} Author {% endcomment %}
 				<div class="container--author">

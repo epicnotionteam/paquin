@@ -21,6 +21,17 @@
 				<div class="container--author">
 					{% render 'article-author', article: article, show_tags: true %}
 				</div>
+				{% if article.image %}
+					<img
+						src="{{ article.image | image_url: width: 1600 }}"
+						alt="{{ article.image.alt | escape }}"
+						class="article__image"
+						loading="lazy"
+						width="{{ article.image.width }}"
+						height="{{ article.image.height }}"
+						style="width:100%; height:auto; border-radius:8px; max-width:1000px;"
+					>
+				{% endif %}
 			</div>
       	</div>
     </section>

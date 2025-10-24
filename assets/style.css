@@ -2785,6 +2785,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   letter-spacing: 0.32px;
   letter-spacing: 0.032rem;
   margin: 0;
+  margin-top: -3.2rem;
 }
 @media screen and (min-width: 1024px) {
   .section--article-header .section__grid .container--heading .article__heading {

@@ -2772,7 +2772,7 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   padding: 0 !important;
 }
 .section--article-header .section__grid > .wrap--container .breadcrumbs-container {
-  max-width: none;
+  width: 100%;
 }
 .section--article-header .section__grid .container--heading {
   margin-top: 16px;

@@ -197,19 +197,21 @@
                                     {% if docs != blank %}
                                         <div class="collection--supporting-docs" style="margin-top:1rem; text-align:center;">
                                         <h3 class="supporting-docs__heading">Collection Brochures</h3>
-                                        <div class="supporting-docs__buttons" style="display:flex; gap:.5rem; flex-wrap:wrap;">
+
+                                        <div class="supporting-docs__buttons"
+                                            style="display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; align-items:center;">
                                             {% for doc in docs %}
                                             <a
-                                            href="{{ doc.url }}"
-                                            class="button--base button--outline button--icon-before"
-                                            target="_blank" rel="noopener"
+                                                href="{{ doc.url }}"
+                                                class="button--base button--outline button--icon-before"
+                                                target="_blank" rel="noopener"
                                             >
-                                            <span class="button__icon">
+                                                <span class="button__icon">
                                                 {% render 'icon-library', id: 'icon-data-sheet' %}
-                                            </span>
-                                            <span class="button__text">
+                                                </span>
+                                                <span class="button__text">
                                                 {{ doc.alt | default: doc.filename }}
-                                            </span>
+                                                </span>
                                             </a>
                                             {% endfor %}
                                         </div>

@@ -191,6 +191,26 @@
                                             {% endif %}
                                         </div>
                                     {% endif %}
+                                    {%- comment -%} ADD: Supporting Documents buttons (Variant [Base]) {%- endcomment -%}
+                                    {% if collection.metafields.custom.supporting_documents != blank %}
+                                    {% assign docs = collection.metafields.custom.supporting_documents.value %}
+                                    {% if docs != blank %}
+                                        <div class="collection--supporting-docs" style="margin-top:1rem;">
+                                        <h3 class="supporting-docs__heading">Supporting documents</h3>
+                                        <div class="supporting-docs__buttons" style="display:flex; gap:.5rem; flex-wrap:wrap;">
+                                            {% for doc in docs %}
+                                            <a
+                                                href="{{ doc.url }}"
+                                                class="button--outline button--icon-before button--icon-data-sheet"
+                                                target="_blank" rel="noopener"
+                                            >
+                                                {{ doc.alt | default: doc.filename | default: 'Download' }}
+                                            </a>
+                                            {% endfor %}
+                                        </div>
+                                        </div>
+                                    {% endif %}
+                                    {% endif %}
                                 </div>
                             </div>
                         {% else %}
@@ -211,6 +231,26 @@
                                     <h5>Coming Soon</h5>
                                     <p>We are excited to present our {{ collection.title }} product portfolio — we will post datasheets, press releases and new product announcements soon. Until then, we can support your {{ collection.title }} requirements - please <a href="/pages/contact/">get in touch</a> with our specialists who are ready to assist you.</p>
                                     <a class="button--base button--icon-before button--icon-arrow-forward" href="/pages/contact/">Contact our team</a>
+                                    {%- comment -%} ADD: Supporting Documents buttons (Variant [Empty]) {%- endcomment -%}
+                                    {% if collection.metafields.custom.supporting_documents != blank %}
+                                    {% assign docs = collection.metafields.custom.supporting_documents.value %}
+                                    {% if docs != blank %}
+                                        <div class="collection--supporting-docs" style="margin-top:1rem;">
+                                        <h3 class="supporting-docs__heading">Supporting documents</h3>
+                                        <div class="supporting-docs__buttons" style="display:flex; gap:.5rem; flex-wrap:wrap;">
+                                            {% for doc in docs %}
+                                            <a
+                                                href="{{ doc.url }}"
+                                                class="button--outline button--icon-before button--icon-data-sheet"
+                                                target="_blank" rel="noopener"
+                                            >
+                                                {{ doc.alt | default: doc.filename | default: 'Download' }}
+                                            </a>
+                                            {% endfor %}
+                                        </div>
+                                        </div>
+                                    {% endif %}
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endif %}

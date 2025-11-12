@@ -195,7 +195,7 @@
                                     {% if collection.metafields.custom.supporting_documents != blank %}
                                     {% assign docs = collection.metafields.custom.supporting_documents.value %}
                                     {% if docs != blank %}
-                                        <div class="collection--supporting-docs" style="margin-top:1rem;">
+                                        <div class="collection--supporting-docs" style="margin-top:1rem; margin-right:auto; margin-left:auto">
                                         <h3 class="supporting-docs__heading">Collection Brochures</h3>
                                         <div class="supporting-docs__buttons" style="display:flex; gap:.5rem; flex-wrap:wrap;">
                                             {% for doc in docs %}

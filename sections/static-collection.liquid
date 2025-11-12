@@ -200,11 +200,11 @@
                                         <div class="supporting-docs__buttons" style="display:flex; gap:.5rem; flex-wrap:wrap;">
                                             {% for doc in docs %}
                                             <a
-                                                href="{{ doc.url }}"
-                                                class="button--outline button--icon-before button--icon-data-sheet"
-                                                target="_blank" rel="noopener"
+                                            href="{{ doc.url }}"
+                                            class="button--outline button--icon-before button--icon-data-sheet"
+                                            target="_blank" rel="noopener"
                                             >
-                                                {{ doc.alt | default: doc.filename | default: 'Download' }}
+                                            {{ doc.filename }}
                                             </a>
                                             {% endfor %}
                                         </div>

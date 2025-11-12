@@ -201,10 +201,15 @@
                                             {% for doc in docs %}
                                             <a
                                             href="{{ doc.url }}"
-                                            class="button--base button--outline button--icon-before button--icon-data-sheet"
+                                            class="button--base button--outline button--icon-before"
                                             target="_blank" rel="noopener"
                                             >
-                                            {{ doc.filename }}
+                                            <span class="button__icon">
+                                                {% render 'icon-library', id: 'icon-data-sheet' %}
+                                            </span>
+                                            <span class="button__text">
+                                                {{ doc.alt | default: doc.filename }}
+                                            </span>
                                             </a>
                                             {% endfor %}
                                         </div>

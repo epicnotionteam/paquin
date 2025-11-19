@@ -102,6 +102,14 @@
 		<div id="product__core">
 			{% comment %} Title {% endcomment %}
 			<h1 id="product__title">{{  product.title }}</h1>
+
+			{% comment %} Discontinued notification metafield {% endcomment %}
+			{% if product.metafields.custom.discontinued_notification != blank %}
+				<div class="product__discontinued-notification">
+					{{ product.metafields.custom.discontinued_notification | metafield_tag }}
+				</div>
+			{% endif %}
+
 			{% comment %} Price {% endcomment %}
 			{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 			{% if product.price > 0 %}

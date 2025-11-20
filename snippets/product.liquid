@@ -99,7 +99,7 @@
             {%- comment -%} Related Articles (metafield: custom.related_articles) {%- endcomment -%}
             {% if product.metafields.custom.related_articles != blank %}
 			<div class="grid__item">
-				<h3>Related Articles</h3>
+				<h3 class="h5">Related Articles</h3>
 				{{ product.metafields.custom.related_articles | metafield_tag }}
 			</div>
 			{% endif %}

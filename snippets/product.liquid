@@ -109,7 +109,12 @@
 				{%- endcomment -%}
 				{% for article in related_articles %}
 					<li>
-					<a href="{{ article.url }}">{{ article.title }}</a>
+					<a
+						href="{{ article.url }}"
+						target="_blank"
+					>
+						{{ article.title }}
+					</a>
 					</li>
 				{% endfor %}
 				</ul>

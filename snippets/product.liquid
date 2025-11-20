@@ -97,13 +97,26 @@
     		{% render 'product-instructions' %}
 
             {%- comment -%} Related Articles (metafield: custom.related_articles) {%- endcomment -%}
-            {% if product.metafields.custom.related_articles != blank %}
+			{% if product.metafields.custom.related_articles and product.metafields.custom.related_articles.value != blank %}
+			{% assign related_articles = product.metafields.custom.related_articles.value %}
+
 			<div class="grid__item">
 				<h3 class="h5">Related Articles</h3>
-				{{ product.metafields.custom.related_articles | metafield_tag }}
+				<ul class="link-list related-articles-list">
+				{%- comment -%}
+					If the metafield is a list of article/blog_post references,
+					`related_articles` will be an array of article objects.
+				{%- endcomment -%}
+				{% for article in related_articles %}
+					<li>
+					<a href="{{ article.url }}">{{ article.title }}</a>
+					</li>
+				{% endfor %}
+				</ul>
 			</div>
 			{% endif %}
-            {%- comment -%} /Related Articles {%- endcomment -%}
+			{%- comment -%} /Related Articles {%- endcomment -%}
+
 
     	</div>
 	</div>

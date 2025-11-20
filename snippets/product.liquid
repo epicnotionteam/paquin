@@ -98,20 +98,11 @@
 
             {%- comment -%} Related Articles (metafield: custom.related_articles) {%- endcomment -%}
             {% if product.metafields.custom.related_articles != blank %}
-              {% assign related_articles = product.metafields.custom.related_articles.value %}
-              {% if related_articles.size > 0 %}
-                <div class="product-related-articles">
-                  <h3>Related Articles</h3>
-                  <ul class="link-list related-articles-list">
-                    {% for article in related_articles %}
-                      <li>
-                        <a href="{{ article.url }}">{{ article.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              {% endif %}
-            {% endif %}
+			<div class="product-related-articles">
+				<h3>Related Articles</h3>
+				{{ product.metafields.custom.related_articles | metafield_tag }}
+			</div>
+			{% endif %}
             {%- comment -%} /Related Articles {%- endcomment -%}
 
     	</div>

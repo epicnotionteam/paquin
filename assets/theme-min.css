@@ -15824,14 +15824,11 @@ rgb(255, 255, 255)
 }
 @media screen and (min-width: 720px) {
   .productgrid--footer-item {
-    float: none;          /* stop column layout */
-    width: 100%;
-    margin-bottom: 2rem;
+    width: 100% !important;
+    float: none !important;
   }
-
   .productgrid--footer-item:not(:first-child) {
-    margin-left: 0;       /* no horizontal offset */
-    margin-top: 2rem;     /* optional: vertical spacing between items */
+    margin-left: 0 !important;
   }
 }
 

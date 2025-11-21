@@ -15826,6 +15826,7 @@ rgb(255, 255, 255)
   .productgrid--footer-item {
     float: left;
     width: 100%;
+    margin-bottom: 2rem;
   }
   .productgrid--footer-item:not(:first-child) {
     margin-left: 40px;

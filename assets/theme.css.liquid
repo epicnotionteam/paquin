@@ -18072,11 +18072,14 @@ body .mdc-ripple-surface:hover:before {
 }
 @media screen and (min-width: 720px) {
   .productgrid--footer-item {
-    float: none;
-    width: 100%;
+    float: none;          /* stop column behavior */
+    width: 100%;          /* span full grid width */
+    margin-bottom: 2rem;
   }
+
   .productgrid--footer-item:not(:first-child) {
-    margin-left: 40px;
+    margin-left: 0;       /* no horizontal offset */
+    margin-top: 2rem;     /* optional: vertical gap between items */
   }
 }
 

@@ -15824,7 +15824,6 @@ rgb(255, 255, 255)
 }
 @media screen and (min-width: 720px) {
   .productgrid--footer-item {
-    float: left;
     width: 100%;
     margin-bottom: 2rem;
   }

@@ -15554,7 +15554,7 @@ rgb(255, 255, 255)
 .productgrid--wrapper {
   position: relative;
   display: inline-block;
-  width: calc(100% - 185px);
+  width: calc(100% - 300px);
   margin-top: 0.9375rem;
 }
 @media screen and (min-width: 860px) {

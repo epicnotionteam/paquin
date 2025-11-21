@@ -15822,15 +15822,20 @@ rgb(255, 255, 255)
     margin-top: 1.171875rem;
   }
 }
+
 @media screen and (min-width: 720px) {
   .productgrid--footer-item {
-    width: 100% !important;
-    float: none !important;
+    float: none;          /* stop column behavior */
+    width: 100%;          /* span full grid width */
+    margin-bottom: 2rem;
   }
+
   .productgrid--footer-item:not(:first-child) {
-    margin-left: 0 !important;
+    margin-left: 0;       /* no horizontal offset */
+    margin-top: 2rem;     /* optional: vertical gap between items */
   }
 }
+
 
 .productgrid--footer-title {
   

@@ -17834,7 +17834,14 @@ body .mdc-ripple-surface:hover:before {
 }
 @media screen and (min-width: 860px) {
   .search--section .layout--has-sidebar .productgrid--wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 185px calc(
+          100% - 210px
+        );
+    grid-template-rows: auto auto;
+    grid-template-areas: "masthead masthead" "sidebar productgrid--items";
+    column-gap: 25px;
+    row-gap: {{ space_x_large | divided_by: 16.0 | append: 'rem' }};
   }
 }
 

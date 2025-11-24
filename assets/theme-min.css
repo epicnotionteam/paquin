@@ -15554,7 +15554,7 @@ rgb(255, 255, 255)
 .productgrid--wrapper {
   position: relative;
   display: inline-block;
-  width: calc(100% - 300px);
+  width: calc(100% - 185px);
   margin-top: 0.9375rem;
 }
 @media screen and (min-width: 860px) {
@@ -15573,15 +15573,7 @@ rgb(255, 255, 255)
 }
 @media screen and (min-width: 860px) {
   .search--section .layout--has-sidebar .productgrid--wrapper {
-    display: grid;
-    grid-template-columns: 185px calc(
-          100% - 210px
-        );
-    grid-template-rows: auto auto;
-    grid-template-areas: "masthead masthead" "sidebar productgrid--items";
-    -moz-column-gap: 25px;
-    column-gap: 25px;
-    row-gap: 1.875rem;
+    width: 100%;
   }
 }
 

@@ -17834,14 +17834,8 @@ body .mdc-ripple-surface:hover:before {
 }
 @media screen and (min-width: 860px) {
   .search--section .layout--has-sidebar .productgrid--wrapper {
-    display: grid;
-    grid-template-columns: 185px calc(
-          100% - 210px
-        );
-    grid-template-rows: auto auto;
-    grid-template-areas: "masthead masthead" "sidebar productgrid--items";
-    column-gap: 25px;
-    row-gap: {{ space_x_large | divided_by: 16.0 | append: 'rem' }};
+    grid-area: product-items-wrapper;
+    width: 100%;
   }
 }
 
@@ -18104,29 +18098,6 @@ body .mdc-ripple-surface:hover:before {
 }
 .productgrid--footer-results-list li:not(:first-child) {
   margin-top: {{ space_xx_small | divided_by: 16.0 | append: 'rem' }};
-}
-
-.productgrid--footer {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-}
-
-/* If the parent is using CSS grid and the footer is a grid item, ensure it spans all columns */
-@media screen and (min-width: 720px) {
-  .productgrid--footer {
-    grid-column: 1 / -1;
-  }
-
-  .productgrid--footer-item {
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;  /* handles flex-based layouts */
-    margin-left: 0 !important;
-  }
 }
 
 .productitem--description {

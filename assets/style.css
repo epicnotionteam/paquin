@@ -5897,7 +5897,7 @@ ul.list--link-arrow li::before {
 
 .collection-hero__image img {
   display: block;
-  max-width: 250px;
+  max-width: 50px;
   height: auto;
 }
 

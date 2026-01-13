@@ -225,13 +225,13 @@
 
 
 
-                            
+
                             <div class="collection-hero collection-hero--two-col">
                                 {% comment %} Left column: Image {% endcomment %}
                                 <div class="collection-hero__left">
                                     {% if collection.image %}
                                     <div class="collection-hero__image">
-                                        {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                        {{ collection.image | img_url: '600x' | img_tag: collection.title }}
                                     </div>
                                     {% endif %}
                                 </div>

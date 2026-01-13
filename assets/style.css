@@ -5889,7 +5889,6 @@ ul.list--link-arrow li::before {
 
 .collection-hero--two-col {
   display: grid;
-  grid-template-columns: 320px 1fr; /* fixed left column */
   gap: 2rem;
   align-items: start;
 }

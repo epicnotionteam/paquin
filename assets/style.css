@@ -5897,7 +5897,7 @@ ul.list--link-arrow li::before {
 /* Prevent the image column from growing */
 .collection-hero__left {
   width: 320px;
-  max-width: 50%;
+  max-width: 25%;
 }
 
 /* Hard-cap the image size */

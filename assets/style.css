@@ -5887,49 +5887,45 @@ ul.list--link-arrow li::before {
 
 
 
-.collection-hero--two-col {
-  display: grid;
-  grid-template-columns: minmax(220px, 320px) 1fr; /* left fixed-ish, right fluid */
-  gap: 0.5rem;
+/* Two-column layout */
+.collection-hero.collection-hero--two-col{
+  display: grid !important;
+  grid-template-columns: 320px minmax(0, 1fr) !important;
+  column-gap: 2rem;
   align-items: start;
 }
 
-/* Left column should not stretch wider than the defined column */
-.collection-hero__left {
+/* Force placement (beats theme rules like grid-column: 1 / -1) */
+.collection-hero.collection-hero--two-col .collection-hero__left{
+  grid-column: 1 !important;
   min-width: 0;
 }
 
-/* Ensure image never blows out the column */
-.collection-hero__image img {
+.collection-hero.collection-hero--two-col .collection-hero__right{
+  grid-column: 2 !important;
+  min-width: 0;
+  width: auto !important;     /* remove any width like 15px */
+  max-width: none !important; /* remove any max-width like 25% */
+}
+
+/* Image sizing */
+.collection-hero.collection-hero--two-col .collection-hero__image img{
   display: block;
   width: 100%;
-  max-width: 320px;
   height: auto;
-  object-fit: contain;
+  max-width: 320px;
 }
 
-/* Right column should fill remaining space */
-.collection-hero__right {
-  min-width: 0;
-  width: 100%;
-}
-
-/* Optional: keep your brochure buttons neat */
-.supporting-docs__buttons {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Mobile stack */
-@media (max-width: 768px) {
-  .collection-hero--two-col {
-    grid-template-columns: 1fr;
+/* Stack on small screens */
+@media (max-width: 768px){
+  .collection-hero.collection-hero--two-col{
+    grid-template-columns: 1fr !important;
   }
-
-  .collection-hero__image img {
+  .collection-hero.collection-hero--two-col .collection-hero__left,
+  .collection-hero.collection-hero--two-col .collection-hero__right{
+    grid-column: 1 !important;
+  }
+  .collection-hero.collection-hero--two-col .collection-hero__image img{
     max-width: 100%;
   }
 }

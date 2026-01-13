@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "static-collection",
+      "type": "static-newcollection",
       "blocks": {
         "filter-1": {
           "type": "filter",

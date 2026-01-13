@@ -5883,3 +5883,41 @@ ul.list--link-arrow li::before {
   box-shadow: none !important;
   color: white !important;
   filter: brightness(1.12);
+
+  .collection-hero--two-col {
+  display: grid;
+  grid-template-columns: minmax(220px, 420px) 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.collection-hero__left {
+  justify-self: start; /* keeps the left column content left aligned */
+}
+
+.collection-hero__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: tighten spacing + align the docs area to the left */
+.collection--supporting-docs {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.supporting-docs__buttons {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Mobile: stack */
+@media (max-width: 768px) {
+  .collection-hero--two-col {
+    grid-template-columns: 1fr;
+  }
+}

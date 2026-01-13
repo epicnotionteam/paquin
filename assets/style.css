@@ -5909,6 +5909,11 @@ ul.list--link-arrow li::before {
   object-fit: contain;
 }
 
+.collection-hero__right {
+  width: 320px;
+  max-width: 25%;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .collection-hero--two-col {

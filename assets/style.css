@@ -5889,16 +5889,17 @@ ul.list--link-arrow li::before {
 
 .collection-hero--two-col {
   display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr; /* left fixed-ish, right fluid */
   gap: 2rem;
   align-items: start;
 }
 
-/* Prevent the image column from growing */
+/* Left column should not stretch wider than the defined column */
 .collection-hero__left {
-  max-width: 25%;
+  min-width: 0;
 }
 
-/* Hard-cap the image size */
+/* Ensure image never blows out the column */
 .collection-hero__image img {
   display: block;
   width: 100%;
@@ -5907,20 +5908,28 @@ ul.list--link-arrow li::before {
   object-fit: contain;
 }
 
+/* Right column should fill remaining space */
 .collection-hero__right {
-  width: 15px;
-  max-width: 25%;
+  min-width: 0;
+  width: 100%;
 }
 
-/* Mobile */
+/* Optional: keep your brochure buttons neat */
+.supporting-docs__buttons {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Mobile stack */
 @media (max-width: 768px) {
   .collection-hero--two-col {
     grid-template-columns: 1fr;
   }
 
-  .collection-hero__left,
   .collection-hero__image img {
-    width: 100%;
     max-width: 100%;
   }
 }

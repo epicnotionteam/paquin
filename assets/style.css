@@ -5884,40 +5884,40 @@ ul.list--link-arrow li::before {
   color: white !important;
   filter: brightness(1.12);
 
-  .collection-hero--two-col {
+
+
+
+.collection-hero--two-col {
   display: grid;
-  grid-template-columns: minmax(220px, 420px) 1fr;
+  grid-template-columns: 320px 1fr; /* fixed left column */
   gap: 2rem;
   align-items: start;
 }
 
+/* Prevent the image column from growing */
 .collection-hero__left {
-  justify-self: start; /* keeps the left column content left aligned */
+  width: 320px;
+  max-width: 100%;
 }
 
+/* Hard-cap the image size */
 .collection-hero__image img {
   display: block;
-  max-width: 50px;
+  width: 100%;
+  max-width: 320px;  /* cap */
   height: auto;
+  object-fit: contain;
 }
 
-/* Optional: tighten spacing + align the docs area to the left */
-.collection--supporting-docs {
-  margin-top: 1rem;
-  text-align: left;
-}
-
-.supporting-docs__buttons {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Mobile: stack */
+/* Mobile */
 @media (max-width: 768px) {
   .collection-hero--two-col {
     grid-template-columns: 1fr;
+  }
+
+  .collection-hero__left,
+  .collection-hero__image img {
+    width: 100%;
+    max-width: 100%;
   }
 }

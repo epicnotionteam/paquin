@@ -5894,6 +5894,8 @@ ul.list--link-arrow li::before {
   align-items: start;
 }
 
+.collection-hero--two-col .collection-hero__image img { max-width: 320px; }
+
 /* Prevent the image column from growing */
 .collection-hero__left {
   width: 320px;

@@ -5895,7 +5895,6 @@ ul.list--link-arrow li::before {
 
 /* Prevent the image column from growing */
 .collection-hero__left {
-  width: 320px;
   max-width: 25%;
 }
 
@@ -5903,7 +5902,7 @@ ul.list--link-arrow li::before {
 .collection-hero__image img {
   display: block;
   width: 100%;
-  max-width: 320px;  /* cap */
+  max-width: 320px;
   height: auto;
   object-fit: contain;
 }

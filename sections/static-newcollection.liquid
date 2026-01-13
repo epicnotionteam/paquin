@@ -230,8 +230,10 @@
                                 {% comment %} Left column: Image {% endcomment %}
                                 <div class="collection-hero__left">
                                     {% if collection.image %}
-                                    <div class="collection-hero__image">
-                                        {{ collection.image | img_url: '600x' | img_tag: collection.title }}
+                                    <div class="container--image">
+                                        <div class="wrap--image">
+                                            {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                        </div>
                                     </div>
                                     {% endif %}
                                 </div>

@@ -666,45 +666,70 @@
     >
     </script>
 
-    <script>
+<script>
   (function () {
-    const containers = document.querySelectorAll('[data-ch-tabs]');
-    containers.forEach((container) => {
-      const tabs = Array.from(container.querySelectorAll('[data-ch-tab]'));
-      const panels = Array.from(container.querySelectorAll('.ch-tabs__panel'));
+    function initTabs(root) {
+      const scope = root || document;
+      const containers = scope.querySelectorAll('[data-ch-tabs]');
 
-      function activate(tab) {
-        const targetId = tab.getAttribute('data-ch-tab');
+      containers.forEach((container) => {
+        // Prevent double-binding if Shopify editor reloads sections
+        if (container.dataset.chTabsInit === '1') return;
+        container.dataset.chTabsInit = '1';
 
-        tabs.forEach((t) => {
-          const isActive = t === tab;
-          t.classList.toggle('is-active', isActive);
-          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
+        const tabs = Array.from(container.querySelectorAll('[data-ch-tab]'));
+        const panels = Array.from(container.querySelectorAll('.ch-tabs__panel'));
 
-        panels.forEach((p) => {
-          const isActive = p.id === targetId;
-          p.classList.toggle('is-active', isActive);
-          if (isActive) p.removeAttribute('hidden');
-          else p.setAttribute('hidden', '');
-        });
-      }
+        if (!tabs.length || !panels.length) return;
 
-      tabs.forEach((tab, idx) => {
-        tab.addEventListener('click', () => activate(tab));
+        function activate(tab) {
+          const targetId = tab.getAttribute('data-ch-tab');
 
-        tab.addEventListener('keydown', (e) => {
-          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-          e.preventDefault();
-          const dir = e.key === 'ArrowRight' ? 1 : -1;
-          const next = (idx + dir + tabs.length) % tabs.length;
-          tabs[next].focus();
-          activate(tabs[next]);
+          tabs.forEach((t) => {
+            const isActive = t === tab;
+            t.classList.toggle('is-active', isActive);
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          panels.forEach((p) => {
+            const isActive = p.id === targetId;
+            p.classList.toggle('is-active', isActive);
+            if (isActive) p.removeAttribute('hidden');
+            else p.setAttribute('hidden', '');
+          });
+        }
+
+        // Ensure only one panel is active on load (in case theme CSS/HTML conflicts)
+        const initiallyActive = tabs.find(t => t.classList.contains('is-active')) || tabs[0];
+        activate(initiallyActive);
+
+        tabs.forEach((tab, idx) => {
+          tab.addEventListener('click', () => activate(tab));
+
+          tab.addEventListener('keydown', (e) => {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            e.preventDefault();
+            const dir = e.key === 'ArrowRight' ? 1 : -1;
+            const next = (idx + dir + tabs.length) % tabs.length;
+            tabs[next].focus();
+            activate(tabs[next]);
+          });
         });
       });
+    }
+
+    // Normal page load
+    document.addEventListener('DOMContentLoaded', function () {
+      initTabs(document);
+    });
+
+    // Shopify theme editor / section reload
+    document.addEventListener('shopify:section:load', function (event) {
+      initTabs(event.target);
     });
   })();
 </script>
+
 
   </body>
 </html>

@@ -226,64 +226,61 @@
 
 
 
-                            <div class="collection-hero collection-hero--two-col">
-                                {% comment %} Left column: Image {% endcomment %}
-                                <div class="collection-hero__left">
-                                    {% if collection.image %}
-                                    <div class="container--image">
-                                        <div class="wrap--image">
-                                            {{ collection.image | img_url: '300x' | img_tag: collection.title }}
-                                        </div>
-                                    </div>
-                                    {% endif %}
-                                </div>
+<div class="c-collection-hero">
+  {%- comment -%} LEFT: Image only {%- endcomment -%}
+  <div class="c-collection-hero__media">
+    {% if collection.image %}
+      <div class="c-collection-hero__image">
+        {{ collection.image | img_url: '600x' | img_tag: collection.title }}
+      </div>
+    {% endif %}
+  </div>
 
-                                {% comment %} Right column: Content {% endcomment %}
-                                <div class="collection-hero__right">
-                                    {% comment %} Title {% endcomment %}
-                                    <h1 class="collection--title">
-                                    {%- render 'collection-title-formatted', collection: collection -%}
-                                    </h1>
+  {%- comment -%} RIGHT: Everything else {%- endcomment -%}
+  <div class="c-collection-hero__content">
+    <h1 class="collection--title">
+      {%- render 'collection-title-formatted', collection: collection -%}
+    </h1>
 
-                                    {% comment %} Description {% endcomment %}
-                                    {% if collection.description != blank %}
-                                    <div class="collection--description rte" data-collection-description>
-                                        {{ collection.description }}
-                                        {% if collection.metafields.custom.collection_information %}
-                                        <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">
-                                            Learn more
-                                        </a>
-                                        {% endif %}
-                                    </div>
-                                    {% endif %}
+    {% if collection.description != blank %}
+      <div class="collection--description rte" data-collection-description>
+        {{ collection.description }}
+        {% if collection.metafields.custom.collection_information %}
+          <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">
+            Learn more
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
 
-                                    {%- comment -%} Supporting Documents buttons (Variant [Base]) {%- endcomment -%}
-                                    {% if collection.metafields.custom.supporting_documents != blank %}
-                                    {% assign docs = collection.metafields.custom.supporting_documents.value %}
-                                    {% if docs != blank %}
-                                        <div class="collection--supporting-docs">
-                                        <h3 class="supporting-docs__heading">Collection Brochures</h3>
+    {% if collection.metafields.custom.supporting_documents != blank %}
+      {% assign docs = collection.metafields.custom.supporting_documents.value %}
+      {% if docs != blank %}
+        <div class="collection--supporting-docs">
+          <h3 class="supporting-docs__heading">Collection Brochures</h3>
 
-                                        <div class="supporting-docs__buttons">
-                                            {% for doc in docs %}
-                                            <a
-                                                href="{{ doc.url }}"
-                                                class="button--base button--outline button--icon-before"
-                                                target="_blank" rel="noopener"
-                                            >
-                                                <span class="button__icon">
-                                                {% render 'icon-library', id: 'icon-data-sheet' %}
-                                                </span>
-                                                <span class="button__text">
-                                                {{ doc.alt | default: doc.filename }}
-                                                </span>
-                                            </a>
-                                            {% endfor %}
-                                        </div>
-                                        </div>
-                                    {% endif %}
-                                    {% endif %}
-                                </div>
+          <div class="supporting-docs__buttons">
+            {% for doc in docs %}
+              <a
+                href="{{ doc.url }}"
+                class="button--base button--outline button--icon-before"
+                target="_blank" rel="noopener"
+              >
+                <span class="button__icon">
+                  {% render 'icon-library', id: 'icon-data-sheet' %}
+                </span>
+                <span class="button__text">
+                  {{ doc.alt | default: doc.filename }}
+                </span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
 
 
 

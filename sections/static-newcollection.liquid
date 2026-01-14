@@ -256,85 +256,104 @@
     {% assign docs = collection.metafields.custom.supporting_documents.value %}
   {% endif %}
 
-  {%- comment -%} Tabs wrapper (shows if at least one tab has content) {%- endcomment -%}
-  {% if docs != blank or collection.metafields.custom.collection_information %}
-    <div class="ch-tabs" data-ch-tabs>
-      <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
-        {% if docs != blank %}
-          <button
-            class="ch-tabs__tab is-active"
-            type="button"
-            role="tab"
-            aria-selected="true"
-            aria-controls="ch-panel-brochures"
-            id="ch-tab-brochures"
-            data-ch-tab="ch-panel-brochures"
-          >
-            Brochures
-          </button>
-        {% endif %}
+{%- assign docs = blank -%}
+{% if collection.metafields.custom.supporting_documents != blank %}
+  {% assign docs = collection.metafields.custom.supporting_documents.value %}
+{% endif %}
 
-        {% if collection.metafields.custom.collection_information %}
-          <button
-            class="ch-tabs__tab {% unless docs != blank %}is-active{% endunless %}"
-            type="button"
-            role="tab"
-            aria-selected="{% if docs != blank %}false{% else %}true{% endif %}"
-            aria-controls="ch-panel-learn"
-            id="ch-tab-learn"
-            data-ch-tab="ch-panel-learn"
-          >
-            Learn more
-          </button>
-        {% endif %}
-      </div>
+{% if docs != blank or collection.metafields.custom.collection_information %}
+  <div class="ch-tabs" data-ch-tabs>
+    <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
+      {% if docs != blank %}
+        <button
+          class="ch-tabs__tab is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="ch-panel-brochures"
+          id="ch-tab-brochures"
+          data-ch-tab="ch-panel-brochures"
+        >
+          Collection Brochures
+        </button>
+      {% endif %}
 
-      <div class="ch-tabs__panels">
-        {% if docs != blank %}
-          <div
-            class="ch-tabs__panel is-active"
-            role="tabpanel"
-            id="ch-panel-brochures"
-            aria-labelledby="ch-tab-brochures"
-          >
-            <ul class="ch-tabs__links">
-              {% for doc in docs %}
-                <li class="ch-tabs__link-item">
-                  <a class="ch-tabs__link" href="{{ doc.url }}" target="_blank" rel="noopener">
-                    {% render 'icon-library', id: 'icon-data-sheet' %}
-                    <span>{{ doc.alt | default: doc.filename }}</span>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endif %}
-
-        {% if collection.metafields.custom.collection_information %}
-          <div
-            class="ch-tabs__panel {% unless docs != blank %}is-active{% endunless %}"
-            role="tabpanel"
-            id="ch-panel-learn"
-            aria-labelledby="ch-tab-learn"
-            {% if docs != blank %}hidden{% endif %}
-          >
-            <ul class="ch-tabs__links">
-              <li class="ch-tabs__link-item">
-                <a class="ch-tabs__link" href="#section--collection-information">
-                  <span>Collection information</span>
-                </a>
-              </li>
-
-              {%- comment -%}
-                Add more links here if you want, e.g. to subcategories, guides, etc.
-              {%- endcomment -%}
-            </ul>
-          </div>
-        {% endif %}
-      </div>
+      {% if collection.metafields.custom.collection_information %}
+        <button
+          class="ch-tabs__tab {% unless docs != blank %}is-active{% endunless %}"
+          type="button"
+          role="tab"
+          aria-selected="{% if docs != blank %}false{% else %}true{% endif %}"
+          aria-controls="ch-panel-learn"
+          id="ch-tab-learn"
+          data-ch-tab="ch-panel-learn"
+        >
+          Learn more
+        </button>
+      {% endif %}
     </div>
-  {% endif %}
-</div>
+
+    <div class="ch-tabs__panels">
+      {% if docs != blank %}
+        <div
+          class="ch-tabs__panel is-active"
+          role="tabpanel"
+          id="ch-panel-brochures"
+          aria-labelledby="ch-tab-brochures"
+        >
+          <div class="supporting-docs__buttons ch-tabs__buttons">
+            {% for doc in docs %}
+              <a
+                href="{{ doc.url }}"
+                class="button--base button--outline button--icon-before"
+                target="_blank" rel="noopener"
+              >
+                <span class="button__icon">
+                  {% render 'icon-library', id: 'icon-data-sheet' %}
+                </span>
+                <span class="button__text">
+                  {{ doc.alt | default: doc.filename }}
+                </span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if collection.metafields.custom.collection_information %}
+        <div
+          class="ch-tabs__panel {% unless docs != blank %}is-active{% endunless %}"
+          role="tabpanel"
+          id="ch-panel-learn"
+          aria-labelledby="ch-tab-learn"
+          {% if docs != blank %}hidden{% endif %}
+        >
+          <div class="supporting-docs__buttons ch-tabs__buttons">
+            <a
+              href="#section--collection-information"
+              class="button--base button--outline button--icon-before"
+            >
+              <span class="button__icon">
+                {% render 'icon-library', id: 'icon-arrow-down' %}
+              </span>
+              <span class="button__text">Collection information</span>
+            </a>
+
+            {%- comment -%}
+              Add more buttons/links here as needed.
+              Example:
+              <a href="/pages/..." class="button--base button--outline button--icon-before">
+                <span class="button__icon">{% render 'icon-library', id: 'icon-link' %}</span>
+                <span class="button__text">Installation guide</span>
+              </a>
+            {%- endcomment -%}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
 
 </div>
 

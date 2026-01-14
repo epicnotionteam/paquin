@@ -226,16 +226,18 @@
 
 
 
-<div class="c-collection-hero js-collection-hero">
-  <div class="c-collection-hero__media">
+<div id="collection-hero-flex" class="ch-flex">
+  {%- comment -%} LEFT: Image only {%- endcomment -%}
+  <div class="ch-flex__left">
     {% if collection.image %}
-      <div class="c-collection-hero__image">
+      <div class="ch-flex__img">
         {{ collection.image | img_url: '600x' | img_tag: collection.title }}
       </div>
     {% endif %}
   </div>
 
-  <div class="c-collection-hero__content">
+  {%- comment -%} RIGHT: Everything else {%- endcomment -%}
+  <div class="ch-flex__right">
     <h1 class="collection--title">
       {%- render 'collection-title-formatted', collection: collection -%}
     </h1>
@@ -244,9 +246,7 @@
       <div class="collection--description rte" data-collection-description>
         {{ collection.description }}
         {% if collection.metafields.custom.collection_information %}
-          <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">
-            Learn more
-          </a>
+          <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
         {% endif %}
       </div>
     {% endif %}
@@ -259,17 +259,11 @@
 
           <div class="supporting-docs__buttons">
             {% for doc in docs %}
-              <a
-                href="{{ doc.url }}"
-                class="button--base button--outline button--icon-before"
-                target="_blank" rel="noopener"
-              >
-                <span class="button__icon">
-                  {% render 'icon-library', id: 'icon-data-sheet' %}
-                </span>
-                <span class="button__text">
-                  {{ doc.alt | default: doc.filename }}
-                </span>
+              <a href="{{ doc.url }}"
+                 class="button--base button--outline button--icon-before"
+                 target="_blank" rel="noopener">
+                <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
+                <span class="button__text">{{ doc.alt | default: doc.filename }}</span>
               </a>
             {% endfor %}
           </div>
@@ -278,6 +272,7 @@
     {% endif %}
   </div>
 </div>
+
 
 
 

@@ -5887,61 +5887,47 @@ ul.list--link-arrow li::before {
 
 
 
-/* ==========================
-   Collection Hero Overrides
-   ========================== */
-
-/* Force flex layout even if parent/theme sets grid/block */
-.c-collection-hero.c-collection-hero {
+/* Strong overrides using ID so theme styles can't easily beat it */
+#collection-hero-flex.ch-flex {
   display: flex !important;
-  flex-direction: row !important;
+  flex-direction: row !important;   /* force side-by-side */
+  flex-wrap: nowrap !important;
   gap: 2rem !important;
   align-items: flex-start !important;
   width: 100% !important;
-  max-width: 100% !important;
 }
 
-/* Left column: fixed width, cannot grow */
-.c-collection-hero.c-collection-hero > .c-collection-hero__media {
+/* LEFT column: fixed width, cannot grow */
+#collection-hero-flex .ch-flex__left {
   flex: 0 0 320px !important;
   width: 320px !important;
   max-width: 320px !important;
   min-width: 320px !important;
 }
 
-/* Ensure nothing in left column forces full-width layout */
-.c-collection-hero.c-collection-hero .c-collection-hero__media,
-.c-collection-hero.c-collection-hero .c-collection-hero__image {
+/* RIGHT column: fills remaining space */
+#collection-hero-flex .ch-flex__right {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important; /* prevents overflow causing drop */
+}
+
+/* Image: never full-page width */
+#collection-hero-flex .ch-flex__img,
+#collection-hero-flex .ch-flex__img img {
   display: block !important;
 }
 
-/* Image hard constraints (beats img { width:100% } etc.) */
-.c-collection-hero.c-collection-hero .c-collection-hero__image img {
-  display: block !important;
+#collection-hero-flex .ch-flex__img img {
   width: 100% !important;
   max-width: 320px !important;
   height: auto !important;
   object-fit: contain !important;
 }
 
-/* Right column: take remaining space */
-.c-collection-hero.c-collection-hero > .c-collection-hero__content {
-  flex: 1 1 auto !important;
-  width: auto !important;
-  max-width: none !important;
-  min-width: 0 !important; /* prevents overflow causing wrap */
-}
-
-/* Remove surprise theme margins/padding inside the hero */
-.c-collection-hero.c-collection-hero .collection--title,
-.c-collection-hero.c-collection-hero .collection--description,
-.c-collection-hero.c-collection-hero .collection--supporting-docs {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Buttons alignment override (themes often center these) */
-.c-collection-hero.c-collection-hero .supporting-docs__buttons {
+/* Buttons: avoid theme centering */
+#collection-hero-flex .supporting-docs__buttons {
   display: flex !important;
   gap: .5rem !important;
   flex-wrap: wrap !important;
@@ -5949,20 +5935,21 @@ ul.list--link-arrow li::before {
   align-items: center !important;
 }
 
-/* Mobile stack */
+/* Mobile: stack */
 @media (max-width: 768px) {
-  .c-collection-hero.c-collection-hero {
+  #collection-hero-flex.ch-flex {
     flex-direction: column !important;
   }
 
-  .c-collection-hero.c-collection-hero > .c-collection-hero__media {
+  #collection-hero-flex .ch-flex__left {
     flex: 0 0 auto !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
   }
 
-  .c-collection-hero.c-collection-hero .c-collection-hero__image img {
+  #collection-hero-flex .ch-flex__img img {
     max-width: 100% !important;
   }
 }
+

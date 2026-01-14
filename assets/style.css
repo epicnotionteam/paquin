@@ -5887,55 +5887,82 @@ ul.list--link-arrow li::before {
 
 
 
-/* Flex two-column collection hero */
-.c-collection-hero {
-  display: flex;
-  gap: 0.5rem;
-  align-items: flex-start;
+/* ==========================
+   Collection Hero Overrides
+   ========================== */
+
+/* Force flex layout even if parent/theme sets grid/block */
+.c-collection-hero.c-collection-hero {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-/* Left column */
-.c-collection-hero__media {
-  flex: 0 0 320px;     /* fixed left column width */
-  max-width: 320px;
+/* Left column: fixed width, cannot grow */
+.c-collection-hero.c-collection-hero > .c-collection-hero__media {
+  flex: 0 0 320px !important;
+  width: 320px !important;
+  max-width: 320px !important;
+  min-width: 320px !important;
 }
 
-/* Image sizing */
-.c-collection-hero__image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 320px;   /* hard cap */
+/* Ensure nothing in left column forces full-width layout */
+.c-collection-hero.c-collection-hero .c-collection-hero__media,
+.c-collection-hero.c-collection-hero .c-collection-hero__image {
+  display: block !important;
 }
 
-/* Right column */
-.c-collection-hero__content {
-  flex: 1 1 auto;
-  min-width: 0;       /* prevents overflow causing weird wrapping */
+/* Image hard constraints (beats img { width:100% } etc.) */
+.c-collection-hero.c-collection-hero .c-collection-hero__image img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
 
-/* Optional: make brochure buttons align left (not centered) */
-.supporting-docs__buttons {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+/* Right column: take remaining space */
+.c-collection-hero.c-collection-hero > .c-collection-hero__content {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important; /* prevents overflow causing wrap */
 }
 
-/* Responsive: stack */
+/* Remove surprise theme margins/padding inside the hero */
+.c-collection-hero.c-collection-hero .collection--title,
+.c-collection-hero.c-collection-hero .collection--description,
+.c-collection-hero.c-collection-hero .collection--supporting-docs {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Buttons alignment override (themes often center these) */
+.c-collection-hero.c-collection-hero .supporting-docs__buttons {
+  display: flex !important;
+  gap: .5rem !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+
+/* Mobile stack */
 @media (max-width: 768px) {
-  .c-collection-hero {
-    flex-direction: column;
+  .c-collection-hero.c-collection-hero {
+    flex-direction: column !important;
   }
 
-  .c-collection-hero__media {
-    flex: 0 0 auto;
-    max-width: 100%;
-    width: 100%;
+  .c-collection-hero.c-collection-hero > .c-collection-hero__media {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
-  .c-collection-hero__image img {
-    max-width: 100%;
+  .c-collection-hero.c-collection-hero .c-collection-hero__image img {
+    max-width: 100% !important;
   }
 }

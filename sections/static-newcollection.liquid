@@ -226,17 +226,15 @@
 
 
 
-<div class="c-collection-hero">
-  {%- comment -%} LEFT: Image only {%- endcomment -%}
+<div class="c-collection-hero js-collection-hero">
   <div class="c-collection-hero__media">
     {% if collection.image %}
       <div class="c-collection-hero__image">
-        {{ collection.image | img_url: '300x' | img_tag: collection.title }}
+        {{ collection.image | img_url: '600x' | img_tag: collection.title }}
       </div>
     {% endif %}
   </div>
 
-  {%- comment -%} RIGHT: Everything else {%- endcomment -%}
   <div class="c-collection-hero__content">
     <h1 class="collection--title">
       {%- render 'collection-title-formatted', collection: collection -%}
@@ -280,6 +278,7 @@
     {% endif %}
   </div>
 </div>
+
 
 
 

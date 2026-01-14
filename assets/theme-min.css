@@ -22258,3 +22258,63 @@ rgb(255, 255, 255)
   }
 }
 
+/* Tabs container */
+.ch-tabs {
+  margin-top: 1.25rem;
+}
+
+/* Tab buttons row */
+.ch-tabs__nav {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  padding-bottom: .5rem;
+  margin-bottom: .75rem;
+}
+
+/* Individual tab */
+.ch-tabs__tab {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,.18);
+  background: transparent;
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+}
+
+.ch-tabs__tab.is-active {
+  border-color: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.06);
+}
+
+/* Panels */
+.ch-tabs__panel {
+  display: none;
+}
+
+.ch-tabs__panel.is-active {
+  display: block;
+}
+
+/* Link list */
+.ch-tabs__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: .5rem;
+}
+
+.ch-tabs__link {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.ch-tabs__link:hover {
+  text-decoration: underline;
+}

@@ -226,6 +226,8 @@
 
 
 
+
+
 <div id="collection-hero-flex">
   <div class="ch-left">
     {% if collection.image %}
@@ -236,38 +238,104 @@
   </div>
 
   <div class="ch-right">
-    <h1 class="collection--title">
-      {%- render 'collection-title-formatted', collection: collection -%}
-    </h1>
+  <h1 class="collection--title">
+    {%- render 'collection-title-formatted', collection: collection -%}
+  </h1>
 
-    {% if collection.description != blank %}
-      <div class="collection--description rte" data-collection-description>
-        {{ collection.description }}
+  {% if collection.description != blank %}
+    <div class="collection--description rte" data-collection-description>
+      {{ collection.description }}
+      {% if collection.metafields.custom.collection_information %}
+        <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {%- assign docs = blank -%}
+  {% if collection.metafields.custom.supporting_documents != blank %}
+    {% assign docs = collection.metafields.custom.supporting_documents.value %}
+  {% endif %}
+
+  {%- comment -%} Tabs wrapper (shows if at least one tab has content) {%- endcomment -%}
+  {% if docs != blank or collection.metafields.custom.collection_information %}
+    <div class="ch-tabs" data-ch-tabs>
+      <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
+        {% if docs != blank %}
+          <button
+            class="ch-tabs__tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="ch-panel-brochures"
+            id="ch-tab-brochures"
+            data-ch-tab="ch-panel-brochures"
+          >
+            Brochures
+          </button>
+        {% endif %}
+
         {% if collection.metafields.custom.collection_information %}
-          <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
+          <button
+            class="ch-tabs__tab {% unless docs != blank %}is-active{% endunless %}"
+            type="button"
+            role="tab"
+            aria-selected="{% if docs != blank %}false{% else %}true{% endif %}"
+            aria-controls="ch-panel-learn"
+            id="ch-tab-learn"
+            data-ch-tab="ch-panel-learn"
+          >
+            Learn more
+          </button>
         {% endif %}
       </div>
-    {% endif %}
 
-    {% if collection.metafields.custom.supporting_documents != blank %}
-      {% assign docs = collection.metafields.custom.supporting_documents.value %}
-      {% if docs != blank %}
-        <div class="collection--supporting-docs">
-          <h3 class="supporting-docs__heading">Collection Brochures</h3>
-          <div class="supporting-docs__buttons">
-            {% for doc in docs %}
-              <a href="{{ doc.url }}"
-                 class="button--base button--outline button--icon-before"
-                 target="_blank" rel="noopener">
-                <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                <span class="button__text">{{ doc.alt | default: doc.filename }}</span>
-              </a>
-            {% endfor %}
+      <div class="ch-tabs__panels">
+        {% if docs != blank %}
+          <div
+            class="ch-tabs__panel is-active"
+            role="tabpanel"
+            id="ch-panel-brochures"
+            aria-labelledby="ch-tab-brochures"
+          >
+            <ul class="ch-tabs__links">
+              {% for doc in docs %}
+                <li class="ch-tabs__link-item">
+                  <a class="ch-tabs__link" href="{{ doc.url }}" target="_blank" rel="noopener">
+                    {% render 'icon-library', id: 'icon-data-sheet' %}
+                    <span>{{ doc.alt | default: doc.filename }}</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
-        </div>
-      {% endif %}
-    {% endif %}
-  </div>
+        {% endif %}
+
+        {% if collection.metafields.custom.collection_information %}
+          <div
+            class="ch-tabs__panel {% unless docs != blank %}is-active{% endunless %}"
+            role="tabpanel"
+            id="ch-panel-learn"
+            aria-labelledby="ch-tab-learn"
+            {% if docs != blank %}hidden{% endif %}
+          >
+            <ul class="ch-tabs__links">
+              <li class="ch-tabs__link-item">
+                <a class="ch-tabs__link" href="#section--collection-information">
+                  <span>Collection information</span>
+                </a>
+              </li>
+
+              {%- comment -%}
+                Add more links here if you want, e.g. to subcategories, guides, etc.
+              {%- endcomment -%}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
 </div>
 
 

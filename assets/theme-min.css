@@ -22214,6 +22214,10 @@ rgb(255, 255, 255)
   transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
+
+
 #collection-hero-flex {
   display: flex !important;
   flex-direction: row !important;
@@ -22222,6 +22226,8 @@ rgb(255, 255, 255)
   align-items: flex-start !important;
   width: 100% !important;
   max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #collection-hero-flex > .ch-left {

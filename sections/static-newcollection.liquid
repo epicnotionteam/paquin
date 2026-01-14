@@ -251,10 +251,7 @@
     </div>
   {% endif %}
 
-  {%- assign docs = blank -%}
-  {% if collection.metafields.custom.supporting_documents != blank %}
-    {% assign docs = collection.metafields.custom.supporting_documents.value %}
-  {% endif %}
+{%- assign ch_uid = section.id | default: collection.id -%}
 
 {%- assign docs = blank -%}
 {% if collection.metafields.custom.supporting_documents != blank %}
@@ -266,13 +263,13 @@
     <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
       {% if docs != blank %}
         <button
-          class="ch-tabs__tab is-active"
+          class="ch-tabs__tab"
           type="button"
           role="tab"
-          aria-selected="true"
-          aria-controls="ch-panel-brochures"
-          id="ch-tab-brochures"
-          data-ch-tab="ch-panel-brochures"
+          aria-selected="false"
+          aria-controls="ch-panel-brochures-{{ ch_uid }}"
+          id="ch-tab-brochures-{{ ch_uid }}"
+          data-ch-tab="ch-panel-brochures-{{ ch_uid }}"
         >
           Collection Brochures
         </button>
@@ -280,13 +277,13 @@
 
       {% if collection.metafields.custom.collection_information %}
         <button
-          class="ch-tabs__tab {% unless docs != blank %}is-active{% endunless %}"
+          class="ch-tabs__tab"
           type="button"
           role="tab"
-          aria-selected="{% if docs != blank %}false{% else %}true{% endif %}"
-          aria-controls="ch-panel-learn"
-          id="ch-tab-learn"
-          data-ch-tab="ch-panel-learn"
+          aria-selected="false"
+          aria-controls="ch-panel-learn-{{ ch_uid }}"
+          id="ch-tab-learn-{{ ch_uid }}"
+          data-ch-tab="ch-panel-learn-{{ ch_uid }}"
         >
           Learn more
         </button>
@@ -296,10 +293,11 @@
     <div class="ch-tabs__panels">
       {% if docs != blank %}
         <div
-          class="ch-tabs__panel is-active"
+          class="ch-tabs__panel"
           role="tabpanel"
-          id="ch-panel-brochures"
-          aria-labelledby="ch-tab-brochures"
+          id="ch-panel-brochures-{{ ch_uid }}"
+          aria-labelledby="ch-tab-brochures-{{ ch_uid }}"
+          hidden
         >
           <div class="supporting-docs__buttons ch-tabs__buttons">
             {% for doc in docs %}
@@ -322,11 +320,11 @@
 
       {% if collection.metafields.custom.collection_information %}
         <div
-          class="ch-tabs__panel {% unless docs != blank %}is-active{% endunless %}"
+          class="ch-tabs__panel"
           role="tabpanel"
-          id="ch-panel-learn"
-          aria-labelledby="ch-tab-learn"
-          {% if docs != blank %}hidden{% endif %}
+          id="ch-panel-learn-{{ ch_uid }}"
+          aria-labelledby="ch-tab-learn-{{ ch_uid }}"
+          hidden
         >
           <div class="supporting-docs__buttons ch-tabs__buttons">
             <a
@@ -338,33 +336,12 @@
               </span>
               <span class="button__text">Collection information</span>
             </a>
-
-            <a
-              href="#section--collection-information"
-              class="button--base button--outline button--icon-before"
-            >
-              <span class="button__icon">
-                {% render 'icon-library', id: 'icon-arrow-down' %}
-              </span>
-              <span class="button__text">Collection information</span>
-            </a>
-
-            {%- comment -%}
-              Add more buttons/links here as needed.
-              Example:
-              <a href="/pages/..." class="button--base button--outline button--icon-before">
-                <span class="button__icon">{% render 'icon-library', id: 'icon-link' %}</span>
-                <span class="button__text">Installation guide</span>
-              </a>
-            {%- endcomment -%}
           </div>
         </div>
       {% endif %}
     </div>
   </div>
 {% endif %}
-
-
 </div>
 
 

@@ -673,62 +673,76 @@
       const containers = scope.querySelectorAll('[data-ch-tabs]');
 
       containers.forEach((container) => {
-        // Prevent double-binding if Shopify editor reloads sections
         if (container.dataset.chTabsInit === '1') return;
         container.dataset.chTabsInit = '1';
 
         const tabs = Array.from(container.querySelectorAll('[data-ch-tab]'));
         const panels = Array.from(container.querySelectorAll('.ch-tabs__panel'));
-
         if (!tabs.length || !panels.length) return;
 
-        function activate(tab) {
-          const targetId = tab.getAttribute('data-ch-tab');
-
+        function closeAll() {
           tabs.forEach((t) => {
-            const isActive = t === tab;
-            t.classList.toggle('is-active', isActive);
-            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
           });
-
           panels.forEach((p) => {
-            const isActive = p.id === targetId;
-            p.classList.toggle('is-active', isActive);
-            if (isActive) p.removeAttribute('hidden');
-            else p.setAttribute('hidden', '');
+            p.classList.remove('is-active');
+            p.setAttribute('hidden', '');
           });
         }
 
-        // Ensure only one panel is active on load (in case theme CSS/HTML conflicts)
-        const initiallyActive = tabs.find(t => t.classList.contains('is-active')) || tabs[0];
-        activate(initiallyActive);
+        function openTab(tab) {
+          const targetId = tab.getAttribute('data-ch-tab');
+          const panel = container.querySelector('#' + CSS.escape(targetId));
+          if (!panel) return;
+
+          closeAll();
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          panel.classList.add('is-active');
+          panel.removeAttribute('hidden');
+        }
+
+        // Start CLOSED on load
+        closeAll();
 
         tabs.forEach((tab, idx) => {
-          tab.addEventListener('click', () => activate(tab));
+          tab.addEventListener('click', () => {
+            const isActive = tab.classList.contains('is-active');
+            if (isActive) closeAll();
+            else openTab(tab);
+          });
 
           tab.addEventListener('keydown', (e) => {
-            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'Enter' && e.key !== ' ') return;
+
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const isActive = tab.classList.contains('is-active');
+              if (isActive) closeAll();
+              else openTab(tab);
+              return;
+            }
+
             e.preventDefault();
             const dir = e.key === 'ArrowRight' ? 1 : -1;
             const next = (idx + dir + tabs.length) % tabs.length;
             tabs[next].focus();
-            activate(tabs[next]);
           });
         });
       });
     }
 
-    // Normal page load
     document.addEventListener('DOMContentLoaded', function () {
       initTabs(document);
     });
 
-    // Shopify theme editor / section reload
     document.addEventListener('shopify:section:load', function (event) {
       initTabs(event.target);
     });
   })();
 </script>
+
 
 
 

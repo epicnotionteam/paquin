@@ -22224,8 +22224,8 @@ rgb(255, 255, 255)
   flex-wrap: nowrap !important;
   gap: 24px !important;
   align-items: flex-start !important;
+  max-width: none !important;
   width: 100% !important;
-  max-width: 100% !important;
   margin-left: auto;
   margin-right: auto;
 }

@@ -22258,12 +22258,10 @@ rgb(255, 255, 255)
   }
 }
 
-/* Tabs container */
 .ch-tabs {
   margin-top: 1.25rem;
 }
 
-/* Tab buttons row */
 .ch-tabs__nav {
   display: flex;
   gap: .5rem;
@@ -22273,7 +22271,6 @@ rgb(255, 255, 255)
   margin-bottom: .75rem;
 }
 
-/* Individual tab */
 .ch-tabs__tab {
   appearance: none;
   border: 1px solid rgba(0,0,0,.18);
@@ -22290,7 +22287,6 @@ rgb(255, 255, 255)
   background: rgba(0,0,0,.06);
 }
 
-/* Panels */
 .ch-tabs__panel {
   display: none;
 }
@@ -22299,22 +22295,11 @@ rgb(255, 255, 255)
   display: block;
 }
 
-/* Link list */
-.ch-tabs__links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
+/* Ensure your buttons wrap nicely in the tab panel */
+.ch-tabs__buttons {
+  display: flex;
   gap: .5rem;
-}
-
-.ch-tabs__link {
-  display: inline-flex;
-  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
-  text-decoration: none;
-}
-
-.ch-tabs__link:hover {
-  text-decoration: underline;
 }

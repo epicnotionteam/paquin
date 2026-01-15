@@ -175,74 +175,74 @@
 
 
 
-<div id="collection-hero-flex">
-  <div class="ch-left">
-    {% if collection.image %}
-      <div class="ch-img">
-        {{ collection.image | img_url: '600x' | img_tag: collection.title }}
-      </div>
-    {% endif %}
-  </div>
+                    <div id="collection-hero-flex">
+                    <div class="ch-left">
+                        {% if collection.image %}
+                        <div class="ch-img">
+                            {{ collection.image | img_url: '600x' | img_tag: collection.title }}
+                        </div>
+                        {% endif %}
+                    </div>
 
-  <div class="ch-right">
-  <h1 class="collection--title">
-    {%- render 'collection-title-formatted', collection: collection -%}
-  </h1>
+                    <div class="ch-right">
+                    <h1 class="collection--title">
+                        {%- render 'collection-title-formatted', collection: collection -%}
+                    </h1>
 
-  {% if collection.description != blank %}
-    <div class="collection--description rte" data-collection-description>
-      {{ collection.description }}
-      {% if collection.metafields.custom.collection_information %}
-        <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
-      {% endif %}
-    </div>
-  {% endif %}
+                    {% if collection.description != blank %}
+                        <div class="collection--description rte" data-collection-description>
+                        {{ collection.description }}
+                        {% if collection.metafields.custom.collection_information %}
+                            <a href="#section--collection-information" class="link--icon-before link--icon-arrow-down">Learn more</a>
+                        {% endif %}
+                        </div>
+                    {% endif %}
 
-{%- assign uid = section.id | default: collection.id -%}
-{%- assign tab_keys = collection.metafields.custom.resource_tab_names.value -%}
+                    {%- assign uid = section.id | default: collection.id -%}
+                    {%- assign tab_keys = collection.metafields.custom.resource_tab_names.value -%}
 
-{% if tab_keys != blank %}
-  <div class="ch-tabs" data-ch-tabs>
-    <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
-      {% for key in tab_keys %}
-        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-        <button class="ch-tabs__tab"
-          type="button" role="tab"
-          aria-selected="false"
-          id="ch-tab-{{ panel_id }}"
-          aria-controls="{{ panel_id }}"
-          data-ch-tab="{{ panel_id }}">
-          {{ key | replace: '_', ' ' | capitalize }}
-        </button>
-      {% endfor %}
-    </div>
+                    {% if tab_keys != blank %}
+                    <div class="ch-tabs" data-ch-tabs>
+                        <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
+                        {% for key in tab_keys %}
+                            {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+                            <button class="ch-tabs__tab"
+                            type="button" role="tab"
+                            aria-selected="false"
+                            id="ch-tab-{{ panel_id }}"
+                            aria-controls="{{ panel_id }}"
+                            data-ch-tab="{{ panel_id }}">
+                            {{ key | replace: '_', ' ' | capitalize }}
+                            </button>
+                        {% endfor %}
+                        </div>
 
-    <div class="ch-tabs__panels">
-      {% for key in tab_keys %}
-        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-        {%- assign files = collection.metafields.custom[key].value -%}
+                        <div class="ch-tabs__panels">
+                        {% for key in tab_keys %}
+                            {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+                            {%- assign files = collection.metafields.custom[key].value -%}
 
-        <div class="ch-tabs__panel" role="tabpanel"
-          id="{{ panel_id }}"
-          aria-labelledby="ch-tab-{{ panel_id }}"
-          hidden>
-          <div class="supporting-docs__buttons ch-tabs__buttons">
-            {% if files != blank %}
-              {% for f in files %}
-                <a href="{{ f.url }}" class="button--base button--outline button--icon-before" target="_blank" rel="noopener">
-                  <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                  <span class="button__text">{{ f.alt | default: f.filename }}</span>
-                </a>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-{% endif %}
-</div>
-</div>
+                            <div class="ch-tabs__panel" role="tabpanel"
+                            id="{{ panel_id }}"
+                            aria-labelledby="ch-tab-{{ panel_id }}"
+                            hidden>
+                            <div class="supporting-docs__buttons ch-tabs__buttons">
+                                {% if files != blank %}
+                                {% for f in files %}
+                                    <a href="{{ f.url }}" class="button--base button--outline button--icon-before" target="_blank" rel="noopener">
+                                    <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
+                                    <span class="button__text">{{ f.alt | default: f.filename }}</span>
+                                    </a>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    </div>
+                    </div>
 
 
 

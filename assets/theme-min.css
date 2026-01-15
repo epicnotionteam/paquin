@@ -22361,9 +22361,8 @@ rgb(255, 255, 255)
   width: 100% !important;
 }
 
-/* Remove default H1 spacing that often causes "not lined up" look */
 #collection-hero-flex .ch-right .collection--title{
-  margin: 0 0 30px 0 !important;  /* bottom gap only */
+  margin: 30px 0 30px 0 !important;  /* bottom gap only */
   padding: 0 !important;
   width: 100% !important;
 }

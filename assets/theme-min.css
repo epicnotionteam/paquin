@@ -22307,3 +22307,42 @@ rgb(255, 255, 255)
   justify-content: flex-start;
   align-items: center;
 }
+
+/* Normalize spacing in the right column so everything aligns */
+#collection-hero-flex .ch-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Remove unexpected top margins */
+#collection-hero-flex .ch-right .collection--title {
+  margin-top: 0 !important;
+}
+
+/* Control description spacing */
+#collection-hero-flex .ch-right .collection--description {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important; /* choose your spacing */
+}
+
+/* Many themes add margins to paragraphs inside .rte */
+#collection-hero-flex .ch-right .collection--description.rte > *:first-child {
+  margin-top: 0 !important;
+}
+#collection-hero-flex .ch-right .collection--description.rte > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Tabs should start right after description */
+#collection-hero-flex .ch-right .ch-tabs {
+  margin-top: 0 !important;
+  width: 100%;
+}
+
+/* Tabs row alignment/spacing */
+#collection-hero-flex .ch-right .ch-tabs__nav {
+  margin-top: 0 !important;
+  margin-bottom: .75rem !important;
+  padding-bottom: .5rem !important;
+}

@@ -22416,22 +22416,3 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right ol{
   padding-left: 1.25rem !important; /* optional; adjust/remove if not needed */
 }
-/* Let the right column actually use the available width */
-#collection-hero-flex .ch-right{
-  width: 100% !important;
-  max-width: none !important;
-}
-
-/* Many themes cap description/rte width for readability */
-#collection-hero-flex .ch-right .collection--description,
-#collection-hero-flex .ch-right .collection--description.rte,
-#collection-hero-flex .ch-right .rte{
-  width: 100% !important;
-  max-width: none !important;
-}
-
-/* Sometimes the theme applies "measure" to paragraphs */
-#collection-hero-flex .ch-right .collection--description p,
-#collection-hero-flex .ch-right .rte p{
-  max-width: none !important;
-}

@@ -252,57 +252,45 @@
   {% endif %}
 
 {%- assign ch_uid = section.id | default: collection.id -%}
+{%- assign tabs = collection.metafields.custom.resource_tabs.value -%}
 
-{%- assign docs = blank -%}
-{% if collection.metafields.custom.supporting_documents != blank %}
-  {% assign docs = collection.metafields.custom.supporting_documents.value %}
-{% endif %}
-
-{% if docs != blank or collection.metafields.custom.collection_information %}
+{% if tabs != blank %}
   <div class="ch-tabs" data-ch-tabs>
     <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
-      {% if docs != blank %}
+      {% for tab in tabs %}
+        {%- assign tab_id = 'ch-panel-' | append: ch_uid | append: '-' | append: forloop.index -%}
         <button
           class="ch-tabs__tab"
           type="button"
           role="tab"
           aria-selected="false"
-          aria-controls="ch-panel-brochures-{{ ch_uid }}"
-          id="ch-tab-brochures-{{ ch_uid }}"
-          data-ch-tab="ch-panel-brochures-{{ ch_uid }}"
+          aria-controls="{{ tab_id }}"
+          id="ch-tab-{{ tab_id }}"
+          data-ch-tab="{{ tab_id }}"
         >
-          Collection Brochures
+          {{ tab.title }}
         </button>
-      {% endif %}
-
-      {% if collection.metafields.custom.collection_information %}
-        <button
-          class="ch-tabs__tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="ch-panel-learn-{{ ch_uid }}"
-          id="ch-tab-learn-{{ ch_uid }}"
-          data-ch-tab="ch-panel-learn-{{ ch_uid }}"
-        >
-          Learn more
-        </button>
-      {% endif %}
+      {% endfor %}
     </div>
 
     <div class="ch-tabs__panels">
-      {% if docs != blank %}
+      {% for tab in tabs %}
+        {%- assign tab_id = 'ch-panel-' | append: ch_uid | append: '-' | append: forloop.index -%}
         <div
           class="ch-tabs__panel"
           role="tabpanel"
-          id="ch-panel-brochures-{{ ch_uid }}"
-          aria-labelledby="ch-tab-brochures-{{ ch_uid }}"
+          id="{{ tab_id }}"
+          aria-labelledby="ch-tab-{{ tab_id }}"
           hidden
         >
           <div class="supporting-docs__buttons ch-tabs__buttons">
-            {% for doc in docs %}
+            {%- comment -%}
+              If tab.links is a list of files (Shopify file objects),
+              each item usually has url/alt/filename-like props.
+            {%- endcomment -%}
+            {% for item in tab.links.value %}
               <a
-                href="{{ doc.url }}"
+                href="{{ item.url }}"
                 class="button--base button--outline button--icon-before"
                 target="_blank" rel="noopener"
               >
@@ -310,35 +298,13 @@
                   {% render 'icon-library', id: 'icon-data-sheet' %}
                 </span>
                 <span class="button__text">
-                  {{ doc.alt | default: doc.filename }}
+                  {{ item.alt | default: item.filename | default: 'Download' }}
                 </span>
               </a>
             {% endfor %}
           </div>
         </div>
-      {% endif %}
-
-      {% if collection.metafields.custom.collection_information %}
-        <div
-          class="ch-tabs__panel"
-          role="tabpanel"
-          id="ch-panel-learn-{{ ch_uid }}"
-          aria-labelledby="ch-tab-learn-{{ ch_uid }}"
-          hidden
-        >
-          <div class="supporting-docs__buttons ch-tabs__buttons">
-            <a
-              href="#section--collection-information"
-              class="button--base button--outline button--icon-before"
-            >
-              <span class="button__icon">
-                {% render 'icon-library', id: 'icon-arrow-down' %}
-              </span>
-              <span class="button__text">Collection information</span>
-            </a>
-          </div>
-        </div>
-      {% endif %}
+      {% endfor %}
     </div>
   </div>
 {% endif %}

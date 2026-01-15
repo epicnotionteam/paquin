@@ -206,7 +206,7 @@
     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
       {% for key in tab_keys %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-        <button class="supporting-docs__buttons ch-tabs__buttons"
+        <button class="ch-tabs__tab"
           type="button" role="tab"
           aria-selected="false"
           id="ch-tab-{{ panel_id }}"

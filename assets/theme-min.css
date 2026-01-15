@@ -22350,3 +22350,71 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right .ch-tabs__panels {
   padding-left: 0 !important;
 }
+
+/* Ensure the right column is a clean vertical stack */
+#collection-hero-flex .ch-right{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important; /* same left edge */
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+/* Remove default H1 spacing that often causes "not lined up" look */
+#collection-hero-flex .ch-right .collection--title{
+  margin: 0 0 1rem 0 !important;  /* bottom gap only */
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Description: remove theme/RTE margins that push things around */
+#collection-hero-flex .ch-right .collection--description{
+  margin: 0 0 1rem 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* RTE children often add their own top/bottom margins */
+#collection-hero-flex .ch-right .collection--description.rte > *:first-child{
+  margin-top: 0 !important;
+}
+#collection-hero-flex .ch-right .collection--description.rte > *:last-child{
+  margin-bottom: 0 !important;
+}
+
+/* Tabs: remove any inherited padding/margins that shift them */
+#collection-hero-flex .ch-right .ch-tabs{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Tabs row should start at the same left edge as text */
+#collection-hero-flex .ch-right .ch-tabs__nav{
+  margin: 0 0 .75rem 0 !important;
+  padding: 0 0 .5rem 0 !important;
+  width: 100% !important;
+  justify-content: flex-start !important;
+}
+
+/* Panels aligned under tabs/text */
+#collection-hero-flex .ch-right .ch-tabs__panels{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Buttons container: no extra left padding; align to left */
+#collection-hero-flex .ch-right .ch-tabs__buttons{
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+}
+
+/* If your theme adds left padding to lists/tables inside RTE anywhere */
+#collection-hero-flex .ch-right ul,
+#collection-hero-flex .ch-right ol{
+  padding-left: 1.25rem !important; /* optional; adjust/remove if not needed */
+}

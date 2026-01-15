@@ -22323,10 +22323,9 @@ rgb(255, 255, 255)
 /* Control description spacing */
 #collection-hero-flex .ch-right .collection--description {
   margin-top: 0 !important;
-  margin-bottom: 1rem !important; /* choose your spacing */
+  margin-bottom: 1rem !important;
 }
 
-/* Many themes add margins to paragraphs inside .rte */
 #collection-hero-flex .ch-right .collection--description.rte > *:first-child {
   margin-top: 0 !important;
 }
@@ -22355,7 +22354,7 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right{
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important; /* same left edge */
+  align-items: flex-start !important;
   justify-content: flex-start !important;
   text-align: left !important;
   width: 100% !important;
@@ -22369,7 +22368,7 @@ rgb(255, 255, 255)
 
 /* Description: remove theme/RTE margins that push things around */
 #collection-hero-flex .ch-right .collection--description{
-  margin: 0 0 30px 0 !important;
+  margin: 0 0 24px 0 !important;
   padding: 0 !important;
   width: 100% !important;
 }
@@ -22416,4 +22415,23 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right ul,
 #collection-hero-flex .ch-right ol{
   padding-left: 1.25rem !important; /* optional; adjust/remove if not needed */
+}
+/* Let the right column actually use the available width */
+#collection-hero-flex .ch-right{
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Many themes cap description/rte width for readability */
+#collection-hero-flex .ch-right .collection--description,
+#collection-hero-flex .ch-right .collection--description.rte,
+#collection-hero-flex .ch-right .rte{
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Sometimes the theme applies "measure" to paragraphs */
+#collection-hero-flex .ch-right .collection--description p,
+#collection-hero-flex .ch-right .rte p{
+  max-width: none !important;
 }

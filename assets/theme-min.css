@@ -22362,7 +22362,7 @@ rgb(255, 255, 255)
 }
 
 #collection-hero-flex .ch-right .collection--title{
-  margin: 30px 0 30px 0 !important;  /* bottom gap only */
+  margin: 0 0 1rem 0 !important;  /* bottom gap only */
   padding: 0 !important;
   width: 100% !important;
 }

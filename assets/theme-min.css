@@ -22346,3 +22346,7 @@ rgb(255, 255, 255)
   margin-bottom: .75rem !important;
   padding-bottom: .5rem !important;
 }
+#collection-hero-flex .ch-right .ch-tabs__nav,
+#collection-hero-flex .ch-right .ch-tabs__panels {
+  padding-left: 0 !important;
+}

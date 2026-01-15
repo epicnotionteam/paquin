@@ -255,8 +255,10 @@
 {%- assign tabs_field = collection.metafields.custom.resource_tabs -%}
 {%- assign tabs = tabs_field.value -%}
 
-<!-- DEBUG tabs metafield: {{ collection.metafields.custom.resource_tabs | json }} -->
-<!-- DEBUG tabs value: {{ tabs | json }} -->
+<!-- DEBUG collection: {{ collection.handle }} -->
+<!-- DEBUG custom namespace: {{ collection.metafields.custom | json }} -->
+<!-- DEBUG ALL namespaces: {{ collection.metafields | json }} -->
+
 
 
 {% if tabs_field != blank and tabs != blank %}

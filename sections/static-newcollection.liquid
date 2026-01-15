@@ -253,13 +253,13 @@
 
 {%- assign uid = section.id | default: collection.id -%}
 
-{%- assign tab_names = collection.metafields.custom.resource_tab_names.value -%}
+{%- assign resource_tab_names = collection.metafields.custom.resource_tab_names.value -%}
 {%- assign docs = collection.metafields.custom.supporting_documents.value -%}
 
-{% if tab_names != blank and docs != blank %}
+{% if resource_tab_names != blank and docs != blank %}
   <div class="ch-tabs" data-ch-tabs>
     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
-      {% for tab_name in tab_names %}
+      {% for resource_tab_name in resource_tab_names %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
         <button
           class="button--base button--outline button--icon-before"
@@ -270,13 +270,13 @@
           aria-controls="{{ panel_id }}"
           data-ch-tab="{{ panel_id }}"
         >
-          {{ tab_name }}
+          {{ resource_tab_name }}
         </button>
       {% endfor %}
     </div>
 
     <div class="ch-tabs__panels">
-      {% for tab_name in tab_names %}
+      {% for resource_tab_names in resource_tab_names %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
 
         <div class="ch-tabs__panel"
@@ -289,8 +289,8 @@
             {%- assign found_any = false -%}
 
             {% for f in docs %}
-              {%- assign file_tab = f.metafields.custom.tab_name.value | default: f.metafields.custom.tab_name -%}
-              {% if file_tab == tab_name %}
+              {%- assign file_tab = f.metafields.custom.resource_tab_names.value | default: f.metafields.custom.tab_name -%}
+              {% if file_tab == resource_tab_name %}
                 {%- assign found_any = true -%}
                 <a href="{{ f.url }}"
                   class="button--base button--outline button--icon-before"

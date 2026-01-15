@@ -256,6 +256,11 @@
 {%- assign tabs = tabs_field.value -%}
 
 {% if tabs_field != blank and tabs != blank %}
+    <pre style="font-size:12px; white-space:pre-wrap;">
+tabs: {{ tabs | json }}
+first tab: {{ tabs[0] | json }}
+</pre>
+
   <div class="ch-tabs" data-ch-tabs>
     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
       {% for tab in tabs %}

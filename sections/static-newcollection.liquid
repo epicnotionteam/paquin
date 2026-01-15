@@ -252,9 +252,10 @@
   {% endif %}
 
 {%- assign uid = section.id | default: collection.id -%}
-{%- assign tabs = collection.metafields.custom.resource_tabs.value -%}
+{%- assign tabs_field = collection.metafields.custom.resource_tabs -%}
+{%- assign tabs = tabs_field.value -%}
 
-{% if tabs != blank %}
+{% if tabs_field != blank and tabs != blank %}
   <div class="ch-tabs" data-ch-tabs>
     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
       {% for tab in tabs %}
@@ -265,7 +266,7 @@
           id="ch-tab-{{ panel_id }}"
           aria-controls="{{ panel_id }}"
           data-ch-tab="{{ panel_id }}">
-          {{ tab.title }}
+          {{ tab.title | default: tab.title.value }}
         </button>
       {% endfor %}
     </div>
@@ -273,24 +274,32 @@
     <div class="ch-tabs__panels">
       {% for tab in tabs %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-        <div class="ch-tabs__panel" role="tabpanel"
+        {%- assign files_list = tab.files.value | default: tab.files -%}
+
+        <div class="ch-tabs__panel"
+          role="tabpanel"
           id="{{ panel_id }}"
           aria-labelledby="ch-tab-{{ panel_id }}"
           hidden>
           <div class="supporting-docs__buttons ch-tabs__buttons">
-            {% for f in tab.files.value %}
-              <a href="{{ f.url }}" class="button--base button--outline button--icon-before" target="_blank" rel="noopener">
-                <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                <span class="button__text">{{ f.alt | default: f.filename }}</span>
-              </a>
-            {% endfor %}
+            {% if files_list != blank %}
+              {% for f in files_list %}
+                <a href="{{ f.url }}"
+                   class="button--base button--outline button--icon-before"
+                   target="_blank" rel="noopener">
+                  <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
+                  <span class="button__text">{{ f.alt | default: f.filename | default: f.name }}</span>
+                </a>
+              {% endfor %}
+            {% else %}
+              <!-- DEBUG: No files found for this tab -->
+            {% endif %}
           </div>
         </div>
       {% endfor %}
     </div>
   </div>
 {% endif %}
-
 </div>
 </div>
 

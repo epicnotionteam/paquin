@@ -199,64 +199,49 @@
   {% endif %}
 
 {%- assign uid = section.id | default: collection.id -%}
+{%- assign tab_keys = collection.metafields.custom.resource_tab_names.value -%}
 
-{%- assign resource_tab_names = collection.metafields.custom.resource_tab_names.value -%}
-{%- assign docs = collection.metafields.custom.supporting_documents.value -%}
-
-{% if resource_tab_names != blank and docs != blank %}
+{% if tab_keys != blank %}
   <div class="ch-tabs" data-ch-tabs>
     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
-      {% for resource_tab_name in resource_tab_names %}
+      {% for key in tab_keys %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-        <button
-          class="button--base button--outline button--icon-before"
-          type="button"
-          role="tab"
+        <button class="ch-tabs__tab"
+          type="button" role="tab"
           aria-selected="false"
           id="ch-tab-{{ panel_id }}"
           aria-controls="{{ panel_id }}"
-          data-ch-tab="{{ panel_id }}"
-        >
-          {{ resource_tab_name }}
+          data-ch-tab="{{ panel_id }}">
+          {{ key | replace: '_', ' ' | capitalize }}
         </button>
       {% endfor %}
     </div>
 
     <div class="ch-tabs__panels">
-      {% for resource_tab_names in resource_tab_names %}
+      {% for key in tab_keys %}
         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+        {%- assign files = collection.metafields.custom[key].value -%}
 
-        <div class="ch-tabs__panel"
-          role="tabpanel"
+        <div class="ch-tabs__panel" role="tabpanel"
           id="{{ panel_id }}"
           aria-labelledby="ch-tab-{{ panel_id }}"
-          hidden
-        >
+          hidden>
           <div class="supporting-docs__buttons ch-tabs__buttons">
-            {%- assign found_any = false -%}
-
-            {% for f in docs %}
-              {%- assign file_tab = f.metafields.custom.resource_tab_names.value | default: f.metafields.custom.tab_name -%}
-              {% if file_tab == resource_tab_name %}
-                {%- assign found_any = true -%}
-                <a href="{{ f.url }}"
-                  class="button--base button--outline button--icon-before"
-                  target="_blank" rel="noopener">
+            {% if files != blank %}
+              {% for f in files %}
+                <a href="{{ f.url }}" class="button--base button--outline button--icon-before" target="_blank" rel="noopener">
                   <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
                   <span class="button__text">{{ f.alt | default: f.filename }}</span>
                 </a>
-              {% endif %}
-            {% endfor %}
-
-            {% unless found_any %}
-              <p class="ch-tabs__empty">No files available.</p>
-            {% endunless %}
+              {% endfor %}
+            {% endif %}
           </div>
         </div>
       {% endfor %}
     </div>
   </div>
 {% endif %}
+
 </div>
 </div>
 

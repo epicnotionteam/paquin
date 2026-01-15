@@ -255,6 +255,10 @@
 {%- assign tabs_field = collection.metafields.custom.resource_tabs -%}
 {%- assign tabs = tabs_field.value -%}
 
+<!-- DEBUG tabs metafield: {{ collection.metafields.custom.resource_tabs | json }} -->
+<!-- DEBUG tabs value: {{ tabs | json }} -->
+
+
 {% if tabs_field != blank and tabs != blank %}
     <pre style="font-size:12px; white-space:pre-wrap;">
 tabs: {{ tabs | json }}

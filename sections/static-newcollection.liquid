@@ -251,23 +251,20 @@
     </div>
   {% endif %}
 
-{%- assign ch_uid = section.id | default: collection.id -%}
+{%- assign uid = section.id | default: collection.id -%}
 {%- assign tabs = collection.metafields.custom.resource_tabs.value -%}
 
 {% if tabs != blank %}
   <div class="ch-tabs" data-ch-tabs>
-    <div class="ch-tabs__nav" role="tablist" aria-label="Collection resources">
+    <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
       {% for tab in tabs %}
-        {%- assign tab_id = 'ch-panel-' | append: ch_uid | append: '-' | append: forloop.index -%}
-        <button
-          class="ch-tabs__tab"
-          type="button"
-          role="tab"
+        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+        <button class="ch-tabs__tab"
+          type="button" role="tab"
           aria-selected="false"
-          aria-controls="{{ tab_id }}"
-          id="ch-tab-{{ tab_id }}"
-          data-ch-tab="{{ tab_id }}"
-        >
+          id="ch-tab-{{ panel_id }}"
+          aria-controls="{{ panel_id }}"
+          data-ch-tab="{{ panel_id }}">
           {{ tab.title }}
         </button>
       {% endfor %}
@@ -275,31 +272,16 @@
 
     <div class="ch-tabs__panels">
       {% for tab in tabs %}
-        {%- assign tab_id = 'ch-panel-' | append: ch_uid | append: '-' | append: forloop.index -%}
-        <div
-          class="ch-tabs__panel"
-          role="tabpanel"
-          id="{{ tab_id }}"
-          aria-labelledby="ch-tab-{{ tab_id }}"
-          hidden
-        >
+        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+        <div class="ch-tabs__panel" role="tabpanel"
+          id="{{ panel_id }}"
+          aria-labelledby="ch-tab-{{ panel_id }}"
+          hidden>
           <div class="supporting-docs__buttons ch-tabs__buttons">
-            {%- comment -%}
-              If tab.links is a list of files (Shopify file objects),
-              each item usually has url/alt/filename-like props.
-            {%- endcomment -%}
-            {% for item in tab.links.value %}
-              <a
-                href="{{ item.url }}"
-                class="button--base button--outline button--icon-before"
-                target="_blank" rel="noopener"
-              >
-                <span class="button__icon">
-                  {% render 'icon-library', id: 'icon-data-sheet' %}
-                </span>
-                <span class="button__text">
-                  {{ item.alt | default: item.filename | default: 'Download' }}
-                </span>
+            {% for f in tab.files.value %}
+              <a href="{{ f.url }}" class="button--base button--outline button--icon-before" target="_blank" rel="noopener">
+                <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
+                <span class="button__text">{{ f.alt | default: f.filename }}</span>
               </a>
             {% endfor %}
           </div>
@@ -308,6 +290,7 @@
     </div>
   </div>
 {% endif %}
+
 </div>
 </div>
 

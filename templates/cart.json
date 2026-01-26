@@ -34,7 +34,7 @@
         "powerful_form_builder_app_block_riKUNJ"
       ],
       "settings": {
-        "include_padding": false
+        "include_padding": true
       }
     }
   },

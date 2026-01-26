@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "static-cart",
+      "custom_css": [],
       "settings": {
         "show_vendor": false,
         "show_sku": false,
@@ -21,8 +22,14 @@
     },
     "17694703196c9255fd": {
       "type": "apps",
+      "settings": {
+        "include_padding": true
+      }
+    },
+    "17694707657979a71e": {
+      "type": "_blocks",
       "blocks": {
-        "powerful_form_builder_app_block_W3T8Ax": {
+        "powerful_form_builder_app_block_iVKnnh": {
           "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
           "settings": {
             "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>"
@@ -30,15 +37,14 @@
         }
       },
       "block_order": [
-        "powerful_form_builder_app_block_W3T8Ax"
+        "powerful_form_builder_app_block_iVKnnh"
       ],
-      "settings": {
-        "include_padding": true
-      }
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "17694703196c9255fd"
+    "17694703196c9255fd",
+    "17694707657979a71e"
   ]
 }

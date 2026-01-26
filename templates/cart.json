@@ -36,10 +36,25 @@
       "settings": {
         "include_padding": true
       }
+    },
+    "content_introduction_TiXrBi": {
+      "type": "content-introduction",
+      "name": "Content [Introduction]",
+      "settings": {
+        "heading": "Sales Tax Exempt?",
+        "heading_size": "h1",
+        "content": "<p>Fill out the form below to request a sales tax exemption.</p>",
+        "link_text": "Link text",
+        "link_url": "",
+        "link_type": "link",
+        "link_icon": "forward",
+        "theme": "base"
+      }
     }
   },
   "order": [
     "main",
+    "content_introduction_TiXrBi",
     "17694703196c9255fd"
   ]
 }

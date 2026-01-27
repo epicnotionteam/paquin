@@ -162,9 +162,9 @@
               {%- endif -%}
             {%- endcapture -%}
 
-            <p>If you live outside of Ohio, sales tax will not be automatically collected at checkout. If you are required to pay sales tax on your purchase, we will contact you prior to shipment to collect sales tax separately. This is a temporary measure and we apologize for the inconveniece.</p><br>
+            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p><br>
 
-            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
+            <p>If you live outside of Ohio, sales tax will not be automatically collected at checkout. If you are required to pay sales tax on your purchase, we will contact you prior to shipment to collect sales tax separately. This is a temporary measure and we apologize for the inconveniece.</p>
 
             {% comment %}
               snippets/cart-shipping.liquid has an internal check to see if shipping is required

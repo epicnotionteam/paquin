@@ -40,12 +40,13 @@
     "dynamic_html_jYRVYY": {
       "type": "dynamic-html",
       "custom_css": [
+        ".sales-exempt-wrapper {margin-bottom: 80px;}",
         ".sales-exempt-form {margin-top: 0; display: flex; justify-content: center;}"
       ],
       "name": "t:sections.custom_html.presets.custom_html.name",
       "settings": {
         "title": "Sales Tax Exempt?",
-        "custom_html": "<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption.</p><br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>"
+        "custom_html": "<div class=\"sales-exempt-wrapper\">\n<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption.</p>\n<br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>\n</div>"
       }
     }
   },

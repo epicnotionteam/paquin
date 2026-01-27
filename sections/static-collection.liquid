@@ -415,20 +415,25 @@
                         {% if collection.url contains '/collections/all' %}
                           <div class="section__content">
                             {% if collection.products.size > 0 %}
-                                <div class="section__heading">
-                                    <h2 class="section__heading">Browse Products</h2>
-                                </div>
-                                <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
-                                    {% for product in collection.products %}
-                                        {%
-                                            render 'product-grid-item',
-                                            product: product,
-                                            context: 'collection',
-                                            index: forloop.index,
-                                            products_per_row: products_per_row,
-                                        %}
-                                    {% endfor %}
-                                </div>
+                            <div class="section__heading">
+                                <h2 class="section__heading">Browse Products</h2>
+                            </div>
+
+                            <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
+                                {% for product in collection.products %}
+                                {% assign min_price = product.price_min %}
+
+                                {% if min_price > 0 %}
+                                    {%
+                                    render 'product-grid-item',
+                                    product: product,
+                                    context: 'collection',
+                                    index: forloop.index,
+                                    products_per_row: products_per_row,
+                                    %}
+                                {% endif %}
+                                {% endfor %}
+                            </div>
                             {% endif %}
                             {% comment %} REMOVE COMMENT FROM THIS TO TURN SHOP PAGE INTO PREVIEW/COMING SOON MODE
                           <p style="text-align: center; margin: 20px 0">
@@ -458,6 +463,7 @@
                                 {% endfor %}
                             </div>
                             {% endif %}
+
                             {% render 'pagination', paginate: paginate, grid_list: true %}
                         {% endif %}
                     </div>

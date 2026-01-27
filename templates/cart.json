@@ -29,7 +29,7 @@
       "name": "t:sections.custom_html.presets.custom_html.name",
       "settings": {
         "title": "Sales Tax Exempt?",
-        "custom_html": "<div class=\"sales-exempt-wrapper\">\n<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption. \notherwise you will be required to pay sales tax prior to shipment.</p>\n<br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>\n</div>"
+        "custom_html": "<div class=\"sales-exempt-wrapper\">\n<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption. \nOtherwise, you will be required to pay sales tax prior to shipment.</p>\n<br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>\n</div>"
       }
     }
   },

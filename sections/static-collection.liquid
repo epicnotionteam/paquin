@@ -414,6 +414,22 @@
                         {% endif %}
                         {% if collection.url contains '/collections/all' %}
                           <div class="section__content">
+                            {% if collection.products.size > 0 %}
+                                <div class="section__heading">
+                                    <h2 class="section__heading">Browse Products</h2>
+                                </div>
+                                <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-html="productgrid-items" data-productgrid-items>
+                                    {% for product in collection.products %}
+                                        {%
+                                            render 'product-grid-item',
+                                            product: product,
+                                            context: 'collection',
+                                            index: forloop.index,
+                                            products_per_row: products_per_row,
+                                        %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                           <p style="text-align: center; margin: 20px 0">
                             Our Shop for readily available configurations is coming soon!. Contact us for custom products. For a complete view of all that Paquin Sensors has to offer, <a href="/pages/paquin-sensors">click here</a>.
                           </p>

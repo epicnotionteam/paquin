@@ -292,11 +292,9 @@
                                 context: collection
                             %}
                 {% endif %}
-
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">
-                        {% comment %}
                         {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
                             {% capture utility_class %}
                                 productgrid--utils
@@ -414,7 +412,6 @@
                                 </div>
                             {% endif %}
                         {% endif %}
-                        {% endcomment %}
                         {% if collection.url contains '/collections/all' %}
                             <!-- Do not render product grid for the "all" collection REMOVE THIS IF ELSE STATEMENT TO ALLOW SHOP PAGE TO POPULATE-->
                           <div class="section__content">

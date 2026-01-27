@@ -37,24 +37,21 @@
         "include_padding": true
       }
     },
-    "content_introduction_TiXrBi": {
-      "type": "content-introduction",
-      "name": "Content [Introduction]",
+    "dynamic_html_jYRVYY": {
+      "type": "dynamic-html",
+      "custom_css": [
+        ".sales-exempt-form {margin-top: 0; display: flex; justify-content: center;}"
+      ],
+      "name": "t:sections.custom_html.presets.custom_html.name",
       "settings": {
-        "heading": "Sales Tax Exempt?",
-        "heading_size": "h1",
-        "content": "<p>Fill out the form below to request a sales tax exemption.</p>",
-        "link_text": "Link text",
-        "link_url": "",
-        "link_type": "link",
-        "link_icon": "forward",
-        "theme": "base"
+        "title": "Sales Tax Exempt?",
+        "custom_html": "<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption.</p><br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>"
       }
     }
   },
   "order": [
     "main",
-    "content_introduction_TiXrBi",
-    "17694703196c9255fd"
+    "17694703196c9255fd",
+    "dynamic_html_jYRVYY"
   ]
 }

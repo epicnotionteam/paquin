@@ -20,23 +20,6 @@
         "shipping_calc_default_country": "United States"
       }
     },
-    "17694703196c9255fd": {
-      "type": "apps",
-      "blocks": {
-        "powerful_form_builder_app_block_riKUNJ": {
-          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
-          "settings": {
-            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "powerful_form_builder_app_block_riKUNJ"
-      ],
-      "settings": {
-        "include_padding": true
-      }
-    },
     "dynamic_html_jYRVYY": {
       "type": "dynamic-html",
       "custom_css": [
@@ -52,7 +35,6 @@
   },
   "order": [
     "main",
-    "17694703196c9255fd",
     "dynamic_html_jYRVYY"
   ]
 }

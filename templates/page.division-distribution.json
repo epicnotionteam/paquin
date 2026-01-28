@@ -10,9 +10,9 @@
 {
   "order": [
     "division-sensors-hero",
+    "feed_collection_iMT3iz",
     "content_blocks_yik4dc",
     "dynamic_html_WtRP49",
-    "feed_collection_iMT3iz",
     "content_blocks_w3fyDd",
     "dynamic_html_y6aeCx",
     "division-sensors-about",
@@ -58,23 +58,6 @@
         "theme": "alt"
       }
     },
-    "dynamic_html_WtRP49": {
-      "type": "dynamic-html",
-      "custom_css": [
-        ".custom-html--container {max-width: 100%; margin: 0 auto; background: #ecebea; padding: 1% 0; margin-top: 0%;}",
-        ".wrap {max-width: 1650px; margin: 0 auto; padding: 1% 60px 0 1.5%;}",
-        ".container {display: flex; flex-wrap: wrap; margin-bottom: 4%;}",
-        ".div-block-left {flex: 0 0 56%; min-width: 350px;}",
-        ".div-block-right {flex: 0 0 40%; min-width: 350px;}",
-        "@media (max-width: 1730px) {.wrap {padding: 0 4%; }}",
-        "@media (max-width: 1050px) {.wrap {padding: 0 40px; } .div-block-left, .div-block-right {flex: none; width: 100%; }}",
-        "@media (max-width: 720px) {.wrap {padding: 0 4vw; }}"
-      ],
-      "settings": {
-        "title": "",
-        "custom_html": "<div class=\"wrap\">\n<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Engineered Products, we’re more than just a supplier—we’re your engineering partner here to assist in optimizing your systems.  With decades of experience, we’ve built strong relationships with top manufacturers to bring you components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with accumulators, pumps, motors, valves, coils, gauges, manifolds, hoses and more.  Our partners are carefully selected to help us support customers across a broad range of commercial &amp; industrial applications. We pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions.<br><br>Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>\n</div>"
-      }
-    },
     "feed_collection_iMT3iz": {
       "type": "feed-collection",
       "blocks": {
@@ -92,6 +75,23 @@
       "settings": {
         "heading_small": "Engineered Products",
         "theme": "base"
+      }
+    },
+    "dynamic_html_WtRP49": {
+      "type": "dynamic-html",
+      "custom_css": [
+        ".custom-html--container {max-width: 100%; margin: 0 auto; background: #ecebea; padding: 1% 0; margin-top: 0%;}",
+        ".wrap {max-width: 1650px; margin: 0 auto; padding: 1% 60px 0 1.5%;}",
+        ".container {display: flex; flex-wrap: wrap; margin-bottom: 4%;}",
+        ".div-block-left {flex: 0 0 56%; min-width: 350px;}",
+        ".div-block-right {flex: 0 0 40%; min-width: 350px;}",
+        "@media (max-width: 1730px) {.wrap {padding: 0 4%; }}",
+        "@media (max-width: 1050px) {.wrap {padding: 0 40px; } .div-block-left, .div-block-right {flex: none; width: 100%; }}",
+        "@media (max-width: 720px) {.wrap {padding: 0 4vw; }}"
+      ],
+      "settings": {
+        "title": "",
+        "custom_html": "<div class=\"wrap\">\n<div class=\"container\" style=\"display: flex; flex-wrap: wrap; gap: 4%;\">\n  <!-- Left column: Text Block -->\n  <div class=\"div-block-left\">\n    <p>At Paquin Engineered Products, we’re more than just a supplier—we’re your engineering partner here to assist in optimizing your systems.  With decades of experience, we’ve built strong relationships with top manufacturers to bring you components that boost efficiency, reliability, and durability.<br><br>\nOur inventory is stocked with accumulators, pumps, motors, valves, coils, gauges, manifolds, hoses and more.  Our partners are carefully selected to help us support customers across a broad range of commercial &amp; industrial applications. We pride ourselves on our customer-first approach, ensuring fast delivery, quality technical support, and cost-effective solutions.<br><br>Products &amp; support are just a call away!</p>\n  </div>\n  \n  <!-- Right column: Image Block -->\n  <div class=\"div-block-right\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0797/0911/0575/files/67c1ec34e6b4427f928b88fa_pneumatic.webp?v=1740762216\" alt=\"hydraulic tubes\" style=\"width: 100%; height: auto;\">\n  </div>\n</div>\n</div>"
       }
     },
     "content_blocks_w3fyDd": {

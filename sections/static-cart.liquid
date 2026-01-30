@@ -285,6 +285,90 @@
   </section>
 </form>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const timers = new Map();
+
+  function postCartChange(payload) {
+    return fetch("/cart/change.js", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+      },
+      body: JSON.stringify(payload),
+    }).then((r) => {
+      if (!r.ok) throw new Error("Cart change failed");
+      return r.json();
+    });
+  }
+
+  function getRowFromElement(el) {
+    // Your theme seems to use data-cartitem-id on the row container.
+    // But we’ll also accept anything with data-cartitem-key.
+    return el.closest("[data-cartitem-id]") || el.closest("[data-cartitem-key]");
+  }
+
+  function getIdentifier(row) {
+    // Could be a line-item key OR a line number depending on theme
+    return row.getAttribute("data-cartitem-key") || row.dataset.cartitemKey;
+  }
+
+  function persistQty(row) {
+    const input = row.querySelector("[data-quantity-input]");
+    if (!input) return;
+
+    const rawQty = parseInt(input.value, 10);
+    const qty = Number.isFinite(rawQty) ? Math.max(0, rawQty) : 0;
+
+    const ident = getIdentifier(row);
+    if (!ident) return;
+
+    // Debounce per row identifier
+    if (timers.has(ident)) clearTimeout(timers.get(ident));
+    timers.set(
+      ident,
+      setTimeout(() => {
+        // Heuristic: Shopify "key" usually looks like "abc123:deadbeef..."
+        const looksLikeKey = String(ident).includes(":");
+
+        const payload = looksLikeKey
+          ? { id: ident, quantity: qty }
+          : { line: parseInt(ident, 10), quantity: qty };
+
+        postCartChange(payload).catch(() => window.location.reload());
+      }, 150)
+    );
+  }
+
+  // Click +/-
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-quantity-plus], [data-quantity-minus]");
+    if (!btn) return;
+
+    const row = getRowFromElement(btn);
+    if (!row) return;
+
+    // Let the UI update the input first
+    setTimeout(() => persistQty(row), 0);
+  });
+
+  // Manual input edits
+  document.addEventListener("change", (e) => {
+    const input = e.target.closest("[data-quantity-input]");
+    if (!input) return;
+
+    const row = getRowFromElement(input);
+    if (!row) return;
+
+    persistQty(row);
+  });
+});
+
+</script>
+
 {% schema %}
 {
   "name": "t:sections.cart_page.name",

@@ -26982,9 +26982,14 @@ class StaticCart {
   _bindEvents() {
     this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
       event.preventDefault();
-
       this._editItemQuantity(event.currentTarget, true);
     });
+
+    // ✅ Persist qty changes immediately (AJAX)
+    this.$el.on('change.cart-page', '[data-quantity-input]', event => {
+      this._editItemQuantity(event.currentTarget, false);
+    });
+
     this.$window.on('resize.cart-page', just_debounce_default()(() => this._moveTitleTotal(), 20));
   }
   /**

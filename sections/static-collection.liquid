@@ -318,27 +318,23 @@
                                 {% if show_filter_trigger %}
                                     {% liquid
                                         assign filter_count = 0
+
                                         if filter_block.settings.filter_option == 'faceted'
                                             for filter in collection.filters
-                                                if filter.type == 'price_range' and filter.min_value.value or filter.max_value.value
-                                                    assign filter_count = filter_count | plus: 1
-                                                elsif filter.type == 'list'
-                                                    assign filter_count = filter_count | plus: filter.active_values.size
+                                            if filter.type == 'price_range'
+                                                if filter.min_value.value != blank or filter.max_value.value != blank
+                                                assign filter_count = filter_count | plus: 1
                                                 endif
+                                            elsif filter.type == 'list'
+                                                assign filter_count = filter_count | plus: filter.active_values.size
+                                            endif
                                             endfor
                                         else
                                             if current_tags.size > 0
-                                                assign filter_count = current_tags.size
+                                            assign filter_count = current_tags.size
                                             endif
                                         endif
-                                        capture button_label
-                                            if show_filters
-                                                echo 'product_grid.filters.title_count' | t: count: filter_count
-                                            else
-                                                echo 'product_grid.menus.title' | t
-                                            endif
-                                        endcapture
-                                    %}
+                                        %}
                                     <div class="productgrid--utils utils-filter">
                                         <button class="utils-filter-button" type="button" aria-label="{{ button_label }}" data-productgrid-trigger-filters>
                                             <span class="utils-filter-icon">

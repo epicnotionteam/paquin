@@ -70,32 +70,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Manage quantity selector fields
     const quantitySelectors = document.querySelectorAll('[data-quantity-selector]');
+
     quantitySelectors.forEach(selector => {
-        const minusButton = selector.querySelector('[data-quantity-minus]');
-        const plusButton = selector.querySelector('[data-quantity-plus]');
-        const input = selector.querySelector('[data-quantity-input]');
-        const minusWrapper = selector.querySelector('[data-button-wrapper-minus]');
-        const updateButtonStates = () => {
-            const currentValue = parseInt(input.value, 10);
-            const minValue = parseInt(input.min, 10) || 1;
-            minusWrapper.classList.toggle('quantity-selector__button-wrapper--disabled', currentValue <= minValue);
-        };
-        const changeQuantity = (amount) => {
-            const currentValue = parseInt(input.value, 10);
-            const step = parseInt(input.step, 10) || 1;
-            const minValue = parseInt(input.min, 10) || 1;
-            let newValue = currentValue + (amount * step);
-            newValue = Math.max(newValue, minValue);
-            input.value = newValue;
-            updateButtonStates();
-            // Dispatch a change event
-            input.dispatchEvent(new Event('change', { bubbles: true }));
-        };
-        minusButton.addEventListener('click', () => changeQuantity(-1));
-        plusButton.addEventListener('click', () => changeQuantity(1));
-        input.addEventListener('change', updateButtonStates);
-        // Initialize button states
+    // Prevent double-binding
+    if (selector.dataset.qtyBound === '1') return;
+    selector.dataset.qtyBound = '1';
+
+    const minusButton = selector.querySelector('[data-quantity-minus]');
+    const plusButton  = selector.querySelector('[data-quantity-plus]');
+    const input       = selector.querySelector('[data-quantity-input]');
+    const minusWrapper = selector.querySelector('[data-button-wrapper-minus]');
+
+    const updateButtonStates = () => {
+        const currentValue = parseInt(input.value, 10);
+        const minValue = parseInt(input.min, 10) || 1;
+        minusWrapper.classList.toggle(
+        'quantity-selector__button-wrapper--disabled',
+        currentValue <= minValue
+        );
+    };
+
+    const changeQuantity = (amount) => {
+        const currentValue = parseInt(input.value, 10);
+        const step = parseInt(input.step, 10) || 1;
+        const minValue = parseInt(input.min, 10) || 1;
+
+        let newValue = currentValue + (amount * step);
+        newValue = Math.max(newValue, minValue);
+
+        input.value = newValue;
         updateButtonStates();
+
+        // Dispatch a change event
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+
+    minusButton.addEventListener('click', (e) => { e.preventDefault(); changeQuantity(-1); });
+    plusButton.addEventListener('click',  (e) => { e.preventDefault(); changeQuantity(1);  });
+    input.addEventListener('change', updateButtonStates);
+
+    updateButtonStates();
     });
+
 
 });

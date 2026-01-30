@@ -26985,18 +26985,40 @@ class StaticCart {
       this._editItemQuantity(event.currentTarget, true);
     });
 
-    // ✅ NEW: save qty changes to Shopify whenever the input changes
+    // Save qty changes to Shopify whenever the input changes (manual typing, etc.)
     this.$el.on('change.cart-page', '[data-quantity-input]', event => {
+      // Ignore changes we triggered programmatically from +/- click
+      if (event.originalEvent && event.originalEvent.__fromQtyButtons) return;
+
       this._editItemQuantity(event.currentTarget, false);
     });
 
-    this.$window.on('resize.cart-page', just_debounce_default()(() => this._moveTitleTotal(), 20));
-
+    // Persist when +/- buttons are clicked (covers cases where the input doesn't emit change)
     this.$el.on('click.cart-page', '[data-quantity-plus],[data-quantity-minus]', event => {
-      // wait for the UI to update the input value first
-      setTimeout(() => this._editItemQuantity(event.currentTarget, false), 0);
+      const cartRow = event.currentTarget.closest('[data-cartitem-id]');
+      if (!cartRow) return;
+
+      const input = cartRow.querySelector('[data-quantity-input]');
+      if (!input) return;
+
+      // Let the UI update the input value first, then persist
+      setTimeout(() => {
+        // Mark this change as coming from buttons to avoid duplicate handling
+        const changeEvent = jquery_default().Event('change');
+        changeEvent.originalEvent = { __fromQtyButtons: true };
+        jquery_default()(input).trigger(changeEvent);
+
+        // And persist to Shopify
+        this._editItemQuantity(input, false);
+      }, 0);
     });
+
+    this.$window.on(
+      'resize.cart-page',
+      just_debounce_default()(() => this._moveTitleTotal(), 20)
+    );
   }
+
 
   
   /**

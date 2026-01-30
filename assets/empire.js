@@ -27101,15 +27101,23 @@ class StaticCart {
       });
       window.dispatchEvent(countEvent); // Unregister QuantitySelector events
 
-      this.quantitySelectors.forEach(selector => {
-        selector.unload();
-      }); // Update Free shipping bar contents
+      // Unregister QuantitySelector events
+        this.quantitySelectors.forEach(selector => {
+          selector.unload();
+        });
 
-      if (this.freeShippingBars.length > 0) {
-        this.freeShippingBars.forEach(el => {
-          const freeShippingBar = el;
-          freeShippingBar.innerHTML = html.free_shipping_bar;
-          freeShippingBar.classList.add('free-shipping-bar--animate');
+        // IMPORTANT: reset the array so we don't keep old instances around
+        this.quantitySelectors = [];
+
+        // IMPORTANT: re-query AFTER morphdom updates the DOM
+        this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
+
+        // Recreate QuantitySelectors once
+        this.inputFields.forEach(input => {
+          this.quantitySelectors.push(new QuantitySelector({
+            quantityField: input.parentNode,
+            onChange: this._editItemQuantity
+          }));
         });
       } // Inject new cart list contents
 

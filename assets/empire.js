@@ -26991,7 +26991,13 @@ class StaticCart {
     });
 
     this.$window.on('resize.cart-page', just_debounce_default()(() => this._moveTitleTotal(), 20));
+
+    this.$el.on('click.cart-page', '[data-quantity-plus],[data-quantity-minus]', event => {
+    // wait for the click handler to update the input value first
+    setTimeout(() => this._editItemQuantity(event.currentTarget, false), 0);
+    });
   }
+  
   /**
    * Gets the current value of the quantity input box for a given line item key
    *

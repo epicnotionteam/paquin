@@ -69,66 +69,66 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Manage quantity selector fields
-    function bindQuantitySelectors() {
     const quantitySelectors = document.querySelectorAll('[data-quantity-selector]');
 
     quantitySelectors.forEach(selector => {
-        // Prevent double-binding if this runs again (AJAX cart updates, section reloads, etc.)
-        if (selector.dataset.qtyBound === '1') return;
-        selector.dataset.qtyBound = '1';
+    // Prevent double-binding if this script runs twice
+    if (selector.dataset.qtyBound === '1') return;
+    selector.dataset.qtyBound = '1';
 
-        const minusButton = selector.querySelector('[data-quantity-minus]');
-        const plusButton  = selector.querySelector('[data-quantity-plus]');
-        const input       = selector.querySelector('[data-quantity-input]');
-        const minusWrapper = selector.querySelector('[data-button-wrapper-minus]');
+    const minusButton = selector.querySelector('[data-quantity-minus]');
+    const plusButton = selector.querySelector('[data-quantity-plus]');
+    const input = selector.querySelector('[data-quantity-input]');
+    const minusWrapper = selector.querySelector('[data-button-wrapper-minus]');
 
-        if (!minusButton || !plusButton || !input) return;
+    if (!minusButton || !plusButton || !input) return;
 
-        const updateButtonStates = () => {
+    const updateButtonStates = () => {
         const currentValue = parseInt(input.value, 10) || 0;
         const minValue = parseInt(input.min, 10) || 1;
         if (minusWrapper) {
-            minusWrapper.classList.toggle(
+        minusWrapper.classList.toggle(
             'quantity-selector__button-wrapper--disabled',
             currentValue <= minValue
-            );
+        );
         }
-        };
+    };
 
-        const changeQuantity = (amount) => {
+    const changeQuantity = (amount) => {
         const currentValue = parseInt(input.value, 10) || 0;
-
-        // Force step to 1 (ignores any step="2" surprises)
-        const step = 1;
-
         const minValue = parseInt(input.min, 10) || 1;
         const maxValue = input.max ? parseInt(input.max, 10) : null;
 
-        let newValue = currentValue + (amount * step);
+        let newValue = currentValue + amount; // step is 1
         newValue = Math.max(newValue, minValue);
-        if (maxValue !== null && !Number.isNaN(maxValue)) newValue = Math.min(newValue, maxValue);
-
-        // If the value is already the same, don't fire change again
-        if (String(input.value) === String(newValue)) return;
+        if (Number.isFinite(maxValue)) newValue = Math.min(newValue, maxValue);
 
         input.value = newValue;
         updateButtonStates();
 
-        // Dispatch a change event so theme cart logic updates
+        // Trigger whatever the theme uses to update cart totals
         input.dispatchEvent(new Event('change', { bubbles: true }));
-        };
+    };
 
-        // Prevent form submit / duplicate handlers
-        minusButton.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); changeQuantity(-1); });
-        plusButton.addEventListener('click',  (e) => { e.preventDefault(); e.stopPropagation(); changeQuantity(1);  });
+    // Capture phase + stopImmediatePropagation prevents other handlers from firing
+    minusButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        changeQuantity(-1);
+    }, true);
 
-        input.addEventListener('change', updateButtonStates);
-        updateButtonStates();
+    plusButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        changeQuantity(1);
+    }, true);
+
+    input.addEventListener('change', updateButtonStates);
+    updateButtonStates();
     });
-    }
 
-    // Run once on page load
-    bindQuantitySelectors();
 
 
 

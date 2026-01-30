@@ -67,4 +67,78 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         });
     });
+
+    // Manage quantity selector fields
+    const quantitySelectors = document.querySelectorAll('[data-quantity-selector]');
+
+    quantitySelectors.forEach((selector) => {
+    const minusButton = selector.querySelector('[data-quantity-minus]');
+    const plusButton  = selector.querySelector('[data-quantity-plus]');
+    const input       = selector.querySelector('[data-quantity-input]');
+    const minusWrapper = selector.querySelector('[data-button-wrapper-minus]');
+
+    if (!minusButton || !plusButton || !input) return;
+
+    // IMPORTANT: prevent double-fire (touch/pointer + click)
+    let lastActionAt = 0;
+
+    const updateButtonStates = () => {
+        const currentValue = parseInt(input.value, 10) || 0;
+        const minValue = parseInt(input.min, 10) || 1;
+        if (minusWrapper) {
+        minusWrapper.classList.toggle(
+            'quantity-selector__button-wrapper--disabled',
+            currentValue <= minValue
+        );
+        }
+    };
+
+    const changeQuantity = (delta) => {
+        const currentValue = parseInt(input.value, 10) || 0;
+        const minValue = parseInt(input.min, 10) || 1;
+        const maxValue = input.max ? parseInt(input.max, 10) : null;
+
+        let newValue = currentValue + delta; // step assumed 1
+        newValue = Math.max(newValue, minValue);
+        if (Number.isFinite(maxValue)) newValue = Math.min(newValue, maxValue);
+
+        input.value = newValue;
+        updateButtonStates();
+
+        // Let your theme/cart system react to the change
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+
+    const handlePress = (delta, e) => {
+        const now = Date.now();
+        if (now - lastActionAt < 350) return; // blocks the second (synthetic) event
+        lastActionAt = now;
+
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        changeQuantity(delta);
+    };
+
+    // Use pointerup (covers mouse + touch). Capture phase to intercept early.
+    plusButton.addEventListener('pointerup', (e) => handlePress(1, e), true);
+    minusButton.addEventListener('pointerup', (e) => handlePress(-1, e), true);
+
+    // Also intercept click so theme delegated click handlers don’t run after pointerup.
+    plusButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+    }, true);
+
+    minusButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+    }, true);
+
+    input.addEventListener('change', updateButtonStates);
+    updateButtonStates();
+    });
 });

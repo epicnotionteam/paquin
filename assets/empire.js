@@ -27086,22 +27086,34 @@ class StaticCart {
     }
 
     this.updateTimeout = setTimeout(() => {
+      // If qty is >0 and the input has already changed again, cancel this request
       if (quantity > 0 && this._getItemQuantity(key) !== quantity) {
         this.updateTimeout = null;
         return;
       }
 
-      const thisTimeoutId = this.updateTimeout; // Notify Shopify updated item
+      const thisTimeoutId = this.updateTimeout;
 
-      window.Shopify.changeItem(key, quantity, response => {
-        if (this.updateTimeout !== thisTimeoutId) {
-          return;
-        }
-
-        this._didUpdate(response, thisTimeoutId);
-      });
+      fetch(`${window.Theme?.routes?.cart_change_url || '/cart/change.js'}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          id: key,        // line-item key works here
+          quantity: quantity
+        })
+      })
+        .then(res => res.json())
+        .then(response => {
+          if (this.updateTimeout !== thisTimeoutId) return;
+          this._didUpdate(response, thisTimeoutId);
+        })
+        .catch(() => window.location.reload());
     }, 300);
   }
+
   /**
    * Fetches new cart contents and swaps into page
    *

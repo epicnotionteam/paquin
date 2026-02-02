@@ -26925,8 +26925,8 @@ class StaticCart {
     this.el = section.el;
 
     this.events = new dist_EventHandler/* default */.Z();
-
     this.totals = this.el.querySelectorAll('[data-cart-total]');
+
     this.$shipping = this.$el.find('[data-cartshipping]');
     this.freeShippingBars = this.$el[0].querySelectorAll('[data-free-shipping-bar]');
     this.$cartSidebar = this.$el.find('[data-cart-sidebar]');
@@ -26955,13 +26955,13 @@ class StaticCart {
 
     const $scripts = jquery_default()('[data-scripts]');
 
-    // Bind instance methods
+    // Bind quantity change handler (called by QuantitySelector)
     this._editItemQuantity = this._editItemQuantity.bind(this);
 
-    // ✅ Create QuantitySelector instances ONCE on initial load
+    // ✅ Initialize QuantitySelector ONCE
     this._initQuantitySelectors();
 
-    // Ensure Shopify API is available before binding events
+    // Load Shopify API then bind events
     script_default()($scripts.data('shopify-api-url'), () => {
       this._bindEvents();
       window.Shopify.onError = this._handleErrors.bind(this);
@@ -26985,69 +26985,18 @@ class StaticCart {
   onSectionUnload() {
     this.$el.off('.cart-page');
     this.$window.off('.cart-page');
-
-    // Clean up QuantitySelector listeners
-    this._unloadQuantitySelectors();
-
     this.forms.unload();
+    this._unloadQuantitySelectors();
   }
-
-  /**
-   * Create QuantitySelector instances for all current quantity inputs.
-   * IMPORTANT: Always call _unloadQuantitySelectors() before calling this again.
-   */
-  _initQuantitySelectors() {
-    // Re-query in case DOM changed
-    this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
-
-    this.inputFields.forEach((input) => {
-      const quantityField = input.parentNode;
-      if (!quantityField) return;
-
-      // ✅ Guard: prevent double-init on the same DOM node
-      if (quantityField.dataset.qtySelectorInit === '1') return;
-      quantityField.dataset.qtySelectorInit = '1';
-
-      const qs = new QuantitySelector({
-        quantityField,
-        onChange: this._editItemQuantity,
-      });
-
-      // Track the field for cleanup
-      qs.__quantityField = quantityField;
-
-      this.quantitySelectors.push(qs);
-    });
-  }
-
-
-  /**
-   * Unload and clear all QuantitySelector instances safely.
-   */
-  _unloadQuantitySelectors() {
-    if (Array.isArray(this.quantitySelectors) && this.quantitySelectors.length) {
-      this.quantitySelectors.forEach((selector) => {
-        try {
-          // ✅ Remove guard flag so re-init after morphdom works
-          const field = selector.__quantityField;
-          if (field) delete field.dataset.qtySelectorInit;
-
-          selector.unload();
-        } catch (e) {}
-      });
-    }
-    this.quantitySelectors = [];
-  }
-
 
   _bindEvents() {
     // Remove item
-    this.$el.on('click.cart-page', '[data-cartitem-remove]', (event) => {
+    this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
       event.preventDefault();
       this._editItemQuantity(event.currentTarget, true);
     });
 
-    // Responsive title total
+    // Window resize
     this.$window.on(
       'resize.cart-page',
       just_debounce_default()(() => this._moveTitleTotal(), 20)
@@ -27055,14 +27004,37 @@ class StaticCart {
   }
 
   /**
+   * ✅ QuantitySelector lifecycle (prevents double-binding)
+   */
+  _unloadQuantitySelectors() {
+    this.quantitySelectors.forEach(selector => {
+      try { selector.unload(); } catch (e) {}
+    });
+    this.quantitySelectors = [];
+  }
+
+  _initQuantitySelectors() {
+    // Re-query inputs from current DOM
+    this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
+
+    this.inputFields.forEach(input => {
+      this.quantitySelectors.push(
+        new QuantitySelector({
+          quantityField: input.parentNode,
+          onChange: this._editItemQuantity
+        })
+      );
+    });
+  }
+
+  /**
    * Gets the current value of the quantity input box for a given line item key
-   * @param {string} key
    */
   _getItemQuantity(key) {
-    const el = this.el.querySelector(
-      `[data-cartitem-key="${key}"] [data-quantity-input]`
+    return parseInt(
+      this.el.querySelector(`[data-cartitem-key="${key}"] [data-quantity-input]`).value,
+      10
     );
-    return parseInt(el?.value || '0', 10);
   }
 
   _moveTitleTotal() {
@@ -27080,31 +27052,29 @@ class StaticCart {
   }
 
   /**
-   * Handle an item quantity change
+   * Handle an item quantity change (called by QuantitySelector)
+   *
    * @param target
-   * @param {Boolean} remove - Set true to remove cart item
-   * @private
+   * @param {Boolean} remove
    */
   _editItemQuantity(target, remove = false) {
     const $target = jquery_default()(target);
     const cartItemRow = $target.closest('[data-cartitem-id]')[0];
     if (!cartItemRow) return;
 
-    if (remove) {
-      cartItemRow.classList.add('removing');
-    }
+    if (remove) cartItemRow.classList.add('removing');
 
     const quantity = remove
       ? 0
       : parseInt(cartItemRow.querySelector('[data-quantity-input]').value, 10);
 
     const key = cartItemRow.getAttribute('data-cartitem-key');
+
     this._updateCart(key, quantity);
   }
 
   /**
    * Update cart with a valid quantity
-   * NOTE: keep theme's original changeItem behavior for reliability
    */
   _updateCart(key, quantity) {
     // cancel any pending requests
@@ -27121,8 +27091,8 @@ class StaticCart {
 
       const thisTimeoutId = this.updateTimeout;
 
-      // Notify Shopify updated item
-      window.Shopify.changeItem(key, quantity, (response) => {
+      // ✅ Use Shopify's built-in changeItem (keeps theme behavior consistent)
+      window.Shopify.changeItem(key, quantity, response => {
         if (this.updateTimeout !== thisTimeoutId) return;
         this._didUpdate(response, thisTimeoutId);
       });
@@ -27131,9 +27101,6 @@ class StaticCart {
 
   /**
    * Fetches new cart contents and swaps into page
-   * @param response
-   * @param {integer} thisTimeoutId
-   * @private
    */
   _didUpdate(response, thisTimeoutId) {
     // Reload page if all items are removed from cart
@@ -27142,7 +27109,6 @@ class StaticCart {
       return;
     }
 
-    // Reload the cart-item-list and the discounts snippets
     shopify_asyncview_dist_index_es
       .load(window.Theme.routes.cart_url, this.section.id)
       .then(({ html }) => {
@@ -27152,32 +27118,35 @@ class StaticCart {
         const countEvent = new CustomEvent('cartcount:update', { detail: response });
         window.dispatchEvent(countEvent);
 
-        // ✅ Unregister QuantitySelector events BEFORE DOM swap
+        // ✅ Unregister QuantitySelector events BEFORE morphdom swaps DOM
         this._unloadQuantitySelectors();
 
-        // ✅ Update Free shipping bar contents
+        // Update Free shipping bar contents
         if (this.freeShippingBars.length > 0) {
-          this.freeShippingBars.forEach((el) => {
+          this.freeShippingBars.forEach(el => {
             const freeShippingBar = el;
             freeShippingBar.innerHTML = html.free_shipping_bar;
             freeShippingBar.classList.add('free-shipping-bar--animate');
           });
         }
 
-        // ✅ Inject new cart list contents
+        // Inject new cart list contents
         const newListContainer = document.createElement('div');
         newListContainer.innerHTML = html.list;
 
         morphdom_esm(this.cartItemList, newListContainer.querySelector('ul'), {
           onBeforeElUpdated: (fromEl, toEl) => {
-            // Skip images if src matches - avoid reloading lazy loaded images
+            // Skip images if src matches (avoid reloading)
             if (fromEl.tagName === 'IMG' && fromEl.src === toEl.src) return false;
             return true;
-          },
+          }
         });
 
-        // ✅ Update cart totals
-        this.totals.forEach((total) => {
+        // ✅ Recreate QuantitySelectors ONCE after DOM update
+        this._initQuantitySelectors();
+
+        // Update cart totals
+        this.totals.forEach(total => {
           const newTotal = total;
           newTotal.innerHTML = html.cart_total;
           morphdom_esm(total, newTotal, { childrenOnly: true });
@@ -27185,32 +27154,24 @@ class StaticCart {
 
         rimg_shopify_dist_index_es.watch(this.cartItemList);
 
-        // Re-init forms
         this.forms.unload();
         this.forms = new Forms(this.$el);
 
-        // ✅ Recreate QuantitySelectors ONCE after morphdom updated DOM
-        this._initQuantitySelectors();
-
-        // Re-bind remove button handler (safe guard)
+        // Re-bind remove item click handler (safe idempotent)
         this.$el.off('click.cart-page', '[data-cartitem-remove]');
-        this.$el.on('click.cart-page', '[data-cartitem-remove]', (event) => {
+        this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
           event.preventDefault();
           this._editItemQuantity(event.currentTarget, true);
         });
 
-        // ✅ Inject new cart level discounts
-        if (this.cartDiscounts) {
-          this.cartDiscounts.innerHTML = html.discounts;
-        }
+        // Inject new cart level discounts
+        this.cartDiscounts.innerHTML = html.discounts;
       })
       .catch(() => window.location.reload());
   }
 
   /**
    * Handle Errors returned from Shopify
-   * @param errors
-   * @private
    */
   _handleErrors(errors = null) {
     if (!errors) return;
@@ -27244,18 +27205,17 @@ class StaticCart {
 
     this.shippingCountryProvinceSelector = new CountryProvinceSelector(countrySelect.innerHTML);
     this.shippingCountryProvinceSelector.build(countrySelect, provinceSelect, {
-      onCountryChange: (provinces) => {
+      onCountryChange: provinces => {
         if (provinces.length) {
           provinceContainer.style.display = 'block';
         } else {
           provinceContainer.style.display = 'none';
         }
 
-        // Country-specific labels
         const { label, zip_label: zipLabel } = window.Countries[countrySelect.value];
         provinceContainer.querySelector('label[for="address_province"]').innerHTML = label;
         this.el.querySelector('#address_zip ~ label[for="address_zip"]').innerHTML = zipLabel;
-      },
+      }
     });
   }
 
@@ -27268,7 +27228,7 @@ class StaticCart {
       this._getShippingRates();
     });
 
-    this.$el.on('keypress.cart-page', '#address_zip', (event) => {
+    this.$el.on('keypress.cart-page', '#address_zip', event => {
       if (event.keyCode === 10 || event.keyCode === 13) {
         event.preventDefault();
         this.$shippingSubmit.trigger('click');
@@ -27293,7 +27253,7 @@ class StaticCart {
 
     const queryString = Object.keys(shippingAddress)
       .map(
-        (key) =>
+        key =>
           `${encodeURIComponent(`shipping_address[${key}]`)}=${encodeURIComponent(
             shippingAddress[key]
           )}`
@@ -27302,10 +27262,10 @@ class StaticCart {
 
     jquery_default()
       .ajax(`${window.Theme.routes.cart_url}/shipping_rates.json?${queryString}`, {
-        dataType: 'json',
+        dataType: 'json'
       })
-      .fail((error) => this._handleErrors(error.responseJSON || {}))
-      .done((response) => {
+      .fail(error => this._handleErrors(error.responseJSON || {}))
+      .done(response => {
         const rates = response.shipping_rates;
         const addressBase = [];
 
@@ -27328,7 +27288,7 @@ class StaticCart {
           message = this.shipping.no_rates;
         }
 
-        const ratesList = rates.map((rate) => {
+        const ratesList = rates.map(rate => {
           const price = window.Shopify.formatMoney(rate.price, this.settings.money_format);
           const rateValue = this.shipping.rate_value
             .replace('*rate_title*', rate.name)
@@ -27356,11 +27316,6 @@ class StaticCart {
     this.$shippingResponse.removeClass('visible');
   }
 
-  /**
-   * Handle shipping responses
-   * @param {object} shippingResponse
-   * @private
-   */
   _handleShippingResponse(shippingResponse = {}) {
     // Hide the response so that it can be populated smoothly
     this._hideShippingResponse();
@@ -27385,6 +27340,7 @@ class StaticCart {
     this._showShippingResponse();
   }
 }
+
 
 
 ;// CONCATENATED MODULE: ./node_modules/@pixelunion/animations/dist/animations.es.js

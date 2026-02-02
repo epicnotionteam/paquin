@@ -26917,26 +26917,34 @@ class StaticCart {
     this.section = section;
     this.settings = section.data.settings;
     this.shipping = section.data.shipping;
+
     this.updateTimeout = null;
+
     this.$window = jquery_default()(window);
     this.$el = jquery_default()(section.el);
     this.el = section.el;
+
     this.events = new dist_EventHandler/* default */.Z();
+
     this.totals = this.el.querySelectorAll('[data-cart-total]');
     this.$shipping = this.$el.find('[data-cartshipping]');
     this.freeShippingBars = this.$el[0].querySelectorAll('[data-free-shipping-bar]');
-    this.$cartSidebar = this.$el.find('[data-cart-sidebar]'); // Quantity selector
+    this.$cartSidebar = this.$el.find('[data-cart-sidebar]');
 
+    // Quantity selector
     this.quantitySelectors = [];
-    this.inputFields = this.el.querySelectorAll('[data-quantity-input]'); // Product form containers
+    this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
 
+    // Title totals
     this.$titleTotalSmall = this.$el.find('.cart-title-total--small');
     this.$titleTotalLarge = this.$el.find('.cart-title-total--large');
-    this.$titleTotalContents = this.$el.find('[data-cart-title-total]'); // Cart list
+    this.$titleTotalContents = this.$el.find('[data-cart-title-total]');
 
+    // Cart list + discounts
     this.cartItemList = this.$el[0].querySelector('[data-cart-item-list]');
-    this.cartDiscounts = this.$el[0].querySelector('[data-cart-discounts]'); // Shipping calculator elements
+    this.cartDiscounts = this.$el[0].querySelector('[data-cart-discounts]');
 
+    // Shipping calculator elements
     this.$shippingToggle = this.$el.find('[data-cartshipping-toggle]');
     this.$shippingResponse = this.$shipping.find('[data-cartshipping-response]');
     this.$shippingResponseMessage = this.$shippingResponse.find('[data-cartshipping-message]');
@@ -26946,18 +26954,19 @@ class StaticCart {
     this._moveTitleTotal();
 
     const $scripts = jquery_default()('[data-scripts]');
+
+    // Bind instance methods
     this._editItemQuantity = this._editItemQuantity.bind(this);
-    this.inputFields.forEach(input => {
-      this.quantitySelectors.push(new QuantitySelector({
-        quantityField: input.parentNode,
-        onChange: this._editItemQuantity
-      }));
-    });
+
+    // ✅ Create QuantitySelector instances ONCE on initial load
+    this._initQuantitySelectors();
+
+    // Ensure Shopify API is available before binding events
     script_default()($scripts.data('shopify-api-url'), () => {
       this._bindEvents();
-
       window.Shopify.onError = this._handleErrors.bind(this);
     });
+
     this.forms = new Forms(this.$el);
 
     if (this.settings.shipping && this.$shipping.length) {
@@ -26976,66 +26985,75 @@ class StaticCart {
   onSectionUnload() {
     this.$el.off('.cart-page');
     this.$window.off('.cart-page');
+
+    // Clean up QuantitySelector listeners
+    this._unloadQuantitySelectors();
+
     this.forms.unload();
   }
 
+  /**
+   * Create QuantitySelector instances for all current quantity inputs.
+   * IMPORTANT: Always call _unloadQuantitySelectors() before calling this again.
+   */
+  _initQuantitySelectors() {
+    // Re-query in case DOM changed before init
+    this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
+
+    this.inputFields.forEach((input) => {
+      // QuantitySelector expects the wrapper element (quantityField)
+      this.quantitySelectors.push(
+        new QuantitySelector({
+          quantityField: input.parentNode,
+          onChange: this._editItemQuantity,
+        })
+      );
+    });
+  }
+
+  /**
+   * Unload and clear all QuantitySelector instances safely.
+   */
+  _unloadQuantitySelectors() {
+    if (Array.isArray(this.quantitySelectors) && this.quantitySelectors.length) {
+      this.quantitySelectors.forEach((selector) => {
+        try {
+          selector.unload();
+        } catch (e) {
+          // no-op: protect from partial state
+        }
+      });
+    }
+    this.quantitySelectors = [];
+  }
+
   _bindEvents() {
-    this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
+    // Remove item
+    this.$el.on('click.cart-page', '[data-cartitem-remove]', (event) => {
       event.preventDefault();
       this._editItemQuantity(event.currentTarget, true);
     });
 
-    // Save qty changes to Shopify whenever the input changes (manual typing, etc.)
-    this.$el.on('change.cart-page', '[data-quantity-input]', event => {
-      // Ignore changes we triggered programmatically from +/- click
-      if (event.originalEvent && event.originalEvent.__fromQtyButtons) return;
-
-      this._editItemQuantity(event.currentTarget, false);
-    });
-
-    // Persist when +/- buttons are clicked (covers cases where the input doesn't emit change)
-    this.$el.on('click.cart-page', '[data-quantity-plus],[data-quantity-minus]', event => {
-      const cartRow = event.currentTarget.closest('[data-cartitem-id]');
-      if (!cartRow) return;
-
-      const input = cartRow.querySelector('[data-quantity-input]');
-      if (!input) return;
-
-      // Let the UI update the input value first, then persist
-      setTimeout(() => {
-        // Mark this change as coming from buttons to avoid duplicate handling
-        const changeEvent = jquery_default().Event('change');
-        changeEvent.originalEvent = { __fromQtyButtons: true };
-        jquery_default()(input).trigger(changeEvent);
-
-        // And persist to Shopify
-        this._editItemQuantity(input, false);
-      }, 0);
-    });
-
+    // Responsive title total
     this.$window.on(
       'resize.cart-page',
       just_debounce_default()(() => this._moveTitleTotal(), 20)
     );
   }
 
-
-  
   /**
    * Gets the current value of the quantity input box for a given line item key
-   *
    * @param {string} key
    */
-
-
   _getItemQuantity(key) {
-    return parseInt(this.el.querySelector(`[data-cartitem-key="${key}"] [data-quantity-input]`).value, 10);
+    const el = this.el.querySelector(
+      `[data-cartitem-key="${key}"] [data-quantity-input]`
+    );
+    return parseInt(el?.value || '0', 10);
   }
 
   _moveTitleTotal() {
-    if (!this.$titleTotalContents.length) {
-      return;
-    }
+    if (!this.$titleTotalContents.length) return;
 
     if (this.$window.outerWidth() >= 480) {
       if (!jquery_default().contains(this.$titleTotalLarge[0], this.$titleTotalContents[0])) {
@@ -27047,38 +27065,34 @@ class StaticCart {
       this.$titleTotalSmall.append($form);
     }
   }
+
   /**
    * Handle an item quantity change
-   *
-   * @param event
-   * @param {Boolean} remove - Set as true to remove cart item
+   * @param target
+   * @param {Boolean} remove - Set true to remove cart item
    * @private
    */
-
-
-  _editItemQuantity(target) {
-    let remove = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  _editItemQuantity(target, remove = false) {
     const $target = jquery_default()(target);
     const cartItemRow = $target.closest('[data-cartitem-id]')[0];
+    if (!cartItemRow) return;
 
     if (remove) {
       cartItemRow.classList.add('removing');
     }
 
-    const quantity = remove ? 0 : parseInt(cartItemRow.querySelector('[data-quantity-input]').value, 10);
-    const key = cartItemRow.getAttribute('data-cartitem-key');
+    const quantity = remove
+      ? 0
+      : parseInt(cartItemRow.querySelector('[data-quantity-input]').value, 10);
 
+    const key = cartItemRow.getAttribute('data-cartitem-key');
     this._updateCart(key, quantity);
   }
+
   /**
    * Update cart with a valid quantity
-   *
-   * @param $cartItem
-   * @param quantity
-   * @private
+   * NOTE: keep theme's original changeItem behavior for reliability
    */
-
-
   _updateCart(key, quantity) {
     // cancel any pending requests
     if (this.updateTimeout !== null) {
@@ -27094,144 +27108,107 @@ class StaticCart {
 
       const thisTimeoutId = this.updateTimeout;
 
-      fetch(`${window.Theme?.routes?.cart_change_url || '/cart/change.js'}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          id: key,        // line-item key works here
-          quantity: quantity
-        })
-      })
-        .then(res => res.json())
-        .then(response => {
-          if (this.updateTimeout !== thisTimeoutId) return;
-          this._didUpdate(response, thisTimeoutId);
-        })
-        .catch(() => window.location.reload());
+      // Notify Shopify updated item
+      window.Shopify.changeItem(key, quantity, (response) => {
+        if (this.updateTimeout !== thisTimeoutId) return;
+        this._didUpdate(response, thisTimeoutId);
+      });
     }, 300);
   }
 
-  
-
-
   /**
    * Fetches new cart contents and swaps into page
-   *
    * @param response
-   * @param {integer} thisTimeoutId Id of timeout for this request. If no longer current, update is cancelled.
-   * @returns {*}
+   * @param {integer} thisTimeoutId
    * @private
    */
-
-
   _didUpdate(response, thisTimeoutId) {
     // Reload page if all items are removed from cart
     if (!response.items.length) {
       window.location = window.Theme.routes.cart_url;
       return;
-    } // Reload the cart-item-list and the discounts snippets
+    }
 
+    // Reload the cart-item-list and the discounts snippets
+    shopify_asyncview_dist_index_es
+      .load(window.Theme.routes.cart_url, this.section.id)
+      .then(({ html }) => {
+        // If another request is in progress, discard this update
+        if (this.updateTimeout !== thisTimeoutId) return;
 
-    shopify_asyncview_dist_index_es.load(window.Theme.routes.cart_url, this.section.id).then((_ref) => {
-      let {
-        html
-      } = _ref;
+        const countEvent = new CustomEvent('cartcount:update', { detail: response });
+        window.dispatchEvent(countEvent);
 
-      // If another request is in progress, discard this update
-      if (this.updateTimeout !== thisTimeoutId) {
-        return;
-      }
+        // ✅ Unregister QuantitySelector events BEFORE DOM swap
+        this._unloadQuantitySelectors();
 
-      const countEvent = new CustomEvent('cartcount:update', {
-        detail: response
-      });
-      window.dispatchEvent(countEvent); // Unregister QuantitySelector events
-
-      // Unregister QuantitySelector events
-        this.quantitySelectors.forEach(selector => {
-          selector.unload();
-        });
-
-        // IMPORTANT: reset the array so we don't keep old instances around
-        this.quantitySelectors = [];
-
-        // IMPORTANT: re-query AFTER morphdom updates the DOM
-        this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
-
-        // Recreate QuantitySelectors once
-        this.inputFields.forEach(input => {
-          this.quantitySelectors.push(new QuantitySelector({
-            quantityField: input.parentNode,
-            onChange: this._editItemQuantity
-          }));
-        });
-      } // Inject new cart list contents
-
-
-      const newListContainer = document.createElement('div');
-      newListContainer.innerHTML = html.list;
-      morphdom_esm(this.cartItemList, newListContainer.querySelector('ul'), {
-        onBeforeElUpdated: (fromEl, toEl) => {
-          // Skip images if src matches
-          // - we don't want to reload lazy loaded images
-          if (fromEl.tagName === 'IMG' && fromEl.src === toEl.src) {
-            return false;
-          }
-
-          return true;
+        // ✅ Update Free shipping bar contents
+        if (this.freeShippingBars.length > 0) {
+          this.freeShippingBars.forEach((el) => {
+            const freeShippingBar = el;
+            freeShippingBar.innerHTML = html.free_shipping_bar;
+            freeShippingBar.classList.add('free-shipping-bar--animate');
+          });
         }
-      }); // Update cart totals
 
-      this.totals.forEach(total => {
-        const newTotal = total;
-        newTotal.innerHTML = html.cart_total;
-        morphdom_esm(total, newTotal, {
-          childrenOnly: true
+        // ✅ Inject new cart list contents
+        const newListContainer = document.createElement('div');
+        newListContainer.innerHTML = html.list;
+
+        morphdom_esm(this.cartItemList, newListContainer.querySelector('ul'), {
+          onBeforeElUpdated: (fromEl, toEl) => {
+            // Skip images if src matches - avoid reloading lazy loaded images
+            if (fromEl.tagName === 'IMG' && fromEl.src === toEl.src) return false;
+            return true;
+          },
         });
-      });
-      rimg_shopify_dist_index_es.watch(this.cartItemList);
-      this.forms.unload();
-      this.forms = new Forms(this.$el);
-      this.inputFields.forEach(input => {
-        this.quantitySelectors.push(new QuantitySelector({
-          quantityField: input.parentNode,
-          onChange: this._editItemQuantity
-        }));
-      });
-      this.$el.off('click.cart-page', '[data-cartitem-remove]');
-      this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
-        event.preventDefault();
 
-        this._editItemQuantity(event.currentTarget, true);
-      }); // Inject new cart level discounts
+        // ✅ Update cart totals
+        this.totals.forEach((total) => {
+          const newTotal = total;
+          newTotal.innerHTML = html.cart_total;
+          morphdom_esm(total, newTotal, { childrenOnly: true });
+        });
 
-      this.cartDiscounts.innerHTML = html.discounts;
-    }).catch(() => window.location.reload());
+        rimg_shopify_dist_index_es.watch(this.cartItemList);
+
+        // Re-init forms
+        this.forms.unload();
+        this.forms = new Forms(this.$el);
+
+        // ✅ Recreate QuantitySelectors ONCE after morphdom updated DOM
+        this._initQuantitySelectors();
+
+        // Re-bind remove button handler (safe guard)
+        this.$el.off('click.cart-page', '[data-cartitem-remove]');
+        this.$el.on('click.cart-page', '[data-cartitem-remove]', (event) => {
+          event.preventDefault();
+          this._editItemQuantity(event.currentTarget, true);
+        });
+
+        // ✅ Inject new cart level discounts
+        if (this.cartDiscounts) {
+          this.cartDiscounts.innerHTML = html.discounts;
+        }
+      })
+      .catch(() => window.location.reload());
   }
+
   /**
    * Handle Errors returned from Shopify
-   *
    * @param errors
    * @private
    */
+  _handleErrors(errors = null) {
+    if (!errors) return;
 
-
-  _handleErrors() {
-    let errors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-    if (!errors) {
-      return;
-    }
-
-    const shippingResponse = {
-      message: this.shipping.error_general
-    };
+    const shippingResponse = { message: this.shipping.error_general };
 
     if (errors.zip && errors.zip.length > 0) {
-      if (errors.zip[0].indexOf('is not valid') !== -1 || errors.zip[0].indexOf('can\'t be blank') !== -1) {
+      if (
+        errors.zip[0].indexOf('is not valid') !== -1 ||
+        errors.zip[0].indexOf("can't be blank") !== -1
+      ) {
         shippingResponse.message = `${this.shipping.zip} ${errors.zip}`;
       }
     }
@@ -27251,24 +27228,21 @@ class StaticCart {
     const countrySelect = document.getElementById('address_country');
     const provinceSelect = document.getElementById('address_province');
     const provinceContainer = document.getElementById('address_province_container');
+
     this.shippingCountryProvinceSelector = new CountryProvinceSelector(countrySelect.innerHTML);
     this.shippingCountryProvinceSelector.build(countrySelect, provinceSelect, {
-      onCountryChange: provinces => {
+      onCountryChange: (provinces) => {
         if (provinces.length) {
           provinceContainer.style.display = 'block';
         } else {
           provinceContainer.style.display = 'none';
-        } // "Province", "State", "Region", etc. and "Postal Code", "ZIP Code", etc.
-        // Even countries without provinces include a label.
+        }
 
-
-        const {
-          label,
-          zip_label: zipLabel
-        } = window.Countries[countrySelect.value];
+        // Country-specific labels
+        const { label, zip_label: zipLabel } = window.Countries[countrySelect.value];
         provinceContainer.querySelector('label[for="address_province"]').innerHTML = label;
         this.el.querySelector('#address_zip ~ label[for="address_zip"]').innerHTML = zipLabel;
-      }
+      },
     });
   }
 
@@ -27276,10 +27250,12 @@ class StaticCart {
     this.$el.on('click.cart-page', '[data-cartshipping-toggle]', () => {
       this._toggleShippingCalc();
     });
+
     this.$el.on('click.cart-page', '[data-cartshipping-submit]', () => {
       this._getShippingRates();
     });
-    this.$el.on('keypress.cart-page', '#address_zip', event => {
+
+    this.$el.on('keypress.cart-page', '#address_zip', (event) => {
       if (event.keyCode === 10 || event.keyCode === 13) {
         event.preventDefault();
         this.$shippingSubmit.trigger('click');
@@ -27301,48 +27277,54 @@ class StaticCart {
     shippingAddress.country = jquery_default()('#address_country').val() || '';
     shippingAddress.province = jquery_default()('#address_province').val() || '';
     shippingAddress.zip = jquery_default()('#address_zip').val() || '';
-    const queryString = Object.keys(shippingAddress).map(key => `${encodeURIComponent(`shipping_address[${key}]`)}=${encodeURIComponent(shippingAddress[key])}`).join('&');
-    jquery_default().ajax(`${window.Theme.routes.cart_url}/shipping_rates.json?${queryString}`, {
-      dataType: 'json'
-    }).fail(error => this._handleErrors(error.responseJSON || {})).done(response => {
-      const rates = response.shipping_rates;
-      const addressBase = [];
 
-      if (shippingAddress.zip.length) {
-        addressBase.push(shippingAddress.zip.trim());
-      }
+    const queryString = Object.keys(shippingAddress)
+      .map(
+        (key) =>
+          `${encodeURIComponent(`shipping_address[${key}]`)}=${encodeURIComponent(
+            shippingAddress[key]
+          )}`
+      )
+      .join('&');
 
-      if (shippingAddress.province.length) {
-        addressBase.push(shippingAddress.province);
-      }
+    jquery_default()
+      .ajax(`${window.Theme.routes.cart_url}/shipping_rates.json?${queryString}`, {
+        dataType: 'json',
+      })
+      .fail((error) => this._handleErrors(error.responseJSON || {}))
+      .done((response) => {
+        const rates = response.shipping_rates;
+        const addressBase = [];
 
-      if (shippingAddress.country.length) {
-        addressBase.push(shippingAddress.country);
-      }
+        if (shippingAddress.zip.length) addressBase.push(shippingAddress.zip.trim());
+        if (shippingAddress.province.length) addressBase.push(shippingAddress.province);
+        if (shippingAddress.country.length) addressBase.push(shippingAddress.country);
 
-      const address = addressBase.join(', ');
-      let message = '';
+        const address = addressBase.join(', ');
+        let message = '';
 
-      if (rates.length > 1) {
-        const firstRate = window.Shopify.formatMoney(rates[0].price, this.settings.money_format);
-        message = this.shipping.multiple_rates.replace('*address*', address).replace('*number_of_rates*', rates.length).replace('*rate*', `<span class="money">${firstRate}</span>`);
-      } else if (rates.length === 1) {
-        message = this.shipping.one_rate.replace('*address*', address);
-      } else {
-        message = this.shipping.no_rates;
-      }
+        if (rates.length > 1) {
+          const firstRate = window.Shopify.formatMoney(rates[0].price, this.settings.money_format);
+          message = this.shipping.multiple_rates
+            .replace('*address*', address)
+            .replace('*number_of_rates*', rates.length)
+            .replace('*rate*', `<span class="money">${firstRate}</span>`);
+        } else if (rates.length === 1) {
+          message = this.shipping.one_rate.replace('*address*', address);
+        } else {
+          message = this.shipping.no_rates;
+        }
 
-      const ratesList = rates.map(rate => {
-        const price = window.Shopify.formatMoney(rate.price, this.settings.money_format);
-        const rateValue = this.shipping.rate_value.replace('*rate_title*', rate.name).replace('*rate*', `<span class="money">${price}</span>`);
-        return `<li>${rateValue}</li>`;
+        const ratesList = rates.map((rate) => {
+          const price = window.Shopify.formatMoney(rate.price, this.settings.money_format);
+          const rateValue = this.shipping.rate_value
+            .replace('*rate_title*', rate.name)
+            .replace('*rate*', `<span class="money">${price}</span>`);
+          return `<li>${rateValue}</li>`;
+        });
+
+        this._handleShippingResponse({ message, rates: ratesList });
       });
-
-      this._handleShippingResponse({
-        message,
-        rates: ratesList
-      });
-    });
   }
 
   _enableShippingButton() {
@@ -27360,49 +27342,38 @@ class StaticCart {
   _hideShippingResponse() {
     this.$shippingResponse.removeClass('visible');
   }
+
   /**
    * Handle shipping responses
-   *
    * @param {object} shippingResponse
-   * @property {String} shippingResponse.messages - Error / Success message
-   * @property {Array|String} shippingResponse.rates - Shipping rates
    * @private
    */
-
-
-  _handleShippingResponse() {
-    let shippingResponse = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
+  _handleShippingResponse(shippingResponse = {}) {
     // Hide the response so that it can be populated smoothly
     this._hideShippingResponse();
 
     const message = shippingResponse.message || null;
-    const rates = shippingResponse.rates || null; // Empty out contents
+    const rates = shippingResponse.rates || null;
 
+    // Empty out contents
     this.$shippingResponseMessage.empty();
     this.$shippingResponseRates.empty();
 
-    if (message) {
-      this.$shippingResponseMessage.html(message);
-    }
+    if (message) this.$shippingResponseMessage.html(message);
+    if (rates) this.$shippingResponseRates.html(rates);
 
-    if (rates) {
-      this.$shippingResponseRates.html(rates);
-    } // Reset the calculating button so it can be used again
+    // Reset the calculating button so it can be used again
+    this._enableShippingButton();
 
+    // No error provided
+    if (!message && !rates) return;
 
-    this._enableShippingButton(); // No error provided
-
-
-    if (!message && !rates) {
-      return;
-    } // Show the response
-
-
+    // Show the response
     this._showShippingResponse();
   }
-
 }
+
+
 ;// CONCATENATED MODULE: ./node_modules/@pixelunion/animations/dist/animations.es.js
 
   /*!

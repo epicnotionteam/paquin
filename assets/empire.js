@@ -26997,19 +26997,29 @@ class StaticCart {
    * IMPORTANT: Always call _unloadQuantitySelectors() before calling this again.
    */
   _initQuantitySelectors() {
-    // Re-query in case DOM changed before init
+    // Re-query in case DOM changed
     this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
 
     this.inputFields.forEach((input) => {
-      // QuantitySelector expects the wrapper element (quantityField)
-      this.quantitySelectors.push(
-        new QuantitySelector({
-          quantityField: input.parentNode,
-          onChange: this._editItemQuantity,
-        })
-      );
+      const quantityField = input.parentNode;
+      if (!quantityField) return;
+
+      // ✅ Guard: prevent double-init on the same DOM node
+      if (quantityField.dataset.qtySelectorInit === '1') return;
+      quantityField.dataset.qtySelectorInit = '1';
+
+      const qs = new QuantitySelector({
+        quantityField,
+        onChange: this._editItemQuantity,
+      });
+
+      // Track the field for cleanup
+      qs.__quantityField = quantityField;
+
+      this.quantitySelectors.push(qs);
     });
   }
+
 
   /**
    * Unload and clear all QuantitySelector instances safely.
@@ -27018,14 +27028,17 @@ class StaticCart {
     if (Array.isArray(this.quantitySelectors) && this.quantitySelectors.length) {
       this.quantitySelectors.forEach((selector) => {
         try {
+          // ✅ Remove guard flag so re-init after morphdom works
+          const field = selector.__quantityField;
+          if (field) delete field.dataset.qtySelectorInit;
+
           selector.unload();
-        } catch (e) {
-          // no-op: protect from partial state
-        }
+        } catch (e) {}
       });
     }
     this.quantitySelectors = [];
   }
+
 
   _bindEvents() {
     // Remove item

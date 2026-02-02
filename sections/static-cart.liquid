@@ -287,6 +287,10 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // ✅ Only run on the cart page (and only if the cart section exists)
+  const cartSection = document.querySelector('[data-section-type="static-cart"]');
+  if (!cartSection) return;
+
   const timers = new Map();
 
   function postCartChange(payload) {
@@ -306,13 +310,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getRowFromElement(el) {
-    // Your theme seems to use data-cartitem-id on the row container.
-    // But we’ll also accept anything with data-cartitem-key.
     return el.closest("[data-cartitem-id]") || el.closest("[data-cartitem-key]");
   }
 
   function getIdentifier(row) {
-    // Could be a line-item key OR a line number depending on theme
     return row.getAttribute("data-cartitem-key") || row.dataset.cartitemKey;
   }
 
@@ -326,14 +327,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const ident = getIdentifier(row);
     if (!ident) return;
 
-    // Debounce per row identifier
     if (timers.has(ident)) clearTimeout(timers.get(ident));
     timers.set(
       ident,
       setTimeout(() => {
-        // Heuristic: Shopify "key" usually looks like "abc123:deadbeef..."
         const looksLikeKey = String(ident).includes(":");
-
         const payload = looksLikeKey
           ? { id: ident, quantity: qty }
           : { line: parseInt(ident, 10), quantity: qty };
@@ -343,20 +341,18 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // Click +/-
-  document.addEventListener("click", (e) => {
+  // ✅ Bind ONLY inside cart section (not document)
+  cartSection.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-quantity-plus], [data-quantity-minus]");
     if (!btn) return;
 
     const row = getRowFromElement(btn);
     if (!row) return;
 
-    // Let the UI update the input first
     setTimeout(() => persistQty(row), 0);
   });
 
-  // Manual input edits
-  document.addEventListener("change", (e) => {
+  cartSection.addEventListener("change", (e) => {
     const input = e.target.closest("[data-quantity-input]");
     if (!input) return;
 
@@ -366,7 +362,6 @@ document.addEventListener("DOMContentLoaded", () => {
     persistQty(row);
   });
 });
-
 </script>
 
 {% schema %}

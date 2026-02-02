@@ -27114,69 +27114,7 @@ class StaticCart {
     }, 300);
   }
 
-  (function () {
-    // Debounce per line-item key so rapid clicking doesn't spam requests
-    const timers = new Map();
-
-    function persistQty(row) {
-      const key = row.getAttribute("data-cartitem-key");
-      const input = row.querySelector('[data-quantity-input]');
-      if (!key || !input) return;
-
-      const qty = Math.max(0, parseInt(input.value, 10) || 0);
-
-      // Debounce this specific row/key
-      if (timers.has(key)) clearTimeout(timers.get(key));
-      timers.set(
-        key,
-        setTimeout(() => {
-          fetch("/cart/update.js", {
-            method: "POST",
-            credentials: "same-origin",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-            },
-            body: JSON.stringify({
-              updates: { [key]: qty }, // <-- key-based update is very reliable
-            }),
-          })
-            .then((r) => r.json())
-            .then(() => {
-              // Optional: you can trigger a custom event if your theme listens for it
-              document.dispatchEvent(new CustomEvent("cart:updated"));
-            })
-            .catch(() => {
-              // If anything fails, fall back to a reload so cart isn't "lying" to the user
-              window.location.reload();
-            });
-        }, 150)
-      );
-    }
-
-  // 1) When user clicks + / -
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-quantity-plus], [data-quantity-minus]");
-    if (!btn) return;
-
-    const row = btn.closest("[data-cartitem-id]");
-    if (!row) return;
-
-    // Let whatever UI logic run first, then save the resulting value
-    setTimeout(() => persistQty(row), 0);
-  });
-
-  // 2) When user types into the input directly
-  document.addEventListener("change", (e) => {
-    const input = e.target.closest("[data-quantity-input]");
-    if (!input) return;
-
-    const row = input.closest("[data-cartitem-id]");
-    if (!row) return;
-
-    persistQty(row);
-  });
-})();
+  
 
 
   /**

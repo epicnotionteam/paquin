@@ -26931,20 +26931,15 @@ class StaticCart {
     this.freeShippingBars = this.$el[0].querySelectorAll('[data-free-shipping-bar]');
     this.$cartSidebar = this.$el.find('[data-cart-sidebar]');
 
-    // Quantity selector
-    this.quantitySelectors = [];
     this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
 
-    // Title totals
     this.$titleTotalSmall = this.$el.find('.cart-title-total--small');
     this.$titleTotalLarge = this.$el.find('.cart-title-total--large');
     this.$titleTotalContents = this.$el.find('[data-cart-title-total]');
 
-    // Cart list + discounts
     this.cartItemList = this.$el[0].querySelector('[data-cart-item-list]');
     this.cartDiscounts = this.$el[0].querySelector('[data-cart-discounts]');
 
-    // Shipping calculator elements
     this.$shippingToggle = this.$el.find('[data-cartshipping-toggle]');
     this.$shippingResponse = this.$shipping.find('[data-cartshipping-response]');
     this.$shippingResponseMessage = this.$shippingResponse.find('[data-cartshipping-message]');
@@ -26955,13 +26950,8 @@ class StaticCart {
 
     const $scripts = jquery_default()('[data-scripts]');
 
-    // Bind quantity change handler (called by QuantitySelector)
     this._editItemQuantity = this._editItemQuantity.bind(this);
 
-    // ✅ Initialize QuantitySelector ONCE
-    this._initQuantitySelectors();
-
-    // Load Shopify API then bind events
     script_default()($scripts.data('shopify-api-url'), () => {
       this._bindEvents();
       window.Shopify.onError = this._handleErrors.bind(this);
@@ -26985,8 +26975,18 @@ class StaticCart {
   onSectionUnload() {
     this.$el.off('.cart-page');
     this.$window.off('.cart-page');
+
+    // remove our capture handlers if present
+    if (this._qtyClickCaptureHandler) {
+      this.el.removeEventListener('click', this._qtyClickCaptureHandler, true);
+      this._qtyClickCaptureHandler = null;
+    }
+    if (this._qtyChangeHandler) {
+      this.el.removeEventListener('change', this._qtyChangeHandler, true);
+      this._qtyChangeHandler = null;
+    }
+
     this.forms.unload();
-    this._unloadQuantitySelectors();
   }
 
   _bindEvents() {
@@ -26996,40 +26996,66 @@ class StaticCart {
       this._editItemQuantity(event.currentTarget, true);
     });
 
-    // Window resize
+    // Resize
     this.$window.on(
       'resize.cart-page',
       just_debounce_default()(() => this._moveTitleTotal(), 20)
     );
+
+    /**
+     * ✅ Quantity controls (CAPTURE phase)
+     * This prevents ANY other theme/app +/- handlers from running,
+     * which is what causes the "+2" issue.
+     */
+    this._qtyClickCaptureHandler = (e) => {
+      const btn = e.target.closest('[data-quantity-plus],[data-quantity-minus]');
+      if (!btn || !this.el.contains(btn)) return;
+
+      // Stop the event before other handlers (the ones causing double increment) run
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+
+      const row = btn.closest('[data-cartitem-id]');
+      if (!row) return;
+
+      const input = row.querySelector('[data-quantity-input]');
+      if (!input) return;
+
+      const current = parseInt(input.value, 10) || 0;
+      const step = parseInt(input.getAttribute('step'), 10) || 1;
+      const min = parseInt(input.getAttribute('min'), 10) || 1;
+
+      const isPlus = btn.hasAttribute('data-quantity-plus');
+      let next = current + (isPlus ? step : -step);
+
+      // clamp
+      next = Math.max(next, min);
+
+      // update UI
+      input.value = String(next);
+
+      // persist to Shopify
+      this._editItemQuantity(input, false);
+    };
+
+    // Capture = true is the key
+    this.el.addEventListener('click', this._qtyClickCaptureHandler, true);
+
+    /**
+     * ✅ When user types into input, persist on change
+     */
+    this._qtyChangeHandler = (e) => {
+      const input = e.target.closest('[data-quantity-input]');
+      if (!input || !this.el.contains(input)) return;
+
+      // (No stopPropagation here; typing usually doesn't conflict)
+      this._editItemQuantity(input, false);
+    };
+
+    this.el.addEventListener('change', this._qtyChangeHandler, true);
   }
 
-  /**
-   * ✅ QuantitySelector lifecycle (prevents double-binding)
-   */
-  _unloadQuantitySelectors() {
-    this.quantitySelectors.forEach(selector => {
-      try { selector.unload(); } catch (e) {}
-    });
-    this.quantitySelectors = [];
-  }
-
-  _initQuantitySelectors() {
-    // Re-query inputs from current DOM
-    this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
-
-    this.inputFields.forEach(input => {
-      this.quantitySelectors.push(
-        new QuantitySelector({
-          quantityField: input.parentNode,
-          onChange: this._editItemQuantity
-        })
-      );
-    });
-  }
-
-  /**
-   * Gets the current value of the quantity input box for a given line item key
-   */
   _getItemQuantity(key) {
     return parseInt(
       this.el.querySelector(`[data-cartitem-key="${key}"] [data-quantity-input]`).value,
@@ -27051,12 +27077,6 @@ class StaticCart {
     }
   }
 
-  /**
-   * Handle an item quantity change (called by QuantitySelector)
-   *
-   * @param target
-   * @param {Boolean} remove
-   */
   _editItemQuantity(target, remove = false) {
     const $target = jquery_default()(target);
     const cartItemRow = $target.closest('[data-cartitem-id]')[0];
@@ -27069,21 +27089,14 @@ class StaticCart {
       : parseInt(cartItemRow.querySelector('[data-quantity-input]').value, 10);
 
     const key = cartItemRow.getAttribute('data-cartitem-key');
-
     this._updateCart(key, quantity);
   }
 
-  /**
-   * Update cart with a valid quantity
-   */
   _updateCart(key, quantity) {
-    // cancel any pending requests
-    if (this.updateTimeout !== null) {
-      clearTimeout(this.updateTimeout);
-    }
+    if (this.updateTimeout !== null) clearTimeout(this.updateTimeout);
 
     this.updateTimeout = setTimeout(() => {
-      // If qty is >0 and the input has already changed again, cancel this request
+      // If qty is >0 and the input changed again, cancel this request
       if (quantity > 0 && this._getItemQuantity(key) !== quantity) {
         this.updateTimeout = null;
         return;
@@ -27091,19 +27104,15 @@ class StaticCart {
 
       const thisTimeoutId = this.updateTimeout;
 
-      // ✅ Use Shopify's built-in changeItem (keeps theme behavior consistent)
-      window.Shopify.changeItem(key, quantity, response => {
+      // Use theme's Shopify helper so the rest of the cart refresh flow remains intact
+      window.Shopify.changeItem(key, quantity, (response) => {
         if (this.updateTimeout !== thisTimeoutId) return;
         this._didUpdate(response, thisTimeoutId);
       });
-    }, 300);
+    }, 250);
   }
 
-  /**
-   * Fetches new cart contents and swaps into page
-   */
   _didUpdate(response, thisTimeoutId) {
-    // Reload page if all items are removed from cart
     if (!response.items.length) {
       window.location = window.Theme.routes.cart_url;
       return;
@@ -27112,40 +27121,31 @@ class StaticCart {
     shopify_asyncview_dist_index_es
       .load(window.Theme.routes.cart_url, this.section.id)
       .then(({ html }) => {
-        // If another request is in progress, discard this update
         if (this.updateTimeout !== thisTimeoutId) return;
 
         const countEvent = new CustomEvent('cartcount:update', { detail: response });
         window.dispatchEvent(countEvent);
 
-        // ✅ Unregister QuantitySelector events BEFORE morphdom swaps DOM
-        this._unloadQuantitySelectors();
-
-        // Update Free shipping bar contents
         if (this.freeShippingBars.length > 0) {
           this.freeShippingBars.forEach(el => {
-            const freeShippingBar = el;
-            freeShippingBar.innerHTML = html.free_shipping_bar;
-            freeShippingBar.classList.add('free-shipping-bar--animate');
+            el.innerHTML = html.free_shipping_bar;
+            el.classList.add('free-shipping-bar--animate');
           });
         }
 
-        // Inject new cart list contents
         const newListContainer = document.createElement('div');
         newListContainer.innerHTML = html.list;
 
         morphdom_esm(this.cartItemList, newListContainer.querySelector('ul'), {
           onBeforeElUpdated: (fromEl, toEl) => {
-            // Skip images if src matches (avoid reloading)
             if (fromEl.tagName === 'IMG' && fromEl.src === toEl.src) return false;
             return true;
           }
         });
 
-        // ✅ Recreate QuantitySelectors ONCE after DOM update
-        this._initQuantitySelectors();
+        // Re-query inputs after DOM swap
+        this.inputFields = this.el.querySelectorAll('[data-quantity-input]');
 
-        // Update cart totals
         this.totals.forEach(total => {
           const newTotal = total;
           newTotal.innerHTML = html.cart_total;
@@ -27157,22 +27157,17 @@ class StaticCart {
         this.forms.unload();
         this.forms = new Forms(this.$el);
 
-        // Re-bind remove item click handler (safe idempotent)
         this.$el.off('click.cart-page', '[data-cartitem-remove]');
         this.$el.on('click.cart-page', '[data-cartitem-remove]', event => {
           event.preventDefault();
           this._editItemQuantity(event.currentTarget, true);
         });
 
-        // Inject new cart level discounts
         this.cartDiscounts.innerHTML = html.discounts;
       })
       .catch(() => window.location.reload());
   }
 
-  /**
-   * Handle Errors returned from Shopify
-   */
   _handleErrors(errors = null) {
     if (!errors) return;
 
@@ -27206,11 +27201,7 @@ class StaticCart {
     this.shippingCountryProvinceSelector = new CountryProvinceSelector(countrySelect.innerHTML);
     this.shippingCountryProvinceSelector.build(countrySelect, provinceSelect, {
       onCountryChange: provinces => {
-        if (provinces.length) {
-          provinceContainer.style.display = 'block';
-        } else {
-          provinceContainer.style.display = 'none';
-        }
+        provinceContainer.style.display = provinces.length ? 'block' : 'none';
 
         const { label, zip_label: zipLabel } = window.Countries[countrySelect.value];
         provinceContainer.querySelector('label[for="address_province"]').innerHTML = label;
@@ -27220,14 +27211,8 @@ class StaticCart {
   }
 
   _bindShippingCalcEvents() {
-    this.$el.on('click.cart-page', '[data-cartshipping-toggle]', () => {
-      this._toggleShippingCalc();
-    });
-
-    this.$el.on('click.cart-page', '[data-cartshipping-submit]', () => {
-      this._getShippingRates();
-    });
-
+    this.$el.on('click.cart-page', '[data-cartshipping-toggle]', () => this._toggleShippingCalc());
+    this.$el.on('click.cart-page', '[data-cartshipping-submit]', () => this._getShippingRates());
     this.$el.on('keypress.cart-page', '#address_zip', event => {
       if (event.keyCode === 10 || event.keyCode === 13) {
         event.preventDefault();
@@ -27246,10 +27231,11 @@ class StaticCart {
   _getShippingRates() {
     this._disableShippingButton();
 
-    const shippingAddress = {};
-    shippingAddress.country = jquery_default()('#address_country').val() || '';
-    shippingAddress.province = jquery_default()('#address_province').val() || '';
-    shippingAddress.zip = jquery_default()('#address_zip').val() || '';
+    const shippingAddress = {
+      country: jquery_default()('#address_country').val() || '',
+      province: jquery_default()('#address_province').val() || '',
+      zip: jquery_default()('#address_zip').val() || '',
+    };
 
     const queryString = Object.keys(shippingAddress)
       .map(
@@ -27267,15 +27253,14 @@ class StaticCart {
       .fail(error => this._handleErrors(error.responseJSON || {}))
       .done(response => {
         const rates = response.shipping_rates;
-        const addressBase = [];
 
+        const addressBase = [];
         if (shippingAddress.zip.length) addressBase.push(shippingAddress.zip.trim());
         if (shippingAddress.province.length) addressBase.push(shippingAddress.province);
         if (shippingAddress.country.length) addressBase.push(shippingAddress.country);
-
         const address = addressBase.join(', ');
-        let message = '';
 
+        let message = '';
         if (rates.length > 1) {
           const firstRate = window.Shopify.formatMoney(rates[0].price, this.settings.money_format);
           message = this.shipping.multiple_rates
@@ -27317,30 +27302,23 @@ class StaticCart {
   }
 
   _handleShippingResponse(shippingResponse = {}) {
-    // Hide the response so that it can be populated smoothly
     this._hideShippingResponse();
 
     const message = shippingResponse.message || null;
     const rates = shippingResponse.rates || null;
 
-    // Empty out contents
     this.$shippingResponseMessage.empty();
     this.$shippingResponseRates.empty();
 
     if (message) this.$shippingResponseMessage.html(message);
     if (rates) this.$shippingResponseRates.html(rates);
 
-    // Reset the calculating button so it can be used again
     this._enableShippingButton();
 
-    // No error provided
     if (!message && !rates) return;
-
-    // Show the response
     this._showShippingResponse();
   }
 }
-
 
 
 ;// CONCATENATED MODULE: ./node_modules/@pixelunion/animations/dist/animations.es.js

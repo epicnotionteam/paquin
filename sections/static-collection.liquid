@@ -419,7 +419,7 @@
                                 {% for product in collection.products %}
                                 {% assign min_price = product.price_min %}
 
-                                {% if min_price > 1 %}
+                                {% if min_price > 0 %}
                                     {%
                                     render 'product-grid-item',
                                     product: product,

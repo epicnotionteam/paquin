@@ -418,7 +418,7 @@
                             {% paginate collection.products by 24 %}
                                 <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-productgrid-items>
                                     {% for product in collection.products %}
-                                        {% if product.available %}
+                                        {% if product.available and product.price_min > 0 %}
                                         {% render 'product-grid-item',
                                             product: product,
                                             context: 'collection',
@@ -430,7 +430,7 @@
                                 </div>
                             {{ paginate | default_pagination }}
                             {% endpaginate %}
-                            
+
                             {% endif %}
                             {% comment %} REMOVE COMMENT FROM THIS TO TURN SHOP PAGE INTO PREVIEW/COMING SOON MODE
                           <p style="text-align: center; margin: 20px 0">

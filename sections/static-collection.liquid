@@ -93,28 +93,64 @@
 -%}
 
 <script
-    type="application/json"
-    data-section-type="{{ section_type | strip }}"
-    data-section-id="{{ section.id }}"
-    data-section-data
+  type="application/json"
+  data-section-type="{{ section_type | strip }}"
+  data-section-id="{{ section.id }}"
+    {%- assign primary_collection_filter = blank -%}
+
+    {%- for f in collection.filters -%}
+        {%- if f.param_name contains 'filter.p.m.custom.primary_collection' -%}
+            {%- assign primary_collection_filter = f -%}
+            {%- break -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+  data-section-data
 >
-    {
-        "show_filter_product_count": {{ filter_block.settings.show_filter_product_count | json }},
-        "product_count": {{ collection.products_count | json }},
-        "filter_type": {{ filter_type | json }},
-        "filter_groups": {{ filter_block.settings.filter_groups | json }},
-        "filter_style": {{ filter_block.settings.filter_style | json }},
-        "no_matched_products_text": {{ 'general.accessibility.no_matched_products' | t: tag: '*tag*' | json }},
-        "context": {
-            "see_more": {{ 'general.general.see_more' | t | json }},
-            "see_less": {{ 'general.general.see_less' | t | json }},
-            "grid_list": {{ section.settings.default_view | json }},
-            "collectionUrl": {{ collection.url | default: '/collections/shop' | json }},
-            "current_tags": {{ current_tag_array | json }}
-        },
-        "enable_product_compare": {{ settings.enable_product_compare | json }}
-    }
+{
+  "show_filter_product_count": {{ filter_block.settings.show_filter_product_count | json }},
+  "product_count": {{ collection.products_count | json }},
+  "filter_type": {{ filter_type | json }},
+  "filter_groups": {{ filter_block.settings.filter_groups | json }},
+  "filter_style": {{ filter_block.settings.filter_style | json }},
+
+  "primary_collection_filter": {
+    "enabled":
+      {%- if primary_collection_filter != blank -%}true{%- else -%}false{%- endif -%},
+    "label":
+      {%- if primary_collection_filter != blank -%}
+        {{ primary_collection_filter.label | json }}
+      {%- else -%}
+        {{ 'Primary collection' | json }}
+      {%- endif -%},
+    "values": [
+      {%- if primary_collection_filter != blank -%}
+        {%- for v in primary_collection_filter.values -%}
+          {
+            "label": {{ v.label | json }},
+            "value": {{ v.value | json }},
+            "param_name": {{ v.param_name | json }},
+            "active": {%- if v.active -%}true{%- else -%}false{%- endif -%},
+            "count": {{ v.count | json }},
+            "disabled": {%- if v.count == 0 and v.active == false -%}true{%- else -%}false{%- endif -%}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+    ]
+  },
+
+  "no_matched_products_text": {{ 'general.accessibility.no_matched_products' | t: tag: '*tag*' | json }},
+  "context": {
+    "see_more": {{ 'general.general.see_more' | t | json }},
+    "see_less": {{ 'general.general.see_less' | t | json }},
+    "grid_list": {{ section.settings.default_view | json }},
+    "collectionUrl": {{ collection.url | default: '/collections/shop' | json }},
+    "current_tags": {{ current_tag_array | json }}
+  },
+  "enable_product_compare": {{ settings.enable_product_compare | json }}
+}
 </script>
+
 
 {% style %}
     #shopify-section-{{ section.id }} .subcollections-list__content {

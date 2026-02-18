@@ -1,73 +1,146 @@
-{% assign tag_limit = filter_limit | times: 1 %}
+{%- comment -%}
+  Product Grid Sidebar
+  Supports:
+  - Faceted filters (collection.filters) including metafield filters
+  - Tag filters (collection.all_tags) for legacy mode
 
-{% comment %}
-  Collection filters
-{% endcomment %}
-{% if collection.all_tags.size > 0 and filter_style != 'none' %}
-  {% capture cat_array %}{%- render 'advanced-tag-loop', block: block -%}{% endcapture %}
-  {% assign cat_array = cat_array | split: '|' %}
-  <div class="productgrid--sidebar-section" aria-label="Filters" data-productgrid-filters-content>
-    <nav
-      aria-label="Collection filters"
-    >
-      {% if filter_style == 'groups' %}
-        {%
-          render 'product-grid-tag-groups',
-          block: block,
-          tag_limit: tag_limit,
-          cat_array: cat_array,
-        %}
-      {% endif %}
+  Expected params from render:
+  - context (collection)
+  - filter_block
+  - filter_type: 'faceted' or 'tag'
+  - filter_style: 'groups' or 'tags'
+  - filter_limit
+  - show_filter_product_count
+{%- endcomment -%}
 
-      {% if filter_style == 'tags' %}
-        {%
-          render 'product-grid-tags',
-          block: block,
-          tag_limit: tag_limit,
-          cat_array: cat_array,
-        %}
-      {% endif %}
+{%- assign collection = context | default: collection -%}
+{%- assign tag_limit = filter_limit | default: 999 | times: 1 -%}
+{%- assign filter_type = filter_type | default: 'faceted' -%}
+{%- assign filter_style = filter_style | default: 'tags' -%}
+{%- assign show_filter_product_count = show_filter_product_count | default: true -%}
 
+<div class="productgrid--sidebar-section" aria-label="Filters" data-productgrid-filters-content>
+  <nav aria-label="Collection filters">
+
+    {%- if filter_type == 'faceted' -%}
       {%- comment -%}
-        Primary Collection metafield filter
-        Requirements:
-        - Metafield: custom.primary_collection
-        - Added as a storefront filter in Shopify Search & Discovery
+        FACETED FILTERS (Shopify Search & Discovery / collection.filters)
       {%- endcomment -%}
 
-      {%- assign primary_collection_filter = nil -%}
-
-      {%- for f in collection.filters -%}
-        {%- if f.param_name contains 'filter.p.m.custom.primary_collection' -%}
-          {%- assign primary_collection_filter = f -%}
-          {%- break -%}
+      <form id="CollectionFiltersForm" method="get" action="{{ collection.url }}">
+        {%- comment -%} Preserve sort_by if present {%- endcomment -%}
+        {%- if collection.sort_by != blank -%}
+          <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
         {%- endif -%}
-      {%- endfor -%}
 
-      {%- if primary_collection_filter != nil -%}
-        <details class="filter-group" open>
-          <summary class="filter-group__title">
-            {{ primary_collection_filter.label }}
-          </summary>
+        {%- for filter in collection.filters -%}
+          {%- if filter.type == 'price_range' -%}
+            <details class="filter-group" {% if filter.min_value.value or filter.max_value.value %}open{% endif %}>
+              <summary class="filter-group__title">{{ filter.label }}</summary>
 
-          <div class="filter-group__content">
-            {%- for v in primary_collection_filter.values -%}
-              <label class="filter-item">
-                <input
-                  type="checkbox"
-                  name="{{ v.param_name }}"
-                  value="{{ v.value }}"
-                  {% if v.active %}checked{% endif %}
-                  {% if v.count == 0 and v.active == false %}disabled{% endif %}
-                >
-                <span class="filter-item__label">{{ v.label }}</span>
-                <span class="filter-item__count">({{ v.count }})</span>
-              </label>
-            {%- endfor -%}
-          </div>
-        </details>
+              <div class="filter-group__content">
+                <label class="filter-item">
+                  <span class="filter-item__label">Min</span>
+                  <input
+                    name="{{ filter.min_value.param_name }}"
+                    value="{{ filter.min_value.value }}"
+                    type="number"
+                    inputmode="numeric"
+                    placeholder="0"
+                  >
+                </label>
+
+                <label class="filter-item">
+                  <span class="filter-item__label">Max</span>
+                  <input
+                    name="{{ filter.max_value.param_name }}"
+                    value="{{ filter.max_value.value }}"
+                    type="number"
+                    inputmode="numeric"
+                    placeholder="{{ filter.range_max }}"
+                  >
+                </label>
+              </div>
+            </details>
+
+          {%- elsif filter.type == 'list' -%}
+            {%- comment -%}
+              This includes your metafield filter custom.primary_collection
+              (and any other list-style filters)
+            {%- endcomment -%}
+            <details class="filter-group" {% if filter.active_values.size > 0 %}open{% endif %}>
+              <summary class="filter-group__title">{{ filter.label }}</summary>
+
+              <div class="filter-group__content">
+                {%- for v in filter.values -%}
+                  <label class="filter-item">
+                    <input
+                      type="checkbox"
+                      name="{{ v.param_name }}"
+                      value="{{ v.value }}"
+                      {% if v.active %}checked{% endif %}
+                      {% if v.count == 0 and v.active == false %}disabled{% endif %}
+                    >
+                    <span class="filter-item__label">{{ v.label }}</span>
+                    {%- if show_filter_product_count -%}
+                      <span class="filter-item__count">({{ v.count }})</span>
+                    {%- endif -%}
+                  </label>
+                {%- endfor -%}
+              </div>
+            </details>
+          {%- endif -%}
+        {%- endfor -%}
+
+        <noscript>
+          <button type="submit" class="button--base">Apply filters</button>
+        </noscript>
+      </form>
+
+      <script>
+        (function () {
+          var form = document.getElementById('CollectionFiltersForm');
+          if (!form) return;
+
+          form.addEventListener('change', function (e) {
+            var t = e.target;
+            if (!t) return;
+            if (t.type === 'checkbox' || t.type === 'number' || t.tagName === 'SELECT') {
+              form.submit();
+            }
+          });
+        })();
+      </script>
+
+    {%- else -%}
+      {%- comment -%}
+        TAG FILTERS (legacy)
+      {%- endcomment -%}
+
+      {%- if collection.all_tags.size > 0 and filter_style != 'none' -%}
+        {% capture cat_array %}{%- render 'advanced-tag-loop', block: filter_block -%}{% endcapture %}
+        {% assign cat_array = cat_array | split: '|' %}
+
+        {% if filter_style == 'groups' %}
+          {%
+            render 'product-grid-tag-groups',
+            block: filter_block,
+            tag_limit: tag_limit,
+            cat_array: cat_array
+          %}
+        {% endif %}
+
+        {% if filter_style == 'tags' %}
+          {%
+            render 'product-grid-tags',
+            block: filter_block,
+            tag_limit: tag_limit,
+            cat_array: cat_array
+          %}
+        {% endif %}
       {%- endif -%}
 
-    </nav>
-  </div>
-{% endif %}
+    {%- endif -%}
+
+  </nav>
+</div>

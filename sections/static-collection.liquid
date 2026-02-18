@@ -323,10 +323,16 @@
                     <div class="container--sidebar-feed wrap--container">
                         <div class="container--grid wrap--max push--center">
                             {%
-                                render 'product-grid-sidebar',
-                                menu_depth: section.settings.menu_depth_range,
-                                context: collection
+                            render 'product-grid-sidebar',
+                            menu_depth: section.settings.menu_depth_range,
+                            context: collection,
+                            filter_block: filter_block,
+                            filter_type: filter_type,
+                            filter_style: filter_block.settings.filter_style,
+                            filter_limit: filter_block.settings.filter_limit,
+                            show_filter_product_count: filter_block.settings.show_filter_product_count
                             %}
+
                 {% endif %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">

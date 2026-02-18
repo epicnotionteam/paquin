@@ -27,6 +27,47 @@
           cat_array: cat_array,
         %}
       {% endif %}
+
+      {%- comment -%}
+  Primary Collection metafield filter
+  Requirements:
+  - Metafield: custom.primary_collection
+  - Added as a storefront filter in Shopify Search & Discovery
+{%- endcomment -%}
+
+{%- assign primary_collection_filter = nil -%}
+
+{%- for f in collection.filters -%}
+  {%- if f.param_name contains 'filter.p.m.custom.primary_collection' -%}
+    {%- assign primary_collection_filter = f -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if primary_collection_filter != nil -%}
+  <details class="filter-group" open>
+    <summary class="filter-group__title">
+      {{ primary_collection_filter.label }}
+    </summary>
+
+    <div class="filter-group__content">
+      {%- for v in primary_collection_filter.values -%}
+        <label class="filter-item">
+          <input
+            type="checkbox"
+            name="{{ v.param_name }}"
+            value="{{ v.value }}"
+            {% if v.active %}checked{% endif %}
+            {% if v.count == 0 and v.active == false %}disabled{% endif %}
+          >
+          <span class="filter-item__label">{{ v.label }}</span>
+          <span class="filter-item__count">({{ v.count }})</span>
+        </label>
+      {%- endfor -%}
+    </div>
+  </details>
+{%- endif -%}
+
     </nav>
   </div>
 {% endif %}

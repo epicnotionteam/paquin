@@ -15240,6 +15240,7 @@ rgb(255, 255, 255)
 .collection-filters__filter-range-label {
   left: 1.625rem;
   margin-top: -3rem;
+  color: #000000
 }
 
 .collection-filters__filter-range-currency {

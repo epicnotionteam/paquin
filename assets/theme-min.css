@@ -22421,16 +22421,15 @@ rgb(255, 255, 255)
 
 
 
-/* Price filter: titles above inputs, no overlap */
 .filter-group__content--price {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 
 .filter-price-field__title {
   display: block;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
   font-size: 14px;
   line-height: 1.2;
 }
@@ -22441,11 +22440,4 @@ rgb(255, 255, 255)
   line-height: 44px;
   padding: 0 12px;
   box-sizing: border-box;
-}
-
-/* Stack on small screens */
-@media (max-width: 480px) {
-  .filter-group__content--price {
-    grid-template-columns: 1fr;
-  }
 }

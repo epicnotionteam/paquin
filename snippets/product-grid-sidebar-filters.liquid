@@ -37,24 +37,26 @@
           {%- if filter.type == 'price_range' -%}
             <details class="filter-group" {% if filter.min_value.value or filter.max_value.value %}open{% endif %}>
               <summary class="filter-group__title">{{ filter.label }}</summary>
-              <p>From</p>
-              <div class="filter-group__content">
-                <label class="filter-item">
-                  <span class="filter-item__label">Min</span>
+
+              <div class="filter-group__content filter-group__content--price">
+                <div class="filter-price-field">
+                  <div class="filter-price-field__title">From</div>
                   <input
+                    class="filter-price-field__input"
                     name="{{ filter.min_value.param_name }}"
                     type="number"
                     inputmode="numeric"
                     {% if filter.min_value.value != blank %}
-                       value="{{ filter.min_value.value }}"
+                      value="{{ filter.min_value.value }}"
                     {% endif %}
                     autocomplete="off"
                   >
-                </label>
-                <p>To</p>
-                <label class="filter-item">
-                  <span class="filter-item__label">Max</span>
+                </div>
+
+                <div class="filter-price-field">
+                  <div class="filter-price-field__title">To</div>
                   <input
+                    class="filter-price-field__input"
                     name="{{ filter.max_value.param_name }}"
                     type="number"
                     inputmode="numeric"
@@ -63,7 +65,7 @@
                     {% endif %}
                     autocomplete="off"
                   >
-                </label>
+                </div>
               </div>
             </details>
 

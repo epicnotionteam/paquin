@@ -37,7 +37,7 @@
           {%- if filter.type == 'price_range' -%}
             <details class="filter-group" {% if filter.min_value.value or filter.max_value.value %}open{% endif %}>
               <summary class="filter-group__title">{{ filter.label }}</summary>
-
+              <p>From</p>
               <div class="filter-group__content">
                 <label class="filter-item">
                   <span class="filter-item__label">Min</span>
@@ -51,7 +51,7 @@
                     autocomplete="off"
                   >
                 </label>
-
+                <p>To</p>
                 <label class="filter-item">
                   <span class="filter-item__label">Max</span>
                   <input

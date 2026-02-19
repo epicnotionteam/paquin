@@ -849,7 +849,7 @@
 .no-js .form-field-input:not(.form-field-textarea) + .recipient-form__error-message + .form-field-title, .form-field-input:not(.form-field-textarea):focus + .form-field-title,
 .form-field-input:not(.form-field-textarea):focus + .recipient-form__error-message + .form-field-title, .form-field-input:not(.form-field-textarea).form-field-filled + .form-field-title,
 .form-field-input:not(.form-field-textarea).form-field-filled + .recipient-form__error-message + .form-field-title {
-  top: 20%;
+
 }
 
 .form-field-title,

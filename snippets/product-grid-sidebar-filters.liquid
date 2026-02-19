@@ -43,9 +43,11 @@
                   <span class="filter-item__label">Min</span>
                   <input
                     name="{{ filter.min_value.param_name }}"
-                    value="{{ filter.min_value.value }}"
                     type="number"
                     inputmode="numeric"
+                    {% if filter.min_value.value != blank %}
+                       value="{{ filter.min_value.value }}"
+                    {% endif %}
                     placeholder="0"
                   >
                 </label>
@@ -54,9 +56,11 @@
                   <span class="filter-item__label">Max</span>
                   <input
                     name="{{ filter.max_value.param_name }}"
-                    value="{{ filter.max_value.value }}"
                     type="number"
                     inputmode="numeric"
+                    {% if filter.max_value.value != blank %}
+                      value="{{ filter.max_value.value }}"
+                    {% endif %}
                     placeholder="{{ filter.range_max }}"
                   >
                 </label>

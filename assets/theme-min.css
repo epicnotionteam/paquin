@@ -15239,6 +15239,7 @@ rgb(255, 255, 255)
 
 .collection-filters__filter-range-label {
   left: 1.625rem;
+  top: 1.625rem;
 }
 
 .collection-filters__filter-range-currency {
@@ -22416,10 +22417,3 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right ol{
   padding-left: 1.25rem !important; /* optional; adjust/remove if not needed */
 }
-
-
-
-
-
-.filter-price-field { display: flex; flex-direction: column; gap: 6px; }
-.price-field-title { margin: 0; font-size: 14px; line-height: 1.2; }

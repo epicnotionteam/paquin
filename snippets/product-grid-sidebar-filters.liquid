@@ -35,34 +35,34 @@
 
         {%- for filter in collection.filters -%}
           {%- if filter.type == 'price_range' -%}
-            <details class="filter-group" {% if filter.min_value.value or filter.max_value.value %}open{% endif %}>
+            <details class="filter-group filter-group--price" {% if filter.min_value.value or filter.max_value.value %}open{% endif %}>
               <summary class="filter-group__title">{{ filter.label }}</summary>
 
               <div class="filter-group__content filter-group__content--price">
                 <div class="filter-price-field">
-                  <div class="filter-price-field__title">From</div>
+                  <label class="filter-price-field__title" for="FilterPriceFrom">From</label>
                   <input
                     class="filter-price-field__input"
+                    id="FilterPriceFrom"
                     name="{{ filter.min_value.param_name }}"
                     type="number"
                     inputmode="numeric"
-                    {% if filter.min_value.value != blank %}
-                      value="{{ filter.min_value.value }}"
-                    {% endif %}
+                    placeholder=""
+                    value=""
                     autocomplete="off"
                   >
                 </div>
 
                 <div class="filter-price-field">
-                  <div class="filter-price-field__title">To</div>
+                  <label class="filter-price-field__title" for="FilterPriceTo">To</label>
                   <input
                     class="filter-price-field__input"
+                    id="FilterPriceTo"
                     name="{{ filter.max_value.param_name }}"
                     type="number"
                     inputmode="numeric"
-                    {% if filter.max_value.value != blank %}
-                      value="{{ filter.max_value.value }}"
-                    {% endif %}
+                    placeholder=""
+                    value=""
                     autocomplete="off"
                   >
                 </div>

@@ -220,15 +220,20 @@
       
       {% if product_count > 0 %}
         <h2 class="visually-hidden">{{ 'general.accessibility.search_products' | t }}</h2>
-        <div class="productgrid--items products-per-row-{{- section.settings.products_per_row -}}">
+        {% assign products_per_row = section.settings.products_per_row %}
+
+        <div class="productgrid--items products-per-row-{{- products_per_row -}}" data-productgrid-items>
           {% for item in search.results %}
             {% if item.object_type != 'product' %}{% continue %}{% endif %}
-              {%
-                render 'product-grid-item',
-                product: item,
-              %}
+
+            {% render 'product-grid-item',
+              product: item,
+              context: 'search',
+              index: forloop.index,
+              products_per_row: products_per_row
+            %}
           {% endfor %}
-          </div>
+        </div>
         {% else %}
           <div class="productgrid--no-results">
             {% assign title = 'search.general.no_search_performed' | t %}

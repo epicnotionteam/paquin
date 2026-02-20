@@ -58,6 +58,7 @@
   {% assign product_link = product.url | within: collection %}
   {% assign product_description = product.description | strip_html %}
   {% assign product_description_size = product.description | strip_html | size %}
+  {% assign show_actions = show_actions | default: false %}
   {% if recently_viewed == true %}
     {%- capture recently_viewed_header -%}
     <div class="product-recently-viewed-card-time" data-product-handle="{{product.handle}}">

@@ -509,8 +509,7 @@
       </div>
 
       {% unless recently_viewed or countdown_timer %}
-        
-        {% if enable_quickshop or atc_button %}
+        {% if show_actions or enable_quickshop or atc_button %}
           {% comment %}
             Default button appearance and text
           {% endcomment %}

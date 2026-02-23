@@ -28,11 +28,12 @@
     {% if item.object_type != results_type %}
       {% continue %}
     {% endif %}
-    <li>
-      <a href="{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
+                                        {% render 'product-grid-item',
+                                            product: product,
+                                            context: 'collection',
+                                            index: forloop.index,
+                                            products_per_row: products_per_row
+                                        %}
   {% endfor %}
   </ul>
 </div>

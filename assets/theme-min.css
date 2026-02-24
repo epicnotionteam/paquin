@@ -22425,46 +22425,38 @@ rgb(255, 255, 255)
 
 
 
-/* SEARCH RESULTS ONLY: 4-up grid that won't collapse on hover */
+/* SEARCH RESULTS ONLY: force 4/2/1 per row without breaking theme hover/JS */
 .template-search .productgrid--items.products-per-row-4{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+  display:flex !important;
+  flex-wrap:wrap !important;
   gap:1rem;
-  align-items:stretch;
 }
 
-/* Reset theme "per-row" item sizing rules so grid controls layout */
+/* Ensure items don't use theme float/width rules */
 .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
   float:none !important;
   width:auto !important;
-  max-width:none !important;
   margin:0 !important;
+  box-sizing:border-box;
+  flex:0 0 calc((100% - 3rem)/4); /* 4 items, 3 gaps */
+  max-width:calc((100% - 3rem)/4);
 }
 
-/* Make the card fill the grid cell consistently */
-.template-search .productgrid--items.products-per-row-4 .productitem,
-.template-search .productgrid--items.products-per-row-4 .productitem__container{
-  height:100%;
-}
-
-/* Responsive columns */
 @media (max-width:1022px){
-  .template-search .productgrid--items.products-per-row-4{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+  .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
+    flex-basis:calc((100% - 1rem)/2); /* 2 items, 1 gap */
+    max-width:calc((100% - 1rem)/2);
   }
 }
 
 @media (max-width:600px){
-  .template-search .productgrid--items.products-per-row-4{
-    grid-template-columns:1fr;
-  }
-  .template-search .productgrid--item{
+  .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
+    flex-basis:100%;
+    max-width:100%;
     min-height:250px;
   }
 }
 
 @media (max-width:1250px){
-  .template-search .productgrid--item{
-    min-height:400px;
-  }
+  .template-search .productgrid--item{min-height:400px;}
 }

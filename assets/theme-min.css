@@ -22512,7 +22512,6 @@ rgb(255, 255, 255)
   /* make sure the actions block isn't display:none */
   .template-search .productitem--actions{
     display:block !important;
-    margin: 0px;
   }
   /* if it's only hidden in the closed animation state */
   .template-search .productitem[data-animation-state="closed"] .productitem--actions{

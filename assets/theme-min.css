@@ -22602,3 +22602,10 @@ rgb(255, 255, 255)
   transform:translateY(0);
   transition:opacity .15s ease, transform .15s ease;
 }
+
+/* SEARCH ONLY: defeat any display:none and ensure it can sit above content */
+.template-search .productgrid--item:hover .container--actions{
+  display:flex !important; /* or block if you prefer */
+  z-index:10;
+  position:relative;
+}

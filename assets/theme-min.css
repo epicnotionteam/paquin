@@ -22421,16 +22421,36 @@ rgb(255, 255, 255)
 }
 
 
-/* Search results only */
+
+
+
+
+/* SEARCH RESULTS ONLY: 4-up grid that won't collapse on hover */
 .template-search .productgrid--items.products-per-row-4{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:1rem;
+  align-items:stretch;
 }
 
+/* Reset theme "per-row" item sizing rules so grid controls layout */
+.template-search .productgrid--items.products-per-row-4 > .productgrid--item{
+  float:none !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+
+/* Make the card fill the grid cell consistently */
+.template-search .productgrid--items.products-per-row-4 .productitem,
+.template-search .productgrid--items.products-per-row-4 .productitem__container{
+  height:100%;
+}
+
+/* Responsive columns */
 @media (max-width:1022px){
   .template-search .productgrid--items.products-per-row-4{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 

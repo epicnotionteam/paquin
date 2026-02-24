@@ -22460,19 +22460,40 @@ rgb(255, 255, 255)
   }
 }
 
-/* SEARCH ONLY: show action buttons on hover/focus */
+/* SEARCH ONLY: make action buttons appear on hover */
 .template-search .container--actions{
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
+  transition:opacity .15s ease, visibility .15s ease;
 }
+
+/* trigger on either wrapper hover OR productitem hover */
 .template-search .productgrid--item:hover .container--actions,
+.template-search .productitem:hover .container--actions,
 .template-search .productgrid--item:focus-within .container--actions{
   opacity:1;
   visibility:visible;
   pointer-events:auto;
-  transform:translateY(0);
-  transition:opacity .15s ease, transform .15s ease;
+}
+
+/* ensure it can sit above the image and isn't clipped */
+.template-search .productitem__container{ position:relative; }
+.template-search .productitem__image-container{ position:relative; z-index:1; }
+.template-search .productitem--actions{ position:relative; z-index:3; overflow:visible !important; }
+.template-search .container--actions{ position:relative; z-index:4; }
+
+/* most common culprit: a parent has overflow hidden */
+.template-search .productitem,
+.template-search .productitem__container{
+  overflow:visible !important;
+}
+
+/* prevent desktop animation system from breaking layout on search */
+@media (min-width:1024px){
+  .template-search .productitem[data-animation],
+  .template-search .productitem[data-animation-state]{
+    position:relative !important;
+    height:auto !important;
+  }
 }

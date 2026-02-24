@@ -24,9 +24,7 @@
         "filter-1"
       ],
       "custom_css": [
-        ".productgrid--items.products-per-row-4 {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;}",
-        "@media screen and (max-width: 1250px) {.productgrid--item {min-height: 400px; }}",
-        "@media screen and (max-width: 600px) {.productgrid--item {min-height: 250px; }}"
+".productgrid--items.products-per-row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}","@media(max-width:1022px){.productgrid--items.products-per-row-4{grid-template-columns:repeat(2,1fr)}}","@media(max-width:600px){.productgrid--items.products-per-row-4{grid-template-columns:1fr}.productgrid--item{min-height:250px}}","@media(max-width:1250px){.productgrid--item{min-height:400px}}"
       ],
       "settings": {
         "results_per_page_range": 24,

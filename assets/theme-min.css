@@ -22507,27 +22507,34 @@ rgb(255, 255, 255)
   }
 }
 
-/* SEARCH ONLY: ensure actions block exists (theme may set display:none) */
-.template-search .productitem--actions{
-  display:block !important; /* if you prefer grid: use display:grid */
-}
+/* SEARCH ONLY (desktop): show action buttons on hover */
+@media screen and (min-width:1024px){
+  /* make sure the actions block isn't display:none */
+  .template-search .productitem--actions{
+    display:block !important;
+  }
+  /* if it's only hidden in the closed animation state */
+  .template-search .productitem[data-animation-state="closed"] .productitem--actions{
+    display:block !important;
+  }
 
-/* hide buttons until hover */
-.template-search .productitem--actions .container--actions{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
-}
+  /* hide the button container by default */
+  .template-search .productitem--actions .container--actions{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(6px);
+    transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
+  }
 
-/* show on hover/focus */
-.template-search .productgrid--item:hover .productitem--actions .container--actions,
-.template-search .productgrid--item:focus-within .productitem--actions .container--actions,
-.template-search .productitem:hover .productitem--actions .container--actions{
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-  transform:translateY(0);
-  transition:opacity .15s ease, transform .15s ease;
+  /* reveal on hover/focus */
+  .template-search .productgrid--item:hover .productitem--actions .container--actions,
+  .template-search .productgrid--item:focus-within .productitem--actions .container--actions,
+  .template-search .productitem:hover .productitem--actions .container--actions{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0);
+    transition:opacity .15s ease, transform .15s ease;
+  }
 }

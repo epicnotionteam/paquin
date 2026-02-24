@@ -22460,3 +22460,23 @@ rgb(255, 255, 255)
 @media (max-width:1250px){
   .template-search .productgrid--item{min-height:400px;}
 }
+
+/* SEARCH ONLY: prevent product card "open" animation from collapsing grid */
+@media screen and (min-width:1024px){
+  .template-search .productitem[data-animation],
+  .template-search .productitem[data-animation-state=open]{
+    position:relative !important;
+  }
+
+  .template-search .productitem[data-animation="closed=>open"],
+  .template-search .productitem[data-animation-state=open],
+  .template-search .productitem[data-animation="open=>closed"]{
+    height:auto !important;
+  }
+
+  /* optional: nuke the vars so they can't force 0px */
+  .template-search .productitem{
+    --open-height:auto;
+    --base-height:auto;
+  }
+}

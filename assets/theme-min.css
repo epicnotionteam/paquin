@@ -22558,3 +22558,9 @@ rgb(255, 255, 255)
   flex:1 1 auto;
   white-space:nowrap;
 }
+
+/* SEARCH ONLY: defeat any display:none applied in closed state */
+.template-search .productitem[data-animation-state="closed"] .productitem--actions,
+.template-search .productitem[data-animation-state="closed"] .container--actions{
+  display:block !important;
+}

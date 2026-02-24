@@ -39,23 +39,8 @@
         "content": "<p>Paquin Engineered Products, a division of The Paquin Company, offers high-performance products manufactured by our trusted partners for safe and reliable operation.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/91f8b1e_Distribution_logos_v5.webp",
+        "image": "shopify://shop_images/699dc5684b98de09bbb26d94_PEP_image.webp",
         "show_jump_links": false
-      }
-    },
-    "content_blocks_yik4dc": {
-      "type": "content-blocks",
-      "custom_css": [
-        ".container--feed {display: none;}",
-        ".section--content-blocks.theme--alt.wrap--container {padding-bottom: 1rem;}"
-      ],
-      "settings": {
-        "heading_small": "Paquin Engineered Products",
-        "heading_large": "Products for Precision",
-        "heading_size": "h1",
-        "show_numbering": false,
-        "columns": "3",
-        "theme": "alt"
       }
     },
     "feed_collection_iMT3iz": {
@@ -75,6 +60,21 @@
       "settings": {
         "heading_small": "Engineered Products",
         "theme": "base"
+      }
+    },
+    "content_blocks_yik4dc": {
+      "type": "content-blocks",
+      "custom_css": [
+        ".container--feed {display: none;}",
+        ".section--content-blocks.theme--alt.wrap--container {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "heading_small": "Paquin Engineered Products",
+        "heading_large": "Products for Precision",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "3",
+        "theme": "alt"
       }
     },
     "dynamic_html_WtRP49": {

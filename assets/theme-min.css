@@ -22419,3 +22419,32 @@ rgb(255, 255, 255)
 #collection-hero-flex .ch-right ol{
   padding-left: 1.25rem !important; /* optional; adjust/remove if not needed */
 }
+
+
+/* Search results only */
+.template-search .productgrid--items.products-per-row-4{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+}
+
+@media (max-width:1022px){
+  .template-search .productgrid--items.products-per-row-4{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px){
+  .template-search .productgrid--items.products-per-row-4{
+    grid-template-columns:1fr;
+  }
+  .template-search .productgrid--item{
+    min-height:250px;
+  }
+}
+
+@media (max-width:1250px){
+  .template-search .productgrid--item{
+    min-height:400px;
+  }
+}

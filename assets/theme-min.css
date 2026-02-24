@@ -22564,3 +22564,41 @@ rgb(255, 255, 255)
 .template-search .productitem[data-animation-state="closed"] .container--actions{
   display:block !important;
 }
+
+/* SEARCH ONLY: unhide actions container even when animation-state is "closed" */
+.template-search .productitem[data-animation-state="closed"] .productitem--actions{
+  display:block !important;
+  max-height:none !important;
+  height:auto !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Keep the card in normal flow on desktop so height vars can't collapse it */
+@media screen and (min-width:1024px){
+  .template-search .productitem[data-animation],
+  .template-search .productitem[data-animation-state]{
+    position:relative !important;
+    height:auto !important;
+  }
+}
+
+/* Hide buttons by default */
+.template-search .container--actions{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(6px);
+  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
+}
+
+/* Show on hover/focus */
+.template-search .productgrid--item:hover .container--actions,
+.template-search .productgrid--item:focus-within .container--actions{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+  transition:opacity .15s ease, transform .15s ease;
+}

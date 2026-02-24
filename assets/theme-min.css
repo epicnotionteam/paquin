@@ -22510,3 +22510,51 @@ rgb(255, 255, 255)
   transform:translateY(0);
   transition:opacity .15s ease, transform .15s ease;
 }
+/* SEARCH ONLY: keep product cards in normal flow (disable open/close absolute animation) */
+@media screen and (min-width:1024px){
+  .template-search .productitem[data-animation],
+  .template-search .productitem[data-animation-state]{
+    position:relative !important;
+    height:auto !important;
+  }
+}
+
+/* SEARCH ONLY: hide actions until hover */
+.template-search .productitem--actions{
+  max-height:none !important;
+  overflow:visible !important;
+}
+
+.template-search .productitem--actions .container--actions{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(6px);
+  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
+}
+
+/* Show on hover/focus of the whole card */
+.template-search .productgrid--item:hover .productitem--actions .container--actions,
+.template-search .productgrid--item:focus-within .productitem--actions .container--actions{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+  transition:opacity .15s ease, transform .15s ease;
+}
+
+/* Optional: overlay buttons at bottom of the card */
+.template-search .productitem__container{ position:relative; }
+.template-search .productitem--actions .container--actions{
+  position:absolute;
+  left:.75rem;
+  right:.75rem;
+  bottom:.75rem;
+  z-index:5;
+  display:flex;
+  gap:.5rem;
+}
+.template-search .productitem--actions .container--actions a{
+  flex:1 1 auto;
+  white-space:nowrap;
+}

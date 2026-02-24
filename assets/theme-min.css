@@ -22425,61 +22425,34 @@ rgb(255, 255, 255)
 
 
 
-/* SEARCH RESULTS ONLY: force 4/2/1 per row without breaking theme hover/JS */
+/* SEARCH ONLY: 4/2/1 layout (flex, theme-safe) */
 .template-search .productgrid--items.products-per-row-4{
-  display:flex !important;
-  flex-wrap:wrap !important;
+  display:flex;
+  flex-wrap:wrap;
   gap:1rem;
 }
-
 .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
-  float:none !important;
-  width:auto !important;
-  margin:0 !important;
+  float:none;
+  margin:0;
   box-sizing:border-box;
-  flex:0 0 calc((100% - 3rem)/4); /* 4 items, 3 gaps */
+  flex:0 0 calc((100% - 3rem)/4);
   max-width:calc((100% - 3rem)/4);
 }
-
 @media (max-width:1022px){
   .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
-    flex-basis:calc((100% - 1rem)/2); /* 2 items, 1 gap */
+    flex-basis:calc((100% - 1rem)/2);
     max-width:calc((100% - 1rem)/2);
   }
 }
-
 @media (max-width:600px){
   .template-search .productgrid--items.products-per-row-4 > .productgrid--item{
     flex-basis:100%;
     max-width:100%;
-    min-height:250px;
   }
 }
 
-@media (max-width:1250px){
-  .template-search .productgrid--item{min-height:400px;}
-}
-
-/* prevent product card "open" animation from collapsing grid */
-@media screen and (min-width:1024px){
-  .template-search .productitem[data-animation],
-  .template-search .productitem[data-animation-state=open]{
-    position:relative !important;
-  }
-
-  .template-search .productitem[data-animation="closed=>open"],
-  .template-search .productitem[data-animation-state=open],
-  .template-search .productitem[data-animation="open=>closed"]{
-    height:auto !important;
-  }
-
-  .template-search .productitem{
-    --open-height:auto;
-    --base-height:auto;
-  }
-}
-
-@media screen and (min-width:1024px){
+/* SEARCH ONLY: disable the desktop open/close absolute-height animation */
+@media (min-width:1024px){
   .template-search .productitem[data-animation],
   .template-search .productitem[data-animation-state]{
     position:relative !important;
@@ -22487,104 +22460,7 @@ rgb(255, 255, 255)
   }
 }
 
-/* SEARCH ONLY: hover actions */
-.template-search .productitem--actions{
-  position:relative;
-}
-
-/* hide only the buttons container by default */
-.template-search .productitem--actions .container--actions{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
-}
-
-/* reveal on hover of the card (matches theme behavior best) */
-.template-search .productgrid--item:hover .productitem--actions .container--actions,
-.template-search .productgrid--item:focus-within .productitem--actions .container--actions{
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-  transform:translateY(0);
-  transition:opacity .15s ease, transform .15s ease;
-}
-/* SEARCH ONLY: keep product cards in normal flow (disable open/close absolute animation) */
-@media screen and (min-width:1024px){
-  .template-search .productitem[data-animation],
-  .template-search .productitem[data-animation-state]{
-    position:relative !important;
-    height:auto !important;
-  }
-}
-
-/* SEARCH ONLY: hide actions until hover */
-.template-search .productitem--actions{
-  max-height:none !important;
-  overflow:visible !important;
-}
-
-.template-search .productitem--actions .container--actions{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
-}
-
-/* Show on hover/focus of the whole card */
-.template-search .productgrid--item:hover .productitem--actions .container--actions,
-.template-search .productgrid--item:focus-within .productitem--actions .container--actions{
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-  transform:translateY(0);
-  transition:opacity .15s ease, transform .15s ease;
-}
-
-/* Optional: overlay buttons at bottom of the card */
-.template-search .productitem__container{ position:relative; }
-.template-search .productitem--actions .container--actions{
-  position:absolute;
-  left:.75rem;
-  right:.75rem;
-  bottom:.75rem;
-  z-index:5;
-  display:flex;
-  gap:.5rem;
-}
-.template-search .productitem--actions .container--actions a{
-  flex:1 1 auto;
-  white-space:nowrap;
-}
-
-/* SEARCH ONLY: defeat any display:none applied in closed state */
-.template-search .productitem[data-animation-state="closed"] .productitem--actions,
-.template-search .productitem[data-animation-state="closed"] .container--actions{
-  display:block !important;
-}
-
-/* SEARCH ONLY: unhide actions container even when animation-state is "closed" */
-.template-search .productitem[data-animation-state="closed"] .productitem--actions{
-  display:block !important;
-  max-height:none !important;
-  height:auto !important;
-  overflow:visible !important;
-  opacity:1 !important;
-  visibility:visible !important;
-}
-
-/* Keep the card in normal flow on desktop so height vars can't collapse it */
-@media screen and (min-width:1024px){
-  .template-search .productitem[data-animation],
-  .template-search .productitem[data-animation-state]{
-    position:relative !important;
-    height:auto !important;
-  }
-}
-
-/* Hide buttons by default */
+/* SEARCH ONLY: show action buttons on hover/focus */
 .template-search .container--actions{
   opacity:0;
   visibility:hidden;
@@ -22592,8 +22468,6 @@ rgb(255, 255, 255)
   transform:translateY(6px);
   transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
 }
-
-/* Show on hover/focus */
 .template-search .productgrid--item:hover .container--actions,
 .template-search .productgrid--item:focus-within .container--actions{
   opacity:1;
@@ -22601,11 +22475,4 @@ rgb(255, 255, 255)
   pointer-events:auto;
   transform:translateY(0);
   transition:opacity .15s ease, transform .15s ease;
-}
-
-/* SEARCH ONLY: defeat any display:none and ensure it can sit above content */
-.template-search .productgrid--item:hover .container--actions{
-  display:flex !important; /* or block if you prefer */
-  z-index:10;
-  position:relative;
 }

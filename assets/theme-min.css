@@ -22479,59 +22479,34 @@ rgb(255, 255, 255)
   }
 }
 
-/* SEARCH ONLY: show container action buttons on hover */
-.template-search .productitem__container{
+@media screen and (min-width:1024px){
+  .template-search .productitem[data-animation],
+  .template-search .productitem[data-animation-state]{
+    position:relative !important;
+    height:auto !important;
+  }
+}
+
+/* SEARCH ONLY: hover actions */
+.template-search .productitem--actions{
   position:relative;
 }
 
-/* hide by default */
-.template-search .productitem__container .container--actions{
+/* hide only the buttons container by default */
+.template-search .productitem--actions .container--actions{
   opacity:0;
   visibility:hidden;
   pointer-events:none;
   transform:translateY(6px);
-  transition:opacity .15s ease,transform .15s ease,visibility 0s linear .15s;
+  transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;
 }
 
-/* show on hover + keyboard focus within */
-.template-search .productgrid--item:hover .container--actions,
-.template-search .productgrid--item:focus-within .container--actions{
+/* reveal on hover of the card (matches theme behavior best) */
+.template-search .productgrid--item:hover .productitem--actions .container--actions,
+.template-search .productgrid--item:focus-within .productitem--actions .container--actions{
   opacity:1;
   visibility:visible;
   pointer-events:auto;
   transform:translateY(0);
-  transition:opacity .15s ease,transform .15s ease;
-}
-
-/* place as an overlay near the bottom of the image */
-.template-search .productitem__container .productitem__image-container{
-  position:relative;
-}
-
-.template-search .productitem__container .container--actions{
-  position:absolute;
-  left:.75rem;
-  right:.75rem;
-  bottom:.75rem;
-  display:flex;
-  gap:.5rem;
-  align-items:stretch;
-  justify-content:space-between;
-  z-index:5;
-}
-
-/* make buttons share space nicely */
-.template-search .productitem__container .container--actions a{
-  flex:1 1 auto;
-  white-space:nowrap;
-}
-
-/* optional: if you want them centered on very small screens */
-@media (max-width:600px){
-  .template-search .productitem__container .container--actions{
-    left:.5rem;
-    right:.5rem;
-    bottom:.5rem;
-    flex-direction:column;
-  }
+  transition:opacity .15s ease, transform .15s ease;
 }

@@ -22541,7 +22541,7 @@ rgb(255, 255, 255)
     .template-search .productgrid--item{
     transition: box-shadow .15s ease, transform .15s ease;
   }
-  
+
   .template-search .productgrid--item:hover{
     box-shadow: 0 8px 24px rgba(0,0,0,.15);
   }
@@ -22549,4 +22549,9 @@ rgb(255, 255, 255)
 
 .template-search .productitem--actions{
   margin:0 !important;
+}
+
+.template-search .productgrid--item{
+  padding:12px;
+  box-sizing:border-box;
 }

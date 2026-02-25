@@ -22548,7 +22548,8 @@ rgb(255, 255, 255)
 }
 
 .template-search .productitem--actions{
-  margin: 0 !important;
+  margin:0 !important;
+  margin-top:auto;
 }
 
 .template-search .productgrid--item{
@@ -22556,14 +22557,9 @@ rgb(255, 255, 255)
   box-sizing:border-box;
 }
 
-/* SEARCH ONLY: keep actions at bottom of card */
+
 .template-search .productitem__container{
   display:flex;
   flex-direction:column;
   height:100%;
-}
-
-/* push actions to bottom */
-.template-search .productitem--actions{
-  margin-top:auto;
 }

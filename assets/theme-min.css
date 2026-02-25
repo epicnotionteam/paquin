@@ -22548,15 +22548,13 @@ rgb(255, 255, 255)
 }
 
 .template-search .productitem--actions{
-  margin:0 !important;
-  margin-top:auto;
+  margin: auto 0 0 0 !important;
 }
 
 .template-search .productgrid--item{
   padding:12px !important;
   box-sizing:border-box;
 }
-
 
 .template-search .productitem__container{
   display:flex;

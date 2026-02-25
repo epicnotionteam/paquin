@@ -22537,6 +22537,14 @@ rgb(255, 255, 255)
     transform:translateY(0);
     transition:opacity .15s ease, transform .15s ease;
   }
+
+    .template-search .productgrid--item{
+    transition: box-shadow .15s ease, transform .15s ease;
+  }
+  
+  .template-search .productgrid--item:hover{
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  }
 }
 
 .template-search .productitem--actions{

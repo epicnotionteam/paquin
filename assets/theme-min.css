@@ -22548,7 +22548,7 @@ rgb(255, 255, 255)
 }
 
 .template-search .productitem--actions{
-  margin: auto 0 0 0 !important;
+  margin: auto 0 -12 0 !important;
 }
 
 .template-search .productgrid--item{

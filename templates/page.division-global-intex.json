@@ -1,15 +1,16 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "order": [
     "division-sensors-hero",
+    "feed_collection_k7XLyH",
     "division-sensors-about"
   ],
   "sections": {
@@ -18,11 +19,30 @@
       "settings": {
         "heading": "Rugged Connectivity Solutions for Extreme Conditions",
         "heading_size": "h1",
-        "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable harnesses and electrical connectors, tailored for the most challenging industrial environments.<\/p>",
+        "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable harnesses and electrical connectors, tailored for the most challenging industrial environments.</p>",
         "link_text": "Contact our team",
-        "link_url": "shopify:\/\/pages\/contact",
-        "image": "shopify:\/\/shop_images\/asset__intex--large.jpg",
+        "link_url": "shopify://pages/contact",
+        "image": "shopify://shop_images/asset__intex--large.jpg",
         "show_jump_links": false
+      }
+    },
+    "feed_collection_k7XLyH": {
+      "type": "feed-collection",
+      "blocks": {
+        "collection_yKxH3H": {
+          "type": "collection",
+          "settings": {
+            "collection": "subsea-connectors"
+          }
+        }
+      },
+      "block_order": [
+        "collection_yKxH3H"
+      ],
+      "name": "Feed [Collection]",
+      "settings": {
+        "heading_small": "By Product Type",
+        "theme": "base"
       }
     },
     "division-sensors-about": {
@@ -32,8 +52,8 @@
         "heading_large": "Leading the Way in Ruggedized Connectivity and Power Solutions",
         "heading_size": "h1",
         "subheading": "Our Capabilities",
-        "content": "<p>Global Intex is at home with the design and construction of heavy-duty ruggedized cable harnesses, low and high-voltage power connectivity solutions and more.  <\/p><p>After years of experience in the mining and AG sectors, Global Intex is equipped with a specialized engineering staff, dedicated production team and comprehensive manufacturing center. <\/p><p>The strategic investments from The Paquin Company help this production division thrive by delivering ultra-high-quality products that withstand some of the harshest environments known to man. <\/p><p>We encourage our customers to challenge us with custom build requirements — <a href=\"\/pages\/contact\" title=\"Contact\">contact us<\/a> today to get started.<\/p>",
-        "image": "shopify:\/\/shop_images\/asset__global-intex--small.jpg",
+        "content": "<p>Global Intex is at home with the design and construction of heavy-duty ruggedized cable harnesses, low and high-voltage power connectivity solutions and more.  </p><p>After years of experience in the mining and AG sectors, Global Intex is equipped with a specialized engineering staff, dedicated production team and comprehensive manufacturing center. </p><p>The strategic investments from The Paquin Company help this production division thrive by delivering ultra-high-quality products that withstand some of the harshest environments known to man. </p><p>We encourage our customers to challenge us with custom build requirements — <a href=\"/pages/contact\" title=\"Contact\">contact us</a> today to get started.</p>",
+        "image": "shopify://shop_images/asset__global-intex--small.jpg",
         "theme": "base"
       }
     }

@@ -39,6 +39,7 @@
       "block_order": [
         "collection_yKxH3H"
       ],
+      "disabled": true,
       "name": "Feed [Collection]",
       "settings": {
         "heading_small": "By Product Type",

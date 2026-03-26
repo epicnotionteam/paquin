@@ -11,18 +11,21 @@
   "order": [
     "division-sensors-hero",
     "feed_collection_k7XLyH",
-    "division-sensors-about"
+    "division-sensors-about",
+    "content_blocks_QnK8qK",
+    "hero_inline_73QfbR",
+    "content_offset_RhNCKb"
   ],
   "sections": {
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Rugged Connectivity Solutions for Extreme Conditions",
+        "heading": "Heavy-Duty Explosion Proof Connectors, Harnesses & Submersible Cabling for the World's Toughest Environments",
         "heading_size": "h1",
         "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable assemblies and electrical connectors, tailored for the most challenging industrial environments.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/asset__intex--large.jpg",
+        "image": "shopify://shop_images/Global_Intex_Hero_Image.png",
         "show_jump_links": false
       }
     },
@@ -55,6 +58,90 @@
         "subheading": "Our Capabilities",
         "content": "<p>Global Intex is at home with the design and construction of heavy-duty ruggedized cable assemblies, low and high-voltage power connectivity solutions and more.  </p><p>After years of experience in the mining and AG sectors, Global Intex is equipped with a specialized engineering staff, dedicated production team and comprehensive manufacturing center. </p><p>The strategic investments from The Paquin Company help this production division thrive by delivering ultra-high-quality products that withstand some of the harshest environments known to man. </p><p>We encourage our customers to challenge us with custom build requirements — <a href=\"/pages/contact\" title=\"Contact\">contact us</a> today to get started.</p>",
         "image": "shopify://shop_images/asset__global-intex--small.jpg",
+        "theme": "base"
+      }
+    },
+    "content_blocks_QnK8qK": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_eqwc7Y": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Explosion Proof Power Connectors & Cable Assemblies",
+            "content": "<p>Global Intex designs and manufactures heavy-duty explosion proof power connectors and ruggedized cable assemblies built for environments where ignition risk is a constant operational reality. Carrying country-specific Ex approvals including IECEx, ATEX, and FM certifications, these connectors are engineered with exotic materials and customized overmolding to deliver reliable power connectivity in underground mining, onshore and offshore gas and oil, and other hazardous location applications.</p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_Vmn9Re": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Wire Harness Systems for Extreme Industrial Applications",
+            "content": "<p>From complex multi-conductor harness builds to proprietary OEM configurations, Global Intex engineers and manufactures wire harness systems designed to survive vibration, abrasion, chemical exposure, and extreme temperatures in the field. Built around specialized rubber extrusion and customized overmolding processes, these harness systems are purpose-built for deployment in mining equipment, agricultural machinery, marine systems, and heavy industrial platforms. Global Intex also develops and delivers proprietary builds for contract manufacturers and OEMs with specific performance requirements.</p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_ccRynD": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Wet-Mate & Dry-Mate Submersible Cabling",
+            "content": "<p>Global Intex offers both wet-mate and dry-mate submersible cabling solutions engineered for reliable power and signal transmission in shallow and deep-water applications across fresh water and salt water environments. Wet-mate configurations allow safe connection and disconnection while submerged, making them ideal for ROV systems, underwater instrumentation, and subsea infrastructure where surface recovery is impractical. Dry-mate submersible cabling is designed for connections made above the waterline and then deployed, offering robust sealing and long-term performance across a wide range of underwater operating depths (up to 8700 PSI) and conditions.</p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        },
+        "content_block_9iwXiw": {
+          "type": "content-block",
+          "settings": {
+            "image_type": "logo",
+            "heading": "Custom & Proprietary Builds for OEMs and Contract Manufacturers",
+            "content": "<p>Global Intex welcomes complex, custom connectivity challenges. With a specialized engineering staff and comprehensive in-house manufacturing center based in Mentor, Ohio, our team works directly with OEMs and contract manufacturers to develop proprietary connector and harness builds that meet precise performance, certification, and form-factor requirements. From material selection and tooling through production and quality verification, Global Intex functions as a true manufacturing partner with additional catalog offerings.</p>",
+            "link_text": "Link text",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_eqwc7Y",
+        "content_block_Vmn9Re",
+        "content_block_ccRynD",
+        "content_block_9iwXiw"
+      ],
+      "name": "Content [Blocks]",
+      "settings": {
+        "heading_small": "Heading",
+        "heading_large": "Core Product Capabilities",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "4",
+        "theme": "base"
+      }
+    },
+    "hero_inline_73QfbR": {
+      "type": "hero-inline",
+      "name": "Hero [Inline]",
+      "settings": {
+        "heading": "Industries Served",
+        "content": "<p><br/>Global Intex connectivity solutions are deployed across some of the most demanding industrial and environmental sectors in the world, including underground and surface mining, onshore and offshore gas and oil, marine and marine deep-sea, agricultural equipment, and subsea research and instrumentation. Each of these environments presents unique combinations of mechanical stress, chemical exposure, moisture, pressure, and temperature extremes — and Global Intex products are engineered specifically to meet those conditions head-on, not just survive them.<br/><br/></p>",
+        "cta_primary_text": "CTA text",
+        "cta_primary_url": "",
+        "cta_secondary_text": "CTA text",
+        "cta_secondary_url": ""
+      }
+    },
+    "content_offset_RhNCKb": {
+      "type": "content-offset",
+      "name": "Content [Offset]",
+      "settings": {
+        "heading_small": "Heading",
+        "heading_large": "Heading",
+        "heading_size": "h1",
+        "subheading": "Subheading",
+        "content": "<p>Content</p>",
         "theme": "base"
       }
     }

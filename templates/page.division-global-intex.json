@@ -20,12 +20,12 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Heavy-Duty Explosion Proof Connectors, Harnesses & Submersible Cabling for the World's Toughest Environments",
+        "heading": "Heavy-Duty Connectors, Assemblies, and Cable Harnesses for non and Submersible and Ex Proof for the World's Toughest Environments",
         "heading_size": "h1",
         "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable assemblies and electrical connectors, tailored for the most challenging industrial environments.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/Global_Intex_Hero_Image.png",
+        "image": "shopify://shop_images/69c5718e841867cc9a9a508b_Global_Intex_Hero_Image.webp",
         "show_jump_links": false
       }
     },
@@ -42,7 +42,6 @@
       "block_order": [
         "collection_yKxH3H"
       ],
-      "disabled": true,
       "name": "Feed [Collection]",
       "settings": {
         "heading_small": "By Product Type",
@@ -51,6 +50,7 @@
     },
     "division-sensors-about": {
       "type": "content-offset",
+      "disabled": true,
       "settings": {
         "heading_small": "Global Intex",
         "heading_large": "Leading the Way in Ruggedized Connectivity and Power Solutions",
@@ -68,7 +68,7 @@
           "type": "content-block",
           "settings": {
             "image_type": "logo",
-            "heading": "Explosion Proof Power Connectors & Cable Assemblies",
+            "heading": "Explosion Proof Capable Power Connectors & Cable Assemblies",
             "content": "<p>Global Intex designs and manufactures heavy-duty explosion proof power connectors and ruggedized cable assemblies built for environments where ignition risk is a constant operational reality. Carrying country-specific Ex approvals including IECEx, ATEX, and FM certifications, these connectors are engineered with exotic materials and customized overmolding to deliver reliable power connectivity in underground mining, onshore and offshore gas and oil, and other hazardous location applications.</p>",
             "link_text": "Link text",
             "link_url": ""
@@ -113,7 +113,7 @@
       ],
       "name": "Content [Blocks]",
       "settings": {
-        "heading_small": "Heading",
+        "heading_small": "Expertise",
         "heading_large": "Core Product Capabilities",
         "heading_size": "h1",
         "show_numbering": false,
@@ -126,11 +126,12 @@
       "name": "Hero [Inline]",
       "settings": {
         "heading": "Industries Served",
-        "content": "<p><br/>Global Intex connectivity solutions are deployed across some of the most demanding industrial and environmental sectors in the world, including underground and surface mining, onshore and offshore gas and oil, marine and marine deep-sea, agricultural equipment, and subsea research and instrumentation. Each of these environments presents unique combinations of mechanical stress, chemical exposure, moisture, pressure, and temperature extremes — and Global Intex products are engineered specifically to meet those conditions head-on, not just survive them.<br/><br/></p>",
-        "cta_primary_text": "CTA text",
-        "cta_primary_url": "",
+        "content": "<p>Global Intex connectivity solutions are deployed across some of the most demanding industrial and environmental sectors in the world, including underground and surface mining, onshore and offshore gas and oil, marine and marine deep-sea, agricultural equipment, and subsea research and instrumentation. Each of these environments presents unique combinations of mechanical stress, chemical exposure, moisture, pressure, and temperature extremes. Global Intex products are engineered specifically to meet those conditions head-on, not just survive them.</p>",
+        "cta_primary_text": "Contact Us",
+        "cta_primary_url": "shopify://pages/contact",
         "cta_secondary_text": "CTA text",
-        "cta_secondary_url": ""
+        "cta_secondary_url": "",
+        "image": "shopify://shop_images/69c56c56dc03e7d324175b86_Intex_Page_Industries.webp"
       }
     },
     "content_offset_RhNCKb": {
@@ -138,11 +139,11 @@
       "name": "Content [Offset]",
       "settings": {
         "heading_small": "Heading",
-        "heading_large": "Heading",
+        "heading_large": "Why Global Intex",
         "heading_size": "h1",
         "subheading": "Subheading",
-        "content": "<p>Content</p>",
-        "theme": "base"
+        "content": "<p>Global Intex was built on the premise that the harshest environments deserve the best-engineered connectivity, not adapted off-the-shelf components, but solutions designed from the ground up to over-achieve in conditions that would compromise standard products. Years of deep experience in the mining and agricultural sectors gives Global Intex the engineering foundation and field knowledge to expand into some of the world's most technically demanding connectivity applications, from explosion proof underground power delivery to deep-water submersible cabling in corrosive salt water environments.</p><p>As a division of The Paquin Company, Global Intex draws on the strategic resources, supplier relationships, and customer reach of a well-established industrial distribution and manufacturing organization while operating with the focused expertise and responsiveness of a specialty manufacturer. That combination means customers get globally certified, precision-built connectivity products with the application support and custom engineering capability to back them up.</p>",
+        "theme": "dark"
       }
     }
   }

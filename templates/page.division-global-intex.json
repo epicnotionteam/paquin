@@ -20,12 +20,12 @@
     "division-sensors-hero": {
       "type": "hero-internal",
       "settings": {
-        "heading": "Heavy Duty Connectivity and Cable Harnesses",
+        "heading": "Heavy-Duty Connectors, Cable Assemblies, and Harness for Extreme Industrial Environments",
         "heading_size": "h1",
-        "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable assemblies and electrical connectors, tailored for the most challenging industrial environments.</p>",
+        "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable assemblies, harness, and electrical connectors, for environments requiring ruggedized, explosion proof, and submersible options with global certifications.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/69c56c56dc03e7d324175b86_Intex_Page_Industries.webp",
+        "image": "shopify://shop_images/69c59b8608d6e2fb17a41344_intex_bg_2.webp",
         "show_jump_links": false
       }
     },
@@ -133,7 +133,7 @@
         "cta_primary_url": "shopify://pages/contact",
         "cta_secondary_text": "CTA text",
         "cta_secondary_url": "",
-        "image": "shopify://shop_images/69c56c56dc03e7d324175b86_Intex_Page_Industries.webp"
+        "image": "shopify://shop_images/69c59b8608d6e2fb17a41344_intex_bg_2.webp"
       }
     },
     "content_offset_RhNCKb": {
@@ -141,11 +141,12 @@
       "disabled": true,
       "name": "Content [Offset]",
       "settings": {
-        "heading_small": "Heading",
-        "heading_large": "Why Global Intex",
+        "heading_small": "Premier Manufacturer and Supplier",
+        "heading_large": "How Global Intex Stands Out",
         "heading_size": "h1",
-        "subheading": "Subheading",
+        "subheading": "For OEMs and Contract Manufacturers",
         "content": "<p>Global Intex was built on the premise that the harshest environments deserve the best-engineered connectivity, not adapted off-the-shelf components, but solutions designed from the ground up to over-achieve in conditions that would compromise standard products. Years of deep experience in the mining and agricultural sectors gives Global Intex the engineering foundation and field knowledge to expand into some of the world's most technically demanding connectivity applications, from explosion proof underground power delivery to deep-water submersible cabling in corrosive salt water environments.</p><p>As a division of The Paquin Company, Global Intex draws on the strategic resources, supplier relationships, and customer reach of a well-established industrial distribution and manufacturing organization while operating with the focused expertise and responsiveness of a specialty manufacturer. That combination means customers get globally certified, precision-built connectivity products with the application support and custom engineering capability to back them up.</p>",
+        "image": "shopify://shop_images/69c5a828c64b76667a14d0eb_IMG_5169.webp",
         "theme": "dark"
       }
     }

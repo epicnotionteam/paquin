@@ -25,7 +25,7 @@
         "content": "<p>Global Intex, a division of The Paquin Company, specializes in designing and manufacturing high-quality cable assemblies, harness, and electrical connectors for environments requiring ruggedized, explosion proof, and submersible options with global certifications.</p>",
         "link_text": "Contact our team",
         "link_url": "shopify://pages/contact",
-        "image": "shopify://shop_images/asset__intex--large.jpg",
+        "image": "shopify://shop_images/69c6b16aea0f4390b74fa76c_Global_Intex_Hero_Image_4.webp",
         "show_jump_links": false
       }
     },
@@ -42,7 +42,6 @@
       "block_order": [
         "collection_yKxH3H"
       ],
-      "disabled": true,
       "name": "Feed [Collection]",
       "settings": {
         "heading_small": "By Product Type",
@@ -51,6 +50,7 @@
     },
     "division-sensors-about": {
       "type": "content-offset",
+      "disabled": true,
       "settings": {
         "heading_small": "Global Intex",
         "heading_large": "Leading the Way in Ruggedized Connectivity and Power Solutions",
@@ -111,7 +111,6 @@
         "content_block_ccRynD",
         "content_block_9iwXiw"
       ],
-      "disabled": true,
       "name": "Content [Blocks]",
       "settings": {
         "heading_small": "Expertise",
@@ -124,7 +123,6 @@
     },
     "hero_inline_73QfbR": {
       "type": "hero-inline",
-      "disabled": true,
       "name": "Hero [Inline]",
       "settings": {
         "heading": "Industries Served",
@@ -138,7 +136,6 @@
     },
     "content_offset_RhNCKb": {
       "type": "content-offset",
-      "disabled": true,
       "name": "Content [Offset]",
       "settings": {
         "heading_small": "Premier Manufacturer and Supplier",

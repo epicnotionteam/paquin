@@ -50,7 +50,6 @@
     },
     "division-sensors-about": {
       "type": "content-offset",
-      "disabled": true,
       "settings": {
         "heading_small": "Global Intex",
         "heading_large": "Leading the Way in Ruggedized Connectivity and Power Solutions",
@@ -111,6 +110,7 @@
         "content_block_ccRynD",
         "content_block_9iwXiw"
       ],
+      "disabled": true,
       "name": "Content [Blocks]",
       "settings": {
         "heading_small": "Expertise",
@@ -123,6 +123,7 @@
     },
     "hero_inline_73QfbR": {
       "type": "hero-inline",
+      "disabled": true,
       "name": "Hero [Inline]",
       "settings": {
         "heading": "Industries Served",
@@ -136,6 +137,7 @@
     },
     "content_offset_RhNCKb": {
       "type": "content-offset",
+      "disabled": true,
       "name": "Content [Offset]",
       "settings": {
         "heading_small": "Premier Manufacturer and Supplier",

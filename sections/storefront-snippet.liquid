@@ -1,0 +1,27 @@
+{% comment %}
+  P21 Auto-Sync Snippet
+  Add this to your Shopify theme as a Custom Liquid section or paste into theme.liquid before </body>.
+  When a logged-in customer loads any page, this calls your sync server to populate their
+  profile with P21 data (name, phone, company, payment terms, etc.).
+{% endcomment %}
+
+{% if customer %}
+<script>
+(function() {
+  var email = {{ customer.email | json }};
+  if (!email) return;
+
+  // Only attempt sync once per session
+  var syncKey = 'p21_synced_' + email;
+  if (sessionStorage.getItem(syncKey)) return;
+  sessionStorage.setItem(syncKey, '1');
+
+  // IMPORTANT: Replace this URL with your server's public URL
+  fetch('https://antony-undamaging-thersa.ngrok-free.dev/sync/auto', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  }).catch(function() {});
+})();
+</script>
+{% endif %}

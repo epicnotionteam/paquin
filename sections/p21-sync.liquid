@@ -1,0 +1,40 @@
+{% if customer %}
+<div id="p21-sync-loading" style="text-align:center;padding:60px 20px;font-family:inherit;">
+  <h2>Preparing your order...</h2>
+  <p style="color:#666;">One moment while we load your account details.</p>
+</div>
+
+<script>
+(function() {
+  var email = {{ customer.email | json }};
+  var checkoutUrl = '/checkout';
+
+  if (!email) {
+    window.location.href = checkoutUrl;
+    return;
+  }
+
+  fetch('https://antony-undamaging-thersa.ngrok-free.dev/sync/auto', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email })
+  })
+  .then(function() { window.location.href = checkoutUrl; })
+  .catch(function() { window.location.href = checkoutUrl; });
+
+  setTimeout(function() { window.location.href = checkoutUrl; }, 5000);
+})();
+</script>
+{% else %}
+<script>
+  window.location.href = '/account/login?return_url=' +
+    encodeURIComponent('/pages/preparing-your-order');
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "P21 Sync",
+  "settings": []
+}
+{% endschema %}

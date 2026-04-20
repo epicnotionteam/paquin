@@ -10,11 +10,10 @@
 {
   "sections": {
     "main": {
-      "type": "page",
+      "type": "p21-sync",
       "settings": {}
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
+

@@ -178,14 +178,14 @@
             {% if show_continue_link %}
               {{ continue_link_html }}
             {% endif %}
-            <button
+            <a
+              href="/pages/preparing-your-order"
               class="button--base button--icon-before button--icon-cart"
-              type="submit"
-              name="checkout"
+              role="button"
               aria-label="{{ 'cart.general.checkout' | t }}"
             >
               {{ 'cart.general.checkout' | t }}
-            </button>
+            </a>
 
             {% if additional_checkout_buttons %}
               <div class="additional-checkout-buttons">
@@ -193,6 +193,7 @@
               </div>
             {% endif %}
           </div>
+
         </div>
       {% else %}
         <div class="cartitems-empty">

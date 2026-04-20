@@ -26,11 +26,9 @@
 })();
 </script>
 {% else %}
-<script>
-  window.location.href = '/account/login?return_url=' +
-    encodeURIComponent('/pages/preparing-your-order');
-</script>
+<script>window.location.href = '/checkout';</script>
 {% endif %}
+
 
 {% schema %}
 {

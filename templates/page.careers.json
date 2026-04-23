@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "order": [
     "careers-hero",
@@ -21,10 +21,10 @@
       "settings": {
         "heading": "Want To Be a Part of Something Special?",
         "heading_size": "h1",
-        "content": "<p>If so, then take a look at what Paquin has to offer.<\/p>",
+        "content": "<p>If so, then take a look at what Paquin has to offer.</p>",
         "link_text": "Explore open roles",
         "link_url": "#current-openings",
-        "image": "shopify:\/\/shop_images\/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
+        "image": "shopify://shop_images/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.jpg",
         "show_jump_links": true
       }
     },
@@ -33,7 +33,7 @@
       "settings": {
         "heading": "Why Join The Paquin Company",
         "heading_size": "h1",
-        "content": "<p>At Paquin we all feel right at home and work like a family, our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.<\/p>",
+        "content": "<p>At Paquin we all feel right at home and work like a family, our style is laid back yet dedicated and hard working, our culture is open minds sharing innovative ideas, and our vibe is thinking out of the box to move into the future. Team Paquin = Something Special.</p>",
         "link_text": "Learn more about our benefits package",
         "link_url": "#perks-and-benefits",
         "link_type": "link",
@@ -49,7 +49,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Competitive Salary Packages",
-            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standards, clearly underscoring our deep commitment to team value and satisfaction.<\/p>",
+            "content": "<p>Attracting top talent demands competitive salaries that exceed industry standards, clearly underscoring our deep commitment to team value and satisfaction.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -59,7 +59,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Comprehensive Healthcare Benefits",
-            "content": "<p>Prioritizing health, we offer extensive, company-subsidized healthcare benefits for employees and their families, reinforcing our investment in collective well-being.<\/p>",
+            "content": "<p>Prioritizing health, we offer extensive, company-subsidized healthcare benefits for employees and their families, reinforcing our investment in collective well-being.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -69,7 +69,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Continued Education",
-            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for our employees.<\/p>",
+            "content": "<p>We're unwaveringly dedicated to lifelong learning and career growth, actively supporting professional development and certification efforts for our employees.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -79,7 +79,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "Growth Opportunities",
-            "content": "<p>Our forward-thinking growth strategy focuses on internal promotion, creating ample opportunities for leadership and advancement within our ever-evolving industry.<\/p>",
+            "content": "<p>Our forward-thinking growth strategy focuses on internal promotion, creating ample opportunities for leadership and advancement within our ever-evolving industry.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -89,7 +89,7 @@
           "settings": {
             "image_type": "logo",
             "heading": "401K Retirement Plans",
-            "content": "<p>Our 401K plans significantly underline our steadfast dedication to our employees' long-term security, offering substantial, flexible options for a stable and secure financial future.<\/p>",
+            "content": "<p>Our 401K plans significantly underline our steadfast dedication to our employees' long-term security, offering substantial, flexible options for a stable and secure financial future.</p>",
             "link_text": "Link text",
             "link_url": ""
           }
@@ -128,7 +128,7 @@
           "settings": {
             "title": "Inside Sales",
             "division": "Paquin Sensors",
-            "location": "West Union, SC",
+            "location": "Seneca, SC",
             "link": ""
           }
         }
@@ -142,7 +142,7 @@
         "heading_large": "Available Roles at Paquin",
         "heading_size": "h1",
         "subheading": "Browse Positions",
-        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.<\/p>",
+        "content": "<p>Paquin is continually seeking fresh talent to enrich our team. If you believe in innovation, quality, and have a passion for excellence, we want to hear from you. Submit your resume below to explore opportunities and potentially become part of our dynamic organization.</p>",
         "theme": "alt"
       }
     },
@@ -153,7 +153,7 @@
         "heading_large": "Start Your Journey With Paquin — Upload Your Resume Today",
         "heading_size": "h1",
         "subheading": "Take The First Step",
-        "content": "<p>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.<\/p>",
+        "content": "<p>At Paquin, we're on a constant lookout for fresh talent ready to dive into new challenges. By submitting your resume, you're taking the first step towards potentially transformative career opportunities. Should your skills align with our needs, a Paquin team member will connect with you to explore the possibilities.</p>",
         "theme": "dark"
       }
     }

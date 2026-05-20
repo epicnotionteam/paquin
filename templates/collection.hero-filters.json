@@ -42,7 +42,8 @@
         "enable_subcollection": true,
         "show_product_count": false,
         "thumbnail_image": "product-image",
-        "image_crop": "original"
+        "image_crop": "original",
+        "allowed_filter_tags": "Sanitary/Hygienic"
       }
     },
     "static-recently-viewed": {

@@ -95,6 +95,13 @@
             break
         endif
     endfor
+
+    assign allowed_tags_raw = section.settings.allowed_filter_tags | default: '' | strip | downcase
+    assign allowed_tags_norm = allowed_tags_raw | replace: ', ', ',' | replace: ' ,', ',' | split: ','
+    assign hero_tag_allowlist_active = false
+    if allowed_tags_raw != ''
+        assign hero_tag_allowlist_active = true
+    endif
 -%}
 
 <script
@@ -338,7 +345,20 @@
                                             <p class="collection--hero-filters__label">Filter by tag</p>
                                             <ul class="collection--hero-filters__list">
                                                 {%- for value in hero_tag_filter.values -%}
-                                                    {%- if value.count > 0 or value.active -%}
+                                                    {%- liquid
+                                                        assign show_this_tag = true
+                                                        if hero_tag_allowlist_active
+                                                            assign show_this_tag = false
+                                                            assign value_norm = value.value | downcase | strip
+                                                            assign label_norm = value.label | downcase | strip
+                                                            if allowed_tags_norm contains value_norm
+                                                                assign show_this_tag = true
+                                                            elsif allowed_tags_norm contains label_norm
+                                                                assign show_this_tag = true
+                                                            endif
+                                                        endif
+                                                    -%}
+                                                    {%- if show_this_tag and value.count > 0 or show_this_tag and value.active -%}
                                                         <li>
                                                             <a
                                                                 href="{%- if value.active -%}{{ value.url_to_remove }}{%- else -%}{{ value.url_to_add }}{%- endif -%}"
@@ -704,6 +724,16 @@
                 { "label": "t:sections.collection_pages.image_crop.option_4", "value": "round" }
             ],
             "default": "original"
+        },
+        {
+            "type": "header",
+            "content": "Hero tag filters"
+        },
+        {
+            "type": "textarea",
+            "id": "allowed_filter_tags",
+            "label": "Allowed tags",
+            "info": "Comma-separated list of tag names to show as filters in the hero. Leave blank to show every tag that's applied to products in this collection. Matching is case-insensitive."
         }
     ],
     "blocks": [

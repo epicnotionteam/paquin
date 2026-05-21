@@ -20,7 +20,7 @@
               {{ linked_collection.title | escape }}
             </h2>
             <a
-              class="related-option-collection__view-all"
+              class="h5 related-option-collection__view-all"
               href="{{ linked_collection.url }}"
               aria-label="View all products in {{ linked_collection.title | escape }}"
             >
@@ -64,9 +64,9 @@
       margin: 0;
     }
     #product__related-option-collections .related-option-collection__view-all {
-      font-size: var(--font-size-heading-5);
       text-decoration: underline;
       white-space: nowrap;
+      margin: 0;
     }
     #product__related-option-collections .related-option-collection__grid {
       display: grid;

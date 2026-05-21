@@ -29,7 +29,7 @@
           </div>
 
           <div class="related-option-collection__grid">
-            {%- for related_product in linked_collection.products -%}
+            {%- for related_product in linked_collection.products limit: 12 -%}
               <div class="related-option-collection__item">
                 {%
                   render 'product-grid-item',
@@ -81,6 +81,9 @@
     @media (max-width: 600px) {
       #product__related-option-collections .related-option-collection__grid {
         grid-template-columns: 1fr;
+      }
+      #product__related-option-collections .related-option-collection__item:nth-child(n+3) {
+        display: none;
       }
     }
     #product__related-option-collections .related-option-collection__item .productitem--title {

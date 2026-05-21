@@ -107,10 +107,11 @@
     		<style>
     			.product-mobile-header { display: none; }
     			@media (max-width: 600px) {
-    				.product-mobile-header { display: block; margin-bottom: 1.25rem; }
+    				.product-mobile-header { display: block; }
     				#product__core > #product__title,
     				#product__core > .indicator--price,
     				#product__core > #product__data-sheet { display: none; }
+    				#product__core[data-mobile-empty="true"] { display: none; }
     			}
     		</style>
     		{% comment %} Description {% endcomment %}
@@ -159,7 +160,7 @@
 	</div>
 	{% comment %} Container [Product Core] {% endcomment %}
 	<div id="product__content" class="grid__item">
-		<div id="product__core">
+		<div id="product__core" {% if product.price <= 0.01 %}data-mobile-empty="true"{% endif %}>
 			{% comment %} Title {% endcomment %}
 			<h1 id="product__title">{{  product.title }}</h1>
 

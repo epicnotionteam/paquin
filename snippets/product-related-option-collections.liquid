@@ -11,7 +11,7 @@
 {%- if product.metafields.custom.related_option_collections.value != blank -%}
   {%- assign linked_collections = product.metafields.custom.related_option_collections.value -%}
 
-  <div class="product__related-option-collections" id="product__related-option-collections">
+  <div class="product__related-option-collections">
     {%- for linked_collection in linked_collections -%}
       {%- if linked_collection.products_count > 0 -%}
         <section class="related-option-collection">
@@ -47,50 +47,59 @@
   </div>
 
   <style>
-    #product__related-option-collections {
+    .product__related-option-collections {
       margin-top: 1.5rem;
     }
-    #product__related-option-collections .related-option-collection {
+    .product__related-option-collections .related-option-collection {
       margin-bottom: 2rem;
     }
-    #product__related-option-collections .related-option-collection__header {
+    .product__related-option-collections .related-option-collection__header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
       gap: 1rem;
       margin-bottom: 0.75rem;
     }
-    #product__related-option-collections .related-option-collection__heading {
+    .product__related-option-collections .related-option-collection__heading {
       margin: 0;
     }
-    #product__related-option-collections .related-option-collection__view-all {
+    .product__related-option-collections .related-option-collection__view-all {
       text-decoration: underline;
       white-space: nowrap;
       margin: 0;
     }
-    #product__related-option-collections .related-option-collection__grid {
+    .product__related-option-collections .related-option-collection__grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
     @media (max-width: 860px) {
-      #product__related-option-collections .related-option-collection__grid {
+      .product__related-option-collections .related-option-collection__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
     @media (max-width: 600px) {
-      #product__related-option-collections .related-option-collection__grid {
-        grid-template-columns: 1fr;
-      }
-      #product__related-option-collections .related-option-collection__item:nth-child(n+3) {
+      .product__related-option-collections .related-option-collection__item:nth-child(n+3) {
         display: none;
       }
     }
-    #product__related-option-collections .related-option-collection__item .productitem--title {
+
+    .related-option-collections-slot--mobile {
       display: none;
     }
-    #product__related-option-collections .related-option-collection__item .productitem,
-    #product__related-option-collections .related-option-collection__item .productgrid--item {
+    @media (max-width: 600px) {
+      .related-option-collections-slot--desktop {
+        display: none;
+      }
+      .related-option-collections-slot--mobile {
+        display: block;
+      }
+    }
+    .product__related-option-collections .related-option-collection__item .productitem--title {
+      display: none;
+    }
+    .product__related-option-collections .related-option-collection__item .productitem,
+    .product__related-option-collections .related-option-collection__item .productgrid--item {
       font-size: 0.875rem;
     }
   </style>

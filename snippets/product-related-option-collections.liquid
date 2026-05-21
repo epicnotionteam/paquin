@@ -4,7 +4,7 @@
 
   Each block:
     - Heading is the linked collection's title
-    - Grid below shows products from that collection
+    - Grid below shows products from that collection (slim image-only cards)
     - "View all" link to the collection page
 {% endcomment %}
 
@@ -30,15 +30,28 @@
 
           <div class="related-option-collection__grid">
             {%- for related_product in linked_collection.products limit: 12 -%}
-              <div class="related-option-collection__item">
-                {%
-                  render 'product-grid-item',
-                  product: related_product,
-                  context: 'related-option-collection',
-                  index: forloop.index,
-                  products_per_row: '2'
-                %}
-              </div>
+              <a
+                class="related-option-collection__item"
+                href="{{ related_product.url }}"
+                aria-label="{{ related_product.title | escape }}"
+                title="{{ related_product.title | escape }}"
+              >
+                {%- if related_product.featured_media.preview_image -%}
+                  {%- assign card_img = related_product.featured_media.preview_image -%}
+                  <img
+                    class="related-option-collection__image"
+                    src="{{ card_img | image_url: width: 600 }}"
+                    srcset="{{ card_img | image_url: width: 300 }} 300w, {{ card_img | image_url: width: 600 }} 600w, {{ card_img | image_url: width: 900 }} 900w"
+                    sizes="(max-width: 600px) 45vw, (max-width: 860px) 33vw, 250px"
+                    alt="{{ related_product.title | escape }}"
+                    width="{{ card_img.width }}"
+                    height="{{ card_img.height }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'related-option-collection__placeholder' }}
+                {%- endif -%}
+              </a>
             {%- endfor -%}
           </div>
         </section>
@@ -73,6 +86,30 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
+    .product__related-option-collections .related-option-collection__item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #D6DBDD;
+      padding: 0.75rem;
+      transition: border-color 120ms ease;
+    }
+    .product__related-option-collections .related-option-collection__item:hover {
+      border-color: #111;
+    }
+    .product__related-option-collections .related-option-collection__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+    .product__related-option-collections .related-option-collection__placeholder {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
     @media (max-width: 860px) {
       .product__related-option-collections .related-option-collection__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -94,16 +131,6 @@
       .related-option-collections-slot--mobile {
         display: block;
       }
-    }
-    .related-option-collections-slot--mobile .productitem--actions {
-      display: none;
-    }
-    .product__related-option-collections .related-option-collection__item .productitem--title {
-      display: none;
-    }
-    .product__related-option-collections .related-option-collection__item .productitem,
-    .product__related-option-collections .related-option-collection__item .productgrid--item {
-      font-size: 0.875rem;
     }
   </style>
 {%- endif -%}

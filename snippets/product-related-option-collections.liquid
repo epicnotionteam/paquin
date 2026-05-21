@@ -1,0 +1,98 @@
+{% comment %}
+  Renders one block per linked collection from the product metafield
+  `custom.related_option_collections` (type: List of collections).
+
+  Each block:
+    - Heading is the linked collection's title
+    - Grid below shows products from that collection
+    - "View all" link to the collection page
+{% endcomment %}
+
+{%- if product.metafields.custom.related_option_collections.value != blank -%}
+  {%- assign linked_collections = product.metafields.custom.related_option_collections.value -%}
+
+  <div class="product__related-option-collections" id="product__related-option-collections">
+    {%- for linked_collection in linked_collections -%}
+      {%- if linked_collection.products_count > 0 -%}
+        <section class="related-option-collection">
+          <div class="related-option-collection__header">
+            <h2 class="h5 related-option-collection__heading">
+              {{ linked_collection.title | escape }}
+            </h2>
+            <a
+              class="related-option-collection__view-all"
+              href="{{ linked_collection.url }}"
+              aria-label="View all products in {{ linked_collection.title | escape }}"
+            >
+              View all
+            </a>
+          </div>
+
+          <div class="related-option-collection__grid">
+            {%- for related_product in linked_collection.products -%}
+              <div class="related-option-collection__item">
+                {%
+                  render 'product-grid-item',
+                  product: related_product,
+                  context: 'related-option-collection',
+                  index: forloop.index,
+                  products_per_row: '2'
+                %}
+              </div>
+            {%- endfor -%}
+          </div>
+        </section>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <style>
+    #product__related-option-collections {
+      margin-top: 1.5rem;
+    }
+    #product__related-option-collections .related-option-collection {
+      margin-bottom: 2rem;
+    }
+    #product__related-option-collections .related-option-collection__header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    #product__related-option-collections .related-option-collection__heading {
+      margin: 0;
+    }
+    #product__related-option-collections .related-option-collection__view-all {
+      font-size: 0.875rem;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+    #product__related-option-collections .related-option-collection__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 600px) {
+      #product__related-option-collections .related-option-collection__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    #product__related-option-collections .related-option-collection__item .productitem,
+    #product__related-option-collections .related-option-collection__item .productgrid--item {
+      font-size: 0.875rem;
+    }
+    #product__related-option-collections .related-option-collection__item .productitem--title {
+      font-size: 0.95rem;
+      line-height: 1.25;
+      margin: 0.5rem 0 0.25rem;
+    }
+    #product__related-option-collections .related-option-collection__item .productitem--title a {
+      color: {{ settings.color_text }};
+      text-decoration: none;
+    }
+    #product__related-option-collections .related-option-collection__item .productitem--title a:hover {
+      color: {{ color_links }};
+    }
+  </style>
+{%- endif -%}

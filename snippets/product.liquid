@@ -85,6 +85,34 @@
 		%}
           {% comment %} Container [Product Data] {% endcomment %}
     	<div id="product__data" class="grid__item">
+    		{% comment %} Mobile-only header: title, price indicator, data sheet rendered above description on mobile {% endcomment %}
+    		<div class="product-mobile-header">
+    			<h1 class="product-mobile-header__title">{{ product.title }}</h1>
+    			{% if product.metafields.custom.discontinued_notification != blank %}
+    				<div class="product__discontinued-notification">
+    					{{ product.metafields.custom.discontinued_notification | metafield_tag }}
+    				</div>
+    			{% endif %}
+    			{% if product.price <= 0.01 %}
+    				<p class="indicator--price">Price dependent upon specification — <a href="#product__inquiry-form">inquire below</a></p>
+    			{% endif %}
+    			<div class="product-mobile-header__data-sheet">
+    				{% if product.metafields.custom.data_sheet != blank %}
+    					<a class="button--outline button--icon-before button--icon-data-sheet" href="{{ product.metafields.custom.data_sheet.value.url }}" target="_blank">
+    						View data sheet
+    					</a>
+    				{% endif %}
+    			</div>
+    		</div>
+    		<style>
+    			.product-mobile-header { display: none; }
+    			@media (max-width: 600px) {
+    				.product-mobile-header { display: block; margin-bottom: 1.25rem; }
+    				#product__core > #product__title,
+    				#product__core > .indicator--price,
+    				#product__core > #product__data-sheet { display: none; }
+    			}
+    		</style>
     		{% comment %} Description {% endcomment %}
     		{% render 'product-description' %}
     		{% comment %} Related option collections — desktop position (below description) {% endcomment %}

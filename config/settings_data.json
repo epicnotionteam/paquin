@@ -54,7 +54,7 @@
     "product_sales_badge_style": "percent",
     "inventory_status": false,
     "product_option_style": "select",
-    "select_first_available_variant": false,
+    "select_first_available_variant": true,
     "show_dynamic_checkout_button": false,
     "enable_cart_redirection": false,
     "swatches_enable": false,

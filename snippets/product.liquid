@@ -113,6 +113,24 @@
     				#product__core > #product__data-sheet { display: none; }
     				#product__core[data-mobile-empty="true"] { display: none; }
     			}
+
+    			/* Variant select label fix: selects always have a value, so keep the floating label in its "up" position to avoid overlap */
+    			.product-form--regular .form-field-select-wrapper .form-field-title,
+    			.product-form--regular .options-selection__select .form-field-title {
+    				top: 0.5rem;
+    				transform: none;
+    				font-size: 0.8125rem;
+    			}
+    			.product-form--regular .form-field-select-wrapper .form-field-select,
+    			.product-form--regular .options-selection__select .form-field-select,
+    			.product-form--regular .options-selection__input-select {
+    				padding-top: 1.5rem;
+    			}
+
+    			/* Spacing between variant options and quantity / add-to-cart */
+    			.product-form--regular .product-form--atc {
+    				margin-top: 1rem;
+    			}
     		</style>
     		{% comment %} Description {% endcomment %}
     		{% render 'product-description' %}

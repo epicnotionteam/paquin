@@ -326,6 +326,7 @@
       "continue_shopping": "Continue shopping",
       "price": "Price",
       "quantity": "Qty",
+      "total_line_price": "Total",
       "checkout": "Check out",
       "update": "Update cart",
       "subtotal": "Subtotal",

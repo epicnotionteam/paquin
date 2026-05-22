@@ -35,7 +35,7 @@
                 {% endif %}
                 {% comment %} Content {% endcomment %}
                 {% if section_content != blank %}
-                    <div class="section__content">{{ section_content | richtext }}</div>
+                    <div class="section__content">{{ section_content}}</div>
                 {% endif %}
                 {% comment %} Link {% endcomment %}
                 {% if section_link_text != blank and section_link_url != blank %}
@@ -48,7 +48,14 @@
             {% comment %} Image {% endcomment %}
             <div class="section__image">
                 {% if section_image != blank %}
-                    <img class="item__image" src="{{ section_image | img_url: '800x' }}" alt="{{ section.settings.heading }}">
+                    <img class="item__image"
+                         src="{{ section_image | image_url: width: 800 }}"
+                         srcset="{{ section_image | image_url: width: 400 }} 400w, {{ section_image | image_url: width: 800 }} 800w, {{ section_image | image_url: width: 1200 }} 1200w"
+                         sizes="(max-width: 600px) 90vw, (max-width: 1024px) 50vw, 800px"
+                         alt="{{ section.settings.heading | escape }}"
+                         width="{{ section_image.width | default: 800 }}"
+                         height="{{ section_image.height | default: 600 }}"
+                         loading="lazy">
                 {% endif %}
             </div>
         </div>

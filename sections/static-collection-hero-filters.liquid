@@ -505,37 +505,7 @@
                                 aria-label="{{ 'general.accessibility.nav_collection_utilities' | t }}"
                                 data-sticky-utils
                             >
-                                {% if show_filter_trigger %}
-                                    {% liquid
-                                        assign filter_count = 0
-
-                                        if filter_block.settings.filter_option == 'faceted'
-                                            for filter in collection.filters
-                                            if filter.type == 'price_range'
-                                                if filter.min_value.value != blank or filter.max_value.value != blank
-                                                assign filter_count = filter_count | plus: 1
-                                                endif
-                                            elsif filter.type == 'list'
-                                                assign filter_count = filter_count | plus: filter.active_values.size
-                                            endif
-                                            endfor
-                                        else
-                                            if current_tags.size > 0
-                                            assign filter_count = current_tags.size
-                                            endif
-                                        endif
-                                        %}
-                                    <div class="productgrid--utils utils-filter">
-                                        <button class="utils-filter-button" type="button" aria-label="{{ button_label }}" data-productgrid-trigger-filters>
-                                            <span class="utils-filter-icon">
-                                                {% render 'icon-library', id: 'icon-filters' %}
-                                            </span>
-                                            <span class="utils-filter-text">
-                                                {{- button_label -}}
-                                            </span>
-                                        </button>
-                                    </div>
-                                {% endif %}
+                                {%- comment -%} Mobile filter trigger removed — hero filters replace it on this template (show_filter_trigger is forced to false above) {%- endcomment -%}
 
                                 {%- if section.settings.sort_by -%}
                                     {%- render 'product-grid-sortby', type: 'select' -%}

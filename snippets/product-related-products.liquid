@@ -10,7 +10,14 @@
 			{% if item.available == true %}
 				<div class="col--media">
 					<a href="{{ item.url }}" aria-label="{{ item.title }}" title="{{ item.title }}">
-						<img class="related-product__image" src="{{ item.images[0] | img_url: '500x' }}" alt="{{ item.title }}">
+						{%- assign related_img = item.images[0] -%}
+						<img class="related-product__image"
+						     src="{{ related_img | image_url: width: 500 }}"
+						     srcset="{{ related_img | image_url: width: 250 }} 250w, {{ related_img | image_url: width: 500 }} 500w, {{ related_img | image_url: width: 750 }} 750w"
+						     sizes="(max-width: 600px) 50vw, 250px"
+						     alt="{{ item.title | escape }}"
+						     {% if related_img.width %}width="{{ related_img.width }}" height="{{ related_img.height }}"{% endif %}
+						     loading="lazy">
 					</a>
 				</div>
 				<div class="col--content">

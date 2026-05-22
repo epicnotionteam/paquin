@@ -8,15 +8,21 @@
     {% for subcollection in child_collections %}
         {% assign collection = collections[subcollection.handle] %}
         {% assign collection_url = collection.url %}
-        {% assign collection_image = collection.image | img_url: '512x' %}
         {% assign collection_title = collection.title %}
         <div class="item">
             {% comment %} Image {% endcomment %}
-            {% if collection_image %}
+            {% if collection.image %}
                 <a class="item__wrap--image" href="{{ collection_url }}">
-                    <img class="item__image" src="{{ collection_image }}" alt="{{ collection_title }}">
+                    <img class="item__image"
+                         src="{{ collection.image | image_url: width: 512 }}"
+                         srcset="{{ collection.image | image_url: width: 256 }} 256w, {{ collection.image | image_url: width: 512 }} 512w, {{ collection.image | image_url: width: 768 }} 768w"
+                         sizes="(max-width: 600px) 33vw, (max-width: 860px) 20vw, 14vw"
+                         alt="{{ collection_title | escape }}"
+                         width="{{ collection.image.width }}"
+                         height="{{ collection.image.height }}"
+                         loading="lazy">
                 </a>
-                
+
             {% endif %}
             {% comment %} Title {% endcomment %}
             <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>

@@ -102,6 +102,8 @@
     if allowed_tags_raw != ''
         assign hero_tag_allowlist_active = true
     endif
+
+    assign show_filter_trigger = false
 -%}
 
 <script
@@ -296,7 +298,15 @@
                                 {% if collection.image %}
                                     <div class="container--image">
                                         <div class="wrap--image">
-                                            {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                            {%
+                                                render 'rimg',
+                                                img: collection.image,
+                                                size: '800x800',
+                                                crop: 'center',
+                                                alt: collection.title,
+                                                attr: 'fetchpriority="high"',
+                                                lazy: false
+                                            %}
                                         </div>
                                     </div>
                                 {% endif %}
@@ -395,7 +405,15 @@
                                 {% if collection.image %}
                                     <div class="container--image">
                                         <div class="wrap--image">
-                                            {{ collection.image | img_url: 'master' | img_tag: collection.title }}
+                                            {%
+                                                render 'rimg',
+                                                img: collection.image,
+                                                size: '800x800',
+                                                crop: 'center',
+                                                alt: collection.title,
+                                                attr: 'fetchpriority="high"',
+                                                lazy: false
+                                            %}
                                         </div>
                                     </div>
                                 {% endif %}

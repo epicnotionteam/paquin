@@ -61,7 +61,7 @@
                                             {% endif %}
                                             {% comment %} Content {% endcomment %}
                                             {% if block_content != blank %}
-                                                <div class="item__content">{{ block_content | richtext }}</div>
+                                                <div class="item__content">{{ block_content}}</div>
                                             {% endif %}
                                             {% comment %} Link {% endcomment %}
                                             {% if block_link_text != blank and block_link_url != blank %}
@@ -72,7 +72,7 @@
                                         <div class="item__wrap--actions">
                                             {% comment %} CTA {% endcomment %}
                                             {% if block_cta != blank %}
-                                                <div class="item__cta">{{ block_cta | richtext }}</div>
+                                                <div class="item__cta">{{ block_cta}}</div>
                                             {% endif %}
                                             {% comment %} Navigation {% endcomment %}
                                             <div class="item__navigation">
@@ -86,7 +86,14 @@
                                     {% comment %} Container [Media] {% endcomment %}
                                     <div class="container--media">
                                         {% if block_image != blank %}
-                                            <img class="item__image" src="{{ block_image | img_url: '800x' }}" alt="{{ block_heading }}">
+                                            <img class="item__image"
+                                                 src="{{ block_image | image_url: width: 800 }}"
+                                                 srcset="{{ block_image | image_url: width: 400 }} 400w, {{ block_image | image_url: width: 800 }} 800w, {{ block_image | image_url: width: 1200 }} 1200w"
+                                                 sizes="(max-width: 600px) 90vw, (max-width: 1024px) 50vw, 800px"
+                                                 alt="{{ block_heading | escape }}"
+                                                 width="{{ block_image.width | default: 800 }}"
+                                                 height="{{ block_image.height | default: 600 }}"
+                                                 loading="lazy">
                                         {% endif %}
                                     </div>
                                 </div>

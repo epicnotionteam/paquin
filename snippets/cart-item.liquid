@@ -1,3 +1,14 @@
+{%- comment -%}
+  Preserve cart thumbnail aspect ratio. Theme CSS sets max-width: 100% but no height: auto,
+  so HTML width/height attrs from rimg can cause stretching. object-fit: contain handles all cases.
+{%- endcomment -%}
+<style>
+  .cart-item--image-wrapper img {
+    object-fit: contain !important;
+    height: auto !important;
+  }
+</style>
+
 {% assign compare_at_price = 0 %}
 
 {% for variant in item.product.variants %}

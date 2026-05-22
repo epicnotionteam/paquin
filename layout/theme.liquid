@@ -112,11 +112,9 @@
     {{ content_for_header }}
 
     {{ 'theme-min.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
 
-    {%- comment -%} style.css async-loaded (media swap trick) so it doesn't block initial render {%- endcomment -%}
-    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ 'style.css' | asset_url }}"></noscript>
-
+    {%- comment -%} ripple.css is only animation styles — safe to async-load (no visible FOUC) {%- endcomment -%}
     {% unless settings.reduce_animations %}
       <link rel="stylesheet" href="{{ 'ripple.css' | asset_url }}" media="print" onload="this.media='all'">
       <noscript><link rel="stylesheet" href="{{ 'ripple.css' | asset_url }}"></noscript>

@@ -83,7 +83,7 @@
   <meta property="article:author" content="{{ article.author }}">
 
   {% for tag in article.tags %}
-    <meta property="article.tag" content="{{ tag }}">
+    <meta property="article:tag" content="{{ tag }}">
   {% endfor %}
 {% endif %}
 
@@ -137,7 +137,7 @@
       {% comment %}
         Summary
       {% endcomment %}
-      {% assign height = width | divided_by: 1 | round %}
+      {% assign height = width %}
       <meta name="twitter:card" content="summary">
     {% else %}
       {% comment %}

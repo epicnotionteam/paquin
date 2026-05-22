@@ -308,11 +308,19 @@
 {% comment %} Image tag {% endcomment %}
 {% else %}
   {%- comment -%}
-    Emit width/height attributes when numeric, to reserve layout space and reduce Cumulative Layout Shift (CLS).
-    Falls back to omitting them for named sizes ('master', 'medium', etc.) where dimensions aren't predictable.
+    Always emit width/height attributes (resolve from numeric size if provided, else from the source image).
+    Theme-check (and the CLS Core Web Vital) require these to be present.
   {%- endcomment -%}
   {%- assign rimg_w_int = rimg_w | times: 1 -%}
   {%- assign rimg_h_int = rimg_h | times: 1 -%}
+  {%- assign img_w = rimg_w_int -%}
+  {%- assign img_h = rimg_h_int -%}
+  {%- if img_w <= 0 -%}
+    {%- assign img_w = img.width | default: 1 -%}
+    {%- assign img_h = img.height | default: 1 -%}
+  {%- elsif img_h <= 0 -%}
+    {%- assign img_h = img_w | times: img.height | divided_by: img.width -%}
+  {%- endif -%}
 
   {% if lazy and disable_noscript != true %}
     <noscript data-rimg-noscript>
@@ -324,8 +332,8 @@
         {% endif %}
 
         alt="{{ rimg_alt }}"
-        {% if rimg_w_int > 0 %}width="{{ rimg_w_int }}"{% endif %}
-        {% if rimg_h_int > 0 %}height="{{ rimg_h_int }}"{% endif %}
+        width="{{ img_w }}"
+        height="{{ img_h }}"
         data-rimg="noscript"
         srcset="{{ rimg_density_srcset }}"
         {% if class != blank %}class="{{ class }}"{% endif %}
@@ -342,8 +350,8 @@
       src="{{ img | img_url: rimg_size, crop: crop, format: rimg_format }}"
     {% endif %}
     alt="{{ rimg_alt }}"
-    {% if rimg_w_int > 0 %}width="{{ rimg_w_int }}"{% endif %}
-    {% if rimg_h_int > 0 %}height="{{ rimg_h_int }}"{% endif %}
+    width="{{ img_w }}"
+    height="{{ img_h }}"
 
     {% if lazy %}
       data-rimg="lazy"

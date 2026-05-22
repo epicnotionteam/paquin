@@ -20,7 +20,6 @@
         {% capture cat_array %}{%- render 'advanced-tag-loop' -%}{% endcapture %}
         {% assign cat_array = cat_array | split: '|' %}
         {% assign title_tags = '' %}
-        {% assign meta_tags = current_tags | join: ', ' %}
         {%- for tag in current_tags -%}
           {% assign is_advanced_tag = false %}
           {% assign cat = tag | split: '_' | first %}
@@ -100,8 +99,8 @@
       twitter_handle: x_handle,
     %}
 
-    <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
-    <link rel="preload" as="style" href="{{ 'theme-min.css' | asset_url }}">
+    {{ settings.type_menu | font_url | preload_tag: as: 'font' }}
+    {%- comment -%} theme-min.css is preloaded via the stylesheet_tag's `preload: true` argument below {%- endcomment -%}
 
     {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing {% endcomment %}
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
@@ -110,7 +109,7 @@
 
     {{ content_for_header }}
 
-    {{ 'theme-min.css' | asset_url | stylesheet_tag }}
+    {{ 'theme-min.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
     {% unless settings.reduce_animations %}

@@ -15,6 +15,21 @@
     This is the hover zoom setting, which is either 'disabled', 'separate', or 'replace'
 {% endcomment %}
 
+{%- comment -%}
+  Ensure product images preserve their intrinsic aspect ratio inside the gallery container,
+  regardless of whether the source image is square, landscape, or portrait.
+  `object-fit: contain` letterboxes the image inside the gallery box without stretching.
+{%- endcomment -%}
+<style>
+  .product-gallery--loaded-image {
+    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+</style>
+
 <div
   class="
     product-gallery--viewer

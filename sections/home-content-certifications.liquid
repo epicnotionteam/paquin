@@ -17,7 +17,7 @@
 		{% endif %}
 		{% comment %} Content {% endcomment %}
 		{% if section_content != blank %}
-			<div class="section__content">{{ section_content | richtext }}</div>
+			<div class="section__content">{{ section_content}}</div>
 		{% endif %}
 		{% comment %} Container [Feed] {% endcomment %}
 		<div class="container--feed">
@@ -30,7 +30,13 @@
                     {% comment %} Output item {% endcomment %}
                     {% if block_image != blank %}
                         <div class="item">
-                            <img class="item__image" src="{{ block_image | img_url: '256x' }}" alt="{{ block_title }}">                                    
+                            <img class="item__image"
+                                 src="{{ block_image | image_url: width: 256 }}"
+                                 srcset="{{ block_image | image_url: width: 256 }} 1x, {{ block_image | image_url: width: 512 }} 2x"
+                                 alt="{{ block_title | escape }}"
+                                 width="{{ block_image.width | default: 256 }}"
+                                 height="{{ block_image.height | default: 256 }}"
+                                 loading="lazy">
                         </div>
                     {% endif %}
                 {% endfor %}

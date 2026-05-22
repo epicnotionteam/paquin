@@ -313,10 +313,20 @@
 
   {%- comment -%}
     MPN: prefer a dedicated metafield (custom.mpn or custom.part_number); fall back to barcode.
+    Availability: inquiry-based products (price <= 0.01) are MadeToOrder; otherwise InStock/OutOfStock based on variant.
     Shipping/return: emit conservative stubs so Google Merchant Center / Product rich results stay eligible.
-    Override these by setting metafields on the product (custom.mpn, custom.part_number) or replacing the stubs below.
   {%- endcomment -%}
   {%- assign product_mpn = product.metafields.custom.mpn | default: product.metafields.custom.part_number | default: selected_variant.barcode -%}
+  {%- assign is_inquiry_product = false -%}
+  {%- if product.price <= 0.01 -%}
+    {%- assign is_inquiry_product = true -%}
+  {%- endif -%}
+  {%- assign product_availability = 'OutOfStock' -%}
+  {%- if is_inquiry_product -%}
+    {%- assign product_availability = 'MadeToOrder' -%}
+  {%- elsif selected_variant.available -%}
+    {%- assign product_availability = 'InStock' -%}
+  {%- endif -%}
   <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
@@ -349,14 +359,16 @@
     "offers": {
       "@type": "Offer",
       "priceCurrency": {{ cart.currency.iso_code | json }},
-      "price": {{ selected_variant.price | divided_by: 100.0 | json }},
-      "availability": "http://schema.org/{% if selected_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      {% unless is_inquiry_product %}
+        "price": {{ selected_variant.price | divided_by: 100.0 | json }},
+        "priceValidUntil": {{ year_from_now | json }},
+      {% endunless %}
+      "availability": "http://schema.org/{{ product_availability }}",
       "url": "{{ shop.url }}{{ selected_variant.url }}",
       "seller": {
         "@type": "Organization",
         "name": {{ shop.name | json }}
       },
-      "priceValidUntil": {{ year_from_now | json }},
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
         "applicableCountry": "US",

@@ -144,7 +144,9 @@
     		{% comment %} Description {% endcomment %}
     		{% render 'product-description' %}
     		{% comment %} Related option collections — desktop position (below description) {% endcomment %}
-    		<div class="related-option-collections-slot related-option-collections-slot--desktop">{%- render 'product-related-option-collections' -%}</div>
+    		{% if product.metafields.custom.related_option_collections.value != blank %}
+    			<div class="related-option-collections-slot related-option-collections-slot--desktop">{%- render 'product-related-option-collections' -%}</div>
+    		{% endif %}
     		{% comment %} Key Specifications {% endcomment %}
     		{% render 'product-key-specifications' %}
     		{% comment %} Related Press {% endcomment %}
@@ -272,7 +274,9 @@
 			<!-- Highlights [Bulk] -->
             {% render 'product-highlights-bulk' %}
 			{% comment %} Related option collections — mobile position (below highlights) {% endcomment %}
-			<div class="related-option-collections-slot related-option-collections-slot--mobile">{%- render 'product-related-option-collections' -%}</div>
+			{% if product.metafields.custom.related_option_collections.value != blank %}
+				<div class="related-option-collections-slot related-option-collections-slot--mobile">{%- render 'product-related-option-collections' -%}</div>
+			{% endif %}
 			{% comment %} Inquiry Form {% endcomment %}
 			{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 			{% if product.price <= 0.01 %}

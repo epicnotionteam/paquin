@@ -114,6 +114,14 @@
     				#product__core[data-mobile-empty="true"] { display: none; }
     			}
 
+    			/* Related-option-collections slot visibility — always applies, even when the snippet renders nothing (otherwise empty slot wrappers inherit the section separator) */
+    			.related-option-collections-slot--mobile { display: none; }
+    			@media (max-width: 600px) {
+    				.related-option-collections-slot--desktop { display: none; }
+    				.related-option-collections-slot--mobile { display: block; }
+    			}
+    			.related-option-collections-slot:empty { display: none; }
+
     			/* Variant select label fix: selects always have a value, so keep the floating label in its "up" position to avoid overlap */
     			.product-form--regular .form-field-select-wrapper .form-field-title,
     			.product-form--regular .options-selection__select .form-field-title {
@@ -136,9 +144,7 @@
     		{% comment %} Description {% endcomment %}
     		{% render 'product-description' %}
     		{% comment %} Related option collections — desktop position (below description) {% endcomment %}
-    		<div class="related-option-collections-slot related-option-collections-slot--desktop">
-    			{% render 'product-related-option-collections' %}
-    		</div>
+    		<div class="related-option-collections-slot related-option-collections-slot--desktop">{%- render 'product-related-option-collections' -%}</div>
     		{% comment %} Key Specifications {% endcomment %}
     		{% render 'product-key-specifications' %}
     		{% comment %} Related Press {% endcomment %}
@@ -266,9 +272,7 @@
 			<!-- Highlights [Bulk] -->
             {% render 'product-highlights-bulk' %}
 			{% comment %} Related option collections — mobile position (below highlights) {% endcomment %}
-			<div class="related-option-collections-slot related-option-collections-slot--mobile">
-				{% render 'product-related-option-collections' %}
-			</div>
+			<div class="related-option-collections-slot related-option-collections-slot--mobile">{%- render 'product-related-option-collections' -%}</div>
 			{% comment %} Inquiry Form {% endcomment %}
 			{% comment %} Displays only if product price set, otherwise assumes Complex product {% endcomment %}
 			{% if product.price <= 0.01 %}

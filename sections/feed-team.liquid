@@ -8,6 +8,18 @@
 {% assign section_blocks        = section.blocks %}
 {% assign section_theme         = section.settings.theme %}
 
+{%- comment -%}
+  Ensure team photos preserve aspect ratio. The HTML width/height attributes we add for CLS
+  prevention may not match the actual uploaded photo's aspect ratio if section.image.width/height
+  are unavailable; object-fit:contain guarantees no stretching either way.
+{%- endcomment -%}
+<style>
+  .feed--team .item .item__image {
+    object-fit: contain !important;
+    height: auto !important;
+  }
+</style>
+
 {% comment %} Output section {% endcomment %}
 <section class="section--feed-team theme--{{ section_theme }} wrap--container">
     <div class="section__grid wrap--max push--center">

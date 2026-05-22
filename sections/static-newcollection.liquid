@@ -68,6 +68,11 @@
         endif
     endif
 
+    # Suppress the orphan mobile filter-trigger button (its drawer only renders on the all-collection page, so it does nothing elsewhere)
+    unless is_all_collection
+        assign show_filter_trigger = false
+    endunless
+
     assign paginate_by = section.settings.products_per_page_range
 
     capture collection_classes

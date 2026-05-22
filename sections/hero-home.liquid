@@ -14,16 +14,11 @@
 
 {% comment %}
   LCP optimization: preload the hero background image so the browser's preload scanner
-  starts the fetch immediately (background-image URLs are otherwise only discovered after CSS parses).
-  Browsers honor <link rel="preload"> regardless of whether it's in <head> or <body>.
+  starts the fetch immediately. The href MUST match the URL used by the CSS background-image below —
+  otherwise the browser preloads one size and then re-fetches a different size from the CSS rule.
 {% endcomment %}
 {% if section_image %}
-  <link rel="preload"
-        as="image"
-        fetchpriority="high"
-        href="{{ section_image | image_url: width: 1920 }}"
-        imagesrcset="{{ section_image | image_url: width: 768 }} 768w, {{ section_image | image_url: width: 1280 }} 1280w, {{ section_image | image_url: width: 1920 }} 1920w, {{ section_image | image_url: width: 2560 }} 2560w"
-        imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high" href="{{ section_image | image_url: width: 1920 }}">
 {% endif %}
 
 {% comment %} Output section {% endcomment %}

@@ -87,7 +87,7 @@
     	<div id="product__data" class="grid__item">
     		{% comment %} Mobile-only header: title, price indicator, data sheet rendered above description on mobile {% endcomment %}
     		<div class="product-mobile-header">
-    			<h1 class="product-mobile-header__title">{{ product.title }}</h1>
+    			<h1 class="product-mobile-header__title" aria-hidden="true" data-mobile-title>{{ product.title }}</h1>
     			{% if product.metafields.custom.discontinued_notification != blank %}
     				<div class="product__discontinued-notification">
     					{{ product.metafields.custom.discontinued_notification | metafield_tag }}
@@ -114,6 +114,23 @@
     				#product__core[data-mobile-empty="true"] { display: none; }
     			}
 
+    		</style>
+    		<script>
+    			(function () {
+    				var mobileTitle = document.querySelector('[data-mobile-title]');
+    				var desktopTitle = document.querySelector('[data-desktop-title]');
+    				if (!mobileTitle || !desktopTitle) return;
+    				var mql = window.matchMedia('(max-width: 600px)');
+    				function sync() {
+    					mobileTitle.setAttribute('aria-hidden', mql.matches ? 'false' : 'true');
+    					desktopTitle.setAttribute('aria-hidden', mql.matches ? 'true' : 'false');
+    				}
+    				sync();
+    				if (mql.addEventListener) mql.addEventListener('change', sync);
+    				else if (mql.addListener) mql.addListener(sync);
+    			})();
+    		</script>
+    		<style>
     			/* Related-option-collections slot visibility — always applies, even when the snippet renders nothing (otherwise empty slot wrappers inherit the section separator) */
     			.related-option-collections-slot--mobile { display: none; }
     			@media (max-width: 600px) {
@@ -189,7 +206,7 @@
 	<div id="product__content" class="grid__item">
 		<div id="product__core" {% if product.price <= 0.01 %}data-mobile-empty="true"{% endif %}>
 			{% comment %} Title {% endcomment %}
-			<h1 id="product__title">{{  product.title }}</h1>
+			<h1 id="product__title" data-desktop-title>{{  product.title }}</h1>
 
 			{% comment %} Discontinued notification metafield {% endcomment %}
 			{% if product.metafields.custom.discontinued_notification != blank %}

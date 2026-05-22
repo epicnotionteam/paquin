@@ -22,12 +22,11 @@
       },
       "headline": {{ article.title | json }},
       {% if article.image %}
-        "image": {
-          "@type": "ImageObject",
-          "url": {{ article.image | img_url: '800x800' | prepend: 'https:' | json }},
-          "height": 800,
-          "width": 800
-        },
+        "image": [
+          "{{ article.image | image_url: width: 1200, height: 1200, crop: 'center' }}",
+          "{{ article.image | image_url: width: 1200, height: 900, crop: 'center' }}",
+          "{{ article.image | image_url: width: 1200, height: 675, crop: 'center' }}"
+        ],
       {% endif %}
       "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json}},
       "dateModified": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json}},
@@ -40,7 +39,7 @@
         "name": {{ shop.name | json }},
         "logo": {
           "@type": "ImageObject",
-          "url": {{ article.user.image | img_url: '200x200' | prepend: 'https:' | json }}
+          "url": {{ article.user.image | image_url: width: 200, height: 200, crop: 'center' | json }}
         }
       },
       "description": {{ article_description | json }}
@@ -355,7 +354,7 @@
     "@type": "Product",
     "name": {{ product_name | strip_newlines | json }},
     "url": "{{ shop.url }}{{ product.url }}",
-    "image": {{ product_image | img_url: '1024x1024' | prepend: 'https:' | json }},
+    "image": {{ product_image | image_url: width: 1024, height: 1024, crop: 'center' | json }},
     {% if product.description != blank %}
       "description": {{ product.description | json }},
     {% endif %}

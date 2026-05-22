@@ -41,7 +41,13 @@
                     <div class="item">
                         {% comment %} Image {% endcomment %}
                         {% if block_image != blank %}
-                            <img class="item__image variant--{{ block_image_type }}" src="{{ block_image | img_url: '256x' }}" alt="{{ block_heading }}">
+                            <img class="item__image variant--{{ block_image_type }}"
+                                 src="{{ block_image | image_url: width: 256 }}"
+                                 srcset="{{ block_image | image_url: width: 256 }} 1x, {{ block_image | image_url: width: 512 }} 2x"
+                                 alt="{{ block_heading | escape }}"
+                                 width="{{ block_image.width | default: 256 }}"
+                                 height="{{ block_image.height | default: 256 }}"
+                                 loading="lazy">
                         {% endif %}
                         {% comment %} Number {% endcomment %}
                         {% if section_block_numbering %}
@@ -53,7 +59,7 @@
                         {% endif %}
                         {% comment %} Content {% endcomment %}
                         {% if block_content != blank %}
-                            <div class="item__content">{{ block_content | richtext }}</div>
+                            <div class="item__content">{{ block_content }}</div>
                         {% endif %}
                         {% comment %} Link {% endcomment %}
                         {% if block_link_text != blank and block_link_url != blank %}

@@ -158,27 +158,15 @@
               "name": {{ collection.title | json }}
             }
           }
-          {% if current_tags %}
+          {% comment %}
+            Tag-filtered breadcrumb entry intentionally omitted: tag-filtered URLs are noindexed
+            (see layout/theme.liquid), so emitting BreadcrumbList JSON-LD for them is inconsistent.
+          {% endcomment %}
+          {% if current_page != 1 %}
             ,
             {
               "@type": "ListItem",
               "position": 3,
-              "item": {
-                "@id": "{{ shop.url }}{{ collection_url }}/{{- tag_handles | split: '|' | join: '+' -}}",
-                "name": {{ 'structured_data.breadcrumbs.tags_html' | t: tags: tag_names | json }}
-              }
-            }
-          {% endif %}
-          {% if current_page != 1 %}
-            {% if current_tags %}
-              {% assign position = 4 %}
-            {% else %}
-              {% assign position = 3 %}
-            {% endif %}
-            ,
-            {
-              "@type": "ListItem",
-              "position": {{ position }},
               "item": {
                 "@id": "{{ shop.url }}/collections?page={{ current_page }}",
                 "name": {{ 'structured_data.breadcrumbs.page' | t: page: current_page | json }}
@@ -290,6 +278,38 @@
         {% endcase %}
       ]
     }
+  </script>
+{% endif %}
+
+{% comment %}
+  Collection structured data
+  CollectionPage with ItemList of products on the page (skip on tag-filtered URLs since those are noindexed)
+{% endcomment %}
+
+{% if template.name == 'collection' and collection.products.size > 0 and current_tags == blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ collection.title | json }},
+    "url": "{{ shop.url }}{{ collection.url }}",
+    {% if collection.description != blank %}
+    "description": {{ collection.description | strip_html | strip | json }},
+    {% endif %}
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": {{ collection.products_count | json }},
+      "itemListElement": [
+        {%- for collection_product in collection.products limit: 24 -%}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ shop.url }}{{ collection_product.url }}"
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  }
   </script>
 {% endif %}
 

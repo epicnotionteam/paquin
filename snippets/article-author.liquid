@@ -9,7 +9,7 @@
 <div class="article__author">
     {% if article_author %}
         <div class="container--image">
-            <img class="author__image" src="{{ article_author.image | img_url: '200x200' }}" alt="{{ article_author.name }}">
+            <img class="author__image" src="{{ article_author.image | image_url: width: 200, height: 200, crop: 'center' }}" srcset="{{ article_author.image | image_url: width: 200, height: 200, crop: 'center' }} 1x, {{ article_author.image | image_url: width: 400, height: 400, crop: 'center' }} 2x" alt="{{ article_author.name }}" width="200" height="200" loading="lazy">
         </div>
         <div class="container--information">
             <p class="author__name">Written by <span>{{ article_author.name }}</span></p>

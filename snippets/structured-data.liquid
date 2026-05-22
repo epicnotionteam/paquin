@@ -313,8 +313,10 @@
 
   {%- comment -%}
     MPN: prefer a dedicated metafield (custom.mpn or custom.part_number); fall back to barcode.
-    Availability: inquiry-based products (price <= 0.01) are MadeToOrder; otherwise InStock/OutOfStock based on variant.
-    Shipping/return: emit conservative stubs so Google Merchant Center / Product rich results stay eligible.
+    Availability: inquiry-based products (price <= 0.01) use BackOrder (Google-accepted; closest match to made-to-order);
+    otherwise InStock/OutOfStock based on variant.
+    Inquiry products will emit price=0.00 as a placeholder — Schema.org Product requires a price and Google rejects without one.
+    Risk: SERPs may briefly display "$0" / "Free" for these products until users click through. Trade-off accepted for rich-result eligibility.
   {%- endcomment -%}
   {%- assign product_mpn = product.metafields.custom.mpn | default: product.metafields.custom.part_number | default: selected_variant.barcode -%}
   {%- assign is_inquiry_product = false -%}
@@ -323,7 +325,7 @@
   {%- endif -%}
   {%- assign product_availability = 'OutOfStock' -%}
   {%- if is_inquiry_product -%}
-    {%- assign product_availability = 'MadeToOrder' -%}
+    {%- assign product_availability = 'BackOrder' -%}
   {%- elsif selected_variant.available -%}
     {%- assign product_availability = 'InStock' -%}
   {%- endif -%}
@@ -356,12 +358,6 @@
         "reviewCount": "{{ product.metafields.reviews.rating_count }}"
       },
     {% endif %}
-    {%- comment -%}
-      Inquiry-based products (no fixed price): omit the Offer entirely.
-      Schema.org's Offer type requires a price; including a price-less Offer triggers Google's "Missing field price" warning.
-      Removing it is the honest expression — these products are made-to-order with pricing on application.
-    {%- endcomment -%}
-    {% unless is_inquiry_product %}
     "offers": {
       "@type": "Offer",
       "priceCurrency": {{ cart.currency.iso_code | json }},
@@ -410,9 +406,7 @@
         },
         "shippingSettingsLink": "https://paquin.com/pages/purchaser-terms"
       }
-    },
-    {% endunless %}
-    "@id": "{{ shop.url }}{{ product.url }}"
+    }
   }
   </script>
 {% endif %}

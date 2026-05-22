@@ -311,11 +311,18 @@
   {%- assign now = 'now' | date: '%Y-%m-%d' | split: '-' -%}
   {% capture year_from_now %}{{ now[0] | plus: 1 }}-{{ now[1] }}-{{ now[2] | at_most: 28 }}{% endcapture %}
 
+  {%- comment -%}
+    MPN: prefer a dedicated metafield (custom.mpn or custom.part_number); fall back to barcode.
+    Shipping/return: emit conservative stubs so Google Merchant Center / Product rich results stay eligible.
+    Override these by setting metafields on the product (custom.mpn, custom.part_number) or replacing the stubs below.
+  {%- endcomment -%}
+  {%- assign product_mpn = product.metafields.custom.mpn | default: product.metafields.custom.part_number | default: selected_variant.barcode -%}
   <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": {{ product_name | strip_newlines | json }},
+    "url": "{{ shop.url }}{{ product.url }}",
     "image": {{ product_image | img_url: '1024x1024' | prepend: 'https:' | json }},
     {% if product.description != blank %}
       "description": {{ product.description | json }},
@@ -329,17 +336,10 @@
     {% if selected_variant.sku != blank %}
       "sku": {{ selected_variant.sku | json }},
     {% endif %}
-    {% if selected_variant.barcode != blank %}
-      "mpn": {{ selected_variant.barcode | json }},
+    {% if product_mpn != blank %}
+      "mpn": {{ product_mpn | json }},
     {% endif %}
-    {% if product.metafields.reviews.rating.value != blank %}
-      "review": {
-        "@type": "Review",
-          "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "{{ product.metafields.reviews.rating.value }}"
-        }
-      },
+    {% if product.metafields.reviews.rating.value != blank and product.metafields.reviews.rating_count.value > 0 %}
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "{{ product.metafields.reviews.rating.value }}",
@@ -356,7 +356,42 @@
         "@type": "Organization",
         "name": {{ shop.name | json }}
       },
-      "priceValidUntil": {{ year_from_now | json }}
+      "priceValidUntil": {{ year_from_now | json }},
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "US",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": {{ cart.currency.iso_code | json }}
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 7,
+            "unitCode": "DAY"
+          }
+        }
+      }
     }
   }
   </script>
@@ -371,7 +406,15 @@
   {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    "name": "{{ shop.name }}",
-    "url": "{{ shop.url }}"
+    "name": {{ shop.name | json }},
+    "url": "{{ shop.url }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ shop.url }}{{ routes.search_url }}?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
 </script>

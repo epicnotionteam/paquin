@@ -40,15 +40,9 @@
       {% assign height = 630 %}
       {% assign width = height | times: og_image.aspect_ratio | round %}
     {% endif %}
-    {% capture request_url %}{{ width }}x{{ height }}{% endcapture %}
-    <meta
-      property="og:image"
-      content="https:{{ og_image | img_url: request_url }}"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https:{{ og_image | img_url: request_url }}"
-    />
+    {%- assign og_image_src = og_image | image_url: width: width, height: height, crop: 'center' -%}
+    <meta property="og:image" content="{{ og_image_src }}" />
+    <meta property="og:image:secure_url" content="{{ og_image_src }}" />
     <meta property="og:image:width" content="{{ width }}" />
     <meta property="og:image:height" content="{{ height }}" />
     {% assign image_alt = og_image.alt %}
@@ -146,10 +140,9 @@
       {% assign height = width | divided_by: 2 | round %}
       <meta name="twitter:card" content="summary_large_image">
     {% endif %}
-    {% capture request_url %}{{ width }}x{{ height }}{% endcapture %}
     <meta
       property="twitter:image"
-      content="https:{{ twitter_image | img_url: request_url, crop: 'center' }}"
+      content="{{ twitter_image | image_url: width: width, height: height, crop: 'center' }}"
     />
     <meta property="twitter:image:width" content="{{ width }}" />
     <meta property="twitter:image:height" content="{{ height }}" />

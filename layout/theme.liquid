@@ -8,9 +8,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
 
-    <link rel="preconnect" href="https://cdn.shopify.com">
-    <link rel="preconnect" href="https://fonts.shopifycdn.com">
-    <link rel="preconnect" href="https://cdn.shopifycloud.com">
+    {% comment %} Shopify auto-injects a preconnect/dns-prefetch to cdn.shopify.com via HTTP
+       Link response headers and content_for_header — no manual preconnect needed for that origin.
+       Manual preconnects to fonts.shopifycdn.com (font_url menu font), cdn.shopifycloud.com
+       (checkout/Shop Pay) and v.shopify.com (analytics) were flagged "Unused" by Lighthouse on
+       the homepage, so they're omitted to keep the count under the >4 warning threshold. {% endcomment %}
 
     <title>
       {{- page_title -}}

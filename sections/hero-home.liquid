@@ -12,8 +12,22 @@
 {% assign section_image             = section.settings.image %}
 {% assign section_blocks            = section.blocks %}
 
+{% comment %}
+  LCP optimization: preload the hero background image so the browser's preload scanner
+  starts the fetch immediately (background-image URLs are otherwise only discovered after CSS parses).
+  Browsers honor <link rel="preload"> regardless of whether it's in <head> or <body>.
+{% endcomment %}
+{% if section_image %}
+  <link rel="preload"
+        as="image"
+        fetchpriority="high"
+        href="{{ section_image | image_url: width: 1920 }}"
+        imagesrcset="{{ section_image | image_url: width: 768 }} 768w, {{ section_image | image_url: width: 1280 }} 1280w, {{ section_image | image_url: width: 1920 }} 1920w, {{ section_image | image_url: width: 2560 }} 2560w"
+        imagesizes="100vw">
+{% endif %}
+
 {% comment %} Output section {% endcomment %}
-<section class="section--hero-home theme--dark wrap--container" style="background-image: url(' {{ section_image | img_url: 'master' }}')">
+<section class="section--hero-home theme--dark wrap--container" style="background-image: url('{{ section_image | image_url: width: 1920 }}')">
    <div class="section__grid wrap--max push--center">
        {% comment %} Container [Content] {% endcomment %}
        <div class="container--content">

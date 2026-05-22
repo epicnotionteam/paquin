@@ -18,7 +18,14 @@
   otherwise the browser preloads one size and then re-fetches a different size from the CSS rule.
 {% endcomment %}
 {% if section_image %}
+  {%- comment -%}
+    theme-check-disable AssetPreload
+    The AssetPreload rule wants `image_tag: preload: true`, but that emits an actual <img> element.
+    We only need a preload link because the hero is a CSS background-image, not an <img>. Intentional skip.
+  {%- endcomment -%}
+  {% # theme-check-disable AssetPreload %}
   <link rel="preload" as="image" fetchpriority="high" href="{{ section_image | image_url: width: 1920 }}">
+  {% # theme-check-enable AssetPreload %}
 {% endif %}
 
 {% comment %} Output section {% endcomment %}
@@ -67,7 +74,7 @@
                                 {% endif %}
                                 {% comment %} Content {% endcomment %}
                                 {% if block.settings.content != blank %}
-                                    <div class="item__content">{{ block.settings.content | richtext }}</div>
+                                    <div class="item__content">{{ block.settings.content }}</div>
                                 {% endif %}
                             </div>
                         </li>

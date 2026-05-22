@@ -16,7 +16,8 @@
 						     srcset="{{ related_img | image_url: width: 250 }} 250w, {{ related_img | image_url: width: 500 }} 500w, {{ related_img | image_url: width: 750 }} 750w"
 						     sizes="(max-width: 600px) 50vw, 250px"
 						     alt="{{ item.title | escape }}"
-						     {% if related_img.width %}width="{{ related_img.width }}" height="{{ related_img.height }}"{% endif %}
+						     width="{{ related_img.width | default: 500 }}"
+						     height="{{ related_img.height | default: 500 }}"
 						     loading="lazy">
 					</a>
 				</div>

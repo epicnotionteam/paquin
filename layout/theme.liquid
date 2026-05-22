@@ -103,18 +103,23 @@
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     {%- comment -%} theme-min.css is preloaded via the stylesheet_tag's `preload: true` argument below {%- endcomment -%}
 
-    {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing {% endcomment %}
+    {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing.
+       cdnjs.cloudflare.com (Glide) is omitted: Glide only loads on specific templates,
+       and Lighthouse warns against >4 preconnects. {% endcomment %}
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     {{ content_for_header }}
 
     {{ 'theme-min.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'style.css' | asset_url | stylesheet_tag }}
+
+    {%- comment -%} style.css async-loaded (media swap trick) so it doesn't block initial render {%- endcomment -%}
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ 'style.css' | asset_url }}"></noscript>
 
     {% unless settings.reduce_animations %}
-      {{ 'ripple.css' | asset_url | stylesheet_tag }}
+      <link rel="stylesheet" href="{{ 'ripple.css' | asset_url }}" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="{{ 'ripple.css' | asset_url }}"></noscript>
     {% endunless %}
 
     {% comment %}Inject theme-object begin{% endcomment %}

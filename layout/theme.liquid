@@ -72,8 +72,7 @@
           "https://www.youtube.com/@PaquinCompany",
           "https://www.instagram.com/paquincompany/",
           "https://www.facebook.com/people/Paquin/61560993553012/",
-          "https://x.com/PaquinCompany",
-          "https://paquin.com/"
+          "https://x.com/PaquinCompany"
         ]
       }
     </script>
@@ -85,8 +84,12 @@
       <link rel="canonical" href="{{ canonical_url }}" />
     {% endif %}
 
-    {% if handle contains ‘/pages/dashboard’ %}
-      <meta name=”robots” content=”noindex”>
+    {% if request.path contains '/pages/dashboard' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% if template.name == 'search' %}
+      <meta name="robots" content="noindex,follow">
     {% endif %}
     
     <meta name="viewport" content="width=device-width">
@@ -99,6 +102,11 @@
 
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     <link rel="preload" as="style" href="{{ 'theme-min.css' | asset_url }}">
+
+    {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing {% endcomment %}
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     {{ content_for_header }}
 
@@ -139,16 +147,22 @@
     {% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article,account,login,register,activate_account,reset_password,order,addresses" | split: "," %}
     {% assign current_template = template.name %}
     {% unless current_template == blank or excluded_templates contains current_template %}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" media="print" onload="this.media='all'">
+      <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+      </noscript>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" defer></script>
     {% endunless %}
     {% comment %} Component-specific functionality {% endcomment %}
     <script src="{{ 'components-min.js' | asset_url }}" defer></script>
-    {% comment %} Typography [Typekit] {% endcomment %}
-    <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css">
-    {% comment %} Icons [Google Material Symbols] {% endcomment %}
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    {% comment %} Typography [Typekit] — async to avoid render-blocking {% endcomment %}
+    <link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/cnv1olm.css"></noscript>
+    {% comment %} Icons [Google Material Symbols] — async to avoid render-blocking {% endcomment %}
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"></noscript>
 
     <meta name="google-site-verification" content="google1ce9d3b2094b5c69" />
 

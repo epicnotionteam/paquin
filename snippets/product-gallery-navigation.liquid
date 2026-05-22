@@ -12,6 +12,18 @@
     Defines if the image should be cropped or not
 {% endcomment %}
 
+{%- comment -%}
+  Theme CSS sets thumbnail height: 100% with no explicit width: auto. With the HTML width/height
+  attributes that rimg now emits, browsers stretch the image to fill the thumbnail width.
+  object-fit: contain preserves the image's aspect ratio inside the thumbnail box.
+{%- endcomment -%}
+<style>
+  .product-gallery--media-thumbnail-img {
+    object-fit: contain !important;
+    width: auto !important;
+  }
+</style>
+
 {% if product.media.size > 0 %}
   {% assign thumb_dimensions = 'x75' %}
   {% if image_crop %}

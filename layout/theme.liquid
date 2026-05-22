@@ -99,7 +99,8 @@
       twitter_handle: x_handle,
     %}
 
-    {{ settings.type_menu | font_url | preload_tag: as: 'font' }}
+    {%- comment -%} preload_tag doesn't accept font_url output ("Input must be a theme or shop asset URL"), so use a manual link tag {%- endcomment -%}
+    <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     {%- comment -%} theme-min.css is preloaded via the stylesheet_tag's `preload: true` argument below {%- endcomment -%}
 
     {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing {% endcomment %}

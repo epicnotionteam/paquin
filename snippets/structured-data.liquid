@@ -370,7 +370,7 @@
         "@type": "OfferShippingDetails",
         "shippingRate": {
           "@type": "MonetaryAmount",
-          "value": "0",
+          "minValue": "0",
           "currency": {{ cart.currency.iso_code | json }}
         },
         "shippingDestination": {
@@ -391,7 +391,8 @@
             "maxValue": 7,
             "unitCode": "DAY"
           }
-        }
+        },
+        "shippingSettingsLink": "https://paquin.com/pages/purchaser-terms"
       }
     }
   }

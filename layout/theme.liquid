@@ -10,7 +10,6 @@
 
     <link rel="preconnect" href="https://cdn.shopify.com">
     <link rel="preconnect" href="https://fonts.shopifycdn.com">
-    <link rel="preconnect" href="https://v.shopify.com">
     <link rel="preconnect" href="https://cdn.shopifycloud.com">
 
     <title>
@@ -119,11 +118,10 @@
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     {%- comment -%} theme-min.css is preloaded via the stylesheet_tag's `preload: true` argument below {%- endcomment -%}
 
-    {% comment %} Preconnect to third-party CSS origins to overlap DNS/TLS with HTML parsing.
-       cdnjs.cloudflare.com (Glide) is omitted: Glide only loads on specific templates,
-       and Lighthouse warns against >4 preconnects. {% endcomment %}
-    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    {% comment %} Typekit, Google Fonts (Material Symbols) and v.shopify.com (analytics)
+       preconnects intentionally omitted — all three load async/deferred, so DNS/TLS overlap
+       with their actual fetch and a preconnect provides little gain while inflating the
+       preconnect count (Lighthouse warns at >4). {% endcomment %}
 
     {{ content_for_header }}
 

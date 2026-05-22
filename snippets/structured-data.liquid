@@ -356,13 +356,17 @@
         "reviewCount": "{{ product.metafields.reviews.rating_count }}"
       },
     {% endif %}
+    {%- comment -%}
+      Inquiry-based products (no fixed price): omit the Offer entirely.
+      Schema.org's Offer type requires a price; including a price-less Offer triggers Google's "Missing field price" warning.
+      Removing it is the honest expression — these products are made-to-order with pricing on application.
+    {%- endcomment -%}
+    {% unless is_inquiry_product %}
     "offers": {
       "@type": "Offer",
       "priceCurrency": {{ cart.currency.iso_code | json }},
-      {% unless is_inquiry_product %}
-        "price": {{ selected_variant.price | divided_by: 100.0 | json }},
-        "priceValidUntil": {{ year_from_now | json }},
-      {% endunless %}
+      "price": {{ selected_variant.price | divided_by: 100.0 | json }},
+      "priceValidUntil": {{ year_from_now | json }},
       "availability": "http://schema.org/{{ product_availability }}",
       "url": "{{ shop.url }}{{ selected_variant.url }}",
       "seller": {
@@ -406,7 +410,9 @@
         },
         "shippingSettingsLink": "https://paquin.com/pages/purchaser-terms"
       }
-    }
+    },
+    {% endunless %}
+    "@id": "{{ shop.url }}{{ product.url }}"
   }
   </script>
 {% endif %}

@@ -29,10 +29,8 @@
             {% endif %}
         </div>
     {% else %}
-        {% comment %} Fallback author block {% endcomment %}
-        <div class="container--image">
-            <img class="author__image" src="{{ 'default-author.jpg' | asset_url }}" alt="The Paquin Team">
-        </div>
+        {% comment %} Fallback author block — no avatar shown (no author user data and the placeholder asset isn't bundled) {% endcomment %}
+        <div class="container--image"></div>
         <div class="container--information">
             <p class="author__name">Written by <span>The Paquin Team</span></p>
             {% if show_tags and article.tags.size > 0 %}

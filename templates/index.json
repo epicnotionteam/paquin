@@ -154,7 +154,7 @@
             "link_text": "Learn more",
             "link_url": "shopify://pages/about",
             "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
-            "image": "shopify://shop_images/asset__parts--home.jpg"
+            "image": "shopify://shop_images/asset__parts--home.webp"
           }
         },
         "carousel_block_Xx43p6": {
@@ -167,7 +167,7 @@
             "link_text": "Learn more",
             "link_url": "shopify://pages/about",
             "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
-            "image": "shopify://shop_images/asset__testing--home.jpg"
+            "image": "shopify://shop_images/asset__testing--home.webp"
           }
         },
         "carousel_block_jLTDzz": {
@@ -180,7 +180,7 @@
             "link_text": "Learn more",
             "link_url": "shopify://pages/about",
             "cta": "<p>Require a custom part for your project?<br/><a href=\"/pages/contact\" title=\"Contact\">Contact our team today</a></p>",
-            "image": "shopify://shop_images/asset__partnership--home.jpg"
+            "image": "shopify://shop_images/asset__partnership--home.webp"
           }
         }
       },
@@ -439,7 +439,7 @@
         "cta_primary_url": "/pages/paquin-sensors#products-by-industry",
         "cta_secondary_text": "Contact our team",
         "cta_secondary_url": "/pages/contact/",
-        "image": "shopify://shop_images/asset__hero--home.jpg"
+        "image": "shopify://shop_images/asset__hero--home.webp"
       }
     },
     "home-posts": {

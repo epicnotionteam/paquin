@@ -10,21 +10,42 @@
 {% assign section_cta_secondary     = section.settings.cta_secondary %}
 {% assign section_cta_secondary_url = section.settings.cta_secondary_url %}
 {% assign section_image             = section.settings.image %}
+{% assign section_mobile_image      = section.settings.mobile_image | default: section_image %}
 {% assign section_blocks            = section.blocks %}
 
 {% comment %}
   LCP optimization: preload the hero background image so the browser's preload scanner
-  starts the fetch immediately. The href MUST match the URL used by the CSS background-image below —
-  otherwise the browser preloads one size and then re-fetches a different size from the CSS rule.
+  starts the fetch immediately. The href MUST match the URL used by the CSS background-image
+  below — otherwise the browser preloads one size and then re-fetches a different one.
+
+  The media attribute on each preload ensures only the variant matching the viewport actually
+  downloads, so mobile devices skip the 1920w desktop image entirely.
 {% endcomment %}
 {% if section_image %}
   {% # theme-check-disable AssetPreload %}
-  <link rel="preload" as="image" fetchpriority="high" href="{{ section_image | image_url: width: 1920 }}">
+  <link rel="preload" as="image" fetchpriority="high"
+        href="{{ section_mobile_image | image_url: width: 1024 }}"
+        media="(max-width: 767px)">
+  <link rel="preload" as="image" fetchpriority="high"
+        href="{{ section_image | image_url: width: 1920 }}"
+        media="(min-width: 768px)">
   {% # theme-check-enable AssetPreload %}
 {% endif %}
 
+{% comment %}
+  Background-image is set via a <style> block (rather than inline style="...") so we can use
+  a media query to swap between the mobile and desktop images. The CSS URLs MUST match the
+  preload hrefs above.
+{% endcomment %}
+<style>
+  .section--hero-home { background-image: url('{{ section_mobile_image | image_url: width: 1024 }}'); }
+  @media (min-width: 768px) {
+    .section--hero-home { background-image: url('{{ section_image | image_url: width: 1920 }}'); }
+  }
+</style>
+
 {% comment %} Output section {% endcomment %}
-<section class="section--hero-home theme--dark wrap--container" style="background-image: url('{{ section_image | image_url: width: 1920 }}')">
+<section class="section--hero-home theme--dark wrap--container">
    <div class="section__grid wrap--max push--center">
        {% comment %} Container [Content] {% endcomment %}
        <div class="container--content">
@@ -160,7 +181,14 @@
        {
            "type": "image_picker",
            "id": "image",
-           "label": "Image"
+           "label": "Image",
+           "info": "Used on screens 768px and wider (tablet/desktop)."
+       },
+       {
+           "type": "image_picker",
+           "id": "mobile_image",
+           "label": "Mobile Image",
+           "info": "Used on screens narrower than 768px. Falls back to the main image if not set."
        }
    ],
    "blocks": [

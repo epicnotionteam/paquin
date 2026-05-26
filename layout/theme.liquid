@@ -118,7 +118,6 @@
 
     {%- comment -%} preload_tag doesn't accept font_url output ("Input must be a theme or shop asset URL"), so use a manual link tag {%- endcomment -%}
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
-    {%- comment -%} theme-min.css is preloaded via the stylesheet_tag's `preload: true` argument below {%- endcomment -%}
 
     {% comment %} Typekit, Google Fonts (Material Symbols) and v.shopify.com (analytics)
        preconnects intentionally omitted — all three load async/deferred, so DNS/TLS overlap
@@ -152,8 +151,22 @@
       }
     </style>
 
-    {{ 'theme-min.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'style.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- comment -%}
+      theme-min.css and style.css are async-loaded via the media="print" onload trick so they
+      do not render-block. Above-the-fold rules for the homepage (header, hero, content-blocks,
+      carousel-content-media, content-introduction) are inlined via {% render 'critical-css' %}
+      earlier in the head, so visible sections render fully styled before these arrive.
+      The <link rel="preload" as="style"> hints make the browser fetch them with high priority
+      even though the stylesheet tags themselves are not render-blocking.
+    {%- endcomment -%}
+    <link rel="preload" href="{{ 'theme-min.css' | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'style.css' | asset_url }}" as="style">
+    <link rel="stylesheet" href="{{ 'theme-min.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="{{ 'theme-min.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+    </noscript>
 
     {%- comment -%} ripple.css is only animation styles — safe to async-load (no visible FOUC) {%- endcomment -%}
     {% unless settings.reduce_animations %}

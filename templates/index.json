@@ -451,6 +451,7 @@
     },
     "home-careers": {
       "type": "content-media-split",
+      "disabled": true,
       "settings": {
         "heading_small": "Careers at The Paquin Company",
         "subheading": "Where Engineering Talent Thrives",

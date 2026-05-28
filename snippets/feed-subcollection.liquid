@@ -10,9 +10,9 @@
         {% assign collection_url = collection.url %}
         {% assign collection_title = collection.title %}
         <div class="item">
-            {% comment %} Image {% endcomment %}
-            {% if collection.image %}
-                <a class="item__wrap--image" href="{{ collection_url }}">
+            {% comment %} Image (falls back to a Shopify placeholder SVG when the collection has no image set) {% endcomment %}
+            <a class="item__wrap--image" href="{{ collection_url }}" aria-label="{{ collection_title | escape }}">
+                {% if collection.image %}
                     <img class="item__image"
                          src="{{ collection.image | image_url: width: 512 }}"
                          srcset="{{ collection.image | image_url: width: 256 }} 256w, {{ collection.image | image_url: width: 512 }} 512w, {{ collection.image | image_url: width: 768 }} 768w"
@@ -21,9 +21,12 @@
                          width="{{ collection.image.width }}"
                          height="{{ collection.image.height }}"
                          loading="lazy">
-                </a>
+                {% else %}
+                    {%- capture index -%}{%- cycle '1', '2', '3', '4', '5', '6' -%}{%- endcapture -%}
+                    {{ 'collection-' | append: index | placeholder_svg_tag: 'item__image placeholder--image' }}
+                {% endif %}
+            </a>
 
-            {% endif %}
             {% comment %} Title {% endcomment %}
             <h3 class="item__title"><a href="{{ collection_url }}">{{ collection_title }}</a></h3>
         </div>

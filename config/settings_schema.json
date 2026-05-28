@@ -425,6 +425,24 @@
     ]
   },
   {
+    "name": "Placeholder image",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Theme-wide placeholder"
+      },
+      {
+        "type": "paragraph",
+        "content": "Used anywhere a product, collection, cart item, or other image is missing. Leave empty to fall back to Shopify's built-in placeholder graphics."
+      },
+      {
+        "id": "placeholder_image",
+        "type": "image_picker",
+        "label": "Placeholder image"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.products.name",
     "settings": [
       {

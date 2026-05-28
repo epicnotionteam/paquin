@@ -50,7 +50,7 @@
     "type_section_capitalize": true,
     "type_section_spacing": 2,
     "layout_max_width": 1400,
-    "placeholder_image": "shopify://shop_images/placeholder_image.png",
+    "placeholder_image": "shopify://shop_images/placeholder_image.webp",
     "product_sales_badge": false,
     "product_sales_badge_style": "percent",
     "inventory_status": false,

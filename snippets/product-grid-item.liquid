@@ -284,7 +284,7 @@
             disable_noscript: true,
           %}
         {% else %}
-          {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
+          {% render 'placeholder-image', use_setting: true %}
         {% endif %}
       {% endcapture %}
 
@@ -368,12 +368,11 @@
               %}
             {% else %}
               {% if product %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
+                {% render 'placeholder-image', use_setting: true %}
               {% else %}
-                {%- capture index -%}
-                  {%- cycle '1', '2', '3', '4', '5', '6' -%}
-                {%- endcapture -%}
-                {{ 'product-' | append: index | placeholder_svg_tag: 'placeholder--image' }}
+                {%- capture index -%}{%- cycle '1', '2', '3', '4', '5', '6' -%}{%- endcapture -%}
+                {%- capture fallback_name -%}product-{{ index }}{%- endcapture -%}
+                {% render 'placeholder-image', use_setting: true, svg_fallback: fallback_name %}
               {% endif %}
             {% endif %}
 

@@ -23,7 +23,8 @@
                          loading="lazy">
                 {% else %}
                     {%- capture index -%}{%- cycle '1', '2', '3', '4', '5', '6' -%}{%- endcapture -%}
-                    {{ 'collection-' | append: index | placeholder_svg_tag: 'item__image placeholder--image' }}
+                    {%- capture fallback_name -%}collection-{{ index }}{%- endcapture -%}
+                    {% render 'placeholder-image', use_setting: true, svg_fallback: fallback_name, class: 'item__image placeholder--image' %}
                 {% endif %}
             </a>
 

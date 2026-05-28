@@ -171,9 +171,9 @@
       "
     >
       {% if onboarding %}
-        {{ 'product-1' | placeholder_svg_tag: 'placeholder--image' }}
+        {% render 'placeholder-image', use_setting: true, svg_fallback: 'product-1' %}
       {% else %}
-        {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
+        {% render 'placeholder-image', use_setting: true %}
       {% endif %}
     </figure>
   {% endfor %}

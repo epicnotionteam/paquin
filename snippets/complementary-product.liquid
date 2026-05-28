@@ -112,7 +112,7 @@
           class: 'complementary-product__image-element',
         %}
       {% else %}
-        {{ 'image' | placeholder_svg_tag: 'complementary-product__image-placeholder placeholder-svg' }}
+        {% render 'placeholder-image', use_setting: true, class: 'complementary-product__image-placeholder placeholder-svg' %}
       {% endif %}
     </a>
   </div>

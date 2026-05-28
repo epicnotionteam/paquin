@@ -145,7 +145,7 @@
             focal_point: title_card_block.settings.image.presentation.focal_point,
           %}
         {% else %}
-          {{ 'collection-5' | placeholder_svg_tag: 'placeholder--image' }}
+          {% render 'placeholder-image', use_setting: true, svg_fallback: 'collection-5' %}
         {% endif %}
       {% endif %}
 
@@ -186,7 +186,7 @@
             focal_point: mobile_image.presentation.focal_point,
           %}
         {% else %}
-          {{ 'collection-5' | placeholder_svg_tag: 'placeholder--image' }}
+          {% render 'placeholder-image', use_setting: true, svg_fallback: 'collection-5' %}
         {% endif %}
       {% endif %}
 

@@ -1,0 +1,46 @@
+{% comment %}
+  Renders a placeholder image used wherever a real image is missing.
+
+  Scope:
+    The merchant-uploaded image at Theme Settings > Placeholder image is intentionally
+    NOT used everywhere. It's opt-in via the `use_setting: true` argument so it only
+    appears on product, collection, and sub-collection item cards / galleries — contexts
+    where a marketing-style placeholder looks consistent. Other surfaces (cart drawer,
+    search dropdown, order summary, dynamic sections, etc.) call this snippet without
+    the flag and keep the Shopify built-in placeholder SVG behavior.
+
+  Arguments:
+    use_setting  (boolean) If true AND the merchant has uploaded a Theme Settings >
+                            Placeholder image, that image is rendered as <img>. Otherwise
+                            (or if no setting image is uploaded) the Shopify built-in
+                            placeholder SVG is rendered. Defaults to false.
+    class        (string)  CSS class(es) to apply to the output element. Defaults to
+                            "placeholder--image".
+    svg_fallback (string)  Name of the Shopify built-in placeholder SVG to use as the
+                            fallback. Common values: "image", "collection-1" ...
+                            "collection-6", "product-1" ... "product-6", "lifestyle-1"
+                            ... "lifestyle-3", "logo". Defaults to "image".
+    alt          (string)  Alt text for the uploaded image variant. Defaults to empty.
+
+  Usage:
+    {% render 'placeholder-image' %}                                            // SVG only
+    {% render 'placeholder-image', svg_fallback: 'collection-1' %}              // SVG only
+    {% render 'placeholder-image', use_setting: true, class: 'item__image' %}   // setting > SVG
+{% endcomment %}
+
+{%- assign _class = class | default: 'placeholder--image' -%}
+{%- assign _svg_fallback = svg_fallback | default: 'image' -%}
+{%- assign _alt = alt | default: '' -%}
+
+{%- if use_setting and settings.placeholder_image != blank -%}
+  <img class="{{ _class }}"
+       src="{{ settings.placeholder_image | image_url: width: 512 }}"
+       srcset="{{ settings.placeholder_image | image_url: width: 256 }} 256w, {{ settings.placeholder_image | image_url: width: 512 }} 512w, {{ settings.placeholder_image | image_url: width: 768 }} 768w"
+       sizes="(max-width: 600px) 50vw, 33vw"
+       alt="{{ _alt | escape }}"
+       width="{{ settings.placeholder_image.width }}"
+       height="{{ settings.placeholder_image.height }}"
+       loading="lazy">
+{%- else -%}
+  {{ _svg_fallback | placeholder_svg_tag: _class }}
+{%- endif -%}

@@ -93,7 +93,31 @@
       }
     </script>
 
-    {% if template contains 'collection' and current_tags %}
+    {%- comment -%}
+      Noindex any filtered collection view and point its canonical at the unfiltered parent.
+
+      Catches two patterns:
+        - Legacy `/collections/X/tag-handle` URLs (populates `current_tags`).
+        - Modern Shopify faceted URLs `?filter.p.*` (populates active values on `collection.filters`).
+      Either case is treated as duplicate content relative to the parent collection page.
+    {%- endcomment -%}
+    {%- liquid
+      assign has_filter = false
+      if template contains 'collection'
+        if current_tags
+          assign has_filter = true
+        endif
+        unless has_filter
+          for f in collection.filters
+            if f.active_values.size > 0
+              assign has_filter = true
+              break
+            endif
+          endfor
+        endunless
+      endif
+    -%}
+    {% if has_filter %}
       <meta name="robots" content="noindex" />
       <link rel="canonical" href="{{ shop.url }}{{ collection.url }}" />
     {% else %}

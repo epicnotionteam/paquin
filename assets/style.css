@@ -4695,6 +4695,12 @@ hr,
   .template-collection .productgrid--items .productitem {
     padding: 12px;
     padding: 1.2rem;
+    /* Empire's base .productitem sets `transition: height 250ms, box-shadow 250ms`.
+       On un-hover the height animates from the floated card's content-height back to
+       row-height over 250ms — and the absolutely-positioned .productitem--actions
+       track the animating bottom edge, briefly overlapping the title text mid-transition.
+       Disabling the transition makes the state change instant and eliminates the jump. */
+    transition: none !important;
   }
   .template-collection .productgrid--items .productitem .productitem--actions {
     display: block;

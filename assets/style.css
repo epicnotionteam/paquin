@@ -4598,8 +4598,6 @@ hr,
 }
 .productgrid--items .productgrid--item {
   padding: 0;
-  /* Position context for the absolute .productitem on hover (see hover rule below). */
-  position: relative;
   transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
   margin: 0 !important;
   width: 100% !important;
@@ -4695,39 +4693,17 @@ hr,
   .template-collection .productgrid--items .productitem {
     padding: 12px;
     padding: 1.2rem;
-    /* Empire's base .productitem sets `transition: height 250ms, box-shadow 250ms`.
-       On un-hover the height animates from the floated card's content-height back to
-       row-height over 250ms — and the absolutely-positioned .productitem--actions
-       track the animating bottom edge, briefly overlapping the title text mid-transition.
-       Disabling the transition makes the state change instant and eliminates the jump. */
-    transition: none !important;
   }
   .template-collection .productgrid--items .productitem .productitem--actions {
     display: block;
   }
+  /* Hover: only visual changes (white background + drop shadow). The card stays at row-height
+     and stays in the cell's flow, so neighbors don't shift, no overlap during rapid hover, and
+     no flicker. Tradeoff: short content cards have whitespace between the title and the
+     bottom-pinned action buttons — accepted in exchange for layout stability. */
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     background-color: white;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
-    /* Float the hovered card OUT of the grid cell flow. The cell (.productgrid--item) keeps its
-       original row-height slot — so neighbors don't shift — while this card sizes only to its
-       own content. left/right:0 keeps it the same width as the cell; z-index lifts it above
-       sibling cards in case the card grows past its cell. */
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 200;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-  /* .productitem--actions is absolutely positioned to bottom:12px in the stretched layout.
-     Now that the card floats free at content height, switch the actions to normal flow so
-     they appear directly under the title/price instead of overlapping it. */
-  .template-collection .productgrid--items .productgrid--item:hover .productitem .productitem--actions {
-    position: static !important;
-    bottom: auto !important;
-    margin: 12px 0 0 !important;
-    margin: 1.2rem 0 0 !important;
   }
 }
 @media (min-width: 77.5em) {

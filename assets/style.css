@@ -4707,6 +4707,15 @@ hr,
     height: auto !important;
     align-self: start;
   }
+  /* .productitem--actions is absolutely positioned (bottom: 12px) so it sits at the bottom of the
+     stretched card. Once the hovered card shrinks to content height, that absolute positioning
+     would overlap the title — so switch it to normal flow under the content instead. */
+  .template-collection .productgrid--items .productgrid--item:hover .productitem .productitem--actions {
+    position: static !important;
+    bottom: auto !important;
+    margin: 12px 0 0 !important;
+    margin: 1.2rem 0 0 !important;
+  }
 }
 @media (min-width: 77.5em) {
   .template-collection .productgrid--items {

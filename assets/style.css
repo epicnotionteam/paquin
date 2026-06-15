@@ -4598,6 +4598,8 @@ hr,
 }
 .productgrid--items .productgrid--item {
   padding: 0;
+  /* Position context for the absolute .productitem on hover (see hover rule below). */
+  position: relative;
   transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
   margin: 0 !important;
   width: 100% !important;
@@ -4700,16 +4702,21 @@ hr,
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     background-color: white;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
-    /* Empire's base .productitem rule sets min-height:100% so cards stretch to the row's
-       tallest sibling. Override on hover so the white card matches only the hovered item's
-       content height. The grid cell still occupies its row-height slot, so siblings don't shift. */
+    /* Float the hovered card OUT of the grid cell flow. The cell (.productgrid--item) keeps its
+       original row-height slot — so neighbors don't shift — while this card sizes only to its
+       own content. left/right:0 keeps it the same width as the cell; z-index lifts it above
+       sibling cards in case the card grows past its cell. */
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
     min-height: 0 !important;
     height: auto !important;
-    align-self: start;
   }
-  /* .productitem--actions is absolutely positioned (bottom: 12px) so it sits at the bottom of the
-     stretched card. Once the hovered card shrinks to content height, that absolute positioning
-     would overlap the title — so switch it to normal flow under the content instead. */
+  /* .productitem--actions is absolutely positioned to bottom:12px in the stretched layout.
+     Now that the card floats free at content height, switch the actions to normal flow so
+     they appear directly under the title/price instead of overlapping it. */
   .template-collection .productgrid--items .productgrid--item:hover .productitem .productitem--actions {
     position: static !important;
     bottom: auto !important;

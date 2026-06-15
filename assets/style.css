@@ -4697,10 +4697,6 @@ hr,
   .template-collection .productgrid--items .productitem .productitem--actions {
     display: block;
   }
-  /* Hover: only visual changes (white background + drop shadow). The card stays at row-height
-     and stays in the cell's flow, so neighbors don't shift, no overlap during rapid hover, and
-     no flicker. Tradeoff: short content cards have whitespace between the title and the
-     bottom-pinned action buttons — accepted in exchange for layout stability. */
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     background-color: white;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;

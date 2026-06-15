@@ -4700,6 +4700,12 @@ hr,
   .template-collection .productgrid--items .productgrid--item:hover .productitem {
     background-color: white;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.24) !important;
+    /* Empire's base .productitem rule sets min-height:100% so cards stretch to the row's
+       tallest sibling. Override on hover so the white card matches only the hovered item's
+       content height. The grid cell still occupies its row-height slot, so siblings don't shift. */
+    min-height: 0 !important;
+    height: auto !important;
+    align-self: start;
   }
 }
 @media (min-width: 77.5em) {

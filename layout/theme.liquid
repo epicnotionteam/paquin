@@ -217,6 +217,38 @@
     </script>
     {% comment %}Inject theme-object end{% endcomment %}
 
+    {%- comment -%}
+      Strip Shopify search-attribution params from the address bar after the page settles so
+      URLs copied from the address bar (commonly pasted into sales emails) stay clean.
+
+      Why delayed: Shopify Search & Discovery's storefront script reads these params at
+      page-load time to log click-through / position attribution. Running on `load` + 500ms
+      gives that tracker time to fire before we wipe — analytics stay intact, address bar
+      gets cleaned. `history.replaceState` does not trigger navigation, so it has no SEO
+      effect (the canonical and the URL Google indexes are unchanged).
+
+      Params handled:
+        _pos, _sid       full search results page (position + search id)
+        _psq, _ss, _v    predictive search dropdown (query, source, tracker version)
+        _fid, _pf        collection facet/filter params (defensive)
+    {%- endcomment -%}
+    <script>
+      window.addEventListener('load', function () {
+        if (!window.history || !window.history.replaceState) return;
+        setTimeout(function () {
+          try {
+            var url = new URL(window.location.href);
+            var dirty = ['_pos', '_sid', '_ss', '_psq', '_v', '_fid', '_pf'];
+            var changed = false;
+            dirty.forEach(function (k) {
+              if (url.searchParams.has(k)) { url.searchParams.delete(k); changed = true; }
+            });
+            if (changed) window.history.replaceState({}, '', url.toString());
+          } catch (e) {}
+        }, 500);
+      });
+    </script>
+
     {% comment %} Carousel [Glide] {% endcomment %}
     {% comment %} Output on custom pages only {% endcomment %}
     {% assign excluded_templates = "collection,product,customers/account,customers/login,customers/register,customers/activate_account,customers/reset_password,customers/order,customers/addresses,checkout,cart,blog,article,account,login,register,activate_account,reset_password,order,addresses" | split: "," %}

@@ -135,6 +135,48 @@
             grid-template-columns: repeat(3, minmax(auto, 1fr));
         }
     }
+
+    {% comment %}
+        Hero [Full width]
+        style.css caps .collection--title / .collection--description at 800px inside
+        .productgrid--masthead. theme-min.css overrides their width but not max-width,
+        so the copy stopped ~450px short of the container edge. Release the cap here and
+        let the image column scale with it so the two columns stay balanced.
+    {% endcomment %}
+    #shopify-section-{{ section.id }} #collection-hero-flex {
+        gap: 40px !important;
+    }
+
+    #shopify-section-{{ section.id }} #collection-hero-flex > .ch-left {
+        flex: 0 0 clamp(320px, 24%, 420px) !important;
+        width: auto !important;
+        max-width: 420px !important;
+        min-width: 320px !important;
+    }
+
+    #shopify-section-{{ section.id }} #collection-hero-flex .ch-img img {
+        max-width: 100% !important;
+    }
+
+    {% comment %}
+        Set a px value here (e.g. 1100px) if the description lines read too long.
+    {% endcomment %}
+    #shopify-section-{{ section.id }} #collection-hero-flex .ch-right .collection--title,
+    #shopify-section-{{ section.id }} #collection-hero-flex .ch-right .collection--description {
+        max-width: none !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+        #shopify-section-{{ section.id }} #collection-hero-flex {
+            gap: 24px !important;
+        }
+        #shopify-section-{{ section.id }} #collection-hero-flex > .ch-left {
+            flex: 0 0 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+        }
+    }
 {% endstyle %}
 
 {% render 'breadcrumbs' %}

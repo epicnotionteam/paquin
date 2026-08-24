@@ -247,7 +247,16 @@
                                 <div class="ch-tabs" data-ch-tabs>
                                     <div class="ch-tabs__nav" role="tablist" aria-label="Resources">
                                     {% for key in tab_keys %}
-                                        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
+                                        {%- comment -%}
+                                            Metafield keys are always lowercase/underscored, and the lookup below is
+                                            case-sensitive — so normalize whatever was typed into resource_tab_names.
+                                            Tabs whose metafield is missing or empty are skipped entirely rather than
+                                            rendering a button that opens a blank panel.
+                                        {%- endcomment -%}
+                                        {%- assign lookup_key = key | downcase | strip | replace: ' ', '_' -%}
+                                        {%- assign mf = collection.metafields.custom[lookup_key] -%}
+                                        {%- unless mf == nil or mf.value == blank -%}
+                                        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: lookup_key -%}
                                         <button class="button--base button--outline button--icon-before"
                                         type="button" role="tab"
                                         aria-selected="false"
@@ -256,29 +265,43 @@
                                         data-ch-tab="{{ panel_id }}">
                                         {{ key | replace: '_', ' ' | capitalize }}
                                         </button>
+                                        {%- endunless -%}
                                     {% endfor %}
                                 </div>
 
                                 <div class="ch-tabs__panels">
                                     {% for key in tab_keys %}
-                                        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: forloop.index -%}
-                                        {%- assign files = collection.metafields.custom[key].value -%}
+                                        {%- assign lookup_key = key | downcase | strip | replace: ' ', '_' -%}
+                                        {%- assign mf = collection.metafields.custom[lookup_key] -%}
+                                        {%- unless mf == nil or mf.value == blank -%}
+                                        {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: lookup_key -%}
 
                                         <div class="ch-tabs__panel" role="tabpanel"
                                             id="{{ panel_id }}"
                                             aria-labelledby="ch-tab-{{ panel_id }}"
                                             hidden>
                                             <div class="supporting-docs__buttons ch-tabs__buttons">
-                                                {% if files != blank %}
-                                                {% for f in files %}
+                                                {%- comment -%}
+                                                    Handles list.file_reference, list.link, and the single-value
+                                                    variants of both. Label: .text (link) then .alt / .filename (file).
+                                                {%- endcomment -%}
+                                                {%- if mf.type contains 'list.' -%}
+                                                {% for f in mf.value %}
                                                     <a href="{{ f.url }}" class="button--base button--icon-before button--icon-arrow-forward" target="_blank" rel="noopener">
                                                     <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                                                    <span class="button__text">{{ f.alt | default: f.filename }}</span>
+                                                    <span class="button__text">{{ f.text | default: f.alt | default: f.filename | default: 'Download' }}</span>
                                                     </a>
                                                 {% endfor %}
-                                                {% endif %}
+                                                {%- else -%}
+                                                    {%- assign f = mf.value -%}
+                                                    <a href="{{ f.url }}" class="button--base button--icon-before button--icon-arrow-forward" target="_blank" rel="noopener">
+                                                    <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
+                                                    <span class="button__text">{{ f.text | default: f.alt | default: f.filename | default: 'Download' }}</span>
+                                                    </a>
+                                                {%- endif -%}
                                             </div>
                                         </div>
+                                        {%- endunless -%}
                                     {% endfor %}
                                 </div>
                             </div>

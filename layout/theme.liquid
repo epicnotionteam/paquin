@@ -229,7 +229,7 @@
 
       Params handled:
         _pos, _sid       full search results page (position + search id)
-        _psq, _ss, _v    predictive search dropdown (query, source, tracker version)
+        _psq, _psid, _ss, _v    predictive search dropdown (query, session id, source, tracker version)
         _fid, _pf        collection facet/filter params (defensive)
     {%- endcomment -%}
     <script>
@@ -238,7 +238,7 @@
         setTimeout(function () {
           try {
             var url = new URL(window.location.href);
-            var dirty = ['_pos', '_sid', '_ss', '_psq', '_v', '_fid', '_pf'];
+            var dirty = ['_pos', '_sid', '_psid', '_ss', '_psq', '_v', '_fid', '_pf'];
             var changed = false;
             dirty.forEach(function (k) {
               if (url.searchParams.has(k)) { url.searchParams.delete(k); changed = true; }

@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "collection_banner_qq8zWD": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "heading": "",
+        "description": "",
+        "overview_link": "https://paquin.com/pages/global-intex?view=overview-product",
+        "overview_text": "Overview",
+        "technical_link": "https://paquin.com/pages/global-intex?view=technical-resource-guide",
+        "technical_text": "Technical Guide",
+        "banner_height": 450,
+        "overlay_opacity": 0.4
+      }
+    },
     "main": {
       "type": "static-collection",
       "blocks": {
@@ -54,6 +69,7 @@
     }
   },
   "order": [
+    "collection_banner_qq8zWD",
     "main",
     "static-recently-viewed"
   ]

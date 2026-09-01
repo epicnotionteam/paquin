@@ -1,0 +1,363 @@
+<section class="collection-banner-section">
+  <div class="collection-banner-wrapper">
+    {% if section.settings.banner_image != blank %}
+    <div class="collection-banner-image">
+      <img
+        src="{{ section.settings.banner_image | image_url: width: 2000 }}"
+        alt="{{ section.settings.heading | escape }}"
+        loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="collection-banner-overlay">
+      <div class="collection-banner-content">
+
+        <h1>{{ collection.title }}</h1>
+        <p>{{ collection.description }}</p>
+
+        <div class="collection-banner-buttons">
+
+          <a
+            href="{{ section.settings.overview_link }}"
+            class="collection-banner-btn primary">
+            <span>{{ section.settings.overview_text }}</span>
+
+            <span class="btn-arrow">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6H15" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"></path>
+                <path d="M11 1L16.5 6L11 11" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </a>
+
+          {% if section.settings.technical_link != blank %}
+          <a
+            href="{{ section.settings.technical_link }}"
+            class="collection-banner-btn secondary">
+            <span>{{ section.settings.technical_text }}</span>
+
+            <span class="btn-arrow">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6H15" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"></path>
+                <path d="M11 1L16.5 6L11 11" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+
+          </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.collection-banner-section {
+  width: 100%;
+}
+
+.collection-banner-wrapper {
+  position: relative;
+  min-height: {{ section.settings.banner_height }}px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-banner-image {
+  position: absolute;
+  inset: 0;
+}
+
+.collection-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-banner-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0,0,0,{{ section.settings.overlay_opacity }});
+  padding: 40px 20px;
+}
+
+.collection-banner-content {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.collection-banner-content h1 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.collection-banner-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.collection-banner-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.collection-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 190px;
+  height: 62px;
+  padding: 0 28px;
+
+  background: #0F7F92;
+  color: #ffffff;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  border: 2px solid #0F7F92;
+  border-radius: 3px;
+
+  transition: all 0.3s ease;
+}
+/* Overview button - no hover effect */
+.collection-banner-btn.primary:hover {
+  background: #0F7F92;
+  color: #ffffff;
+}
+
+.collection-banner-btn.primary:hover .btn-arrow {
+  transform: none;
+}
+
+
+/* Technical Guide / Secondary Button */
+.collection-banner-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.collection-banner-btn.secondary:hover {
+  background: #ffffff;
+  color: #1F2937;
+  border-color: #ffffff;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .collection-banner-wrapper {
+    min-height: 420px;
+  }
+
+  .collection-banner-overlay {
+    padding: 50px 30px;
+  }
+
+  .collection-banner-content {
+    max-width: 700px;
+  }
+
+  .collection-banner-content h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 12px;
+  }
+
+  .collection-banner-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+
+  .collection-banner-btn {
+    min-width: 180px;
+    height: 58px;
+    padding: 0 24px;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+  .collection-banner-wrapper {
+    min-height: 360px;
+  }
+
+  .collection-banner-overlay {
+    padding: 40px 20px;
+  }
+
+  .collection-banner-content {
+    width: 100%;
+  }
+
+  .collection-banner-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .collection-banner-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+
+  .collection-banner-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+
+  .collection-banner-btn {
+    width: 100%;
+    max-width: 280px;
+    height: 56px;
+    padding: 0 22px;
+
+    font-size: 13px;
+    gap: 14px;
+  }
+
+
+  .btn-arrow svg {
+    width: 16px;
+    height: 11px;
+  }
+
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .collection-banner-wrapper {
+    min-height: 320px;
+  }
+
+  .collection-banner-overlay {
+    padding: 30px 16px;
+  }
+
+  .collection-banner-content h1 {
+    font-size: 28px;
+  }
+
+  .collection-banner-content p {
+    font-size: 14px;
+  }
+
+  .collection-banner-btn {
+    max-width: 260px;
+    height: 52px;
+  }
+
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Explore Our Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our products, features and detailed technical information."
+    },
+    {
+      "type": "url",
+      "id": "overview_link",
+      "label": "Overview Page Link"
+    },
+    {
+      "type": "text",
+      "id": "overview_text",
+      "label": "Overview Button Text",
+      "default": "Overview"
+    },
+    {
+      "type": "url",
+      "id": "technical_link",
+      "label": "Technical Guide Page Link"
+    },
+    {
+      "type": "text",
+      "id": "technical_text",
+      "label": "Technical Guide Button Text",
+      "default": "Technical Guide"
+    },
+    {
+      "type": "range",
+      "id": "banner_height",
+      "label": "Banner Height",
+      "min": 250,
+      "max": 700,
+      "step": 50,
+      "default": 450
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Image Overlay Darkness",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.1,
+      "default": 0.4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Banner"
+    }
+  ]
+}
+{% endschema %}

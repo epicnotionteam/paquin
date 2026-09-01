@@ -1,0 +1,303 @@
+<section class="why-choose-section">
+  <div class="page-width">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="why-choose-title">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="why-choose-grid">
+
+      {% for block in section.blocks %}
+        <div class="why-item" {{ block.shopify_attributes }}>
+
+          <div class="why-item-inner">
+
+            {% if block.settings.icon != blank %}
+              <div class="why-icon">
+                <img
+                  src="{{ block.settings.icon | image_url: width: 84 }}"
+                  alt=""
+                  loading="lazy"
+                  width="42"
+                  height="42"
+                >
+              </div>
+            {% endif %}
+
+            {% if block.settings.title != blank %}
+              <h3 class="why-item-title">
+                {{ block.settings.title }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="why-item-text">
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+
+          </div>
+
+        </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.why-choose-section {
+    background: #fff;
+}
+
+.why-choose-section .page-width {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.why-choose-title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
+
+.why-item {
+    border-right: 1px solid #ececec;
+}
+
+.why-item:last-child {
+    border-right: none;
+}
+
+.why-item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 245px;
+    padding: 42px;
+}
+
+.why-icon{
+    width:72px;
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 32px;
+    flex-shrink:0;
+}
+
+.why-icon img{
+    width:60px;
+    height:60px;
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+
+.why-item-title {
+    margin: 0 0 18px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.why-item-text {
+    max-width: 190px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #555;
+}
+
+.why-item-text p {
+    margin: 0;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 991px) {
+
+    .why-choose-section {
+        padding: 50px 0;
+    }
+
+    .why-choose-section .page-width {
+        padding: 0 20px;
+    }
+
+    .why-choose-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-item {
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .why-item:nth-child(even) {
+        border-right: none;
+    }
+
+    .why-item-inner {
+        min-height: 220px;
+        padding: 36px 20px;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767px) {
+
+    .why-choose-section {
+        padding: 40px 0;
+    }
+
+    .why-choose-section .page-width {
+        padding: 0 15px;
+    }
+
+    .why-choose-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-item {
+        border-right: none;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .why-item:last-child {
+        border-bottom: none;
+    }
+
+    .why-item-inner {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .why-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 20px;
+    }
+
+    .why-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .why-item-title {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .why-item-text {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+
+</style>
+
+{% schema %}
+{
+  "name": "Why Choose Us",
+  "tag": "section",
+  "class": "section-why-choose",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "WHY CHOOSE ACCUMULATORS INC. FROM PAQUIN?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "AUTHORIZED DISTRIBUTOR"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "We are an authorised distributor of Accumulators Inc. products."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Us",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

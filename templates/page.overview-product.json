@@ -10,11 +10,520 @@
 {
   "sections": {
     "main": {
-      "type": "page",
+      "type": "overview-banner",
+      "settings": {
+        "bg_image": "shopify://shop_images/banner-bg-image.webp",
+        "product_image": "shopify://shop_images/banner-main-image.webp",
+        "small_heading": "Hydraulic Accumulators for Critical Industrial Projects",
+        "heading": "Accumulators Inc.\nHydraulic Accumulators\n| Sold by Paquin",
+        "text": "<p>Paquin is anauthorized distributor of Accumulators Inc. … one of the most trusted names inhydro-pneumatic accumulators since 1987. We stock bladder, piston, anddiaphragm accumulators, spare parts, and accessories, backed by ASME, ISO 9001,and DNV certification. Buy direct, get technical support, and ship fast.</p>",
+        "button_label": "Shop Accumulators Inc. Products",
+        "button_link": "/collections/accumulators",
+        "button2_label": "REQUEST A QUOTE",
+        "button2_link": "shopify://pages/contact"
+      }
+    },
+    "trust_badges_fVEDnD": {
+      "type": "trust-badges",
+      "blocks": {
+        "badge_AtMUeV": {
+          "type": "badge",
+          "settings": {
+            "icon": "shopify://shop_images/new-iso-icon.svg",
+            "heading": "ISO 9001",
+            "subheading": "Certified"
+          }
+        },
+        "badge_P9yM6z": {
+          "type": "badge",
+          "settings": {
+            "icon": "shopify://shop_images/new-asme-icon.svg",
+            "heading": "ASME",
+            "subheading": "U-Stamp Approved"
+          }
+        },
+        "badge_gehUWf": {
+          "type": "badge",
+          "settings": {
+            "icon": "shopify://shop_images/new-asme-icon.svg",
+            "heading": "Authorized",
+            "subheading": "Distributor"
+          }
+        },
+        "badge_8ThcCq": {
+          "type": "badge",
+          "settings": {
+            "icon": "shopify://shop_images/new-shipping-icon.svg",
+            "heading": "Ships form",
+            "subheading": "Stock"
+          }
+        }
+      },
+      "block_order": [
+        "badge_AtMUeV",
+        "badge_P9yM6z",
+        "badge_gehUWf",
+        "badge_8ThcCq"
+      ],
+      "disabled": true,
+      "name": "Trust Badges",
       "settings": {}
+    },
+    "product_spotlight_RnHc8B": {
+      "type": "top-products",
+      "blocks": {
+        "product_Gtf46L": {
+          "type": "product",
+          "settings": {
+            "badge": "BEST SELLER",
+            "image": "shopify://shop_images/product-spotlight-img1.webp",
+            "category": "",
+            "title": "Bladder Accumulators",
+            "specification": "3,000 PSI | 1 Qt – 15 Gal",
+            "description": "<ul><li>Rapid hydraulic energy <br/>release</li><li>Complete gas/fluid <br/>separation</li><li>ASME no-weld shell</li><li>Replacement kits in stock</li></ul>",
+            "button_label": "SHOP BLADDER ACCUMULATORS",
+            "button_link": "/collections/accumulators?type=bladder"
+          }
+        },
+        "product_kxzNC8": {
+          "type": "product",
+          "settings": {
+            "badge": " HIGH PRESSURE ",
+            "image": "shopify://shop_images/IMG_5605.webp",
+            "category": "",
+            "title": "Piston Accumulators",
+            "specification": "Up to 10,000 PSI | 1 Qt – 140 Gal",
+            "description": "<ul><li>Handles larger volumes <br/>& higher temps</li><li>Superior gas compression <br/>efficiency</li><li>Fully customizable bore <br/>sizes</li><li>Subsea/offshore rated <br/>options</li></ul>",
+            "button_label": "SHOP PISTON ACCUMULATORS",
+            "button_link": "/collections/accumulators?type=piston"
+          }
+        },
+        "product_hymHMf": {
+          "type": "product",
+          "settings": {
+            "badge": "COMPACT SERIES ",
+            "image": "shopify://shop_images/IMG_5508.webp",
+            "category": "",
+            "title": "Diaphragm Accumulators",
+            "specification": "3,000 PSI | 20–90 cubic inch",
+            "description": "<ul><li>Ideal for mobile/off-road <br/>systems</li><li>Pulsation dampening specialists</li><li>Lightweight & <br/>space-saving design</li><li>Low-cost entry, fast <br/>delivery</li></ul>",
+            "button_label": "SHOP DIAPHRAGM ACCUMULATORS",
+            "button_link": "/collections/accumulators?type=diaphragm"
+          }
+        },
+        "product_EmB3Aq": {
+          "type": "product",
+          "settings": {
+            "badge": "SAFETY ",
+            "image": "shopify://shop_images/IMG_5486.webp",
+            "category": "",
+            "title": "Accumulator Safety Blocks",
+            "specification": "NFPA T3.22 Compliant",
+            "description": "<ul><li>Integrated dump & isolation valve</li><li>Protects personnel in <br/>maintenance</li><li>Allows single-unit removal <br/>from racks</li><li>Eliminates full-system shutdown</li></ul>",
+            "button_label": "SHOP SAFETY BLOCKS",
+            "button_link": "/collections/accumulators?type=safety"
+          }
+        },
+        "product_GFaWEH": {
+          "type": "product",
+          "settings": {
+            "badge": " REPLACEMENT PARTS ",
+            "image": "shopify://shop_images/IMG_5521.webp",
+            "category": "",
+            "title": "Bladder & Seal Kits",
+            "specification": "1 Qt, 1 Gal, 2.5, 5, 10 Gal",
+            "description": "<ul><li>OEM-exact fit, no machining <br/>needed</li><li>Buna-Nitrile bladder + <br/>valve + O-ring</li><li>Extends accumulator service <br/>life</li><li>Ships from stock</li></ul>",
+            "button_label": "SHOP REPLACEMENT KITS",
+            "button_link": "/collections/accumulators?type=kits"
+          }
+        },
+        "product_MP47Rq": {
+          "type": "product",
+          "settings": {
+            "badge": " FIELD SERVICE",
+            "image": "shopify://shop_images/Picture1.webp",
+            "category": "",
+            "title": "Nitrogen Charging Kits",
+            "specification": "Up to 3,000 PSI | SS fittings",
+            "description": "<ul><li>Complete precharge kit in one order</li><li>Stainless steel gauges <br/>& hoses</li><li>Required for all <br/>accumulator setup</li><li>Works with any brand <br/>accumulator</li></ul>",
+            "button_label": "SHOP CHARGING KITS",
+            "button_link": "/collections/accumulators?type=charging"
+          }
+        }
+      },
+      "block_order": [
+        "product_Gtf46L",
+        "product_kxzNC8",
+        "product_hymHMf",
+        "product_EmB3Aq",
+        "product_GFaWEH",
+        "product_MP47Rq"
+      ],
+      "name": "Product Spotlight",
+      "settings": {
+        "badge": "TOP PRODUCTS",
+        "heading": "Accumulators Built for Critical Industrial Demands",
+        "description": "Explore the Accumulators Inc product line — engineered to exacting standards and trusted by procurement managers and hydraulic engineers on the world's most important projects."
+      }
+    },
+    "why_choose_us_AQ7LXH": {
+      "type": "why-choose-us",
+      "blocks": {
+        "feature_LQRGFJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-authorized-distributor.svg",
+            "title": "AUTHORIZED DISTRIBUTOR",
+            "text": "We are an authorized  distributor of Accumulators Inc, products."
+          }
+        },
+        "feature_RUgpYx": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-fast-shipping.svg",
+            "title": "FAST SHIPPING",
+            "text": "Most items ship from stock same day to minimize downtime."
+          }
+        },
+        "feature_ziexfX": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-engineering-support.svg",
+            "title": "ENGINEERING SUPPORT",
+            "text": "Our engineers help you select the right accumulator for your application."
+          }
+        },
+        "feature_8maL99": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-certified-quality.svg",
+            "title": "CERTIFIED QUALITY",
+            "text": "ASME, ISO 9001, and DNV certified for safety and reliability."
+          }
+        },
+        "feature_QfdhKe": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-large-inventory.svg",
+            "title": "LARGE INVENTORY",
+            "text": "Wide range of sides and models ready to ship when you need them."
+          }
+        },
+        "feature_DbRGi4": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/new-custom-solutions.svg",
+            "title": "CUSTOM SOLUTIONS",
+            "text": "Special builds and custom configurations available to meet unique needs."
+          }
+        }
+      },
+      "block_order": [
+        "feature_LQRGFJ",
+        "feature_RUgpYx",
+        "feature_ziexfX",
+        "feature_8maL99",
+        "feature_QfdhKe",
+        "feature_DbRGi4"
+      ],
+      "disabled": true,
+      "name": "Why Choose Us",
+      "settings": {
+        "heading": "WHY CHOOSE ACCUMULATORS INC. FROM PAQUIN?"
+      }
+    },
+    "content_blocks_j9xKL4": {
+      "type": "content-blocks",
+      "blocks": {
+        "content_block_MpAKTV": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-authorized-distributor-crop.svg",
+            "image_type": "logo",
+            "heading": "AUTHORIZED DISTRIBUTOR",
+            "content": "<p>We are an authorized distributor of Accumulators Inc, products.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_FkqyB8": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-fast-shipping-crop_ea99b9cd-0738-4d3c-a9e5-fb2e09652869.svg",
+            "image_type": "logo",
+            "heading": "FAST SHIPPING",
+            "content": "<p>Most items ship from stock same day to minimize downtime.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_rVJBcd": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-engineering-support-crop_f6a7a0a0-4c70-442a-95d0-1f791f86877b.svg",
+            "image_type": "logo",
+            "heading": "ENGINEERING SUPPORT",
+            "content": "<p>Our engineers help you select the right accumulator for your application.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_UYRX8K": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-certified-quality-crop.svg",
+            "image_type": "logo",
+            "heading": "CERTIFIED QUALITY",
+            "content": "<p>ASME, ISO 9001, and DNV certified for safety and reliability.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_iXktqE": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-large-inventory-crop.svg",
+            "image_type": "logo",
+            "heading": "LARGE INVENTORY",
+            "content": "<p>Wide range of sides and models ready to ship when you need them.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_pNbcCr": {
+          "type": "content-block",
+          "settings": {
+            "image": "shopify://shop_images/new-custom-solutions-crop.svg",
+            "image_type": "logo",
+            "heading": "Paquin Sensors",
+            "content": "<p>Your trusted source for high quality sensors and related components, carrying an extensive inventory as well as accommodating unique customer requirements.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_MpAKTV",
+        "content_block_FkqyB8",
+        "content_block_rVJBcd",
+        "content_block_UYRX8K",
+        "content_block_iXktqE",
+        "content_block_pNbcCr"
+      ],
+      "name": "Content [Blocks]",
+      "settings": {
+        "heading_small": "Why Choose Accumulators INC. From Paquin?",
+        "heading_large": "",
+        "heading_size": "h1",
+        "show_numbering": false,
+        "columns": "6",
+        "theme": "alt"
+      }
+    },
+    "industry_applications_AexfUw": {
+      "type": "industry-applications",
+      "blocks": {
+        "industry_k7FhEz": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/asset__oil-gas_512x_7737cede-def5-4923-a35a-5239c58f9a05.webp",
+            "title": "Oil & Gas",
+            "description": "Mission-critical in upstream and downstream operations. Delivers pressure stabilization, surge suppression, and emergency energy storage in the harshest environments.",
+            "item_4": "",
+            "button_label": "SHOP OIL & GAS ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=oil-gas"
+          }
+        },
+        "industry_rBTw7q": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/heavy__manufacture_512x_87873006-a209-4c67-8db4-565d7c838a89.webp",
+            "title": "Heavy Manufacturing",
+            "description": "Consistent hydraulic force delivery, shock absorption, and cycle efficiency for stamping presses, injection moulding lines, and material handling systems.",
+            "item_4": "",
+            "button_label": "SHOP MANUFACTURING ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=manufacturing"
+          }
+        },
+        "industry_KVzcNb": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/mobile__hydraulics_512x_351375bc-5bdb-45f8-8cf6-9f5e838539bd.webp",
+            "title": "Mobile Machinery",
+            "description": "Compact, robust accumulator solutions for energy recovery, ride control, and hydraulic peak power assist in construction equipment, ag machinery, and utility vehicles.",
+            "item_4": "",
+            "button_label": "SHOP MOBILE EQUIPMENT ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=mobile"
+          }
+        },
+        "industry_PMyzcy": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/power-generation.webp",
+            "title": "Power Generation",
+            "description": "Turbine control systems and backup power infrastructure rely on accumulators for rapid hydraulic response and fail-safe energy reserves.",
+            "item_4": "",
+            "button_label": "SHOP POWER GENERATION ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=power"
+          }
+        },
+        "industry_y6yyDm": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/marine-and-offshore.webp",
+            "title": "Marine & Offshore",
+            "description": "Engineered for saltwater exposure, pressure cycling, and continuous operation in deck machinery, steering systems, and offshore equipment.",
+            "item_4": "",
+            "button_label": "SHOP MARINE & OFF SHORE ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=marine"
+          }
+        },
+        "industry_TfxFik": {
+          "type": "industry",
+          "settings": {
+            "image": "shopify://shop_images/Process_Industries.webp",
+            "title": "Process Industries",
+            "description": "Chemical processing, pulp & paper, water treatment, and food & beverage plants require precise, contamination-free hydraulic control.",
+            "item_4": "",
+            "button_label": "SHOP PROCESS INDUSTRY ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=process"
+          }
+        }
+      },
+      "block_order": [
+        "industry_k7FhEz",
+        "industry_rBTw7q",
+        "industry_KVzcNb",
+        "industry_PMyzcy",
+        "industry_y6yyDm",
+        "industry_TfxFik"
+      ],
+      "name": "Industry Applications",
+      "settings": {
+        "badge": "INDUSTRY APPLICATIONS",
+        "heading": "Engineered for the Sectors That Cannot Afford to Fail",
+        "description": "Accumulators Inc hydraulic accumulators - offered by Paquin - are deployed across the world's most demanding industries. Identify your application below and discover why procurement engineers trust our products for critical systems."
+      }
+    },
+    "support_quote_gERJQC": {
+      "type": "support-quote",
+      "blocks": {
+        "product_option_TJdiFL": {
+          "type": "product_option",
+          "settings": {
+            "product_name": "Pressure Gauge"
+          }
+        },
+        "feature_tWaAMH": {
+          "type": "feature",
+          "settings": {
+            "text": "Expert guidance matched to your exact application"
+          }
+        },
+        "feature_7Jwr87": {
+          "type": "feature",
+          "settings": {
+            "text": "Competitive pricing for OEM and volume orders"
+          }
+        },
+        "feature_EANeV7": {
+          "type": "feature",
+          "settings": {
+            "text": "Fast-track availability on critical components"
+          }
+        },
+        "feature_WFbyU7": {
+          "type": "feature",
+          "settings": {
+            "text": "Technical support from certified hydraulics engineers"
+          }
+        }
+      },
+      "block_order": [
+        "product_option_TJdiFL",
+        "feature_tWaAMH",
+        "feature_7Jwr87",
+        "feature_EANeV7",
+        "feature_WFbyU7"
+      ],
+      "name": "Support & Quote",
+      "settings": {
+        "small_heading": "REQUEST A QUOTE",
+        "main_heading": "Connect with Our Accumulators Specialists",
+        "description": "Whether you need a standard bladder accumulator or a custom-engineered solution for a critical application, our Paquin sales team is ready to deliver the right product at the right specification.",
+        "phone": "1-800-260-5664",
+        "email": "sales@paquin.com",
+        "website": "www.paquin.com",
+        "heading": "Why Work with Paquin?",
+        "form_title": "Request a Product Quote",
+        "submit_text": "SUBMIT REQUEST"
+      }
+    },
+    "resource_ywfE9J": {
+      "type": "resource",
+      "blocks": {
+        "card_HTUAxw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Technical Resource Guide",
+            "text": "Leam about accumulator types, application, vegen selety. certfications and more.",
+            "button_text": "View Guide",
+            "button_link": "#"
+          }
+        },
+        "card_xEcgfe": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Industry Applications",
+            "text": "Explore how accumulators are used across different industries and applications.",
+            "button_text": "View Applications",
+            "button_link": "#"
+          }
+        },
+        "card_awUegU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon3.png",
+            "title": "Accumulaters Inc. Catalog",
+            "text": "Download the latest Accumulators Ine catalog for full product specifications.",
+            "button_text": "Download Catalog",
+            "button_link": ""
+          }
+        },
+        "card_gfQdqr": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon4.png",
+            "title": "Frequently Asked Questions",
+            "text": "Find anowers to common questions about accumulators and their maintenance.",
+            "button_text": "View FAQ",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "card_HTUAxw",
+        "card_xEcgfe",
+        "card_awUegU",
+        "card_gfQdqr"
+      ],
+      "name": "Resource",
+      "settings": {
+        "small_heading": "RESOURCES",
+        "heading": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "trust_badges_fVEDnD",
+    "product_spotlight_RnHc8B",
+    "why_choose_us_AQ7LXH",
+    "content_blocks_j9xKL4",
+    "industry_applications_AexfUw",
+    "support_quote_gERJQC",
+    "resource_ywfE9J"
   ]
 }

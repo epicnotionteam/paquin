@@ -1,0 +1,237 @@
+<section class="certified-excellence" id="certifications">
+  <div class="page-width">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="ce-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.text != blank %}
+      <div class="ce-text">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+
+    <div class="ce-grid">
+      {% for block in section.blocks %}
+        <div class="ce-item" {{ block.shopify_attributes }}>
+
+          {% if block.settings.icon != blank %}
+            <div class="ce-icon">
+              <img
+                src="{{ block.settings.icon | image_url: width: 140 }}"
+                alt="{{ block.settings.title }}"
+                loading="lazy"
+                width="80"
+                height="80">
+            </div>
+          {% endif %}
+
+          <h4>{{ block.settings.title }}</h4>
+
+          <p>{{ block.settings.description }}</p>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.certified-excellence{
+    background:#f7f8fa;
+    padding:90px 20px;
+}
+
+.certified-excellence .page-width{
+    max-width:1590px;
+    margin:0 auto;
+}
+
+.ce-heading{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    margin:0 0 45px;
+    color: #1F2937;
+    letter-spacing: 0.08rem;
+    line-height:1.2;
+}
+
+.ce-text{
+    max-width:820px;
+    margin:0 auto 70px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+}
+
+.ce-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:35px 30px;
+}
+
+.ce-item{
+    text-align:center;
+}
+
+.ce-icon{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.ce-icon img{
+    max-width:80px;
+    max-height:80px;
+    object-fit:contain;
+    filter:grayscale(100%);
+    transition:.3s;
+}
+
+.ce-item:hover img{
+    filter:none;
+}
+
+.ce-item h4{
+    margin:0 0 12px;
+    font-size:20px;
+    font-weight:700;
+    color:#111;
+}
+
+.ce-item p{
+    margin:0;
+    font-size:15px;
+    line-height:1.7;
+    color:#666;
+}
+
+@media(max-width:1550px){
+.certified-excellence .page-width{padding:0 50px;}
+}
+
+
+@media(max-width:1200px){
+
+  .certified-excellence .page-width{
+    padding:0 40px;
+} 
+.ce-grid{
+grid-template-columns:repeat(3,1fr);
+}
+.ce-heading{font-size:40px;}
+}
+
+@media(max-width:768px){
+
+.certified-excellence{
+padding:70px 15px;
+}
+.ce-text{
+font-size:16px;
+margin-bottom:50px;
+}
+
+.ce-grid{
+grid-template-columns:repeat(2,1fr);
+gap:30px 50px;
+}
+
+.ce-item h4{
+font-size:18px;
+}
+
+.ce-item p{
+font-size:14px;
+}
+}
+
+@media(max-width:767px){
+  .certified-excellence .page-width{
+    padding:0 20px;
+} 
+.ce-heading{font-size:34px;}
+}
+
+@media(max-width:480px){
+
+.ce-grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Certified Excellence",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Certified Excellence"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>We are dedicated to providing the highest quality, and our commitment to excellence ensures the success of your projects. With innovative facilities and experienced staff, our certifications attest to our diligence and reputation.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "certificate",
+      "name": "Certification",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Certification Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "ISO 9001:2015"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Demonstrates our commitment to quality management and continuous improvement."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Certified Excellence",
+      "blocks": [
+        {
+          "type": "certificate"
+        },
+        {
+          "type": "certificate"
+        },
+        {
+          "type": "certificate"
+        },
+        {
+          "type": "certificate"
+        },
+        {
+          "type": "certificate"
+        },
+        {
+          "type": "certificate"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

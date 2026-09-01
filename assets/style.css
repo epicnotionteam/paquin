@@ -4342,7 +4342,7 @@ hr,
   letter-spacing: -0.08px;
   letter-spacing: -0.008rem;
 }
-
+.feed--block h3{font-size: 1.8rem;text-transform:uppercase;}
 @media (min-width: 48em) {
   .feed--block {
     column-gap: 48px;

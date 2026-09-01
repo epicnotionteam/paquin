@@ -282,7 +282,7 @@
     </script>
   </head>
 
-  <body class="template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
+  <body class="template-{{ template.name }} {% if collection %}collection-{{ collection.handle }}{% endif %}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLXWPQQ8"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

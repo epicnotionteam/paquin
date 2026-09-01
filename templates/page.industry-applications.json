@@ -10,11 +10,163 @@
 {
   "sections": {
     "main": {
-      "type": "page",
+      "type": "overview-banner",
+      "settings": {
+        "bg_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "product_image": "shopify://shop_images/cylinder-new.webp",
+        "small_heading": "The Right Accumulator for Every Project | Sold by Paquin",
+        "heading": "Hydraulic Accumulator Applications by Industry",
+        "text": "<p>Accumulators Inc. hydraulic accumulators, available at Paquin, are deployed across the world's most demanding industrial sectors. From blowout preventer control systems in deep-water oil fields to ride-control systems on agricultural equipment, the right accumulator depends on your specific application. Use this guide to identify your industry, understand the accumulator requirements for your system, and shop the right products directly.</p>",
+        "button_label": "Shop Accumulators Inc. Products",
+        "button_link": "/collections/accumulators",
+        "button2_label": "Request Application Assistance",
+        "button2_link": "shopify://pages/contact"
+      }
+    },
+    "industry_img_with_text_mEbfjg": {
+      "type": "industry-img-with-text",
+      "blocks": {
+        "industry_a6NVDT": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/asset__oil-gas_512x_7737cede-def5-4923-a35a-5239c58f9a05.webp",
+            "badge": "OIL & GAS",
+            "heading": "Hydraulic Accumulators for Oil & Gas Applications",
+            "intro_description": "In upstream and downstream oil & gas, accumulators perform some of the most critical functions in the entire operation. Paquin stocks Accumulators Inc. products rated for the pressures, certifications, and environmental conditions demanded by the industry — including ASME, DNV, and ABS approved units for offshore and subsea deployment.",
+            "title": "Key Applications in Oil & Gas",
+            "description": "<p>• Blowout Preventer (BOP) Control Systems — Large banks of bladder accumulators form the energy storage backbone of BOP hydraulic control systems. They must deliver immediate, reliable fluid volume during a well control event with no pump assistance.</p><p>• Offshore Platform Hydraulics — Deck cranes, wellhead control panels, subsea control modules, and topsides process equipment all rely on hydraulic accumulators for surge suppression, emergency power, and pressure stabilization.</p><p>• Pipeline Pressure Management — Accumulators absorb hydraulic surges created by valve closures and pump starts along transmission pipelines.</p><p>Subsea Systems — DNV and ABS certified units are available for subsea applications. Contact Paquin for specifications.</p>",
+            "button_label": "Shop Oil & Gas Accumulators",
+            "button_link": "/collections/accumulators?industry=oil-gas",
+            "button_label2": "Request a Quote for Your Project",
+            "button_link2": "shopify://pages/contact"
+          }
+        },
+        "industry_mapMid": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/hydraulic-accu.png",
+            "badge": "HEAVY MANUFACTURING",
+            "heading": "Hydraulic Accumulators for Heavy Manufacturing",
+            "intro_description": "Manufacturing environments demand consistent hydraulic performance across high-cycle, high-force operations. Accumulators Inc. products reduce energy consumption, protect downstream components, and extend system life in the most demanding production settings.",
+            "title": "Key Applications in Heavy Manufacturing",
+            "description": "<p>• Stamping Press Circuits — Accumulators supplement pump flow during the high-demand press stroke, allowing a smaller pump and motor to handle peak force requirements. Dramatically reduces energy draw and pump wear.</p><p>• Injection Molding Machines — Energy storage accumulators provide rapid-response clamping and injection force, shortening cycle times and improving shot consistency.</p><p>• Hydraulic Power Units (HPUs) — Every HPU benefits from an accumulator for energy storage, pulsation dampening, and emergency pressure hold. Bladder accumulators are the standard choice for most HPU configurations.</p><p>Material Handling Systems — Shock absorption accumulators protect cylinders and actuators from impact loading in conveyor, lift, and transfer systems.</p>",
+            "button_label": "Shop Manufacturing Accumulators",
+            "button_link": "/collections/accumulators?industry=manufacturing",
+            "button_label2": "Request a Quote",
+            "button_link2": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "industry_a6NVDT",
+        "industry_mapMid"
+      ],
+      "name": "Industry Image Text",
       "settings": {}
+    },
+    "industry_img_with_text_bVpTVp": {
+      "type": "industry-img-with-text",
+      "blocks": {
+        "industry_YwzbtV": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/mobile.png",
+            "badge": "MOBILE MACHINERY & AGRICULTURE",
+            "heading": "Hydraulic Accumulators for Mobile Equipment & Agriculture",
+            "intro_description": "Mobile hydraulic systems face unique challenges — variable ambient temperatures, continuous vibration, duty cycles that vary dramatically, and strict size and weight constraints. Diaphragm and small bladder accumulators from Accumulators Inc. are engineered for these conditions.",
+            "title": "Key Applications in Mobile Equipment",
+            "description": "<p>• Ride Control Systems — Accumulators mounted in the boom circuit of wheel loaders, telehandlers, and rough-terrain forklifts absorb ground-induced oscillations, reducing operator fatigue and improving travel speed.</p><p>• Agricultural Tractor Hydraulics — Energy recovery and peak power assist for hitch control, implement actuation, and front loader circuits on tractors and combines.</p><p>• Excavator & Loader Hydraulics — Boom and bucket circuit accumulators for energy recovery and shock absorption on construction equipment.</p><p>• Utility & Forestry Vehicles — Pulsation dampening and pressure stabilization for grapple, winch, and blade hydraulic circuits.</p>",
+            "button_label": "Shop Mobile Equipment Accumulators",
+            "button_link": "/collections/accumulators?industry=mobile",
+            "button_label2": "Shop Diaphragm Accumulators",
+            "button_link2": "/collections/accumulators?type=diaphragm"
+          }
+        },
+        "industry_6DLW8k": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/marine-and-offshore.webp",
+            "badge": "POWER GENERATION",
+            "heading": "Hydraulic Accumulators for Power Generation",
+            "intro_description": "Power generation systems — from gas and steam turbines to hydro plants — depend on fast-acting, reliable hydraulic actuation for governor control, emergency shutdown, and valve positioning. Accumulators provide the instantaneous energy storage these systems require.",
+            "title": "Key Applications in Power Generation",
+            "description": "<p>• Turbine Governor Systems — Accumulators provide the immediate hydraulic energy needed for rapid turbine speed control and load rejection during grid disturbances.</p><p>• Emergency Shutdown Systems (ESD) — A charged accumulator bank ensures that safety valves, isolation valves, and shutdown actuators operate even during total power loss.</p><p>• Hydroelectric Plant Controls — Gate control, bypass valve actuation, and turbine inlet valve positioning all rely on hydraulic systems with accumulator energy storage.</p><p>• Wind Energy — Nacelle pitch control systems use accumulators for emergency feathering in the event of grid loss or control failure. This is a major application for Accumulators Inc.</p>",
+            "button_label": "SHOP POWER GENERATION ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=power",
+            "button_label2": "Request a Quote",
+            "button_link2": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "industry_YwzbtV",
+        "industry_6DLW8k"
+      ],
+      "name": "Industry Image Text",
+      "settings": {}
+    },
+    "industry_img_with_text_6tAAhC": {
+      "type": "industry-img-with-text",
+      "blocks": {
+        "industry_jRe4CM": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/asset__oil-gas_512x_7737cede-def5-4923-a35a-5239c58f9a05.webp",
+            "badge": "MARINE & OFFSHORE",
+            "heading": "Hydraulic Accumulators for Marine & Offshore Applications",
+            "intro_description": "Marine hydraulic systems operate in some of the most unforgiving conditions on earth — saltwater corrosion, continuous motion, extreme temperature swings, and zero tolerance for failure. Accumulators Inc. DNV and ABS approved products are trusted on vessels and offshore installations worldwide.",
+            "title": "Key Applications in Marine & Offshore",
+            "description": "<p>• Deck Crane Hydraulics — Anti-sway and load-sensing systems use accumulators to smooth pressure fluctuations and provide emergency lowering capability.</p><p>• Ship Steering Systems (Steering Gear) — Accumulator banks provide emergency energy storage in steering gear hydraulic systems, required by classification societies.</p><p>• Offshore Mooring & Tensioning Systems — Constant-tension mooring winches and riser tensioners use large accumulator banks to maintain cable tension through wave-induced vessel motion.</p><p>• Subsea Control Modules (SCMs) — Subsea accumulator banks provide local hydraulic energy for subsea tree actuations, chemical injection valves, and emergency functions at depths exceeding 10,000 feet.</p>",
+            "button_label": "SHOP MARINE & OFFSHORE ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=marine",
+            "button_label2": "REQUEST DNV/ABS CERTIFIED PRODUCTS",
+            "button_link2": "shopify://pages/contact"
+          }
+        },
+        "industry_XYpbMV": {
+          "type": "industry",
+          "settings": {
+            "section_image": "shopify://shop_images/Process_Industries.webp",
+            "badge": "PROCESS INDUSTRIES",
+            "heading": "Hydraulic Accumulators for Process Industries",
+            "intro_description": "Chemical processing, pulp & paper, water treatment, food & beverage, and pharmaceutical manufacturing require precise, contamination-free hydraulic control. Accumulators provide pulsation-free flow, pressure stability, and system protection in continuous-process environments.",
+            "title": "Key Applications in Process Industries",
+            "description": "<p>• Chemical Dosing & Injection Systems — Accumulators dampen pump pulsation in dosing circuits, ensuring consistent chemical injection rates and protecting precision metering equipment.</p><p>• Pulp & Paper Press Controls — High-force hydraulic pressing circuits in paper machines use accumulators for energy storage, consistent nip pressure, and peak demand supplementation.</p><p>• Water & Wastewater Treatment — Pressure management, pump protection, and pulsation dampening in treatment plant hydraulic and water systems.</p><p>• Food & Beverage Processing — Stainless steel and special-material accumulators available for hygienic applications. Contact Paquin for material specifications.</p>",
+            "button_label": "SHOP PROCESS INDUSTRY ACCUMULATORS",
+            "button_link": "/collections/accumulators?industry=process",
+            "button_label2": "Request a Quote",
+            "button_link2": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "industry_jRe4CM",
+        "industry_XYpbMV"
+      ],
+      "name": "Industry Image Text",
+      "settings": {}
+    },
+    "technical_page_faFLYM": {
+      "type": "technical-page",
+      "name": "Bottom CTA",
+      "settings": {
+        "heading": "Not Sure Which Accumulator Fits Your Application?",
+        "background_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "description": "<p>Every application is different. Our Paquin technical team has deep experience across all of the industries above and can specify the exact Accumulators Inc. product your system requires — from a single replacement bladder to a complete BOP accumulator bank. Call 1-800-260-5664, email sales@paquin.com, or submit a quote request online.</p>",
+        "button_text_1": "SHOP ALL PRODUCTS",
+        "button_link_1": "/collections/accumulators",
+        "button_text_2": "REQUEST A QUOTE",
+        "button_link_2": "shopify://pages/contact",
+        "button_text_3": "View Technical Guides",
+        "button_link_3": "https://paquin.com/pages/global-intex?view=technical-resource-guide"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "industry_img_with_text_mEbfjg",
+    "industry_img_with_text_bVpTVp",
+    "industry_img_with_text_6tAAhC",
+    "technical_page_faFLYM"
   ]
 }

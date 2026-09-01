@@ -230,7 +230,7 @@
             "specification": "",
             "description": "<p>Fail-safe energy reserve during power loss. Charged banks supply flow to close valves or move actuators. Core of Blowout Preventer Control Systems.</p>",
             "button_label": "Shop Bladder Accumulators",
-            "button_link": "/collections/accumulators?type=bladder"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=Safety+Block"
           }
         },
         "product_QXt9tr": {
@@ -256,7 +256,7 @@
             "specification": "",
             "description": "<p>Prevents rupture when heat causes fluid expansion in closed piping systems. Also compensates for volume loss from cooling.</p>",
             "button_label": "Shop Diaphragm Accumulators",
-            "button_link": "/collections/accumulators?type=diaphragm"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=Diaphram+Accumulator"
           }
         }
       },
@@ -379,7 +379,7 @@
             "title": "Bladder Maintenance & Procedures",
             "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
             "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_link": "https://www.accumulators.com/wp-content/uploads/Bladder-Maintenance-and-Procedures.pdf"
           }
         },
         "card_wBUbYA": {
@@ -389,7 +389,7 @@
             "title": "Piston Maintenance & Procedures",
             "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
             "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_link": "https://www.accumulators.com/wp-content/uploads/Piston-Maintenance-and-Procedures.pdf"
           }
         },
         "card_6JRYyf": {
@@ -399,27 +399,27 @@
             "title": "Diaphragm Maintenance & Procedures",
             "text": "Detailed procedures for diaphragm accumulator installation, maintenance, and diaphragm replacement.",
             "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_link": "https://www.accumulators.com/wp-content/uploads/Diaphragm-Maintenance-and-Procedures.pdf"
           }
         },
         "card_BHqqf9": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/resource-icon1.png",
-            "title": "Accumulators Inc. Full Product Catalog 2024",
+            "title": "Accumulators Inc. Full Product Catalog",
             "text": "Complete product catalog including all models, specifications, dimensions, parts lists, and ordering information.",
             "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_link": "https://www.accumulators.com/wp-content/uploads/Accumulators-Inc-Catalog-2024.pdf"
           }
         },
         "card_yJEhtJ": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/resource-icon4.png",
-            "title": "Frequently  Asked Questions (Catalog Pages 49–51)",
-            "text": "Extracted FAQ section from the Accumulators Inc. catalog — covers selection, precharge, certifications, and more.",
+            "title": "Frequently Asked Questions",
+            "text": "Extracted FAQ section from the Accumulators Inc. catalog covering selection, precharge, certifications, and more.",
             "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_link": "https://www.accumulators.com/wp-content/uploads/Frequently-Asked-Questions-pages-49-51-Accumulators-Inc-Catalog-2024.pdf"
           }
         },
         "card_Qi8Try": {
@@ -428,8 +428,8 @@
             "image": "shopify://shop_images/resource-icon2.png",
             "title": "Product Warranty",
             "text": "Accumulators Inc. product warranty — the strongest original product warranty in the industry.",
-            "button_text": "Download / Open PDF",
-            "button_link": "#"
+            "button_text": "View Warranty",
+            "button_link": "https://www.accumulators.com/product-warranty/"
           }
         }
       },

@@ -95,7 +95,7 @@
             "specification": "Up to 10,000 PSI | 1 Qt – 140 Gal",
             "description": "<ul><li>Handles larger volumes <br/>& higher temps</li><li>Superior gas compression <br/>efficiency</li><li>Fully customizable bore <br/>sizes</li><li>Subsea/offshore rated <br/>options</li></ul>",
             "button_label": "SHOP PISTON ACCUMULATORS",
-            "button_link": "/collections/accumulators?type=piston"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=Piston+Accumulator"
           }
         },
         "product_hymHMf": {
@@ -108,7 +108,7 @@
             "specification": "3,000 PSI | 20–90 cubic inch",
             "description": "<ul><li>Ideal for mobile/off-road <br/>systems</li><li>Pulsation dampening specialists</li><li>Lightweight & <br/>space-saving design</li><li>Low-cost entry, fast <br/>delivery</li></ul>",
             "button_label": "SHOP DIAPHRAGM ACCUMULATORS",
-            "button_link": "/collections/accumulators?type=diaphragm"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=Diaphram+Accumulator"
           }
         },
         "product_EmB3Aq": {
@@ -121,7 +121,7 @@
             "specification": "NFPA T3.22 Compliant",
             "description": "<ul><li>Integrated dump & isolation valve</li><li>Protects personnel in <br/>maintenance</li><li>Allows single-unit removal <br/>from racks</li><li>Eliminates full-system shutdown</li></ul>",
             "button_label": "SHOP SAFETY BLOCKS",
-            "button_link": "/collections/accumulators?type=safety"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=Safety+Block"
           }
         },
         "product_GFaWEH": {
@@ -134,7 +134,7 @@
             "specification": "1 Qt, 1 Gal, 2.5, 5, 10 Gal",
             "description": "<ul><li>OEM-exact fit, no machining <br/>needed</li><li>Buna-Nitrile bladder + <br/>valve + O-ring</li><li>Extends accumulator service <br/>life</li><li>Ships from stock</li></ul>",
             "button_label": "SHOP REPLACEMENT KITS",
-            "button_link": "/collections/accumulators?type=kits"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=bladder+repair+kit&filter.p.tag=Mounting+Base&filter.p.tag=Mounting+Collar"
           }
         },
         "product_MP47Rq": {
@@ -147,7 +147,7 @@
             "specification": "Up to 3,000 PSI | SS fittings",
             "description": "<ul><li>Complete precharge kit in one order</li><li>Stainless steel gauges <br/>& hoses</li><li>Required for all <br/>accumulator setup</li><li>Works with any brand <br/>accumulator</li></ul>",
             "button_label": "SHOP CHARGING KITS",
-            "button_link": "/collections/accumulators?type=charging"
+            "button_link": "https://paquin.com/collections/shop?filter.p.tag=charging"
           }
         }
       },

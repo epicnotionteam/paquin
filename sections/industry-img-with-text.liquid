@@ -1,0 +1,816 @@
+<section class="paquin-industry-section">
+
+  <div class="paquin-industry-page-width">
+
+
+    <!-- Section Hero Image -->
+
+    
+
+
+
+
+
+    <!-- Industry Cards -->
+
+
+    <div class="paquin-industry-grid">
+
+
+      {% for block in section.blocks %}
+
+<div class="paquin-industry-card" {{ block.shopify_attributes }}>
+
+  {% if block.settings.section_image != blank %}
+  <div class="paquin-industry-hero">
+    <img
+      src="{{ block.settings.section_image | image_url: width:1600 }}"
+      alt="{{ block.settings.title }}"
+      loading="lazy">
+  </div>
+  {% endif %}
+
+  <!-- Header below image -->
+
+  <div class="paquin-industry-header">
+
+    {% if block.settings.badge != blank %}
+  <span class="paquin-industry-badge">
+    {{ block.settings.badge }}
+  </span>
+{% endif %}
+
+
+{% if block.settings.heading != blank %}
+  <h2 class="paquin-industry-heading">
+    {{ block.settings.heading }}
+  </h2>
+{% endif %}
+
+
+{% if block.settings.intro_description != blank %}
+  <p class="paquin-industry-intro">
+    {{ block.settings.intro_description }}
+  </p>
+{% endif %}
+
+  </div>
+
+  <div class="paquin-industry-content">
+
+    {% if block.settings.icon != blank %}
+      <img
+        class="paquin-industry-icon"
+        src="{{ block.settings.icon | image_url: width:50 }}"
+        alt="">
+    {% endif %}
+
+    {% if block.settings.title != blank %}
+      <h3 class="paquin-industry-title">
+        {{ block.settings.title }}
+      </h3>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="paquin-industry-description">
+        {{ block.settings.description }}
+      </div>
+    {% endif %}
+
+    <div class="paquin-industry-buttons">
+
+      {% if block.settings.button_label != blank %}
+      <a
+        href="{{ block.settings.button_link }}"
+        class="paquin-industry-btn paquin-industry-btn-primary">
+
+        <span>{{ block.settings.button_label }}</span>
+
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+          <path d="M1 6H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 1L16.5 6L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+      </a>
+      {% endif %}
+
+      {% if block.settings.button_label2 != blank %}
+      <a
+        href="{{ block.settings.button_link2 }}"
+        class="paquin-industry-btn">
+
+        <span>{{ block.settings.button_label2 }}</span>
+
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+          <path d="M1 6H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 1L16.5 6L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+      </a>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endfor %}
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+
+
+<style>
+
+/*==========================
+Paquin Industry Section
+==========================*/
+
+.paquin-industry-section {
+    background:#fff;
+    padding:40px 0;
+}
+
+
+.paquin-industry-page-width {
+
+    max-width:1590px;
+    width:100%;
+    margin:0 auto;
+    padding:0 40px;
+
+}
+
+
+
+/*==========================
+Industry Grid
+==========================*/
+
+.paquin-industry-grid {
+
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:34px;
+
+}
+
+
+
+/*==========================
+Industry Card
+==========================*/
+
+.paquin-industry-card {
+
+    background:#fff;
+    border:1px solid #E5E7EB;
+    transition:.35s ease;
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+.paquin-industry-card:hover {
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+
+
+/*==========================
+Hero Image
+==========================*/
+
+.paquin-industry-hero {
+
+    width:100%;
+    height:450px;
+    overflow:hidden;
+
+}
+
+
+.paquin-industry-hero img {
+
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+
+}
+
+
+
+/*==========================
+Header Below Image
+==========================*/
+
+.paquin-industry-header {
+
+    padding:30px 30px 10px;
+
+}
+
+
+
+/* Category Badge */
+
+.paquin-industry-badge {
+
+    display:inline-block;
+    background:#0F7F92;
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:3px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Main Heading */
+
+.paquin-industry-heading {
+
+    margin:0 0 18px;
+
+    color:#1F2937;
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+
+
+/* Intro Text */
+
+.paquin-industry-intro {
+
+    margin:0;
+
+    color:#5E6C84;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+Content Area
+==========================*/
+
+.paquin-industry-content {
+
+    width:100%;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+
+
+.paquin-industry-icon {
+
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.paquin-industry-title {
+
+    margin:0 0 15px;
+
+    color:#1F2937;
+
+    font-size:26px;
+
+    line-height:1.3;
+
+    font-weight:700;
+
+}
+
+
+
+.paquin-industry-description {
+
+    margin:0 0 25px;
+
+    color:#5E6C84;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+.paquin-industry-description p {
+
+    margin:0 0 15px;
+
+    color:#5E6C84;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+.paquin-industry-description p:last-child {
+
+    margin-bottom:0;
+
+}
+
+
+
+/*==========================
+Buttons
+==========================*/
+
+.paquin-industry-buttons {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.paquin-industry-btn {
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    color:#0F7F92;
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    padding:10px 12px;
+
+    border-radius:4px;
+
+    border:1px solid #0F7F92;
+
+    transition:.3s ease;
+
+    white-space:nowrap;
+
+    flex-shrink:1;
+
+}
+
+
+
+.paquin-industry-btn-primary {
+
+    background:#0F7F92;
+
+    color:#fff;
+
+}
+
+
+
+.paquin-industry-btn:hover {
+
+    background:#0F7F92;
+
+    color:#fff;
+
+}
+
+
+
+.paquin-industry-btn svg {
+
+    transition:.3s ease;
+
+}
+
+
+
+.paquin-industry-btn:hover svg {
+
+    transform:translateX(5px);
+
+}
+
+/*==========================
+Responsive Design
+==========================*/
+
+
+@media(max-width:1200px){
+
+
+    .paquin-industry-page-width{
+
+        padding:0 30px;
+
+    }
+
+
+    .paquin-industry-heading{
+
+        font-size:36px;
+
+    }
+
+
+}
+
+
+
+/* Tablet */
+
+@media(max-width:991px){
+
+
+    .paquin-industry-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .paquin-industry-hero{
+
+        height:380px;
+
+    }
+
+
+
+    .paquin-industry-header{
+
+        padding:25px 25px 10px;
+
+    }
+
+
+
+    .paquin-industry-heading{
+
+        font-size:34px;
+
+    }
+
+
+
+}
+
+
+
+/* Mobile */
+
+/*==========================
+Mobile Responsive
+==========================*/
+
+@media(max-width:767px){
+
+
+    .paquin-industry-section{
+
+        padding:50px 0;
+
+    }
+
+
+    .paquin-industry-page-width{
+
+        padding:0 20px;
+
+    }
+
+
+
+    /* One column layout */
+
+    .paquin-industry-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+
+
+    /* Image */
+
+    .paquin-industry-hero{
+
+        height:280px;
+
+    }
+
+
+
+    .paquin-industry-hero img{
+
+        object-fit:cover;
+
+    }
+
+
+
+    /* Header */
+
+    .paquin-industry-header{
+
+        padding:20px 20px 10px;
+
+    }
+
+
+
+    .paquin-industry-badge{
+
+        font-size:12px;
+
+        padding:7px 12px;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    .paquin-industry-heading{
+
+        font-size:28px;
+
+        line-height:1.25;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    .paquin-industry-intro{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+
+
+    /* Content */
+
+    .paquin-industry-content{
+
+        padding:20px;
+
+    }
+
+
+
+    .paquin-industry-icon{
+
+        width:40px;
+
+        height:40px;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    .paquin-industry-title{
+
+        font-size:22px;
+
+        line-height:1.3;
+
+    }
+
+
+
+    .paquin-industry-description{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+
+
+    .paquin-industry-description p{
+
+        font-size:16px;
+
+    }
+
+
+
+    /* Buttons */
+
+    .paquin-industry-buttons{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:12px;
+
+        width:100%;
+
+    }
+
+
+
+    .paquin-industry-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+        font-size:13px;
+
+        padding:10px 12px;
+
+        white-space:normal;
+
+        text-align:center;
+
+    }
+
+
+}
+
+
+
+    .paquin-industry-btn{
+
+        width:auto;
+
+    }
+
+
+}
+</style>
+
+{% schema %}
+{
+   "name":"Industry Image Text",
+   "tag":"section",
+   "class":"paquin-industry-applications-section",
+   "settings":[
+      
+   ],
+   "blocks":[
+      {
+         "type":"industry",
+         "name":"Industry Card",
+         "settings":[
+            {
+               "type":"image_picker",
+               "id":"section_image",
+               "label":"Section Background Image"
+            },
+            {
+               "type":"image_picker",
+               "id":"icon",
+               "label":"Industry Icon"
+            },
+            {
+               "type":"text",
+               "id":"badge",
+               "label":"Section Badge",
+               "default":"INDUSTRY APPLICATIONS"
+            },
+            {
+               "type":"text",
+               "id":"heading",
+               "label":"Heading",
+               "default":"Engineered for the Sectors That Cannot Afford to Fail"
+            },
+            {
+               "type":"textarea",
+               "id":"intro_description",
+               "label":"Intro Description",
+               "default":"Accumulators Inc. hydraulic accumulators are deployed across the world's most demanding industries. Identify your application below and discover why engineers trust our products for critical systems."
+            },
+            {
+               "type":"text",
+               "id":"title",
+               "label":"Industry Title",
+               "default":"Oil & Gas"
+            },
+            {
+               "type":"richtext",
+               "id":"description",
+               "label":"Industry Description",
+               "default":"<p>Hydraulic accumulators are mission-critical in upstream and downstream oil & gas operations, providing reliable pressure stabilization, surge suppression, and emergency energy storage.</p>"
+            },
+            {
+               "type":"text",
+               "id":"button_label",
+               "label":"Primary Button Label",
+               "default":"Learn More"
+            },
+            {
+               "type":"url",
+               "id":"button_link",
+               "label":"Primary Button Link"
+            },
+            {
+               "type":"text",
+               "id":"button_label2",
+               "label":"Secondary Button Label",
+               "default":"Request a Quote for Your Project"
+            },
+            {
+               "type":"url",
+               "id":"button_link2",
+               "label":"Secondary Button Link"
+            }
+         ]
+      }
+   ],
+   "max_blocks":12,
+   "presets":[
+      {
+         "name":"Industry Image Text",
+         "blocks":[
+            {
+               "type":"industry"
+            },
+            {
+               "type":"industry"
+            },
+            {
+               "type":"industry"
+            }
+         ]
+      }
+   ]
+}
+{% endschema %}

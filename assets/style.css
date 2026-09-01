@@ -3586,12 +3586,40 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .container--sidebar-feed .container--grid .productgrid--items {
     grid-template-columns: repeat(5, 1fr) !important;
   }
+  .collection-accumulators .container--sidebar-feed .container--grid .productgrid--items {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
 }
 .container--empty-collection {
   margin-top: 24px;
   margin-top: 2.4rem;
 }
+.collection-accumulators .productgrid--items .productgrid--item .productitem .productitem--actions{
+position: relative;
+margin:auto 0px 0px;
+bottom:0px !important;
+padding-top: 30px;
+visibility:visible !important;
+opacity:1 !important;
+right:unset !important;
+}
+.collection-accumulators .template-collection .productgrid--items .productgrid--item .productitem {
+background-color: #fff;
+border-radius: 20px;
+}
+.collection-accumulators .productitem[data-animation], .productitem[data-animation-state=open] {
+    position: static;
+}
 
+.collection-accumulators .productitem__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-accumulators .productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
+    height: auto;
+}
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

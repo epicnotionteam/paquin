@@ -1,0 +1,267 @@
+<div class="sticky-nav-wrapper">
+  <div class="page-width">
+    <ul class="sticky-nav">
+      {% for block in section.blocks %}
+        <li class="sticky-nav__item">
+          <a
+            href="#{{ block.settings.section_id }}"
+            class="sticky-nav__link"
+            data-target="{{ block.settings.section_id }}"
+          >
+            {% if block.settings.icon != blank %}
+              <img
+                src="{{ block.settings.icon | image_url: width: 40 }}"
+                alt="{{ block.settings.title }}"
+                width="22"
+                height="22"
+              >
+            {% endif %}
+
+            <span>{{ block.settings.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .shopify-section.sticky-navigation {
+    position: relative;
+    z-index: 10;
+}
+    .sticky-nav-wrapper{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;
+}
+.sticky-nav-wrapper{
+    position: relative;
+}
+
+.sticky-nav-wrapper.sticky-active{
+    position: fixed;
+    top:70px;
+    left:0;
+    width:100%;
+    transition: all 0.3s;
+}
+.sticky-nav-wrapper .page-width{max-width:1590px;margin:0 auto;padding:0px;}
+
+.sticky-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow-x:auto;
+    white-space:nowrap;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.sticky-nav__item{
+    flex:1;
+    text-align:center;
+}
+
+.sticky-nav__link{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:18px 15px;
+    color:#1c355e;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+    border-bottom:3px solid transparent;
+}
+
+.sticky-nav__link img{
+    width:65px;
+    height:75px;
+    object-fit:contain;
+}
+.sticky-nav__link span{text-transform:uppercase;}
+.sticky-nav__item a:hover{text-decoration:none !important;}
+
+.sticky-nav__link:hover,
+.sticky-nav__link.active{
+    color:#0084b4;
+    border-bottom-color:#0084b4;
+}
+
+@media(max-width:768px){
+
+.sticky-nav{
+    justify-content:flex-start;
+}
+
+.sticky-nav__item{
+    flex:0 0 auto;
+}
+
+.sticky-nav__link{
+    min-width:120px;
+    padding:14px;
+    font-size:13px;
+}
+}
+
+@media (max-width: 1550px) {
+    .sticky-nav-wrapper .page-width {
+        padding: 0 50px;
+    }
+    .sticky-nav__link img{width:45px;height:45px;}
+}
+@media (max-width: 1200px) {
+    .sticky-nav-wrapper .page-width {
+        padding: 0 40px;
+    }
+    .sticky-nav__link{padding:10px 15px;}
+}
+@media (max-width: 767px) {
+    .sticky-nav-wrapper .page-width {
+        padding: 0 20px;
+    }
+}
+@media(max-width:719px){
+.sticky-nav-wrapper.sticky-active{top:55px;}
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const links = document.querySelectorAll(".sticky-nav__link");
+
+  links.forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+      e.preventDefault();
+
+      const target = document.getElementById(this.dataset.target);
+
+      if(target){
+
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: "smooth"
+        });
+
+      }
+
+    });
+
+  });
+
+  const sections = [...links].map(link =>
+      document.getElementById(link.dataset.target)
+  );
+
+  window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+      if(section){
+
+        const top = section.offsetTop - 120;
+
+        if(window.scrollY >= top){
+          current = section.id;
+        }
+
+      }
+
+    });
+
+    links.forEach(link => {
+
+      link.classList.remove("active");
+
+      if(link.dataset.target === current){
+        link.classList.add("active");
+      }
+
+    });
+
+  });
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hero = document.querySelector(".hero-banner");
+    const stickyNav = document.querySelector(".sticky-nav-wrapper");
+
+    if (!hero || !stickyNav) return;
+
+    const heroHeight = hero.offsetHeight;
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY >= heroHeight) {
+            stickyNav.classList.add("sticky-active");
+        } else {
+            stickyNav.classList.remove("sticky-active");
+        }
+
+    });
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Sticky Navigation",
+  "tag": "section",
+  "class": "sticky-navigation",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Navigation Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Applications"
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "Target Section ID",
+          "default": "applications"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky Navigation",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

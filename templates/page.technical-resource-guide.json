@@ -9,12 +9,528 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "page",
+    "overview_banner_J7EDGm": {
+      "type": "overview-banner",
+      "name": "Hero Banner",
+      "settings": {
+        "bg_image": "shopify://shop_images/banner-bg-image.webp",
+        "product_image": "shopify://shop_images/banner-main-image.webp",
+        "small_heading": "Bladder vs Piston vs Diaphragm",
+        "heading": "How to Select the Right Accumulator Type",
+        "text": "<p>Choosing the Right Type of Accumulator Doesn't Have to Be Hard</p>",
+        "button_label": "SHOP PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button2_label": "REQUEST A QUOTE",
+        "button2_link": "shopify://pages/contact"
+      }
+    },
+    "sticky_navigation_XdAmmc": {
+      "type": "sticky-navigation",
+      "blocks": {
+        "item_ndEgHN": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/select-type-icon.svg",
+            "title": "Select Type",
+            "section_id": "select-type"
+          }
+        },
+        "item_V9YHUW": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/application-icon.svg",
+            "title": "Applications",
+            "section_id": "applications"
+          }
+        },
+        "item_NYmNpf": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/nitrogen-safety-icon.svg",
+            "title": "Nitrogen & Safety",
+            "section_id": "nitrogen-safety"
+          }
+        },
+        "item_g4DckY": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/certifications-icon.svg",
+            "title": "Certifications",
+            "section_id": "certifications"
+          }
+        },
+        "item_KqycYY": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/maintenance-icon.svg",
+            "title": "Maintenance & PDFs",
+            "section_id": "maintenance"
+          }
+        },
+        "item_q8MLax": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/faq-icon.svg",
+            "title": "FAQ",
+            "section_id": "faq"
+          }
+        },
+        "item_hV6CAw": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/shop-products.svg",
+            "title": "Shop Products",
+            "section_id": "shop-products"
+          }
+        }
+      },
+      "block_order": [
+        "item_ndEgHN",
+        "item_V9YHUW",
+        "item_NYmNpf",
+        "item_g4DckY",
+        "item_KqycYY",
+        "item_q8MLax",
+        "item_hV6CAw"
+      ],
+      "name": "Sticky Navigation",
       "settings": {}
+    },
+    "1784874936f52afd4c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_59fb5a2_z6ftiY": {
+          "type": "ai_gen_block_59fb5a2",
+          "settings": {
+            "headline": "Bladder vs. Piston vs. Diaphragm — Choosing the Right Type",
+            "headline_font": "work_sans_n7",
+            "headline_size": 36,
+            "headline_color": "#121212",
+            "section_padding": 50,
+            "background_color": "#ffffff",
+            "desktop_width_percent": 100,
+            "table_background": "#ffffff",
+            "header_background": "#0f7f92",
+            "header_text_color": "#d5dce8",
+            "header_font_size": 16,
+            "cell_text_color": "#1f2937",
+            "cell_font_size": 15,
+            "row_alternate_color": "#f8f8f8",
+            "border_color": "#0f7f92",
+            "cell_padding": 16,
+            "feature_column_header": "",
+            "type_1_name": "Bladder",
+            "type_2_name": "Piston",
+            "type_3_name": "Diaphragm",
+            "feature_1_name": "Best For",
+            "feature_1_type1": "General industrial, HPUs, energy storage, pulsation dampening",
+            "feature_1_type2": "High pressure, large volume, extreme temps, subsea",
+            "feature_1_type3": "Mobile equipment, small pulsation, space-constrained",
+            "feature_2_name": "Pressure Range",
+            "feature_2_type1": "Up to 3,000 PSI standard",
+            "feature_2_type2": "Up to 10,000 PSI",
+            "feature_2_type3": "Up to 3,000 PSI",
+            "feature_3_name": "Available Sizes",
+            "feature_3_type1": "1 Qt – 15 Gal",
+            "feature_3_type2": "1 Qt – 140 Gal",
+            "feature_3_type3": "20 in³ – 90 in³",
+            "feature_4_name": "Gas/Fluid Separation",
+            "feature_4_type1": "Complete (rubber bladder)",
+            "feature_4_type2": "Complete (floating piston)",
+            "feature_4_type3": "Complete (rubber diaphragm)",
+            "feature_5_name": "Max Compression Ratio",
+            "feature_5_type1": "4:1 (bladder damage above)",
+            "feature_5_type2": "Up to 10:1",
+            "feature_5_type3": "Low volume, low ratio",
+            "feature_6_name": "Mounting",
+            "feature_6_type1": "Vertical preferred; horizontal OK",
+            "feature_6_type2": "Any direction",
+            "feature_6_type3": "Any direction",
+            "feature_7_name": "Thread Standard",
+            "feature_7_type1": "NPT standard",
+            "feature_7_type2": "SAE standard",
+            "feature_7_type3": "SAE standard",
+            "feature_8_name": "Maintenance",
+            "feature_8_type1": "Bladder replacement kits available",
+            "feature_8_type2": "Seal & piston service",
+            "feature_8_type3": "Diaphragm replacement",
+            "feature_9_name": "Relative Cost",
+            "feature_9_type1": "Low–Mid",
+            "feature_9_type2": "Mid–High",
+            "feature_9_type3": "Lowest",
+            "feature_10_name": "",
+            "feature_10_type1": "",
+            "feature_10_type2": "",
+            "feature_10_type3": "",
+            "button_1_text": "SHOP BLADDER ACCUMULATORS",
+            "button_1_link": "/collections/accumulators?type=bladder",
+            "button_2_text": "SHOP PISTON ACCUMULATORS",
+            "button_2_link": "/collections/accumulators?type=piston",
+            "button_3_text": "SHOP DIAPHRAGM ACCUMULATORS",
+            "button_3_link": "/collections/accumulators?type=diaphragm"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_59fb5a2_z6ftiY"
+      ],
+      "name": "Select type",
+      "settings": {}
+    },
+    "top_products_ta6qBd": {
+      "type": "top-products",
+      "blocks": {
+        "product_YPwWn4": {
+          "type": "product",
+          "settings": {
+            "badge": "Energy Storage",
+            "image": "shopify://shop_images/heavy__manufacture_512x_87873006-a209-4c67-8db4-565d7c838a89.webp",
+            "category": "",
+            "title": "Energy Storage & Auxiliary Power",
+            "specification": "",
+            "description": "<p>Supplements pump flow for intermittent high-demand cycles, reducing required pump size and horsepower. Common in press circuits and clamping systems.</p>",
+            "button_label": "Shop Bladders & Pistons",
+            "button_link": "/collections/accumulators?type=bladder"
+          }
+        },
+        "product_Minrig": {
+          "type": "product",
+          "settings": {
+            "badge": "Hydraulic Shock Absorption",
+            "image": "shopify://shop_images/asset__parts--home.webp",
+            "category": "",
+            "title": "Hydraulic Shock Absorption",
+            "specification": "",
+            "description": "<p>Absorbs pressure spikes ('water hammer') when valves close rapidly. Protects pumps, valves, hoses, and fittings from damaging surges.</p>",
+            "button_label": "Shop Bladders",
+            "button_link": "/collections/accumulators?type=bladder"
+          }
+        },
+        "product_iXdeAk": {
+          "type": "product",
+          "settings": {
+            "badge": "Pulsation Dampening",
+            "image": "shopify://shop_images/asset__partnership--home.webp",
+            "category": "",
+            "title": "Pulsation Dampening",
+            "specification": "",
+            "description": "<p>Smooths pressure fluctuations from piston pumps. Noise attenuation up to 95% achievable. Critical for servo/proportional valve circuits.</p>",
+            "button_label": "Shop Diaphragm & Bladder Accumulators",
+            "button_link": "/collections/accumulators?type=diaphragm"
+          }
+        },
+        "product_bhaXgN": {
+          "type": "product",
+          "settings": {
+            "badge": "Emergency Standby",
+            "image": "shopify://shop_images/mobile__hydraulics_512x_351375bc-5bdb-45f8-8cf6-9f5e838539bd.webp",
+            "category": "",
+            "title": "Emergency Standby / BOP Systems",
+            "specification": "",
+            "description": "<p>Fail-safe energy reserve during power loss. Charged banks supply flow to close valves or move actuators. Core of Blowout Preventer Control Systems.</p>",
+            "button_label": "Shop Bladder Accumulators",
+            "button_link": "/collections/accumulators?type=bladder"
+          }
+        },
+        "product_QXt9tr": {
+          "type": "product",
+          "settings": {
+            "badge": "Pressure Holding",
+            "image": "shopify://shop_images/asset__testing--home.webp",
+            "category": "",
+            "title": "Pressure Holding",
+            "specification": "",
+            "description": "<p>Maintains system pressure against internal leakage across spool valves, cartridge valves, and cylinders. Eliminates need for continuous pump operation.</p>",
+            "button_label": "Shop Bladders & Pistons",
+            "button_link": "/collections/accumulators?type=bladder"
+          }
+        },
+        "product_hWn3YY": {
+          "type": "product",
+          "settings": {
+            "badge": "Thermal Expansion",
+            "image": "shopify://shop_images/asset__careers_720a61cb-4f2f-4d0d-9d61-afe038c10e3e.webp",
+            "category": "",
+            "title": "Thermal Expansion Compensation",
+            "specification": "",
+            "description": "<p>Prevents rupture when heat causes fluid expansion in closed piping systems. Also compensates for volume loss from cooling.</p>",
+            "button_label": "Shop Diaphragm Accumulators",
+            "button_link": "/collections/accumulators?type=diaphragm"
+          }
+        }
+      },
+      "block_order": [
+        "product_YPwWn4",
+        "product_Minrig",
+        "product_iXdeAk",
+        "product_bhaXgN",
+        "product_QXt9tr",
+        "product_hWn3YY"
+      ],
+      "name": "Top Products",
+      "settings": {
+        "badge": "Common Hydraulic Accumulator Applications",
+        "heading": "",
+        "description": ""
+      }
+    },
+    "main": {
+      "type": "accumaltor-type",
+      "settings": {
+        "section_id": "",
+        "section_bg": "#ffffff",
+        "heading": "Nitrogen Precharge — The Right Gas, The Right Pressure",
+        "hero_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "card1_heading": "Why Dry Nitrogen Only?",
+        "card1_text": "<p>Nitrogen is non-toxic, inert, non-explosive, and non-flammable. Commercial/Industrial grade (99.5% purity average) is recommended and has been used with accumulators for over 75 years. Higher grades are acceptable.</p>",
+        "card2_heading": "Precharge Frequency",
+        "point1": "<ul><li>High-cycle applications: Check precharge at least weekly</li><li>Emergency standby or pressure-holding: Check at least monthly</li><li>Remote/hard-to-access locations: Consider electronic permanent-mount pressure monitoring</li></ul>",
+        "point2": "",
+        "point3": "",
+        "card3_heading": "How to Precharge — Step by Step",
+        "step_title_1": "Step 1:",
+        "step_text_1": "Use a genuine Accumulators Inc. Charging & Gauging (C&G) assembly with a nitrogen regulator",
+        "step_title_2": "Step 2:",
+        "step_text_2": "Slowly pre-charge to 35 PSI first — this is the most critical step; do not skip it",
+        "step_title_3": "Step 3:",
+        "step_text_3": "Gradually bring to the operating precharge specified for your application",
+        "step_title_4": "Step 4:",
+        "step_text_4": "Verify precharge with gauging kit before returning accumulator to service",
+        "button1_text": "SHOP NITROGEN CHARGING KITS",
+        "button1_link": "/collections/accumulators?type=charging",
+        "button2_text": "USE SIZING CALCULATOR",
+        "button2_link": "https://www.accumulators.com/tool/accumulator-size-calculator"
+      }
+    },
+    "certified_excellence_3XTBxW": {
+      "type": "certified-excellence",
+      "blocks": {
+        "certificate_xbP79y": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--ex-atex.svg",
+            "title": "ASME U-Stamp",
+            "description": "Designed to ASME Boiler & Pressure Vessel Code. Witnessed, stamped, and registered with the National Board of Boiler and Pressure Vessel Inspectors. Required for most US industrial and energy installations. ASME U-1A data reports available on request at no charge."
+          }
+        },
+        "certificate_wc9dVm": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--iso-9001.svg",
+            "title": "ISO 9001",
+            "description": "Full quality management system certification. All QC records and manuals open to authorized inspectors. Periodically reviewed by local, state, national, and international agencies."
+          }
+        },
+        "certificate_Jp3Jbh": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--nsf.svg",
+            "title": "DNV & ABS",
+            "description": "Manufacturing facility holds approved assessments from Det Norske Veritas (DNV) and the American Bureau of Shipping (ABS). Required for marine, offshore, and subsea applications."
+          }
+        },
+        "certificate_piJWRW": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--ukca.svg",
+            "title": "CE / PED",
+            "description": "Conformité Européenne and Pressure Equipment Directive compliance. Required for European installations. Diaphragm accumulators designed per CE guidelines."
+          }
+        },
+        "certificate_Ftdq3t": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--iecex.svg",
+            "title": "ASME 'R' Stamp / National Board",
+            "description": "Accumulators Inc. can modify existing units and perform recertification under the National Board Inspection Code 'R' stamp."
+          }
+        },
+        "certificate_qqw8j3": {
+          "type": "certificate",
+          "settings": {
+            "icon": "shopify://shop_images/asset__certification--csa.svg",
+            "title": "CRN / AS1210 / NR-13 / Lloyd's",
+            "description": "Additional authority approvals available on request. Contact Paquin for projects requiring Canadian, Australian, Brazilian, or Lloyd's Register certification."
+          }
+        }
+      },
+      "block_order": [
+        "certificate_xbP79y",
+        "certificate_wc9dVm",
+        "certificate_Jp3Jbh",
+        "certificate_piJWRW",
+        "certificate_Ftdq3t",
+        "certificate_qqw8j3"
+      ],
+      "name": "Certified Excellence",
+      "settings": {
+        "heading": "Certifications & Quality — Built to the Strictest Standards",
+        "text": ""
+      }
+    },
+    "resource_aTjz6K": {
+      "type": "resource",
+      "blocks": {
+        "card_f7D8jW": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Bladder Maintenance & Procedures",
+            "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        },
+        "card_wBUbYA": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Piston Maintenance & Procedures",
+            "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        },
+        "card_6JRYyf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon3.png",
+            "title": "Diaphragm Maintenance & Procedures",
+            "text": "Detailed procedures for diaphragm accumulator installation, maintenance, and diaphragm replacement.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        },
+        "card_BHqqf9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Accumulators Inc. Full Product Catalog 2024",
+            "text": "Complete product catalog including all models, specifications, dimensions, parts lists, and ordering information.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        },
+        "card_yJEhtJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon4.png",
+            "title": "Frequently  Asked Questions (Catalog Pages 49–51)",
+            "text": "Extracted FAQ section from the Accumulators Inc. catalog — covers selection, precharge, certifications, and more.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        },
+        "card_Qi8Try": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Product Warranty",
+            "text": "Accumulators Inc. product warranty — the strongest original product warranty in the industry.",
+            "button_text": "Download / Open PDF",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "card_f7D8jW",
+        "card_wBUbYA",
+        "card_6JRYyf",
+        "card_BHqqf9",
+        "card_yJEhtJ",
+        "card_Qi8Try"
+      ],
+      "name": "Resource",
+      "settings": {
+        "small_heading": "Maintenance Procedures & Technical Downloads",
+        "heading": ""
+      }
+    },
+    "1784872182c9f7400b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ca4c513_9DbyBM": {
+          "type": "ai_gen_block_ca4c513",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "subtitle": "",
+            "heading_alignment": "center",
+            "question_1": "What is the correct precharge for my accumulator?",
+            "answer_1": "<p>Each application has different requirements. Use the Accumulators Inc. online Sizing Calculator (accumulators.com/tool/accumulator-size-calculator) or contact Paquin at 1-800-260-5664 for free application assistance.</p>",
+            "question_2": "How often should I check accumulator precharge?",
+            "answer_2": "<p>For high-cycle applications, check at least weekly. For emergency standby or pressure-holding systems, check at least monthly. For remote locations, consider electronic permanent-mount pressure monitoring.</p>",
+            "question_3": "Bladder vs. piston — which should I choose?",
+            "answer_3": "<p>Bladder accumulators offer rapid response, contamination tolerance, simple maintenance, and low-cost replacement parts. Piston accumulators handle higher pressures, larger volumes, and more extreme temperatures. If your compression ratio exceeds 4:1, choose a piston. Our team can assist with selection — call 1-800-260-5664.</p>",
+            "question_4": "When should I use a diaphragm accumulator?",
+            "answer_4": "<p>Diaphragm accumulators are best for pulsation dampening applications where small volumes are sufficient. They are typically less expensive than bladder or piston types and are ideal for space-constrained mobile and industrial systems.</p>",
+            "question_5": "Can Accumulators Inc. products replace competitors' units?",
+            "answer_5": "<p>Bladder accumulators and components are typically interchangeable with other manufacturers. Use the Cross Reference Tool at accumulators.com/tool/cross-reference-products or contact Paquin to verify fit for your specific application.</p>",
+            "question_6": "When do I need a safety block?",
+            "answer_6": "<p>Safety blocks (isolation valves) are recommended for virtually all accumulator installations. They allow single-accumulator removal from manifold racks without shutting down the entire system, and are required for OSHA/NFPA T3.22 compliant maintenance procedures.</p>",
+            "question_7": "What thread types are available?",
+            "answer_7": "<p>NPT is standard for bladder accumulators; SAE is standard for piston and diaphragm accumulators. Many other thread types are available from stock or as special orders. Contact Paquin to specify.</p>",
+            "question_8": "Does Accumulators Inc. make custom accumulators?",
+            "answer_8": "<p>Yes. Custom designs are available for special applications and are proprietary to the customer. Clientele includes Fortune 500 companies, government agencies, and the US military. Contact Paquin to discuss custom requirements.</p>",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": "",
+            "first_item_open": true,
+            "desktop_width_percent": 50,
+            "section_padding": 40,
+            "item_padding": 20,
+            "spacing_between_items": 40,
+            "background_color": "#ffffff",
+            "heading_color": "#0f7f92",
+            "question_color": "#1f2937",
+            "text_color": "#5e6c84",
+            "icon_color": "#121212",
+            "divider_color": "#e0e0e0",
+            "heading_font": "work_sans_n7",
+            "heading_size": 36,
+            "subtitle_size": 16,
+            "question_font": "sans_serif_n7",
+            "question_size": 20,
+            "answer_size": 18,
+            "icon_style": "chevron",
+            "icon_size": 24,
+            "divider_width": 1
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ca4c513_9DbyBM"
+      ],
+      "name": "FAQ",
+      "settings": {}
+    },
+    "technical_page_cEGWQX": {
+      "type": "technical-page",
+      "name": "Bottom CTA",
+      "settings": {
+        "heading": "Ready to Specify the Right Accumulator?",
+        "background_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "description": "<p>Our Paquin technical sales team is trained on the full Accumulators Inc. product line and can assist with selection, sizing, and quoting. Call 1-800-260-5664 or submit a quote request and we will respond within one business day.</p>",
+        "button_text_1": "SHOP ALL ACCUMULATORS",
+        "button_link_1": "/collections/accumulators",
+        "button_text_2": "REQUEST A QUOTE",
+        "button_link_2": "shopify://pages/contact",
+        "button_text_3": "VIEW INDUSTRY APPLICATIONS",
+        "button_link_3": "https://paquin.com/pages/about?view=industry-applications&preview_theme_id=187013136687"
+      }
     }
   },
   "order": [
-    "main"
+    "overview_banner_J7EDGm",
+    "sticky_navigation_XdAmmc",
+    "1784874936f52afd4c",
+    "top_products_ta6qBd",
+    "main",
+    "certified_excellence_3XTBxW",
+    "resource_aTjz6K",
+    "1784872182c9f7400b",
+    "technical_page_cEGWQX"
   ]
 }

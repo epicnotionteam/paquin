@@ -1,0 +1,352 @@
+<section class="recent-news-section" id="maintenance">
+
+  <div class="page-width">
+
+    <div class="recent-news-header">
+
+      {% if section.settings.small_heading != blank %}
+        <span class="small-heading">
+          {{ section.settings.small_heading }}
+        </span>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="section-heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+    </div>
+
+    <div class="recent-news-grid">
+
+      {% for block in section.blocks %}
+
+        <div class="news-card" {{ block.shopify_attributes }}>
+
+          {% if block.settings.image != blank %}
+
+            <a href="{{ block.settings.button_link }}" class="news-image">
+
+              {{
+                block.settings.image
+                | image_url: width: 700
+                | image_tag:
+                loading: 'lazy',
+                class: 'card-image'
+              }}
+
+            </a>
+
+          {% endif %}
+
+          <div class="news-content">
+
+            {% if block.settings.title != blank %}
+              <h3 class="news-title">
+                {{ block.settings.title }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="news-text">
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a
+                href="{{ block.settings.button_link }}"
+                class="news-btn">
+
+                {{ block.settings.button_text }}
+
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19"
+                    stroke="currentColor"
+                    stroke-width="2"/>
+                  <path d="M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+                </svg>
+
+              </a>
+            {% endif %}
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+    .recent-news-section{
+    background:#34393c;
+    padding:40px 0px 70px;
+}
+
+.recent-news-section .page-width{
+    max-width:1590px;
+    margin:0 auto;
+    padding:0px;
+}
+
+.recent-news-header{
+    margin-bottom:40px;
+}
+
+.small-heading{
+    display:block;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 20px;
+    font-family: antarctican-mono, ui-monospace, monospace;
+}
+#shopify-section-template--27016380711215__resource_aTjz6K .small-heading{
+  font-family: "Paquin Sans Display", sans-serif;
+  text-transform: none;
+  font-size: 42px;
+}
+.section-heading{
+    color:#fff;
+    font-size:36px;
+    margin:0;
+}
+
+.recent-news-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px 20px;
+}
+
+.news-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.news-image{
+    display:block;
+    overflow:hidden;
+}
+
+.news-image img{
+    width:auto;
+    height:80px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.news-card:hover img{
+    transform:scale(1.05);
+}
+
+.news-content{
+    padding-top:15px;
+     height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.news-title{
+    font-size:22px;
+    line-height:1.35;
+    margin:0 0 18px;
+    font-weight:700;
+    letter-spacing: 0.08rem;
+}
+
+.news-title a,
+.news-title{
+    color:#fff;
+    text-decoration:none;
+}
+
+.news-text{
+    color:#d5d5d5;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.news-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+    margin-top:auto;
+    text-transform:uppercase;
+    border:1px solid #fff;
+    border-radius:4px;
+    padding:10px 20px;
+}
+
+.news-btn svg{
+    width:18px;
+    height:18px;
+}
+
+.news-btn:hover{
+    color:#fff;
+    background:#0F7F92;border-color:#0F7F92;
+}
+
+.news-empty{
+    color:#fff;
+    text-align:center;
+}
+
+@media(max-width:1550px){
+.recent-news-section .page-width{padding:0px 50px;}
+}
+
+@media(max-width:1200px){
+
+.recent-news-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.recent-news-section .page-width{padding:0px 40px;}
+
+#shopify-section-template--27016380711215__resource_aTjz6K .small-heading{
+  font-size: 40px;
+}
+}
+
+@media(max-width:767px){
+
+.recent-news-section{
+padding:40px 0px 60px;
+}
+
+.recent-news-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.section-heading{
+font-size:28px;
+}
+
+.news-title{
+font-size:22px;
+}
+.recent-news-section .page-width{padding:0px 20px;}
+
+#shopify-section-template--27016380711215__resource_aTjz6K .small-heading{
+  font-size: 34px;
+}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Resource",
+  "tag": "section",
+  "class": "recent-news",
+
+  "settings":[
+
+    {
+      "type":"text",
+      "id":"small_heading",
+      "label":"Small Heading",
+      "default":"RECENT NEWS & INSIGHTS"
+    },
+
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Main Heading"
+    }
+
+  ],
+
+  "blocks":[
+
+    {
+      "type":"card",
+      "name":"News Card",
+
+      "settings":[
+
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Title",
+          "default":"Article Title"
+        },
+
+        {
+          "type":"textarea",
+          "id":"text",
+          "label":"Description",
+          "default":"Write a short description here."
+        },
+
+        {
+          "type":"text",
+          "id":"button_text",
+          "label":"Button Text",
+          "default":"Continue reading"
+        },
+
+        {
+          "type":"url",
+          "id":"button_link",
+          "label":"Button Link"
+        }
+
+      ]
+    }
+
+  ],
+
+  "presets":[
+
+    {
+      "name":"Resource",
+      "blocks":[
+        {
+          "type":"card"
+        },
+        {
+          "type":"card"
+        },
+        {
+          "type":"card"
+        },
+        {
+          "type":"card"
+        }
+      ]
+    }
+
+  ]
+
+}
+{% endschema %}

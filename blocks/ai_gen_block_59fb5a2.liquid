@@ -1,0 +1,752 @@
+{% doc %}
+  @prompt
+    Can you please create comparission section this is the requirement
+    
+    HOW TO SELECT THE RIGHT ACCUMULATOR TYPE  
+    Anchor: #select  |  Headline: 'Bladder vs. Piston vs. Diaphragm — Choosing the Right Type'
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-comparison-section-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};
+    display: block;
+  }
+
+  .ai-comparison-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-comparison-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-comparison-headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_size }}px;
+    color: {{ block.settings.headline_color }};
+    margin: 0;
+    font-family: {{ block.settings.headline_font.family }}, {{ block.settings.headline_font.fallback_families }};
+    font-weight: {{ block.settings.headline_font.weight }};
+    font-style: {{ block.settings.headline_font.style }};
+    line-height: 1.2;
+  }
+
+  .ai-comparison-table-wrapper-{{ ai_gen_id }} {
+    overflow-x: auto;
+    margin-bottom: 24px;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: {{ block.settings.table_background }};
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} th,
+  .ai-comparison-table-{{ ai_gen_id }} td {
+    padding: {{ block.settings.cell_padding }}px;
+    text-align: left;
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} th {
+    background-color: {{ block.settings.header_background }};
+    color: {{ block.settings.header_text_color }};
+    font-size: {{ block.settings.header_font_size }}px;
+    font-weight: 700;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} td {
+    color: {{ block.settings.cell_text_color }};
+    font-size: {{ block.settings.cell_font_size }}px;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} tbody tr:nth-child(even) {
+    background-color: {{ block.settings.row_alternate_color }};
+  }
+
+  .ai-comparison-feature-{{ ai_gen_id }} {
+    font-weight: 600;
+  }
+
+  /*=========================================
+      CTA BUTTONS
+  =========================================*/
+
+  .ai-comparison-buttons-{{ ai_gen_id }}{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:18px;
+      margin-top:40px;
+      flex-wrap:wrap;
+  }
+
+  .ai-comparison-buttons-{{ ai_gen_id }} .comparison-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      min-width:320px;
+      height:60px;
+      padding:0 30px;
+      border-radius:4px;
+      text-decoration:none;
+      font-size:16px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      transition:all .3s ease;
+      font-family:inherit;
+  }
+
+  .ai-comparison-buttons-{{ ai_gen_id }} .comparison-btn svg{
+      width:20px;
+      height:20px;
+      transition:transform .3s ease;
+  }
+
+  .ai-comparison-buttons-{{ ai_gen_id }} .comparison-btn:hover svg{
+      transform:translateX(5px);
+  }
+
+  /* Primary */
+
+  .comparison-btn-primary{
+      background:#0F7F92;
+      color:#ffffff;
+      border:2px solid #0F7F92;
+  }
+
+  .comparison-btn-primary:hover{
+      background:#0C6D7D;
+      border-color:#0C6D7D;
+  }
+
+  /* Secondary */
+
+  .comparison-btn-secondary{
+      background:#ffffff;
+      color:#1F2937;
+      border:2px solid #1F2937;
+  }
+
+  .comparison-btn-secondary:hover{
+      background:#1F2937;
+      color:#ffffff;
+  }
+
+  .comparison-btn-secondary:hover svg{
+      stroke:#ffffff;
+  }
+
+  @media screen and (max-width:749px){
+
+      .ai-comparison-headline-{{ ai_gen_id }}{
+          font-size:calc({{ block.settings.headline_size }}px * .8);
+      }
+
+      .ai-comparison-table-{{ ai_gen_id }} th,
+      .ai-comparison-table-{{ ai_gen_id }} td{
+          padding:{{ block.settings.cell_padding | times:0.7 }}px;
+          font-size:calc({{ block.settings.cell_font_size }}px * .9);
+      }
+
+      .ai-comparison-table-{{ ai_gen_id }} th{
+          font-size:calc({{ block.settings.header_font_size }}px * .9);
+      }
+
+      .ai-comparison-buttons-{{ ai_gen_id }}{
+          flex-direction:column;
+          gap:15px;
+      }
+
+      .ai-comparison-buttons-{{ ai_gen_id }} .comparison-btn{
+          width:100%;
+          min-width:100%;
+          height:56px;
+          font-size:15px;
+      }
+  }
+{% endstyle %}
+
+<accumulator-comparison-{{ ai_gen_id }} class="ai-comparison-section-{{ ai_gen_id }}" {{ block.shopify_attributes }} id="select-type">
+  <div class="ai-comparison-container-{{ ai_gen_id }}">
+
+    {% if block.settings.headline != blank %}
+      <div class="ai-comparison-header-{{ ai_gen_id }}">
+        <h2 class="ai-comparison-headline-{{ ai_gen_id }}">
+          {{ block.settings.headline }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div class="ai-comparison-table-wrapper-{{ ai_gen_id }}">
+      <table class="ai-comparison-table-{{ ai_gen_id }}">
+        <thead>
+          <tr>
+            <th>{{ block.settings.feature_column_header }}</th>
+            <th>{{ block.settings.type_1_name }}</th>
+            <th>{{ block.settings.type_2_name }}</th>
+            <th>{{ block.settings.type_3_name }}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for i in (1..10) %}
+            {% liquid
+              assign feature_key = 'feature_' | append: i | append: '_name'
+              assign type1_key = 'feature_' | append: i | append: '_type1'
+              assign type2_key = 'feature_' | append: i | append: '_type2'
+              assign type3_key = 'feature_' | append: i | append: '_type3'
+
+              assign feature_name = block.settings[feature_key]
+              assign type1_value = block.settings[type1_key]
+              assign type2_value = block.settings[type2_key]
+              assign type3_value = block.settings[type3_key]
+            %}
+
+            {% if feature_name != blank %}
+              <tr>
+                <td class="ai-comparison-feature-{{ ai_gen_id }}">
+                  {{ feature_name }}
+                </td>
+
+                <td>{{ type1_value }}</td>
+                <td>{{ type2_value }}</td>
+                <td>{{ type3_value }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+
+      </table>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="ai-comparison-buttons-{{ ai_gen_id }}">
+
+      <a href="{{ block.settings.button_1_link }}"
+         class="comparison-btn comparison-btn-primary">
+
+        {{ block.settings.button_1_text }}
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+
+      </a>
+
+      <a href="{{ block.settings.button_2_link }}"
+         class="comparison-btn comparison-btn-primary">
+
+        {{ block.settings.button_2_text }}
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+
+      </a>
+
+      <a href="{{ block.settings.button_3_link }}"
+         class="comparison-btn comparison-btn-primary">
+
+        {{ block.settings.button_3_text }}
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+
+      </a>
+
+    </div>
+
+  </div>
+</accumulator-comparison-{{ ai_gen_id }}>
+
+<script>
+(function () {
+
+  if (!customElements.get('accumulator-comparison-{{ ai_gen_id }}')) {
+
+    class AccumulatorComparison extends HTMLElement {
+
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+
+    }
+
+    customElements.define(
+      'accumulator-comparison-{{ ai_gen_id }}',
+      AccumulatorComparison
+    );
+
+  }
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Accumulator comparison",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Bladder vs. Piston vs. Diaphragm — Choosing the Right Type"
+    },
+    {
+      "type": "font_picker",
+      "id": "headline_font",
+      "label": "Headline font",
+      "default": "work_sans_n7"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "label": "Headline size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Table style"
+    },
+    {
+      "type": "color",
+      "id": "table_background",
+      "label": "Table background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "header_background",
+      "label": "Header background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "header_font_size",
+      "label": "Header font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "cell_text_color",
+      "label": "Cell text",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "cell_font_size",
+      "label": "Cell font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "row_alternate_color",
+      "label": "Alternate row color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "range",
+      "id": "cell_padding",
+      "label": "Cell padding",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Table headers"
+    },
+    {
+      "type": "text",
+      "id": "feature_column_header",
+      "label": "Feature column header",
+      "default": "Feature"
+    },
+    {
+      "type": "text",
+      "id": "type_1_name",
+      "label": "Type 1 name",
+      "default": "Bladder"
+    },
+    {
+      "type": "text",
+      "id": "type_2_name",
+      "label": "Type 2 name",
+      "default": "Piston"
+    },
+    {
+      "type": "text",
+      "id": "type_3_name",
+      "label": "Type 3 name",
+      "default": "Diaphragm"
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_name",
+      "label": "Feature name",
+      "default": "Design"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_name",
+      "label": "Feature name",
+      "default": "Pressure range"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_name",
+      "label": "Feature name",
+      "default": "Maintenance"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 4"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_name",
+      "label": "Feature name",
+      "default": "Applications"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_4_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_4_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_4_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 5"
+    },
+    {
+      "type": "text",
+      "id": "feature_5_name",
+      "label": "Feature name",
+      "default": "Cost"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_5_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_5_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_5_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 6"
+    },
+    {
+      "type": "text",
+      "id": "feature_6_name",
+      "label": "Feature name"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_6_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_6_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_6_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 7"
+    },
+    {
+      "type": "text",
+      "id": "feature_7_name",
+      "label": "Feature name"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_7_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_7_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_7_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 8"
+    },
+    {
+      "type": "text",
+      "id": "feature_8_name",
+      "label": "Feature name"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_8_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_8_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_8_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 9"
+    },
+    {
+      "type": "text",
+      "id": "feature_9_name",
+      "label": "Feature name"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_9_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_9_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_9_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "Feature 10"
+    },
+    {
+      "type": "text",
+      "id": "feature_10_name",
+      "label": "Feature name"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_10_type1",
+      "label": "Bladder value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_10_type2",
+      "label": "Piston value"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_10_type3",
+      "label": "Diaphragm value"
+    },
+    {
+      "type": "header",
+      "content": "CTA Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Primary Button Text",
+      "default": "SHOP BLADDER ACCUMULATORS"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Secondary Button Text",
+      "default": "SHOP PISTON ACCUMULATORS"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_3_text",
+      "label": "Secondary Button Text",
+      "default": "SHOP DIAPHRAGM ACCUMULATORS "
+    },
+    {
+      "type": "url",
+      "id": "button_3_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accumulator comparison"
+    }
+  ]
+}
+{% endschema %}

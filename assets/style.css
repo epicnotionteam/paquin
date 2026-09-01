@@ -5982,7 +5982,12 @@ a.comparison-btn {
 }
 
 @media(max-width:480px){
-.ai-comparison-buttons-achoyt1jyrzk1t2jtbaigenblock59fb5a2z6ftiy .comparison-btn{width:100%;min-width:unset;}
+.ai-comparison-buttons-aq1fisu9qcecxczvsqaigenblock59fb5a2z6ftiy
+.comparison-btn {
+  width: 100%;
+  min-width: unset;
+}
+
 }
 
 #shopify-section-template--27017903243567__top_products_HfNTVQ, #shopify-section-template--27017903243567__dynamic_image_with_text_rxd4ij{

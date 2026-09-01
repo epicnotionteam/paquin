@@ -5884,12 +5884,12 @@ ul.list--link-arrow li::before {
   color: white !important;
   filter: brightness(1.12);
 }
-.collection-accumulators .wrap--container.container--breadcrumbs {
+/* .collection-accumulators .wrap--container.container--breadcrumbs {
     display: none;
 }
 .collection-accumulators .productgrid--masthead.wrap--container {
     display: none;
-}
+} */
 
 #shopify-section-template--27303625097519__content_blocks_j9xKL4 .section--content-blocks .section__grid .container--heading-small .section__heading--small{
   font-family: "Paquin Sans Display", sans-serif;

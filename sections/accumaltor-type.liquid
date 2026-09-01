@@ -1,0 +1,787 @@
+<section
+  id="nitrogen-safety"
+  class="accumulator-guide nitrogen-safety"
+>
+
+  <div class="page-width">
+
+    <!-- Hero Banner -->
+    <div class="guide-hero">
+
+      {% if section.settings.hero_image != blank %}
+        {{
+          section.settings.hero_image
+          | image_url: width: 2000
+          | image_tag:
+            loading: 'lazy',
+            class: 'guide-hero-image'
+        }}
+      {% endif %}
+
+      <div class="guide-hero-overlay"></div>
+
+      {% if section.settings.heading != blank %}
+        <div class="guide-hero-content">
+          <h2 class="guide-main-title">
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      {% endif %}
+
+    </div>
+
+    <!-- Card 1 -->
+
+    <div class="guide-card">
+
+      <div class="guide-icon">
+
+        {% if section.settings.icon1 != blank %}
+          {{
+            section.settings.icon1
+            | image_url: width: 120
+            | image_tag:
+              loading: 'lazy'
+          }}
+        {% endif %}
+
+      </div>
+
+      <div class="guide-content">
+
+        {% if section.settings.card1_heading != blank %}
+          <h3>
+            {{ section.settings.card1_heading }}
+          </h3>
+        {% endif %}
+
+        {% if section.settings.card1_text != blank %}
+          <div class="guide-text">
+            {{ section.settings.card1_text }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="guide-card">
+
+      <div class="guide-icon">
+
+        {% if section.settings.icon2 != blank %}
+          {{
+            section.settings.icon2
+            | image_url: width: 120
+            | image_tag:
+              loading: 'lazy'
+          }}
+        {% endif %}
+
+      </div>
+
+      <div class="guide-content">
+
+        {% if section.settings.card2_heading != blank %}
+          <h3>
+            {{ section.settings.card2_heading }}
+          </h3>
+        {% endif %}
+
+        <ul class="guide-list">
+
+          {% if section.settings.point1 != blank %}
+            <li>{{ section.settings.point1 }}</li>
+          {% endif %}
+
+          {% if section.settings.point2 != blank %}
+            <li>{{ section.settings.point2 }}</li>
+          {% endif %}
+
+          {% if section.settings.point3 != blank %}
+            <li>{{ section.settings.point3 }}</li>
+          {% endif %}
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="guide-card">
+
+      <div class="guide-icon">
+
+        {% if section.settings.icon3 != blank %}
+          {{
+            section.settings.icon3
+            | image_url: width: 120
+            | image_tag:
+              loading: 'lazy'
+          }}
+        {% endif %}
+
+      </div>
+
+      <div class="guide-content">
+
+        {% if section.settings.card3_heading != blank %}
+          <h3>
+            {{ section.settings.card3_heading }}
+          </h3>
+        {% endif %}
+
+        <div class="step-list">
+
+          {% for i in (1..4) %}
+
+            {% assign title = 'step_title_' | append: i %}
+            {% assign text = 'step_text_' | append: i %}
+
+            {% if section.settings[title] != blank or section.settings[text] != blank %}
+
+              <div class="step-row">
+
+                <div class="step-number">
+                  {{ i }}
+                </div>
+
+                <div class="step-content">
+
+                  {% if section.settings[title] != blank %}
+                    <strong>{{ section.settings[title] }}</strong>
+                  {% endif %}
+
+                  {% if section.settings[text] != blank %}
+                    {{ section.settings[text] }}
+                  {% endif %}
+
+                </div>
+
+              </div>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+<!-- Buttons -->
+
+    {% if section.settings.button1_text != blank or section.settings.button2_text != blank %}
+
+      <div class="guide-buttons">
+
+        {% if section.settings.button1_text != blank %}
+          <a
+            href="{{ section.settings.button1_link }}"
+            class="guide-btn primary"
+          >
+            {{ section.settings.button1_text }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.button2_text != blank %}
+          <a
+            href="{{ section.settings.button2_link }}"
+            class="guide-btn secondary"
+          >
+            {{ section.settings.button2_text }}
+          </a>
+        {% endif %}
+
+      </div>
+
+    {% endif %}
+
+  </div>
+
+</section>
+
+<style>
+
+/*==================================================
+=            Hero Banner
+==================================================*/
+
+.guide-hero{
+  position:relative;
+  width:100%;
+  height:380px;
+  margin:0 0 50px;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#10234d;
+}
+
+.guide-hero-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.guide-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  z-index:1;
+}
+
+.guide-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding:20px;
+  text-align:center;
+}
+
+.guide-main-title{
+  margin:0;
+  font-size:48px;
+  line-height:1.2;
+  font-weight:700;
+  color:#ffffff;
+  letter-spacing:.08rem;
+}
+
+/*==================================================
+=            Main Section
+==================================================*/
+
+.accumulator-guide{
+  padding:60px 0;
+  background:{{ section.settings.section_bg }};
+}
+
+.accumulator-guide .page-width{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0;
+}
+
+/*==================================================
+=            Cards
+==================================================*/
+
+.guide-card{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  background:#fff;
+  border:1px solid #e5e9ef;
+  border-radius:12px;
+  padding:30px 35px;
+  margin-bottom:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+
+/*==================================================
+=            Icons
+==================================================*/
+
+.guide-icon{
+  flex:0 0 100px;
+  width:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  display:none;
+}
+
+.guide-icon img{
+  width:85px;
+  height:auto;
+  object-fit:contain;
+}
+
+/*==================================================
+=            Content
+==================================================*/
+
+.guide-content{
+  flex:1;
+}
+
+.guide-content h3{
+  margin:0 0 15px;
+  font-size:26px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.08rem;
+  color:#10234d;
+}
+
+/*==================================================
+=            Rich Text
+==================================================*/
+
+.guide-text{
+  font-size:18px;
+  line-height:1.7;
+  color:#333943;
+}
+
+.guide-text p{
+  margin:0;
+}
+
+/*==================================================
+=            Bullet List
+==================================================*/
+
+.guide-list{
+  margin:0;
+  padding-left:25px;
+}
+
+.guide-list li{
+  font-size:18px;
+  line-height:1.7;
+  color:#333943;
+  margin-bottom:8px;
+}
+
+.guide-list li::marker{
+  color:#0795aa;
+}
+
+/*==================================================
+=            Steps
+==================================================*/
+
+.step-list{
+  margin-top:5px;
+}
+
+.step-row{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  padding:14px 0;
+  border-bottom:1px solid #ededed;
+}
+
+.step-row:last-child{
+  border-bottom:none;
+}
+
+.step-number{
+  flex:0 0 40px;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  font-size:20px;
+  font-weight:700;
+  color:#fff;
+  background:#0F7F92;
+}
+
+.step-content{
+  flex:1;
+  font-size:18px;
+  line-height:1.7;
+  color:#333943;
+}
+
+.step-content strong{
+  color:#10234d;
+  margin-right:5px;
+}
+
+/*==================================================
+=            Buttons
+==================================================*/
+
+.guide-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+  margin-top:35px;
+}
+
+.guide-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:300px;
+  padding:13px 30px;
+  font-family:antarctican-mono, ui-monospace, monospace;
+  border-radius:4px;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.guide-btn.primary{
+  color:#fff;
+  background:#0F7F92;
+  border:2px solid transparent;
+}
+
+.guide-btn.secondary{
+  color:#000;
+  background:#fff;
+  border:2px solid #000;
+}
+
+.guide-btn.primary:hover{
+  background:#0c6c7d;
+}
+
+.guide-btn.secondary:hover{
+  background:#000;
+  color:#fff;
+}
+
+/*==================================================
+=            Large Desktop
+==================================================*/
+
+@media (max-width:1550px){
+
+  .accumulator-guide .page-width{
+    padding:0 50px;
+  }
+
+}
+
+/*==================================================
+=            Desktop
+==================================================*/
+
+@media (max-width:1200px){
+
+  .accumulator-guide .page-width{
+    padding:0 40px;
+  }
+
+  .guide-hero{
+    height:340px;
+  }
+
+  .guide-main-title{
+    font-size:42px;
+  }
+
+}
+
+/*==================================================
+=            Tablet
+==================================================*/
+
+@media (max-width:991px){
+
+  .guide-hero{
+    height:300px;
+    margin-bottom:40px;
+  }
+
+  .guide-hero-content{
+    padding:20px;
+  }
+
+  .guide-main-title{
+    font-size:36px;
+  }
+
+  .guide-card{
+    gap:25px;
+    padding:25px;
+  }
+
+  .guide-content h3{
+    font-size:23px;
+  }
+
+  .guide-text,
+  .guide-list li,
+  .step-content{
+    font-size:17px;
+  }
+
+  .guide-btn{
+    width:auto;
+    min-width:240px;
+  }
+
+}
+
+/*==================================================
+=            Mobile
+==================================================*/
+
+@media (max-width:767px){
+
+  .accumulator-guide{
+    padding:40px 15px;
+  }
+
+  .accumulator-guide .page-width{
+    padding:0;
+  }
+
+  .guide-hero{
+    height:220px;
+    margin-bottom:30px;
+    border-radius:8px;
+  }
+
+  .guide-hero-content{
+    padding:15px;
+  }
+
+  .guide-main-title{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .guide-card{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:22px;
+    gap:20px;
+  }
+
+  .guide-icon{
+    width:80px;
+    flex:auto;
+  }
+
+  .guide-icon img{
+    width:70px;
+  }
+
+  .guide-content h3{
+    font-size:22px;
+  }
+
+  .guide-text,
+  .guide-list li,
+  .step-content{
+    font-size:16px;
+  }
+
+  .step-number{
+    width:35px;
+    height:35px;
+    flex-basis:35px;
+    font-size:16px;
+  }
+
+  .guide-buttons{
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+  }
+
+  .guide-btn{
+    width:100%;
+    min-width:100%;
+    font-size:15px;
+  }
+
+}
+</style>
+
+{% schema %}
+{
+  "name": "Accumulator Guide",
+  "tag": "section",
+  "class": "section-accumulator-guide",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "info": "Used for anchor links"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Accumulator Guide"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background Image"
+    },
+
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon1",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "card1_heading",
+      "label": "Heading",
+      "default": "Why Dry Nitrogen Only?"
+    },
+    {
+      "type": "richtext",
+      "id": "card1_text",
+      "label": "Content",
+      "default": "<p>Nitrogen is non-toxic, inert, non-explosive, and non-flammable.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon2",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "card2_heading",
+      "label": "Heading",
+      "default": "Precharge Frequency"
+    },
+    {
+      "type": "richtext",
+      "id": "point1",
+      "label": "Bullet 1"
+    },
+    {
+      "type": "richtext",
+      "id": "point2",
+      "label": "Bullet 2",
+    },
+    {
+      "type": "richtext",
+      "id": "point3",
+      "label": "Bullet 3"
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon3",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "card3_heading",
+      "label": "Heading",
+      "default": "How to Precharge — Step by Step"
+    },
+
+    {
+      "type": "text",
+      "id": "step_title_1",
+      "label": "Step 1 Title",
+      "default": "Step 1:"
+    },
+    {
+      "type": "text",
+      "id": "step_text_1",
+      "label": "Step 1 Description",
+      "default": "Use a genuine Charging & Gauging assembly with a nitrogen regulator."
+    },
+
+    {
+      "type": "text",
+      "id": "step_title_2",
+      "label": "Step 2 Title",
+      "default": "Step 2:"
+    },
+    {
+      "type": "text",
+      "id": "step_text_2",
+      "label": "Step 2 Description",
+      "default": "Slowly pre-charge to 35 PSI first."
+    },
+
+    {
+      "type": "text",
+      "id": "step_title_3",
+      "label": "Step 3 Title",
+      "default": "Step 3:"
+    },
+    {
+      "type": "text",
+      "id": "step_text_3",
+      "label": "Step 3 Description",
+      "default": "Gradually bring to operating pressure."
+    },
+
+    {
+      "type": "text",
+      "id": "step_title_4",
+      "label": "Step 4 Title",
+      "default": "Step 4:"
+    },
+    {
+      "type": "text",
+      "id": "step_text_4",
+      "label": "Step 4 Description",
+      "default": "Verify pressure before returning to service."
+    },
+
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "label": "Button 1 Text",
+      "default": "SHOP ACCUMULATORS INC. PRODUCTS"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Button 2 Text",
+      "default": "REQUEST A QUOTE"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Button 2 Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accumulator Guide"
+    }
+  ]
+}
+{% endschema %}

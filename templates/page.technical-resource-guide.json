@@ -298,7 +298,7 @@
         "step_title_4": "Step 4:",
         "step_text_4": "Verify precharge with gauging kit before returning accumulator to service",
         "button1_text": "SHOP NITROGEN CHARGING KITS",
-        "button1_link": "/collections/accumulators?type=charging",
+        "button1_link": "https://paquin.com/collections/accumulators?filter.p.tag=charging",
         "button2_text": "USE SIZING CALCULATOR",
         "button2_link": "https://www.accumulators.com/tool/accumulator-size-calculator"
       }

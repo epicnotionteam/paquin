@@ -165,9 +165,9 @@
             "button_1_text": "SHOP BLADDER ACCUMULATORS",
             "button_1_link": "/collections/accumulators?type=bladder",
             "button_2_text": "SHOP PISTON ACCUMULATORS",
-            "button_2_link": "/collections/accumulators?type=piston",
+            "button_2_link": "https://paquin.com/collections/accumulators?filter.p.tag=Piston+Accumulator",
             "button_3_text": "SHOP DIAPHRAGM ACCUMULATORS",
-            "button_3_link": "/collections/accumulators?type=diaphragm"
+            "button_3_link": "https://paquin.com/collections/accumulators?filter.p.tag=Diaphram+Accumulator"
           },
           "blocks": {}
         }

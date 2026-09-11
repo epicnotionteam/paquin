@@ -3617,9 +3617,9 @@ border-radius: 20px;
     flex-direction: column;
 }
 
-/* .collection-accumulators .productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
+.collection-accumulators .productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
     height: auto;
-} */
+}
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

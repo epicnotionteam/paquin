@@ -3608,7 +3608,7 @@ background-color: #fff;
 border-radius: 20px;
 }
 .collection-accumulators .productitem[data-animation], .productitem[data-animation-state=open] {
-    position: absolute;
+    position: static;
 }
 
 .collection-accumulators .productitem__container {
@@ -3619,7 +3619,7 @@ border-radius: 20px;
 
 .collection-accumulators .productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
     height: auto;
-} 
+}
 .template-collection .breadcrumbs-container {
   text-align: center;
   width: 100%;

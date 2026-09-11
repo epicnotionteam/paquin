@@ -3617,11 +3617,8 @@ border-radius: 20px;
     flex-direction: column;
 }
 
-/* .collection-accumulators .productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
+.productitem[data-animation="closed=>open"], .productitem[data-animation-state=open] {
     height: auto;
-} */
- .collection-accumulators .productitem[data-animation], .productitem[data-animation-state=open] {
-    position: absolute;
 }
 .template-collection .breadcrumbs-container {
   text-align: center;

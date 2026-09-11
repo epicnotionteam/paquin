@@ -322,7 +322,7 @@ endif
             {% if collection.products.size > 0 and collection.metafields.custom.show_products != false %}
                 {% comment %} Container [Sidebar] {% endcomment %}
              {% comment %} {% if show_sidebar and is_all_collection %} {% endcomment %}
-              {% comment %} {% if show_sidebar %}
+              {% if show_sidebar %}
                     <div class="container--sidebar-feed wrap--container">
                         <div class="container--grid wrap--max push--center">
                             
@@ -337,8 +337,7 @@ endif
                             show_filter_product_count: filter_block.settings.show_filter_product_count
                             %}
 
-                {% endif %} {% endcomment %}
-                 {% if template.suffix == 'accumulator-collection' %} {% if show_sidebar %} <div class="container--sidebar-feed wrap--container"> <div class="container--grid wrap--max push--center"> {% render 'product-grid-sidebar', menu_depth: section.settings.menu_depth_range, context: collection, filter_block: filter_block, filter_type: filter_type, filter_style: filter_block.settings.filter_style, filter_limit: filter_block.settings.filter_limit, show_filter_product_count: filter_block.settings.show_filter_product_count %} </div> </div> {% endif %} {% else %} {% if show_sidebar and is_all_collection %} <div class="container--sidebar-feed wrap--container"> <div class="container--grid wrap--max push--center"> {% render 'product-grid-sidebar', menu_depth: section.settings.menu_depth_range, context: collection, filter_block: filter_block, filter_type: filter_type, filter_style: filter_block.settings.filter_style, filter_limit: filter_block.settings.filter_limit, show_filter_product_count: filter_block.settings.show_filter_product_count %} </div> </div> {% endif %} {% endif %}
+                {% endif %}
                 {% comment %} Container [Product Feed] {% endcomment %}
                 <div id="section--feed" class="productgrid--wrapper wrap--container">
                     <div class="wrap--max push--center">

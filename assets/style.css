@@ -3586,7 +3586,9 @@ footer .site-footer-wrapper .site-footer__row--second .footer__form {
   .container--sidebar-feed .container--grid .productgrid--items {
     grid-template-columns: repeat(5, 1fr) !important;
   }
-  
+  .collection-accumulators .container--sidebar-feed .container--grid .productgrid--items {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
 }
 .container--empty-collection {
   margin-top: 24px;

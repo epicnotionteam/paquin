@@ -788,7 +788,7 @@
     </script>
 
 <script>
-  {% comment %} (function () {
+  (function () {
     function initTabs(root) {
       const scope = root || document;
       const containers = scope.querySelectorAll('[data-ch-tabs]');
@@ -861,7 +861,7 @@
     document.addEventListener('shopify:section:load', function (event) {
       initTabs(event.target);
     });
-  })(); {% endcomment %}
+  })();
 </script>
 
 

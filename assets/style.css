@@ -3607,10 +3607,13 @@ right:unset !important;
 background-color: #fff;
 border-radius: 20px;
 }
-.collection-accumulators .productitem[data-animation], .productitem[data-animation-state=open] {
+/* .collection-accumulators .productitem[data-animation], .productitem[data-animation-state=open] {
+    position: absolute;
+} */
+.collection-accumulators .productitem[data-animation],
+.collection-accumulators .productitem[data-animation-state="open"] {
     position: absolute;
 }
-
 .collection-accumulators .productitem__container {
     height: 100%;
     display: flex;

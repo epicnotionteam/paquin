@@ -9,7 +9,8 @@
   </div>
 
   <div class="page-width">
-  <div class="hero-wrapper">
+  {% comment %} <div class="hero-wrapper"> {% endcomment %}
+   <div class="hero-wrapper {% if section.settings.product_image == blank %}no-right-image{% endif %}">
 
       <div class="hero-content">
 
@@ -63,7 +64,7 @@
   </div>
       </div>
 
-      <div class="hero-image">
+      {% comment %} <div class="hero-image">
 
         {% if section.settings.product_image != blank %}
           <img
@@ -71,7 +72,15 @@
             alt="">
         {% endif %}
 
-      </div>
+      </div> {% endcomment %}
+
+      {% if section.settings.product_image != blank %}
+  <div class="hero-image">
+    <img
+      src="{{ section.settings.product_image | image_url: width: 1200 }}"
+      alt="">
+  </div>
+{% endif %}
 
     </div>
   </div>

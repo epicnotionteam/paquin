@@ -14,7 +14,6 @@
       "name": "Hero Banner",
       "settings": {
         "bg_image": "shopify://shop_images/banner-bg-image.webp",
-        "product_image": "shopify://shop_images/banner-main-image.webp",
         "small_heading": "Bladder vs Piston vs Diaphragm",
         "heading": "How to Select the Right Accumulator Type",
         "text": "<p>Choosing the Right Type of Accumulator Doesn't Have to Be Hard</p>",

@@ -114,6 +114,15 @@
     "careers-roles": {
       "type": "careers-content-offset-roles",
       "blocks": {
+        "role_block_VJEE4A": {
+          "type": "role-block",
+          "settings": {
+            "title": "Quality Technician",
+            "division": "The Paquin Company",
+            "location": "Mentor, OH",
+            "link": ""
+          }
+        },
         "role_block_q69pjm": {
           "type": "role-block",
           "settings": {
@@ -122,20 +131,11 @@
             "location": "Mentor, OH",
             "link": ""
           }
-        },
-        "role_block_VJEE4A": {
-          "type": "role-block",
-          "settings": {
-            "title": "Inside Sales",
-            "division": "Paquin Sensors",
-            "location": "Seneca, SC",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "role_block_q69pjm",
-        "role_block_VJEE4A"
+        "role_block_VJEE4A",
+        "role_block_q69pjm"
       ],
       "settings": {
         "heading_small": "Current Openings",

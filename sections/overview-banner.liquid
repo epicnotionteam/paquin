@@ -249,13 +249,15 @@
 @media (max-width:1200px){
 
     .hero-wrapper{
-        grid-template-columns:52% 48%;
+        {% comment %} grid-template-columns:52% 48%; {% endcomment %}
+         grid-template-columns: 60% 1fr;
         gap:30px;
     }
 
     .hero-content{
         width:100%;
-        max-width:560px;
+        {% comment %} max-width:560px; {% endcomment %}
+        max-width: max-content;
     }
 
     .hero-content h1{

@@ -112,7 +112,8 @@
     position:relative;
     z-index:2;
     display:grid;
-    grid-template-columns:640px 1fr; /* Fixed left column */
+    {% comment %} grid-template-columns:640px 1fr; {% endcomment %}
+     grid-template-columns: 1fr 800px;
     align-items:center;
     column-gap:40px;
     min-height:620px;

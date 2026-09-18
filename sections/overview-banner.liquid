@@ -1,28 +1,15 @@
 <section class="hero-banner">
-
-  <!-- Background Image -->
   <div class="hero-bg">
     {% if section.settings.bg_image != blank %}
       <img
         src="{{ section.settings.bg_image | image_url: width: 2200 }}"
-        alt="{{ section.settings.heading | escape }}"
-        class="hero-bg-image"
-      >
+        alt="{{ section.settings.heading }}"
+        class="hero-bg-image">
     {% endif %}
   </div>
 
-
   <div class="page-width">
-
-    <!--
-      Add no-right-image class automatically
-      when Right Image is not selected
-    -->
-    <div class="hero-wrapper {% if section.settings.product_image == blank %}no-right-image{% endif %}">
-
-      <!-- =========================================
-           HERO CONTENT
-      ========================================== -->
+  <div class="hero-wrapper">
 
       <div class="hero-content">
 
@@ -30,883 +17,305 @@
           <h1>{{ section.settings.heading }}</h1>
         {% endif %}
 
-
         {% if section.settings.small_heading != blank %}
           <p class="hero-small">
             {{ section.settings.small_heading }}
           </p>
         {% endif %}
 
+        
 
-        <!-- =========================================
-             BUTTONS
-        ========================================== -->
+<div class="hero-buttons">
 
-        <div class="hero-buttons">
+  {% if section.settings.button_label != blank %}
+    <a href="{{ section.settings.button_link }}" class="btn btn-primary">
+      <span>{{ section.settings.button_label }}</span>
+      <span class="btn-arrow">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 6H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 1L16.5 6L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+  {% endif %}
 
-          {% if section.settings.button_label != blank %}
+  {% if section.settings.button2_label != blank %}
+    <a href="{{ section.settings.button2_link }}" class="btn btn-outline">
+      <span>{{ section.settings.button2_label }}</span>
+      <span class="btn-arrow">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 6H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 1L16.5 6L11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+  {% endif %}
 
-            <a
-              href="{{ section.settings.button_link }}"
-              class="btn btn-primary"
-            >
+</div>
+<div class="hero-bottom">
+    <div class="hero-divider"></div>
 
-              <span>
-                {{ section.settings.button_label }}
-              </span>
+    {% if section.settings.text != blank %}
+      <div class="hero-text-full">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+  </div>
+      </div>
 
-              <span class="btn-arrow">
+      <div class="hero-image">
 
-                <svg
-                  width="18"
-                  height="12"
-                  viewBox="0 0 18 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-
-                  <path
-                    d="M1 6H15"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-
-                  <path
-                    d="M11 1L16.5 6L11 11"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </svg>
-
-              </span>
-
-            </a>
-
-          {% endif %}
-
-
-          {% if section.settings.button2_label != blank %}
-
-            <a
-              href="{{ section.settings.button2_link }}"
-              class="btn btn-outline"
-            >
-
-              <span>
-                {{ section.settings.button2_label }}
-              </span>
-
-              <span class="btn-arrow">
-
-                <svg
-                  width="18"
-                  height="12"
-                  viewBox="0 0 18 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-
-                  <path
-                    d="M1 6H15"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-
-                  <path
-                    d="M11 1L16.5 6L11 11"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </svg>
-
-              </span>
-
-            </a>
-
-          {% endif %}
-
-        </div>
-
-
-        <!-- =========================================
-             BOTTOM DESCRIPTION
-        ========================================== -->
-
-        <div class="hero-bottom">
-
-          <div class="hero-divider"></div>
-
-          {% if section.settings.text != blank %}
-
-            <div class="hero-text-full">
-              {{ section.settings.text }}
-            </div>
-
-          {% endif %}
-
-        </div>
+        {% if section.settings.product_image != blank %}
+          <img
+            src="{{ section.settings.product_image | image_url: width:1200 }}"
+            alt="">
+        {% endif %}
 
       </div>
 
-
-      <!-- =========================================
-           RIGHT IMAGE
-           
-           Entire element is removed when no image
-           is selected.
-      ========================================== -->
-
-      {% if section.settings.product_image != blank %}
-
-        <div class="hero-image">
-
-          <img
-            src="{{ section.settings.product_image | image_url: width: 1200 }}"
-            alt=""
-          >
-
-        </div>
-
-      {% endif %}
-
     </div>
-
   </div>
-
 </section>
-
-
 <style>
-
-/* =========================================================
-   HERO BANNER
-========================================================= */
-
-.hero-banner {
-  position: relative;
-  overflow: hidden;
-
-  min-height: 620px;
-
-  display: flex;
-  align-items: center;
-
-  color: #fff;
-
-  margin-bottom: 0;
+  
+    .hero-banner{
+    position:relative;
+    overflow:hidden;
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    margin-bottom:0px;
+}
+.hero-banner .page-width{max-width:1590px;padding:0px;margin:0 auto;display:block;}
+.hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
 }
 
-
-/* =========================================================
-   PAGE WIDTH
-========================================================= */
-
-.hero-banner .page-width {
-  width: 100%;
-  max-width: 1590px;
-
-  padding: 0;
-
-  margin: 0 auto;
-
-  display: block;
+.hero-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-
-/* =========================================================
-   BACKGROUND
-========================================================= */
-
-.hero-bg {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 0;
+.hero-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,#06152f 0%,rgba(6,21,47,.92) 35%,rgba(6,21,47,.25) 70%);
+    z-index:1;
 }
 
-
-.hero-bg-image {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
+.hero-wrapper{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:640px 1fr; /* Fixed left column */
+    align-items:center;
+    column-gap:40px;
+    min-height:620px;
 }
 
-
-/* =========================================================
-   DARK OVERLAY
-========================================================= */
-
-.hero-banner::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      #06152f 0%,
-      rgba(6, 21, 47, 0.92) 35%,
-      rgba(6, 21, 47, 0.25) 70%
-    );
-
-  z-index: 1;
+.hero-content{
+    max-width:580px;
+    padding-bottom:120px;
 }
 
-
-/* =========================================================
-   HERO WRAPPER
-========================================================= */
-
-.hero-wrapper {
-  position: relative;
-
-  z-index: 2;
-
-  display: grid;
-
-  grid-template-columns: 640px 1fr;
-
-  align-items: center;
-
-  column-gap: 40px;
-
-  min-height: 620px;
-
-  width: 100%;
+.hero-content h1{
+    font-family:"Paquin Sans Display",sans-serif;
+    font-size:46px;
+    font-weight:800;
+    line-height:1.2;
+    letter-spacing:2px;
+    margin:0 0 24px;
+    white-space:pre-line;
+    width:100%;
 }
 
-
-/* =========================================================
-   NORMAL HERO CONTENT
-========================================================= */
-
-.hero-content {
-  position: relative;
-
-  width: 100%;
-
-  max-width: 580px;
-
-  padding-bottom: 120px;
+.hero-small{
+    color:#0bacc7;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.35;
+    margin:0 0 22px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
 }
-
-
-/* =========================================================
-   NO RIGHT IMAGE
-========================================================= */
-
-/*
-   When the Right Image is removed:
-
-   1. Grid becomes a single centered layout
-   2. Right image doesn't exist
-   3. Content becomes wider
-*/
-
-.hero-wrapper.no-right-image {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 100%;
-}
-
-
-.hero-wrapper.no-right-image .hero-content {
-  width: 100%;
-
-  max-width: 760px;
-
-  margin: 0 auto;
-}
-
-
-.hero-wrapper.no-right-image .hero-image {
-  display: none !important;
-}
-
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.hero-content h1 {
-  font-family: "Paquin Sans Display", sans-serif;
-
-  font-size: 46px;
-
-  font-weight: 800;
-
-  line-height: 1.2;
-
-  letter-spacing: 2px;
-
-  margin: 0 0 24px;
-
-  white-space: pre-line;
-
-  width: 100%;
-}
-
-
-/* =========================================================
-   SMALL HEADING
-========================================================= */
-
-.hero-small {
-  color: #0bacc7;
-
-  font-size: 20px;
-
-  font-weight: 700;
-
-  line-height: 1.35;
-
-  margin: 0 0 22px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.hero-buttons {
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  flex-wrap: nowrap;
-}
-
-
-.hero-buttons .btn {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 14px;
-
-  padding: 15px 22px;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  line-height: 1;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-
-  border-radius: 4px;
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-
-  text-transform: uppercase;
-
-  font-family:
-    antarctican-mono,
-    ui-monospace,
-    monospace;
-}
-
-
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
-
-.btn-primary {
-  background: #0f7f92;
-
-  border: 2px solid #0f7f92;
-
-  color: #fff;
-}
-
-
-.btn-primary:hover {
-  background: #0c6c7d;
-
-  border-color: #0c6c7d;
-
-  color: #fff;
-}
-
-
-/* =========================================================
-   OUTLINE BUTTON
-========================================================= */
-
-.btn-outline {
-  background: transparent;
-
-  border: 2px solid rgba(255, 255, 255, 0.75);
-
-  color: #fff;
-}
-
-
-.btn-outline:hover {
-  background: #fff;
-
-  border-color: #fff;
-
-  color: #06152f;
-}
-
-
-/* =========================================================
-   BUTTON ARROW
-========================================================= */
-
-.btn-arrow {
-  display: flex;
-
-  align-items: center;
-
-  transition: transform 0.3s ease;
-}
-
-
-.btn-arrow svg {
-  width: 18px;
-
-  height: 12px;
-}
-
-
-.hero-buttons .btn:hover .btn-arrow {
-  transform: translateX(4px);
-}
-
-
-/* =========================================================
-   BOTTOM DESCRIPTION
-========================================================= */
 
 .hero-bottom {
-  position: absolute;
-
-  z-index: 2;
-
-  left: 0;
-
-  bottom: 30px;
-
-  width: 100%;
-
-  max-width: 760px;
-
-  margin: 0;
-}
-
-
-/*
-   Keep description aligned with
-   centered no-image content.
-*/
-
-.hero-wrapper.no-right-image .hero-bottom {
-  max-width: 760px;
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.hero-divider {
-  width: 100%;
-
-  height: 1px;
-
-  background: rgba(255, 255, 255, 0.16);
-
-  margin-bottom: 30px;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.hero-text-full {
-  width: 100%;
-
-  max-width: 100%;
-
-  display: block;
-
-  color: #d5dce8;
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-
-.hero-text-full p {
-  width: 100%;
-
-  max-width: 100%;
-
-  margin: 0;
-}
-
-
-/* =========================================================
-   RIGHT IMAGE
-========================================================= */
-
-.hero-image {
-  width: 100%;
-
-  text-align: right;
-}
-
-
-.hero-image img {
-  width: 100%;
-
-  height: auto;
-
-  display: block;
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-========================================================= */
-
-@media (max-width: 1550px) {
-
-  .hero-banner .page-width {
-    padding: 0 50px;
-  }
-
-}
-
-
-/* =========================================================
-   TABLET / SMALL DESKTOP
-========================================================= */
-
-@media (max-width: 1200px) {
-
-  .hero-wrapper {
-    grid-template-columns: 52% 48%;
-
-    gap: 30px;
-  }
-
-
-  .hero-content {
+    position: absolute;
+    z-index: 2;
     width: 100%;
-
-    max-width: 560px;
-  }
-
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-
-  .hero-banner .page-width {
-    padding: 0 40px;
-  }
-
-
-  /* IMPORTANT:
-     Preserve centered layout when
-     Right Image is removed.
-  */
-
-  .hero-wrapper.no-right-image {
-    display: flex;
-
-    grid-template-columns: none;
-
-    justify-content: center;
-
-    width: 100%;
-  }
-
-
-  .hero-wrapper.no-right-image .hero-content {
-    width: 100%;
-
-    max-width: 760px;
-  }
-
-
-  .hero-wrapper.no-right-image .hero-image {
-    display: none !important;
-  }
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 991px) {
-
-  .hero-banner {
-    min-height: auto;
-  }
-
-
-  .hero-wrapper,
-  .hero-wrapper.no-right-image {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    text-align: center;
-
-    min-height: auto;
-
-    padding: 50px 0 30px;
-
-    gap: 0;
-  }
-
-
-  .hero-content,
-  .hero-wrapper.no-right-image .hero-content {
-    width: 100%;
-
-    max-width: 100%;
-
-    margin: 0 auto;
-
-    padding-bottom: 0;
-  }
-
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-
-  .hero-buttons {
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-
-
-  /* Right image only appears
-     when selected */
-
-  .hero-image {
-    width: 100%;
-
-    text-align: center;
-
     margin-top: 0;
-  }
+    bottom: 30px;
+    max-width:760px;
+}
+
+.hero-divider{
+    width:100%;
+    height:1px;
+    background:rgba(255, 255, 255, 0.16);
+    margin-bottom:30px;
+}
+
+.hero-text-full p{
+    width:100%;
+    max-width:100%;
+    display:block;
+    color:#d5dce8;
+    font-size:15px;
+    line-height:1.8;
+}
 
 
-  .hero-image img {
-    max-width: 800px;
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:nowrap;
+}
 
-    margin: 0 auto;
-  }
+.hero-buttons .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:15px 22px;
+    font-size:14px;
+    font-weight:700;
+    line-height:1;
+    text-decoration:none;
+    white-space:nowrap;
+    border-radius:4px;
+    transition:.3s ease;
+    text-transform:uppercase;
+     font-family: antarctican-mono, ui-monospace, monospace;
+}
 
+.btn-primary{
+    background:#0F7F92;
+    border:2px solid #0F7F92;
+    color:#fff;
+}
 
-  /* Description moves into
-     normal document flow */
+.btn-primary:hover{
+    background:#0c6c7d;
+    border-color:#0c6c7d;
+    color:#fff;
+}
 
-  .hero-bottom,
-  .hero-wrapper.no-right-image .hero-bottom {
-    position: relative;
+.btn-outline{
+    background:transparent;
+    border:2px solid rgba(255,255,255,.75);
+    color:#fff;
+}
 
-    left: auto;
+.btn-outline:hover{
+    background:#fff;
+    color:#06152F;
+}
 
-    bottom: auto;
+.btn-arrow{
+    display:flex;
+    align-items:center;
+    transition:.3s ease;
+}
 
-    width: 100%;
+.btn-arrow svg{
+    width:18px;
+    height:12px;
+}
 
-    max-width: 760px;
+.btn:hover .btn-arrow{
+    transform:translateX(4px);
+}
+.hero-image{
+    text-align:right;
+}
 
-    margin: 50px auto 0;
-  }
+.hero-image img{
+    width:100%;
+    {% comment %} max-width:760px; {% endcomment %}
+}
 
+@media (max-width:1550px){
+.hero-banner .page-width{padding:0px 50px}
+}
 
-  .hero-divider {
-    margin-bottom: 25px;
+@media (max-width:1200px){
+
+    .hero-wrapper{
+        grid-template-columns:52% 48%;
+        gap:30px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:560px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+    .hero-banner .page-width{padding:0px 40px;}
+
+}
+
+@media (max-width:991px){
+
+    .hero-wrapper{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:50px 0 30px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:100%;
+        margin:auto;
+        padding-bottom:0px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-text{
+        margin:0 auto 35px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero-image{
+        text-align:center;
+        margin-top:0px;
+    }
+
+    .hero-banner{
+        min-height:auto;
+    }
+    .hero-bottom {
+      position: relative;
+      margin-top: 50px;
+      bottom: 0;
   }
 
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 767px) {
-
-  .hero-banner .page-width {
-    padding: 0 20px;
-  }
-
-
-  .hero-wrapper,
-  .hero-wrapper.no-right-image {
-    padding: 40px 0 30px;
-  }
-
-
-  .hero-content h1 {
-    font-size: 32px;
-
-    line-height: 1.15;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 18px;
-  }
-
-
-  .hero-small {
-    font-size: 16px;
-
-    line-height: 1.4;
-
-    margin-bottom: 20px;
-  }
-
-
-  .hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-
-    gap: 12px;
-  }
-
-
-  .hero-buttons .btn {
-    width: 400px;
-
-    max-width: 100%;
-  }
-
-
-  .hero-bottom,
-  .hero-wrapper.no-right-image .hero-bottom {
-    margin-top: 40px;
-  }
-
-
-  .hero-text-full {
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-
-
-  /* Mobile overlay */
-
-  .hero-banner::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(6, 21, 47, 0.88) 0%,
-        rgba(6, 21, 47, 0.78) 100%
-      );
-  }
-
+@media(max-width:767px){
+.hero-buttons{flex-direction:column;}
+.hero-buttons .btn{width:400px;}
+.hero-banner .page-width{padding:0px 20px;}
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 479px) {
-
-  .hero-banner .page-width {
-    padding: 0 16px;
-  }
-
-
-  .hero-wrapper,
-  .hero-wrapper.no-right-image {
-    padding: 35px 0 25px;
-  }
-
-
-  .hero-content h1 {
-    font-size: 28px;
-
-    letter-spacing: 0.5px;
-  }
-
-
-  .hero-small {
-    font-size: 14px;
-  }
-
-
-  .hero-buttons .btn {
-    width: 100%;
-
-    padding: 14px 18px;
-
-    font-size: 12px;
-  }
-
-
-  .hero-bottom,
-  .hero-wrapper.no-right-image .hero-bottom {
-    margin-top: 35px;
-  }
-
-
-  .hero-divider {
-    margin-bottom: 20px;
-  }
-
+@media(max-width:479px){
+.hero-buttons .btn{width:100%;}
 }
-
 </style>
 {% schema %}
 {

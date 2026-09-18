@@ -9,7 +9,7 @@
   </div>
 
   <div class="page-width">
-  <div class="hero-wrapper">
+  <div class="hero-wrapper {% if section.settings.product_image == blank %}no-right-image{% endif %}">
 
       <div class="hero-content">
 
@@ -108,7 +108,7 @@
     z-index:1;
 }
 
-.hero-wrapper{
+{% comment %} .hero-wrapper{
     position:relative;
     z-index:2;
     display:grid;
@@ -116,6 +116,29 @@
     align-items:center;
     column-gap:40px;
     min-height:620px;
+} {% endcomment %}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 640px 1fr;
+    align-items: center;
+    column-gap: 40px;
+    min-height: 620px;
+}
+
+/* No right image */
+.hero-wrapper.no-right-image {
+    grid-template-columns: 1fr;
+}
+
+.hero-wrapper.no-right-image .hero-content {
+    max-width: 760px;
+}
+
+.hero-wrapper.no-right-image .hero-image {
+    display: none;
 }
 
 .hero-content{
@@ -193,7 +216,25 @@
     text-transform:uppercase;
      font-family: antarctican-mono, ui-monospace, monospace;
 }
+/* --------------------------------
+   HERO WITHOUT RIGHT IMAGE
+--------------------------------- */
 
+.hero-wrapper.no-right-image {
+  grid-template-columns: 1fr;
+}
+
+.hero-wrapper.no-right-image .hero-content {
+  max-width: 760px;
+}
+
+.hero-wrapper.no-right-image .hero-image {
+  display: none;
+}
+
+.hero-wrapper.no-right-image .hero-bottom {
+  max-width: 760px;
+}
 .btn-primary{
     background:#0F7F92;
     border:2px solid #0F7F92;

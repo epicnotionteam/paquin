@@ -88,7 +88,7 @@
           "type": "product",
           "settings": {
             "badge": " HIGH PRESSURE ",
-            "image": "shopify://shop_images/IMG_5605.webp",
+            "image": "shopify://shop_images/Piston_Accumulators.png",
             "category": "",
             "title": "Piston Accumulators",
             "specification": "Up to 10,000 PSI | 1 Qt – 140 Gal",
@@ -101,7 +101,7 @@
           "type": "product",
           "settings": {
             "badge": "COMPACT SERIES ",
-            "image": "shopify://shop_images/IMG_5508.webp",
+            "image": "shopify://shop_images/Diaphragm_Accumulator.png",
             "category": "",
             "title": "Diaphragm Accumulators",
             "specification": "3,000 PSI | 20–90 cubic inch",
@@ -114,7 +114,7 @@
           "type": "product",
           "settings": {
             "badge": "SAFETY ",
-            "image": "shopify://shop_images/IMG_5486.webp",
+            "image": "shopify://shop_images/Accumulator_Safety_Blocks.png",
             "category": "",
             "title": "Accumulator Safety Blocks",
             "specification": "NFPA T3.22 Compliant",
@@ -127,7 +127,7 @@
           "type": "product",
           "settings": {
             "badge": " REPLACEMENT PARTS ",
-            "image": "shopify://shop_images/IMG_5521.webp",
+            "image": "shopify://shop_images/Bladder_Seal_Kits.png",
             "category": "",
             "title": "Bladder & Seal Kits",
             "specification": "1 Qt, 1 Gal, 2.5, 5, 10 Gal",
@@ -140,7 +140,7 @@
           "type": "product",
           "settings": {
             "badge": " FIELD SERVICE",
-            "image": "shopify://shop_images/Picture1.webp",
+            "image": "shopify://shop_images/Nitrogen_Charging_Kits.png",
             "category": "",
             "title": "Nitrogen Charging Kits",
             "specification": "Up to 3,000 PSI | SS fittings",

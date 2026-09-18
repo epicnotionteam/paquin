@@ -126,10 +126,21 @@
     column-gap:40px;
     min-height:620px;
 }
+/* When Right Image is removed */
+.hero-wrapper.no-right-image {
+    grid-template-columns:1fr;
+}
 
+.hero-wrapper.no-right-image .hero-content {
+    max-width:760px;
+}
 .hero-content{
     max-width:580px;
     padding-bottom:120px;
+}
+
+.hero-wrapper.no-right-image .hero-content {
+    max-width:760px;
 }
 
 .hero-content h1{

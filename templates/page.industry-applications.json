@@ -35,7 +35,7 @@
             "title": "Key Applications in Oil & Gas",
             "description": "<p>• Blowout Preventer (BOP) Control Systems — Large banks of bladder accumulators form the energy storage backbone of BOP hydraulic control systems. They must deliver immediate, reliable fluid volume during a well control event with no pump assistance.</p><p>• Offshore Platform Hydraulics — Deck cranes, wellhead control panels, subsea control modules, and topsides process equipment all rely on hydraulic accumulators for surge suppression, emergency power, and pressure stabilization.</p><p>• Pipeline Pressure Management — Accumulators absorb hydraulic surges created by valve closures and pump starts along transmission pipelines.</p><p>Subsea Systems — DNV and ABS certified units are available for subsea applications. Contact Paquin for specifications.</p>",
             "button_label": "Shop Oil & Gas Accumulators",
-            "button_link": "/collections/accumulators?industry=oil-gas",
+            "button_link": "https://paquin.com/collections/accumulators?filter.p.tag=Oil+%26+Gas",
             "button_label2": "Request a Quote for Your Project",
             "button_link2": "shopify://pages/contact"
           }

@@ -50,7 +50,7 @@
             "title": "Key Applications in Heavy Manufacturing",
             "description": "<p>• Stamping Press Circuits — Accumulators supplement pump flow during the high-demand press stroke, allowing a smaller pump and motor to handle peak force requirements. Dramatically reduces energy draw and pump wear.</p><p>• Injection Molding Machines — Energy storage accumulators provide rapid-response clamping and injection force, shortening cycle times and improving shot consistency.</p><p>• Hydraulic Power Units (HPUs) — Every HPU benefits from an accumulator for energy storage, pulsation dampening, and emergency pressure hold. Bladder accumulators are the standard choice for most HPU configurations.</p><p>Material Handling Systems — Shock absorption accumulators protect cylinders and actuators from impact loading in conveyor, lift, and transfer systems.</p>",
             "button_label": "Shop Manufacturing Accumulators",
-            "button_link": "/collections/accumulators?industry=manufacturing",
+            "button_link": "shopify://collections/accumulators",
             "button_label2": "Request a Quote",
             "button_link2": "shopify://pages/contact"
           }

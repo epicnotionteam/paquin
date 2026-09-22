@@ -76,7 +76,7 @@
             "title": "Key Applications in Mobile Equipment",
             "description": "<p>• Ride Control Systems — Accumulators mounted in the boom circuit of wheel loaders, telehandlers, and rough-terrain forklifts absorb ground-induced oscillations, reducing operator fatigue and improving travel speed.</p><p>• Agricultural Tractor Hydraulics — Energy recovery and peak power assist for hitch control, implement actuation, and front loader circuits on tractors and combines.</p><p>• Excavator & Loader Hydraulics — Boom and bucket circuit accumulators for energy recovery and shock absorption on construction equipment.</p><p>• Utility & Forestry Vehicles — Pulsation dampening and pressure stabilization for grapple, winch, and blade hydraulic circuits.</p>",
             "button_label": "Shop Mobile Equipment Accumulators",
-            "button_link": "/collections/accumulators?industry=mobile",
+            "button_link": "shopify://collections/accumulators",
             "button_label2": "Shop Diaphragm Accumulators",
             "button_link2": "/collections/accumulators?type=diaphragm"
           }
@@ -91,7 +91,7 @@
             "title": "Key Applications in Power Generation",
             "description": "<p>• Turbine Governor Systems — Accumulators provide the immediate hydraulic energy needed for rapid turbine speed control and load rejection during grid disturbances.</p><p>• Emergency Shutdown Systems (ESD) — A charged accumulator bank ensures that safety valves, isolation valves, and shutdown actuators operate even during total power loss.</p><p>• Hydroelectric Plant Controls — Gate control, bypass valve actuation, and turbine inlet valve positioning all rely on hydraulic systems with accumulator energy storage.</p><p>• Wind Energy — Nacelle pitch control systems use accumulators for emergency feathering in the event of grid loss or control failure. This is a major application for Accumulators Inc.</p>",
             "button_label": "SHOP POWER GENERATION ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=power",
+            "button_link": "shopify://collections/accumulators",
             "button_label2": "Request a Quote",
             "button_link2": "shopify://pages/contact"
           }
@@ -117,7 +117,7 @@
             "title": "Key Applications in Marine & Offshore",
             "description": "<p>• Deck Crane Hydraulics — Anti-sway and load-sensing systems use accumulators to smooth pressure fluctuations and provide emergency lowering capability.</p><p>• Ship Steering Systems (Steering Gear) — Accumulator banks provide emergency energy storage in steering gear hydraulic systems, required by classification societies.</p><p>• Offshore Mooring & Tensioning Systems — Constant-tension mooring winches and riser tensioners use large accumulator banks to maintain cable tension through wave-induced vessel motion.</p><p>• Subsea Control Modules (SCMs) — Subsea accumulator banks provide local hydraulic energy for subsea tree actuations, chemical injection valves, and emergency functions at depths exceeding 10,000 feet.</p>",
             "button_label": "SHOP MARINE & OFFSHORE ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=marine",
+            "button_link": "https://paquin.com/collections/accumulators?filter.p.tag=Marine&type=bladder&grid_list=grid-view",
             "button_label2": "REQUEST DNV/ABS CERTIFIED PRODUCTS",
             "button_link2": "shopify://pages/contact"
           }
@@ -132,7 +132,7 @@
             "title": "Key Applications in Process Industries",
             "description": "<p>• Chemical Dosing & Injection Systems — Accumulators dampen pump pulsation in dosing circuits, ensuring consistent chemical injection rates and protecting precision metering equipment.</p><p>• Pulp & Paper Press Controls — High-force hydraulic pressing circuits in paper machines use accumulators for energy storage, consistent nip pressure, and peak demand supplementation.</p><p>• Water & Wastewater Treatment — Pressure management, pump protection, and pulsation dampening in treatment plant hydraulic and water systems.</p><p>• Food & Beverage Processing — Stainless steel and special-material accumulators available for hygienic applications. Contact Paquin for material specifications.</p>",
             "button_label": "SHOP PROCESS INDUSTRY ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=process",
+            "button_link": "shopify://collections/accumulators",
             "button_label2": "Request a Quote",
             "button_link2": "shopify://pages/contact"
           }

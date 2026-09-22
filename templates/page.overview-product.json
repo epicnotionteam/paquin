@@ -330,7 +330,7 @@
             "description": "Mission-critical in upstream and downstream operations. Delivers pressure stabilization, surge suppression, and emergency energy storage in the harshest environments.",
             "item_4": "",
             "button_label": "SHOP OIL & GAS ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=oil-gas"
+            "button_link": "https://paquin.com/collections/accumulators?filter.p.tag=Oil+%26+Gas&type=bladder&grid_list=grid-view"
           }
         },
         "industry_rBTw7q": {
@@ -341,7 +341,7 @@
             "description": "Consistent hydraulic force delivery, shock absorption, and cycle efficiency for stamping presses, injection moulding lines, and material handling systems.",
             "item_4": "",
             "button_label": "SHOP MANUFACTURING ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=manufacturing"
+            "button_link": "shopify://collections/accumulators"
           }
         },
         "industry_KVzcNb": {
@@ -352,7 +352,7 @@
             "description": "Compact, robust accumulator solutions for energy recovery, ride control, and hydraulic peak power assist in construction equipment, ag machinery, and utility vehicles.",
             "item_4": "",
             "button_label": "SHOP MOBILE EQUIPMENT ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=mobile"
+            "button_link": "shopify://collections/accumulators"
           }
         },
         "industry_PMyzcy": {
@@ -363,7 +363,7 @@
             "description": "Turbine control systems and backup power infrastructure rely on accumulators for rapid hydraulic response and fail-safe energy reserves.",
             "item_4": "",
             "button_label": "SHOP POWER GENERATION ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=power"
+            "button_link": "shopify://collections/accumulators"
           }
         },
         "industry_y6yyDm": {
@@ -374,7 +374,7 @@
             "description": "Engineered for saltwater exposure, pressure cycling, and continuous operation in deck machinery, steering systems, and offshore equipment.",
             "item_4": "",
             "button_label": "SHOP MARINE & OFF SHORE ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=marine"
+            "button_link": "https://paquin.com/collections/accumulators?filter.p.tag=Marine&type=bladder&grid_list=grid-view"
           }
         },
         "industry_TfxFik": {
@@ -385,7 +385,7 @@
             "description": "Chemical processing, pulp & paper, water treatment, and food & beverage plants require precise, contamination-free hydraulic control.",
             "item_4": "",
             "button_label": "SHOP PROCESS INDUSTRY ACCUMULATORS",
-            "button_link": "/collections/accumulators?industry=process"
+            "button_link": "shopify://collections/accumulators"
           }
         }
       },

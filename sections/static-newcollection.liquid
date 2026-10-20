@@ -177,6 +177,91 @@
             min-width: 0 !important;
         }
     }
+
+    {% comment %}
+        Resource tab file list
+        Rows instead of buttons so long titles wrap cleanly and long lists stay scannable.
+        Two columns once there's room, one on mobile.
+    {% endcomment %}
+    #shopify-section-{{ section.id }} .ch-files {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+        column-gap: 32px;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none;
+        border-top: 1px solid #dddddd;
+    }
+    #shopify-section-{{ section.id }} .ch-files:not(.is-expanded) .ch-files__item--extra {
+        display: none;
+    }
+    #shopify-section-{{ section.id }} .ch-files__item {
+        margin: 0;
+        border-bottom: 1px solid #dddddd;
+    }
+    #shopify-section-{{ section.id }} .ch-files__link {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 4px;
+        color: #121212;
+        text-decoration: none;
+        line-height: 1.35;
+        transition: background-color .15s ease;
+    }
+    #shopify-section-{{ section.id }} .ch-files__link:hover,
+    #shopify-section-{{ section.id }} .ch-files__link:focus-visible {
+        background-color: rgba(15, 127, 146, .07);
+    }
+    #shopify-section-{{ section.id }} .ch-files__icon {
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        color: #0F7F92;
+    }
+    #shopify-section-{{ section.id }} .ch-files__icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    #shopify-section-{{ section.id }} .ch-files__title {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    {% comment %} style.css underlines + brightens every #site-main li a on hover; not wanted on these rows {% endcomment %}
+    #shopify-section-{{ section.id }} .ch-files__link:hover,
+    #shopify-section-{{ section.id }} .ch-files__link:focus-visible {
+        text-decoration: none;
+        filter: none;
+    }
+    #shopify-section-{{ section.id }} .ch-files__link:hover .ch-files__title {
+        color: #0F7F92;
+    }
+    #shopify-section-{{ section.id }} .ch-files__meta {
+        flex: 0 0 auto;
+        padding: 2px 6px;
+        border: 1px solid #dddddd;
+        font-size: 11px;
+        letter-spacing: .06em;
+        color: #4d4d4d;
+    }
+    #shopify-section-{{ section.id }} .ch-files__arrow {
+        flex: 0 0 auto;
+        color: #0F7F92;
+    }
+    #shopify-section-{{ section.id }} .ch-files__more {
+        margin-top: 12px;
+        padding: 6px 0;
+        background: none;
+        border: 0;
+        color: #0F7F92;
+        font: inherit;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        cursor: pointer;
+    }
 {% endstyle %}
 
 {% render 'breadcrumbs' %}
@@ -288,26 +373,33 @@
                                             id="{{ panel_id }}"
                                             aria-labelledby="ch-tab-{{ panel_id }}"
                                             hidden>
-                                            <div class="supporting-docs__buttons ch-tabs__buttons">
-                                                {%- comment -%}
-                                                    Handles list.file_reference, list.link, and the single-value
-                                                    variants of both. Label: .text (link) then .alt / .filename (file).
-                                                {%- endcomment -%}
+                                            {%- comment -%}
+                                                Handles list.file_reference, list.link, and the single-value
+                                                variants of both. Rows past files_visible stay hidden until
+                                                "Show all" is clicked (see the script at the end of this section).
+                                            {%- endcomment -%}
+                                            {%- assign files_visible = 6 -%}
+                                            <ul class="ch-files" data-ch-files>
                                                 {%- if mf.type contains 'list.' -%}
-                                                {% for f in mf.value %}
-                                                    <a href="{{ f.url }}" class="button--base button--icon-before button--icon-arrow-forward" target="_blank" rel="noopener">
-                                                    <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                                                    <span class="button__text">{{ f.text | default: f.alt | default: f.filename | default: 'Download' }}</span>
-                                                    </a>
-                                                {% endfor %}
+                                                    {%- for f in mf.value -%}
+                                                        {%- liquid
+                                                            assign extra = false
+                                                            if forloop.index > files_visible
+                                                                assign extra = true
+                                                            endif
+                                                        -%}
+                                                        {% render 'collection-file-row', file: f, extra: extra %}
+                                                    {%- endfor -%}
                                                 {%- else -%}
-                                                    {%- assign f = mf.value -%}
-                                                    <a href="{{ f.url }}" class="button--base button--icon-before button--icon-arrow-forward" target="_blank" rel="noopener">
-                                                    <span class="button__icon">{% render 'icon-library', id: 'icon-data-sheet' %}</span>
-                                                    <span class="button__text">{{ f.text | default: f.alt | default: f.filename | default: 'Download' }}</span>
-                                                    </a>
+                                                    {% render 'collection-file-row', file: mf.value, extra: false %}
                                                 {%- endif -%}
-                                            </div>
+                                            </ul>
+                                            {%- if mf.type contains 'list.' and mf.value.size > files_visible -%}
+                                                <button type="button" class="ch-files__more" data-ch-files-more
+                                                    data-label-more="Show all {{ mf.value.size }}"
+                                                    data-label-less="Show fewer"
+                                                    aria-expanded="false">Show all {{ mf.value.size }}</button>
+                                            {%- endif -%}
                                         </div>
                                         {%- endunless -%}
                                     {% endfor %}
@@ -567,6 +659,22 @@
 {%- endif -%}
 
 {% comment %} {% render 'quick-shop' %} {% endcomment %}
+
+<script>
+    {%- comment -%} "Show all" toggle for the resource tab file lists. Delegated so it survives section reloads in the editor. {%- endcomment -%}
+    if (!window.chFilesMoreBound) {
+        window.chFilesMoreBound = true;
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest('[data-ch-files-more]');
+            if (!btn) return;
+            var list = btn.previousElementSibling;
+            if (!list || !list.hasAttribute('data-ch-files')) return;
+            var expanded = list.classList.toggle('is-expanded');
+            btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+            btn.textContent = expanded ? btn.dataset.labelLess : btn.dataset.labelMore;
+        });
+    }
+</script>
 
 {% schema %}
 {

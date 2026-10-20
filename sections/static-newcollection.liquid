@@ -263,7 +263,15 @@
                                         id="ch-tab-{{ panel_id }}"
                                         aria-controls="{{ panel_id }}"
                                         data-ch-tab="{{ panel_id }}">
-                                        {{ key | replace: '_', ' ' | capitalize }}
+                                        {%- comment -%}
+                                            Display-name overrides so labels can change without renaming the
+                                            underlying metafield keys; anything unlisted falls back to the key.
+                                        {%- endcomment -%}
+                                        {%- case lookup_key -%}
+                                            {%- when 'catalog' -%}Catalogs
+                                            {%- when 'product_selection_grids' -%}Product Selection Grids
+                                            {%- else -%}{{ key | replace: '_', ' ' | capitalize }}
+                                        {%- endcase -%}
                                         </button>
                                         {%- endunless -%}
                                     {% endfor %}

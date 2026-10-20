@@ -1,0 +1,38 @@
+{%- comment -%}
+    One row in a collection resource-tab file list (static-newcollection).
+    Accepts:
+    - file: a file_reference (generic_file) or a link metafield value
+    - extra: true when the row sits past the "Show all" cutoff
+{%- endcomment -%}
+{%- liquid
+    assign label = file.text | default: file.alt | default: file.filename | default: 'Download'
+    assign ext = file.url | split: '?' | first | split: '/' | last | split: '.' | last | upcase
+    assign known_exts = 'PDF,XLS,XLSX,CSV,DOC,DOCX,PPT,PPTX,ZIP,DWG,DXF,STEP,STP'
+    assign known_ext_list = known_exts | split: ','
+    unless known_ext_list contains ext
+        assign ext = ''
+    endunless
+
+    # SharePoint share links carry no extension, but encode the type as /:b:/, /:x:/, etc.
+    if file.url contains '/:b:/'
+        assign ext = 'PDF'
+    elsif file.url contains '/:x:/'
+        assign ext = 'XLSX'
+    elsif file.url contains '/:w:/'
+        assign ext = 'DOCX'
+    elsif file.url contains '/:p:/'
+        assign ext = 'PPTX'
+    endif
+-%}
+<li class="ch-files__item{% if extra %} ch-files__item--extra{% endif %}">
+    <a class="ch-files__link" href="{{ file.url }}" target="_blank" rel="noopener">
+        <span class="ch-files__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+        </span>
+        <span class="ch-files__title">{{ label }}</span>
+        {%- if ext != blank -%}
+            <span class="ch-files__meta">{{ ext }}</span>
+        {%- endif -%}
+        <span class="ch-files__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+</li>

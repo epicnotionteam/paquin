@@ -178,6 +178,12 @@
         }
     }
 
+    {% comment %} Resource tabs: solid teal (.button--base); the open one goes darker so it reads as selected {% endcomment %}
+    #shopify-section-{{ section.id }} [data-ch-tab].is-active {
+        background-color: #0A5A68;
+        filter: none;
+    }
+
     {% comment %}
         Resource tab file list
         Rows instead of buttons so long titles wrap cleanly and long lists stay scannable.
@@ -342,7 +348,7 @@
                                         {%- assign mf = collection.metafields.custom[lookup_key] -%}
                                         {%- unless mf == nil or mf.value == blank -%}
                                         {%- assign panel_id = 'ch-panel-' | append: uid | append: '-' | append: lookup_key -%}
-                                        <button class="button--base button--outline button--icon-before"
+                                        <button class="button--base button--icon-before"
                                         type="button" role="tab"
                                         aria-selected="false"
                                         id="ch-tab-{{ panel_id }}"

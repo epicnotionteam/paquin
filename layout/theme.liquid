@@ -53,17 +53,15 @@
 
     <!--
       Bot guard: skip analytics (GTM + Clarity) for the bot traffic seen in GA4 from Sep 2026.
-      Only matches when all three of its traits line up — Singapore, Macintosh, 1366x1366 screen —
-      so real Singapore and Mac visitors are unaffected. The browser can't see the visitor's city
-      (GA derives that from IP), so the device's Singapore time zone stands in for it.
+      Matches only a Mac reporting a 1366x1366 screen — no real Mac ships with a square display,
+      so genuine visitors (in Singapore or anywhere else) are unaffected.
     -->
     <script>
       window.paqIsBot = (function () {
         try {
-          var isSingapore = Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Singapore';
           var isMac = /Macintosh|Mac OS X/.test(navigator.userAgent);
           var isSquare1366 = screen.width === 1366 && screen.height === 1366;
-          return isSingapore && isMac && isSquare1366;
+          return isMac && isSquare1366;
         } catch (e) {
           return false;
         }

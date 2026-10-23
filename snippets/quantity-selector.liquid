@@ -8,6 +8,18 @@
 
 {% assign quantity_increment_value = settings.quantity_increment_value %}
 
+{%- comment -%}
+  Only start the minus button disabled when the quantity is already at its minimum. The cart page
+  re-renders this markup after every quantity change and nothing re-enables minus afterwards, so an
+  always-disabled default left customers unable to reduce quantities until they reloaded the page.
+{%- endcomment -%}
+{%- liquid
+  assign minus_disabled = true
+  if context == 'cart' and item.quantity > 1
+    assign minus_disabled = false
+  endif
+-%}
+
 <quantity-selector
   class="quantity-selector"
   data-quantity-selector
@@ -30,7 +42,7 @@
       class="
         quantity-selector__button-wrapper
         quantity-selector__button-wrapper--minus
-        quantity-selector__button-wrapper--disabled
+        {% if minus_disabled %}quantity-selector__button-wrapper--disabled{% endif %}
       "
       data-button-wrapper
       data-button-wrapper-minus

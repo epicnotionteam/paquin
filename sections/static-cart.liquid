@@ -56,6 +56,24 @@
   }
 </script>
 
+{% comment %}
+  Match the Sales Tax Exempt banner above the cart: it sits in the standard 1400px theme container
+  (10/15/25px gutters) and caps at 1350px. style.css caps the cart at 960px with 4vw side padding.
+{% endcomment %}
+{% style %}
+  body.template-cart .cart--section > form {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--layout-container-gutter, 10px);
+    padding-right: var(--layout-container-gutter, 10px);
+  }
+  body.template-cart .cart--section > form .cart-title,
+  body.template-cart .cart--section > form .cartitems--container {
+    max-width: 1350px;
+  }
+{% endstyle %}
+
 <form
   action="{{ routes.cart_url }}"
   method="post"

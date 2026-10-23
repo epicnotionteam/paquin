@@ -9,17 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "static-cart",
-      "custom_css": [],
-      "settings": {
-        "show_vendor": false,
-        "show_sku": false,
-        "enable_order_notes": false,
-        "enable_shipping_calc": true,
-        "shipping_calc_default_country": "United States"
-      }
-    },
     "dynamic_html_jYRVYY": {
       "type": "dynamic-html",
       "custom_css": [
@@ -31,10 +20,21 @@
         "title": "Sales Tax Exempt?",
         "custom_html": "<div class=\"sales-exempt-wrapper\">\n<p class=\"sales-exempt-form\"> Fill out the form below to request a sales tax exemption. \nOtherwise, you will be required to pay sales tax prior to shipment.</p>\n<br>\n<div class=\"globo-formbuilder\" data-id=\"MTI5NDgw\"></div>\n</div>"
       }
+    },
+    "main": {
+      "type": "static-cart",
+      "custom_css": [],
+      "settings": {
+        "show_vendor": false,
+        "show_sku": false,
+        "enable_order_notes": false,
+        "enable_shipping_calc": true,
+        "shipping_calc_default_country": "United States"
+      }
     }
   },
   "order": [
-    "main",
-    "dynamic_html_jYRVYY"
+    "dynamic_html_jYRVYY",
+    "main"
   ]
 }

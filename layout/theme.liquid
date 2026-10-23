@@ -51,10 +51,30 @@
 
     {% render 'favicon' %}
 
+    <!--
+      Bot guard: skip analytics (GTM + Clarity) for the bot traffic seen in GA4 from Sep 2026.
+      Only matches when all three of its traits line up — Singapore, Macintosh, 1366x1366 screen —
+      so real Singapore and Mac visitors are unaffected. The browser can't see the visitor's city
+      (GA derives that from IP), so the device's Singapore time zone stands in for it.
+    -->
+    <script>
+      window.paqIsBot = (function () {
+        try {
+          var isSingapore = Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Singapore';
+          var isMac = /Macintosh|Mac OS X/.test(navigator.userAgent);
+          var isSquare1366 = screen.width === 1366 && screen.height === 1366;
+          return isSingapore && isMac && isSquare1366;
+        } catch (e) {
+          return false;
+        }
+      })();
+    </script>
+
     <!-- Google Tag Manager (deferred to idle so it doesn't block parsing) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       (function () {
+        if (window.paqIsBot) return;
         function loadGTM() {
           (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -275,6 +295,7 @@
 
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
+          if (c.paqIsBot) return;
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);

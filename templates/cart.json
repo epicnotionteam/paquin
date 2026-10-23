@@ -11,10 +11,7 @@
   "sections": {
     "dynamic_html_jYRVYY": {
       "type": "dynamic-html",
-      "custom_css": [
-        ".sales-exempt-wrapper {margin-bottom: 80px;}",
-        ".sales-exempt-form {margin-top: 0; display: flex; justify-content: center; text-align: center;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.custom_html.presets.custom_html.name",
       "settings": {
         "title": "",

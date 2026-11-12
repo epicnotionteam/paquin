@@ -191,6 +191,68 @@
         font-style: normal;
         font-weight: 600;
       }
+      .lockpro__passcode_form__3689 {
+    padding: 6em 4em !important;
+}
+
+#LockPro__passcode__form {
+    max-width: 400px !important;
+    width:100%;
+    border: 0px solid rgba(0, 0, 0, .4) !important;
+    padding: 30px !important;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2) !important;
+    background: #fff !important;
+}
+
+#LockPro__passcode__form .message p {
+    font-size: 22px;
+    font-weight: 700;
+    max-width: 250px;
+    text-align: center;
+    line-height: 1.3;
+    color: #212224;
+    margin: 0 auto 20px;
+}
+
+#LockPro__passcode__form .form .field__input {
+    width: 100%;
+    padding: 13px 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    color: #212224;
+}
+
+#LockPro__passcode__form .form .field__input:focus,
+#LockPro__passcode__form .form .field__input:focus-visible {
+    outline: unset;
+    border-color: #0f7f92;
+}
+
+button.button.LockPro__passcode__form__submit__button {
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 13px;
+    border: 0px;
+    margin-top: 10px;
+    transition: all 0.3s;
+    background: #0f7f92;
+    color: #fff;
+    cursor:pointer;
+}
+
+button.button.LockPro__passcode__form__submit__button:hover,
+button.button.LockPro__passcode__form__submit__button:focus {
+    background: #212224;
+    color: #fff;
+}
+
+@media(max-width:767px){
+  .lockpro__passcode_form__3689 {
+      padding: 2em 2em !important;
+  }
+}
     </style>
 
     {%- comment -%}
@@ -301,7 +363,7 @@
     </script>
   </head>
 
-  <body class="template-{{ template.name }} {% if collection %}collection-{{ collection.handle }}{% endif %}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
+  <body class="template-{{ template.name }} {% if collection %}collection-{{ collection.handle }}{% endif %} {% if page %}{{ page.handle }}{% endif %}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLXWPQQ8"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

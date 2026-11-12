@@ -10,11 +10,199 @@
 {
   "sections": {
     "main": {
-      "type": "page",
-      "settings": {}
+      "type": "applied-partner",
+      "disabled": true,
+      "settings": {
+        "heading": "Welcome to Applied Partner Circle",
+        "intro": "<p>This exclusive portal is reserved strictly for our premier network of Applied partners. As an Applied member, you now have direct access to our most competitive tier-one pricing, restricted brand assets, and confidential product data not available to the public. This curated selection represents the best of our catalog, specifically chosen to give your business an undeniable edge in the market. Explore your tailored opportunities below, capitalize on these unique margins, and connect with your representative to secure your products today.<br/><br/></p>",
+        "brand_image": "shopify://shop_images/paquin-sensors.webp",
+        "resources_heading": "Partner Resources",
+        "resources_description": "Access your exclusive product catalog and Applied partner pricing.",
+        "catalog_heading": "Product Catalog",
+        "catalog_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "show_catalog_description": false,
+        "catalog_description": "<p>Add catalog information here.</p>",
+        "catalog_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pressure_Switches_Catalog_v2.26.pdf?v=1793697264",
+        "catalog_button": "Download Catalog",
+        "pricing_heading": "Applied Partner Pricing",
+        "pricing_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry.png",
+        "show_pricing_description": false,
+        "pricing_description": "<p>Add pricing information here.</p>",
+        "pricing_url": "",
+        "pricing_button": "Applied Pricing",
+        "cta_heading": "How Can We Help You?",
+        "cta_description": "Connect with our Applied Partner Team for assistance and special pricing.",
+        "contact_button": "Contact Applied Partner Team",
+        "special_pricing_url": "",
+        "special_button": "Special Pricing Request",
+        "background_color": "#ffffff",
+        "hero_background": "#f3f5f7",
+        "heading_color": "#172b43",
+        "text_color": "#333333",
+        "button_color": "#173e63"
+      }
+    },
+    "hero_internal_kU4kEd": {
+      "type": "hero-internal",
+      "name": "Hero [Internal]",
+      "settings": {
+        "heading": "Welcome to Applied <br> Partner Circle",
+        "heading_size": "h1",
+        "content": "<p>This exclusive portal is reserved strictly for our premier network of Applied partners. As an Applied member, you now have direct access to our most competitive tier-one pricing, restricted brand assets, and confidential product data not available to the public. This curated selection represents the best of our catalog, specifically chosen to give your business an undeniable edge in the market. Explore your tailored opportunities below, capitalize on these unique margins, and connect with your representative to secure your products today.</p>",
+        "link_text": "Link text",
+        "link_url": "",
+        "image": "shopify://shop_images/paquin-sensors.webp",
+        "show_jump_links": false
+      }
+    },
+    "applied_partner_resources_JMRnTP": {
+      "type": "applied-partner-resources",
+      "name": "Applied Partner Resources",
+      "settings": {
+        "resources_heading": "Partner Resources",
+        "resources_description": "Access your exclusive product catalog and Applied partner pricing.",
+        "catalog_heading": "Product Catalog",
+        "catalog_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry_8df347d8-aa65-4a88-a730-fa87ac696a08.png",
+        "show_catalog_description": false,
+        "catalog_description": "<p>Add catalog information here.</p>",
+        "catalog_url": "#partner-resource-pdf",
+        "catalog_button": "Download Catalog",
+        "pricing_heading": "Applied Partner Pricing",
+        "pricing_image": "shopify://shop_images/Hydraulic_Accumulator_Applications_by_Industry.png",
+        "show_pricing_description": false,
+        "pricing_description": "<p>Add pricing information here.</p>",
+        "pricing_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Paquin_Sensors_Product_Pricing_Rev_1_APPLIED_-_10.26.pdf?v=1793856671",
+        "pricing_button": "Download Applied Pricing",
+        "background_color": "#ffffff",
+        "heading_color": "#172b43",
+        "text_color": "#333333",
+        "button_color": "#10869a"
+      }
+    },
+    "partner_resource_pdf_download_bbrqjM": {
+      "type": "partner-resource-pdf-download",
+      "blocks": {
+        "card_DqJnLJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Pressure Switches",
+            "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pressure_Switches_Catalog_v2.26.pdf?v=1793697264"
+          }
+        },
+        "card_P86AA7": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Pressure Transmitters",
+            "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pressure_Transmitters_Catalog_v1.26.pdf?v=1793697400"
+          }
+        },
+        "card_zDVidx": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon3.png",
+            "title": "Temperature",
+            "text": "Detailed procedures for diaphragm accumulator installation, maintenance, and diaphragm replacement.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Temperature_Catalog_v1.26.pdf?v=1793697620"
+          }
+        },
+        "card_7nEiA3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Flow",
+            "text": "Complete product catalog including all models, specifications, dimensions, parts lists, and ordering information.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Flow_Catalog_v1.26.pdf?v=1793697787"
+          }
+        },
+        "card_HBcatY": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon4.png",
+            "title": "Level",
+            "text": "Extracted FAQ section from the Accumulators Inc. catalog covering selection, precharge, certifications, and more.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Level_Catalog_v2.26.pdf?v=1793697960"
+          }
+        },
+        "card_Rdz6fm": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Proximity",
+            "text": "Accumulators Inc. product warranty — the strongest original product warranty in the industry.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Proximity_Catalog_v1.26.pdf?v=1793698131"
+          }
+        },
+        "card_jyRrKM": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon1.png",
+            "title": "Pumps",
+            "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pumps_Catalog_v1.26.pdf?v=1793698247"
+          }
+        },
+        "card_8GNUTP": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/resource-icon2.png",
+            "title": "Electrical Connectivity",
+            "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
+            "button_text": "Download Catalog",
+            "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Electrical_Connectivity_Catalog_v1.26.pdf?v=1793691285"
+          }
+        }
+      },
+      "block_order": [
+        "card_DqJnLJ",
+        "card_P86AA7",
+        "card_zDVidx",
+        "card_7nEiA3",
+        "card_HBcatY",
+        "card_Rdz6fm",
+        "card_jyRrKM",
+        "card_8GNUTP"
+      ],
+      "name": "Partner resource PDF",
+      "settings": {
+        "small_heading": "Applied Product Catalogs",
+        "heading": ""
+      }
+    },
+    "applied_partner_support_e4mTzD": {
+      "type": "applied-partner-support",
+      "name": "Partner Support",
+      "settings": {
+        "eyebrow": "PARTNER SUPPORT",
+        "cta_heading": "How Can We Help You?",
+        "cta_description": "Connect with our Applied Partner Team for product enquiries, assistance and special pricing.",
+        "contact_button": "Contact Applied Partner Team",
+        "modal_heading": "Contact Applied Partner Team",
+        "special_pricing_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Special_Pricing_Request_Form_Rev._1.pdf?v=1793856669",
+        "special_button": "Special Pricing Request",
+        "background_color": "#ffffff",
+        "cta_background": "#f5f6f7",
+        "heading_color": "#172b43",
+        "text_color": "#333333",
+        "button_color": "#10869a"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_internal_kU4kEd",
+    "applied_partner_resources_JMRnTP",
+    "partner_resource_pdf_download_bbrqjM",
+    "applied_partner_support_e4mTzD"
   ]
 }

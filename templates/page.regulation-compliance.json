@@ -18,7 +18,7 @@
             "category": "environmental",
             "code": "REACH",
             "title": "EU REACH SVHC Statement - Paquin Sensors",
-            "description": "",
+            "description": "Declaration on Substances of Very High Concern (SVHC) under EU Regulation (EC) No 1907/2006 (REACH).",
             "file_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/EU_REACH_SVHC_Statement_-_Paquin_Sensors.pdf?v=1794509572",
             "button_label": "View document",
             "revision": "",
@@ -30,14 +30,14 @@
           "type": "document",
           "settings": {
             "category": "environmental",
-            "code": "REACH",
-            "title": "EU REACH SVHC Declaration",
-            "description": "Declaration on Substances of Very High Concern (SVHC) under EU Regulation (EC) No 1907/2006 (REACH).",
-            "file_url": "",
+            "code": "Prop 65",
+            "title": "Prop 65 Declaration - Paquin Sensors",
+            "description": "Statement regarding chemicals listed under California's Safe Drinking Water and Toxic Enforcement Act of 1986 (Proposition 65).",
+            "file_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Prop_65_Declaration_-_Paquin_Sensors.pdf?v=1794509780",
             "button_label": "View document",
             "revision": "",
             "on_request": false,
-            "source_url": "https://echa.europa.eu/regulations/reach/understanding-reach"
+            "source_url": "https://www.p65warnings.ca.gov/"
           }
         },
         "rohs": {
@@ -47,7 +47,7 @@
             "code": "RoHS",
             "title": "RoHS Compliance Declaration",
             "description": "Declaration under EU Directive 2011/65/EU, as amended by (EU) 2015/863, restricting hazardous substances in electrical and electronic equipment.",
-            "file_url": "",
+            "file_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/EU_RoHS_Declaration_-_Paquin_Sensors.pdf?v=1794509780",
             "button_label": "View document",
             "revision": "",
             "on_request": false,
@@ -58,10 +58,10 @@
           "type": "document",
           "settings": {
             "category": "environmental",
-            "code": "TSCA / PFAS",
-            "title": "TSCA and PFAS Statement",
+            "code": "PFAS",
+            "title": "PFAS Statement - Paquin Sensors",
             "description": "Statement under the U.S. Toxic Substances Control Act, including per- and polyfluoroalkyl substances (PFAS).",
-            "file_url": "",
+            "file_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/PFAS_Statement_-_Paquin_Sensors.pdf?v=1794509780",
             "button_label": "View document",
             "revision": "",
             "on_request": false,
@@ -122,7 +122,7 @@
       ],
       "settings": {
         "eyebrow": "Documentation",
-        "heading": "",
+        "heading": "Regulation & Compliance Documents",
         "intro": "<p>Find the regulatory declarations, certificates and statements that apply to our products. Documents open as PDFs in a new tab. If you need something that isn't listed here, our team can provide it on request.</p>",
         "reviewed": "",
         "request_url": "/pages/contact",

@@ -10,8 +10,126 @@
 {
   "sections": {
     "main": {
-      "type": "page",
-      "settings": {}
+      "type": "regulation-compliance",
+      "blocks": {
+        "prop65": {
+          "type": "document",
+          "settings": {
+            "category": "environmental",
+            "code": "Prop 65",
+            "title": "California Proposition 65 Statement",
+            "description": "Statement regarding chemicals listed under California's Safe Drinking Water and Toxic Enforcement Act of 1986 (Proposition 65).",
+            "file_url": "",
+            "button_label": "View document",
+            "revision": "",
+            "on_request": false,
+            "source_url": "https://www.p65warnings.ca.gov/"
+          }
+        },
+        "reach": {
+          "type": "document",
+          "settings": {
+            "category": "environmental",
+            "code": "REACH",
+            "title": "EU REACH SVHC Declaration",
+            "description": "Declaration on Substances of Very High Concern (SVHC) under EU Regulation (EC) No 1907/2006 (REACH).",
+            "file_url": "",
+            "button_label": "View document",
+            "revision": "",
+            "on_request": false,
+            "source_url": "https://echa.europa.eu/regulations/reach/understanding-reach"
+          }
+        },
+        "rohs": {
+          "type": "document",
+          "settings": {
+            "category": "environmental",
+            "code": "RoHS",
+            "title": "RoHS Compliance Declaration",
+            "description": "Declaration under EU Directive 2011/65/EU, as amended by (EU) 2015/863, restricting hazardous substances in electrical and electronic equipment.",
+            "file_url": "",
+            "button_label": "View document",
+            "revision": "",
+            "on_request": false,
+            "source_url": ""
+          }
+        },
+        "tsca": {
+          "type": "document",
+          "settings": {
+            "category": "environmental",
+            "code": "TSCA / PFAS",
+            "title": "TSCA and PFAS Statement",
+            "description": "Statement under the U.S. Toxic Substances Control Act, including per- and polyfluoroalkyl substances (PFAS).",
+            "file_url": "",
+            "button_label": "View document",
+            "revision": "",
+            "on_request": false,
+            "source_url": ""
+          }
+        },
+        "cmrt": {
+          "type": "document",
+          "settings": {
+            "category": "conflict_minerals",
+            "code": "CMRT",
+            "title": "Conflict Minerals Reporting Template",
+            "description": "Responsible Minerals Initiative CMRT covering tin, tantalum, tungsten and gold (3TG).",
+            "file_url": "",
+            "button_label": "Download CMRT",
+            "revision": "",
+            "on_request": false,
+            "source_url": ""
+          }
+        },
+        "iso9001": {
+          "type": "document",
+          "settings": {
+            "category": "quality",
+            "code": "ISO 9001",
+            "title": "ISO 9001 Quality Management Certificate",
+            "description": "Certificate of registration for our quality management system.",
+            "file_url": "",
+            "button_label": "View certificate",
+            "revision": "",
+            "on_request": false,
+            "source_url": ""
+          }
+        },
+        "origin": {
+          "type": "document",
+          "settings": {
+            "category": "trade",
+            "code": "Origin",
+            "title": "Country of Origin Statement",
+            "description": "Country of origin and harmonized tariff (HTS) information for our product lines.",
+            "file_url": "",
+            "button_label": "View document",
+            "revision": "",
+            "on_request": false,
+            "source_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "prop65",
+        "reach",
+        "rohs",
+        "tsca",
+        "cmrt",
+        "iso9001",
+        "origin"
+      ],
+      "settings": {
+        "eyebrow": "Documentation",
+        "heading": "",
+        "intro": "<p>Find the regulatory declarations, certificates and statements that apply to our products. Documents open as PDFs in a new tab. If you need something that isn't listed here, our team can provide it on request.</p>",
+        "reviewed": "",
+        "request_url": "/pages/contact",
+        "cta_heading": "Need a document that isn't listed?",
+        "cta_text": "Our team can provide product-specific declarations, certificates and supplier questionnaires on request.",
+        "cta_button": "Contact our team"
+      }
     }
   },
   "order": [

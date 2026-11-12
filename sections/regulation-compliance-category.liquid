@@ -1,0 +1,13 @@
+{%- comment -%}
+  Display name for a regulation-compliance document category handle.
+  Keep in sync with the "category" select options in sections/regulation-compliance.liquid.
+{%- endcomment -%}
+{%- case handle -%}
+  {%- when 'environmental' -%}Environmental &amp; Chemical
+  {%- when 'conflict_minerals' -%}Conflict Minerals &amp; Sourcing
+  {%- when 'product_safety' -%}Product Safety &amp; Certifications
+  {%- when 'quality' -%}Quality Management
+  {%- when 'trade' -%}Trade &amp; Export
+  {%- when 'policies' -%}Policies &amp; Statements
+  {%- else -%}Other Documents
+{%- endcase -%}

@@ -25,7 +25,7 @@
 
 {% style %}
   #shopify-section-{{ section.id }} .rc {
-    padding: 56px 0 88px;
+    padding: 56px var(--layout-container-gutter, 25px) 88px;
   }
   #shopify-section-{{ section.id }} .rc__hero {
     max-width: 860px;
@@ -289,7 +289,7 @@
 
   @media (max-width: 749px) {
     #shopify-section-{{ section.id }} .rc {
-      padding: 36px 0 64px;
+      padding: 36px 20px 64px;
     }
     #shopify-section-{{ section.id }} .rc__search {
       flex-basis: 100%;

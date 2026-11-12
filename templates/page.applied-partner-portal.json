@@ -87,7 +87,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon1.png",
             "title": "Pressure Switches",
-            "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pressure_Switches_Catalog_v2.26.pdf?v=1793697264"
           }
@@ -97,7 +97,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon2.png",
             "title": "Pressure Transmitters",
-            "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pressure_Transmitters_Catalog_v1.26.pdf?v=1793697400"
           }
@@ -107,7 +107,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon3.png",
             "title": "Temperature",
-            "text": "Detailed procedures for diaphragm accumulator installation, maintenance, and diaphragm replacement.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Temperature_Catalog_v1.26.pdf?v=1793697620"
           }
@@ -117,7 +117,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon1.png",
             "title": "Flow",
-            "text": "Complete product catalog including all models, specifications, dimensions, parts lists, and ordering information.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Flow_Catalog_v1.26.pdf?v=1793697787"
           }
@@ -127,7 +127,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon4.png",
             "title": "Level",
-            "text": "Extracted FAQ section from the Accumulators Inc. catalog covering selection, precharge, certifications, and more.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Level_Catalog_v2.26.pdf?v=1793697960"
           }
@@ -137,7 +137,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon2.png",
             "title": "Proximity",
-            "text": "Accumulators Inc. product warranty — the strongest original product warranty in the industry.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Proximity_Catalog_v1.26.pdf?v=1793698131"
           }
@@ -147,7 +147,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon1.png",
             "title": "Pumps",
-            "text": "Detailed step-by-step procedures for bladder accumulator installation, commissioning, precharge, and bladder replacement. Required reading before any field service.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Pumps_Catalog_v1.26.pdf?v=1793698247"
           }
@@ -157,7 +157,7 @@
           "settings": {
             "image": "shopify://shop_images/resource-icon2.png",
             "title": "Electrical Connectivity",
-            "text": "Detailed procedures for piston accumulator installation, maintenance, and seal service.",
+            "text": "",
             "button_text": "Download Catalog",
             "button_link": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Electrical_Connectivity_Catalog_v1.26.pdf?v=1793691285"
           }

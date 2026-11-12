@@ -1,0 +1,1081 @@
+
+{% liquid
+  assign portal_id = 'applied-portal-' | append: section.id
+%}
+
+<section id="{{ portal_id }}" class="applied-portal">
+
+  <!-- HERO SECTION -->
+  <div class="ap-hero">
+    <div class="ap-container">
+      <span class="ap-eyebrow">Applied Partner Portal</span>
+      <h1>{{ section.settings.heading }}</h1>
+      <div class="ap-intro">
+        {{ section.settings.intro }}
+      </div>
+    </div>
+  </div>
+
+  <div class="ap-container">
+
+    <!-- PAQUIN SENSORS BRAND SECTION -->
+    <div class="ap-brand">
+      {% if section.settings.brand_image != blank %}
+        <img
+          src="{{ section.settings.brand_image | image_url: width: 1200 }}"
+          alt="{{ section.settings.brand_image.alt | default: 'Paquin Sensors product collection' | escape }}"
+          width="{{ section.settings.brand_image.width }}"
+          height="{{ section.settings.brand_image.height }}"
+          loading="lazy"
+        >
+      {% else %}
+        <h2>Paquin Sensors</h2>
+      {% endif %}
+    </div>
+    
+    <!-- PARTNER RESOURCES -->
+    <div class="ap-section-heading">
+      <h2>{{ section.settings.resources_heading }}</h2>
+      <p>{{ section.settings.resources_description }}</p>
+    </div>
+
+    <div class="ap-resources">
+
+      <!-- PRODUCT CATALOG -->
+      <div class="ap-resource-card">
+
+        <h3>{{ section.settings.catalog_heading }}</h3>
+
+        <div class="ap-preview">
+          {% if section.settings.catalog_image != blank %}
+            <img
+              src="{{ section.settings.catalog_image | image_url: width: 1000 }}"
+              alt="{{ section.settings.catalog_image.alt | default: 'Paquin Sensors product catalog' | escape }}"
+              width="{{ section.settings.catalog_image.width }}"
+              height="{{ section.settings.catalog_image.height }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="ap-placeholder">PRODUCT CATALOG</div>
+          {% endif %}
+        </div>
+
+        {% if section.settings.show_catalog_description %}
+          <div class="ap-description">
+            {{ section.settings.catalog_description }}
+          </div>
+        {% endif %}
+
+       {% if section.settings.catalog_url != blank %}
+  <a
+    href="{{ section.settings.catalog_url }}"
+    class="ap-button"
+    data-clarity-event="ap_catalog_download"
+    data-force-download
+    data-filename="Paquin-Sensors-Catalog.pdf"
+  >
+    {{ section.settings.catalog_button }}
+    <span aria-hidden="true">↓</span>
+  </a>
+{% else %}
+  <span class="ap-button ap-disabled" aria-disabled="true">
+    {{ section.settings.catalog_button }} (Coming Soon)
+  </span>
+{% endif %}
+
+      </div>
+
+      <!-- APPLIED PARTNER PRICING -->
+      <div class="ap-resource-card">
+
+        <h3>{{ section.settings.pricing_heading }}</h3>
+
+        <div class="ap-preview">
+          {% if section.settings.pricing_image != blank %}
+            <img
+              src="{{ section.settings.pricing_image | image_url: width: 1000 }}"
+              alt="{{ section.settings.pricing_image.alt | default: 'Applied partner pricing' | escape }}"
+              width="{{ section.settings.pricing_image.width }}"
+              height="{{ section.settings.pricing_image.height }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="ap-placeholder">APPLIED PARTNER PRICING</div>
+          {% endif %}
+        </div>
+
+        {% if section.settings.show_pricing_description %}
+          <div class="ap-description">
+            {{ section.settings.pricing_description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.pricing_url != blank %}
+  <a
+    href="{{ section.settings.pricing_url }}"
+    class="ap-button"
+    data-clarity-event="ap_pricing_download"
+    data-force-download
+    data-filename="Applied-Partner-Pricing.xlsx"
+  >
+    {{ section.settings.pricing_button }}
+    <span aria-hidden="true">↓</span>
+  </a>
+{% else %}
+  <span class="ap-button ap-disabled" aria-disabled="true">
+    {{ section.settings.pricing_button }} (Coming Soon)
+  </span>
+{% endif %}
+
+      </div>
+
+    </div>
+
+    <!-- PARTNER SUPPORT / CTA -->
+    
+<!-- PARTNER SUPPORT / CTA -->
+<div class="ap-cta">
+
+  <div class="ap-cta-content">
+    <span class="ap-eyebrow">PARTNER SUPPORT</span>
+
+    <h2>{{ section.settings.cta_heading }}</h2>
+
+    <p>{{ section.settings.cta_description }}</p>
+  </div>
+
+  <div class="ap-cta-buttons">
+
+    <!-- CONTACT APPLIED PARTNER TEAM -->
+    <button
+      type="button"
+      class="ap-button"
+      id="{{ portal_id }}-contact-open"
+      data-clarity-event="ap_contact_button"
+      aria-haspopup="dialog"
+      aria-controls="{{ portal_id }}-contact-modal"
+    >
+      {{ section.settings.contact_button }}
+      <span aria-hidden="true">→</span>
+    </button>
+
+    <!-- SPECIAL PRICING REQUEST -->
+{% if section.settings.special_pricing_url != blank %}
+  <a
+    href="{{ section.settings.special_pricing_url }}"
+    class="ap-button ap-button-outline"
+    data-clarity-event="ap_special_pricing_request"
+    data-force-download
+    data-filename="Special-Pricing-Request.docx"
+  >
+    {{ section.settings.special_button }}
+    <span aria-hidden="true">↓</span>
+  </a>
+{% else %}
+  <span class="ap-button ap-button-outline ap-disabled" aria-disabled="true">
+    {{ section.settings.special_button }} (Coming Soon)
+  </span>
+{% endif %}
+
+  </div>
+
+</div>
+
+<!-- CONTACT FORM MODAL -->
+<div
+  id="{{ portal_id }}-contact-modal"
+  class="ap-modal"
+  aria-hidden="true"
+  hidden
+>
+
+  <div class="ap-modal-overlay" data-ap-close></div>
+
+  <div
+    class="ap-modal-content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="{{ portal_id }}-modal-heading"
+  >
+
+    <button
+      type="button"
+      class="ap-modal-close"
+      data-ap-close
+      aria-label="Close contact form"
+    >
+      &times;
+    </button>
+
+    
+
+    <!-- GLOBO FORM BUILDER -->
+    <div
+      class="globo-formbuilder"
+      data-id="MTcwNTIy"
+    ></div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<style>
+
+  #{{ portal_id }} {
+    --ap-primary: {{ section.settings.button_color }};
+    --ap-text: {{ section.settings.text_color }};
+    --ap-bg: {{ section.settings.background_color }};
+
+    color: var(--ap-text);
+    background: var(--ap-bg);
+    padding-bottom: 70px;
+  }
+
+  #{{ portal_id }} * {
+    box-sizing: border-box;
+  }
+
+  #{{ portal_id }} .ap-container {
+    max-width: 1180px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+
+  #{{ portal_id }} .ap-hero {
+    background: {{ section.settings.hero_background }};
+    padding: 75px 20px;
+    text-align: center;
+  }
+
+  #{{ portal_id }} .ap-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: var(--ap-primary);
+  }
+
+  #{{ portal_id }} .ap-hero h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    margin: 0 0 22px;
+    color: {{ section.settings.heading_color }};
+  }
+
+  #{{ portal_id }} .ap-intro {
+    max-width: 950px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* BRAND */
+
+  #{{ portal_id }} .ap-brand {
+    text-align: center;
+    padding: 55px 0 35px;
+  }
+
+  #{{ portal_id }} .ap-brand img {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #{{ portal_id }} .ap-brand h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  /* SECTION HEADING */
+
+  #{{ portal_id }} .ap-section-heading {
+    text-align: center;
+    margin: 15px 0 30px;
+  }
+
+  #{{ portal_id }} .ap-section-heading h2 {
+    font-size: 30px;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 10px;
+  }
+
+  #{{ portal_id }} .ap-section-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* RESOURCE CARDS */
+
+  #{{ portal_id }} .ap-resources {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin: 25px 0 65px;
+  }
+
+  #{{ portal_id }} .ap-resource-card {
+    border: 1px solid #e5e5e5;
+    padding: 28px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.04);
+  }
+
+  #{{ portal_id }} .ap-resource-card h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #172b43;
+  }
+
+  /* PREVIEW IMAGES */
+
+  #{{ portal_id }} .ap-preview {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #f4f5f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  #{{ portal_id }} .ap-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ portal_id }} .ap-placeholder {
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  /* OPTIONAL DESCRIPTION */
+
+  #{{ portal_id }} .ap-description {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  /* BUTTONS */
+
+  
+/* BUTTONS - INDUSTRIAL STYLE */
+
+#{{ portal_id }} .ap-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 48px;
+  padding: 14px 24px;
+
+  background: #10869a;
+  color: #ffffff;
+
+  border: 2px solid #10869a;
+  border-radius: 0;
+
+  text-decoration: none;
+  text-transform: uppercase;
+font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* RIGHT ARROW */
+
+#{{ portal_id }} .ap-button span {
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* PRIMARY BUTTON HOVER */
+
+#{{ portal_id }} .ap-button:hover {
+  background: #086b7b;
+  border-color: #086b7b;
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+#{{ portal_id }} .ap-button:hover span {
+  transform: translateX(4px);
+}
+
+/* OUTLINE BUTTON */
+
+#{{ portal_id }} .ap-button-outline {
+  background: transparent;
+  color: #173e63;
+  border: 2px solid #173e63;
+}
+
+#{{ portal_id }} .ap-button-outline:hover {
+  background: #173e63;
+  border-color: #173e63;
+  color: #ffffff;
+}
+
+/* DISABLED BUTTON */
+
+#{{ portal_id }} .ap-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+  /* CTA */
+
+  #{{ portal_id }} .ap-cta {
+    background: #f5f6f7;
+    padding: 50px 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #{{ portal_id }} .ap-cta h2 {
+    font-size: 30px;
+    margin: 0 0 12px;
+    color: {{ section.settings.heading_color }};
+  }
+
+  #{{ portal_id }} .ap-cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+  }
+
+  #{{ portal_id }} .ap-cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+/* PARTNER SUPPORT BUTTON */
+
+#{{ portal_id }} .ap-cta-buttons button.ap-button {
+  font-family: inherit;
+  appearance: none;
+}
+
+/* CONTACT FORM MODAL */
+
+#{{ portal_id }} .ap-modal[hidden] {
+  display: none !important;
+}
+
+#{{ portal_id }} .ap-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#{{ portal_id }} .ap-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#{{ portal_id }} .ap-modal-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.2);
+}
+
+#{{ portal_id }} .ap-modal-content h2 {
+  color: #172b43;
+  font-size: 26px;
+  margin: 0 35px 10px 0;
+}
+
+#{{ portal_id }} .ap-modal-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+#{{ portal_id }} .ap-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #172b43;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+/* GLOBO CONTACT FORM DESIGN FIX */
+
+#{{ portal_id }} .ap-modal-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  overflow-x: hidden;
+}
+
+/* Form container */
+#{{ portal_id }} .globo-formbuilder {
+  width: 100%;
+  max-width: 100%;
+}
+
+#{{ portal_id }} .globo-formbuilder form,
+#{{ portal_id }} .globo-formbuilder .g-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Individual form fields */
+#{{ portal_id }} .globo-formbuilder .globo-form-control {
+  margin-bottom: 16px !important;
+  min-width: 0;
+}
+
+/* Field labels */
+#{{ portal_id }} .globo-formbuilder .globo-form-control label {
+  position: static !important;
+  display: block !important;
+  transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0 7px !important;
+  padding: 0 !important;
+  color: #172b43 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+
+/* Input, select and textarea */
+#{{ portal_id }} .globo-formbuilder input:not([type="checkbox"]):not([type="radio"]),
+#{{ portal_id }} .globo-formbuilder select,
+#{{ portal_id }} .globo-formbuilder textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 46px !important;
+  height: auto !important;
+  padding: 12px 14px !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  color: #333333 !important;
+  border: 1px solid #d5dce2 !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+}
+
+/* Textarea */
+#{{ portal_id }} .globo-formbuilder textarea {
+  min-height: 100px !important;
+  resize: vertical;
+}
+
+/* Focus effect */
+#{{ portal_id }} .globo-formbuilder input:focus,
+#{{ portal_id }} .globo-formbuilder select:focus,
+#{{ portal_id }} .globo-formbuilder textarea:focus {
+  border-color: #10869a !important;
+  outline: none !important;
+}
+
+/* Submit button */
+#{{ portal_id }} .globo-formbuilder button[type="submit"],
+#{{ portal_id }} .globo-formbuilder input[type="submit"] {
+  width: 100% !important;
+  min-height: 48px !important;
+  margin-top: 12px !important;
+  padding: 12px 20px !important;
+  background: #10869a !important;
+  color: #ffffff !important;
+  border: 1px solid #10869a !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+/* Mobile form */
+@media (max-width: 767px) {
+
+  #{{ portal_id }} .ap-modal-content {
+    padding: 35px 18px 25px !important;
+    max-height: 92vh;
+  }
+
+  #{{ portal_id }} .globo-formbuilder .globo-form-control {
+    width: 100% !important;
+    margin-bottom: 14px !important;
+  }
+
+  #{{ portal_id }} .globo-formbuilder input:not([type="checkbox"]):not([type="radio"]),
+  #{{ portal_id }} .globo-formbuilder select,
+  #{{ portal_id }} .globo-formbuilder textarea {
+    width: 100% !important;
+  }
+}
+#{{ portal_id }} .ap-modal-close:hover {
+  color: #10869a;
+}
+
+@media(max-width: 767px) {
+  #{{ portal_id }} .ap-modal {
+    padding: 12px;
+  }
+
+  #{{ portal_id }} .ap-modal-content {
+    padding: 30px 20px;
+    max-height: 92vh;
+  }
+
+  #{{ portal_id }} .ap-modal-content h2 {
+    font-size: 22px;
+  }
+}
+
+  /* MOBILE */
+
+  @media(max-width: 767px) {
+
+    #{{ portal_id }} .ap-hero {
+      padding: 50px 15px;
+    }
+
+    #{{ portal_id }} .ap-resources {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    #{{ portal_id }} .ap-preview {
+      height: 220px;
+    }
+
+    #{{ portal_id }} .ap-resource-card {
+      padding: 20px;
+    }
+
+    #{{ portal_id }} .ap-cta-buttons {
+      flex-direction: column;
+    }
+
+    #{{ portal_id }} .ap-button {
+      width: 100%;
+    }
+
+    #{{ portal_id }} .ap-cta {
+      padding: 35px 20px;
+    }
+
+  }
+
+</style>
+
+<script>
+
+(function () {
+
+  var portal = document.getElementById({{ portal_id | json }});
+
+  if (!portal || portal.dataset.initialized === 'true') return;
+
+  portal.dataset.initialized = 'true';
+
+  var openButton = portal.querySelector(
+    '#{{ portal_id }}-contact-open'
+  );
+
+  var modal = portal.querySelector(
+    '#{{ portal_id }}-contact-modal'
+  );
+
+  var closeButtons = portal.querySelectorAll('[data-ap-close]');
+
+  var previousFocus = null;
+
+  function openModal() {
+    if (!modal) return;
+
+    previousFocus = document.activeElement;
+
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+
+    document.body.style.overflow = 'hidden';
+
+    var closeButton = modal.querySelector('.ap-modal-close');
+
+    if (closeButton) closeButton.focus();
+  }
+
+  function closeModal() {
+    if (!modal || modal.hidden) return;
+
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+
+    document.body.style.overflow = '';
+
+    if (previousFocus) {
+      previousFocus.focus();
+    }
+  }
+
+  if (openButton) {
+    openButton.addEventListener('click', openModal);
+  }
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal && !modal.hidden) {
+      closeModal();
+    }
+  });
+
+  portal.addEventListener('click', function (event) {
+
+    var element = event.target.closest('[data-clarity-event]');
+
+    if (!element || !portal.contains(element)) return;
+
+    // Microsoft Clarity tracking
+    var eventName = element.getAttribute('data-clarity-event');
+
+    if (typeof window.clarity === 'function') {
+        window.clarity('event', eventName);
+    }
+
+    // Check whether this is a download button
+    if (!element.hasAttribute('data-force-download')) return;
+
+    event.preventDefault();
+
+    var fileUrl = element.href;
+    var fileName = element.getAttribute('data-filename');
+
+    if (!fileUrl || !fileName) return;
+
+    // Fetch the file
+    fetch(fileUrl)
+        .then(function (response) {
+
+            if (!response.ok) {
+                throw new Error('Unable to fetch file: ' + response.status);
+            }
+
+            return response.blob();
+
+        })
+        .then(function (blob) {
+
+            if (!blob.size) {
+                throw new Error('The downloaded file is empty.');
+            }
+
+            // Create a temporary local URL
+            var blobUrl = URL.createObjectURL(blob);
+
+            // Trigger browser download
+            var downloadAnchor = document.createElement('a');
+
+            downloadAnchor.href = blobUrl;
+            downloadAnchor.download = fileName;
+
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+
+            // Clean up
+            setTimeout(function () {
+                URL.revokeObjectURL(blobUrl);
+            }, 2000);
+
+        })
+        .catch(function (error) {
+
+            console.error('File download error:', error);
+
+            alert(
+                'Automatic download failed. Please check the file URL and CORS permissions.'
+            );
+
+        });
+
+});
+
+})();
+
+document.addEventListener('click', function (event) {
+  const button = event.target.closest('[data-clarity-event]');
+
+  if (!button) return;
+
+  const eventName = button.getAttribute('data-clarity-event');
+
+  if (typeof clarity === 'function' && eventName) {
+    clarity('event', eventName);
+    console.log('Clarity event:', eventName);
+  }
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "Applied Partner Portal",
+  "tag": "section",
+  "class": "applied-partner-portal-section",
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Portal introduction"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main heading",
+      "default": "Welcome to Applied Partner Circle"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Introduction",
+      "default": "<p>This exclusive portal is reserved strictly for our premier network of Applied partners. As an Applied member, you now have direct access to our most competitive tier-one pricing, restricted brand assets, and confidential product data not available to the public. This curated selection represents the best of our catalog, specifically chosen to give your business an undeniable edge in the market. Explore your tailored opportunities below, capitalize on these unique margins, and connect with your representative to secure your products today.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Paquin Sensors brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "brand_image",
+      "label": "Paquin Sensors product collection image"
+    },
+
+    {
+      "type": "header",
+      "content": "Partner resources"
+    },
+    {
+      "type": "text",
+      "id": "resources_heading",
+      "label": "Resources heading",
+      "default": "Partner Resources"
+    },
+    {
+      "type": "text",
+      "id": "resources_description",
+      "label": "Resources description",
+      "default": "Access your exclusive product catalog and Applied partner pricing."
+    },
+
+    {
+      "type": "header",
+      "content": "Product catalog"
+    },
+    {
+      "type": "text",
+      "id": "catalog_heading",
+      "label": "Catalog heading",
+      "default": "Product Catalog"
+    },
+    {
+      "type": "image_picker",
+      "id": "catalog_image",
+      "label": "Catalog preview image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_catalog_description",
+      "label": "Show catalog description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "catalog_description",
+      "label": "Catalog description",
+      "default": "<p>Add catalog information here.</p>"
+    },
+    {
+      "type": "url",
+      "id": "catalog_url",
+      "label": "Catalog PDF URL"
+    },
+    {
+      "type": "text",
+      "id": "catalog_button",
+      "label": "Catalog button text",
+      "default": "Download Catalog"
+    },
+
+    {
+      "type": "header",
+      "content": "Applied partner pricing"
+    },
+    {
+      "type": "text",
+      "id": "pricing_heading",
+      "label": "Pricing heading",
+      "default": "Applied Partner Pricing"
+    },
+    {
+      "type": "image_picker",
+      "id": "pricing_image",
+      "label": "Pricing preview image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pricing_description",
+      "label": "Show pricing description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "pricing_description",
+      "label": "Pricing description",
+      "default": "<p>Add pricing information here.</p>"
+    },
+    {
+      "type": "url",
+      "id": "pricing_url",
+      "label": "Excel pricing file URL"
+    },
+    {
+      "type": "text",
+      "id": "pricing_button",
+      "label": "Pricing button text",
+      "default": "Download Applied Pricing"
+    },
+
+    {
+      "type": "header",
+      "content": "Contact Applied Partner Team"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA heading",
+      "default": "How Can We Help You?"
+    },
+    {
+      "type": "text",
+      "id": "cta_description",
+      "label": "CTA description",
+      "default": "Connect with our Applied Partner Team for product enquiries, assistance and special pricing."
+    },
+    {
+      "type": "text",
+      "id": "contact_button",
+      "label": "Contact button text",
+      "default": "Contact Applied Partner Team"
+    },
+    {
+      "type": "header",
+      "content": "Special pricing request"
+    },
+    {
+      "type": "url",
+      "id": "special_pricing_url",
+      "label": "Special Pricing Word document URL"
+    },
+    {
+      "type": "text",
+      "id": "special_button",
+      "label": "Special pricing button text",
+      "default": "Special Pricing Request"
+    },
+
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Page background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hero_background",
+      "label": "Header background",
+      "default": "#f3f5f7"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#172b43"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#173e63"
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "Applied Partner Portal"
+    }
+  ]
+}
+{% endschema %}

@@ -107,6 +107,11 @@
         "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {}
+      },
+      "14824862318023893024": {
+        "type": "shopify://apps/lockpro/blocks/star_rating/0b688959-65fa-46c1-b806-91e180306d46",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

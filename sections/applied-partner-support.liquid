@@ -1,0 +1,687 @@
+{% liquid
+  assign support_id = 'applied-support-' | append: section.id
+%}
+
+<section id="{{ support_id }}" class="applied-support">
+
+  <div class="ap-support-container">
+
+    <!-- PARTNER SUPPORT CTA -->
+    <div class="ap-cta">
+
+      <div class="ap-cta-content">
+
+        <span class="ap-eyebrow">
+          {{ section.settings.eyebrow }}
+        </span>
+
+        <h2>{{ section.settings.cta_heading }}</h2>
+
+        <p>{{ section.settings.cta_description }}</p>
+
+      </div>
+
+      <div class="ap-cta-buttons">
+
+        <!-- CONTACT APPLIED PARTNER TEAM -->
+        <button
+          type="button"
+          class="ap-button"
+          id="{{ support_id }}-contact-open"
+          data-clarity-event="ap_contact_button"
+          aria-haspopup="dialog"
+          aria-controls="{{ support_id }}-contact-modal"
+        >
+          {{ section.settings.contact_button }}
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <!-- SPECIAL PRICING REQUEST -->
+        {% if section.settings.special_pricing_url != blank %}
+
+  <a
+    href="{{ section.settings.special_pricing_url }}"
+    class="ap-button ap-button-outline"
+    data-clarity-event="ap_special_pricing_request"
+    data-force-download
+    data-filename="Special-Pricing-Request.pdf"
+  >
+    {{ section.settings.special_button }}
+    <span aria-hidden="true">↓</span>
+  </a>
+
+{% else %}
+
+  <span class="ap-button ap-button-outline ap-disabled" aria-disabled="true">
+    {{ section.settings.special_button }} (Coming Soon)
+  </span>
+
+{% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CONTACT FORM MODAL -->
+  <div
+    id="{{ support_id }}-contact-modal"
+    class="ap-modal"
+    aria-hidden="true"
+    hidden
+  >
+
+    <div class="ap-modal-overlay" data-ap-close></div>
+
+    <div
+      class="ap-modal-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="{{ support_id }}-modal-heading"
+    >
+
+      <button
+        type="button"
+        class="ap-modal-close"
+        data-ap-close
+        aria-label="Close contact form"
+      >
+        &times;
+      </button>
+
+      <h2 id="{{ support_id }}-modal-heading">
+        {{ section.settings.modal_heading }}
+      </h2>
+
+      <!-- GLOBO FORM BUILDER -->
+      <div
+        class="globo-formbuilder"
+        data-id="MTcwNTIy"
+      ></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+  #{{ support_id }} {
+    --ap-primary: {{ section.settings.button_color }};
+    --ap-text: {{ section.settings.text_color }};
+    --ap-bg: {{ section.settings.background_color }};
+
+    color: var(--ap-text);
+    background: var(--ap-bg);
+    padding: 55px 0 70px;
+  }
+
+  #{{ support_id }} * {
+    box-sizing: border-box;
+  }
+
+  #{{ support_id }} .ap-support-container {
+    max-width: 1180px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* CTA */
+
+  #{{ support_id }} .ap-cta {
+    background: {{ section.settings.cta_background }};
+    padding: 50px 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #{{ support_id }} .ap-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: var(--ap-primary);
+  }
+
+  #{{ support_id }} .ap-cta h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+    color: {{ section.settings.heading_color }};
+  }
+
+  #{{ support_id }} .ap-cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+  }
+
+  /* CTA BUTTONS */
+
+  #{{ support_id }} .ap-cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  #{{ support_id }} .ap-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 14px 24px;
+    background: #10869a;
+    color: #ffffff;
+    border: 2px solid #10869a;
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+
+  #{{ support_id }} .ap-button span {
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+
+  #{{ support_id }} .ap-button:hover {
+    background: #086b7b;
+    border-color: #086b7b;
+    color: #ffffff;
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  #{{ support_id }} .ap-button:hover span {
+    transform: translateX(4px);
+  }
+
+  /* OUTLINE BUTTON */
+
+  #{{ support_id }} .ap-button-outline {
+    background: transparent;
+    color: #173e63;
+    border: 2px solid #173e63;
+  }
+
+  #{{ support_id }} .ap-button-outline:hover {
+    background: #173e63;
+    border-color: #173e63;
+    color: #ffffff;
+  }
+
+  /* DISABLED BUTTON */
+
+  #{{ support_id }} .ap-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* CONTACT FORM MODAL */
+
+  #{{ support_id }} .ap-modal[hidden] {
+    display: none !important;
+  }
+
+  #{{ support_id }} .ap-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  #{{ support_id }} .ap-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  #{{ support_id }} .ap-modal-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+  }
+
+  #{{ support_id }} .ap-modal-content h2 {
+    color: #172b43;
+    font-size: 26px;
+    margin: 0 35px 20px 0;
+  }
+
+  #{{ support_id }} .ap-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #172b43;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  #{{ support_id }} .ap-modal-close:hover {
+    color: #10869a;
+  }
+
+  /* GLOBO FORM DESIGN */
+
+  #{{ support_id }} .globo-formbuilder {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #{{ support_id }} .globo-formbuilder form,
+  #{{ support_id }} .globo-formbuilder .g-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #{{ support_id }} .globo-formbuilder .globo-form-control {
+    margin-bottom: 16px !important;
+    min-width: 0;
+  }
+
+  #{{ support_id }} .globo-formbuilder .globo-form-control label {
+    position: static !important;
+    display: block !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 7px !important;
+    padding: 0 !important;
+    color: #172b43 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+  }
+
+  #{{ support_id }} .globo-formbuilder input:not([type="checkbox"]):not([type="radio"]),
+  #{{ support_id }} .globo-formbuilder select,
+  #{{ support_id }} .globo-formbuilder textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 46px !important;
+    height: auto !important;
+    padding: 12px 14px !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #333333 !important;
+    border: 1px solid #d5dce2 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+  }
+
+  #{{ support_id }} .globo-formbuilder textarea {
+    min-height: 100px !important;
+    resize: vertical;
+  }
+
+  #{{ support_id }} .globo-formbuilder input:focus,
+  #{{ support_id }} .globo-formbuilder select:focus,
+  #{{ support_id }} .globo-formbuilder textarea:focus {
+    border-color: #10869a !important;
+    outline: none !important;
+  }
+
+  #{{ support_id }} .globo-formbuilder button[type="submit"],
+  #{{ support_id }} .globo-formbuilder input[type="submit"] {
+    width: 100% !important;
+    min-height: 48px !important;
+    margin-top: 12px !important;
+    padding: 12px 20px !important;
+    background: #10869a !important;
+    color: #ffffff !important;
+    border: 1px solid #10869a !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+  }
+
+  /* MOBILE */
+
+  @media(max-width: 767px) {
+
+    #{{ support_id }} {
+      padding: 40px 0 50px;
+    }
+
+    #{{ support_id }} .ap-support-container {
+      width: 90%;
+    }
+
+    #{{ support_id }} .ap-cta-buttons {
+      flex-direction: column;
+    }
+
+    #{{ support_id }} .ap-cta-buttons .ap-button {
+      width: 100%;
+    }
+
+    #{{ support_id }} .ap-cta {
+      padding: 35px 20px;
+    }
+
+    #{{ support_id }} .ap-cta h2 {
+      font-size: 24px;
+    }
+
+    #{{ support_id }} .ap-modal {
+      padding: 12px;
+    }
+
+    #{{ support_id }} .ap-modal-content {
+      padding: 35px 18px 25px;
+      max-height: 92vh;
+    }
+
+    #{{ support_id }} .ap-modal-content h2 {
+      font-size: 22px;
+    }
+
+    #{{ support_id }} .globo-formbuilder .globo-form-control {
+      width: 100% !important;
+      margin-bottom: 14px !important;
+    }
+
+  }
+
+</style>
+
+<script>
+
+(function () {
+
+  function initAppliedSupport() {
+
+    var section = document.getElementById(
+      'applied-support-{{ section.id }}'
+    );
+
+    if (!section) return;
+
+    /* =====================================
+       CONTACT FORM MODAL
+    ===================================== */
+
+    if (section.dataset.modalInitialized === 'true') return;
+
+    var openButton = section.querySelector(
+      '#applied-support-{{ section.id }}-contact-open'
+    );
+
+    var modal = section.querySelector(
+      '#applied-support-{{ section.id }}-contact-modal'
+    );
+
+    if (!openButton || !modal) return;
+
+    section.dataset.modalInitialized = 'true';
+
+    var previousBodyOverflow = '';
+
+    function openModal() {
+
+      previousBodyOverflow = document.body.style.overflow;
+
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+
+      document.body.style.overflow = 'hidden';
+
+      var closeButton = modal.querySelector('.ap-modal-close');
+
+      if (closeButton) {
+        closeButton.focus();
+      }
+
+    }
+
+    function closeModal() {
+
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+
+      document.body.style.overflow = previousBodyOverflow;
+
+      openButton.focus();
+
+    }
+
+    // Open Globo Form
+    openButton.addEventListener('click', openModal);
+
+    // Close button and overlay
+    modal.querySelectorAll('[data-ap-close]').forEach(function(button) {
+
+      button.addEventListener('click', closeModal);
+
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(event) {
+
+      if (event.key === 'Escape' && !modal.hidden) {
+        closeModal();
+      }
+
+    });
+
+    /* =====================================
+       FORCE SPECIAL PRICING DOWNLOAD
+    ===================================== */
+
+    if (section.dataset.downloadInitialized !== 'true') {
+
+      section.dataset.downloadInitialized = 'true';
+
+      section.querySelectorAll('[data-force-download]').forEach(function(link) {
+
+        link.addEventListener('click', async function(event) {
+
+          event.preventDefault();
+
+          if (link.dataset.downloading === 'true') return;
+
+          var fileUrl = link.href;
+          var fileName = link.dataset.filename || 'download';
+
+          link.dataset.downloading = 'true';
+
+          try {
+
+            var response = await fetch(fileUrl);
+
+            if (!response.ok) {
+              throw new Error('Download failed. HTTP status: ' + response.status);
+            }
+
+            var blob = await response.blob();
+
+            var blobUrl = URL.createObjectURL(blob);
+
+            var downloadLink = document.createElement('a');
+
+            downloadLink.href = blobUrl;
+            downloadLink.download = fileName;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            downloadLink.remove();
+
+            setTimeout(function() {
+              URL.revokeObjectURL(blobUrl);
+            }, 1500);
+
+          } catch (error) {
+
+            console.error('File download error:', error);
+
+            alert(
+              'Unable to download the file. Please check the file URL or contact the website administrator.'
+            );
+
+          } finally {
+
+            link.dataset.downloading = 'false';
+
+          }
+
+        });
+
+      });
+
+    }
+
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAppliedSupport);
+  } else {
+    initAppliedSupport();
+  }
+
+  document.addEventListener('shopify:section:load', function(event) {
+
+    if (
+      event.target.querySelector &&
+      event.target.querySelector('#applied-support-{{ section.id }}')
+    ) {
+      initAppliedSupport();
+    }
+
+  });
+
+})();
+
+</script>
+
+{% schema %}
+{
+  "name": "Partner Support",
+  "tag": "section",
+  "class": "applied-partner-support-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Partner Support"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small heading",
+      "default": "PARTNER SUPPORT"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA heading",
+      "default": "How Can We Help You?"
+    },
+    {
+      "type": "text",
+      "id": "cta_description",
+      "label": "CTA description",
+      "default": "Connect with our Applied Partner Team for product enquiries, assistance and special pricing."
+    },
+    {
+      "type": "text",
+      "id": "contact_button",
+      "label": "Contact button text",
+      "default": "Contact Applied Partner Team"
+    },
+    {
+      "type": "text",
+      "id": "modal_heading",
+      "label": "Contact popup heading",
+      "default": "Contact Applied Partner Team"
+    },
+    {
+      "type": "header",
+      "content": "Special Pricing Request"
+    },
+    {
+      "type": "url",
+      "id": "special_pricing_url",
+      "label": "Special Pricing PDF URL"
+    },
+    {
+      "type": "text",
+      "id": "special_button",
+      "label": "Special pricing button text",
+      "default": "Special Pricing Request"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "cta_background",
+      "label": "CTA background",
+      "default": "#f5f6f7"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#172b43"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#10869a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partner Support"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,592 @@
+{% liquid
+  assign portal_id = 'applied-resources-' | append: section.id
+%}
+
+<section id="{{ portal_id }}" class="applied-resources">
+
+  <div class="ap-container">
+
+    <!-- PARTNER RESOURCES HEADING -->
+    <div class="ap-section-heading">
+      {% if section.settings.resources_heading != blank %}
+        <h2>{{ section.settings.resources_heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.resources_description != blank %}
+        <p>{{ section.settings.resources_description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="ap-resources">
+
+      <!-- PRODUCT CATALOG -->
+      <div class="ap-resource-card">
+
+        <h3>{{ section.settings.catalog_heading }}</h3>
+
+        <div class="ap-preview">
+          {% if section.settings.catalog_image != blank %}
+            <img
+              src="{{ section.settings.catalog_image | image_url: width: 1000 }}"
+              alt="{{ section.settings.catalog_image.alt | default: 'Paquin Sensors product catalog' | escape }}"
+              width="{{ section.settings.catalog_image.width }}"
+              height="{{ section.settings.catalog_image.height }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="ap-placeholder">PRODUCT CATALOG</div>
+          {% endif %}
+        </div>
+
+        {% if section.settings.show_catalog_description %}
+          <div class="ap-description">
+            {{ section.settings.catalog_description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.catalog_url != blank %}
+          <a
+            href="{{ section.settings.catalog_url }}"
+            class="ap-button ap-catalog-scroll"
+            data-clarity-event="ap_catalog_download"
+          >
+            {{ section.settings.catalog_button }}
+            <span aria-hidden="true">↓</span>
+          </a>
+        {% else %}
+          <span class="ap-button ap-disabled" aria-disabled="true">
+            {{ section.settings.catalog_button }} (Coming Soon)
+          </span>
+        {% endif %}
+
+      </div>
+
+      <!-- APPLIED PARTNER PRICING -->
+      <div class="ap-resource-card">
+
+        <h3>{{ section.settings.pricing_heading }}</h3>
+
+        <div class="ap-preview">
+          {% if section.settings.pricing_image != blank %}
+            <img
+              src="{{ section.settings.pricing_image | image_url: width: 1000 }}"
+              alt="{{ section.settings.pricing_image.alt | default: 'Applied partner pricing' | escape }}"
+              width="{{ section.settings.pricing_image.width }}"
+              height="{{ section.settings.pricing_image.height }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="ap-placeholder">APPLIED PARTNER PRICING</div>
+          {% endif %}
+        </div>
+
+        {% if section.settings.show_pricing_description %}
+          <div class="ap-description">
+            {{ section.settings.pricing_description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.pricing_url != blank %}
+  <a
+    href="{{ section.settings.pricing_url }}"
+    class="ap-button"
+    data-clarity-event="ap_pricing_download"
+    data-force-download
+    data-filename="Applied-Partner-Pricing.pdf"
+  >
+    {{ section.settings.pricing_button }}
+    <span aria-hidden="true">↓</span>
+  </a>
+{% else %}
+  <span class="ap-button ap-disabled" aria-disabled="true">
+    {{ section.settings.pricing_button }} (Coming Soon)
+  </span>
+{% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+  #{{ portal_id }} {
+    --ap-primary: {{ section.settings.button_color }};
+    --ap-text: {{ section.settings.text_color }};
+    --ap-bg: {{ section.settings.background_color }};
+
+    color: var(--ap-text);
+    background: var(--ap-bg);
+    padding: 55px 0 70px;
+  }
+
+  #{{ portal_id }} * {
+    box-sizing: border-box;
+  }
+
+  #{{ portal_id }} .ap-container {
+    max-width: 1180px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* SECTION HEADING */
+
+  #{{ portal_id }} .ap-section-heading {
+    text-align: center;
+    margin: 15px 0 30px;
+  }
+
+  #{{ portal_id }} .ap-section-heading h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 10px;
+  }
+
+  #{{ portal_id }} .ap-section-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* RESOURCE CARDS */
+
+  #{{ portal_id }} .ap-resources {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin: 25px 0 0;
+  }
+
+  #{{ portal_id }} .ap-resource-card {
+    border: 1px solid #e5e5e5;
+    padding: 28px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.04);
+  }
+
+  #{{ portal_id }} .ap-resource-card h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #172b43;
+  }
+
+  /* PREVIEW IMAGES */
+
+  #{{ portal_id }} .ap-preview {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #f4f5f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  #{{ portal_id }} .ap-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ portal_id }} .ap-placeholder {
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  /* DESCRIPTION */
+
+  #{{ portal_id }} .ap-description {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  /* BUTTONS */
+
+  #{{ portal_id }} .ap-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 14px 24px;
+    background: #10869a;
+    color: #ffffff;
+    border: 2px solid #10869a;
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+
+  #{{ portal_id }} .ap-button span {
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+
+  #{{ portal_id }} .ap-button:hover {
+    background: #086b7b;
+    border-color: #086b7b;
+    color: #ffffff;
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  #{{ portal_id }} .ap-button:hover span {
+    transform: translateY(3px);
+  }
+
+  /* DISABLED BUTTON */
+
+  #{{ portal_id }} .ap-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* MOBILE */
+
+  @media(max-width: 767px) {
+
+    #{{ portal_id }} {
+      padding: 40px 0 50px;
+    }
+
+    #{{ portal_id }} .ap-container {
+      width: 90%;
+    }
+
+    #{{ portal_id }} .ap-section-heading h2 {
+      font-size: 25px;
+    }
+
+    #{{ portal_id }} .ap-resources {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    #{{ portal_id }} .ap-preview {
+      height: 220px;
+    }
+
+    #{{ portal_id }} .ap-resource-card {
+      padding: 20px;
+    }
+
+  }
+
+</style>
+
+<script>
+
+(function () {
+
+  function initAppliedResources() {
+
+    var section = document.getElementById(
+      'applied-resources-{{ section.id }}'
+    );
+
+    if (!section) return;
+
+    /* =====================================
+       PRODUCT CATALOG SMOOTH SCROLL
+    ===================================== */
+
+    if (section.dataset.scrollInitialized !== 'true') {
+
+      section.dataset.scrollInitialized = 'true';
+
+      var catalogButton = section.querySelector(
+        '.ap-catalog-scroll'
+      );
+
+      if (catalogButton) {
+
+        catalogButton.addEventListener('click', function(event) {
+
+          event.preventDefault();
+
+          var catalogGrid = document.querySelector(
+            '#product-catalog-grid'
+          );
+
+          if (!catalogGrid) {
+
+            var currentShopifySection = section.closest(
+              '.shopify-section'
+            );
+
+            if (currentShopifySection) {
+              catalogGrid = currentShopifySection.nextElementSibling;
+            }
+
+          }
+
+          if (catalogGrid) {
+
+            var targetPosition =
+              catalogGrid.getBoundingClientRect().top +
+              window.pageYOffset - 100;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+
+          } else {
+
+            console.error('Product catalog section not found!');
+
+          }
+
+        }, true);
+
+      }
+
+    }
+
+    /* =====================================
+       FORCE FILE DOWNLOAD
+    ===================================== */
+
+    if (section.dataset.downloadInitialized !== 'true') {
+
+      section.dataset.downloadInitialized = 'true';
+
+      section.querySelectorAll('[data-force-download]').forEach(function(link) {
+
+        link.addEventListener('click', async function(event) {
+
+          event.preventDefault();
+
+          if (link.dataset.downloading === 'true') return;
+
+          var fileUrl = link.href;
+          var fileName = link.dataset.filename || 'download';
+
+          link.dataset.downloading = 'true';
+
+          try {
+
+            var response = await fetch(fileUrl);
+
+            if (!response.ok) {
+              throw new Error('Download failed. HTTP status: ' + response.status);
+            }
+
+            var blob = await response.blob();
+
+            var blobUrl = URL.createObjectURL(blob);
+
+            var downloadLink = document.createElement('a');
+
+            downloadLink.href = blobUrl;
+            downloadLink.download = fileName;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            downloadLink.remove();
+
+            setTimeout(function() {
+              URL.revokeObjectURL(blobUrl);
+            }, 1500);
+
+          } catch (error) {
+
+            console.error('File download error:', error);
+
+            alert(
+              'Unable to download the file. Please check the file URL or contact the website administrator.'
+            );
+
+          } finally {
+
+            link.dataset.downloading = 'false';
+
+          }
+
+        });
+
+      });
+
+    }
+
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAppliedResources);
+  } else {
+    initAppliedResources();
+  }
+
+  document.addEventListener('shopify:section:load', function(event) {
+
+    if (
+      event.target.querySelector &&
+      event.target.querySelector('#applied-resources-{{ section.id }}')
+    ) {
+      initAppliedResources();
+    }
+
+  });
+
+})();
+
+</script>
+
+{% schema %}
+{
+  "name": "Partner Resources",
+  "tag": "section",
+  "class": "applied-partner-resources-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Partner Resources"
+    },
+    {
+      "type": "text",
+      "id": "resources_heading",
+      "label": "Resources heading",
+      "default": "Partner Resources"
+    },
+    {
+      "type": "text",
+      "id": "resources_description",
+      "label": "Resources description",
+      "default": "Access your exclusive product catalog and Applied partner pricing."
+    },
+    {
+      "type": "header",
+      "content": "Product Catalog"
+    },
+    {
+      "type": "text",
+      "id": "catalog_heading",
+      "label": "Catalog heading",
+      "default": "Product Catalog"
+    },
+    {
+      "type": "image_picker",
+      "id": "catalog_image",
+      "label": "Catalog preview image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_catalog_description",
+      "label": "Show catalog description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "catalog_description",
+      "label": "Catalog description",
+      "default": "<p>Add catalog information here.</p>"
+    },
+    {
+      "type": "url",
+      "id": "catalog_url",
+      "label": "Catalog button URL (required to show button)"
+    },
+    {
+      "type": "text",
+      "id": "catalog_button",
+      "label": "Catalog button text",
+      "default": "Download Catalog"
+    },
+    {
+      "type": "header",
+      "content": "Applied Partner Pricing"
+    },
+    {
+      "type": "text",
+      "id": "pricing_heading",
+      "label": "Pricing heading",
+      "default": "Applied Partner Pricing"
+    },
+    {
+      "type": "image_picker",
+      "id": "pricing_image",
+      "label": "Pricing preview image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pricing_description",
+      "label": "Show pricing description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "pricing_description",
+      "label": "Pricing description",
+      "default": "<p>Add pricing information here.</p>"
+    },
+    {
+      "type": "url",
+      "id": "pricing_url",
+      "label": "PDF pricing file URL"
+    },
+    {
+      "type": "text",
+      "id": "pricing_button",
+      "label": "Pricing button text",
+      "default": "Download Applied Pricing"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#172b43"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#10869a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partner Resources"
+    }
+  ]
+}
+{% endschema %}

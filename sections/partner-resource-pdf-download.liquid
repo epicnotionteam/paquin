@@ -248,7 +248,22 @@
     width: 100%;
     max-width: 100%;
   }
+  /* Hide Product Catalog body copy without deleting content */
+.recent-news-section .news-text {
+  display: none !important;
+}
 
+/* Remove unnecessary empty space */
+.recent-news-section .news-content {
+  height: auto;
+  flex: initial;
+  padding-top: 15px;
+}
+
+/* Keep button directly below the title */
+.recent-news-section .news-btn {
+  margin-top: 20px;
+}
   /* Responsive */
 
   @media(max-width: 1550px) {

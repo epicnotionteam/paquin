@@ -13,11 +13,27 @@
   assign category_handles = 'environmental,conflict_minerals,product_safety,quality,trade,policies,other' | split: ','
 
   assign total_visible = 0
+  assign any_specific = false
+  assign product_options = ''
+  assign collection_options = ''
   for block in section.blocks
     if block.settings.file_url != blank or block.settings.on_request or request.design_mode
       assign total_visible = total_visible | plus: 1
+
+      # Options for the "Filter by product" dropdown: linked collections (as product lines) and
+      # directly linked products. Entries are "Title::handle", joined with "§§".
+      for p in block.settings.products
+        assign any_specific = true
+        assign product_options = product_options | append: p.title | append: '::' | append: p.handle | append: '§§'
+      endfor
+      for c in block.settings.collections
+        assign any_specific = true
+        assign collection_options = collection_options | append: c.title | append: '::' | append: c.handle | append: '§§'
+      endfor
     endif
   endfor
+  assign product_option_list = product_options | split: '§§' | uniq | sort_natural
+  assign collection_option_list = collection_options | split: '§§' | uniq | sort_natural
 
   assign heading = section.settings.heading | default: page.title
   assign request_url = section.settings.request_url | default: '/pages/contact'
@@ -95,9 +111,40 @@
     border-color: #0F7F92;
     color: #0F7F92;
   }
-  #shopify-section-{{ section.id }} .rc__search {
-    flex: 0 1 320px;
+  #shopify-section-{{ section.id }} .rc__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex: 0 1 auto;
+  }
+  #shopify-section-{{ section.id }} .rc__search,
+  #shopify-section-{{ section.id }} .rc__filter {
+    flex: 0 1 300px;
     min-width: 220px;
+  }
+  #shopify-section-{{ section.id }} .rc__filter select {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23121212' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px;
+    color: #121212;
+    font: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .rc__filter select:focus {
+    outline: none;
+    border-color: #0F7F92;
+  }
+  #shopify-section-{{ section.id }} .rc__status {
+    margin: 16px 0 0;
+    font-size: 14px;
+    color: #4d4d4d;
+  }
+  #shopify-section-{{ section.id }} .rc__status[hidden] {
+    display: none;
   }
   #shopify-section-{{ section.id }} .rc__search input {
     width: 100%;
@@ -201,6 +248,49 @@
     font-size: 13px;
     color: #66787F;
   }
+  #shopify-section-{{ section.id }} .rc__applies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: #4d4d4d;
+  }
+  #shopify-section-{{ section.id }} .rc__applies-label {
+    font-weight: 600;
+    color: #121212;
+  }
+  #shopify-section-{{ section.id }} .rc__doc a.rc__applies-item,
+  #shopify-section-{{ section.id }} .rc__doc a.rc__applies-item:hover {
+    display: inline-block;
+    padding: 3px 9px;
+    border: 1px solid #D6DBDD;
+    color: #0F7F92;
+    font-weight: 600;
+    text-decoration: none;
+    filter: none;
+    line-height: 1.4;
+  }
+  #shopify-section-{{ section.id }} .rc__doc a.rc__applies-item:hover {
+    border-color: #0F7F92;
+  }
+  #shopify-section-{{ section.id }} .rc__doc a.rc__applies-item--line,
+  #shopify-section-{{ section.id }} .rc__doc a.rc__applies-item--line:hover {
+    background: rgba(15, 127, 146, .08);
+  }
+  #shopify-section-{{ section.id }} .rc__applies-item[hidden] {
+    display: none !important;
+  }
+  #shopify-section-{{ section.id }} .rc__applies-more {
+    padding: 3px 4px;
+    border: 0;
+    background: none;
+    color: #0F7F92;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
   #shopify-section-{{ section.id }} .rc__doc-draft-note {
     margin: 8px 0 0;
     font-size: 13px;
@@ -291,7 +381,9 @@
     #shopify-section-{{ section.id }} .rc {
       padding: 36px 20px 64px;
     }
-    #shopify-section-{{ section.id }} .rc__search {
+    #shopify-section-{{ section.id }} .rc__tools,
+    #shopify-section-{{ section.id }} .rc__search,
+    #shopify-section-{{ section.id }} .rc__filter {
       flex-basis: 100%;
     }
     #shopify-section-{{ section.id }} .rc__doc {
@@ -357,19 +449,70 @@
         {%- endfor -%}
       </ul>
 
-      {%- if total_visible > 5 -%}
-        <div class="rc__search">
-          <label class="visually-hidden" for="rc-search-{{ section.id }}">Search documents</label>
-          <input
-            id="rc-search-{{ section.id }}"
-            type="search"
-            placeholder="Search documents (e.g. REACH, RoHS)"
-            autocomplete="off"
-            data-rc-search
-          >
+      {%- if total_visible > 5 or any_specific -%}
+        <div class="rc__tools">
+          {%- if any_specific -%}
+            <div class="rc__filter">
+              <label class="visually-hidden" for="rc-product-{{ section.id }}">Filter by product</label>
+              <select id="rc-product-{{ section.id }}" data-rc-product>
+                <option value="">All products</option>
+                {%- if collection_option_list.size > 0 -%}
+                  <optgroup label="Product lines">
+                    {%- for entry in collection_option_list -%}
+                      {%- assign parts = entry | split: '::' -%}
+                      {%- if parts.size == 2 -%}
+                        {%- assign c = collections[parts[1]] -%}
+                        {%- capture c_products -%} {% for p in c.products %}{{ p.handle }} {% endfor %}{%- endcapture -%}
+                        <option value="collection:{{ parts[1] | escape }}" data-rc-collection-products="{{ c_products | escape }}">{{ parts[0] | escape }}</option>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </optgroup>
+                {%- endif -%}
+                {%- if product_option_list.size > 0 -%}
+                  <optgroup label="Products">
+                    {%- for entry in product_option_list -%}
+                      {%- assign parts = entry | split: '::' -%}
+                      {%- if parts.size == 2 -%}
+                        <option value="{{ parts[1] | escape }}">{{ parts[0] | escape }}</option>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </optgroup>
+                {%- endif -%}
+              </select>
+              {%- comment -%}
+                Titles of products covered only through a collection, so a deep link to one of them
+                (?product=<handle>) can still show its name in the dropdown.
+              {%- endcomment -%}
+              <script type="application/json" data-rc-titles>
+                {
+                {%- for entry in collection_option_list -%}
+                  {%- assign parts = entry | split: '::' -%}
+                  {%- if parts.size == 2 -%}
+                    {%- for p in collections[parts[1]].products -%}
+                      {{ p.handle | json }}:{{ p.title | json }},
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                "":""}
+              </script>
+            </div>
+          {%- endif -%}
+          {%- if total_visible > 5 -%}
+            <div class="rc__search">
+              <label class="visually-hidden" for="rc-search-{{ section.id }}">Search documents</label>
+              <input
+                id="rc-search-{{ section.id }}"
+                type="search"
+                placeholder="Search documents, products or part numbers"
+                autocomplete="off"
+                data-rc-search
+              >
+            </div>
+          {%- endif -%}
         </div>
       {%- endif -%}
     </div>
+    <p class="rc__status" hidden data-rc-status></p>
 
     {%- for handle in category_handles -%}
       {%- capture group_rows -%}
@@ -403,14 +546,55 @@
               assign ext = 'DOCX'
             endif
 
+            assign linked_products = block.settings.products
+            assign linked_collections = block.settings.collections
+            assign applies_total = linked_products.size | plus: linked_collections.size
+
+            # Space-padded handle list so the filter can match " handle " exactly.
+            capture doc_products
+              echo ' '
+              for p in linked_products
+                echo p.handle | append: ' '
+              endfor
+              for c in linked_collections
+                for p in c.products
+                  echo p.handle | append: ' '
+                endfor
+              endfor
+            endcapture
+            capture doc_collections
+              echo ' '
+              for c in linked_collections
+                echo c.handle | append: ' '
+              endfor
+            endcapture
+
+            # Searchable text: document fields plus linked product titles, part numbers and collections.
             capture search_text
               echo block.settings.code | append: ' ' | append: block.settings.title | append: ' ' | append: block.settings.description
+              for p in linked_products
+                echo ' ' | append: p.title
+                for v in p.variants
+                  if v.sku != blank
+                    echo ' ' | append: v.sku
+                  endif
+                endfor
+              endfor
+              for c in linked_collections
+                echo ' ' | append: c.title
+                for p in c.products
+                  echo ' ' | append: p.title
+                endfor
+              endfor
             endcapture
           -%}
           <li
             class="rc__doc{% if is_draft %} rc__doc--draft{% endif %}"
             data-rc-doc
             data-rc-text="{{ search_text | strip_html | downcase | escape }}"
+            data-rc-scope="{% if applies_total > 0 %}specific{% else %}all{% endif %}"
+            data-rc-products="{{ doc_products | escape }}"
+            data-rc-collections="{{ doc_collections | escape }}"
             {{ block.shopify_attributes }}
           >
             <span class="rc__doc-icon" aria-hidden="true">
@@ -432,6 +616,25 @@
                   {%- if block.settings.revision != blank -%}<span>Revision: {{ block.settings.revision | escape }}</span>{%- endif -%}
                   {%- if ext != blank -%}<span>{{ ext }}</span>{%- endif -%}
                 </p>
+              {%- endif -%}
+              {%- if applies_total > 0 -%}
+                <p class="rc__applies">
+                  <span class="rc__applies-label">Applies to:</span>
+                  {%- assign shown = 0 -%}
+                  {%- for c in linked_collections -%}
+                    {%- assign shown = shown | plus: 1 -%}
+                    <a class="rc__applies-item rc__applies-item--line{% if shown > 6 %} rc__applies-item--extra{% endif %}" href="{{ c.url }}" title="Every product in this product line"{% if shown > 6 %} hidden{% endif %}>{{ c.title | escape }}</a>
+                  {%- endfor -%}
+                  {%- for p in linked_products -%}
+                    {%- assign shown = shown | plus: 1 -%}
+                    <a class="rc__applies-item{% if shown > 6 %} rc__applies-item--extra{% endif %}" href="{{ p.url }}"{% if shown > 6 %} hidden{% endif %}>{{ p.title | escape }}</a>
+                  {%- endfor -%}
+                  {%- if shown > 6 -%}
+                    <button type="button" class="rc__applies-more" data-rc-applies-more>+ {{ shown | minus: 6 }} more</button>
+                  {%- endif -%}
+                </p>
+              {%- elsif any_specific -%}
+                <p class="rc__applies rc__applies--all"><span class="rc__applies-label">Applies to:</span> All products</p>
               {%- endif -%}
               {%- if is_draft -%}
                 <p class="rc__doc-draft-note">Hidden on the live site — add a document file URL (or tick "Available on request") to publish.</p>
@@ -484,20 +687,53 @@
   (function () {
     var root = document.querySelector('#shopify-section-{{ section.id }} [data-rc]');
     if (!root) return;
+
+    // "+ N more" on long "Applies to" lists
+    root.addEventListener('click', function (e) {
+      var more = e.target.closest('[data-rc-applies-more]');
+      if (!more) return;
+      more.parentNode.querySelectorAll('.rc__applies-item--extra').forEach(function (el) { el.hidden = false; });
+      more.remove();
+    });
+
     var search = root.querySelector('[data-rc-search]');
-    if (!search) return;
+    var productSelect = root.querySelector('[data-rc-product]');
+    if (!search && !productSelect) return;
 
     var docs = Array.prototype.slice.call(root.querySelectorAll('[data-rc-doc]'));
     var groups = Array.prototype.slice.call(root.querySelectorAll('[data-rc-group]'));
     var empty = root.querySelector('[data-rc-empty]');
+    var status = root.querySelector('[data-rc-status]');
 
-    search.addEventListener('input', function () {
-      var terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    function apply() {
+      var terms = search ? search.value.toLowerCase().trim().split(/\s+/).filter(Boolean) : [];
+      var product = productSelect ? productSelect.value : '';
       var anyVisible = false;
+
+      // A product line (collection) option also matches documents linked to any product in it.
+      var lineHandle = '';
+      var lineProducts = [];
+      if (product.indexOf('collection:') === 0) {
+        lineHandle = product.slice('collection:'.length);
+        var opt = productSelect.options[productSelect.selectedIndex];
+        lineProducts = (opt.getAttribute('data-rc-collection-products') || '').split(/\s+/).filter(Boolean);
+      }
 
       docs.forEach(function (doc) {
         var text = doc.getAttribute('data-rc-text') || '';
-        var match = terms.every(function (t) { return text.indexOf(t) !== -1; });
+        var matchText = terms.every(function (t) { return text.indexOf(t) !== -1; });
+        var docProducts = doc.getAttribute('data-rc-products') || '';
+        // A product filter keeps documents that apply to all products, plus ones linked to that product.
+        var matchProduct;
+        if (!product || doc.getAttribute('data-rc-scope') === 'all') {
+          matchProduct = true;
+        } else if (lineHandle) {
+          matchProduct = (doc.getAttribute('data-rc-collections') || '').indexOf(' ' + lineHandle + ' ') !== -1 ||
+            lineProducts.some(function (h) { return docProducts.indexOf(' ' + h + ' ') !== -1; });
+        } else {
+          matchProduct = docProducts.indexOf(' ' + product + ' ') !== -1;
+        }
+        var match = matchText && matchProduct;
         doc.hidden = !match;
         if (match) anyVisible = true;
       });
@@ -510,7 +746,55 @@
       });
 
       if (empty) empty.hidden = anyVisible;
-    });
+
+      if (status) {
+        if (product) {
+          var name = productSelect.options[productSelect.selectedIndex].text;
+          status.textContent = 'Showing documents for ' + name + ', including documents that apply to all products.';
+          status.hidden = false;
+        } else {
+          status.hidden = true;
+        }
+      }
+    }
+
+    if (search) search.addEventListener('input', apply);
+
+    if (productSelect) {
+      // Deep link: /pages/<page>?product=<product-handle> opens the page pre-filtered.
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var wanted = params.get('product');
+        if (wanted) {
+          if (!productSelect.querySelector('option[value="' + CSS.escape(wanted) + '"]')) {
+            // Product covered only through a collection: add it to the dropdown on the fly.
+            var titlesEl = root.querySelector('[data-rc-titles]');
+            var titles = titlesEl ? JSON.parse(titlesEl.textContent) : {};
+            if (titles[wanted]) {
+              var extra = document.createElement('option');
+              extra.value = wanted;
+              extra.textContent = titles[wanted];
+              productSelect.appendChild(extra);
+            }
+          }
+          if (productSelect.querySelector('option[value="' + CSS.escape(wanted) + '"]')) {
+            productSelect.value = wanted;
+          }
+        }
+      } catch (e) {}
+
+      productSelect.addEventListener('change', function () {
+        apply();
+        try {
+          var url = new URL(window.location.href);
+          if (productSelect.value) url.searchParams.set('product', productSelect.value);
+          else url.searchParams.delete('product');
+          window.history.replaceState(null, '', url.toString());
+        } catch (e) {}
+      });
+
+      if (productSelect.value) apply();
+    }
   })();
 </script>
 
@@ -645,6 +929,27 @@
           "id": "source_url",
           "label": "Official regulation link",
           "info": "Optional link to the regulator's page, shown as \"About this regulation\"."
+        },
+        {
+          "type": "header",
+          "content": "Applies to"
+        },
+        {
+          "type": "paragraph",
+          "content": "Leave both empty if this document covers all products. Pick products and/or collections if it only applies to some."
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Products",
+          "limit": 50
+        },
+        {
+          "type": "collection_list",
+          "id": "collections",
+          "label": "Collections",
+          "info": "Covers every product in the collection (up to 50 per collection for filtering and search).",
+          "limit": 10
         }
       ]
     }

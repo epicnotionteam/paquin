@@ -195,7 +195,7 @@
     padding: 6em 4em !important;
 }
 
-#LockPro__passcode__form {
+#LockPro__passcode__form,#LockPro__email__form {
     max-width: 400px !important;
     width:100%;
     border: 0px solid rgba(0, 0, 0, .4) !important;
@@ -204,7 +204,7 @@
     background: #fff !important;
 }
 
-#LockPro__passcode__form .message p {
+#LockPro__passcode__form .message p,#LockPro__email__form .message p {
     font-size: 22px;
     font-weight: 700;
     max-width: 250px;
@@ -214,7 +214,7 @@
     margin: 0 auto 20px;
 }
 
-#LockPro__passcode__form .form .field__input {
+#LockPro__passcode__form .form .field__input,#LockPro__email__form .form .field__input {
     width: 100%;
     padding: 13px 12px;
     border-radius: 5px;
@@ -224,12 +224,14 @@
 }
 
 #LockPro__passcode__form .form .field__input:focus,
-#LockPro__passcode__form .form .field__input:focus-visible {
+#LockPro__passcode__form .form .field__input:focus-visible,
+#LockPro__email__form .form .field__input:focus,
+#LockPro__email__form .form .field__input:focus-visible {
     outline: unset;
     border-color: #0f7f92;
 }
 
-button.button.LockPro__passcode__form__submit__button {
+button.button.LockPro__passcode__form__submit__button,#LockPro__email__form button, #LockPro__passcode__form button {
     border-radius: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -243,7 +245,8 @@ button.button.LockPro__passcode__form__submit__button {
 }
 
 button.button.LockPro__passcode__form__submit__button:hover,
-button.button.LockPro__passcode__form__submit__button:focus {
+button.button.LockPro__passcode__form__submit__button:focus,#LockPro__email__form button:hover, #LockPro__passcode__form button:hover,
+#LockPro__email__form button:focus, #LockPro__passcode__form button:focus {
     background: #212224;
     color: #fff;
 }

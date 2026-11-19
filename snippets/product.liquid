@@ -70,6 +70,48 @@
 {% endif %}
 
 
+{% comment %}
+	Product resources (Related Press, Whitepapers, Instructions, Related Articles), shown directly
+	under the "View data sheet" button. Rendered into two slots: the desktop column (#product__core)
+	and the mobile header. Only one is visible at a time; the mobile copy has its ids renamed so the
+	page never contains duplicate ids.
+{% endcomment %}
+{%- capture product_resources -%}
+	{% render 'product-related-press' %}
+	{% render 'product-whitepapers' %}
+	{% render 'product-instructions' %}
+	{%- comment -%} Related Articles (metafield: custom.related_articles, list of article references) {%- endcomment -%}
+	{% if product.metafields.custom.related_articles and product.metafields.custom.related_articles.value != blank %}
+		<div id="product__related-articles">
+			<h2 class="h5">Related Articles</h2>
+			<ul class="list--link-arrow related-articles-list">
+				{% for article in product.metafields.custom.related_articles.value %}
+					<li><a href="{{ article.url }}" target="_blank">{{ article.title | escape }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endif %}
+{%- endcapture -%}
+{%- assign product_resources = product_resources | strip -%}
+
+<style>
+	.product-resources { margin-top: 24px; }
+	.product-resources > * + * { margin-top: 20px; padding-top: 20px; border-top: 1px solid #D6DBDD; }
+	.product-resources .h5 { margin: 0 0 10px; }
+	.product-resources ul { margin: 0; padding: 0; list-style: none; }
+	.product-resources li {
+		font-size: 15px;
+		line-height: 23px;
+		letter-spacing: -0.008rem;
+	}
+	.product-resources li:last-child { margin-bottom: 0; }
+	.product-resources--mobile { display: none; }
+	@media (max-width: 600px) {
+		.product-resources--desktop { display: none; }
+		.product-resources--mobile { display: block; }
+	}
+</style>
+
 <article class="grid--product">
 	{% comment %} Container [Product Media] {% endcomment %}
 	<div id="product__media" class="grid__item">
@@ -103,6 +145,9 @@
     					</a>
     				{% endif %}
     			</div>
+    			{%- if product_resources != blank -%}
+    				<div class="product-resources product-resources--mobile">{{ product_resources | replace: 'id="product__', 'data-id="product__' }}</div>
+    			{%- endif -%}
     		</div>
     		<style>
     			.product-mobile-header { display: none; }
@@ -166,39 +211,10 @@
     		{% endif %}
     		{% comment %} Key Specifications {% endcomment %}
     		{% render 'product-key-specifications' %}
-    		{% comment %} Related Press {% endcomment %}
-    		{% render 'product-related-press' %}
-    		{% comment %} Whitepapers {% endcomment %}
-    		{% render 'product-whitepapers' %}
-    		{% comment %} Instructions {% endcomment %}
-    		{% render 'product-instructions' %}
-
-            {%- comment -%} Related Articles (metafield: custom.related_articles) {%- endcomment -%}
-			{% if product.metafields.custom.related_articles and product.metafields.custom.related_articles.value != blank %}
-			{% assign related_articles = product.metafields.custom.related_articles.value %}
-
-			<div class="grid__item">
-				<h3 class="h5">Related Articles</h3>
-				<ul class="link-list related-articles-list">
-				{%- comment -%}
-					If the metafield is a list of article/blog_post references,
-					`related_articles` will be an array of article objects.
-				{%- endcomment -%}
-				{% for article in related_articles %}
-					<li>
-					<a
-						href="{{ article.url }}"
-						target="_blank"
-					>
-						{{ article.title }}
-					</a>
-					</li>
-				{% endfor %}
-				</ul>
-			</div>
-			{% endif %}
-			{%- comment -%} /Related Articles {%- endcomment -%}
-
+    		{% comment %}
+    			Related Press, Whitepapers, Instructions and Related Articles now render under the
+    			"View data sheet" button (see product_resources above).
+    		{% endcomment %}
 
     	</div>
 	</div>
@@ -284,6 +300,9 @@
 			{% endif %}
 			{% comment %} Data Sheet {% endcomment %}
 			{% render 'product-data-sheet' %}
+			{%- if product_resources != blank -%}
+				<div class="product-resources product-resources--desktop">{{ product_resources }}</div>
+			{%- endif -%}
 		</div>
 		<div id="product__secondary">
 			{% comment %} Highlights {% endcomment %}

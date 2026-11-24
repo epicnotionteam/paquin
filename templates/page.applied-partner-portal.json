@@ -196,6 +196,14 @@
         "text_color": "#333333",
         "button_color": "#10869a"
       }
+    },
+    "partner_portal_tracking": {
+      "type": "partner-portal-tracking",
+      "settings": {
+        "enabled": true,
+        "endpoint_url": "",
+        "token": "paq-9f8cbd299420d820"
+      }
     }
   },
   "order": [
@@ -203,6 +211,7 @@
     "hero_internal_kU4kEd",
     "applied_partner_resources_JMRnTP",
     "partner_resource_pdf_download_bbrqjM",
-    "applied_partner_support_e4mTzD"
+    "applied_partner_support_e4mTzD",
+    "partner_portal_tracking"
   ]
 }

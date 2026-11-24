@@ -79,24 +79,6 @@
         "button_color": "#10869a"
       }
     },
-    "applied_partner_support_e4mTzD": {
-      "type": "applied-partner-support",
-      "name": "Partner Support",
-      "settings": {
-        "eyebrow": "PARTNER SUPPORT",
-        "cta_heading": "How Can We Help You?",
-        "cta_description": "Connect with our Applied Partner Team for product enquiries, assistance and special pricing.",
-        "contact_button": "Contact Applied Partner Team",
-        "modal_heading": "Contact Applied Partner Team",
-        "special_pricing_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Special_Pricing_Request_Form_Rev._1.pdf?v=1793856669",
-        "special_button": "Special Pricing Request",
-        "background_color": "#ffffff",
-        "cta_background": "#f5f6f7",
-        "heading_color": "#172b43",
-        "text_color": "#333333",
-        "button_color": "#10869a"
-      }
-    },
     "partner_resource_pdf_download_bbrqjM": {
       "type": "partner-resource-pdf-download",
       "blocks": {
@@ -196,13 +178,31 @@
         "small_heading": "Applied Product Catalogs",
         "heading": ""
       }
+    },
+    "applied_partner_support_e4mTzD": {
+      "type": "applied-partner-support",
+      "name": "Partner Support",
+      "settings": {
+        "eyebrow": "PARTNER SUPPORT",
+        "cta_heading": "How Can We Help You?",
+        "cta_description": "Connect with our Applied Partner Team for product enquiries, assistance and special pricing.",
+        "contact_button": "Contact Applied Partner Team",
+        "modal_heading": "Contact Applied Partner Team",
+        "special_pricing_url": "https://cdn.shopify.com/s/files/1/0797/0911/0575/files/Special_Pricing_Request_Form_Rev._1.pdf?v=1793856669",
+        "special_button": "Special Pricing Request",
+        "background_color": "#ffffff",
+        "cta_background": "#f5f6f7",
+        "heading_color": "#172b43",
+        "text_color": "#333333",
+        "button_color": "#10869a"
+      }
     }
   },
   "order": [
     "main",
     "hero_internal_kU4kEd",
     "applied_partner_resources_JMRnTP",
-    "applied_partner_support_e4mTzD",
-    "partner_resource_pdf_download_bbrqjM"
+    "partner_resource_pdf_download_bbrqjM",
+    "applied_partner_support_e4mTzD"
   ]
 }
